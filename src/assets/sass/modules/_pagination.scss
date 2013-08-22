@@ -1,0 +1,53 @@
+//
+// note: this file is for use with Sass and Compass - http://sass-lang.com, http://compass-style.org
+// don't use it as your live site stylesheet!
+//
+
+
+/* Pagination links
+   ========================================================================== */
+
+.paginator {
+    text-align: center;
+    margin: 1em 0;
+    border-top: 1px dashed $color-border;
+    padding-top: 1em;
+
+    [rel="prev"] {
+        float: left;
+        margin: 0 1em 0 0;
+    }
+    
+    [rel="next"] {
+        float: right;
+        margin: 0 0 0 1em;
+    }
+}
+
+.pagination {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        float: left;
+        border: 1px solid $color-background;
+
+        &.current {
+            border-color: $color-border;
+        }
+    }
+
+    a,
+    b {
+        min-width: 1.25em;
+        display: block;
+        padding: 0 .1875em; // 3px / 16px
+    }
+
+    b {
+        cursor: default;
+        font-weight: normal;
+    }
+}

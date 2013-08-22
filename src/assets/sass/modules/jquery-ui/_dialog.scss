@@ -1,0 +1,81 @@
+//
+// note: this file is for use with Sass and Compass - http://sass-lang.com, http://compass-style.org
+// don't use it as your live site stylesheet!
+//
+
+
+/* Dialog - http://jqueryui.com/dialog/
+   ========================================================================== */
+
+.ui-dialog {
+    @include box-shadow(0 0 .5em rgba(0, 0, 0, .2));
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1002;
+    padding: .2em;
+    overflow: hidden;
+
+    .ui-dialog-titlebar {
+        position: relative;
+        padding: .4em 1em;
+    }
+
+    .ui-dialog-title {
+        float: left;
+        margin: .1em 0;
+        width: 90%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .ui-dialog-titlebar-close {
+        position: absolute;
+        top: 50%;
+        right: .3em;
+        margin: -10px 0 0 0;
+        border: 0;
+        width: 20px;
+        height: 20px;
+        background: none;
+    }
+
+    .ui-dialog-content {
+        position: relative;
+        border: 0;
+        padding: .5em 1em;
+        background: none;
+        overflow: auto;
+    }
+
+    .ui-dialog-buttonpane {
+        margin-top: .5em;
+        border-width: 1px 0 0 0;
+        padding: .5em;
+        background-image: none;
+        text-align: left;
+    }
+
+    .ui-dialog-buttonpane .ui-dialog-buttonset {
+        float: right;
+    }
+
+    .ui-dialog-buttonpane button {
+        margin: .5em .4em .5em 0;
+        cursor: pointer;
+    }
+
+    .ui-resizable-se {
+        right: -5px;
+        bottom: -5px;
+        width: 12px;
+        height: 12px;
+        background-position: 16px 16px;
+    }
+}
+
+.ui-draggable .ui-dialog-titlebar {
+    cursor: move;
+}

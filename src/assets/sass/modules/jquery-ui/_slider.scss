@@ -1,0 +1,81 @@
+//
+// note: this file is for use with Sass and Compass - http://sass-lang.com, http://compass-style.org
+// don't use it as your live site stylesheet!
+//
+
+
+/* Slider - http://jqueryui.com/slider/
+   ========================================================================== */
+
+.ui-slider {
+    position: relative;
+    text-align: left;
+
+    .ui-slider-handle {
+        @include border-radius(50%);
+        @include box-shadow(0 0 .5em rgba(0, 0, 0, .2));
+
+        position: absolute;
+        z-index: 2;
+        width: 20px;
+        height: 20px;
+        cursor: default;
+        background-color: #ffffff;
+    }
+
+    .ui-slider-range {
+        @include adjust-font-size-to(12px, .75);
+
+        position: absolute;
+        z-index: 1;
+        display: block;
+        border: 0;
+        background-position: 0 0;
+    }
+}
+
+.ui-slider-horizontal {
+    margin-bottom: 1em;
+    height: 12px;
+
+    .ui-slider-handle {
+        top: -5px;
+        margin-left: -10px;
+    }
+
+    .ui-slider-range {
+        top: 0;
+        height: 100%;
+    }
+
+    .ui-slider-range-min {
+        left: 0;
+    }
+
+    .ui-slider-range-max {
+        right: 0;
+    }
+} 
+
+.ui-slider-vertical {
+    width: 12px;
+    height: 100px;
+
+    .ui-slider-handle {
+        left: -5px;
+        margin-bottom: -10px;
+    }
+
+    .ui-slider-range {
+        left: 0;
+        width: 100%;
+    }
+
+    .ui-slider-range-min {
+        bottom: 0;
+    }
+
+    .ui-slider-range-max {
+        top: 0;
+    }
+}

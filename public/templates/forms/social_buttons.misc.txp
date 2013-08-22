@@ -1,0 +1,9 @@
+<!-- Also requires JavaScript - see /js/scripts.js -->
+<p>
+    <!-- Facebook 'like' button -->
+    <iframe class="facebook-like" src="//www.facebook.com/plugins/like.php?href=<txp:permlink />&amp;send=false&amp;layout=button_count&amp;width=90&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;height=20"></iframe>
+    <!-- Google+ '+1' button -->
+    <a href="https://plus.google.com/" class="g-plusone" data-size="medium" data-expandTo="top" data-href="<txp:permlink />" rel="external">+1</a>
+    <!-- Twitter 'Tweet' button -->
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="twitterapi" data-lang="en" data-url="<txp:permlink />" data-text="<txp:title />" rel="external">Tweet</a>
+</p>

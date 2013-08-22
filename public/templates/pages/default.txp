@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-gb" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <txp:output_form form="page_title" />
+    <meta name="generator" content="Textpattern CMS">
+    <txp:if_search>
+        <meta name="robots" content="none">
+    <txp:else />
+        <txp:if_category>
+            <meta name="robots" content="noindex, follow, noodp, noydir">
+        <txp:else />
+            <txp:if_author>
+                <meta name="robots" content="noindex, follow, noodp, noydir">
+            <txp:else />
+                <meta name="robots" content="index, follow, noodp, noydir">
+            </txp:if_author>
+        </txp:if_category>
+    </txp:if_search>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Open Graph - required for Facebook API -->
+    <txp:output_form form="meta_open_graph" />
+
+<!-- specify canonical, more info: http://googlewebmastercentral.blogspot.com/2009/02/specify-your-canonical.html -->
+    <txp:if_section name="">
+        <link rel="canonical" href="<txp:site_url />">
+    <txp:else />
+        <txp:if_individual_article>
+            <link rel="canonical" href="<txp:permlink />">
+        <txp:else />
+            <link rel="canonical" href="<txp:section url="1" />">
+        </txp:if_individual_article>
+    </txp:if_section>
+
+<!-- Google font API -->
+    <txp:output_form form="google_fonts" />
+
+<!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+<!-- jQuery -->
+    <txp:output_form form="jquery" />
+
+<!-- Modernizr -->
+    <script src="/js/modernizr.js"></script>
+
+<!-- Fix IE8 -->
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="/css/ie8.css">
+    <![endif]-->
+</head>
+
+<body class="<txp:if_section name=""><txp:if_search>search<txp:else />front</txp:if_search><txp:else /><txp:section /></txp:if_section>-page">
+
+<!-- Google Chrome Frame -->
+    <txp:output_form form="old_browser" />
+
+<!-- Header -->
+    <txp:output_form form="header" />
+
+<!-- Navigation -->
+    <txp:output_form form="navigation" />
+
+    <div class="wrapper">
+        <div class="container">
+
+<!-- left (main) column -->
+            <main role="main" aria-label="Main content">
+
+                <!-- is this the search result page? also omits the pagination links below (uses pagination format within search_results.article.txp instead) -->
+                <txp:if_search>
+
+                    <section role="region" itemscope itemtype="http://schema.org/SearchResultsPage">
+                        <h1 itemprop="name">Search results</h1>
+                        <div itemprop="mainContentOfPage">
+                            <txp:output_form form="search_results" />
+                        </div>
+                    </section>
+
+                <txp:else />
+
+                    <!-- else is this an article category list? -->
+                    <txp:if_category>
+
+                        <section role="region" itemscope itemtype="http://schema.org/CollectionPage">
+                            <h1 itemprop="name">Category <txp:category title="1" /></h1>
+                            <div itemprop="mainContentOfPage">
+                                <txp:article form="article_listing" limit="5" wraptag="ul" class="article-list" />
+                            </div>
+                        </section>
+
+                    <txp:else />
+
+                        <!-- else is this an article author list? -->
+                        <txp:if_author>
+
+                            <section role="region" itemscope itemtype="http://schema.org/CollectionPage">
+                                <h1>Author <txp:author /></h1>
+                                <div itemprop="mainContentOfPage">
+                                    <txp:article form="article_listing" limit="5" wraptag="ul" class="article-list" />
+                                </div>
+                            </section>
+
+                        <txp:else />
+    
+                            <!-- else display articles normally -->
+                            <txp:article limit="5" /> <!-- links by default to form: 'default.article.txp' unless you specify a different form -->
+
+                        </txp:if_author>
+                    </txp:if_category>
+
+                    <!-- add pagination links to foot of article/article listings/category listings if there are more articles available,
+                        this method is more flexibile than using simple txp:link_to_prev/txp:link_to_next or txp:older/txp:newer tags -->
+                    <txp:variable name="more" value='<txp:older /><txp:newer />' />
+                    <txp:variable name="prev" value='<txp:older />' />
+                    <txp:variable name="next" value='<txp:newer />' />
+
+                    <txp:if_variable name="more" value="">
+                    <txp:else />
+                        <nav role="navigation" class="paginator" aria-label="Article navigation">
+
+                            <txp:if_variable name="prev" value="">
+                            <txp:else />
+                                <a rel="prev" href="<txp:older />" title="Go to older articles" aria-label="Go to older articles">&#8592; Older</a>
+                            </txp:if_variable>
+
+                            <txp:if_variable name="next" value="">
+                            <txp:else />
+                                <a rel="next" href="<txp:newer />" title="Go to newer articles" aria-label="Go to newer articles">Newer &#8594;</a>
+                            </txp:if_variable>
+
+                        </nav>
+                    </txp:if_variable>
+
+                </txp:if_search>
+
+            </main> <!-- /main -->
+
+<!-- right (complementary) column -->
+            <div role="complementary">
+                <txp:search_input /> <!-- links by default to form: 'search_input.misc.txp' unless you specify a different form -->
+
+                <!-- Feed links, default flavor is rss, so we don't need to specify a flavor on the first feed_link -->
+                <p><txp:feed_link label="RSS" class="feed-rss" /> / <txp:feed_link flavor="atom" label="Atom" class="feed-atom" /></p>
+
+                <h4>External links</h4>
+                <txp:linklist wraptag="ul" break="li" limit="10" /> <!-- links by default to form: 'plainlinks.link.txp' unless you specify a different form -->
+            </div> <!-- /complementary -->
+
+        </div> <!-- /.container -->
+    </div> <!-- /.wrapper -->
+
+<!-- footer -->
+    <txp:output_form form="footer" />
+
+<!-- JavaScript at the bottom for fast page loading, more info: http://developer.yahoo.com/performance/rules.html#js_bottom -->
+    <script src="/js/main.min.js"></script>
+
+    <txp:output_form form="analytics" />
+</body>
+</html>

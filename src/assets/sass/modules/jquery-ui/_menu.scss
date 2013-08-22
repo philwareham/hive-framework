@@ -1,0 +1,76 @@
+//
+// note: this file is for use with Sass and Compass - http://sass-lang.com, http://compass-style.org
+// don't use it as your live site stylesheet!
+//
+
+
+/* Menu - http://jqueryui.com/menu/
+   ========================================================================== */
+
+.ui-menu {
+    @include box-shadow(0 0 .5em rgba(0, 0, 0, .2));
+
+    display: block;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    list-style: none;
+
+    .ui-menu {
+        position: absolute;
+        margin-top: -3px;
+    }
+
+    .ui-menu-item {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        /* support: IE10, see #8844 */
+        list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+    }
+
+    .ui-menu-divider {
+        margin: 5px 0 5px 0;
+        border-width: 1px 0 0 0;
+        height: 0;
+        font-size: 0;
+        line-height: 0;
+    }
+
+    .ui-menu-item a {
+        display: block;
+        padding: 2px .4em;
+    }
+
+    .ui-state-active {
+        background-color: $color-highlight-box;
+    }
+
+    .ui-state-disabled {
+        margin: .4em 0 .2em;
+    }
+
+    // left-aligned
+    .ui-icon {
+        position: absolute;
+        top: .25em;
+        left: .25em;
+    }
+
+    // right-aligned
+    .ui-menu-icon {
+        position: static;
+        float: right;
+        margin-top: .25em;
+    }
+}
+
+/* icon support */
+.ui-menu-icons {
+    position: relative;
+
+    .ui-menu-item a {
+        position: relative;
+        padding-left: 2em;
+    }
+}

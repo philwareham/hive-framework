@@ -1,0 +1,174 @@
+//
+// note: this file is for use with Sass and Compass - http://sass-lang.com, http://compass-style.org
+// don't use it as your live site stylesheet!
+//
+
+
+/* Layout helpers
+   ========================================================================== */
+
+.ui-helper-hidden {
+    display: none;
+}
+
+.ui-helper-hidden-accessible {
+    position: absolute;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.ui-helper-reset {
+    @include adjust-leading-to(1);
+
+    margin: 0;
+    border: 0;
+    padding: 0;
+    outline: 0;
+    font-size: 100%;
+    text-decoration: none;
+    list-style: none;
+}
+
+.ui-helper-clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+    border-collapse: collapse;
+}
+
+.ui-helper-zfix {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.ui-front {
+    z-index: 100;
+}
+
+
+/* Component containers
+   ========================================================================== */
+
+.ui-widget .ui-widget {
+    font-size: 100%;
+}
+
+.ui-widget-content {
+    border: 1px solid $color-gradient-border;
+    background-color: #ffffff;
+}
+
+.ui-widget-header {
+    @include gradient-linear($color-gradient-from, $color-gradient-to);
+
+    font-weight: bold;
+}
+
+
+/* Interaction states
+   ========================================================================== */
+
+.ui-state-default {
+    color: #333333;
+    border: 1px solid $color-gradient-border;
+    background-color: $color-gradient-from;
+}
+
+a.ui-state-default:hover,
+a.ui-state-default:focus {
+    color: #333333;
+    text-decoration: none;
+}
+
+.ui-state-hover,
+.ui-state-focus {
+    border-color: darken($color-gradient-border, 13%);
+    background-color: lighten($color-gradient-from, 4%);
+}
+
+.ui-state-active {
+    background-color: lighten($color-gradient-from, 8%);
+}
+
+.ui-selecting {
+    background-color: #c7dbfa;
+}
+
+.ui-selected {
+    background-color: #e3edfc;
+}
+
+
+/* Interaction cues
+   ========================================================================== */
+
+.ui-state-highlight {
+    border: 1px solid #ffe16d;
+    background-color: #fff6d3;
+}
+
+.ui-state-error {
+    border: 1px solid #e1b2b2;
+    color: #9d261d;
+    background-color: #f2dede;
+}
+
+.ui-priority-primary {
+    font-weight: bold;
+}
+
+.ui-priority-secondary {
+    font-weight: normal;
+    opacity: .66;
+}
+
+.ui-state-disabled {
+    background-image: none;
+    opacity: .33;
+    cursor: default !important;
+
+    a {
+        text-decoration: none;
+        cursor: default;
+    }
+}
+
+
+/* Overlays
+   ========================================================================== */
+
+.ui-widget-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .75);
+}
+
+.no-rgba .ui-widget-overlay {
+    background: url("/assets/img/overlay-no-rgba.png");
+}
+
+
+/* Shadows
+   ========================================================================== */
+
+.ui-widget-shadow {
+    @include border-radius;
+
+    margin: -.5em 0 0 -.5em;
+    padding: .5em;
+    background-color: #999999;
+    opacity: .33;
+}

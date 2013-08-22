@@ -1,0 +1,48 @@
+//
+// note: this file is for use with Sass and Compass - http://sass-lang.com, http://compass-style.org
+// don't use it as your live site stylesheet!
+//
+
+
+/* Comments
+   ========================================================================== */
+
+.comments {
+    @include border-radius;
+
+    margin-bottom: 1em;
+    padding: 1em 1em 1px;
+    background: $color-background-box;
+    word-wrap: break-word;
+
+    h4 {
+        .is-author {
+            font-weight: normal;
+        }
+
+        .comment-anchor {
+            float: right;
+            font-weight: normal;
+        }
+    }
+}
+
+.comments-author {
+    background: darken($color-background-box, 3%);
+}
+
+#cpreview {
+    @include border-radius;
+
+    margin-bottom: 2px;
+    padding: 1em;
+    background: #fff3d6;
+}
+
+.comments_error {
+    background: #fff4f4 !important;
+}
+
+.error_message li {
+    color: $color-error-text;
+}

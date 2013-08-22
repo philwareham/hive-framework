@@ -1,0 +1,16 @@
+{
+    "name": "hive-framework",
+    "version": "0.1.0",
+    "author": "Phil Wareham",
+    "description": "My personal site development framework",
+    "directory": "bower_components",
+    "dependencies": {
+        "google-code-prettify": "1.0.0",
+        "jquery.cookie": "1.3.1",
+        "jquery-details": "0.1.0",
+        "jquery-placeholder": "2.0.7",
+        "responsive-nav": "1.0.20",
+        "ResponsiveSlides.js": "latest",
+        "requirejs": "2.1.8"
+    }
+}

@@ -1,0 +1,42 @@
+//
+// note: this file is for use with Sass and Compass - http://sass-lang.com, http://compass-style.org
+// don't use it as your live site stylesheet!
+//
+
+
+/* Accordion - http://jqueryui.com/accordion/
+   ========================================================================== */
+
+.ui-accordion {
+    .ui-accordion-header {
+        position: relative;
+        display: block;
+        margin: 2px 0 0 0;
+        padding: .5em 1em;
+        font-size: 100%;
+        cursor: pointer;
+
+        a {
+            color: #333333;
+            text-decoration: none;
+        }
+
+        .ui-accordion-header-icon {
+            position: absolute;
+            top: 50%;
+            left: .5em;
+            margin-top: -8px;
+        }
+    }
+
+    .ui-accordion-content {
+        border-top: 0;
+        padding: 1px 1em;
+        overflow: auto;
+    }
+
+    .ui-accordion-icons,
+    .ui-accordion-icons .ui-accordion-icons {
+        padding-left: 2em;
+    }
+}

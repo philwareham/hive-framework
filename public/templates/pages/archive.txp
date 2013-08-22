@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-gb" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <txp:output_form form="page_title" />
+    <meta name="generator" content="Textpattern CMS">
+    <meta name="robots" content="index, follow, noodp, noydir">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <txp:if_individual_article>
+<!-- Add meta author for individual articles -->
+        <txp:meta_author title="1" />
+    </txp:if_individual_article>
+
+<!-- Open Graph - required for Facebook API -->
+    <txp:output_form form="meta_open_graph" />
+
+<!-- Specify canonical, more info: http://googlewebmastercentral.blogspot.com/2009/02/specify-your-canonical.html -->
+    <txp:if_individual_article>
+        <link rel="canonical" href="<txp:permlink />">
+    <txp:else />
+        <link rel="canonical" href="<txp:section url="1" />">
+    </txp:if_individual_article>
+
+<!-- Google font API -->
+    <txp:output_form form="google_fonts" />
+
+<!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+<!-- jQuery -->
+    <txp:output_form form="jquery" />
+
+<!-- Modernizr -->
+    <script src="/js/modernizr.js"></script>
+
+<!-- Fix IE8 -->
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="/css/ie8.css">
+    <![endif]-->
+</head>
+
+<body class="<txp:section />-page">
+
+<!-- Google Chrome Frame -->
+    <txp:output_form form="old_browser" />
+
+<!-- Header -->
+    <txp:output_form form="header" />
+
+<!-- Navigation -->
+    <txp:output_form form="navigation" />
+
+    <div class="wrapper">
+        <div class="container">
+
+<!-- Left (main) column -->
+            <main role="main" aria-label="Main content">
+
+                <txp:if_article_list>
+
+                    <section role="region" itemscope itemtype="http://schema.org/CollectionPage">
+                        <h1 itemprop="name"><txp:section title="1" /></h1>
+                        <div itemprop="mainContentOfPage">
+                            <txp:article listform="article_listing" limit="5" wraptag="ul" class="article-list" />
+                            <!-- or if you want to list all articles from all sections instead, then replace txp:article with txp:article_custom -->
+                        </div>
+                    </section>
+
+                <txp:else />
+
+                    <txp:article />
+
+                </txp:if_article_list>
+
+                <!-- add pagination links to foot of article/article listings if there are more articles available,
+                    this method is more flexibile than using simple txp:link_to_prev/txp:link_to_next or txp:older/txp:newer tags -->
+                <txp:if_individual_article>
+
+                    <txp:variable name="more" value='<txp:link_to_prev /><txp:link_to_next />' />
+                    <txp:variable name="prev" value='<txp:link_to_prev />' />
+                    <txp:variable name="next" value='<txp:link_to_next />' />
+
+                    <txp:if_variable name="more" value="">
+                    <txp:else />
+                        <nav role="navigation" class="paginator" aria-label="Article navigation">
+
+                            <txp:if_variable name="prev" value="">
+                            <txp:else />
+                                <a rel="prev" href="<txp:link_to_prev />" title="<txp:prev_title />" aria-label="<txp:prev_title />">&#8592; Older</a>
+                            </txp:if_variable>
+
+                            <txp:if_variable name="next" value="">
+                            <txp:else />
+                                <a rel="next" href="<txp:link_to_next />" title="<txp:next_title />" aria-label="<txp:next_title />" >Newer &#8594;</a>
+                            </txp:if_variable>
+
+                        </nav>
+                    </txp:if_variable>
+
+                <txp:else />
+
+                    <txp:variable name="more" value='<txp:older /><txp:newer />' />
+                    <txp:variable name="prev" value='<txp:older />' />
+                    <txp:variable name="next" value='<txp:newer />' />
+
+                    <txp:if_variable name="more" value="">
+                    <txp:else />
+                        <nav role="navigation" class="paginator" aria-label="Article navigation">
+
+                            <txp:if_variable name="prev" value="">
+                            <txp:else />
+                                <a rel="prev" href="<txp:older />" title="Go to older articles" aria-label="Go to older articles">&#8592; Older</a>
+                            </txp:if_variable>
+
+                            <txp:if_variable name="next" value="">
+                            <txp:else />
+                                <a rel="next" href="<txp:newer />" title="Go to newer articles" aria-label="Go to newer articles">Newer &#8594;</a>
+                            </txp:if_variable>
+
+                        </nav>
+                    </txp:if_variable>
+
+                </txp:if_individual_article>
+
+                </p>
+
+            </main> <!-- /main -->
+
+    <!-- Right (complementary) column -->
+            <div role="complementary">
+                <txp:search_input /> <!-- links by default to form: 'search_input.misc.txp' unless you specify a different form -->
+    
+                <!-- Feed links, default flavor is rss, so we don't need to specify a flavor on the first feed_link -->
+                <p><txp:feed_link label="RSS" class="feed-rss" /> / <txp:feed_link flavor="atom" label="Atom" class="feed-atom" /></p>
+
+                <h4>External links</h4>
+                <txp:linklist wraptag="ul" break="li" limit="10" /> <!-- links by default to form: 'plainlinks.link.txp' unless you specify a different form -->
+            </div> <!-- /complementary -->
+
+        </div> <!-- /.container -->
+    </div> <!-- /.wrapper -->
+
+<!-- Footer -->
+    <txp:output_form form="footer" />
+
+<!-- JavaScript at the bottom for fast page loading, more info: http://developer.yahoo.com/performance/rules.html#js_bottom -->
+    <script src="/js/main.min.js"></script>
+
+    <txp:output_form form="analytics" />
+</body>
+</html>

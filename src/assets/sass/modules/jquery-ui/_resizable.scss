@@ -1,0 +1,87 @@
+//
+// note: this file is for use with Sass and Compass - http://sass-lang.com, http://compass-style.org
+// don't use it as your live site stylesheet!
+//
+
+
+/* Resizable - http://jqueryui.com/resizable/
+   ========================================================================== */
+
+.ui-resizable {
+    position: relative;
+}
+
+.ui-resizable-handle {
+    position: absolute;
+    display: block;
+    font-size: .1px;
+}
+
+.ui-resizable-disabled .ui-resizable-handle,
+.ui-resizable-autohide .ui-resizable-handle {
+    display: none;
+}
+
+.ui-resizable-n {
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 7px;
+    cursor: n-resize;
+}
+
+.ui-resizable-s {
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 7px;
+    cursor: s-resize;
+}
+
+.ui-resizable-e {
+    top: 0;
+    right: -5px;
+    width: 7px;
+    height: 100%;
+    cursor: e-resize;
+}
+
+.ui-resizable-w {
+    top: 0;
+    left: -5px;
+    width: 7px;
+    height: 100%;
+    cursor: w-resize;
+}
+
+.ui-resizable-se {
+    bottom: 1px;
+    right: 1px;
+    width: 12px;
+    height: 12px;
+    cursor: se-resize;
+}
+
+.ui-resizable-sw {
+    bottom: -5px;
+    left: -5px;
+    width: 9px;
+    height: 9px;
+    cursor: sw-resize;
+}
+
+.ui-resizable-nw {
+    top: -5px;
+    left: -5px;
+    width: 9px;
+    height: 9px;
+    cursor: nw-resize;
+}
+
+.ui-resizable-ne {
+    top: -5px;
+    right: -5px;
+    width: 9px;
+    height: 9px;
+    cursor: ne-resize;
+}

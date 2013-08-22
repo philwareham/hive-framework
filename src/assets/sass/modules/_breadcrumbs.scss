@@ -1,0 +1,32 @@
+//
+// note: this file is for use with Sass and Compass - http://sass-lang.com, http://compass-style.org
+// don't use it as your live site stylesheet!
+//
+
+
+/* Breadcrumb links
+   ========================================================================== */
+
+.breadcrumbs,
+.breadcrumbs--path {
+    @include adjust-font-size-to(12px, .75);
+
+    list-style: none;
+    padding: 0 .3333333em;
+    background-color: $color-background-box;
+
+    li {
+        display: inline-block;
+    }
+}
+
+/* simple breadcrumb styling to apply to (ordered) lists */
+.breadcrumbs > li + li:before {
+    content:"\00BB" "\00A0";
+}
+
+
+/* path-like breadcrumb styling */
+.breadcrumbs--path > li + li:before {
+    content:"\002F" "\00A0";
+}

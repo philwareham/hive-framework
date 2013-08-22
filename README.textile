@@ -1,0 +1,63 @@
+h1. Hive framework
+
+"Demo":http://testing3.designhive.com/.
+
+A website development framework built with Sass and Compass, and incorporating jQuery UI. The theme styling is intentionally minimal to make re-skinning easier.
+
+Source image files (Adobe Illustrator .ai and Adobe Photoshop .psd formats) are also included, within the @/src/assets/img/@ directory.
+
+h2. Minimum browser support
+
+* Mozilla Firefox 4+
+* Apple Safari 5+
+* Opera 12+
+* Internet Explorer 8+
+
+h2. Requirements
+
+Building this repository requires:
+
+* "Node.js":http://nodejs.org/ >=0.8.0
+* "Ruby":http://www.ruby-lang.org/en/
+* "Bundler":http://bundler.io/
+* "Grunt":http://gruntjs.com/ ~0.4.0
+* "Bower":http://bower.io/ >=0.10.0
+
+h2. Setup
+
+h3. Installing required tools
+
+The project uses "Grunt":http://gruntjs.com/ to run tasks and "Sass":http://sass-lang.com/ for CSS pre-processing. First make sure you have base dependencies installed: "Ruby":http://www.ruby-lang.org/en/, "Node.js":http://nodejs.org/, "Bundler":http://bundler.io/, "Grunt":http://gruntjs.com/ and "Bower":http://bower.io/. You can install Node and Ruby using their installers, Bunder with gem and the rest with npm:
+
+bc. $ gem install bundler
+$ npm install -g grunt-cli
+$ npm install -g bower
+
+Consult the tools' documentation for more instructions.
+
+h3. Installing dependencies
+
+After you have the base dependencies taken care of, you can install the project's dependencies. Navigate to the project's directory, and run the dependency managers:
+
+bc. $ cd hive-framework
+$ npm install
+$ bundle install
+$ bower install
+
+*npm* installs Node modules for Grunt, *bundle* takes care of Ruby gems, and *bower* manages client-side scripts.
+
+h2. Building
+
+This repository hosts sources and needs to be built before it can be used. After you have installed all dependencies, you will be able to run tasks using Grunt, including building:
+
+bc. $ grunt [task]
+
+Where the @[task]@ is either @test@, @build@ or @watch@. Watch will launch a task that watches for file changes. The project is automatically built if a source file is modified. The build task builds the project.
+
+h2. Textpattern templates
+
+Optional Textpattern CMS theme 'forms' and 'pages' templates are included, for reference. *Currently under development.*
+
+h2. License
+
+Licensed under MIT license except Texpattern templates, which are licensed under GPLv2 license.

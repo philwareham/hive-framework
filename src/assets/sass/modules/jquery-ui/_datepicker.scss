@@ -1,0 +1,217 @@
+//
+// note: this file is for use with Sass and Compass - http://sass-lang.com, http://compass-style.org
+// don't use it as your live site stylesheet!
+//
+
+
+/* Datepicker - http://jqueryui.com/datepicker/
+   ========================================================================== */
+
+.ui-datepicker {
+    @include adjust-font-size-to(14px, .875);
+    @include box-shadow(0 0 .5em rgba(0, 0, 0, .2));
+
+    display: none;
+    padding: .2em .2em 0;
+    width: 17em;
+    font-family: $font-sans-serif;
+
+    .ui-datepicker-header {
+        position: relative;
+        padding: .2em 0;
+    }
+
+    .ui-datepicker-prev,
+    .ui-datepicker-next {
+        @include border-radius;
+
+        position: absolute;
+        top: .2em;
+        width: 1.8em;
+        height: 1.8em;
+        background-color: transparent;
+    }
+
+    .ui-datepicker-prev {
+        left: .2em;
+    }
+
+    .ui-datepicker-next {
+        right: .2em;
+    }
+
+    .ui-datepicker-prev span,
+    .ui-datepicker-next span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        margin-top: -8px;
+        margin-left: -8px;
+    }
+
+    .ui-datepicker-title {
+        margin: 0 2.2em;
+        line-height: 1.8em;
+        text-align: center;
+
+        select {
+            margin: 0;
+        }
+    }
+
+    select.ui-datepicker-month, 
+    select.ui-datepicker-year {
+        width: 49%;
+    }
+
+    table {
+        margin: 0 0 .2em;
+        width: 100%;
+    }
+
+    th {
+        border: 0;
+        padding: .5em .2em;
+        text-align: center;
+    }
+
+    td {
+        border: 0;
+        padding: 1px;
+
+        a,
+        span {
+                display: block;
+                padding: .2em;
+                text-align: center;
+        }
+
+        a.ui-state-active {
+            border-color: #a3bef3;
+            background-color: #e3edfc;
+        }
+
+        a.ui-state-highlight:hover {
+            border-color: #edac19;
+        }
+
+        a.ui-state-active:hover {
+            border-color: #6b8fe8;
+        }
+
+        &.ui-datepicker-week-col {
+            padding: .32em 0;
+            text-align: center;
+        }
+    }
+
+    .ui-datepicker-buttonpane {
+        margin: .7em 0 0 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0;
+        padding: 0 .2em;
+        background-image: none;
+
+        button {
+            float: right;
+            margin: .5em .2em .4em;
+            padding: .2em .6em .3em .6em;
+            width: auto;
+            overflow: visible;
+            cursor: pointer;
+
+            &.ui-datepicker-current {
+                float: left;
+            }
+        }
+    }
+}
+
+/* Multiple calendars */
+
+.ui-datepicker.ui-datepicker-multi {
+    width: auto;
+}
+
+.ui-datepicker-multi {
+    .ui-datepicker-group {
+        float: left;
+
+        table {
+            margin: 0 auto .4em;
+            width: 95%;
+        }
+    }
+
+    .ui-datepicker-group-last .ui-datepicker-header,
+    .ui-datepicker-group-middle .ui-datepicker-header {
+        border-left-width: 0;
+    }
+
+    .ui-datepicker-buttonpane {
+        clear: left;
+    }
+}
+
+.ui-datepicker-multi-2 .ui-datepicker-group {
+    width: 50%;
+}
+
+.ui-datepicker-multi-3 .ui-datepicker-group {
+    width: 33.3%;
+}
+
+.ui-datepicker-multi-4 .ui-datepicker-group {
+    width: 25%;
+}
+
+.ui-datepicker-row-break {
+    clear: both;
+    width: 100%;
+    font-size: 0;
+}
+
+/* Datepicker RTL support */
+
+html[dir="rtl"] {
+    .ui-datepicker-prev {
+        right: 2px;
+        left: auto;
+    }
+
+    .ui-datepicker-next {
+        left: 2px;
+        right: auto;
+    }
+
+    .ui-datepicker-prev:hover {
+        right: 1px;
+        left: auto;
+    }
+
+    .ui-datepicker-next:hover {
+        left: 1px;
+        right: auto;
+    }
+
+    .ui-datepicker-buttonpane {
+        clear: right;
+    }
+
+    .ui-datepicker-buttonpane button {
+        float: left;
+    }
+
+    .ui-datepicker-buttonpane button.ui-datepicker-current,
+    .ui-datepicker-group {
+        float: right;
+    }
+
+    .ui-datepicker-group-last .ui-datepicker-header,
+    .ui-datepicker-group-middle .ui-datepicker-header {
+        border-right-width: 0;
+        border-left-width: 1px;
+    }
+}
