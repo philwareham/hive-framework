@@ -1,5 +1,7 @@
 h1. Hive framework
 
+!https://travis-ci.org/philwareham/hive-framework.png?branch=master!:https://travis-ci.org/philwareham/hive-framework
+
 "Demo":http://testing3.designhive.com/.
 
 A website development framework built with Sass and Compass, and incorporating jQuery UI. The theme styling is intentionally minimal to make re-skinning easier.
