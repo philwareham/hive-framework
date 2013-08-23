@@ -2,11 +2,9 @@
 <html lang="en-gb" class="no-js">
 
 <head>
-    <meta charset="utf-8">
     <txp:output_form form="page_title" />
-    <meta name="generator" content="Textpattern CMS">
+
     <meta name="robots" content="index, follow, noodp, noydir">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <txp:if_individual_article>
 <!-- Add meta author for individual articles -->
@@ -15,13 +13,6 @@
 
 <!-- Open Graph - required for Facebook API -->
     <txp:output_form form="meta_open_graph" />
-
-<!-- Specify canonical, more info: http://googlewebmastercentral.blogspot.com/2009/02/specify-your-canonical.html -->
-    <txp:if_individual_article>
-        <link rel="canonical" href="<txp:permlink />">
-    <txp:else />
-        <link rel="canonical" href="<txp:section url="1" />">
-    </txp:if_individual_article>
 
     <txp:output_form form="head" />
 
