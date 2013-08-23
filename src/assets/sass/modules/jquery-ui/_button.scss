@@ -48,6 +48,11 @@
     }
 }
 
+a.ui-button {
+    color: $color-text;
+    text-decoration: none;
+}
+
 .boxshadow .ui-button.ui-state-focus {
     @include box-shadow($inset-highlighting, 0 0 7px $color-link-hover);
 
