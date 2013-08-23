@@ -86,12 +86,12 @@
 
                             <txp:if_variable name="prev" value="">
                             <txp:else />
-                                <a rel="prev" href="<txp:older />" title="Go to older articles" aria-label="Go to older articles">&#8592; Older</a>
+                                <a rel="prev" href="<txp:older />" title="Go to older articles" aria-label="Go to older articles">← Older</a>
                             </txp:if_variable>
 
                             <txp:if_variable name="next" value="">
                             <txp:else />
-                                <a rel="next" href="<txp:newer />" title="Go to newer articles" aria-label="Go to newer articles">Newer &#8594;</a>
+                                <a rel="next" href="<txp:newer />" title="Go to newer articles" aria-label="Go to newer articles">Newer →</a>
                             </txp:if_variable>
 
                         </nav>
