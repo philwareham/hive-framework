@@ -6,9 +6,6 @@
 
     <meta name="robots" content="index, follow, noodp, noydir">
 
-<!-- Open Graph - required for Facebook API -->
-    <txp:output_form form="meta_open_graph" />
-
     <txp:output_form form="head" />
 
 </head>
