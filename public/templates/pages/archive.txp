@@ -23,34 +23,13 @@
         <link rel="canonical" href="<txp:section url="1" />">
     </txp:if_individual_article>
 
-<!-- Google font API -->
-    <txp:output_form form="google_fonts" />
+    <txp:output_form form="head" />
 
-<!-- CSS -->
-    <link rel="stylesheet" href="/css/style.css">
-
-<!-- jQuery -->
-    <txp:output_form form="jquery" />
-
-<!-- Modernizr -->
-    <script src="/js/modernizr.js"></script>
-
-<!-- Fix IE8 -->
-    <!--[if lt IE 9]>
-        <link rel="stylesheet" href="/css/ie8.css">
-    <![endif]-->
 </head>
 
 <body class="<txp:section />-page">
 
-<!-- Google Chrome Frame -->
-    <txp:output_form form="old_browser" />
-
-<!-- Header -->
-    <txp:output_form form="header" />
-
-<!-- Navigation -->
-    <txp:output_form form="navigation" />
+    <txp:output_form form="body_header" />
 
     <div class="wrapper">
         <div class="container">
@@ -143,11 +122,7 @@
     </div> <!-- /.wrapper -->
 
 <!-- Footer -->
-    <txp:output_form form="footer" />
+    <txp:output_form form="body_footer" />
 
-<!-- JavaScript at the bottom for fast page loading, more info: http://developer.yahoo.com/performance/rules.html#js_bottom -->
-    <script src="/js/main.min.js"></script>
-
-    <txp:output_form form="analytics" />
 </body>
 </html>

@@ -3,3 +3,5 @@
     <!-- possible schema types: Organization, Corporation, etc (see http://schema.org/Organization for more info) -->
     <p><small>Copyright <abbr title="<txp:php>echo date('Y');</txp:php>"><txp:php>$year = date('Y');echo romanNumerals($year);</txp:php></abbr> <span itemscope itemtype="http://schema.org/Organization"><span itemprop="name">Organisation Name</span></span>. Published with <a href="http://textpattern.com" rel="external" title="Go to the Textpattern CMS website">Textpattern CMS</a>.</small></p>
 </footer>
+
+<script data-main="/assets/js/main.js" src="/assets/js/require.js"></script>

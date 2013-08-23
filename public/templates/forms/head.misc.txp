@@ -1,0 +1,9 @@
+<!-- CSS -->
+<link rel="stylesheet" href="/css/style.css">
+
+<!-- Modernizr -->
+<script src="/assets/js/modernizr.js"></script>
+
+<!--[if lt IE 9]>
+    <link rel="stylesheet" href="/css/ie8.css">
+<![endif]-->

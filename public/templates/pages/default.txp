@@ -35,34 +35,13 @@
         </txp:if_individual_article>
     </txp:if_section>
 
-<!-- Google font API -->
-    <txp:output_form form="google_fonts" />
+    <txp:output_form form="head" />
 
-<!-- CSS -->
-    <link rel="stylesheet" href="/css/style.css">
-
-<!-- jQuery -->
-    <txp:output_form form="jquery" />
-
-<!-- Modernizr -->
-    <script src="/js/modernizr.js"></script>
-
-<!-- Fix IE8 -->
-    <!--[if lt IE 9]>
-        <link rel="stylesheet" href="/css/ie8.css">
-    <![endif]-->
 </head>
 
 <body class="<txp:if_section name=""><txp:if_search>search<txp:else />front</txp:if_search><txp:else /><txp:section /></txp:if_section>-page">
 
-<!-- Google Chrome Frame -->
-    <txp:output_form form="old_browser" />
-
-<!-- Header -->
-    <txp:output_form form="header" />
-
-<!-- Navigation -->
-    <txp:output_form form="navigation" />
+    <txp:output_form form="body_header" />
 
     <div class="wrapper">
         <div class="container">
@@ -154,11 +133,7 @@
     </div> <!-- /.wrapper -->
 
 <!-- footer -->
-    <txp:output_form form="footer" />
+    <txp:output_form form="body_footer" />
 
-<!-- JavaScript at the bottom for fast page loading, more info: http://developer.yahoo.com/performance/rules.html#js_bottom -->
-    <script src="/js/main.min.js"></script>
-
-    <txp:output_form form="analytics" />
 </body>
 </html>
