@@ -2,6 +2,10 @@
 <meta name="generator" content="Textpattern CMS">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<txp:if_individual_article>
+    <txp:meta_author title="1" />
+</txp:if_individual_article>
+
 <!-- Canonical URL -->
 <txp:if_section name="">
     <link rel="canonical" href="<txp:site_url />">

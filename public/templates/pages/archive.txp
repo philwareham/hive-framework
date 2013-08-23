@@ -6,11 +6,6 @@
 
     <meta name="robots" content="index, follow, noodp, noydir">
 
-    <txp:if_individual_article>
-<!-- Add meta author for individual articles -->
-        <txp:meta_author title="1" />
-    </txp:if_individual_article>
-
 <!-- Open Graph - required for Facebook API -->
     <txp:output_form form="meta_open_graph" />
 
