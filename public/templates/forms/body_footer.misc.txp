@@ -3,4 +3,4 @@
     <p><small>Copyright <txp:php>echo date('Y');</txp:php> <span itemscope itemtype="http://schema.org/Organization"><span itemprop="name">Organisation Name</span></span>. Published with <a href="http://textpattern.com" rel="external" title="Go to the Textpattern CMS website">Textpattern CMS</a>.</small></p>
 </footer>
 
-<script data-main="/assets/js/main.js" src="/assets/js/require.js"></script>
+<script data-main="<txp:site_url />assets/js/main.js" src="<txp:site_url />assets/js/require.js"></script>

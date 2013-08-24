@@ -23,11 +23,11 @@
 <meta property="og:description" content="">
 
 <!-- CSS -->
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="<txp:site_url />assets/css/style.css">
 
 <!-- Modernizr -->
-<script src="/assets/js/modernizr.js"></script>
+<script src="<txp:site_url />assets/js/modernizr.js"></script>
 
 <!--[if lt IE 9]>
-    <link rel="stylesheet" href="/assets/css/ie8.css">
+    <link rel="stylesheet" href="<txp:site_url />assets/css/ie8.css">
 <![endif]-->
