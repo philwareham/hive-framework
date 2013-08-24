@@ -3,14 +3,6 @@
 <meta name="generator" content="Textpattern CMS">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Open Graph - required for Facebook API -->
-<meta property="og:site_name" content="<txp:site_name />">
-<meta property="og:title" content="<txp:variable name='page-title' />">
-<meta property="og:type" content="article">
-<meta property="og:url" content="<txp:if_individual_article><txp:permlink /><txp:else /><txp:if_section><txp:section url='1' /><txp:else /><txp:if_category><txp:category url='1' /><txp:else /><txp:site_url /></txp:if_category></txp:if_section></txp:if_individual_article>">
-<meta property="og:image" content="<txp:if_individual_article><txp:if_article_image><txp:images limit='1'><txp:image_url/></txp:images><txp:else /><txp:site_url />assets/img/site.png</txp:if_article_image><txp:else /><txp:site_url />assets/img/style/site.png</txp:if_individual_article>">
-<meta property="og:description" content="">
-
 <txp:if_section name="">
     <link rel="canonical" href="<txp:site_url />">
 <txp:else />
@@ -21,6 +13,14 @@
         <link rel="canonical" href="<txp:section url="1" />">
     </txp:if_individual_article>
 </txp:if_section>
+
+<!-- Open Graph - required for Facebook API -->
+<meta property="og:site_name" content="<txp:site_name />">
+<meta property="og:title" content="<txp:variable name='page-title' />">
+<meta property="og:type" content="article">
+<meta property="og:url" content="<txp:if_individual_article><txp:permlink /><txp:else /><txp:if_section><txp:section url='1' /><txp:else /><txp:if_category><txp:category url='1' /><txp:else /><txp:site_url /></txp:if_category></txp:if_section></txp:if_individual_article>">
+<meta property="og:image" content="<txp:if_individual_article><txp:if_article_image><txp:images limit='1'><txp:image_url/></txp:images><txp:else /><txp:site_url />assets/img/site.png</txp:if_article_image><txp:else /><txp:site_url />assets/img/style/site.png</txp:if_individual_article>">
+<meta property="og:description" content="">
 
 <!-- CSS -->
 <link rel="stylesheet" href="/css/style.css">
