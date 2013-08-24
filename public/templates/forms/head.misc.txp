@@ -29,5 +29,5 @@
 <script src="/assets/js/modernizr.js"></script>
 
 <!--[if lt IE 9]>
-    <link rel="stylesheet" href="/css/ie8.css">
+    <link rel="stylesheet" href="/assets/css/ie8.css">
 <![endif]-->
