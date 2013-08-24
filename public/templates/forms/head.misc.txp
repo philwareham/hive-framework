@@ -11,7 +11,6 @@
 <meta property="og:image" content="<txp:if_individual_article><txp:if_article_image><txp:images limit='1'><txp:image_url/></txp:images><txp:else /><txp:site_url />assets/img/site.png</txp:if_article_image><txp:else /><txp:site_url />assets/img/style/site.png</txp:if_individual_article>">
 <meta property="og:description" content="">
 
-<!-- Canonical URL -->
 <txp:if_section name="">
     <link rel="canonical" href="<txp:site_url />">
 <txp:else />
