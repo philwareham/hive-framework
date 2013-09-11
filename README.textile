@@ -19,11 +19,11 @@ h2. Requirements
 
 Building this repository requires:
 
-* "Node.js":http://nodejs.org/ >=0.8.0
+* "Node.js":http://nodejs.org/ >=0.10.0
 * "Ruby":http://www.ruby-lang.org/en/
 * "Bundler":http://bundler.io/
 * "Grunt":http://gruntjs.com/ ~0.4.0
-* "Bower":http://bower.io/ >=0.10.0
+* "Bower":http://bower.io/ >=1.0.0
 
 h2. Setup
 
