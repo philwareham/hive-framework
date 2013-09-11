@@ -77,16 +77,6 @@
     @include background-image(radial-gradient($color-gradient-from, $color-gradient-to));
 }
 
-// sticky positioning
-
-@mixin position-sticky {
-    position: -webkit-sticky;
-    position: -moz-sticky;
-    position: -ms-sticky;
-    position: -o-sticky;
-    position: sticky;
-}
-
 // on-hover highlights
 
 @mixin hover-brightness {
