@@ -97,7 +97,7 @@
 
     require(['responsivenav'], function ()
     {
-        responsiveNav('#nav', {
+        responsiveNav('.nav-collapse', {
             animate: true,       // Boolean: Use CSS3 transitions, true or false
             transition: 400,     // Integer: Speed of the transition, in milliseconds
             label: "Menu",       // String: Label for the navigation toggle

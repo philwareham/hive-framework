@@ -7,7 +7,7 @@
 /* Navigation
    ========================================================================== */
 
-#nav {
+.nav-collapse {
     font-family: $font-sans-serif;
     font-weight: bold;
     background-color: $color-gradient-to;
@@ -100,7 +100,7 @@
     }
 }
 
-#nav-toggle {
+.nav-toggle {
     @include hide-text;
     @include svg-graphic(hamburger, png, 32px, 32px);
 
