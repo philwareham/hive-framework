@@ -6,7 +6,7 @@
     <h1><txp:site_name /></h1>
 </header>
 
-<nav role="navigation" class="site-navigation" aria-label="Site navigation">
+<nav role="navigation" class="nav-collapse" aria-label="Site navigation">
     <txp:section_list default_title="Home" include_default="1" wraptag="ul" break="">
         <li<txp:if_section name='<txp:section />'> class="active"</txp:if_section>>
             <txp:section title="1" link="1" />
