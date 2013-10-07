@@ -13,7 +13,7 @@
 
     .ui-slider-handle {
         @include border-radius(50%);
-        @include box-shadow(0 0 .5em rgba(0, 0, 0, .2));
+        @include box-shadow(0 0 0.5em rgba(0, 0, 0, 0.2));
 
         position: absolute;
         z-index: 2;
@@ -24,7 +24,7 @@
     }
 
     .ui-slider-range {
-        @include adjust-font-size-to(12px, .75);
+        @include adjust-font-size-to(12px, 0.75);
 
         position: absolute;
         z-index: 1;

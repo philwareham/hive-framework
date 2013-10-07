@@ -10,21 +10,21 @@
 .ui-button {
     /* correct font size not being inherited in all browsers */
     font-size: 100%;
-    @include adjust-font-size-to(14px, .875);
+    @include adjust-font-size-to(14px, 0.875);
     @include text-shadow($text-shadow-light);
     @include box-shadow($inset-highlighting);
     @include background-clip;
     @include box-sizing(border-box);
     @include gradient-linear($color-gradient-from, $color-gradient-to);
-    @include transition(box-shadow .2s linear);
+    @include transition(box-shadow 0.2s linear);
 
     -webkit-appearance: none; // remove iOS Safari default styling
     position: relative;
     display: inline-block;
     overflow: visible; // the overflow property removes extra width in IE
-    margin: 0 .1em 0 0;
+    margin: 0 0.1em 0 0;
     border: solid 1px $color-gradient-border;
-    padding: .3571428em .7142857em; // 5px / 14px, 10px / 14px
+    padding: 0.3571428em 0.7142857em; // 5px / 14px, 10px / 14px
     height: 2.3571428em; // 33px / 14px
     font-family: $font-sans-serif;
     text-align: center;
@@ -40,7 +40,7 @@
     }
 
     &:active {
-        @include box-shadow(inset 0 .2em .25em rgba(#000000, .15));
+        @include box-shadow(inset 0 0.2em 0.25em rgba(#000000, 0.15));
         @include gradient-linear(darken($color-gradient-to, 4%), darken($color-gradient-from, 4%));
 
         border-color: darken($color-gradient-border, 13%);
@@ -82,11 +82,11 @@ button.ui-button-icons-only {
 }
 
 .ui-button.ui-corner-right {
-    @include border-radius(0 .5em .5em 0);
+    @include border-radius(0 0.5em 0.5em 0);
 }
 
 .ui-button.ui-corner-left {
-    @include border-radius(.5em 0 0 .5em);
+    @include border-radius(0.5em 0 0 0.5em);
 }
 
 /* button text element */
@@ -134,21 +134,21 @@ button.ui-button-icons-only {
 .ui-button-text-icon-primary .ui-button-icon-primary,
 .ui-button-text-icons .ui-button-icon-primary,
 .ui-button-icons-only .ui-button-icon-primary {
-    left: .5em;
+    left: 0.5em;
 }
 
 .ui-button-text-icon-secondary .ui-button-icon-secondary,
 .ui-button-text-icons .ui-button-icon-secondary,
 .ui-button-icons-only .ui-button-icon-secondary {
-    right: .5em;
+    right: 0.5em;
 }
 
 /* button sets */
 .ui-buttonset {
-    margin-right: .5em;
+    margin-right: 0.5em;
 
     .ui-button {
-        margin-right: -.35em;
+        margin-right: -0.35em;
     }
 }
 

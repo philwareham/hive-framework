@@ -28,7 +28,7 @@ a.button,
 span.disabled {
     /* correct font size not being inherited in all browsers */
     font-size: 100%;
-    @include adjust-font-size-to(14px, .875);
+    @include adjust-font-size-to(14px, 0.875);
 
     /* address margins set differently in Firefox4+, Safari5+, and Chrome */
     margin: 0;
@@ -82,11 +82,11 @@ select,
 textarea {
     @include border-radius(0);
     @include box-sizing(border-box);
-    @include transition(box-shadow .2s linear);
+    @include transition(box-shadow 0.2s linear);
 
     -webkit-appearance: none; // remove iOS Safari default styling
     border: 1px solid $color-border;
-    padding: .3571428em; // 5px / 14px
+    padding: 0.3571428em; // 5px / 14px
     height: 2.3571428em; // 33px / 14px
     background: #ffffff;
     text-align: left;
@@ -125,7 +125,7 @@ select[size="1"] {
     select[multiple],
     select[multiple][size] {
         background-image: none;
-        padding-right: .5em;
+        padding-right: 0.5em;
     }
 
     select,
@@ -133,8 +133,8 @@ select[size="1"] {
     select[size="1"] {
         background: #ffffff url("data:image/svg+xml,<svg version='1.1' baseProfile='full' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='21px' height='7px' viewBox='0 0 21 7' enable-background='new 0 0 21 7' xml:space='preserve'><polygon fill='#333333' points='2,0 7,7 12,0'/></svg>") no-repeat right center;
         padding-right: 2.25em;
-        -webkit-background-size: 1.5em .5em; // 21px 7px
-                background-size: 1.5em .5em; // 21px 7px
+        -webkit-background-size: 1.5em 0.5em; // 21px 7px
+                background-size: 1.5em 0.5em; // 21px 7px
     }
 
 }

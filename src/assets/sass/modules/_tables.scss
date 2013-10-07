@@ -23,7 +23,7 @@ table {
 caption {
     font-style: italic;
     text-align: left;
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
 }
 
 th,
@@ -31,13 +31,13 @@ td {
     /* make table cells align top and left by default */
     vertical-align: top;
     text-align: left;
-    padding: .25em 0;
+    padding: 0.25em 0;
 }
 
 tfoot {
     th,
     td {
-        padding: .3333333em 0;
+        padding: 0.3333333em 0;
     }
 }
 
@@ -56,7 +56,7 @@ tfoot {
     th,
     td {
         border-bottom: 1px solid $color-border;
-        padding: .25em;
+        padding: 0.25em;
 
         &:empty {
             border: 0;
@@ -71,7 +71,7 @@ tfoot {
     }
 
     tfoot {
-        padding: .3333333em;
+        padding: 0.3333333em;
 
         tr:last-child {
             th,

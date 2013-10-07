@@ -8,23 +8,23 @@
    ========================================================================== */
 
 .ui-dialog {
-    @include box-shadow(0 0 .5em rgba(0, 0, 0, .2));
+    @include box-shadow(0 0 0.5em rgba(0, 0, 0, 0.2));
 
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1002;
-    padding: .2em;
+    padding: 0.2em;
     overflow: hidden;
 
     .ui-dialog-titlebar {
         position: relative;
-        padding: .4em 1em;
+        padding: 0.4em 1em;
     }
 
     .ui-dialog-title {
         float: left;
-        margin: .1em 0;
+        margin: 0.1em 0;
         width: 90%;
         overflow: hidden;
         white-space: nowrap;
@@ -34,7 +34,7 @@
     .ui-dialog-titlebar-close {
         position: absolute;
         top: 50%;
-        right: .3em;
+        right: 0.3em;
         margin: -10px 0 0 0;
         border: 0;
         width: 20px;
@@ -45,15 +45,15 @@
     .ui-dialog-content {
         position: relative;
         border: 0;
-        padding: .5em 1em;
+        padding: 0.5em 1em;
         background: none;
         overflow: auto;
     }
 
     .ui-dialog-buttonpane {
-        margin-top: .5em;
+        margin-top: 0.5em;
         border-width: 1px 0 0 0;
-        padding: .5em;
+        padding: 0.5em;
         background-image: none;
         text-align: left;
     }
@@ -63,7 +63,7 @@
     }
 
     .ui-dialog-buttonpane button {
-        margin: .5em .4em .5em 0;
+        margin: 0.5em 0.4em 0.5em 0;
         cursor: pointer;
     }
 

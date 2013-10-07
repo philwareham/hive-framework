@@ -8,17 +8,17 @@
    ========================================================================== */
 
 .ui-datepicker {
-    @include adjust-font-size-to(14px, .875);
-    @include box-shadow(0 0 .5em rgba(0, 0, 0, .2));
+    @include adjust-font-size-to(14px, 0.875);
+    @include box-shadow(0 0 0.5em rgba(0, 0, 0, 0.2));
 
     display: none;
-    padding: .2em .2em 0;
+    padding: 0.2em 0.2em 0;
     width: 17em;
     font-family: $font-sans-serif;
 
     .ui-datepicker-header {
         position: relative;
-        padding: .2em 0;
+        padding: 0.2em 0;
     }
 
     .ui-datepicker-prev,
@@ -26,18 +26,18 @@
         @include border-radius;
 
         position: absolute;
-        top: .2em;
+        top: 0.2em;
         width: 1.8em;
         height: 1.8em;
         background-color: transparent;
     }
 
     .ui-datepicker-prev {
-        left: .2em;
+        left: 0.2em;
     }
 
     .ui-datepicker-next {
-        right: .2em;
+        right: 0.2em;
     }
 
     .ui-datepicker-prev span,
@@ -66,13 +66,13 @@
     }
 
     table {
-        margin: 0 0 .2em;
+        margin: 0 0 0.2em;
         width: 100%;
     }
 
     th {
         border: 0;
-        padding: .5em .2em;
+        padding: 0.5em 0.2em;
         text-align: center;
     }
 
@@ -83,7 +83,7 @@
         a,
         span {
                 display: block;
-                padding: .2em;
+                padding: 0.2em;
                 text-align: center;
         }
 
@@ -101,23 +101,23 @@
         }
 
         &.ui-datepicker-week-col {
-            padding: .32em 0;
+            padding: 0.32em 0;
             text-align: center;
         }
     }
 
     .ui-datepicker-buttonpane {
-        margin: .7em 0 0 0;
+        margin: 0.7em 0 0 0;
         border-left: 0;
         border-right: 0;
         border-bottom: 0;
-        padding: 0 .2em;
+        padding: 0 0.2em;
         background-image: none;
 
         button {
             float: right;
-            margin: .5em .2em .4em;
-            padding: .2em .6em .3em .6em;
+            margin: 0.5em 0.2em 0.4em;
+            padding: 0.2em 0.6em 0.3em 0.6em;
             width: auto;
             overflow: visible;
             cursor: pointer;
@@ -140,7 +140,7 @@
         float: left;
 
         table {
-            margin: 0 auto .4em;
+            margin: 0 auto 0.4em;
             width: 95%;
         }
     }

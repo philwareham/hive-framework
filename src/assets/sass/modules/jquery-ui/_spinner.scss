@@ -27,7 +27,7 @@
 }
 
 .ui-spinner-button {
-    @include adjust-font-size-to(8px, .5);
+    @include adjust-font-size-to(8px, 0.5);
 
     position: absolute;
     right: 0;

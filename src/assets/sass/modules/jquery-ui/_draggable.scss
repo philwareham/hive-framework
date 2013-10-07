@@ -8,11 +8,11 @@
  ========================================================================== */
 
 .ui-draggable {
-    @include transition(box-shadow .2s linear);
+    @include transition(box-shadow 0.2s linear);
 }
 
 .ui-draggable-dragging {
-    @include box-shadow(0 0 .5em rgba(0, 0, 0, .2));
+    @include box-shadow(0 0 0.5em rgba(0, 0, 0, 0.2));
 
     z-index: 1000;
 }

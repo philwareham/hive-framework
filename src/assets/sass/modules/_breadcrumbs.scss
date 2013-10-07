@@ -9,10 +9,10 @@
 
 .breadcrumbs,
 .breadcrumbs--path {
-    @include adjust-font-size-to(12px, .75);
+    @include adjust-font-size-to(12px, 0.75);
 
     list-style: none;
-    padding: 0 .3333333em;
+    padding: 0 0.3333333em;
     background-color: $color-background-box;
 
     li {

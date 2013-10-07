@@ -8,7 +8,7 @@
    ========================================================================== */
 
 .ui-menu {
-    @include box-shadow(0 0 .5em rgba(0, 0, 0, .2));
+    @include box-shadow(0 0 0.5em rgba(0, 0, 0, 0.2));
 
     display: block;
     margin: 0;
@@ -24,7 +24,7 @@
     .ui-menu-item {
         margin: 0;
         display: block;
-        padding: 2px .4em;
+        padding: 2px 0.4em;
         /* support: IE10, see #8844 */
         list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
     }
@@ -42,21 +42,21 @@
     }
 
     .ui-state-disabled {
-        margin: .4em 0 .2em;
+        margin: 0.4em 0 0.2em;
     }
 
     // left-aligned
     .ui-icon {
         position: absolute;
-        top: .25em;
-        left: .25em;
+        top: 0.25em;
+        left: 0.25em;
     }
 
     // right-aligned
     .ui-menu-icon {
         position: static;
         float: right;
-        margin-top: .25em;
+        margin-top: 0.25em;
     }
 }
 

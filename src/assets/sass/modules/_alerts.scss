@@ -13,9 +13,9 @@
 .warning,
 .error,
 .information {
-    @include border-radius(.25em); // 4px / 16px
+    @include border-radius(0.25em); // 4px / 16px
 
-    padding: 0 .25em; // 4px / 16px
+    padding: 0 0.25em; // 4px / 16px
 }
 
 .success {
@@ -46,7 +46,7 @@
 
 .alert-block {
     border: 1px solid;
-    padding: .5em 1em;
+    padding: 0.5em 1em;
 
     &.success {
         border-color: $color-success-border;

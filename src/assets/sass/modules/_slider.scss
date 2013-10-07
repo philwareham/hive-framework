@@ -13,7 +13,7 @@
 
     margin: 0 0 1em 0;
     border: solid 1px $color-border;
-    padding: .375em;
+    padding: 0.375em;
     background: #ffffff;
 }
 
@@ -41,7 +41,7 @@
 /* slideshow navigator */
 
 a.rslides_nav {
-    padding: .25em;
+    padding: 0.25em;
     font-family: $font-sans-serif;
     line-height: 1;
 
@@ -67,12 +67,12 @@ a.rslides_nav {
     line-height: 1;
 
     li {
-        margin: .375em .25em 0;
+        margin: 0.375em 0.25em 0;
         display: inline-block;
     }
 
     a {
-        @include adjust-font-size-to(12px, .75);
+        @include adjust-font-size-to(12px, 0.75);
         @include hide-text;
         @include border-radius; // 6px
         

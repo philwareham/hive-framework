@@ -16,7 +16,7 @@
         background: none;
 
         li {
-            @include border-radius(.5em .5em 0 0);
+            @include border-radius(0.5em 0.5em 0 0);
 
             position: relative;
             top: 0;
@@ -52,7 +52,7 @@
 
         .ui-tabs-anchor {
             float: left;
-            padding: .5em 1em;
+            padding: 0.5em 1em;
             color: #333333;
             text-decoration: none;
         }
