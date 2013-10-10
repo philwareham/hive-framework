@@ -71,7 +71,10 @@ tfoot {
     }
 
     tfoot {
-        padding: 0.3333333em;
+        th,
+        td {
+            padding: 0.3333333em;
+        }
 
         tr:last-child {
             th,
