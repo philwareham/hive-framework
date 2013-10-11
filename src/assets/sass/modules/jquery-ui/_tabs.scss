@@ -16,7 +16,7 @@
         background: none;
 
         li {
-            @include border-radius(0.5em 0.5em 0 0);
+            @include border-radius($default-border-radius $default-border-radius 0 0);
 
             position: relative;
             top: 0;

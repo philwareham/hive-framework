@@ -82,11 +82,11 @@ button.ui-button-icons-only {
 }
 
 .ui-button.ui-corner-right {
-    @include border-radius(0 0.5em 0.5em 0);
+    @include border-radius(0 $default-border-radius $default-border-radius 0);
 }
 
 .ui-button.ui-corner-left {
-    @include border-radius(0.5em 0 0 0.5em);
+    @include border-radius($default-border-radius 0 0 $default-border-radius);
 }
 
 /* button text element */

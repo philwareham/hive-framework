@@ -81,7 +81,7 @@ dfn[title] {
 
 mark,
 var {
-    @include border-radius(0.25em); // 4px / 16px
+    @include border-radius($default-border-radius / 2);
 
     padding: 0 0.25em; // 0 4px
     color: $color-text;
