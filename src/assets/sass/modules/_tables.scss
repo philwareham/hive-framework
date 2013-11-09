@@ -28,19 +28,33 @@ td {
     padding: 0.25em 0;
 }
 
+thead tr:first-child {
+    th,
+    td {
+        padding-top: 0;
+    }
+}
+
 tfoot {
     th,
     td {
         padding: 0.3333333em 0;
     }
+
+    tr:last-child {
+        th,
+        td {
+            padding-bottom: 0;
+        }
+    }
 }
 
-/* cell alignments */
-
+/* multi-row span vertical cell alignments */
 [rowspan] {
     vertical-align: middle;
 }
 
+/* range values right in numerical cells */
 .numerical {
     text-align: right;
 }
