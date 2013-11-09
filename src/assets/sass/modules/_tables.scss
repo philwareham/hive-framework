@@ -91,6 +91,13 @@ tfoot {
             }
         }
     }
+
+    tbody tr:first-child {
+        td,
+        th {
+            border-top: 1px solid $color-border;
+        }
+    }
 }
 
 /* set widths of `col` elements using classes whose numbers represent a percentage
