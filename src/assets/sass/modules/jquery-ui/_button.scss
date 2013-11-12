@@ -146,7 +146,7 @@ button.ui-button-icons-only {
     }
 }
 
-[aria-pressed="true"] {
+label[aria-pressed="true"] {
     &.ui-button {
         @include gradient-linear($color-selected, $color-selecting);
 
