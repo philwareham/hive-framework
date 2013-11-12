@@ -8,7 +8,7 @@
     margin: 0 0 1em 0;
     border: solid 1px $color-border;
     padding: 0.375em;
-    background: #ffffff;
+    background: $color-background;
 }
 
 .rslides {
@@ -73,7 +73,7 @@ a.rslides_nav {
         display: block;
         border: 1px solid;
         border-color: $color-border;
-        background: #ffffff;
+        background: $color-background;
         width: 1em;  // 12px
         height: 1em; // 12px
 

@@ -58,7 +58,7 @@
 
 .ui-widget-content {
     border: 1px solid $color-gradient-border;
-    background-color: #ffffff;
+    background-color: $color-background;
 }
 
 .ui-widget-header {
@@ -72,14 +72,14 @@
    ========================================================================== */
 
 .ui-state-default {
-    color: #333333;
+    color: $color-text;
     border: 1px solid $color-gradient-border;
     background-color: $color-gradient-from;
 }
 
 a.ui-state-default:hover,
 a.ui-state-default:focus {
-    color: #333333;
+    color: $color-text;
     text-decoration: none;
 }
 
@@ -94,11 +94,11 @@ a.ui-state-default:focus {
 }
 
 .ui-selecting {
-    background-color: #c7dbfa;
+    background-color: $color-selecting;
 }
 
 .ui-selected {
-    background-color: #e3edfc;
+    background-color: $color-selected;
 }
 
 
@@ -106,14 +106,14 @@ a.ui-state-default:focus {
    ========================================================================== */
 
 .ui-state-highlight {
-    border: 1px solid #ffe16d;
-    background-color: #fff6d3;
+    border: 1px solid $color-warning-border;
+    background-color: $color-warning-background;
 }
 
 .ui-state-error {
-    border: 1px solid #e1b2b2;
-    color: #9d261d;
-    background-color: #f2dede;
+    border: 1px solid $color-error-border;
+    color: $color-error-text;
+    background-color: $color-error-background;
 }
 
 .ui-priority-primary {

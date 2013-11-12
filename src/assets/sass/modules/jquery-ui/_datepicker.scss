@@ -82,16 +82,16 @@
         }
 
         a.ui-state-active {
-            border-color: #a3bef3;
-            background-color: #e3edfc;
+            border-color: lighten($color-link, 42%);
+            background-color: $color-selected;
         }
 
         a.ui-state-highlight:hover {
-            border-color: #edac19;
+            border-color: lighten($color-warning-text, 8%);
         }
 
         a.ui-state-active:hover {
-            border-color: #6b8fe8;
+            border-color: lighten($color-link, 27%);
         }
 
         &.ui-datepicker-week-col {

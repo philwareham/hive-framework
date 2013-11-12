@@ -148,20 +148,20 @@ button.ui-button-icons-only {
 
 [aria-pressed="true"] {
     &.ui-button {
-        @include gradient-linear(#e3edfc, #c7dbfa);
+        @include gradient-linear($color-selected, $color-selecting);
 
-        border-color: #a3bef3;
+        border-color: lighten($color-link, 42%);
     }
 
     &.ui-button:hover {
-        @include gradient-linear(#f1f6fe, #ccdefa);
+        @include gradient-linear(lighten($color-selected, 3%), lighten($color-selecting, 2%));
 
-        border-color: #6b8fe8;
+        border-color: lighten($color-link, 27%);
     }
 
     &.ui-button:active {
-        @include gradient-linear(#c7dbfa, #b0cbf7);
+        @include gradient-linear($color-selecting, darken($color-selecting, 5%));
 
-        border-color: #6b8fe8;
+        border-color: lighten($color-link, 27%);
     }
 }
