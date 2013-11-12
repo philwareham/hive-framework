@@ -1,8 +1,5 @@
 {
     "name": "hive-framework",
-    "version": "0.1.0",
-    "author": "Phil Wareham",
-    "description": "My personal site development framework",
     "directory": "bower_components",
     "dependencies": {
         "google-code-prettify": "1.0.0",
