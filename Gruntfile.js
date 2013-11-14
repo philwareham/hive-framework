@@ -129,5 +129,5 @@ module.exports = function (grunt) {
     grunt.registerTask('sass', ['compass', 'cssmin', 'copy:css']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('build', ['jshint', 'sass', 'copy:js', 'uglify']);
-    grunt.registerTask('travis', ['jshint']);
+    grunt.registerTask('travis', ['jshint', 'compass']);
 };
