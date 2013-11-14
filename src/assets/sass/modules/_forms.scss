@@ -33,7 +33,9 @@ span.disabled {
 /* colour placeholder text */
 input,
 textarea {
-    @include placeholder($color-text-footnote);
+    @include input-placeholder {
+        color: $color-text-footnote;
+    }
 }
 
 /* styling for placeholder polyfill fallback */
