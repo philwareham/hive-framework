@@ -12,31 +12,29 @@
 
     .ui-menu {
         position: absolute;
-        margin-top: -3px;
     }
 
     .ui-menu-item {
         margin: 0;
         display: block;
-        padding: 2px 0.4em;
+        padding: 3px 0.4em;
+        cursor: pointer;
         /* support: IE10, see #8844 */
         list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
     }
 
     .ui-menu-divider {
-        margin: 5px 0 5px 0;
+        margin: 5px 0;
         border-width: 1px 0 0 0;
         height: 0;
         font-size: 0;
         line-height: 0;
     }
 
+    .ui-state-focus,
     .ui-state-active {
+        margin: -1px;
         background-color: $color-selected;
-    }
-
-    .ui-state-disabled {
-        margin: 0.4em 0 0.2em;
     }
 
     // left-aligned
@@ -48,7 +46,8 @@
 
     // right-aligned
     .ui-menu-icon {
-        position: static;
+        position: relative;
+        top: -0.2em;
         float: right;
         margin-top: 0.25em;
     }
