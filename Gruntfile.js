@@ -14,7 +14,7 @@ module.exports = function (grunt) {
 
         watch: {
             sass: {
-                files: 'src/sass/**',
+                files: 'src/assets/sass/**',
                 tasks: ['sass']
             },
 
@@ -49,7 +49,7 @@ module.exports = function (grunt) {
         },
 
         jshint: {
-            files: ['Gruntfile.js', 'src/js/*.js'],
+            files: ['Gruntfile.js', 'src/assets/js/*.js'],
             options: {
                 bitwise: true,
                 camelcase: true,
@@ -77,7 +77,8 @@ module.exports = function (grunt) {
                     require: true,
                     requirejs: true,
                     responsiveNav: true,
-                    prettyPrint: true
+                    prettyPrint: true,
+                    WebFont: true
                 }
             }
         },
