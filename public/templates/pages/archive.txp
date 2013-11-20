@@ -2,12 +2,13 @@
 <html lang="en-gb" class="no-js">
 
 <head>
+    <meta charset="utf-8">
+
     <txp:output_form form="page_title" />
 
     <meta name="robots" content="index, follow, noodp, noydir">
 
     <txp:output_form form="head" />
-
 </head>
 
 <body class="<txp:section />-page">
