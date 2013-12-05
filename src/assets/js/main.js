@@ -12,11 +12,12 @@
         },
         shim:
         {
-            'details': ['jquery'],
-            'placeholder': ['jquery'],
-            'flowplayer': ['jquery'],
             'cookie': ['jquery'],
-            'jqueryui': ['jquery']
+            'details': ['jquery'],
+            'flowplayer': ['jquery'],
+            'jqueryui': ['jquery'],
+            'placeholder': ['jquery'],
+            'stellar': ['jquery']
         }
     });
 
@@ -27,7 +28,10 @@
 
     require(['jquery'], function ($)
     {
-        var details = $('details'), placeholder = $('textarea[placeholder], input[placeholder]'), code = $('pre code');
+        var details = $('details'),
+            placeholder = $('textarea[placeholder], input[placeholder]'),
+            code = $('pre code'),
+            stellar = $('.parallax');
 
         // Details polyfill.
 
@@ -59,6 +63,18 @@
             require(['prettify'], function ()
             {
                 prettyPrint();
+            });
+        }
+
+        // Parallax backgrounds.
+
+        if (stellar.length)
+        {
+            require(['stellar'], function ()
+            {
+                $.stellar({
+                    horizontalScrolling: false
+                });
             });
         }
     });

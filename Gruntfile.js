@@ -1,12 +1,12 @@
 module.exports = function (grunt) {
     'use strict';
 
-    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -105,13 +105,14 @@ module.exports = function (grunt) {
                 files: [
                     {
                         'public/assets/js/main.js': ['src/assets/js/main.js'],
+                        'public/assets/js/cookie.js': ['bower_components/jquery.cookie/jquery.cookie.js'],
                         'public/assets/js/details.js': ['bower_components/jquery-details/jquery.details.js'],
                         'public/assets/js/placeholder.js': ['bower_components/jquery-placeholder/jquery.placeholder.js'],
                         'public/assets/js/prettify.js': ['bower_components/google-code-prettify/src/prettify.js'],
                         'public/assets/js/require.js': ['bower_components/requirejs/require.js'],
-                        'public/assets/js/cookie.js': ['bower_components/jquery.cookie/jquery.cookie.js'],
                         'public/assets/js/responsivenav.js': ['bower_components/responsive-nav/responsive-nav.js'],
-                        'public/assets/js/responsiveslides.js': ['bower_components/ResponsiveSlides.js/responsiveslides.js']
+                        'public/assets/js/responsiveslides.js': ['bower_components/ResponsiveSlides.js/responsiveslides.js'],
+                        'public/assets/js/stellar.js': ['bower_components/jquery.stellar/jquery.stellar.js']
                     },
                     {
                         expand: true,
