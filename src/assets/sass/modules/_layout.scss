@@ -51,6 +51,11 @@ footer {
     }
 }
 
+/* prevent really, really long words from breaking layout */
+article {
+    @include word-break(break-all);
+}
+
 .section {
     margin-top: 2em;
 
