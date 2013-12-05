@@ -20,7 +20,7 @@ select,
 textarea,
 a.button,
 span.button {
-    @include box-sizing(border-box);
+    @include box-sizing;
 
     /* correct font size not being inherited in all browsers */
     font-size: 100%;

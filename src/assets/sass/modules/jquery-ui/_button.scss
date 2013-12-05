@@ -8,7 +8,7 @@
     @include text-shadow($text-shadow-light);
     @include box-shadow($inset-highlighting);
     @include background-clip;
-    @include box-sizing(border-box);
+    @include box-sizing;
     @include gradient-linear($color-gradient-from, $color-gradient-to);
     @include transition(box-shadow 0.2s linear);
 
