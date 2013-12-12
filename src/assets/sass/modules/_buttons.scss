@@ -97,7 +97,7 @@ span.button {
     input[type="reset"],
     input[type="submit"] {
         &:focus {
-            @include box-shadow($inset-highlighting, 0 0 7px $color-link-hover);
+            @include box-shadow($inset-highlighting, 0 0 4px 2px $color-link-focus);
 
             outline: 0;
         }
