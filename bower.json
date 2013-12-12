@@ -4,6 +4,7 @@
     "directory": "bower_components",
     "dependencies": {
         "google-code-prettify": "1.0.0",
+        "iscroll": "5.0.8",
         "jquery.cookie": "1.4.0",
         "jquery-details": "0.1.0",
         "jquery-placeholder": "2.0.7",
