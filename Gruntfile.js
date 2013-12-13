@@ -12,18 +12,6 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        watch: {
-            sass: {
-                files: 'src/assets/sass/**',
-                tasks: ['sass']
-            },
-
-            js: {
-                files: 'src/assets/js/*.js',
-                tasks: ['jshint', 'copy', 'uglify']
-            }
-        },
-
         compass: {
             dev: {
                 options: {
@@ -45,6 +33,19 @@ module.exports = function (grunt) {
                 files: [
                     {expand: true, cwd: 'src/assets/js/libs/flowplayer/skin/img/', src: ['**'], dest: 'public/assets/css/img/'}
                 ]
+            }
+        },
+
+        cssmin: {
+            main: {
+                files: {
+                    'public/assets/css/main.css': [
+                        'tmp/assets/css/style.css',
+                        'tmp/assets/css/jquery-ui.css',
+                        'src/assets/js/libs/flowplayer/skin/minimalist.css'
+                    ],
+                    'public/assets/css/ie8.css': ['tmp/assets/css/ie8.css']
+                }
             }
         },
 
@@ -79,19 +80,6 @@ module.exports = function (grunt) {
                     responsiveNav: true,
                     prettyPrint: true,
                     WebFont: true
-                }
-            }
-        },
-
-        cssmin: {
-            main: {
-                files: {
-                    'public/assets/css/main.css': [
-                        'tmp/assets/css/style.css',
-                        'tmp/assets/css/jquery-ui.css',
-                        'src/assets/js/libs/flowplayer/skin/minimalist.css'
-                    ],
-                    'public/assets/css/ie8.css': ['tmp/assets/css/ie8.css']
                 }
             }
         },
@@ -155,6 +143,18 @@ module.exports = function (grunt) {
                         dest: 'public/assets/js/'
                     }
                 ]
+            }
+        },
+
+        watch: {
+            sass: {
+                files: 'src/assets/sass/**',
+                tasks: ['sass']
+            },
+
+            js: {
+                files: 'src/assets/js/*.js',
+                tasks: ['jshint', 'copy', 'uglify']
             }
         }
 
