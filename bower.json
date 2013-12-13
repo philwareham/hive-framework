@@ -9,6 +9,7 @@
         "jquery-details": "0.1.0",
         "jquery-placeholder": "2.0.7",
         "jquery.stellar": "0.6.2",
+        "modernizr": "2.7.1",
         "responsive-nav": "1.0.24",
         "ResponsiveSlides.js": "latest",
         "requirejs": "2.1.9"

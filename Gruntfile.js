@@ -5,6 +5,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-modernizr');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
@@ -95,6 +96,38 @@ module.exports = function (grunt) {
             }
         },
 
+        modernizr: {
+            'devFile': 'bower_components/modernizr/modernizr.js',
+            'outputFile': 'public/assets/js/modernizr.js',
+            'tests': [
+                'boxshadow',
+                'flexbox',
+                'rgba',
+                'input',
+                'inputtypes',
+                'svg',
+                'touch'
+            ],
+            'extra': {
+                'shiv': true,
+                'printshiv': false,
+                'load': false,
+                'mq': false,
+                'cssclasses': true
+            },
+            'extensibility': {
+                'addtest': false,
+                'prefixed': false,
+                'teststyles': true,
+                'testprops': true,
+                'testallprops': true,
+                'hasevents': false,
+                'prefixes': true,
+                'domprefixes': true
+            },
+            'parseFiles': false
+        },
+
         uglify: {
             dist: {
                 options: {
@@ -130,6 +163,6 @@ module.exports = function (grunt) {
     grunt.registerTask('test', ['jshint']);
     grunt.registerTask('sass', ['compass', 'cssmin', 'copy:css']);
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('build', ['jshint', 'sass', 'copy:js', 'uglify']);
+    grunt.registerTask('build', ['jshint', 'sass', 'copy:js', 'uglify', 'modernizr']);
     grunt.registerTask('travis', ['jshint', 'compass']);
 };
