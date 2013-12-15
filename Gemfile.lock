@@ -24,7 +24,7 @@ GEM
       rb-kqueue (>= 0.2)
     multi_json (1.8.2)
     rb-fsevent (0.9.3)
-    rb-inotify (0.9.2)
+    rb-inotify (0.9.3)
       ffi (>= 0.5.0)
     rb-kqueue (0.2.0)
       ffi (>= 0.5.0)
