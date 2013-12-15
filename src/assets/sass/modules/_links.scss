@@ -51,6 +51,19 @@ a {
     }
 }
 
+/* images as links */
+.a--img {
+    @include transition(box-shadow 0.2s linear);
+
+    &:focus {
+        outline: 0;
+    }
+
+    img {
+        @include box-shadow(0 0 4px 2px $color-link-focus);
+    }
+}
+
 /* only target phone numbers you want clickable and stop mobile phones from linking other
    numbers that look like, but are not phone numbers - use attribute `itemprop="telephone"`
    to apply to the numbers you require linked and styled */
