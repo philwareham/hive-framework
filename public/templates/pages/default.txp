@@ -68,7 +68,7 @@
                             </section>
 
                         <txp:else />
-    
+
                             <!-- else display articles normally -->
                             <txp:article limit="5" /> <!-- links by default to form: 'default.article.txp' unless you specify a different form -->
 
