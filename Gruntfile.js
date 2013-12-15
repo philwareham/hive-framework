@@ -5,9 +5,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-modernizr');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-modernizr');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -84,38 +84,6 @@ module.exports = function (grunt) {
             }
         },
 
-        modernizr: {
-            'devFile': 'bower_components/modernizr/modernizr.js',
-            'outputFile': 'public/assets/js/modernizr.js',
-            'tests': [
-                'boxshadow',
-                'flexbox',
-                'rgba',
-                'input',
-                'inputtypes',
-                'svg',
-                'touch'
-            ],
-            'extra': {
-                'shiv': true,
-                'printshiv': false,
-                'load': false,
-                'mq': false,
-                'cssclasses': true
-            },
-            'extensibility': {
-                'addtest': false,
-                'prefixed': false,
-                'teststyles': true,
-                'testprops': true,
-                'testallprops': true,
-                'hasevents': false,
-                'prefixes': true,
-                'domprefixes': true
-            },
-            'parseFiles': false
-        },
-
         uglify: {
             dist: {
                 options: {
@@ -156,6 +124,38 @@ module.exports = function (grunt) {
                 files: 'src/assets/js/*.js',
                 tasks: ['jshint', 'copy', 'uglify']
             }
+        },
+
+        modernizr: {
+            'devFile': 'bower_components/modernizr/modernizr.js',
+            'outputFile': 'public/assets/js/modernizr.js',
+            'tests': [
+                'boxshadow',
+                'flexbox',
+                'rgba',
+                'input',
+                'inputtypes',
+                'svg',
+                'touch'
+            ],
+            'extra': {
+                'shiv': true,
+                'printshiv': false,
+                'load': false,
+                'mq': false,
+                'cssclasses': true
+            },
+            'extensibility': {
+                'addtest': false,
+                'prefixed': false,
+                'teststyles': true,
+                'testprops': true,
+                'testallprops': true,
+                'hasevents': false,
+                'prefixes': true,
+                'domprefixes': true
+            },
+            'parseFiles': false
         }
 
     });
