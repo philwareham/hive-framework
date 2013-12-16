@@ -21,7 +21,7 @@
 
     <li role="article" itemscope itemtype="http://schema.org/Article">
         <h4 itemprop="name headline"><a href="<txp:permlink />" itemprop="url"><txp:title /></a></h4>
-            
+
 <!-- if the article has an excerpt, display that, otherwise show highlighted keywords in context of article -->
         <div itemprop="description">
             <txp:if_excerpt>
@@ -31,7 +31,7 @@
             </txp:if_excerpt>
         </div>
 
-        <p class="footnote">Posted <time datetime="<txp:posted format="iso8601" />" itemprop="datePublished"><txp:posted /></time>, Author <span itemprop="author"><txp:author link="1" this_section="1" /></span></p>
+        <p class="footnote">Posted <time datetime="<txp:posted format="iso8601" />" itemprop="datePublished"><txp:posted /></time>, Author <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><txp:author link="1" this_section="1" /></span></span></p>
     </li>
 
 </txp:article>

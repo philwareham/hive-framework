@@ -23,12 +23,12 @@
     <!-- ...if exists, use the file category, otherwise omit that line -->
     <txp:if_variable name="file_download_category" value="">
     <txp:else />
-        <strong>Category</strong> <txp:file_download_category /> | 
+        <strong>Category</strong> <txp:file_download_category /> |
     </txp:if_variable>
 
-        <strong>Author</strong> <txp:file_download_author link="1" /> | 
-        <strong>File size</strong> <txp:file_download_size /> | 
-        <strong>Last modified</strong> <span itemprop="dateModified"><txp:file_download_created /></span> | 
+        <strong>Author</strong> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><txp:file_download_author link="1" /></span></span> |
+        <strong>File size</strong> <txp:file_download_size /> |
+        <strong>Last modified</strong> <span itemprop="dateModified"><txp:file_download_created /></span> |
         <strong>Download count</strong> <span itemprop="interactionCount"><txp:file_download_downloads /></span>
 
     </span>
