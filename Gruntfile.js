@@ -160,9 +160,9 @@ module.exports = function (grunt) {
 
     });
 
-    grunt.registerTask('test', ['jshint']);
-    grunt.registerTask('sass', ['compass', 'cssmin', 'copy:css']);
-    grunt.registerTask('default', ['watch']);
     grunt.registerTask('build', ['jshint', 'sass', 'copy:js', 'uglify', 'modernizr']);
+    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('sass', ['compass', 'cssmin', 'copy:css']);
+    grunt.registerTask('test', ['jshint']);
     grunt.registerTask('travis', ['jshint', 'compass']);
 };
