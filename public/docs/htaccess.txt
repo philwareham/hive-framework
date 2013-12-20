@@ -5,7 +5,6 @@
 # to the main server config file (usually called `httpd.conf`), you should add
 # this logic there: http://httpd.apache.org/docs/current/howto/htaccess.html.
 
-
 # ##############################################################################
 # # CROSS-ORIGIN RESOURCE SHARING (CORS)                                       #
 # ##############################################################################
@@ -73,9 +72,9 @@ Options -MultiViews
 # ------------------------------------------------------------------------------
 
 # You can customize what Apache returns to the client in case of an error (see
-# http://httpd.apache.org/docs/current/mod/core.html#errordocument).
+# http://httpd.apache.org/docs/current/mod/core.html#errordocument), e.g.:
 
-ErrorDocument 404 /404.html
+# ErrorDocument 404 /404.html
 
 
 # ##############################################################################
@@ -199,7 +198,7 @@ AddDefaultCharset utf-8
 # http://tools.ietf.org/html/rfc7034#section-2.1.
 
 # Keep in mind that while you could send the `X-Frame-Options` header for all
-# of your siteÕs pages, this has the potential downside that it forbids even
+# of your siteâ€™s pages, this has the potential downside that it forbids even
 # non-malicious framing of your content (e.g.: when users visit your site using
 # a Google Image Search results page).
 
@@ -285,7 +284,7 @@ AddDefaultCharset utf-8
         Satisfy All
     </IfModule>
 
-    # Apache ³ 2.3
+    # Apache â‰¥ 2.3
     <IfModule mod_authz_core.c>
         Require all denied
     </IfModule>
