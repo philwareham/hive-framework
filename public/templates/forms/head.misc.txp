@@ -36,7 +36,8 @@
 <meta property="og:description" content="">
 
 <!-- CSS -->
-<link rel="stylesheet" href="<txp:site_url />assets/css/style.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic">
+<link rel="stylesheet" href="<txp:site_url />assets/css/main.css">
 
 <!-- Modernizr -->
 <script src="<txp:site_url />assets/js/modernizr.js"></script>
