@@ -46,6 +46,12 @@ span.button {
         color: darken($color-text, 10%);
     }
 
+    &:focus {
+        @include box-shadow($inset-highlighting, 0 0 4px 2px $color-link-focus);
+
+        outline: 0;
+    }
+
     &.button-success {
         @include text-shadow($text-shadow-dark);
         @include gradient-linear(lighten($color-success-text, 10%), $color-success-text);
@@ -89,17 +95,15 @@ span.button {
     }
 }
 
-/* better button focus glows, if `box-shadow` is supported */
-.boxshadow {
+/* focus fallback for browsers that don't support `box-shadow` */
+.no-boxshadow {
     button,
     a.button,
     input[type="button"],
     input[type="reset"],
     input[type="submit"] {
         &:focus {
-            @include box-shadow($inset-highlighting, 0 0 4px 2px $color-link-focus);
-
-            outline: 0;
+            outline: thin dotted $color-link-focus;
         }
     }
 }

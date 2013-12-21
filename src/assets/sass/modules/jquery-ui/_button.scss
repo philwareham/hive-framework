@@ -47,10 +47,14 @@ a.ui-button {
     text-decoration: none;
 }
 
-.boxshadow .ui-button.ui-state-focus {
+.ui-button.ui-state-focus {
     @include box-shadow($inset-highlighting, 0 0 7px $color-link-hover);
 
     outline: 0;
+}
+
+.no-boxshadow .ui-button.ui-state-focus {
+    outline: thin dotted $color-link-focus;
 }
 
 .ui-button-icon-only {
