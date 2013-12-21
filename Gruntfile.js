@@ -133,8 +133,6 @@ module.exports = function (grunt) {
                 'boxshadow',
                 'flexbox',
                 'rgba',
-                'input',
-                'inputtypes',
                 'svg',
                 'touch'
             ],
