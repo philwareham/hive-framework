@@ -52,7 +52,7 @@ a {
 }
 
 /* images as links */
-.a--img {
+.boxshadow .a--img {
     img {
         @include transition(box-shadow 0.2s linear);
 
@@ -65,10 +65,6 @@ a {
             @include box-shadow(0 0 4px 2px $color-link-focus);
         }
     }
-}
-
-.no-boxshadow .a--img:focus {
-    outline: thin dotted $color-link-focus;
 }
 
 /* only target phone numbers you want clickable and stop mobile phones from linking other
