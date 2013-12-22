@@ -43,5 +43,6 @@
 <script src="<txp:site_url />assets/js/modernizr.js"></script>
 
 <!--[if lt IE 9]>
+    <script src="<txp:site_url />assets/js/html5shiv.js"></script>
     <link rel="stylesheet" href="<txp:site_url />assets/css/ie8.css">
 <![endif]-->
