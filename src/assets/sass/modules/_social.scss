@@ -44,9 +44,9 @@
             @include svg-graphic(youtube, png, 32px, 32px);
         }
 
-        &:hover {
+        //&:hover {
             //@include filter(brightness(1.1));
-        }
+        //}
     }
 }
 
