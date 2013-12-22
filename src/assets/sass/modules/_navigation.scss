@@ -95,7 +95,6 @@
 
 .nav-toggle {
     @include hide-text;
-    @include svg-graphic(hamburger, png, 32px, 32px);
 
     /* disables the default bubble shown when you touch and hold a touch target */
     -webkit-touch-callout: none;
@@ -104,6 +103,8 @@
     border: 1px solid $color-border;
     width: 32px;
     height: 32px;
+    background-image: url("../img/hamburger.svg");
+    background-size: 32px 32px;
 
     @include breakpoint($breakpoint-2) {
         display: none;

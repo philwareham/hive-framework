@@ -7,6 +7,7 @@
 
     li {
         display: inline-block;
+        margin-right: 0.5em;
     }
 
     a {
@@ -15,33 +16,34 @@
         display: block;
         width: 32px;
         height: 32px;
+        background-size: 32px 32px;
 
         &.facebook {
-            @include svg-graphic(facebook, png, 32px, 32px);
+            background-image: url("../img/facebook.svg");
         }
 
         &.flickr {
-            @include svg-graphic(flickr, png, 32px, 32px);
+            background-image: url("../img/flickr.svg");
         }
 
         &.googleplus {
-            @include svg-graphic(googleplus, png, 32px, 32px);
+            background-image: url("../img/googleplus.svg");
         }
 
         &.linkedin {
-            @include svg-graphic(linkedin, png, 32px, 32px);
+            background-image: url("../img/linkedin.svg");
         }
 
         &.pinterest {
-            @include svg-graphic(pinterest, png, 32px, 32px);
+            background-image: url("../img/pinterest.svg");
         }
 
         &.twitter {
-            @include svg-graphic(twitter, png, 32px, 32px);
+            background-image: url("../img/twitter.svg");
         }
 
         &.youtube {
-            @include svg-graphic(youtube, png, 32px, 32px);
+            background-image: url("../img/youtube.svg");
         }
 
         //&:hover {

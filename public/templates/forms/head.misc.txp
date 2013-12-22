@@ -39,9 +39,6 @@
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic">
 <link rel="stylesheet" href="<txp:site_url />assets/css/main.css">
 
-<!-- Modernizr -->
-<script src="<txp:site_url />assets/js/modernizr.js"></script>
-
 <!--[if lt IE 9]>
     <script src="<txp:site_url />assets/js/html5shiv.js"></script>
     <link rel="stylesheet" href="<txp:site_url />assets/css/ie8.css">

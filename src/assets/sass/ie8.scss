@@ -66,35 +66,67 @@
     @include grid-span(9, 4);
 }
 
-#nav {
+.nav-collapse {
+    .js & {
+        max-height: none;
+    }
+
     ul {
         width: 90%;
-
-        // show standard `<nav>` menu on larger screens
-        .js & {
-            display: block;
-        }
     }
 
     li {
         float: left;
+        border-top: 0;
         border-right: solid 1px $color-gradient-border;
-        border-bottom: 0;
 
         &:first-child {
             border-left: solid 1px $color-gradient-border;
         }
-
-        a {
-            padding: 0.5em 1em;
-        }
     }
+
+    a {
+        padding: 0.5em 1em;
+    }
+}
+
+.nav-toggle {
+    display: none;
+}
+
+/* PNG fallback for lack of SVG support */
+.social-channels a.facebook {
+    background-image: url("../img/facebook.png");
+}
+
+.social-channels a.flickr {
+    background-image: url("../img/flickr.png");
+}
+
+.social-channels a.googleplus {
+    background-image: url("../img/googleplus.png");
+}
+
+.social-channels a.linkedin {
+    background-image: url("../img/linkedin.png");
+}
+
+.social-channels a.pinterest {
+    background-image: url("../img/pinterest.png");
+}
+
+.social-channels a.twitter {
+    background-image: url("../img/twitter.png");
+}
+
+.social-channels a.youtube {
+    background-image: url("../img/youtube.png");
 }
 
 
 
 /* ==========================================================================
-   jQuery UI opacity support
+   jQuery UI support
    ========================================================================== */
 
 .ui-helper-zfix {
@@ -117,11 +149,47 @@
     filter: Alpha(Opacity=33);
 }
 
+.ui-widget-overlay {
+    background: url("../img/overlay-no-rgba.png");
+}
+
 .ui-slider.ui-state-disabled {
     .ui-slider-handle,
     .ui-slider-range {
         filter: inherit;
     }
+}
+
+.ui-icon,
+.ui-widget-content .ui-icon,
+.ui-widget-header .ui-icon,
+.ui-state-hover .ui-icon,
+.ui-state-focus .ui-icon,
+.ui-state-active .ui-icon {
+    background-image: url("../img/ui-icon-sprite-333333.png");
+}
+
+.ui-state-default .ui-icon {
+    background-image: url("../img/ui-icon-sprite-555555.png");
+}
+
+.success .ui-icon {
+    background-image: url("../img/ui-icon-sprite-success.png");
+}
+
+.ui-state-highlight .ui-icon,
+.warning .ui-icon {
+    background-image: url("../img/ui-icon-sprite-warning.png");
+}
+
+.ui-state-error .ui-icon,
+.ui-state-error-text .ui-icon,
+.error .ui-icon {
+    background-image: url("../img/ui-icon-sprite-error.png");
+}
+
+.information .ui-icon {
+    background-image: url("../img/ui-icon-sprite-info.png");
 }
 
 
