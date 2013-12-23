@@ -40,11 +40,6 @@
         };
     });
 
-    require(['jquery', 'autosize'], function ($)
-    {
-        $('form textarea').autosize();
-    });
-
     require(['jquery'], function ($)
     {
         var details = $('details'),
@@ -96,6 +91,13 @@
                 });
             });
         }
+    });
+
+    // Auto-growing textareas.
+
+    require(['jquery', 'autosize'], function ($)
+    {
+        $('form textarea').autosize();
     });
 
     // If no SVG support, replace SVGs with PNGs.
