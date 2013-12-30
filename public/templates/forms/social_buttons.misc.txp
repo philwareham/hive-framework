@@ -1,7 +1,14 @@
 <!-- Also requires JavaScript from /assets/js/main.js -->
-<p>
-    <!-- Google+ '+1' button -->
-    <a href="https://plus.google.com/" class="g-plusone" data-size="medium" data-expandTo="top" data-href="<txp:permlink />" rel="external">+1</a>
-    <!-- Twitter 'Tweet' button -->
-    <a href="https://twitter.com/share" class="twitter-share-button" data-via="twitterapi" data-lang="en" data-url="<txp:permlink />" data-text="<txp:title />" rel="external">Tweet</a>
-</p>
+<aside>
+    <h5 class="accessibility">Share this</h5>
+    <p>
+        <!-- Google+ '+1' button -->
+        <a rel="external" href="https://plus.google.com/" class="g-plusone" data-size="medium" data-annotation="none" data-expandTo="top" data-href="<txp:permlink />">+1</a>
+
+        <!-- Twitter 'Tweet' button (optional: add a `data-via="twitterusername"` attribute with your own Twitter username) -->
+        <a rel="external" href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-url="<txp:permlink />" data-text="<txp:title />">Tweet</a>
+
+        <!-- Facebook 'Like' button -->
+        <iframe class="facebook-like-button" src="https://www.facebook.com/plugins/like.php?<txp:permlink />&amp;locale=en_GB&amp;layout=button_count&amp;height=20&amp;appId=410477999082225"></iframe>
+    </p>
+</aside>
