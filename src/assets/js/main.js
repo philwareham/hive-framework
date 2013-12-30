@@ -51,7 +51,8 @@
         var details = $('details'),
             placeholder = $('textarea[placeholder], input[placeholder]'),
             code = $('pre code'),
-            stellar = $('.parallax');
+            stellar = $('.parallax'),
+            fields = $('form textarea');
 
         // Details polyfill.
 
@@ -97,13 +98,15 @@
                 });
             });
         }
-    });
 
-    // Auto-growing textareas.
+        // Auto-growing textareas.
 
-    require(['jquery', 'autosize'], function ($)
-    {
-        $('form textarea').autosize();
+        if (fields.length) {
+            require(['autosize'], function ()
+            {
+                fields.autosize();
+            });
+        }
     });
 
     // If no SVG support, replace SVGs with PNGs.
@@ -215,7 +218,6 @@
     {
         if ($('.twitter-share-button').length)
         {
-            $('head').append('<meta name="twitter:widgets:csp" content="on">');
             require(['//platform.twitter.com/widgets.js']);
         }
     });
