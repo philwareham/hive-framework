@@ -215,6 +215,7 @@
     {
         if ($('.twitter-share-button').length)
         {
+            $('head').append('<meta name="twitter:widgets:csp" content="on">');
             require(['//platform.twitter.com/widgets.js']);
         }
     });
