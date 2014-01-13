@@ -2,7 +2,7 @@
  ========================================================================== */
 
 .ui-draggable {
-    @include transition(box-shadow 0.2s linear);
+    @include transition(box-shadow 0.1s linear);
 }
 
 .ui-draggable-dragging {

@@ -34,7 +34,7 @@
     }
 
     li {
-        @include transition(box-shadow 0.2s linear);
+        @include transition(box-shadow 0.1s linear);
 
         border-top: 1px solid $color-border;
         background-color: $color-gradient-from;
