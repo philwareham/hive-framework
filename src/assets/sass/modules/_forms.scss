@@ -28,7 +28,7 @@ span.button {
     font-size: 100%;
     @include adjust-font-size-to(14px, 0.875);
 
-    margin: 0; // address margins set differently in Firefox4+, Safari5+, and Chrome
+    margin: 0; // address margins set differently in Firefox4+, Safari5+ and Chrome
     font-family: $font-sans-serif;
     vertical-align: baseline;
 }
