@@ -1,6 +1,10 @@
 /* Selectable - http://jqueryui.com/selectable/
    ========================================================================== */
 
+.ui-selectable {
+    @include touch-action;
+}
+
 .ui-selectable-helper {
     position: absolute;
     z-index: 100;

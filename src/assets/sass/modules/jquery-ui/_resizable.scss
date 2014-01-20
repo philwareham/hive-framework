@@ -6,6 +6,8 @@
 }
 
 .ui-resizable-handle {
+    @include touch-action;
+    
     position: absolute;
     display: block;
     font-size: 0.1px;

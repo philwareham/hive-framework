@@ -5,6 +5,10 @@
     @include transition(box-shadow 0.1s linear);
 }
 
+.ui-draggable-handle {
+    @include touch-action;
+}
+
 .ui-draggable-dragging {
     @include box-shadow(0 0 0.5em rgba(0, 0, 0, 0.2));
 
