@@ -2,7 +2,7 @@
 <txp:if_section name=",">
     <txp:if_article_list>
         <txp:if_search>
-            <txp:variable name="page-title" value='<txp:text item="search_results" /> <txp:search_term /> | <txp:site_name />' />
+            <txp:variable name="page-title" value='Search results: <txp:search_term /> | <txp:site_name />' />
         <txp:else />
             <txp:if_category>
                 <txp:variable name="page-title" value='Category <txp:category title="1" /> | <txp:site_name />' />

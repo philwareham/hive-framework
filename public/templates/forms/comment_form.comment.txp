@@ -7,18 +7,18 @@
 
 <fieldset>
 
-    <p class="large"><label for="name"><txp:text item="comment_name" /> <abbr class="required" title="Required field">*</abbr></label><br>
+    <p class="large"><label for="name">Name <abbr class="required" title="Required field">*</abbr></label><br>
     <txp:comment_name_input /></p>
 
-    <p class="large"><label for="email"><txp:text item="comment_email" /> <abbr class="required" title="Required field">*</abbr></label><br>
+    <p class="large"><label for="email">Email <abbr class="required" title="Required field">*</abbr></label><br>
     <txp:comment_email_input /></p>
 
-    <p class="large"><label for="web"><txp:text item="comment_web" /></label><br>
+    <p class="large"><label for="web">Website</label><br>
     <txp:comment_web_input /></p>
 
     <p><txp:comment_remember /></p>
 
-    <p class="small"><label for="message"><txp:text item="comment_message" /> <abbr class="required" title="Required field">*</abbr></label><br>
+    <p class="small"><label for="message">Message <abbr class="required" title="Required field">*</abbr></label><br>
     <txp:comment_message_input /></p>
 
 </fieldset>

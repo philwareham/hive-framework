@@ -5,14 +5,14 @@
 
 <!-- if search result count greater than 200 then display excessive results message, otherwise show search result count -->
     <txp:if_search_results max="200">
-        <h3><txp:search_result_count /> <txp:text item="matching_search_request" /> <q><txp:search_term /></q></h3>
+        <h3><txp:search_result_count /> matching your search request <q><txp:search_term /></q></h3>
     <txp:else />
-        <h3><txp:text item="too_common_search_term" /> <q><txp:search_term /></q></h3>
+        <h3>It seems like you are looking for a very common search term, maybe try a more specific phrase than <q><txp:search_term /></q></h3>
     </txp:if_search_results>
 
 <!-- if no search results, then display no search results message -->
 <txp:else />
-    <h3><txp:text item="no_search_matches" /></h3>
+    <h3>Sorry, no results found matching your search request</h3>
 
 </txp:if_search_results>
 
