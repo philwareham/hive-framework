@@ -34,14 +34,14 @@ summary {
 }
 
 /* address `[hidden]` styling not present in IE 8-10
-   hide the `template` element in IE 8-11, Safari, and Firefox < 22 */
+   hide the `template` element in IE 8-11, Safari, Firefox < 22 */
 [hidden],
 template {
     display: none;
 }
 
 /* set correct display for `progress` in IE 8-9
-   improve vertical alignment of `progress` in Chrome, Firefox, and Opera */
+   improve vertical alignment of `progress` in Chrome, Firefox, Opera */
 progress {
     display: inline-block;
     vertical-align: baseline;
