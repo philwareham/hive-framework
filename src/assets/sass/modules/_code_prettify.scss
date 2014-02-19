@@ -14,9 +14,12 @@
 }
 
 .clo,
-.opn,
-.pun {
+.opn {
     color: #93a1a1;
+}
+
+.pun {
+    color: #000;
 }
 
 .com {
@@ -29,6 +32,7 @@
 
 .kwd {
     color: #1e347b;
+    font-weight: bold;
 }
 
 .lit {
