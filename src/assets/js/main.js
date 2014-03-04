@@ -126,7 +126,8 @@
     require(['responsivenav'], function ()
     {
         responsiveNav('.nav-collapse', {
-            transition: 400
+            transition: 400,
+            insert: 'after'
         });
     });
 
