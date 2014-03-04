@@ -6,13 +6,13 @@
         "google-code-prettify": "1.0.1",
         "html5shiv": "3.7.0",
         "iscroll": "5.1.1",
-        "jquery-autosize": "1.18.1",
+        "jquery-autosize": "1.18.4",
         "jquery.cookie": "1.4.0",
         "jquery-details": "0.1.0",
         "jquery-placeholder": "2.0.7",
         "jquery.stellar": "0.6.2",
-        "responsive-nav": "1.0.25",
+        "responsive-nav": "1.0.31",
         "ResponsiveSlides.js": "latest",
-        "requirejs": "2.1.9"
+        "requirejs": "2.1.11"
     }
 }
