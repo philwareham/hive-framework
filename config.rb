@@ -11,8 +11,6 @@ project_path = "src"
 
 sass_path = "src/assets/sass"
 css_path = "tmp/assets/css"
-images_dir = "public/assets/img"
-fonts_dir = "public/assets/fonts"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
