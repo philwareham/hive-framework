@@ -34,12 +34,15 @@
 <!-- Fix IE8 -->
     <!--[if lt IE 9]>
         <script src="/assets/js/html5shiv.js"></script>
+        <script src="/assets/js/selectivizr.js"></script>
         <link rel="stylesheet" href="/assets/css/ie8.css">
     <![endif]-->
 
 <!-- JUST FOR DESIGN PATTERNS DOC - NOT IN ACTUAL SITE -->
     <style>
-        .box {padding: 1em; margin-bottom: 1em; background: #999;}
+        .box { padding: 1em; margin-top: 0; background: #999999; }
+        #section-grid .information { clear: both; }
+
 
         /* jQuery UI stuff */
         .jquery-ui-icons { margin: 0; padding: 0;}
@@ -110,47 +113,158 @@
 
                     <div itemprop="articleBody">
 
-                        <section role="region" id="section-grid" class="section clearfix">
+                        <section role="region" id="section-grid" class="section">
                             <h2>Responsive grid</h2>
                             <p>Grid layout with 1 to 4 column options. Uses the <a href="http://singularity.gs" rel="external" title="Go to the Singularity website">Singularity</a> grid system.</p>
 
-                            <div class="layout--span-1-12"><p class="box">Opt1: 1col</p></div>
+                            <h3>Main layout grid</h3>
+                            <p>The main layout grid blocks used for layout throughout a site.</p>
 
-                            <div class="layout--span-1-6 at-break2"><p class="box">Opt2: 2col cell1</p></div>
-                            <div class="layout--span-7-12 at-break2"><p class="box">Opt2: 2col cell2</p></div>
+                            <div class="clearfix"><!-- this `div` is just for clearfix child elements in this design patterns doc -->
 
-                            <div class="layout--span-1-4"><p class="box">Opt3: 3col cell1</p></div>
-                            <div class="layout--span-5-8"><p class="box">Opt3: 3col cell2</p></div>
-                            <div class="layout--span-9-12"><p class="box">Opt3: 3col cell3</p></div>
+                                <p class="information">Opt1: 1col <code>class="layout--span-1-12"</code></p>
 
-                            <div class="layout--span-1-8"><p class="box">Opt4: 3col cell1and2</p></div>
-                            <div class="layout--span-9-12"><p class="box">Opt4: 3col cell3</p></div>
+                                <div class="layout--span-1-12"><p class="box">Opt1: 1col</p></div>
 
-                            <div class="layout--span-1-4"><p class="box">Opt5: 3col cell1</p></div>
-                            <div class="layout--span-5-12"><p class="box">Opt5: 3col cell2and3</p></div>
+                                <p class="information">Opt2: 2col cell1 <code>class="layout--span-1-6 at-break2"</code><br>
+                                    Opt2: 2col cell2 <code>class="layout--span-7-12 at-break2"</code></p>
 
-                            <div class="layout--span-1-3 at-break1"><p class="box">Opt6: 4col cell1</p></div>
-                            <div class="layout--span-4-6 at-break1"><p class="box">Opt6: 5col cell2</p></div>
-                            <div class="layout--span-7-9 at-break1"><p class="box">Opt6: 6col cell3</p></div>
-                            <div class="layout--span-10-12 at-break1"><p class="box">Opt6: 7col cell4</p></div>
+                                <div class="layout--span-1-6 at-break2"><p class="box">Opt2: 2col cell1</p></div>
+                                <div class="layout--span-7-12 at-break2"><p class="box">Opt2: 2col cell2</p></div>
 
-                            <div class="layout--span-1-6"><p class="box">Opt7: 4col cell1and2</p></div>
-                            <div class="layout--span-7-9 at-break1"><p class="box">Opt7: 4col cell3</p></div>
-                            <div class="layout--span-10-12 at-break1"><p class="box">Opt7: 4col cell4</p></div>
+                                <p class="information">Opt3: 3col cell1 <code>class="layout--span-1-4"</code><br>
+                                    Opt3: 3col cell2 <code>class="layout--span-5-8"</code><br>
+                                    Opt3: 3col cell3 <code>class="layout--span-9-12"</code></p>
 
-                            <div class="layout--span-1-3"><p class="box">Opt8: 4col cell1</p></div>
-                            <div class="layout--span-4-9"><p class="box">Opt8: 4col cell2and3</p></div>
-                            <div class="layout--span-10-12"><p class="box">Opt8: 4col cell4</p></div>
+                                <div class="layout--span-1-4"><p class="box">Opt3: 3col cell1</p></div>
+                                <div class="layout--span-5-8"><p class="box">Opt3: 3col cell2</p></div>
+                                <div class="layout--span-9-12"><p class="box">Opt3: 3col cell3</p></div>
 
-                            <div class="layout--span-1-3"><p class="box">Opt9: 4col cell1</p></div>
-                            <div class="layout--span-4-6"><p class="box">Opt9: 4col cell2</p></div>
-                            <div class="layout--span-7-12"><p class="box">Opt9: 4col cell3and4</p></div>
+                                <p class="information">Opt4: 3col cell1and2 <code>class="layout--span-1-8"</code><br>
+                                    Opt4: 3col cell3 <code>class="layout--span-9-12"</code></p>
 
-                            <div class="layout--span-1-9"><p class="box">Opt10: 4col cell1and2and3</p></div>
-                            <div class="layout--span-10-12"><p class="box">Opt10: 4col cell4</p></div>
+                                <div class="layout--span-1-8"><p class="box">Opt4: 3col cell1and2</p></div>
+                                <div class="layout--span-9-12"><p class="box">Opt4: 3col cell3</p></div>
 
-                            <div class="layout--span-1-3"><p class="box">Opt11: 4col cell1</p></div>
-                            <div class="layout--span-4-12"><p class="box">Opt11: 4col cell2and3and4</p></div>
+                                <p class="information">Opt5: 3col cell1 <code>class="layout--span-1-4"</code><br>
+                                    Opt5: 3col cell2and3 <code>class="layout--span-5-12"</code></p>
+
+                                <div class="layout--span-1-4"><p class="box">Opt5: 3col cell1</p></div>
+                                <div class="layout--span-5-12"><p class="box">Opt5: 3col cell2and3</p></div>
+
+                                <p class="information">Opt6: 4col cell1 <code>class="layout--span-1-3 at-break1"</code><br>
+                                    Opt6: 5col cell2 <code>class="layout--span-4-6 at-break1"</code><br>
+                                    Opt6: 6col cell3 <code>class="layout--span-7-9 at-break1"</code><br>
+                                    Opt6: 7col cell4 <code>class="layout--span-10-12 at-break1"</code></p>
+
+                                <div class="layout--span-1-3 at-break1"><p class="box">Opt6: 4col cell1</p></div>
+                                <div class="layout--span-4-6 at-break1"><p class="box">Opt6: 5col cell2</p></div>
+                                <div class="layout--span-7-9 at-break1"><p class="box">Opt6: 6col cell3</p></div>
+                                <div class="layout--span-10-12 at-break1"><p class="box">Opt6: 7col cell4</p></div>
+
+                                <p class="information">Opt7: 4col cell1and2 <code>class="layout--span-1-6"</code><br>
+                                    Opt7: 4col cell3 <code>class="layout--span-7-9 at-break1"</code><br>
+                                    Opt7: 4col cell4 <code>class="layout--span-10-12 at-break1"</code></p>
+
+                                <div class="layout--span-1-6"><p class="box">Opt7: 4col cell1and2</p></div>
+                                <div class="layout--span-7-9 at-break1"><p class="box">Opt7: 4col cell3</p></div>
+                                <div class="layout--span-10-12 at-break1"><p class="box">Opt7: 4col cell4</p></div>
+
+                                <p class="information">Opt8: 4col cell1 <code>class="layout--span-1-3"</code><br>
+                                    Opt8: 4col cell2and3 <code>class="layout--span-4-9"</code><br>
+                                    Opt8: 4col cell4 <code>class="layout--span-10-12"</code></p>
+
+                                <div class="layout--span-1-3"><p class="box">Opt8: 4col cell1</p></div>
+                                <div class="layout--span-4-9"><p class="box">Opt8: 4col cell2and3</p></div>
+                                <div class="layout--span-10-12"><p class="box">Opt8: 4col cell4</p></div>
+
+                                <p class="information">Opt9: 4col cell1 <code>class="layout--span-1-3"</code><br>
+                                    Opt9: 4col cell2 <code>class="layout--span-4-6"</code><br>
+                                    Opt9: 4col cell3and4 <code>class="layout--span-7-12"</code></p>
+
+                                <div class="layout--span-1-3"><p class="box">Opt9: 4col cell1</p></div>
+                                <div class="layout--span-4-6"><p class="box">Opt9: 4col cell2</p></div>
+                                <div class="layout--span-7-12"><p class="box">Opt9: 4col cell3and4</p></div>
+
+                                <p class="information">Opt10: 4col cell1and2and3 <code>class="layout--span-1-9"</code><br>
+                                    Opt10: 4col cell4 <code>class="layout--span-10-12"</code></p>
+
+                                <div class="layout--span-1-9"><p class="box">Opt10: 4col cell1and2and3</p></div>
+                                <div class="layout--span-10-12"><p class="box">Opt10: 4col cell4</p></div>
+
+                                <p class="information">Opt11: 4col cell1 <code>class="layout--span-1-3"</code><br>
+                                    Opt11: 4col cell2and3and4 <code>class="layout--span-4-12"</code></p>
+
+                                <div class="layout--span-1-3"><p class="box">Opt11: 4col cell1</p></div>
+                                <div class="layout--span-4-12"><p class="box">Opt11: 4col cell2and3and4</p></div>
+
+                            </div><!-- this `/div` is just for clearfix child elements in this design patterns doc -->
+
+                            <h3>Nested item containers</h3>
+                            <p>For dynamically generated nested items within a grid (for example, a grid of article teasers) - powered by <code>:nth-child</code> CSS rules.</p>
+
+                            <div class="clearfix"><!-- this `div` is just for clearfix child elements in this design patterns doc -->
+
+                                <div class="layout--span-1-8">
+                                    <p class="information">2 teasers over &frac23; page span <code>class="nested-list-2-column"</code></p>
+                                    <div class="nested-list-2-column">
+                                        <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                            <p class="box">Teaser 1</p>
+                                        </article>
+                                        <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                            <p class="box">Teaser 2</p>
+                                        </article>
+                                        <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                            <p class="box">Teaser 3</p>
+                                        </article>
+                                        <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                            <p class="box">Teaser 4</p>
+                                        </article>
+                                        <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                            <p class="box">Teaser 5</p>
+                                        </article>
+                                    </div>
+                                </div>
+
+                                <p class="information">3 teasers over full page span <code>class="nested-list-3-column"</code></p>
+                                <div class="nested-list-3-column">
+                                    <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                        <p class="box">Teaser 1</p>
+                                    </article>
+                                    <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                        <p class="box">Teaser 2</p>
+                                    </article>
+                                    <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                        <p class="box">Teaser 3</p>
+                                    </article>
+                                    <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                        <p class="box">Teaser 4</p>
+                                    </article>
+                                    <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                        <p class="box">Teaser 5</p>
+                                    </article>
+                                </div>
+
+                                <p class="information">4 teasers over full page span <code>class="nested-list-4-column"</code></p>
+                                <div class="nested-list-4-column">
+                                    <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                        <p class="box">Teaser 1</p>
+                                    </article>
+                                    <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                        <p class="box">Teaser 2</p>
+                                    </article>
+                                    <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                        <p class="box">Teaser 3</p>
+                                    </article>
+                                    <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                        <p class="box">Teaser 4</p>
+                                    </article>
+                                    <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
+                                        <p class="box">Teaser 5</p>
+                                    </article>
+                                </div>
+
+                            </div><!-- this `/div` is just for clearfix child elements in this design patterns doc -->
 
                         </section>
 

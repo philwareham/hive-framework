@@ -41,5 +41,6 @@
 
 <!--[if lt IE 9]>
     <script src="<txp:site_url />assets/js/html5shiv.js"></script>
+    <script src="<txp:site_url />assets/js/selectivizr.js"></script>
     <link rel="stylesheet" href="<txp:site_url />assets/css/ie8.css">
 <![endif]-->

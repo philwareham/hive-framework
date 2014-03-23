@@ -24,7 +24,8 @@ module.exports = function (grunt) {
             js: {
                 files: [
                     {expand: true, cwd: 'src/', src: ['*'], dest: 'public/', filter: 'isFile'},
-                    {expand: true, cwd: 'src/assets/js/libs/', src: ['**'], dest: 'public/assets/js/'}
+                    {expand: true, cwd: 'src/assets/js/libs/', src: ['**'], dest: 'public/assets/js/'},
+                    {src: 'bower_components/selectivizr/selectivizr.js', dest: 'public/assets/js/selectivizr.js'}
                 ]
             },
 
