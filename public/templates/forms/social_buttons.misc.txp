@@ -8,7 +8,7 @@
         <!-- Twitter 'Tweet' button (optional: add a `data-via="twitterusername"` attribute with your own Twitter username) -->
         <a rel="external" href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-url="<txp:permlink />" data-text="<txp:title />">Tweet</a>
 
-        <!-- Facebook 'Like' button CHANGE APP ID TO YOUR OWN FACEBOOK APP! -->
-        <iframe class="facebook-like-button" src="https://www.facebook.com/plugins/like.php?<txp:permlink />&amp;locale=en_GB&amp;layout=button_count&amp;height=20&amp;appId=410477999082225"></iframe>
+        <!-- Facebook 'Like' button AMEND THE URL TO REFLECT YOUR OWN SITE DETAILS -->
+        <iframe class="facebook-like-button" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Ftesting3.designhive.com%2F<txp:article_url_title />&amp;locale=en_GB&amp;layout=button_count&amp;height=20"></iframe>
     </p>
 </aside>
