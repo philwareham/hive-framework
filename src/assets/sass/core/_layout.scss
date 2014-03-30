@@ -2,8 +2,8 @@
    Singularity Grid System
    ========================================================================== */
 
-$grids: add-grid(12);
-$gutters: add-gutter(0.5);
+@include add-grid(12);
+@include add-gutter(0.5);
 
 .layout--span-1-12,
 .layout--span-1-6,
@@ -21,15 +21,17 @@ $gutters: add-gutter(0.5);
 .layout--span-1-9,
 .layout--span-4-12,
 .nested {
-    @include grid-span(12, 1, $options: 'both');
+    @include grid-span(12, 1);
     @include box-sizing;
+    clear: both;
 }
 
 @include breakpoint($breakpoint-1) {
 
     .layout--span-1-3.at-break1,
     .nested-list-4-column .nested:nth-child(4n+1) { // 4 column grid, cell 1
-        @include grid-span(6, 1, $options: 'both');
+        @include grid-span(6, 1);
+        clear: both;
     }
 
     .layout--span-4-6.at-break1,
@@ -39,7 +41,8 @@ $gutters: add-gutter(0.5);
 
     .layout--span-7-9.at-break1,
     .nested-list-4-column .nested:nth-child(4n+3) { // 4 column grid, cell 3
-        @include grid-span(6, 1, $options: 'both');
+        @include grid-span(6, 1);
+        clear: both;
     }
 
     .layout--span-10-12.at-break1,
@@ -52,7 +55,8 @@ $gutters: add-gutter(0.5);
 @include breakpoint($breakpoint-2) {
 
     .layout--span-1-6.at-break2 { // 2 column grid, cell 1
-        @include grid-span(6, 1, $options: 'both');
+        @include grid-span(6, 1);
+        clear: both;
     }
 
     .layout--span-7-12.at-break2 { // 2 column grid, cell 2
@@ -61,7 +65,8 @@ $gutters: add-gutter(0.5);
 
     .layout--span-1-4,
     .nested-list-3-column .nested:nth-child(3n+1) { // 3 column grid, cell 1
-        @include grid-span(4, 1, $options: 'both');
+        @include grid-span(4, 1);
+        clear: both;
     }
 
     .layout--span-5-8,
@@ -75,7 +80,8 @@ $gutters: add-gutter(0.5);
     }
 
     .layout--span-1-8 { // 3 column grid, cell 1 and 2
-        @include grid-span(8, 1, $options: 'both');
+        @include grid-span(8, 1);
+        clear: both;
     }
 
     .layout--span-5-12 { // 3 column grid, cell 2 and 3
@@ -88,7 +94,8 @@ $gutters: add-gutter(0.5);
 
     .layout--span-1-6,
     .nested-list-2-column .nested:nth-child(odd) { // 2 column grid, cell 1
-        @include grid-span(6, 1, $options: 'both');
+        @include grid-span(6, 1);
+        clear: both;
     }
 
     .layout--span-7-12,
@@ -99,7 +106,8 @@ $gutters: add-gutter(0.5);
     .layout--span-1-3,
     .layout--span-1-3.at-break1,
     .nested-list-4-column .nested:nth-child(4n+1) { // 4 column grid, cell 1
-        @include grid-span(3, 1, $options: 'both');
+        @include grid-span(3, 1);
+        clear: both;
     }
 
     .layout--span-4-6,
@@ -125,7 +133,8 @@ $gutters: add-gutter(0.5);
     }
 
     .layout--span-1-9 { // 4 column grid, cell 1, 2 and 3
-        @include grid-span(9, 1, $options: 'both');
+        @include grid-span(9, 1);
+        clear: both;
     }
 
     .layout--span-4-12 { // 4 column grid, cell 2, 3 and 4
