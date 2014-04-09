@@ -113,6 +113,14 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="checkbox"],
 input[type="radio"] {
     padding: 0;
+
+    & + label {
+        margin-right: 0.5em;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
 }
 
 /* address inconsistent `text-transform` inheritance for `select` in Firefox 4+ */
