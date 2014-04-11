@@ -25,4 +25,6 @@
         <txp:variable name="page-title" value='<txp:title no_widow="0" /> | <txp:site_name />' />
     </txp:if_article_list>
 </txp:if_section>
-<title><txp:variable name="page-title" /></title>
+<title>
+    <txp:variable name="page-title" />
+</title>

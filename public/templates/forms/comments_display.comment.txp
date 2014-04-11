@@ -48,7 +48,9 @@
     <section id="comments-form">
 
         <!-- comment invite text is taken for the article's comment invitation field on the 'write' screen -->
-        <h3><txp:comments_invite showcount="0" textonly="1" showalways="1" /></h3>
+        <h3>
+            <txp:comments_invite showcount="0" textonly="1" showalways="1" />
+        </h3>
 
         <txp:comments_form isize="32" msgcols="64" msgrows="4" /> <!-- links by default to form: 'comment_form.comment.txp' unless you specify a different form -->
     </section>
@@ -57,9 +59,13 @@
 
     <!-- display either a comments expired message or a comments disabled message -->
     <txp:if_comments>
-        <p><strong>Commenting has expired for this article.</strong></p>
+        <p>
+            <strong>Commenting has expired for this article.</strong>
+        </p>
     <txp:else />
-        <p><strong>Commenting is closed for this article.</strong></p>
+        <p>
+            <strong>Commenting is closed for this article.</strong>
+        </p>
     </txp:if_comments>
 </txp:if_comments_allowed>
 

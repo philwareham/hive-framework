@@ -5,9 +5,20 @@
 
 <!-- if search result count greater than 200 then display excessive results message, otherwise show search result count -->
     <txp:if_search_results max="200">
-        <h3><txp:search_result_count /> matching your search request <q><txp:search_term /></q></h3>
+        <h3>
+            <txp:search_result_count />
+            matching your search request
+            <q>
+                <txp:search_term />
+            </q>
+        </h3>
     <txp:else />
-        <h3>It seems like you are looking for a very common search term, maybe try a more specific phrase than <q><txp:search_term /></q></h3>
+        <h3>
+            It seems like you are looking for a very common search term, maybe try a more specific phrase than
+            <q>
+                <txp:search_term />
+            </q>
+        </h3>
     </txp:if_search_results>
 
 <!-- if no search results, then display no search results message -->
@@ -17,21 +28,38 @@
 </txp:if_search_results>
 
 <!-- display resulting articles (10 per page) -->
-<txp:article limit="10" wraptag="ul" class="article-list">
+<txp:article class="article-list" limit="10" wraptag="ul">
 
     <li role="article" itemscope itemtype="http://schema.org/Article">
-        <h4 itemprop="name headline"><a href="<txp:permlink />" itemprop="url"><txp:title /></a></h4>
+        <h4 itemprop="name headline">
+            <a href="<txp:permlink />" itemprop="url">
+                <txp:title />
+            </a>
+        </h4>
 
 <!-- if the article has an excerpt, display that, otherwise show highlighted keywords in context of article -->
         <div itemprop="description">
             <txp:if_excerpt>
                 <txp:excerpt />
             <txp:else />
-                <p><txp:search_result_excerpt /></p>
+                <p>
+                    <txp:search_result_excerpt />
+                </p>
             </txp:if_excerpt>
         </div>
 
-        <p class="footnote">Posted <time datetime="<txp:posted format="iso8601" />" itemprop="datePublished"><txp:posted /></time>, Author <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><txp:author link="1" this_section="1" /></span></span></p>
+        <p class="footnote">
+            Posted
+            <time datetime="<txp:posted format="iso8601" />" itemprop="datePublished">
+                <txp:posted />
+            </time>,
+            Author
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <span itemprop="name">
+                    <txp:author link="1" this_section="1" />
+                </span>
+            </span>
+        </p>
     </li>
 
 </txp:article>
@@ -43,7 +71,7 @@
     <txp:variable name="prev" value='<txp:older />' />
     <txp:variable name="next" value='<txp:newer />' />
 
-    <nav role="navigation" class="paginator" aria-label="Article navigation">
+    <nav class="paginator" role="navigation" aria-label="Article navigation">
 
         <txp:if_variable name="next" value="">
         <txp:else />

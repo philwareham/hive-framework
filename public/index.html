@@ -69,12 +69,20 @@
     </header>
 
 <!-- Navigation -->
-    <nav role="navigation" class="nav-collapse" aria-label="Site navigation">
+    <nav class="nav-collapse" role="navigation" aria-label="Site navigation">
         <ul>
-            <li class="active"><a href="/" title="Home">Home</a></li>
-            <li><a href="#" title="About">About</a></li>
-            <li><a href="#" title="Services">Services</a></li>
-            <li><a href="#" title="Contact">Contact</a></li>
+            <li class="active">
+                <a href="/" title="Home">Home</a>
+            </li>
+            <li>
+                <a href="#" title="About">About</a>
+            </li>
+            <li>
+                <a href="#" title="Services">Services</a>
+            </li>
+            <li>
+                <a href="#" title="Contact">Contact</a>
+            </li>
         </ul>
     </nav>
 
@@ -113,7 +121,7 @@
 
                     <div itemprop="articleBody">
 
-                        <section role="region" id="section-grid" class="section">
+                        <section class="section" id="section-grid" role="region">
                             <h2>Responsive grid</h2>
                             <p>Grid layout with 1 to 4 column options. Uses the <a href="http://singularity.gs" rel="external" title="Go to the Singularity website">Singularity</a> grid system.</p>
 
@@ -124,79 +132,133 @@
 
                                 <p class="information">Opt1: 1col <code>class="layout--span-1-12"</code></p>
 
-                                <div class="layout--span-1-12"><p class="box">Opt1: 1col</p></div>
+                                <div class="layout--span-1-12">
+                                    <p class="box">Opt1: 1col</p>
+                                </div>
 
                                 <p class="information">Opt2: 2col cell1 <code>class="layout--span-1-6 at-break2"</code><br>
                                     Opt2: 2col cell2 <code>class="layout--span-7-12 at-break2"</code></p>
 
-                                <div class="layout--span-1-6 at-break2"><p class="box">Opt2: 2col cell1</p></div>
-                                <div class="layout--span-7-12 at-break2"><p class="box">Opt2: 2col cell2</p></div>
+                                <div class="layout--span-1-6 at-break2">
+                                    <p class="box">Opt2: 2col cell1</p>
+                                </div>
+                                <div class="layout--span-7-12 at-break2">
+                                    <p class="box">Opt2: 2col cell2</p>
+                                </div>
 
                                 <p class="information">Opt3: 3col cell1 <code>class="layout--span-1-4"</code><br>
                                     Opt3: 3col cell2 <code>class="layout--span-5-8"</code><br>
                                     Opt3: 3col cell3 <code>class="layout--span-9-12"</code></p>
 
-                                <div class="layout--span-1-4"><p class="box">Opt3: 3col cell1</p></div>
-                                <div class="layout--span-5-8"><p class="box">Opt3: 3col cell2</p></div>
-                                <div class="layout--span-9-12"><p class="box">Opt3: 3col cell3</p></div>
+                                <div class="layout--span-1-4">
+                                    <p class="box">Opt3: 3col cell1</p>
+                                </div>
+                                <div class="layout--span-5-8">
+                                    <p class="box">Opt3: 3col cell2</p>
+                                </div>
+                                <div class="layout--span-9-12">
+                                    <p class="box">Opt3: 3col cell3</p>
+                                </div>
 
                                 <p class="information">Opt4: 3col cell1and2 <code>class="layout--span-1-8"</code><br>
                                     Opt4: 3col cell3 <code>class="layout--span-9-12"</code></p>
 
-                                <div class="layout--span-1-8"><p class="box">Opt4: 3col cell1and2</p></div>
-                                <div class="layout--span-9-12"><p class="box">Opt4: 3col cell3</p></div>
+                                <div class="layout--span-1-8">
+                                    <p class="box">Opt4: 3col cell1and2</p>
+                                </div>
+                                <div class="layout--span-9-12">
+                                    <p class="box">Opt4: 3col cell3</p>
+                                </div>
 
                                 <p class="information">Opt5: 3col cell1 <code>class="layout--span-1-4"</code><br>
                                     Opt5: 3col cell2and3 <code>class="layout--span-5-12"</code></p>
 
-                                <div class="layout--span-1-4"><p class="box">Opt5: 3col cell1</p></div>
-                                <div class="layout--span-5-12"><p class="box">Opt5: 3col cell2and3</p></div>
+                                <div class="layout--span-1-4">
+                                    <p class="box">Opt5: 3col cell1</p>
+                                </div>
+                                <div class="layout--span-5-12">
+                                    <p class="box">Opt5: 3col cell2and3</p>
+                                </div>
 
                                 <p class="information">Opt6: 4col cell1 <code>class="layout--span-1-3 at-break1"</code><br>
                                     Opt6: 5col cell2 <code>class="layout--span-4-6 at-break1"</code><br>
                                     Opt6: 6col cell3 <code>class="layout--span-7-9 at-break1"</code><br>
                                     Opt6: 7col cell4 <code>class="layout--span-10-12 at-break1"</code></p>
 
-                                <div class="layout--span-1-3 at-break1"><p class="box">Opt6: 4col cell1</p></div>
-                                <div class="layout--span-4-6 at-break1"><p class="box">Opt6: 5col cell2</p></div>
-                                <div class="layout--span-7-9 at-break1"><p class="box">Opt6: 6col cell3</p></div>
-                                <div class="layout--span-10-12 at-break1"><p class="box">Opt6: 7col cell4</p></div>
+                                <div class="layout--span-1-3 at-break1">
+                                    <p class="box">Opt6: 4col cell1</p>
+                                </div>
+                                <div class="layout--span-4-6 at-break1">
+                                    <p class="box">Opt6: 5col cell2</p>
+                                </div>
+                                <div class="layout--span-7-9 at-break1">
+                                    <p class="box">Opt6: 6col cell3</p>
+                                </div>
+                                <div class="layout--span-10-12 at-break1">
+                                    <p class="box">Opt6: 7col cell4</p>
+                                </div>
 
                                 <p class="information">Opt7: 4col cell1and2 <code>class="layout--span-1-6"</code><br>
                                     Opt7: 4col cell3 <code>class="layout--span-7-9 at-break1"</code><br>
                                     Opt7: 4col cell4 <code>class="layout--span-10-12 at-break1"</code></p>
 
-                                <div class="layout--span-1-6"><p class="box">Opt7: 4col cell1and2</p></div>
-                                <div class="layout--span-7-9 at-break1"><p class="box">Opt7: 4col cell3</p></div>
-                                <div class="layout--span-10-12 at-break1"><p class="box">Opt7: 4col cell4</p></div>
+                                <div class="layout--span-1-6">
+                                    <p class="box">Opt7: 4col cell1and2</p>
+                                </div>
+                                <div class="layout--span-7-9 at-break1">
+                                    <p class="box">Opt7: 4col cell3</p>
+                                </div>
+                                <div class="layout--span-10-12 at-break1">
+                                    <p class="box">Opt7: 4col cell4</p>
+                                </div>
 
                                 <p class="information">Opt8: 4col cell1 <code>class="layout--span-1-3"</code><br>
                                     Opt8: 4col cell2and3 <code>class="layout--span-4-9"</code><br>
                                     Opt8: 4col cell4 <code>class="layout--span-10-12"</code></p>
 
-                                <div class="layout--span-1-3"><p class="box">Opt8: 4col cell1</p></div>
-                                <div class="layout--span-4-9"><p class="box">Opt8: 4col cell2and3</p></div>
-                                <div class="layout--span-10-12"><p class="box">Opt8: 4col cell4</p></div>
+                                <div class="layout--span-1-3">
+                                    <p class="box">Opt8: 4col cell1</p>
+                                </div>
+                                <div class="layout--span-4-9">
+                                    <p class="box">Opt8: 4col cell2and3</p>
+                                </div>
+                                <div class="layout--span-10-12">
+                                    <p class="box">Opt8: 4col cell4</p>
+                                </div>
 
                                 <p class="information">Opt9: 4col cell1 <code>class="layout--span-1-3"</code><br>
                                     Opt9: 4col cell2 <code>class="layout--span-4-6"</code><br>
                                     Opt9: 4col cell3and4 <code>class="layout--span-7-12"</code></p>
 
-                                <div class="layout--span-1-3"><p class="box">Opt9: 4col cell1</p></div>
-                                <div class="layout--span-4-6"><p class="box">Opt9: 4col cell2</p></div>
-                                <div class="layout--span-7-12"><p class="box">Opt9: 4col cell3and4</p></div>
+                                <div class="layout--span-1-3">
+                                    <p class="box">Opt9: 4col cell1</p>
+                                </div>
+                                <div class="layout--span-4-6">
+                                    <p class="box">Opt9: 4col cell2</p>
+                                </div>
+                                <div class="layout--span-7-12">
+                                    <p class="box">Opt9: 4col cell3and4</p>
+                                </div>
 
                                 <p class="information">Opt10: 4col cell1and2and3 <code>class="layout--span-1-9"</code><br>
                                     Opt10: 4col cell4 <code>class="layout--span-10-12"</code></p>
 
-                                <div class="layout--span-1-9"><p class="box">Opt10: 4col cell1and2and3</p></div>
-                                <div class="layout--span-10-12"><p class="box">Opt10: 4col cell4</p></div>
+                                <div class="layout--span-1-9">
+                                    <p class="box">Opt10: 4col cell1and2and3</p>
+                                </div>
+                                <div class="layout--span-10-12">
+                                    <p class="box">Opt10: 4col cell4</p>
+                                </div>
 
                                 <p class="information">Opt11: 4col cell1 <code>class="layout--span-1-3"</code><br>
                                     Opt11: 4col cell2and3and4 <code>class="layout--span-4-12"</code></p>
 
-                                <div class="layout--span-1-3"><p class="box">Opt11: 4col cell1</p></div>
-                                <div class="layout--span-4-12"><p class="box">Opt11: 4col cell2and3and4</p></div>
+                                <div class="layout--span-1-3">
+                                    <p class="box">Opt11: 4col cell1</p>
+                                </div>
+                                <div class="layout--span-4-12">
+                                    <p class="box">Opt11: 4col cell2and3and4</p>
+                                </div>
 
                             </div><!-- this `/div` is just for clearfix child elements in this design patterns doc -->
 
@@ -269,20 +331,26 @@
                         </section>
 
 
-                        <section role="region" id="section-slider" class="section">
+                        <section class="section" id="section-slider" role="region">
                             <h2>Image slider</h2>
 
                             <div class="rslides-container">
                                 <ul class="rslides">
-                                    <li><img src="/mockups/img/slide01.jpg" alt="Slide 01"></li>
-                                    <li><img src="/mockups/img/slide02.jpg" alt="Slide 02"></li>
-                                    <li><img src="/mockups/img/slide03.jpg" alt="Slide 03"></li>
+                                    <li>
+                                        <img src="/mockups/img/slide01.jpg" alt="Slide 01">
+                                    </li>
+                                    <li>
+                                        <img src="/mockups/img/slide02.jpg" alt="Slide 02">
+                                    </li>
+                                    <li>
+                                        <img src="/mockups/img/slide03.jpg" alt="Slide 03">
+                                    </li>
                                 </ul>
                             </div>
                         </section>
 
 
-                        <section role="region" id="section-type" class="section">
+                        <section class="section" id="section-type" role="region">
                             <h2>Typography</h2>
 
                             <h1>h1 Heading 1 h1 Heading 1 h1 Heading 1 h1 Heading 1</h1>
@@ -295,28 +363,32 @@
                             <p><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam sit amet elit vitae arcu interdum ullamcorper.</strong> Nullam ultrices, nisi quis scelerisque convallis, augue neque tempor enim, et mattis justo nibh eu elit.</p>
                             <p>Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor. Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet. Curabitur neque mauris, porta vel, lacinia quis, placerat ultrices, orci.</p>
 
-                            <p>This text has a reference in the footnote<sup id="fnrevanchor1" class="footnote"><a href="#fnanchor1">1</a></sup>.</p>
-                            <p id="fnanchor1" class="footnote"><sup>1</sup> Here is the footnote.</p>
+                            <p>This text has a reference in the footnote<sup class="footnote" id="fnrevanchor1"><a href="#fnanchor1">1</a></sup>.</p>
+                            <p class="footnote" id="fnanchor1"><sup>1</sup> Here is the footnote.</p>
 
                             <h3>Contact details</h3>
                             <p>Uses both the <a href="http://schema.org/" rel="external" title="Go to the Schema.org website">Schema.org</a> and <a href="http://microformats.org/wiki/hcard" rel="external" title="Go to the hCard website">hCard</a> mircoformats.</p>
                             <!-- possible schema types: Organization, Corporation, etc (see http://schema.org/Organization for more info) -->
-                            <div role="group" itemscope itemtype="http://schema.org/Organization" class="vcard">
-                                <p itemprop="name" class="org fn">Organisation Name</p>
-                                <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="adr">
-                                    <span itemprop="streetAddress" class="street-address">13 Mystreet</span>, <span itemprop="addressLocality" class="locality">Mytown</span>, <span itemprop="addressRegion" class="region">Myshire</span>, <span itemprop="postalCode" class="postal-code">GU1 0AB</span>, <span itemprop="addressCountry" class="country">United Kingdom</span>
+                            <div class="vcard" role="group" itemscope itemtype="http://schema.org/Organization">
+                                <p class="org fn" itemprop="name">Organisation Name</p>
+                                <address class="adr" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                                    <span class="street-address" itemprop="streetAddress">13 Mystreet</span>,
+                                    <span class="locality" itemprop="addressLocality">Mytown</span>,
+                                    <span class="region" itemprop="addressRegion">Myshire</span>,
+                                    <span class="postal-code" itemprop="postalCode">GU1 0AB</span>, 
+                                    <span class="country" itemprop="addressCountry">United Kingdom</span>
                                 </address>
-                                <p itemprop="contactPoint" class="tel">
+                                <p class="tel" itemprop="contactPoint">
                                     <span itemprop="name" class="type">Telephone</span>
                                     <span itemprop="telephone" class="value">01234 456789</span>
                                 </p>
-                                <p itemprop="contactPoint" class="tel">
+                                <p class="tel" itemprop="contactPoint">
                                     <span itemprop="name" class="type">Mobile</span>
                                     <span itemprop="telephone" class="value">07900 123456</span>
                                 </p>
                                 <p itemprop="contactPoint">
                                     <span itemprop="name">Email</span>
-                                    <a href="mailto:anon@anon.com" itemprop="email" class="email" title="Email us">anon@anon.com</a>
+                                    <a class="email" href="mailto:anon@anon.com" itemprop="email" title="Email us">anon@anon.com</a>
                                 </p>
                             </div>
 
@@ -334,37 +406,37 @@
                         </section>
 
 
-                        <section role="region" id="section-text-semantics" class="section">
+                        <section class="section" id="section-text-semantics" role="region">
                             <h2>Inline text-level semantics</h2>
 
                             <p>
-                                The <a href="http://codeispottery.com/">a element</a> example<br/>
-                                The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples<br/>
-                                The <b>b element</b> example<br/>
-                                The <cite>cite element</cite> example<br/>
-                                The <code>code element</code> example<br/>
-                                The <del>del element</del> example<br/>
-                                The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples<br/>
-                                The <em>em element</em> example<br/>
-                                The <i>i element</i> example<br/>
-                                The <ins>ins element</ins> example<br/>
-                                The <kbd>kbd element</kbd> example<br/>
-                                The <mark>mark element</mark> example<br/>
-                                The <q>q element <q>inside</q> a q element</q> example<br/>
-                                The <s>s element</s> example<br/>
-                                The <samp>samp element</samp> example<br/>
-                                The <small>small element</small> example<br/>
-                                The <span>span element</span> example<br/>
-                                The <strong>strong element</strong> example<br/>
-                                The <sub>sub element</sub> example<br/>
-                                The <sup>sup element</sup> example<br/>
-                                The <u>u element</u> example<br/>
+                                The <a href="http://codeispottery.com/">a element</a> example<br>
+                                The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples<br>
+                                The <b>b element</b> example<br>
+                                The <cite>cite element</cite> example<br>
+                                The <code>code element</code> example<br>
+                                The <del>del element</del> example<br>
+                                The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples<br>
+                                The <em>em element</em> example<br>
+                                The <i>i element</i> example<br>
+                                The <ins>ins element</ins> example<br>
+                                The <kbd>kbd element</kbd> example<br>
+                                The <mark>mark element</mark> example<br>
+                                The <q>q element <q>inside</q> a q element</q> example<br>
+                                The <s>s element</s> example<br>
+                                The <samp>samp element</samp> example<br>
+                                The <small>small element</small> example<br>
+                                The <span>span element</span> example<br>
+                                The <strong>strong element</strong> example<br>
+                                The <sub>sub element</sub> example<br>
+                                The <sup>sup element</sup> example<br>
+                                The <u>u element</u> example<br>
                                 The <var>var element</var> example
                             </p>
                         </section>
 
 
-                        <section role="region" id="section-block-semantics" class="section">
+                        <section class="section" id="section-block-semantics" role="region">
                             <h2>Block text-level semantics</h2>
 
                             <h3>Pre-formatted text blocks</h3>
@@ -398,17 +470,25 @@
                         </section>
 
 
-                        <section role="region" id="section-media" class="section">
+                        <section class="section" id="section-media" role="region">
                             <h2>Embedded content</h2>
 
                             <h3>Images</h3>
-                            <p><img src="/mockups/img/160x160.png" alt="Alt text"></p>
+                            <p>
+                                <img src="/mockups/img/160x160.png" alt="Alt text">
+                            </p>
 
                             <h3>Images with links</h3>
-                            <p><a href="#" title="Title text" class="a--img"><img src="/mockups/img/160x160.png" alt="Alt text"></a></p>
+                            <p>
+                                <a class="a--img" href="#" title="Title text">
+                                    <img src="/mockups/img/160x160.png" alt="Alt text">
+                                </a>
+                            </p>
 
                             <h3>Rounded images</h3>
-                            <p><img class="img--round" src="/mockups/img/160x160.png" alt="Alt text"></p>
+                            <p>
+                                <img class="img--round" src="/mockups/img/160x160.png" alt="Alt text">
+                            </p>
 
                             <h3>Figures</h3>
                             <figure itemscope itemtype="http://schema.org/ImageObject">
@@ -442,7 +522,7 @@
                         </section>
 
 
-                        <section role="region" id="section-labels" class="section">
+                        <section class="section" id="section-labels" role="region">
                             <h2>Inline text labels</h2>
 
                             <h3>Safe</h3>
@@ -460,7 +540,7 @@
                         </section>
 
 
-                        <section role="region" id="section-alerts" class="section">
+                        <section class="section" id="section-alerts" role="region">
                             <h2>Alert boxes</h2>
 
                             <h3>System message: success</h3>
@@ -478,7 +558,7 @@
                         </section>
 
 
-                        <section role="region" id="section-details-summary" class="section">
+                        <section class="section" id="section-details-summary" role="region">
                             <h2>Details / summary</h2>
                             <p>Uses a <a href="https://github.com/mathiasbynens/jquery-details" rel="external">jQuery polyfill fallback</a> for unsupported browsers. <strong>Note:</strong> additional WAI-ARIA attributes appended via JavaScript for improved accessibility.</p>
 
@@ -494,54 +574,86 @@
                         </section>
 
 
-                        <section role="region" id="section-pagination" class="section">
+                        <section class="section" id="section-pagination" role="region">
                             <h2>Pagination</h2>
 
-                            <nav role="navigation" class="paginator" aria-label="Article navigation">
+                            <nav class="paginator" role="navigation" aria-label="Article navigation">
                                 <a rel="prev" href="#" title="Go to previous page" aria-label="Go to previous page">← Prev</a>
                                 <a rel="next" href="#" title="Go to next page" aria-label="Go to next page">Next →</a>
 
                                 <ul class="pagination">
-                                    <li class="current"><b title="Current page" aria-label="Current page">1</b></li>
-                                    <li><a href="#" title="Go to page 2" aria-label="Go to page 2">2</a></li>
-                                    <li><a href="#" title="Go to page 3" aria-label="Go to page 3">3</a></li>
-                                    <li><a href="#" title="Go to page 4" aria-label="Go to page 4">4</a></li>
-                                    <li><a href="#" title="Go to page 5" aria-label="Go to page 5">5</a></li>
-                                    <li><a href="#" title="Go to page 6" aria-label="Go to page 6">6</a></li>
-                                    <li><a href="#" title="Go to page 7" aria-label="Go to page 7">7</a></li>
-                                    <li><a href="#" title="Go to page 8" aria-label="Go to page 8">8</a></li>
-                                    <li><a href="#" title="Go to page 9" aria-label="Go to page 9">9</a></li>
-                                    <li><a href="#" title="More pages" aria-label="More pages">&hellip;</a></li>
+                                    <li class="current">
+                                        <b title="Current page" aria-label="Current page">1</b>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Go to page 2" aria-label="Go to page 2">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Go to page 3" aria-label="Go to page 3">3</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Go to page 4" aria-label="Go to page 4">4</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Go to page 5" aria-label="Go to page 5">5</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Go to page 6" aria-label="Go to page 6">6</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Go to page 7" aria-label="Go to page 7">7</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Go to page 8" aria-label="Go to page 8">8</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Go to page 9" aria-label="Go to page 9">9</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="More pages" aria-label="More pages">&hellip;</a>
+                                    </li>
                                 </ul>
                             </nav>
                         </section>
 
 
-                        <section role="region" id="section-breadcrumbs" class="section">
+                        <section class="section" id="section-breadcrumbs" role="region">
                             <h2>Breadcrumbs</h2>
                             <p>Two style options available: <code>.breadcrumbs</code> or <code>.breadcrumbs--path</code>.</p>
 
                             <nav role="navigation" aria-label="Breadcrumb navigation">
                                 <ol class="breadcrumbs">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">Projects</a></li>
-                                    <li><a href="#">Gene Splicing</a></li>
+                                    <li>
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Projects</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Gene Splicing</a>
+                                    </li>
                                     <li class="current">Test subject X11</li>
                                 </ol>
                             </nav>
 
                             <nav role="navigation" aria-label="Breadcrumb navigation">
                                 <ol class="breadcrumbs--path">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">Projects</a></li>
-                                    <li><a href="#">Gene Splicing</a></li>
+                                    <li>
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Projects</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Gene Splicing</a>
+                                    </li>
                                     <li class="current">Test subject X11 (deceased)</li>
                                 </ol>
                             </nav>
                         </section>
 
 
-                        <section role="region" id="section-lists" class="section">
+                        <section class="section" id="section-lists" role="region">
                             <h2>Lists</h2>
 
                             <h3>Number list</h3>
@@ -595,7 +707,7 @@
                         </section>
 
 
-                        <section role="region" id="section-tables" class="section">
+                        <section class="section" id="section-tables" role="region">
                             <h2>Tables</h2>
 
                             <h3>Plain table</h3>
@@ -652,7 +764,7 @@
                                             <th scope="col">Sector</th>
                                             <th scope="col">Planet</th>
                                             <th scope="col">Government</th>
-                                            <th scope="col" class="numerical">Population</th>
+                                            <th class="numerical" scope="col">Population</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -694,40 +806,36 @@
                         </section>
 
 
-                        <section role="region" id="section-forms" class="section">
+                        <section class="section" id="section-forms" role="region">
                             <h2>Forms</h2>
 
                             <form>
                                 <h3>Inputs</h3>
                                 <p>
                                     <span>
-                                        <input type="checkbox" id="test_checkbox_1" name="test_checkbox_1">
+                                        <input id="test_checkbox_1" name="test_checkbox_1" type="checkbox">
                                         <label for="test_checkbox_1">Test checkbox 1</label>
                                     </span>
-                                    &nbsp;
                                     <span>
-                                        <input type="checkbox" id="test_checkbox_2" name="test_checkbox_2">
+                                        <input id="test_checkbox_2" name="test_checkbox_2" type="checkbox">
                                         <label for="test_checkbox_2">Test checkbox 2</label>
                                     </span>
-                                    &nbsp;
                                     <span>
-                                        <input type="checkbox" id="test_checkbox_3" name="test_checkbox_3">
+                                        <input id="test_checkbox_3" name="test_checkbox_3" type="checkbox">
                                         <label for="test_checkbox_3">Test checkbox 3</label>
                                     </span>
                                 </p>
                                 <p>
                                     <span>
-                                        <input type="radio" id="test_radio_1" name="test_radio_group">
+                                        <input id="test_radio_1" name="test_radio_group" type="radio">
                                         <label for="test_radio_1">Test radio 1</label>
                                     </span>
-                                    &nbsp;
                                     <span>
-                                        <input type="radio" id="test_radio_2" name="test_radio_group">
+                                        <input id="test_radio_2" name="test_radio_group" type="radio">
                                         <label for="test_radio_2">Test radio 2</label>
                                     </span>
-                                    &nbsp;
                                     <span>
-                                        <input type="radio" id="test_radio_3" name="test_radio_group">
+                                        <input id="test_radio_3" name="test_radio_group" type="radio">
                                         <label for="test_radio_3">Test radio 3</label>
                                     </span>
                                 </p>
@@ -750,12 +858,12 @@
                                             <option value="9">Yet another item to be chosen</option>
                                         </optgroup>
                                     </select>
-                                    <input type="text" id="text_inline" name="text_inline">
+                                    <input id="text_inline" name="text_inline" type="text">
                                     <input type="button" value="Hello">
                                 </p>
                                 <p>
                                     <label for="select_dd2">Inline form elements (disabled)</label><br>
-                                    <select id="select_dd2" name="select_dd2" disabled="disabled">
+                                    <select id="select_dd2" name="select_dd2" disabled>
                                         <optgroup label="Group 1">
                                             <option value="1">Some text goes here</option>
                                             <option value="2">Another choice could be here</option>
@@ -772,8 +880,8 @@
                                             <option value="9">Yet another item to be chosen</option>
                                         </optgroup>
                                     </select>
-                                    <input type="text" id="text_inline2" name="text_inline2" disabled="disabled">
-                                    <input type="button" value="Hello" disabled="disabled">
+                                    <input id="text_inline2" name="text_inline2" type="text" disabled>
+                                    <input type="button" value="Hello" disabled>
                                 </p>
                                 <p>
                                     <label for="select_multi">Select multiple</label><br>
@@ -801,19 +909,19 @@
                                 </p>
                                 <p>
                                     <label for="url">URL</label><br>
-                                    <input type="url" id="url" name="url">
+                                    <input id="url" name="url" type="url">
                                 </p>
                                 <p>
                                     <label for="email">Email</label><br>
-                                    <input type="email" id="email" name="email" placeholder="name@example.com">
+                                    <input id="email" name="email" type="email" placeholder="name@example.com">
                                 </p>
                                 <p>
                                     <label for="text">Text <abbr class="required" title="Required">*</abbr></label><br>
-                                    <input type="text" id="text" name="text">
+                                    <input id="text" name="text" type="text">
                                 </p>
                                 <p>
                                     <label for="text-data">Text with data list</label><br>
-                                    <input type="text" id="text-data" name="text-data" list="text-data-list">
+                                    <input id="text-data" name="text-data" type="text" list="text-data-list">
                                     <datalist id="text-data-list">
                                         <option value="Afghanistan">
                                         <option value="Albania">
@@ -824,41 +932,41 @@
                                 </p>
                                 <p>
                                     <label for="datetime-local">Datetime local</label><br>
-                                    <input type="datetime-local" id="datetime-local" name="datetime-local">
+                                    <input id="datetime-local" name="datetime-local" type="datetime-local">
                                 </p>
                                 <p>
                                     <label for="number">Number</label><br>
-                                    <input type="number" id="number" name="number" min="0" max="999" step="1">
+                                    <input id="number" name="number" type="number" min="0" max="999" step="1">
                                 </p>
                                 <p>
                                     <label for="tel">Tel (phone)</label><br>
-                                    <input type="tel" id="tel" name="tel">
+                                    <input id="tel" name="tel" type="tel">
                                 </p>
                                 <p>
                                     <label for="datetime">Datetime</label><br>
-                                    <input type="datetime" id="datetime" name="datetime">
+                                    <input id="datetime" name="datetime" type="datetime">
                                 </p>
                                 <p>
                                     <label for="date">Date</label><br>
-                                    <input type="date" id="date" name="date">
+                                    <input id="date" name="date" type="date">
                                 </p>
                                 <p>
                                     <label for="month">Month</label><br>
-                                    <input type="month" id="month" name="month">
+                                    <input id="month" name="month" type="month">
                                 </p>
                                 <p>
                                     <label for="search">Search</label><br>
-                                    <input type="search" id="search" name="search">
+                                    <input id="search" name="search" type="search">
                                 </p>
                                 <p>
                                     <label for="range">Range</label><br>
-                                    <input type="range" id="range" name="range">
+                                    <input id="range" name="range" type="range">
                                 </p>
                                 <p>
                                     <label for="range">Range (min = 100, max = 500, step = 50, start value = 100)</label><br>
                                     <script>function printValue(sliderID, textbox) { var x = document.getElementById(textbox); var y = document.getElementById(sliderID); x.value = y.value; } window.onload = function() { printValue('range1', 'rangeValue1'); } </script>
-                                    <input type="range" id="range1" name="range1" min="100" max="500" step="50" value="100" onchange="printValue('range1','rangeValue1')"><br>
-                                    <input type="text" id="rangeValue1" name="rangeValue1" size="3">
+                                    <input id="range1" name="range1" type="range" min="100" max="500" step="50" value="100" onchange="printValue('range1','rangeValue1')"><br>
+                                    <input id="rangeValue1" name="rangeValue1" type="text" size="3">
                                 </p>
                                 <p>
                                     <label for="color">Colour</label><br>
@@ -870,17 +978,15 @@
                                     <legend>Fieldset legend</legend>
                                     <p>
                                         <span>
-                                            <input type="radio" id="fieldset_radio_1" name="fieldset_radio_group">
+                                            <input id="fieldset_radio_1" name="fieldset_radio_group" type="radio">
                                             <label for="fieldset_radio_1">Yes</label>
                                         </span>
-                                        &nbsp;
                                         <span>
-                                            <input type="radio" id="fieldset_radio_2" name="fieldset_radio_group">
+                                            <input id="fieldset_radio_2" name="fieldset_radio_group" type="radio">
                                             <label for="fieldset_radio_2">No</label>
                                         </span>
-                                        &nbsp;
                                         <span>
-                                            <input type="radio" id="fieldset_radio_3" name="fieldset_radio_group">
+                                            <input id="fieldset_radio_3" name="fieldset_radio_group" type="radio">
                                             <label for="fieldset_radio_3">Maybe</label>
                                         </span>
                                     </p>
@@ -889,53 +995,60 @@
                                 <h3>Buttons</h3>
                                 <p>
                                     <input type="submit" value="Input - Submit">
-                                    &nbsp;
                                     <input type="button" value="Input - Button">
-                                    &nbsp;
                                     <input type="reset" value="Input - Reset">
-                                    &nbsp;
                                     <button>Button tag</button>
                                 </p>
                                 <p>
                                     <input class="button-success" type="button" value="Success">
-                                    &nbsp;
                                     <input class="button-danger" type="button" value="Danger">
                                 </p>
                                 <p>
                                     <a class="button" href="#">Link tag</a>
-                                    &nbsp;
                                     <span class="button disabled">Span tag (disabled)</span>
-                                    &nbsp;
-                                    <input type="submit" value="Input (disabled)" disabled="disabled">
-                                    &nbsp;
-                                    <button disabled="disabled">Button (disabled)</button>
+                                    <input type="submit" value="Input (disabled)" disabled>
+                                    <button disabled>Button (disabled)</button>
                                 </p>
                             </form>
                         </section>
 
 
-                        <section role="region" id="section-social" class="section">
+                        <section class="section" id="section-social" role="region">
                             <h2>Social media</h2>
 
                             <h3>External social media links</h3>
                             <ul class="social-channels">
-                                <li><a rel="external" class="facebook" href="http://facebook.com/" title="Follow us on Facebook">Facebook</a></li>
-                                <li><a rel="external" class="flickr" href="http://www.flickr.com/" title="See our photos on Flickr">Flickr</a></li>
-                                <li><a rel="external" class="googleplus" href="https://plus.google.com/" title="Follow us on Google+">Google+</a></li>
-                                <li><a rel="external" class="linkedin" href="http://linkedin.com/" title="Link with us on LinkedIn">LinkedIn</a></li>
-                                <li><a rel="external" class="pinterest" href="http://pinterest.com/" title="Pin us on Pinterest">Pinterest</a></li>
-                                <li><a rel="external" class="twitter" href="http://twitter.com/" title="Follow us on Twitter">Twitter</a></li>
-                                <li><a rel="external" class="youtube" href="http://youtube.com/" title="Watch us on YouTube">YouTube</a></li>
+                                <li>
+                                    <a class="facebook" rel="external" href="http://facebook.com/" title="Follow us on Facebook">Facebook</a>
+                                </li>
+                                <li>
+                                    <a class="flickr" rel="external" href="http://www.flickr.com/" title="See our photos on Flickr">Flickr</a>
+                                </li>
+                                <li>
+                                    <a class="googleplus" rel="external" href="https://plus.google.com/" title="Follow us on Google+">Google+</a>
+                                </li>
+                                <li>
+                                    <a class="linkedin" rel="external" href="http://linkedin.com/" title="Link with us on LinkedIn">LinkedIn</a>
+                                </li>
+                                <li>
+                                    <a class="pinterest" rel="external" href="http://pinterest.com/" title="Pin us on Pinterest">Pinterest</a>
+                                </li>
+                                <li>
+                                    <a class="twitter" rel="external" href="http://twitter.com/" title="Follow us on Twitter">Twitter</a>
+                                </li>
+                                <li>
+                                    <a class="youtube" rel="external" href="http://youtube.com/" title="Watch us on YouTube">YouTube</a>
+                                </li>
                             </ul>
 
                             <h3>Social media buttons</h3>
                             <p class="information">Change the Twitter attribute <code>data=via="twitterapi"</code> to the Twitter username of the production site.</p>
                             <p>
                                 <!-- Google+ '+1' button -->
-                                <a rel="external" href="https://plus.google.com/" class="g-plusone" data-size="medium" data-annotation="none" data-expandTo="top" data-href="http://testing3.designhive.com/">+1</a>
+                                <a class="g-plusone" rel="external" href="https://plus.google.com/" data-size="medium" data-annotation="none" data-expandTo="top" data-href="http://testing3.designhive.com/">+1</a>
 
                                 <!-- Twitter 'Tweet' button -->
-                                <a rel="external" href="https://twitter.com/share" class="twitter-share-button" data-via="twitterapi" data-count="none" data-url="http://testing3.designhive.com/" data-text="Hive Framework - design patterns document">Tweet</a>
+                                <a class="twitter-share-button" rel="external" href="https://twitter.com/share" data-via="twitterapi" data-count="none" data-url="http://testing3.designhive.com/" data-text="Hive Framework - design patterns document">Tweet</a>
 
                                 <!-- Facebook 'Like' button -->
                                 <iframe class="facebook-like-button" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Ftesting3.designhive.com&amp;locale=en_GB&amp;layout=button_count&amp;height=20"></iframe>
@@ -943,21 +1056,21 @@
                         </section>
 
 
-                        <section role="region" id="section-jquery-ui" class="section">
+                        <section class="section" id="section-jquery-ui" role="region">
                             <h2>jQuery UI widgets</h2>
-                            <p>Collection of all the available <a href="http://jqueryui.com/" rel="external" title="Go to the jQuery User Interface website">jQuery UI</a> widgets.</p>
+                            <p>Collection of all the available <a rel="external" href="http://jqueryui.com/" title="Go to the jQuery User Interface website">jQuery UI</a> widgets.</p>
 
                             <h3>Interactions: Draggable</h3>
                             <div class="jquery-ui-draggable ui-widget-content" style="padding:.5em 1em; margin-bottom:1em;">
                                 <strong>Drag me around!</strong>
                             </div>
-                            <p><a href="http://jqueryui.com/draggable/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+                            <p><a rel="external" href="http://jqueryui.com/draggable/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
                             <h3>Interactions: Resizable</h3>
                             <div class="jquery-ui-resizable ui-widget-content" style="padding:.5em 1em; margin-bottom:1em;">
                                 <strong>Resize me!</strong>
                             </div>
-                            <p><a href="http://jqueryui.com/resizable/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+                            <p><a rel="external" href="http://jqueryui.com/resizable/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
                             <h3>Interactions: Selectable</h3>
                             <ol class="jquery-ui-selectable list--no-bullets">
@@ -969,7 +1082,7 @@
                                 <li class="ui-widget-content" style="padding:.5em 1em; border-bottom:0;">Item 6</li>
                                 <li class="ui-widget-content" style="padding:.5em 1em;">Item 7</li>
                             </ol>
-                            <p><a href="http://jqueryui.com/selectable/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+                            <p><a rel="external" href="http://jqueryui.com/selectable/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
                             <h3>Interactions: Sortable</h3>
                             <ul class="jquery-ui-sortable list--no-bullets">
@@ -1002,7 +1115,7 @@
                                     Item 7
                                 </li>
                             </ul>
-                            <p><a href="http://jqueryui.com/sortable/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+                            <p><a rel="external" href="http://jqueryui.com/sortable/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
                             <h3>Widgets: Accordion</h3>
                             <div class="jquery-ui-accordion">
@@ -1032,46 +1145,46 @@
                                     <p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
                                 </div>
                             </div>
-                            <p><a href="http://jqueryui.com/accordion/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+                            <p><a rel="external" href="http://jqueryui.com/accordion/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
                             <h3>Widgets: Autocomplete</h3>
                             <p>
                                 <label for="autocomplete-country">Countries</label><br>
                                 <input type="text" id="autocomplete-country">
                             </p>
-                            <p><a href="http://jqueryui.com/autocomplete/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+                            <p><a rel="external" href="http://jqueryui.com/autocomplete/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
                             <h3>Widgets: Button</h3>
 
                             <h4>Default functionality buttons</h4>
                             <p>
-                                <a href="#" class="jquery-ui-button">&lt;a&gt; button</a>
+                                <a class="jquery-ui-button" href="#">&lt;a&gt; button</a>
                                 <button class="jquery-ui-button">&lt;button&gt; button</button>
-                                <input type="button" class="jquery-ui-button" value="Input button">
-                                <input type="submit" class="jquery-ui-button" value="Submit button">
+                                <input class="jquery-ui-button" type="button" value="Input button">
+                                <input class="jquery-ui-button" type="submit" value="Submit button">
                             </p>
 
                             <h4>Checkboxes as buttons</h4>
                             <p>
-                                <input type="checkbox" class="jquery-ui-button" id="check">
+                                <input class="jquery-ui-button" id="check" type="checkbox">
                                 <label for="check">Toggle</label>
                             </p>
                             <p class="jquery-ui-buttonset">
-                                <input type="checkbox" id="check1">
+                                <input id="check1" type="checkbox">
                                 <label for="check1">B</label>
-                                <input type="checkbox" id="check2">
+                                <input id="check2" type="checkbox">
                                 <label for="check2">I</label>
-                                <input type="checkbox" id="check3">
+                                <input id="check3" type="checkbox">
                                 <label for="check3">U</label>
                             </p>
 
                             <h4>Radios as buttons</h4>
                             <p class="jquery-ui-buttonset">
-                                <input type="radio" id="radio1" name="radio" checked="checked">
+                                <input id="radio1" name="radio" type="radio" checked>
                                 <label for="radio1">Yes</label>
-                                <input type="radio" id="radio2" name="radio">
+                                <input id="radio2" name="radio" type="radio">
                                 <label for="radio2">Maybe</label>
-                                <input type="radio" id="radio3" name="radio">
+                                <input id="radio3" name="radio" type="radio">
                                 <label for="radio3">No</label>
                             </p>
 
@@ -1084,9 +1197,9 @@
                                 <button class="jquery-ui-button-icon-two-only">&lt;button&gt; two icons and no text</button>
                             </p>
                             <p>
-                                <a href="#" class="jquery-ui-button-icon-only">&lt;a&gt; icon only</a>
-                                <a href="#" class="jquery-ui-button-icon-left">&lt;a&gt; icon on the left</a>
-                                <a href="#" class="jquery-ui-button-icon-two-only">&lt;a&gt; two icons and no text</a>
+                                <a class="jquery-ui-button-icon-only" href="#">&lt;a&gt; icon only</a>
+                                <a class="jquery-ui-button-icon-left" href="#">&lt;a&gt; icon on the left</a>
+                                <a class="jquery-ui-button-icon-two-only" href="#">&lt;a&gt; two icons and no text</a>
                             </p>
 
                             <h4>Split buttons</h4>
@@ -1102,74 +1215,106 @@
                                 </ul>
                             </div>
 
-                            <p><a href="http://jqueryui.com/button/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+                            <p><a rel="external" href="http://jqueryui.com/button/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
                             <h3>Widgets: Datepicker</h3>
                             <div class="jquery-ui-datepicker"></div>
-                            <p><a href="http://jqueryui.com/datepicker/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+                            <p><a rel="external" href="http://jqueryui.com/datepicker/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
                             <h3>Widgets: Dialog</h3>
 
-                            <p><a href="#" id="jquery-ui-dialog-link">Open basic dialog&hellip;</a></p>
+                            <p><a id="jquery-ui-dialog-link" href="#">Open basic dialog&hellip;</a></p>
                             <!-- Dialog box (basic) -->
                             <div id="jquery-ui-dialog" title="Basic dialog example">
                                 <h3>Non-modal dialog</h3>
                                 <p>Lorem ipsum dolor sit amet, <a href="#nowhere">Testlink</a> quo epicuri volutpat no. Causae option accusamus in est. Mea id ignota meliore facilis, cu vim omnium appareat mediocrem. Eu oblique voluptua electram his. Mei eu movet recteque. Vis nulla graeci praesent ad, mediocrem expetenda pro ad.</p>
                             </div>
 
-                            <p><a href="#" id="jquery-ui-dialog-modal-link">Open modal dialog&hellip;</a></p>
+                            <p><a id="jquery-ui-dialog-modal-link" href="#">Open modal dialog&hellip;</a></p>
                             <!-- Dialog box (modal) -->
                             <div id="jquery-ui-dialog-modal" title="Modal dialog example">
                                 <h3>Modal dialog</h3>
                                 <p>Lorem ipsum dolor sit amet, <a href="#nowhere">Testlink</a> quo epicuri volutpat no. Causae option accusamus in est. Mea id ignota meliore facilis, cu vim omnium appareat mediocrem. Eu oblique voluptua electram his. Mei eu movet recteque. Vis nulla graeci praesent ad, mediocrem expetenda pro ad.</p>
                             </div>
 
-                            <p><a href="http://jqueryui.com/dialog/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+                            <p><a rel="external" href="http://jqueryui.com/dialog/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
                             <h3>Widgets: Menu</h3>
 
                             <ul class="jquery-ui-menu">
-                                <li class="ui-state-disabled"><a href="#">Aberdeen</a></li>
-                                <li><a href="#">Ada</a></li>
-                                <li><a href="#">Adamsville</a></li>
-                                <li><a href="#">Addyston</a></li>
+                                <li class="ui-state-disabled">
+                                    <a href="#">Aberdeen</a>
+                                </li>
+                                <li>
+                                    <a href="#">Ada</a>
+                                </li>
+                                <li>
+                                    <a href="#">Adamsville</a>
+                                </li>
+                                <li>
+                                    <a href="#">Addyston</a>
+                                </li>
                                 <li>
                                     <a href="#">Delphi</a>
                                     <ul>
-                                        <li class="ui-state-disabled"><a href="#">Ada</a></li>
-                                        <li><a href="#">Saarland</a></li>
-                                        <li><a href="#">Salzburg</a></li>
+                                        <li class="ui-state-disabled">
+                                            <a href="#">Ada</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Saarland</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Salzburg</a>
+                                        </li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Saarland</a></li>
+                                <li>
+                                    <a href="#">Saarland</a>
+                                </li>
                                 <li>
                                     <a href="#">Salzburg</a>
                                     <ul>
                                         <li>
                                             <a href="#">Delphi</a>
                                             <ul>
-                                                <li><a href="#">Ada</a></li>
-                                                <li><a href="#">Saarland</a></li>
-                                                <li><a href="#">Salzburg</a></li>
+                                                <li>
+                                                    <a href="#">Ada</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Saarland</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Salzburg</a>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li>
                                             <a href="#">Delphi</a>
                                             <ul>
-                                                <li><a href="#">Ada</a></li>
-                                                <li><a href="#">Saarland</a></li>
-                                                <li><a href="#">Salzburg</a></li>
+                                                <li>
+                                                    <a href="#">Ada</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Saarland</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Salzburg</a>
+                                                </li>
                                             </ul>
                                         </li>
-                                        <li><a href="#">Perch</a></li>
+                                        <li>
+                                            <a href="#">Perch</a>
+                                        </li>
                                     </ul>
                                 </li>
-                                <li class="ui-state-disabled"><a href="#">Amesville</a></li>
+                                <li class="ui-state-disabled">
+                                    <a href="#">Amesville</a>
+                                </li>
                             </ul>
 
                             <p><span class="warning"><strong>Note:</strong> Currently jQuery UI does not support horizontal menus.</span></p>
 
-                            <p><a href="http://jqueryui.com/menu/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+                            <p><a rel="external" href="http://jqueryui.com/menu/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
                             <h3>Widget: Progressbar</h3>
                             <h4>Determinate value</h4>
@@ -1177,11 +1322,11 @@
                             <p><a class="jquery-ui-progressbar-animate" href="#">Animate to random number</a></p>
                             <h4>Indeterminate value</h4>
                             <div class="jquery-ui-progressbar2"></div>
-                            <p><a href="http://jqueryui.com/progressbar/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+                            <p><a rel="external" href="http://jqueryui.com/progressbar/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
                             <h3>Widget: Selectmenu</h3>
                             <p>COMING SOON</p>
-                            <p><a href="http://jqueryui.com/selectmenu/" rel="external" title="Go to the jQuery UI documentation">Full documentation COMING SOON</a></p>
+                            <p><a rel="external" href="http://jqueryui.com/selectmenu/" title="Go to the jQuery UI documentation">Full documentation COMING SOON</a></p>
 
                             <h3>Widgets: Slider</h3>
                             <h4>Slider - horizontal</h4>
@@ -1198,21 +1343,27 @@
                                 <span>70</span>
                             </div>
 
-                            <p><a href="http://jqueryui.com/slider/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+                            <p><a rel="external" href="http://jqueryui.com/slider/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
                             <h3>Widgets: Spinner</h3>
                             <p>
                                 <label for="jquery-ui-spinner">Select a value:</label>
                                 <input type="text" id="jquery-ui-spinner" name="value">
                             </p>
-                            <p><a href="http://jqueryui.com/spinner/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+                            <p><a rel="external" href="http://jqueryui.com/spinner/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
                             <h3>Widgets: Tabs</h3>
                             <div class="jquery-ui-tabs">
                                 <ul>
-                                    <li><a href="#tabgroup1-tab1">Carnivore</a></li>
-                                    <li><a href="#tabgroup1-tab2">Herbivore</a></li>
-                                    <li><a href="#tabgroup1-tab3">Omnivore</a></li>
+                                    <li>
+                                        <a href="#tabgroup1-tab1">Carnivore</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tabgroup1-tab2">Herbivore</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tabgroup1-tab3">Omnivore</a>
+                                    </li>
                                 </ul>
                                 <div id="tabgroup1-tab1">
                                     <h4>Carnivore tab contents</h4>
@@ -1227,12 +1378,12 @@
                                     <p>Inermis indoctum vis in, has soleat complectitur te <a href="#nowhere">Testlink</a>. Ut est stet civibus, mucius iriure ad duo. Sumo tantas et est, ea duo elitr utroque, ne mea dicant tincidunt scribentur. Sit dico accusata et. Sint inimicus cu nam, odio velit minim sit ut.</p>
                                 </div>
                             </div>
-                            <p><a href="http://jqueryui.com/tabs/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+                            <p><a rel="external" href="http://jqueryui.com/tabs/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
 
                             <h3>Widgets: Tooltip</h3>
                             <p>Here is an example of a <a class="jquery-ui-tooltip" href="#" title="This is a tooltip, it can be of any length (within practical reason).">link with a tooltip</a>, mouseover to reveal it.</p>
-                            <p><a href="http://jqueryui.com/tooltip/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+                            <p><a rel="external" href="http://jqueryui.com/tooltip/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
                             <h3>Styles: Icons</h3>
                             <ul class="jquery-ui-icons ui-widget ui-helper-clearfix">
@@ -1449,7 +1600,7 @@
 
                             <h3>Styles: Overlay and shadow</h3>
                             <p><span class="warning">Not currently used in jQuery UI widgets.</span></p>
-                            <div style="position: relative; width: 70%; height: 200px; padding:1% 4%; overflow:hidden;" class="fakewindowcontain">
+                            <div class="fakewindowcontain" style="position: relative; width: 70%; height: 200px; padding:1% 4%; overflow:hidden;">
                                 <p>Lorem ipsum dolor sit amet, Nulla nec tortor. Donec id elit quis purus consectetur consequat.</p>
                                 <p>Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante. Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci.</p>
                                 <p>Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie scelerisque quam. Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit quis purus consectetur consequat.</p>
@@ -1471,7 +1622,7 @@
                         </section>
 
 
-                        <section role="region" id="section-misc" class="section">
+                        <section class="section" id="section-misc" role="region">
                             <h2>Miscellaneous</h2>
 
                             <h3>AJAX spinner (for light backgrounds)</h3>
