@@ -1,6 +1,16 @@
 /* Pagination links
    ========================================================================== */
 
+/**
+ * Paginator (prev/next) navigation links on articles.
+ *
+ * Example HTML:
+ *
+ * <nav class="paginator">
+ *     <a rel="prev">
+ *     <a rel="next">
+ */
+
 .paginator {
     text-align: center;
     margin: 1em 0;
@@ -17,6 +27,23 @@
         margin: 0 0 0 1em;
     }
 }
+
+/**
+ * Numerical pagination link lists.
+ *
+ * Example HTML:
+ *
+ * <ul class="pagination">
+ *     <li class="current">
+ *         <b title="Current page">1</b>
+ *     </li>
+ *     <li>
+ *         <a title="Go to page 2">2</a>
+ *     </li>
+ *     <li>
+ *         <a title="Go to page 3">3</a>
+ *     </li>
+ */
 
 .pagination {
     display: inline-block;
