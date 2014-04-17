@@ -1,6 +1,22 @@
 /* Breadcrumb links
    ========================================================================== */
 
+/**
+ * Lists as breadcrumbs
+ *
+ * Example HTML:
+ *
+ * <ol class="breadcrumbs">
+ *     <li></li>
+ *     <li></li>
+ * </ol>
+ *
+ * <ol class="breadcrumbs-path">
+ *     <li></li>
+ *     <li></li>
+ * </ol>
+ */
+
 .breadcrumbs,
 .breadcrumbs--path {
     @include adjust-font-size-to(12px, 0.75);
@@ -14,13 +30,18 @@
     }
 }
 
-/* simple breadcrumb styling to apply to (ordered) lists */
+/**
+ * Simple breadcrumb styling to apply to (ordered) lists.
+ */
+
 .breadcrumbs > li + li:before {
     content:"\00BB" "\00A0";
 }
 
+/**
+ * Path-like breadcrumb styling.
+ */
 
-/* path-like breadcrumb styling */
 .breadcrumbs--path > li + li:before {
     content:"\002F" "\00A0";
 }

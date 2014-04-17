@@ -1,7 +1,9 @@
 /* Alert messages
    ========================================================================== */
 
-/* label colours */
+/**
+ * Alert labels.
+ */
 
 .success,
 .warning,
@@ -36,7 +38,9 @@
     background: $color-highlight-box;
 }
 
-/* alert boxes */
+/**
+ * Alert boxes.
+ */
 
 .alert-block {
     border: 1px solid;

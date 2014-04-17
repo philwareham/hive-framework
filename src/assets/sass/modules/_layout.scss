@@ -1,20 +1,40 @@
 /* Layout
    ========================================================================== */
 
+/**
+ * 1. Always force scrollbar padding so we don't get 'jumping'.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ * 3. As 2 above, for Windows Phone.
+ */
+
 html {
     -webkit-tap-highlight-color: rgba($color-link-hover, 0.5);
-    /* always force scrollbar padding so we don't get 'jumping' */
     overflow-y: scroll;
-    /* prevent iOS text size adjust after orientation change, without disabling user zoom */
-    -webkit-text-size-adjust: 100%;
-    /* as above, for Windows Phone */
-    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%; /* 1 */
+    -ms-text-size-adjust: 100%; /* 2 */
 }
 
+/**
+ * 1. Remove default margin.
+ */
+
 body {
-    margin: 0;
+    margin: 0; /* 1 */
     background: $color-background-box;
 }
+
+/**
+ * Outer wrapper for main layouts.
+ *
+ * Example HTML:
+ *
+ * <div class="wrapper">
+ *     <div class="container">
+ *         Content
+ *     </div>
+ * </div>
+ */
 
 .wrapper {
     border-top: 1px solid $color-border;
@@ -23,13 +43,29 @@ body {
     background: $color-background;
 }
 
+/**
+ * Wrapper for layouts, and for header/footer.
+ *
+ * Example HTML:
+ *
+ * <div class="wrapper">
+ *     <div class="container">
+ *         Content
+ *     </div>
+ * </div>
+ */
+
 header,
-.container,
-footer {
+footer,
+.container {
     margin: 0 auto;
     width: 90%;
     max-width: $container-max-width;
 }
+
+/**
+ * Additional styling for child content within `header`.
+ */
 
 header {
     padding: 1em 0;
@@ -43,6 +79,10 @@ header {
     }
 }
 
+/**
+ * Additional styling for child content within `footer`.
+ */
+
 footer {
     padding: 0.5em 0;
 
@@ -51,7 +91,10 @@ footer {
     }
 }
 
-/* prevent really, really long words from breaking layout */
+/**
+ * Prevent really, really long words in article from breaking layout.
+ */
+
 article {
     word-wrap: break-word;
 }
@@ -67,7 +110,10 @@ article {
     }
 }
 
-/* address differences between Firefox and other browsers */
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
 hr {
     @include box-sizing(content-box);
 

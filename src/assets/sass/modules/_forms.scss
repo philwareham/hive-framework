@@ -138,7 +138,7 @@ select[size="1"] {
     height: 2.3571428em; // 33px / 14px
 }
 
-/* address `<select>` alignment in Safari, Chrome */
+/* address `select` alignment in Safari, Chrome */
 @media (-webkit-min-device-pixel-ratio: 0) {
 
     select[size],

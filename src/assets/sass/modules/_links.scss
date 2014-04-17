@@ -1,12 +1,24 @@
 /* Links
    ========================================================================== */
 
-a {
-    text-decoration: none;
-    color: $color-link;
-    background: transparent; // remove the gray background color from active links in IE 10
+/**
+ * 1. Remove default underline style from non-hover state links.
+ * 2. Specify link colour.
+ * 3. Remove the gray background color from active links in IE 10.
+ */
 
-    // improve readability when focused and also mouse hovered in all browsers
+a {
+    text-decoration: none; /* 1 */
+    color: $color-link; /* 2 */
+    background: transparent; /* 3 */
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ * Specify link state colours.
+ */
+
+a {
     &:hover,
     &:active {
         outline: 0;
@@ -21,18 +33,26 @@ a {
     &:visited {
         color: $color-link-visited;
     }
+}
 
-    header & {
-        @include border-radius($default-border-radius / 4);
+/**
+ * Additional styling for child links within `header`.
+ */
 
-        color: $color-text;
+header a {
+    @include border-radius($default-border-radius / 4);
 
-        &:hover,
-        &:active {
-            background: darken($color-background-box, 6%);
-        }
+    color: $color-text;
+
+    &:hover,
+    &:active {
+        background: darken($color-background-box, 6%);
     }
 }
+
+/**
+ * Additional styling for `h1` heading links within `main`.
+ */
 
 [role="main"] h1 a {
     @include border-radius($default-border-radius / 4);
@@ -51,7 +71,16 @@ a {
     }
 }
 
-/* images as links */
+/**
+ * Images as links.
+ *
+ * Example HTML:
+ *
+ * <a class="a--img">
+ *     <img>
+ * </a>
+ */
+
 .a--img {
     img {
         @include transition(box-shadow 0.1s linear);
@@ -67,9 +96,17 @@ a {
     }
 }
 
-/* only target phone numbers you want clickable and stop mobile phones from linking other
-   numbers that look like, but are not phone numbers - use attribute `itemprop="telephone"`
-   to apply to the numbers you require linked and styled */
+/**
+ * Only target phone numbers you want clickable and stop mobile phones from
+ * linking other numbers that look like, but are not phone numbers - use
+ * attribute `itemprop="telephone"` to apply to the numbers you require linked
+ * and styled.
+ *
+ * Example HTML:
+ *
+ * <a itemprop="telephone">
+ */
+
 a[href^="tel"],
 a[href^="sms"] {
     color: $color-text;
