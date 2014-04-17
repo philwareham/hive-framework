@@ -1,7 +1,10 @@
 /* Embedded content
    ========================================================================== */
 
-/* make embedded elements responsive */
+/**
+ * Make embedded elements responsive.
+ */
+
 img,
 video {
     max-width: 100%;
@@ -42,6 +45,29 @@ img {
     &.align-center {
         display: block;
         margin: 1em auto;
+    }
+}
+
+/**
+ * Image alignment via `position: absolute`.
+ *
+ * Example HTML:
+ *
+ * <img class="align-hard-left">
+ * <img class="align-hard-right">
+ */
+
+img {
+    &.align-hard-left {
+        position: absolute;
+        left: 0;
+        z-index: 5;
+    }
+
+    &.align-hard-right {
+        position: absolute;
+        right: 0;
+        z-index: 5;
     }
 }
 
