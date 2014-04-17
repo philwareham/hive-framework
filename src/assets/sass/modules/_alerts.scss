@@ -3,6 +3,13 @@
 
 /**
  * Alert labels.
+ *
+ * Example HTML:
+ *
+ * <span class="success">
+ * <span class="error">
+ * <strong class="success">
+ * <strong class="error">
  */
 
 .success,
@@ -40,6 +47,11 @@
 
 /**
  * Alert boxes.
+ *
+ * Example HTML:
+ *
+ * <p class="alert-block success">
+ * <p class="alert-block error">
  */
 
 .alert-block {
