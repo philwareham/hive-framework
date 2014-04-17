@@ -113,12 +113,24 @@
     display: none;
 }
 
-/* fallback for lack of box-shadow support */
+
+
+/* ==========================================================================
+   Fallbacks for unsupported browser features
+   ========================================================================== */
+
+/**
+ * Fallback for lack of box-shadow support.
+ */
+
 .a--img:focus {
     outline: thin dotted $color-link-focus;
 }
 
-/* PNG fallback for lack of SVG support */
+/**
+ * PNG fallback for lack of SVG support.
+ */
+
 .social-channels a.facebook {
     background-image: url("../img/facebook.png");
 }

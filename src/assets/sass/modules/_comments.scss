@@ -1,6 +1,14 @@
 /* Comments
    ========================================================================== */
 
+/**
+ * Styling for user comments.
+ *
+ * Example HTML:
+ *
+ * <article class="comments">
+ */
+
 .comments {
     @include border-radius;
 
@@ -21,9 +29,21 @@
     }
 }
 
+/**
+ * Additional styling for article author's comments.
+ *
+ * Example HTML:
+ *
+ * <article class="comments comments-author">
+ */
+
 .comments-author {
     background: darken($color-background-box, 3%);
 }
+
+/**
+ * Styling for user comments preview.
+ */
 
 #cpreview {
     @include border-radius;
@@ -33,9 +53,17 @@
     background: #fff3d6;
 }
 
+/**
+ * Highlight background colour for comment errors.
+ */
+
 .comments_error {
     background: #fff4f4 !important;
 }
+
+/**
+ * Highlight text colour for comment errors.
+ */
 
 .error_message li {
     color: $color-error-text;
