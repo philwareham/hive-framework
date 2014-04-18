@@ -198,11 +198,11 @@ select[size="1"] {
     height: 2.3571428em; // 33px / 14px
 }
 
+@media (-webkit-min-device-pixel-ratio: 0) {
+
 /**
  * Address `select` alignment in Safari, Chrome.
  */
-
-@media (-webkit-min-device-pixel-ratio: 0) {
 
     select[size],
     select[multiple],
