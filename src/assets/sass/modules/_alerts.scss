@@ -41,6 +41,19 @@
     background: $color-info-background;
 }
 
+/**
+ * Highlight background.
+ *
+ * Example HTML:
+ *
+ * <table>
+ *     <tr>
+ *         <td class="highlight></td>
+ *         <td></td>
+ *     </tr>
+ * </table>
+ */
+
 .highlight {
     background: $color-highlight-box;
 }
