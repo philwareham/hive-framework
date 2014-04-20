@@ -61,7 +61,9 @@ Where the @[task]@ is either @test@, @build@ or @watch@. Watch will launch a tas
 
 h2. Textpattern templates
 
-Optional Textpattern CMS theme 'forms' and 'pages' templates are included, for reference. *Currently under development.*
+*Currently under development.*
+
+Optional "Textpattern CMS":http://textpattern.com theme 'forms' and 'pages' templates are included, for reference. They can be found in the @public/templates@ directory, and follow the structure expected by the "rah_flat":https://github.com/gocom/rah_flat Textpattern plugin.
 
 h2. License
 
