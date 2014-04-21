@@ -1,5 +1,27 @@
-/* Sortable - http://jqueryui.com/sortable/
+/* Sortable
  ========================================================================== */
+
+/**
+ * jQuery UI Sortable.
+ *
+ * Some classes and HTML elements generally added via JavaScript, more info -
+ * http://jqueryui.com/sortable/
+ *
+ * Example HTML:
+ *
+ * <ul class="ui-sortable">
+ *     <li>
+ *         Item 1
+ *     </li>
+ *     <li class="ui-sortable-helper">
+ *         Item 2 (this item is currently being actively sorted)
+ *     </li>
+ *     <li class="ui-sortable-placeholder"></li>
+ *     <li>
+ *         Item 3
+ *     </li>
+ * </ul>
+ */
 
 .ui-sortable-helper {
     @include box-shadow(0 0 0.5em rgba(0, 0, 0, 0.2));

@@ -1,7 +1,15 @@
 /* Icons
    ========================================================================== */
 
-/* states and images */
+/**
+ * jQuery UI icon sprites, various colourschemes depending of usage state.
+ *
+ * Example HTML:
+ *
+ * <span class="ui-icon ui-icon-carat-1-n"></span>
+ * <span class="ui-icon ui-icon-folder-collapsed"></span>
+ * <span class="ui-icon ui-icon-play"></span>
+ */
 
 .ui-icon {
     display: inline-block;
@@ -27,14 +35,47 @@
     background-image: url("../img/ui-icon-sprite-333333.svg");
 }
 
+/**
+ * 'Succes' state icons.
+ *
+ * Example HTML:
+ *
+ * <p class="success">
+ *     <span class="ui-icon ui-icon-check"></span>
+ *     Success!
+ * </p>
+ */
+
 .success .ui-icon {
     background-image: url("../img/ui-icon-sprite-success.svg");
 }
+
+/**
+ * 'Warning' state icons.
+ *
+ * Example HTML:
+ *
+ * <p class="warning">
+ *     <span class="ui-icon ui-icon-alert"></span>
+ *     Warning!
+ * </p>
+ */
 
 .ui-state-highlight .ui-icon,
 .warning .ui-icon {
     background-image: url("../img/ui-icon-sprite-warning.svg");
 }
+
+/**
+ * 'Error' state icons.
+ *
+ * Example HTML:
+ *
+ * <p class="error">
+ *     <span class="ui-icon ui-icon-closethick"></span>
+ *     Error!
+ * </p>
+ */
 
 .ui-state-error .ui-icon,
 .ui-state-error-text .ui-icon,
@@ -42,11 +83,24 @@
     background-image: url("../img/ui-icon-sprite-error.svg");
 }
 
+/**
+ * 'Information' state icons.
+ *
+ * Example HTML:
+ *
+ * <p class="information">
+ *     <span class="ui-icon ui-icon-info"></span>
+ *     Content
+ * </p>
+ */
+
 .information .ui-icon {
     background-image: url("../img/ui-icon-sprite-info.svg");
 }
 
-/* positioning */
+/**
+ * Icon sprite positionings.
+ */
 
 .ui-icon-blank { background-position: 16px 16px; }
 
