@@ -1,5 +1,20 @@
-/* Resizable - http://jqueryui.com/resizable/
+/* Resizable
    ========================================================================== */
+
+/**
+ * jQuery UI Selectable.
+ *
+ * Some classes and HTML elements generally added via JavaScript, more info -
+ * http://jqueryui.com/resizable/
+ *
+ * Example HTML:
+ *
+ * <div class="ui-resizable">
+ *     <strong>Resize me!</strong>
+ *     <div class="ui-resizable-handle ui-resizable-e"></div>
+ *     <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se"></div>
+ * </div>
+ */
 
 .ui-resizable {
     position: relative;
@@ -13,10 +28,18 @@
     font-size: 0.1px;
 }
 
+/**
+ * Disabled or auto-hidden resizables.
+ */
+
 .ui-resizable-disabled .ui-resizable-handle,
 .ui-resizable-autohide .ui-resizable-handle {
     display: none;
 }
+
+/**
+ * Resize handle positioning options.
+ */
 
 .ui-resizable-n {
     top: -5px;
