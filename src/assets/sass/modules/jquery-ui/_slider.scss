@@ -1,5 +1,20 @@
-/* Slider - http://jqueryui.com/slider/
+/* Slider
    ========================================================================== */
+
+/**
+ * jQuery UI Slider.
+ *
+ * Some classes and HTML elements generally added via JavaScript, more info -
+ * http://jqueryui.com/slider/
+ *
+ * Example HTML:
+ *
+ * <div class="ui-slider ui-slider-horizontal">
+ *     <div class="ui-slider-range" style="left: 17%; width: 50%;"></div>
+ *     <a class="ui-slider-handle" style="left: 17%;"></a>
+ *     <a class="ui-slider-handle" style="left: 67%;"></a>
+ * </div>
+ */
 
 .ui-slider {
     position: relative;
@@ -29,6 +44,14 @@
     }
 }
 
+/**
+ * Slider - horizontal format.
+ *
+ * Example HTML:
+ *
+ * <div class="ui-slider ui-slider-horizontal">
+ */
+
 .ui-slider-horizontal {
     margin-bottom: 1em;
     height: 12px;
@@ -51,6 +74,14 @@
         right: 0;
     }
 }
+
+/**
+ * Slider - vertical format.
+ *
+ * Example HTML:
+ *
+ * <div class="ui-slider ui-slider-vertical">
+ */
 
 .ui-slider-vertical {
     width: 12px;

@@ -1,5 +1,63 @@
-/* Menu - http://jqueryui.com/menu/
+/* Menu
    ========================================================================== */
+
+/**
+ * jQuery UI Menu.
+ *
+ * Menus are vertical format only. Horizontal format menus are not provided by
+ * jQuery UI.
+ *
+ * Some classes and HTML elements generally added via JavaScript, more info -
+ * http://jqueryui.com/menu/
+ *
+ * Example HTML:
+ *
+ * <ul class="ui-menu">
+ *     <li class="ui-state-disabled ui-menu-item">
+ *         <a>Item 1 (disabled)</a>
+ *     </li>
+ *     <li class="ui-menu-item">
+ *         <a>Item 2</a>
+ *     </li>
+ *     <li class="ui-menu-item">
+ *         <a>
+ *             <span class="ui-menu-icon ui-icon ui-icon-carat-1-e"></span>
+ *             Item 3
+ *         </a>
+ *         <ul class="ui-menu">
+ *             <li class="ui-menu-item">
+ *                 <a>Item 3 subitem 1</a>
+ *             </li>
+ *             <li class="ui-menu-item">
+ *                 <a>Item 3 subitem 2</a>
+ *             </li>
+ *         </ul>
+ *     </li>
+ *     <li class="ui-menu-item">
+ *         <a>
+ *             <span class="ui-menu-icon ui-icon ui-icon-carat-1-e"></span>
+ *             Item 4
+ *         </a>
+ *         <ul class="ui-menu">
+ *             <li class="ui-menu-item">
+ *                 <span class="ui-menu-icon ui-icon ui-icon-carat-1-e"></span>
+ *                 <a>Item 4 subitem 1</a>
+ *                 <ul class="ui-menu">
+ *                     <li class="ui-menu-item">
+ *                         <a>Item 4 subitem 1 subsubitem 1</a>
+ *                     </li>
+ *                     <li class="ui-menu-item">
+ *                         <a>Item 4 subitem 1 subsubitem 2</a>
+ *                     </li>
+ *                 </ul>
+ *             </li>
+ *             <li class="ui-menu-item">
+ *                 <a>Item 3 subitem 2</a>
+ *             </li>
+ *         </ul>
+ *     </li>
+ * </ul>
+ */
 
 .ui-menu {
     @include box-shadow(0 0 0.5em rgba(0, 0, 0, 0.2));
@@ -53,7 +111,10 @@
     }
 }
 
-/* icon support */
+/**
+ * Allow additional icons in menu items.
+ */
+
 .ui-menu-icons {
     position: relative;
 

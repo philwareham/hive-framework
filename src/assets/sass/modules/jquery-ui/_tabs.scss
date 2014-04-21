@@ -1,8 +1,44 @@
-/* Tabs - http://jqueryui.com/tabs/
+/* Tabs
    ========================================================================== */
 
+/**
+ * jQuery UI Tabs.
+ *
+ * Some classes and HTML elements generally added via JavaScript, more info -
+ * http://jqueryui.com/tabs/
+ *
+ * 1. `position: relative` prevents IE scroll bug (elements with
+ *    `position: relative` inside a parent container with `overflow: auto`
+ *    appear as "fixed")
+ *
+ * Example HTML:
+ *
+ * <div class="ui-tabs>
+ *     <ul class="ui-tabs-nav">
+ *         <li class="ui-tabs-active">
+ *             <a class="ui-tabs-anchor">Tab 1</a>
+ *         </li>
+ *         <li>
+ *             <a class="ui-tabs-anchor">Tab 2</a>
+ *         </li>
+ *         <li>
+ *             <a class="ui-tabs-anchor">Tab 3</a>
+ *         </li>
+ *     </ul>
+ *     <div class="ui-tabs-panel" aria-expanded="true">
+ *         Tab 1 content
+ *     </div>
+ *     <div class="ui-tabs-panel aria-expanded="false" aria-hidden="true">
+ *         Tab 2 content
+ *     </div>
+ *     <div class="ui-tabs-panel aria-expanded="false" aria-hidden="true">
+ *         Tab 3 content
+ *     </div>
+ * </div>
+ */
+
 .ui-tabs {
-    position: relative; /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+    position: relative; /* 1 */
     border: 0;
 
     .ui-tabs-nav {
@@ -71,6 +107,10 @@
         }
     }
 }
+
+/**
+ * Maintain cursor style when collapsing a collapsible tab.
+ */
 
 .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
     cursor: pointer;

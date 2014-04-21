@@ -1,5 +1,37 @@
-/* Dialog - http://jqueryui.com/dialog/
+/* Dialog
    ========================================================================== */
+
+/**
+ * jQuery UI Dialog.
+ *
+ * Some classes and HTML elements generally added via JavaScript, more info -
+ * http://jqueryui.com/dialog/
+ *
+ * Example HTML:
+ *
+ * <div class="ui-dialog ui-front ui-dialog-buttons ui-draggable">
+ *     <div class="ui-dialog-titlebar">
+ *         <span class="ui-dialog-title">Modal dialog example</span>
+ *         <button class="ui-button ui-button-icon-only ui-dialog-titlebar-close">
+ *             <span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span>
+ *             <span class="ui-button-text">close</span>
+ *         </button>
+ *     </div>
+ *     <div class="ui-dialog-content">
+ *         Content
+ *     </div>
+ *     <div class="ui-dialog-buttonpane">
+ *         <div class="ui-dialog-buttonset">
+ *             <button class="ui-button ui-button-text-only">
+ *                 <span class="ui-button-text">Cancel</span>
+ *             </button>
+ *             <button class="ui-button ui-button-text-only">
+ *                 <span class="ui-button-text">Ok</span>
+ *             </button>
+ *         </div>
+ *     </div>
+ * </div>
+ */
 
 .ui-dialog {
     @include box-shadow(0 0 0.5em rgba(0, 0, 0, 0.2));
@@ -69,6 +101,10 @@
         background-position: 16px 16px;
     }
 }
+
+/**
+ * Chnage cursor when window is being dragged.
+ */
 
 .ui-draggable .ui-dialog-titlebar {
     cursor: move;
