@@ -4,7 +4,7 @@
     "directory": "bower_components",
     "dependencies": {
         "google-code-prettify": "1.0.1",
-        "html5shiv": "3.7.0",
+        "html5shiv": "3.7.1",
         "iscroll": "5.1.1",
         "jquery-autosize": "1.18.4",
         "jquery.cookie": "1.4.0",
