@@ -1,5 +1,82 @@
-/* Datepicker - http://jqueryui.com/datepicker/
+/* Datepicker
    ========================================================================== */
+
+/**
+ * jQuery UI Datepicker.
+ *
+ * Some classes and HTML elements generally added via JavaScript, more info -
+ * http://jqueryui.com/datepicker/
+ *
+ * Example HTML:
+ *
+ * <div class="ui-datepicker">
+ *     <div class="ui-datepicker-header">
+ *         <a class="ui-datepicker-prev">
+ *             <span>Prev</span>
+ *         </a>
+ *         <a class="ui-datepicker-next">
+ *             <span>Next</span>
+ *         </a>
+ *         <div class="ui-datepicker-title">
+ *             <span class="ui-datepicker-month">April</span>
+ *             <span class="ui-datepicker-year">2014</span>
+ *         </div>
+ *     </div>
+ *     <table class="ui-datepicker-calendar">
+ *         <thead>
+ *             <tr>
+ *                 <th class="ui-datepicker-week-end">
+ *                     <span>Su</span>
+ *                 </th>
+ *                 <th>
+ *                     <span>Mo</span>
+ *                 </th>
+ *                 <th>
+ *                     <span>Tu</span>
+ *                 </th>
+ *                 <th>
+ *                     <span>We</span>
+ *                 </th>
+ *                 <th>
+ *                     <span>Th</span>
+ *                 </th>
+ *                 <th>
+ *                     <span>Fr</span>
+ *                 </th>
+ *                 <th class="ui-datepicker-week-end">
+ *                     <span>Sa</span>
+ *                 </th>
+ *             </tr>
+ *         </thead>
+ *         <tbody>
+ *             <tr>
+ *                 <td class="ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable">
+ *                     &nbsp;
+ *                 </td>
+ *                 <td class="ui-datepicker-other-month ui-datepicker-unselectable">
+ *                     &nbsp;
+ *                 </td>
+ *                 <td>
+ *                     <a>1</a>
+ *                 </td>
+ *                 <td>
+ *                     <a>2</a>
+ *                 </td>
+ *                 <td>
+ *                     <a>3</a>
+ *                 </td>
+ *                 <td class="ui-datepicker-days-cell-over ui-datepicker-current-day ui-datepicker-today">
+ *                     <a class="ui-state-highlight ui-state-active">4</a>
+ *                 </td>
+ *                 <td>
+ *                     <a>5</a>
+ *                 </td>
+ *             </tr>
+ *             ...etc...
+ *         </tbody>
+ *     </table>
+ * </div>
+ */
 
 .ui-datepicker {
     @include adjust-font-size-to(14px, 0.875);
@@ -123,7 +200,9 @@
     }
 }
 
-/* Multiple calendars */
+/**
+ * Multiple calendars.
+ */
 
 .ui-datepicker.ui-datepicker-multi {
     width: auto;
@@ -167,7 +246,9 @@
     font-size: 0;
 }
 
-/* Datepicker RTL support */
+/**
+ * Datepicker RTL support.
+ */
 
 html[dir="rtl"] {
     .ui-datepicker-prev {

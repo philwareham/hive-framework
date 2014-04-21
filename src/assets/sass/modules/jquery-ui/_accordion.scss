@@ -1,5 +1,31 @@
-/* Accordion - http://jqueryui.com/accordion/
+/* Accordion
    ========================================================================== */
+
+/**
+ * jQuery UI Accordion.
+ *
+ * Some classes and HTML elements generally added via JavaScript, more info -
+ * http://jqueryui.com/accordion/
+ *
+ * Example HTML:
+ *
+ * <div class="ui-accordion">
+ *     <h3 class="ui-accordion-header">
+ *         <span class="ui-accordion-header-icon"></span>
+ *         <a>Section 1 lever</a>
+ *     </h3>
+ *     <div class="ui-accordion-content">
+ *         Section 1 content
+ *     </div>
+ *     <h3 class="ui-accordion-header">
+ *         <span class="ui-accordion-header-icon"></span>
+ *         <a>Section 2 lever</a>
+ *     </h3>
+ *     <div class="ui-accordion-content">
+ *         Section 2 content
+ *     </div>
+ * </div>
+ */
 
 .ui-accordion {
     .ui-accordion-header {
@@ -28,7 +54,13 @@
         padding: 1px 1em;
         overflow: auto;
     }
+}
 
+/**
+ * Allow additional icons in accordion headers.
+ */
+
+.ui-accordion {
     .ui-accordion-icons,
     .ui-accordion-icons .ui-accordion-icons {
         padding-left: 2em;

@@ -1,5 +1,18 @@
-/* Draggable - http://jqueryui.com/draggable/
+/* Draggable
  ========================================================================== */
+
+/**
+ * jQuery UI Draggable.
+ *
+ * Some classes and HTML elements generally added via JavaScript, more info -
+ * http://jqueryui.com/draggable/
+ *
+ * Example HTML:
+ *
+ * <div class="ui-draggable">
+ *     Content
+ * </div>
+ */
 
 .ui-draggable {
     @include transition(box-shadow 0.1s linear);
@@ -8,6 +21,10 @@
 .ui-draggable-handle {
     @include touch-action;
 }
+
+/**
+ * Class added when element is actively being dragged.
+ */
 
 .ui-draggable-dragging {
     @include box-shadow(0 0 0.5em rgba(0, 0, 0, 0.2));
