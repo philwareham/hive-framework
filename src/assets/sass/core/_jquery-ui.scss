@@ -1,9 +1,17 @@
 /* Layout helpers
    ========================================================================== */
 
+/**
+ * Hide jQuery UI elements.
+ */
+
 .ui-helper-hidden {
     display: none;
 }
+
+/**
+ * Hide jQuery UI  text but still allow screen reader access.
+ */
 
 .ui-helper-hidden-accessible {
     position: absolute;
@@ -15,6 +23,10 @@
     overflow: hidden;
     clip: rect(0 0 0 0);
 }
+
+/**
+ * Normalise various rules to avoid style inheritance.
+ */
 
 .ui-helper-reset {
     @include adjust-leading-to(1);
@@ -28,12 +40,20 @@
     list-style: none;
 }
 
+/**
+ * Clearfix jQuery UI elements.
+ */
+
 .ui-helper-clearfix:after {
     content: "";
     display: table;
     clear: both;
     border-collapse: collapse;
 }
+
+/**
+ * Normalise absolute positioning of jQuery UI elements to avoid misplacement.
+ */
 
 .ui-helper-zfix {
     position: absolute;
@@ -44,6 +64,10 @@
     opacity: 0;
 }
 
+/**
+ * Make jQuery UI elements show above other elements.
+ */
+
 .ui-front {
     z-index: 100;
 }
@@ -52,14 +76,26 @@
 /* Component containers
    ========================================================================== */
 
+/**
+ * Normalise font size of nested jQuery UI widgets to avoid style inheritance.
+ */
+
 .ui-widget .ui-widget {
     font-size: 100%;
 }
+
+/**
+ * General style for jQuery widget content.
+ */
 
 .ui-widget-content {
     border: 1px solid $color-gradient-border;
     background-color: $color-background;
 }
+
+/**
+ * General style for jQuery widget headers.
+ */
 
 .ui-widget-header {
     @include gradient-linear($color-gradient-from, $color-gradient-to);
@@ -71,11 +107,19 @@
 /* Interaction states
    ========================================================================== */
 
+/**
+ * Default jQuery UI widget interaction state.
+ */
+
 .ui-state-default {
     color: $color-text;
     border: 1px solid $color-gradient-border;
     background-color: $color-gradient-from;
 }
+
+/**
+ * Override hover/focus states for anchors in certain situations.
+ */
 
 a.ui-state-default:hover,
 a.ui-state-default:focus {
@@ -83,19 +127,35 @@ a.ui-state-default:focus {
     text-decoration: none;
 }
 
+/**
+ * Hover/focus jQuery UI widget interaction states.
+ */
+
 .ui-state-hover,
 .ui-state-focus {
     border-color: darken($color-gradient-border, 13%);
     background-color: lighten($color-gradient-from, 4%);
 }
 
+/**
+ * Active jQuery UI widget interaction state.
+ */
+
 .ui-state-active {
     background-color: lighten($color-gradient-from, 8%);
 }
 
+/**
+ * Highlight colour for jQuery UI widgets currently in 'selecting' state.
+ */
+
 .ui-selecting {
     background-color: $color-selecting;
 }
+
+/**
+ * Highlight colour for jQuery UI widgets currently in 'selected' state.
+ */
 
 .ui-selected {
     background-color: $color-selected;
@@ -105,10 +165,18 @@ a.ui-state-default:focus {
 /* Interaction cues
    ========================================================================== */
 
+/**
+ * jQuery UI highlight cue colouring.
+ */
+
 .ui-state-highlight {
     border: 1px solid $color-warning-border;
     background-color: $color-warning-background;
 }
+
+/**
+ * jQuery UI error cue colouring.
+ */
 
 .ui-state-error {
     border: 1px solid $color-error-border;
@@ -116,14 +184,26 @@ a.ui-state-default:focus {
     background-color: $color-error-background;
 }
 
+/**
+ * Visually prioritised jQuery UI text.
+ */
+
 .ui-priority-primary {
     font-weight: bold;
 }
+
+/**
+ * Visually non-prioritised jQuery UI text.
+ */
 
 .ui-priority-secondary {
     font-weight: normal;
     opacity: 0.66;
 }
+
+/**
+ * Visually disabled jQuery UI text and anchors.
+ */
 
 .ui-state-disabled {
     background-image: none;
@@ -140,6 +220,14 @@ a.ui-state-default:focus {
 /* Overlays
    ========================================================================== */
 
+/**
+ * Dark, semi-transparent container overlays.
+ *
+ * Example HTML:
+ *
+ * <div class="ui-widget-overlay"></div>
+ */
+
 .ui-widget-overlay {
     position: absolute;
     top: 0;
@@ -153,6 +241,14 @@ a.ui-state-default:focus {
 
 /* Shadows
    ========================================================================== */
+
+/**
+ * Faux shadows via `background-color`.
+ *
+ * Example HTML:
+ *
+ * <div class="ui-widget-shadow"></div>
+ */
 
 .ui-widget-shadow {
     @include border-radius;
