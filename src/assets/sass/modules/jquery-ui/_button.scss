@@ -60,10 +60,18 @@
     }
 }
 
+/**
+ * Remove some styling from `a` links as buttons.
+ */
+
 a.ui-button {
     color: $color-text;
     text-decoration: none;
 }
+
+/**
+ * Focus styling for buttons.
+ */
 
 .ui-button.ui-state-focus {
     @include box-shadow($inset-highlighting, 0 0 7px $color-link-hover);
