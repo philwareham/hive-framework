@@ -4,6 +4,7 @@
 
     document.documentElement.className = 'js';
 
+    // Detect whether jQuery v2 features required, otherwise use jQuery v1 for higher compatibility.
     var jqueryVersion = '1.11.0';
 
     if (typeof JSON !== 'undefined' && 'querySelector' in document && 'addEventListener' in window) {
@@ -29,6 +30,7 @@
         }
     });
 
+    // Detect whether browser supports SVG format.
     define('feature', function ()
     {
         return {
@@ -39,6 +41,7 @@
         };
     });
 
+    // Detect whether user enabled 'Do No Track' in their browser, and honour it.
     define('track', function ()
     {
         return {
@@ -48,13 +51,39 @@
 
     require(['jquery'], function ($)
     {
-        var details = $('details'),
+        // Load objects as variables.
+        var code = $('pre code'),
+            details = $('details'),
+            fields = $('form textarea'),
             placeholder = $('textarea[placeholder], input[placeholder]'),
-            code = $('pre code'),
-            stellar = $('.parallax'),
-            fields = $('form textarea');
+            player = $('.videoplayer'),
+            slider = $('.rslides'),
+            stellar = $('.parallax');
 
-        // Details polyfill.
+        /**
+         * Syntax highlighting, via 'Google Code Prettify'.
+         *
+         * Automatically applies syntax highlighting to `pre code` HTML elements.
+         * More info - https://github.com/tcollard/google-code-prettify.
+         */
+
+        if (code.length)
+        {
+            code.parent().addClass('prettyprint');
+
+            require(['prettify'], function ()
+            {
+                prettyPrint();
+            });
+        }
+
+        /**
+         * Details polyfill, via 'jQuery Details'.
+         *
+         * Adds `details` and `summary` HTML elements for unsupported browsers.
+         * More info - https://github.com/mathiasbynens/jquery-details.
+         * Browser support info - http://caniuse.com/#feat=details.
+         */
 
         if (details.length)
         {
@@ -65,7 +94,27 @@
             });
         }
 
-        // Placeholder polyfill.
+        /**
+         * Auto-growing textareas, via 'Autosize'.
+         *
+         * Allows dynamic resizing of textarea height, so that it grows as based on
+         * visitor input. More info - https://github.com/jackmoore/autosize.
+         */
+
+        if (fields.length) {
+            require(['autosize'], function ()
+            {
+                fields.autosize();
+            });
+        }
+
+        /**
+         * Placeholder polyfill, via 'jQuery Placeholder'.
+         *
+         * Adds `placeholder` attribute to `input` and `textarea` for unsupported browsers.
+         * More info - https://github.com/mathiasbynens/jquery-placeholder.
+         * Browser support info - http://caniuse.com/#feat=placeholder.
+         */
 
         if (placeholder.length)
         {
@@ -75,15 +124,43 @@
             });
         }
 
-        // Syntax highlighting.
+        // Flowplayer.
 
-        if (code.length)
+        if (player.length)
         {
-            code.parent().addClass('prettyprint');
-
-            require(['prettify'], function ()
+            require(['flowplayer'], function ()
             {
-                prettyPrint();
+                player.flowplayer({
+                    splash: true,
+                    ratio: 0.417
+                });
+            });
+        }
+
+        // ResponsiveSlides.
+
+        if (slider.length)
+        {
+            require(['responsiveslides'], function ()
+            {
+                slider.responsiveSlides({
+                    auto: true,             // Boolean: Animate automatically, true or false
+                    speed: 1200,            // Integer: Speed of the transition, in milliseconds
+                    timeout: 4800,          // Integer: Time between slide transitions, in milliseconds
+                    pager: true,            // Boolean: Show pager, true or false
+                    nav: true,              // Boolean: Show navigation, true or false
+                    random: false,          // Boolean: Randomize the order of the slides, true or false
+                    pause: false,           // Boolean: Pause on hover, true or false
+                    pauseControls: false,   // Boolean: Pause when hovering controls, true or false
+                    prevText: '&#8592;',    // String: Text for the "previous" button
+                    nextText: '&#8594;',    // String: Text for the "next" button
+                    maxwidth: '',           // Integer: Max-width of the slideshow, in pixels
+                    navContainer: '',       // Selector: Where auto generated controls should be appended to, default is after the <ul>
+                    manualControls: '',     // Selector: Declare custom pager navigation
+                    namespace: 'rslides',   // String: change the default namespace used
+                    before: function () {}, // Function: Before callback
+                    after: function () {}   // Function: After callback
+                });
             });
         }
 
@@ -96,15 +173,6 @@
                 $.stellar({
                     horizontalScrolling: false
                 });
-            });
-        }
-
-        // Auto-growing textareas.
-
-        if (fields.length) {
-            require(['autosize'], function ()
-            {
-                fields.autosize();
             });
         }
     });
@@ -153,56 +221,6 @@
         }
     });
 
-    // ResponsiveSlides.
-
-    require(['jquery'], function ($)
-    {
-        var slider = $('.rslides');
-
-        if (slider.length)
-        {
-            require(['responsiveslides'], function ()
-            {
-                slider.responsiveSlides({
-                    auto: true,             // Boolean: Animate automatically, true or false
-                    speed: 1200,            // Integer: Speed of the transition, in milliseconds
-                    timeout: 4800,          // Integer: Time between slide transitions, in milliseconds
-                    pager: true,            // Boolean: Show pager, true or false
-                    nav: true,              // Boolean: Show navigation, true or false
-                    random: false,          // Boolean: Randomize the order of the slides, true or false
-                    pause: false,           // Boolean: Pause on hover, true or false
-                    pauseControls: false,   // Boolean: Pause when hovering controls, true or false
-                    prevText: '&#8592;',    // String: Text for the "previous" button
-                    nextText: '&#8594;',    // String: Text for the "next" button
-                    maxwidth: '',           // Integer: Max-width of the slideshow, in pixels
-                    navContainer: '',       // Selector: Where auto generated controls should be appended to, default is after the <ul>
-                    manualControls: '',     // Selector: Declare custom pager navigation
-                    namespace: 'rslides',   // String: change the default namespace used
-                    before: function () {}, // Function: Before callback
-                    after: function () {}   // Function: After callback
-                });
-            });
-        }
-    });
-
-    // Flowplayer.
-
-    require(['jquery'], function ($)
-    {
-        var player = $('.videoplayer');
-
-        if (player.length)
-        {
-            require(['flowplayer'], function ()
-            {
-                player.flowplayer({
-                    splash: true,
-                    ratio: 0.417
-                });
-            });
-        }
-    });
-
     // Google+ '+1' button.
 
     require(['jquery'], function ($)
@@ -226,8 +244,7 @@
     require(['track'], function(track)
     {
         if (track.allow) {
-            // Analytics.
-
+            // Google Analytics - remember to amend the user account ID number!
             window._gaq = window._gaq || [];
             window._gaq.push(['_setAccount', 'UA-xxxxxxxx-x']);
             window._gaq.push(['_setDomainName', 'none']);
