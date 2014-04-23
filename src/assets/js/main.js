@@ -5,6 +5,7 @@
     document.documentElement.className = 'js';
 
     // Detect whether jQuery v2 features required, otherwise use jQuery v1 for higher compatibility.
+
     var jqueryVersion = '1.11.0';
 
     if (typeof JSON !== 'undefined' && 'querySelector' in document && 'addEventListener' in window) {
@@ -31,6 +32,7 @@
     });
 
     // Detect whether browser supports SVG format.
+
     define('feature', function ()
     {
         return {
@@ -42,6 +44,7 @@
     });
 
     // Detect whether user enabled 'Do No Track' in their browser, and honour it.
+
     define('track', function ()
     {
         return {
@@ -52,6 +55,7 @@
     require(['jquery'], function ($)
     {
         // Load objects as variables.
+
         var code = $('pre code'),
             details = $('details'),
             fields = $('form textarea'),
@@ -124,7 +128,11 @@
             });
         }
 
-        // Flowplayer.
+        /**
+         * HTML5 videos (with Flash fallback), via 'Flowplayer'.
+         *
+         * More info - https://github.com/flowplayer/flowplayer.
+         */
 
         if (player.length)
         {
@@ -137,7 +145,11 @@
             });
         }
 
-        // ResponsiveSlides.
+        /**
+         * Responsive slider, via 'ResponsiveSlides'.
+         *
+         * More info - https://github.com/viljamis/ResponsiveSlides.js.
+         */
 
         if (slider.length)
         {
@@ -164,7 +176,11 @@
             });
         }
 
-        // Parallax backgrounds.
+        /**
+         * Parallax scrolling effects, via 'Stellar.js'.
+         *
+         * More info - https://github.com/markdalgleish/stellar.js.
+         */
 
         if (stellar.length)
         {
@@ -189,7 +205,11 @@
         }
     });
 
-    // Responsive navigation.
+    /**
+     * Responsive navigation menu, via 'Responsive Nav'.
+     *
+     * More info - https://github.com/viljamis/responsive-nav.js.
+     */
 
     require(['responsivenav'], function ()
     {
@@ -199,7 +219,11 @@
         });
     });
 
-    // EU-cookie disclaimer.
+    /**
+     * EU-cookie disclaimer, via 'jquery.cookie'.
+     *
+     * More info - https://github.com/carhartl/jquery-cookie.
+     */
 
     require(['jquery', 'cookie'], function ($)
     {
@@ -241,10 +265,11 @@
         }
     });
 
+    // Google Analytics - remember to amend the user account ID number!
+
     require(['track'], function(track)
     {
         if (track.allow) {
-            // Google Analytics - remember to amend the user account ID number!
             window._gaq = window._gaq || [];
             window._gaq.push(['_setAccount', 'UA-xxxxxxxx-x']);
             window._gaq.push(['_setDomainName', 'none']);
