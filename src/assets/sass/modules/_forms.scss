@@ -200,9 +200,9 @@ select[size="1"] {
 
 @media (-webkit-min-device-pixel-ratio: 0) {
 
-/**
- * Address `select` alignment in Safari, Chrome, Opera.
- */
+    /**
+     * Address `select` alignment in Safari, Chrome, Opera.
+     */
 
     select[size],
     select[multiple],
@@ -211,10 +211,10 @@ select[size="1"] {
         background-image: none;
     }
 
-/**
- * Use indicator icon to signify the downdown ability of `select` in Safari,
- * Chrome, Opera.
- */
+    /**
+     * Use indicator icon to signify the downdown ability of `select` in Safari,
+     * Chrome, Opera.
+     */
 
     select,
     select[size="0"],
