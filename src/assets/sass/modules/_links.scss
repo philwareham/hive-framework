@@ -3,19 +3,25 @@
 
 /**
  * 1. Remove default underline style from non-hover state links.
- * 2. Specify link colour.
- * 3. Remove the gray background color from active links in IE 10.
+ * 2. Interrupt the decoration line to let the shape of the text show through
+ *    in supported browsers.
+ * 3. Specify link colour.
+ * 4. Remove the gray background color from active links in IE 10.
  */
 
 a {
     text-decoration: none; /* 1 */
-    color: $color-link; /* 2 */
-    background: transparent; /* 3 */
+    text-decoration-skip: ink edges; /* 2 */
+    color: $color-link; /* 3 */
+    background: transparent; /* 4 */
 }
 
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  * Specify link state colours.
+ *
+ * 1. Expanded CSS level 3 `text-decoration` property in supported browsers,
+ *    older browsers will fallback to legacy `text-decoration` property.
  */
 
 a {
@@ -23,6 +29,7 @@ a {
     &:active {
         outline: 0;
         text-decoration: underline;
+        text-decoration: $color-link solid underline; /* 1 */
         color: $color-link-hover;
     }
 
