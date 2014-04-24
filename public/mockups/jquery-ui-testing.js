@@ -241,7 +241,7 @@ require(['jquery', 'jqueryui'], function ($)
     });
 
     // Selectmenu
-    $('#selectmenu1, #selectmenu-disabled1, #selectmenu-disabled2, #selectmenu-disabled3').selectmenu();
+    $('.jquery-ui-selectmenu').selectmenu();
 
     // Spinner
     $('#jquery-ui-spinner').spinner({
