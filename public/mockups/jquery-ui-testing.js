@@ -222,6 +222,9 @@ require(['main'], function ()
             event.preventDefault();
         });
 
+        // Selectmenu
+        $('.jquery-ui-selectmenu').selectmenu();
+
         // Slider - horizontal
         $('.jquery-ui-slider-horizontal').slider({
             range: true,
@@ -239,9 +242,6 @@ require(['main'], function ()
                 orientation: 'vertical'
             });
         });
-
-        // Selectmenu
-        $('.jquery-ui-selectmenu').selectmenu();
 
         // Spinner
         $('#jquery-ui-spinner').spinner({
