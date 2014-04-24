@@ -1,9 +1,15 @@
-/*! This example file is used to demonstrate all available jQuery UI components on the UI docs page */
+/*!
+ * This example file is used to demonstrate all available jQuery UI components
+ * on the design patterns page.
+ */
 
 require(['main'], function ()
 {
 require(['jquery', 'jqueryui'], function ($)
 {
+    /**
+     * Interactions.
+     */
 
     // Draggable
     $(".jquery-ui-draggable").draggable({
@@ -23,6 +29,10 @@ require(['jquery', 'jqueryui'], function ($)
         placeholder: "ui-sortable-placeholder",
         cursor: "ns-resize"
     }).disableSelection();
+
+    /**
+     * Widgets.
+     */
 
     // Accordion
     $(".jquery-ui-accordion").accordion({
@@ -229,6 +239,9 @@ require(['jquery', 'jqueryui'], function ($)
             orientation: "vertical"
         });
     });
+
+    // Selectmenu
+    $("#selectmenu1, #selectmenu-disabled1, #selectmenu-disabled2, #selectmenu-disabled3").selectmenu();
 
     // Spinner
     $("#jquery-ui-spinner").spinner({
