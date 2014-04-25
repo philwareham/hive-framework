@@ -131,6 +131,10 @@
  * PNG fallback for lack of SVG support.
  */
 
+hr {
+    background-image: url("../img/hr.png");
+}
+
 .social-channels a.facebook {
     background-image: url("../img/facebook.png");
 }

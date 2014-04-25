@@ -158,6 +158,6 @@ hr {
     @include box-sizing(content-box);
 
     border: 0; // remove the default `hr` border
-    border-bottom: 1px solid $color-border;
-    height: 0;
+    height: 24px;
+    background: url("../img/hr.svg") no-repeat 50% 50% / 240px 24px;
 }
