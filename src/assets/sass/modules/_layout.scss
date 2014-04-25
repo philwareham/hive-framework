@@ -52,11 +52,15 @@ html {
 }
 
 /**
+ * 1. Set `body` to `relative` to allow positioning of absolute elements.
  * 1. Remove default margin.
+ * 1. Make sure body fills entire viewport height.
  */
 
 body {
-    margin: 0; /* 1 */
+    position: relative; /* 1 */
+    margin: 0; /* 2 */
+    min-height: 100vh; /* 3 */
     background: $color-background-box;
 }
 
