@@ -16,6 +16,32 @@ html {
 }
 
 /**
+ * Stylised scrollbars on WebKit.
+ */
+
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    border-left: 1px solid $color-border;
+    background: $color-gradient-from;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 1px solid $color-border;
+    background: $color-border;
+
+    &:hover {
+        background: $color-selected;
+    }
+
+    &:active {
+        background: $color-selecting;
+    }
+}
+
+/**
  * 1. Remove default margin.
  */
 
