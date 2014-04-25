@@ -93,10 +93,6 @@ blockquote {
     font-style: italic;
     margin: 0.8em 0; // 16px / 20px
     text-align: center;
-
-    @include breakpoint($breakpoint-2) {
-        margin: 0.8em -5%;
-    }
 }
 
 /**
