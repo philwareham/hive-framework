@@ -42,6 +42,16 @@ html {
 }
 
 /**
+ * Styling for selections.
+ */
+
+::selection {
+    color: #ffffff;
+    background: $color-link-focus;
+    text-shadow: none !important
+}
+
+/**
  * 1. Remove default margin.
  */
 
