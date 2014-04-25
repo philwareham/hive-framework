@@ -44,7 +44,7 @@
         max-width: $container-max-width;
 
         @include breakpoint($breakpoint-2) {
-            width: 90%;
+            width: 88%;
         }
     }
 
@@ -80,7 +80,7 @@
 
     a {
         display: block;
-        padding: 0.5em 5%;
+        padding: 0.5em 6%;
         color: $color-text;
 
         &:hover,
@@ -130,7 +130,7 @@
 
     -webkit-touch-callout: none; /* 1 */
     float: right;
-    margin-right: 5%;
+    margin-right: 6%;
     border: 1px solid $color-border;
     width: 32px;
     height: 32px;
