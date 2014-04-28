@@ -32,7 +32,6 @@
 @import "modules/forms";
 @import "modules/buttons";
 @import "modules/cookie-disclaimer";
-@import "modules/old-browser";
 @import "modules/code_prettify";
 @import "modules/pagination";
 @import "modules/breadcrumbs";
@@ -40,6 +39,9 @@
 @import "modules/social";
 @import "modules/misc";
 @import "modules/comments";
+
+// Optional extras
+//@import "modules/flickr";
 
 }
 
