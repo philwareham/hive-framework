@@ -30,7 +30,7 @@ span.button {
     @include gradient-linear($color-gradient-from, $color-gradient-to);
     @include transition(box-shadow 0.1s linear);
 
-    -webkit-appearance: none; /* 1 */ 
+    -webkit-appearance: none; /* 1 */
     display: inline-block;
     border: solid 1px $color-gradient-border;
     padding: 0.3571428em 0.7142857em; // 5px / 14px, 10px / 14px
