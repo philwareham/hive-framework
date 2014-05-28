@@ -29,7 +29,7 @@ a {
     &:active {
         outline: 0;
         text-decoration: underline;
-        text-decoration: $color-link solid underline; /* 1 */
+        text-decoration: $color-link-hover solid underline; /* 1 */
         color: $color-link-hover;
     }
 
