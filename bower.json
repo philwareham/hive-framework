@@ -15,6 +15,6 @@
         "responsive-nav": "1.0.32",
         "ResponsiveSlides.js": "latest",
         "selectivizr": "1.0.2",
-        "requirejs": "2.1.11"
+        "requirejs": "2.1.13"
     }
 }
