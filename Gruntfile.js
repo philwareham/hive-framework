@@ -4,6 +4,7 @@ module.exports = function (grunt)
 
     // Load Grunt plugins.
     grunt.loadNpmTasks('grunt-contrib-compass');
+    grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -20,6 +21,21 @@ module.exports = function (grunt)
                     config: 'config.rb',
                     force: true
                 }
+            }
+        },
+
+        // Gzip compress the theme files.
+        compress: {
+            dist: {
+                options: {
+                    mode: 'gzip'
+                },
+                files: [
+                    {expand: true, src: ['public/assets/**/*.js'], ext: '.js.gz'},
+                    {expand: true, src: ['public/assets/**/*.min.js'], ext: '.min.js.gz'},
+                    {expand: true, src: ['public/assets/**/*.css'], ext: '.css.gz'},
+                    {expand: true, src: ['public/assets/**/*.svg'], ext: '.svg.gz'}
+                ]
             }
         },
 
@@ -141,7 +157,7 @@ module.exports = function (grunt)
     });
 
     // Register tasks.
-    grunt.registerTask('build', ['jshint', 'sass', 'copy:js', 'uglify']);
+    grunt.registerTask('build', ['jshint', 'sass', 'copy:js', 'uglify', 'compress']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('sass', ['compass', 'cssmin', 'copy:css']);
     grunt.registerTask('test', ['jshint']);
