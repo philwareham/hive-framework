@@ -24,7 +24,7 @@ module.exports = function (grunt)
             }
         },
 
-        // Gzip compress the theme files.
+        // Gzip compress JavaScript, CSS and SVG files.
         compress: {
             dist: {
                 options: {
