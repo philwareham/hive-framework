@@ -85,13 +85,17 @@
     @include grid-span(9, 4);
 }
 
+// Fixed width website for IE8.
+header,
+footer,
+.container,
+.nav-collapse ul {
+    width: $container-max-width;
+}
+
 .nav-collapse {
     .js & {
         max-height: none;
-    }
-
-    ul {
-        width: 88%;
     }
 
     li {
