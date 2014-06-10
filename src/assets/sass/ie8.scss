@@ -85,17 +85,28 @@
     @include grid-span(9, 4);
 }
 
-// Fixed width website for IE8.
+/**
+ * Don't allow site to collapse smaller than large breakpoint.
+ */
+
 header,
 footer,
 .container,
 .nav-collapse ul {
-    width: $container-max-width;
+    min-width: $breakpoint-3;
 }
+
+/**
+ * Desktop version of navigation menu.
+ */
 
 .nav-collapse {
     .js & {
         max-height: none;
+    }
+
+    ul {
+        width: 88%;
     }
 
     li {
