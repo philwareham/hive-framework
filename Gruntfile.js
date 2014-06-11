@@ -122,7 +122,6 @@ module.exports = function (grunt)
                         'public/assets/js/cookie.js': ['bower_components/jquery.cookie/jquery.cookie.js'],
                         'public/assets/js/details.js': ['bower_components/jquery-details/jquery.details.js'],
                         'public/assets/js/html5shiv.js': ['bower_components/html5shiv/dist/html5shiv.js'],
-                        'public/assets/js/iscroll.js': ['bower_components/iscroll/build/iscroll-lite.js'],
                         'public/assets/js/picturefill.js': ['bower_components/picturefill/dist/picturefill.min.js'],
                         'public/assets/js/placeholder.js': ['bower_components/jquery-placeholder/jquery.placeholder.js'],
                         'public/assets/js/prettify.js': ['bower_components/google-code-prettify/src/prettify.js'],
