@@ -220,6 +220,20 @@
     });
 
     /**
+     * `picture` tag and/or `img` tag with `srcset` and `sizes` attributes polyfill, via 'Picturefill'.
+     *
+     * More info - https://github.com/scottjehl/picturefill.
+     */
+
+    require(['jquery'], function ($)
+    {
+        if ($('img[srcset], img[sizes], picture').length)
+        {
+            require(['picturefill']);
+        }
+    });
+
+    /**
      * EU-cookie disclaimer, via 'jquery.cookie'.
      *
      * More info - https://github.com/carhartl/jquery-cookie.
