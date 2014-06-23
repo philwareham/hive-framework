@@ -71,8 +71,7 @@
          * More info - https://github.com/tcollard/google-code-prettify.
          */
 
-        if (code.length)
-        {
+        if (code.length) {
             code.parent().addClass('prettyprint');
 
             require(['prettify'], function ()
@@ -89,8 +88,7 @@
          * Browser support info - http://caniuse.com/#feat=details.
          */
 
-        if (details.length)
-        {
+        if (details.length) {
             require(['details'], function ()
             {
                 details.details();
@@ -120,8 +118,7 @@
          * Browser support info - http://caniuse.com/#feat=placeholder.
          */
 
-        if (placeholder.length)
-        {
+        if (placeholder.length) {
             require(['placeholder'], function ()
             {
                 placeholder.placeholder();
@@ -134,8 +131,7 @@
          * More info - https://github.com/flowplayer/flowplayer.
          */
 
-        if (player.length)
-        {
+        if (player.length) {
             require(['flowplayer'], function ()
             {
                 player.flowplayer({
@@ -151,8 +147,7 @@
          * More info - https://github.com/viljamis/ResponsiveSlides.js.
          */
 
-        if (slider.length)
-        {
+        if (slider.length) {
             require(['responsiveslides'], function ()
             {
                 slider.responsiveSlides({
@@ -182,8 +177,7 @@
          * More info - https://github.com/markdalgleish/stellar.js.
          */
 
-        if (stellar.length)
-        {
+        if (stellar.length) {
             require(['stellar'], function ()
             {
                 $.stellar({
@@ -227,8 +221,7 @@
 
     require(['jquery'], function ($)
     {
-        if ($('img[srcset], img[sizes], picture').length)
-        {
+        if ($('img[srcset], img[sizes], picture').length) {
             require(['picturefill']);
         }
     });
@@ -241,8 +234,7 @@
 
     require(['jquery', 'cookie'], function ($)
     {
-        if (!$.cookie('acceptedCookies'))
-        {
+        if (!$.cookie('acceptedCookies')) {
             var disclaimer = $('<aside id="cookie-disclaimer"><div class="container"><p><strong>This website uses cookies to enhance your experience.</strong> By continuing to use this website you agree to cookies being placed on your computer. If you wish to use this website but do not wish for cookies to be placed on your computer you can change the settings in your internet browser. <a href="#" data-action="close">Close</a>.</p></div></aside>');
             $('body').prepend(disclaimer);
             $.cookie('acceptedCookies', 1, {expires: 1461});
@@ -263,8 +255,7 @@
 
     require(['jquery'], function ($)
     {
-        if ($('.g-plusone').length)
-        {
+        if ($('.g-plusone').length) {
             require(['//apis.google.com/js/plusone.js']);
         }
     });
@@ -273,8 +264,7 @@
 
     require(['jquery'], function ($)
     {
-        if ($('.twitter-share-button').length)
-        {
+        if ($('.twitter-share-button').length) {
             require(['//platform.twitter.com/widgets.js']);
         }
     });
