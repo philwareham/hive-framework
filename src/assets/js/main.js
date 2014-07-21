@@ -275,7 +275,7 @@
     {
         if (track.allow) {
             window._gaq = window._gaq || [];
-            window._gaq.push(['_setAccount', 'UA-xxxxxxxx-x']);
+            window._gaq.push(['_setAccount', 'UA-xxxxxxxx-x', 'auto']);
             window._gaq.push(['_setDomainName', 'none']);
             window._gaq.push(['_gat._anonymizeIp']);
             window._gaq.push(['_setVisitorCookieTimeout', 0]);
