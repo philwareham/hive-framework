@@ -1,3 +1,5 @@
+# http://www.robotstxt.org
+
 User-agent: *
 Disallow: /docs/
 Disallow: /mockups/
