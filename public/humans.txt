@@ -3,17 +3,17 @@
 
 # TEAM
 
-  <your title>: <your name>
-  Site: 
-  Twitter: 
-  Location: 
+    <your title>: <your name>
+    Site: 
+    Twitter: 
+    Location: 
 
 # THANKS
 
-  Names (& URL): 
+    Names (& URL): 
 
 # TECHNOLOGY COLOPHON
 
-  Standards: HTML5, CSS3
-  Components: jQuery, Sass, Compass, <your components>
-  Software: <your software>
+    Standards: HTML5, CSS3
+    Components: jQuery, Sass, Compass, <your components>
+    Software: <your software>
