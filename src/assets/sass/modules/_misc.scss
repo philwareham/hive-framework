@@ -23,6 +23,18 @@ span.spinner {
 }
 
 /**
+ * Spin an element - TODO.
+ *
+ * Example HTML:
+ *
+ * <span class="spin">Spinning!</span>
+ */
+
+.spin {
+    @include animation(spin 2s infinite linear);
+}
+
+/**
  * Hide text but still allow screen reader access.
  *
  * Example HTML:
