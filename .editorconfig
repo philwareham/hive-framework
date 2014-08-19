@@ -9,9 +9,9 @@ indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[{*.md,*.textile}]
+[{*.md}]
 trim_trailing_whitespace = false
 
-[{bower.json,Gemfile.lock,package.json,.travis.yml}]
+[{.travis.yml,bower.json,Gemfile.lock,package.json}]
 indent_size = 2
 indent_style = space
