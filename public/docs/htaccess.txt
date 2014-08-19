@@ -437,7 +437,7 @@ AddDefaultCharset utf-8
 # | Secure Sockets Layer (SSL)                                                 |
 # ------------------------------------------------------------------------------
 
-+# Rewrite secure requests properly in order to prevent SSL certificate warnings.
+# Rewrite secure requests properly in order to prevent SSL certificate warnings.
 # E.g.: prevent `https://www.example.com` when your certificate only allows
 # `https://secure.example.com`.
 
