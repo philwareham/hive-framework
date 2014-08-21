@@ -4,10 +4,34 @@
 /**
  * jQuery UI Selectmenu.
  *
- * TODO: Amend stylesheet accordingly.
- *
  * Some classes and HTML elements generally added via JavaScript, more info -
  * http://jqueryui.com/selectmenu/
+ *
+ * Example HTML:
+ *
+ * <p>
+ *     <label>Select a speed</label><br>
+ *     <select class="jquery-ui-selectmenu" style="display:none;">
+ *         <option>Slower</option>
+ *         <option>Slow</option>
+ *         <option selected="selected">Medium</option>
+ *         <option>Fast</option>
+ *         <option>Faster</option>
+ *     </select>
+ *     <span class="ui-selectmenu-button ui-widget ui-state-default ui-corner-all" style="width:87px;">
+ *         <span class="ui-icon ui-icon-triangle-1-s"></span>
+ *         <span class="ui-selectmenu-text">Medium</span>
+ *     </span>
+ * </p>
+ * <div class="ui-selectmenu-menu ui-front ui-selectmenu-open">
+ *     <ul class="ui-menu ui-widget ui-widget-content ui-corner-bottom">
+ *         <li class="ui-menu-item ui-state-focus">Slower</li>
+ *         <li class="ui-menu-item">Slow</li>
+ *         <li class="ui-menu-item">Medium</li>
+ *         <li class="ui-menu-item">Fast</li>
+ *         <li class="ui-menu-item">Faster</li>
+ *     </ul>
+ * </div>
  */
 
 .ui-selectmenu-menu {
@@ -17,20 +41,20 @@
     margin: 0;
     padding: 0;
     display: none;
-}
 
-.ui-selectmenu-menu .ui-menu {
-    overflow: auto;
-}
+    .ui-menu {
+        overflow: auto;
 
-.ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup {
-    margin: 0.5em 0 0 0;
-    padding: 2px 0.4em;
-    border: 0;
-    height: auto;
-    font-size: 1em;
-    font-weight: bold;
-    line-height: 1.5;
+        .ui-selectmenu-optgroup {
+            margin: 0.5em 0 0 0;
+            padding: 2px 0.4em;
+            border: 0;
+            height: auto;
+            font-size: 1em;
+            font-weight: bold;
+            line-height: 1.5;
+        }
+    }
 }
 
 .ui-selectmenu-open {
@@ -43,22 +67,22 @@
     overflow: hidden;
     text-decoration: none;
     cursor: pointer;
-}
 
-.ui-selectmenu-button span.ui-icon {
-    position: absolute;
-    top: 50%;
-    right: 0.5em;
-    left: auto;
-    margin-top: -8px;
-}
+    span.ui-icon {
+        position: absolute;
+        top: 50%;
+        right: 0.5em;
+        left: auto;
+        margin-top: -8px;
+    }
 
-.ui-selectmenu-button span.ui-selectmenu-text {
-    display: block;
-    text-align: left;
-    padding: 0.4em 2.1em 0.4em 1em;
-    line-height: 1.4;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    span.ui-selectmenu-text {
+        display: block;
+        padding: 0.4em 2.1em 0.4em 1em;
+        line-height: 1.4;
+        text-align: left;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
 }
