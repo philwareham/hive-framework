@@ -54,6 +54,7 @@ span.button {
 
         border-color: darken($color-gradient-border, 13%);
         color: darken($color-text, 10%);
+        text-decoration: none;
     }
 
     &:focus {
