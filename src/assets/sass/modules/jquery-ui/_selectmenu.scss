@@ -67,24 +67,27 @@
 }
 
 .ui-selectmenu-button {
+    font-size: 100%; /* 1 */
+    @include adjust-font-size-to(14px, 0.875);
+
     position: relative;
     display: inline-block;
     overflow: hidden;
+    font-family: $font-sans-serif;
     text-decoration: none;
     cursor: pointer;
 
     span.ui-icon {
         position: absolute;
         top: 50%;
-        right: 0.5em;
+        right: 0.25em;
         left: auto;
         margin-top: -8px;
     }
 
     span.ui-selectmenu-text {
         display: block;
-        padding: 0.4em 2.1em 0.4em 1em;
-        line-height: 1.4;
+        padding: 0.3571428em 2.1em 0.3571428em 0.3571428em; // 5px / 14px
         text-align: left;
         text-overflow: ellipsis;
         white-space: nowrap;
