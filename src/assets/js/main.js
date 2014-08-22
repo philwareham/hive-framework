@@ -256,7 +256,7 @@
     require(['jquery'], function ($)
     {
         if ($('.g-plusone').length) {
-            require(['//apis.google.com/js/plusone.js']);
+            require(['https://apis.google.com/js/plusone.js']);
         }
     });
 
@@ -265,7 +265,7 @@
     require(['jquery'], function ($)
     {
         if ($('.twitter-share-button').length) {
-            require(['//platform.twitter.com/widgets.js']);
+            require(['https://platform.twitter.com/widgets.js']);
         }
     });
 
@@ -282,7 +282,7 @@
             window._gaq.push(['_setSessionCookieTimeout', 0]);
             window._gaq.push(['_setCampaignCookieTimeout', 0]);
             window._gaq.push(['_trackPageview']);
-            require(['//www.google-analytics.com/ga.js']);
+            require(['https://www.google-analytics.com/ga.js']);
         }
     });
 
