@@ -16,6 +16,7 @@
     @include border-radius;
     @include box-shadow;
 
+    position: relative;
     margin: 0 0 1em 0;
     border: solid 1px $color-border;
     padding: 0.375em;
