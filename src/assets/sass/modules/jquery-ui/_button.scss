@@ -263,12 +263,12 @@ button.ui-button-icons-only {
  * Example HTML:
  *
  * <input class="ui-helper-hidden-accessible" id="check" type="checkbox">
- * <label for="check" class="ui-button ui-button-text-only" aria-pressed="true">
+ * <label for="check" class="ui-button ui-button-text-only ui-state-active">
  *     <span class="ui-button-text">Toggle</span>
  * </label>
  */
 
-label[aria-pressed="true"] {
+label.ui-state-active {
     &.ui-button {
         @include gradient-linear($color-selected, $color-selecting);
 
