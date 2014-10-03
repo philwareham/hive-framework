@@ -68,7 +68,7 @@
 
     span.ui-selectmenu-text {
         display: block;
-        padding: 0.3571428em 2.1em 0.3571428em 0.3571428em; // 5px / 14px
+        padding: 0.35714285714286em 2.1em 0.35714285714286em 0.35714285714286em; // 5px / 14px
         text-align: left;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -88,9 +88,9 @@
         overflow: auto;
 
         .ui-selectmenu-optgroup {
-            margin: 0.3571428em 0 0 0;
+            margin: 0.35714285714286em 0 0 0;
             border-top: 1px solid $color-border;
-            padding: 3px 0.3571428em;
+            padding: 3px 0.35714285714286em;
             height: auto;
             font-size: 1em;
             font-weight: bold;
