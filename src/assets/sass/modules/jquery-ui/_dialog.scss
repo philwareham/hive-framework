@@ -40,17 +40,17 @@
     top: 0;
     left: 0;
     z-index: 1002;
-    padding: 0.2em;
+    padding: 0.25em;
     overflow: hidden;
 
     .ui-dialog-titlebar {
         position: relative;
-        padding: 0.4em 1em;
+        padding: 0.5em 1em;
     }
 
     .ui-dialog-title {
         float: left;
-        margin: 0.1em 0;
+        margin: 0.125em 0; // 2px / 16px
         width: 90%;
         overflow: hidden;
         white-space: nowrap;
@@ -60,7 +60,7 @@
     .ui-dialog-titlebar-close {
         position: absolute;
         top: 50%;
-        right: 0.3em;
+        right: 0.25em;
         margin: -10px 0 0 0;
         border: 0;
         width: 20px;
@@ -89,7 +89,7 @@
     }
 
     .ui-dialog-buttonpane button {
-        margin: 0.5em 0.4em 0.5em 0;
+        margin: 0.5em 0.25em 0.5em 0;
         cursor: pointer;
     }
 
