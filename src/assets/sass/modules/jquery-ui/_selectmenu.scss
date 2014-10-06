@@ -40,7 +40,7 @@
     @include transition(box-shadow 0.1s linear);
 
     font-size: 100%; /* 1 */
-    @include adjust-font-size-to(14px, 0.875);
+    @include adjust-font-size-to(16px, 0.91666666666667); // 22px line height.
 
     position: relative;
     display: inline-block;
@@ -68,7 +68,7 @@
 
     span.ui-selectmenu-text {
         display: block;
-        padding: 0.35714285714286em 1.75em 0.35714285714286em 0.35714285714286em; // 5px / 14px
+        padding: 0.5em 1.5em 0.5em 0.5em; // 8px / 16px + 24px / 16px
         text-align: left;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -88,9 +88,9 @@
         overflow: auto;
 
         .ui-selectmenu-optgroup {
-            margin: 0.35714285714286em 0 0 0;
+            margin: 0.5em 0 0 0;
             border-top: 1px solid $color-border;
-            padding: 3px 0.35714285714286em;
+            padding: 0.25em 0.5em;
             height: auto;
             font-size: 1em;
             font-weight: bold;

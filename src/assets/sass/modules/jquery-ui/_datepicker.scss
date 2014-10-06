@@ -79,17 +79,17 @@
  */
 
 .ui-datepicker {
-    @include adjust-font-size-to(14px, 0.875);
+    @include adjust-font-size-to(16px, 0.91666666666667); // 22px line height.
     @include box-shadow(0 0 0.5em rgba(0, 0, 0, 0.2));
 
     display: none;
-    padding: 0.2em 0.2em 0;
-    width: 17em;
+    padding: 0.25em 0.25em 0;
+    width: 14.5em;
     font-family: $font-sans-serif;
 
     .ui-datepicker-header {
         position: relative;
-        padding: 0.2em 0;
+        padding: 0.25em 0;
     }
 
     .ui-datepicker-prev,
@@ -97,18 +97,18 @@
         @include border-radius;
 
         position: absolute;
-        top: 0.2em;
-        width: 1.8em;
-        height: 1.8em;
+        top: 0.25em;
+        width: 1.5em;
+        height: 1.5em;
         background-color: transparent;
     }
 
     .ui-datepicker-prev {
-        left: 0.2em;
+        left: 0.25em;
     }
 
     .ui-datepicker-next {
-        right: 0.2em;
+        right: 0.25em;
     }
 
     .ui-datepicker-prev span,
@@ -122,8 +122,8 @@
     }
 
     .ui-datepicker-title {
-        margin: 0 2.2em;
-        line-height: 1.8em;
+        margin: 0 2em;
+        line-height: 1.5em; // 24px / 16px
         text-align: center;
 
         select {
@@ -137,14 +137,18 @@
     }
 
     table {
-        margin: 0 0 0.2em;
+        margin: 0 0 0.25em;
         width: 100%;
     }
 
     th {
         border: 0;
-        padding: 0.5em 0.2em;
+        padding: 0.25em;
         text-align: center;
+
+        :first-child & {
+            padding-top: 0.25em;
+        }
     }
 
     td {
@@ -154,7 +158,7 @@
         a,
         span {
             display: block;
-            padding: 0.2em;
+            padding: 0.25em;
             text-align: center;
         }
 
@@ -172,23 +176,23 @@
         }
 
         &.ui-datepicker-week-col {
-            padding: 0.32em 0;
+            padding: 0.25em 0;
             text-align: center;
         }
     }
 
     .ui-datepicker-buttonpane {
-        margin: 0.7em 0 0 0;
+        margin: 0.75em 0 0 0;
         border-left: 0;
         border-right: 0;
         border-bottom: 0;
-        padding: 0 0.2em;
+        padding: 0 0.25em;
         background-image: none;
 
         button {
             float: right;
-            margin: 0.5em 0.2em 0.4em;
-            padding: 0.2em 0.6em 0.3em 0.6em;
+            margin: 0.5em 0.25em;
+            padding: 0.25em 0.5em;
             width: auto;
             overflow: visible;
             cursor: pointer;
@@ -213,7 +217,7 @@
         float: left;
 
         table {
-            margin: 0 auto 0.4em;
+            margin: 0 auto 0.5em;
             width: 95%;
         }
     }
