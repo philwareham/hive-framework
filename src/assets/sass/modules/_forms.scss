@@ -232,6 +232,7 @@ optgroup {
 /**
  * 1. Remove default vertical scrollbar in IE 8/9/10/11.
  * 2. Restrict to vertical resizing to prevent layout breakage.
+ * 3. Remove unwanted space below `textarea` in Safari, Chrome, Opera.
  */
 
 textarea {
@@ -239,6 +240,7 @@ textarea {
     min-height: 3em;
     overflow: auto; /* 1 */
     resize: vertical; /* 2 */
+    vertical-align: top; /* 3 */
     width: 100%;
 }
 
