@@ -8,7 +8,7 @@
 @include establish-baseline;
 
 /**
- * Enable font ligatures globally, where supported by webfonts.
+ * Enable font ligatures globally, where supported by OpenType fonts.
  */
 
 @include enable-ligatures;
