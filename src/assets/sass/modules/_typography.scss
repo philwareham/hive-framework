@@ -8,6 +8,12 @@
 @include establish-baseline;
 
 /**
+ * Enable font ligatures globally, where supported by webfonts.
+ */
+
+@include enable-ligatures;
+
+/**
  * Global font and text colour.
  */
 
