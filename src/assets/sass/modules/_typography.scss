@@ -8,16 +8,14 @@
 @include establish-baseline;
 
 /**
- * Enable font ligatures globally, where supported by OpenType fonts.
- */
-
-@include enable-ligatures;
-
-/**
  * Global font and text colour.
+ *
+ * 1. Enable font ligatures globally, where supported by OpenType fonts.
  */
 
 body {
+    @include enable-ligatures; /* 1 */
+
     font-family: $font-serif;
     color: $color-text;
 }
