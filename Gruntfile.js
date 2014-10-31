@@ -67,7 +67,8 @@ module.exports = function (grunt)
                         'tmp/assets/css/jquery-ui.css',
                         'src/assets/js/libs/flowplayer/skin/minimalist.css'
                     ],
-                    'public/assets/css/ie8.css': ['tmp/assets/css/ie8.css']
+                    'public/assets/css/ie8.css': ['tmp/assets/css/ie8.css'],
+                    'public/assets/css/design-patterns.css': ['tmp/assets/css/design-patterns.css']
                 }
             }
         },

@@ -40,38 +40,7 @@
     <![endif]-->
 
 <!-- JUST FOR DESIGN PATTERNS DOC - NOT IN ACTUAL SITE -->
-    <style>
-        .docs--box { padding: 1em; margin-top: 0; background: #aaaaaa; }
-        #section-grid .information { clear: both; }
-        .information code { color: #333333; }
-
-        /* jQuery UI stuff */
-        .jquery-ui-icons { margin: 0; padding: 0;}
-        .jquery-ui-icons li { margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left; list-style: none; }
-        .jquery-ui-icons span.ui-icon { float: left; margin: 0 4px; }
-        .jquery-ui-slider-vertical span { height: 120px; float: left; margin: 15px; }
-        .ui-menu { width: 10em; }
-        .ui-menu:not(.jquery-ui-menu) { position: absolute; z-index: 1000; }
-
-        /* Breakpoint indicator */
-        .docs--breakpoints li { float: left; }
-        .docs--breakpoint0 { color: #ffffff; background-color: red; padding: 0.5em; }
-        .docs--breakpoint1 { color: #ffffff; background-color: red; padding: 0.5em; display: none; }
-        .docs--breakpoint2 { color: #ffffff; background-color: red; padding: 0.5em; display: none; }
-        .docs--breakpoint3 { color: #ffffff; background-color: red; padding: 0.5em; display: none; }
-        @media (min-width: 24em) {
-            .docs--breakpoint0 { display: none; }
-            .docs--breakpoint1 { display: block; }
-        }
-        @media (min-width: 36em) {
-            .docs--breakpoint1 { display: none; }
-            .docs--breakpoint2 { display: block; }
-        }
-        @media (min-width: 48em) {
-            .docs--breakpoint2 { display: none; }
-            .docs--breakpoint3 { display: block; }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/design-patterns.css">
 
 </head>
 
@@ -166,86 +135,86 @@
                                     <h3>Neutral colours</h3>
 
                                     <p><code>background</code></p>
-                                    <div style="width:100%;height:2.5em;border:1px solid #cccccc;background:#ffffff;"></div>
+                                    <div class="design-patterns--color design-patterns--color-background"></div>
 
                                     <p><code>background-box</code></p>
-                                    <div style="width:100%;height:2.5em;border:1px solid #cccccc;background:#f7f7f7;"></div>
+                                    <div class="design-patterns--color design-patterns--color-background-box"></div>
 
                                     <p><code>gradient-from</code></p>
-                                    <div style="width:100%;height:2.5em;border:1px solid #cccccc;background:#eeeeee;"></div>
+                                    <div class="design-patterns--color design-patterns--color-gradient-from"></div>
 
                                     <p><code>gradient-to</code></p>
-                                    <div style="width:100%;height:2.5em;border:1px solid #cccccc;background:#dddddd;"></div>
+                                    <div class="design-patterns--color design-patterns--color-gradient-to"></div>
 
                                     <p><code>border</code></p>
-                                    <div style="width:100%;height:2.5em;border:1px solid #cccccc;background:#cccccc;"></div>
+                                    <div class="design-patterns--color design-patterns--color-border"></div>
 
                                     <p><code>gradient-border</code></p>
-                                    <div style="width:100%;height:2.5em;border:1px solid #cccccc;background:#aaaaaa;"></div>
+                                    <div class="design-patterns--color design-patterns--color-gradient-border"></div>
 
                                     <p><code>text-footnote</code></p>
-                                    <div style="width:100%;height:2.5em;border:1px solid #cccccc;background:#888888;"></div>
+                                    <div class="design-patterns--color design-patterns--color-text-footnote"></div>
 
                                     <p><code>text</code></p>
-                                    <div style="width:100%;height:2.5em;border:1px solid #cccccc;background:#333333;"></div>
+                                    <div class="design-patterns--color design-patterns--color-text"></div>
                                 </div>
 
                                 <div class="layout--span-4-6">
                                     <h3>Accent colours</h3>
 
                                     <p><code>highlight-box</code></p>
-                                    <div style="width:100%;height:2.5em;border:1px solid #cccccc;background:#fff9e1;"></div>
+                                    <div class="design-patterns--color design-patterns--color-highlight-box"></div>
 
                                 </div>
 
                                 <div class="layout--span-7-9">
-                                    <h3>State colours</h3>
-
-                                    <p><code>success-background</code></p>
-                                    <div style="width:100%;height:2.5em;border:1px solid #cccccc;background:#dff0d8;"></div>
-
-                                    <p><code>success-text</code></p>
-                                    <div style="width:100%;height:2.5em;border:1px solid #cccccc;background:#238c23;"></div>
-
-                                    <p><code>warning-background</code></p>
-                                    <div style="width:100%;height:2.5em;border:1px solid #cccccc;background:#fff6d3;"></div>
-
-                                    <p><code>warning-text</code></p>
-                                    <div style="width:100%;height:2.5em;border:1px solid #cccccc;background:#cb8f02;"></div>
-
-                                    <p><code>error-background</code></p>
-                                    <div style="width:100%;height:2.5em;border:1px solid #cccccc;background:#f2dede;"></div>
-
-                                    <p><code>error-text</code></p>
-                                    <div style="width:100%;height:2.5em;border:1px solid #cccccc;background:#9d261d;"></div>
-
-                                    <p><code>info-background</code></p>
-                                    <div style="width:100%;height:2.5em;border:1px solid #cccccc;background:#e7f6fc;"></div>
-
-                                    <p><code>info-text</code></p>
-                                    <div style="width:100%;height:2.5em;border:1px solid #cccccc;background:#3a87ad;"></div>
-                                </div>
-
-                                <div class="layout--span-10-12">
                                     <h3>Interaction colours</h3>
 
                                     <p><code>selected</code></p>
-                                    <div style="width:100%;height:2.5em;border:1px solid #cccccc;background:#e3edfc;"></div>
+                                    <div class="design-patterns--color design-patterns--color-link-selected"></div>
 
                                     <p><code>selecting</code></p>
-                                    <div style="width:100%;height:2.5em;border:1px solid #cccccc;background:#c7dbfa;"></div>
+                                    <div class="design-patterns--color design-patterns--color-link-selecting"></div>
 
                                     <p><code>link-focus</code></p>
-                                    <div style="width:100%;height:2.5em;border:1px solid #cccccc;background:#5b9dd9;"></div>
+                                    <div class="design-patterns--color design-patterns--color-link-focus"></div>
 
                                     <p><code>link-hover</code></p>
-                                    <div style="width:100%;height:2.5em;border:1px solid #cccccc;background:#0066ff;"></div>
+                                    <div class="design-patterns--color design-patterns--color-link-hover"></div>
 
                                     <p><code>link</code></p>
-                                    <div style="width:100%;height:2.5em;border:1px solid #cccccc;background:#114eb1;"></div>
+                                    <div class="design-patterns--color design-patterns--color-link"></div>
 
                                     <p><code>link-visited</code></p>
-                                    <div style="width:100%;height:2.5em;border:1px solid #cccccc;background:#183082;"></div>
+                                    <div class="design-patterns--color design-patterns--color-link-visited"></div>
+                                </div>
+
+                                <div class="layout--span-10-12">
+                                    <h3>State colours</h3>
+
+                                    <p><code>success-background</code></p>
+                                    <div class="design-patterns--color design-patterns--color-success-background"></div>
+
+                                    <p><code>success-text</code></p>
+                                    <div class="design-patterns--color design-patterns--color-success-text"></div>
+
+                                    <p><code>warning-background</code></p>
+                                    <div class="design-patterns--color design-patterns--color-warning-background"></div>
+
+                                    <p><code>warning-text</code></p>
+                                    <div class="design-patterns--color design-patterns--color-warning-text"></div>
+
+                                    <p><code>error-background</code></p>
+                                    <div class="design-patterns--color design-patterns--color-error-background"></div>
+
+                                    <p><code>error-text</code></p>
+                                    <div class="design-patterns--color design-patterns--color-error-text"></div>
+
+                                    <p><code>info-background</code></p>
+                                    <div class="design-patterns--color design-patterns--color-info-background"></div>
+
+                                    <p><code>info-text</code></p>
+                                    <div class="design-patterns--color design-patterns--color-info-text"></div>
                                 </div>
 
                             </div><!-- this `/div` is just for clearfix child elements in this design patterns doc -->
@@ -257,11 +226,11 @@
                             <p>Grid layout with 1 to 4 column options. Uses the <a href="https://github.com/at-import/singularity" rel="external" title="Go to the Singularity.gs GitHub repo">Singularity grid system</a>.</p>
 
                             <h3>Current active breakpoint</h3>
-                            <ol class="docs--breakpoints list--no-bullets clearfix">
-                                <li class="docs--breakpoint0">No breakpoint</li>
-                                <li class="docs--breakpoint1">Breakpoint 1</li>
-                                <li class="docs--breakpoint2">Breakpoint 2</li>
-                                <li class="docs--breakpoint3">Breakpoint 3</li>
+                            <ol class="design-patterns--breakpoints list--no-bullets clearfix">
+                                <li class="design-patterns--breakpoint-0">No breakpoint</li>
+                                <li class="design-patterns--breakpoint-1">Breakpoint 1</li>
+                                <li class="design-patterns--breakpoint-2">Breakpoint 2</li>
+                                <li class="design-patterns--breakpoint-3">Breakpoint 3</li>
                             </ol>
 
                             <h3>Main layout grid</h3>
@@ -272,17 +241,17 @@
                                 <p class="information">Opt1: 1col <code>class="layout--span-1-12"</code></p>
 
                                 <div class="layout--span-1-12">
-                                    <h6 class="docs--box">Opt1: 1col</h6>
+                                    <h6 class="design-patterns--box">Opt1: 1col</h6>
                                 </div>
 
                                 <p class="information">Opt2: 2col cell1 <code>class="layout--span-1-6 at-break2"</code><br>
                                     Opt2: 2col cell2 <code>class="layout--span-7-12 at-break2"</code></p>
 
                                 <div class="layout--span-1-6 at-break2">
-                                    <h6 class="docs--box">Opt2: 2col cell1</h6>
+                                    <h6 class="design-patterns--box">Opt2: 2col cell1</h6>
                                 </div>
                                 <div class="layout--span-7-12 at-break2">
-                                    <h6 class="docs--box">Opt2: 2col cell2</h6>
+                                    <h6 class="design-patterns--box">Opt2: 2col cell2</h6>
                                 </div>
 
                                 <p class="information">Opt3: 3col cell1 <code>class="layout--span-1-4"</code><br>
@@ -290,33 +259,33 @@
                                     Opt3: 3col cell3 <code>class="layout--span-9-12"</code></p>
 
                                 <div class="layout--span-1-4">
-                                    <h6 class="docs--box">Opt3: 3col cell1</h6>
+                                    <h6 class="design-patterns--box">Opt3: 3col cell1</h6>
                                 </div>
                                 <div class="layout--span-5-8">
-                                    <h6 class="docs--box">Opt3: 3col cell2</h6>
+                                    <h6 class="design-patterns--box">Opt3: 3col cell2</h6>
                                 </div>
                                 <div class="layout--span-9-12">
-                                    <h6 class="docs--box">Opt3: 3col cell3</h6>
+                                    <h6 class="design-patterns--box">Opt3: 3col cell3</h6>
                                 </div>
 
                                 <p class="information">Opt4: 3col cell1and2 <code>class="layout--span-1-8"</code><br>
                                     Opt4: 3col cell3 <code>class="layout--span-9-12"</code></p>
 
                                 <div class="layout--span-1-8">
-                                    <h6 class="docs--box">Opt4: 3col cell1and2</h6>
+                                    <h6 class="design-patterns--box">Opt4: 3col cell1and2</h6>
                                 </div>
                                 <div class="layout--span-9-12">
-                                    <h6 class="docs--box">Opt4: 3col cell3</h6>
+                                    <h6 class="design-patterns--box">Opt4: 3col cell3</h6>
                                 </div>
 
                                 <p class="information">Opt5: 3col cell1 <code>class="layout--span-1-4"</code><br>
                                     Opt5: 3col cell2and3 <code>class="layout--span-5-12"</code></p>
 
                                 <div class="layout--span-1-4">
-                                    <h6 class="docs--box">Opt5: 3col cell1</h6>
+                                    <h6 class="design-patterns--box">Opt5: 3col cell1</h6>
                                 </div>
                                 <div class="layout--span-5-12">
-                                    <h6 class="docs--box">Opt5: 3col cell2and3</h6>
+                                    <h6 class="design-patterns--box">Opt5: 3col cell2and3</h6>
                                 </div>
 
                                 <p class="information">Opt6: 4col cell1 <code>class="layout--span-1-3 at-break1"</code><br>
@@ -325,16 +294,16 @@
                                     Opt6: 7col cell4 <code>class="layout--span-10-12 at-break1"</code></p>
 
                                 <div class="layout--span-1-3 at-break1">
-                                    <h6 class="docs--box">Opt6: 4col cell1</h6>
+                                    <h6 class="design-patterns--box">Opt6: 4col cell1</h6>
                                 </div>
                                 <div class="layout--span-4-6 at-break1">
-                                    <h6 class="docs--box">Opt6: 5col cell2</h6>
+                                    <h6 class="design-patterns--box">Opt6: 5col cell2</h6>
                                 </div>
                                 <div class="layout--span-7-9 at-break1">
-                                    <h6 class="docs--box">Opt6: 6col cell3</h6>
+                                    <h6 class="design-patterns--box">Opt6: 6col cell3</h6>
                                 </div>
                                 <div class="layout--span-10-12 at-break1">
-                                    <h6 class="docs--box">Opt6: 7col cell4</h6>
+                                    <h6 class="design-patterns--box">Opt6: 7col cell4</h6>
                                 </div>
 
                                 <p class="information">Opt7: 4col cell1and2 <code>class="layout--span-1-6"</code><br>
@@ -342,13 +311,13 @@
                                     Opt7: 4col cell4 <code>class="layout--span-10-12 at-break1"</code></p>
 
                                 <div class="layout--span-1-6">
-                                    <h6 class="docs--box">Opt7: 4col cell1and2</h6>
+                                    <h6 class="design-patterns--box">Opt7: 4col cell1and2</h6>
                                 </div>
                                 <div class="layout--span-7-9 at-break1">
-                                    <h6 class="docs--box">Opt7: 4col cell3</h6>
+                                    <h6 class="design-patterns--box">Opt7: 4col cell3</h6>
                                 </div>
                                 <div class="layout--span-10-12 at-break1">
-                                    <h6 class="docs--box">Opt7: 4col cell4</h6>
+                                    <h6 class="design-patterns--box">Opt7: 4col cell4</h6>
                                 </div>
 
                                 <p class="information">Opt8: 4col cell1 <code>class="layout--span-1-3"</code><br>
@@ -356,13 +325,13 @@
                                     Opt8: 4col cell4 <code>class="layout--span-10-12"</code></p>
 
                                 <div class="layout--span-1-3">
-                                    <h6 class="docs--box">Opt8: 4col cell1</h6>
+                                    <h6 class="design-patterns--box">Opt8: 4col cell1</h6>
                                 </div>
                                 <div class="layout--span-4-9">
-                                    <h6 class="docs--box">Opt8: 4col cell2and3</h6>
+                                    <h6 class="design-patterns--box">Opt8: 4col cell2and3</h6>
                                 </div>
                                 <div class="layout--span-10-12">
-                                    <h6 class="docs--box">Opt8: 4col cell4</h6>
+                                    <h6 class="design-patterns--box">Opt8: 4col cell4</h6>
                                 </div>
 
                                 <p class="information">Opt9: 4col cell1 <code>class="layout--span-1-3"</code><br>
@@ -370,33 +339,33 @@
                                     Opt9: 4col cell3and4 <code>class="layout--span-7-12"</code></p>
 
                                 <div class="layout--span-1-3">
-                                    <h6 class="docs--box">Opt9: 4col cell1</h6>
+                                    <h6 class="design-patterns--box">Opt9: 4col cell1</h6>
                                 </div>
                                 <div class="layout--span-4-6">
-                                    <h6 class="docs--box">Opt9: 4col cell2</h6>
+                                    <h6 class="design-patterns--box">Opt9: 4col cell2</h6>
                                 </div>
                                 <div class="layout--span-7-12">
-                                    <h6 class="docs--box">Opt9: 4col cell3and4</h6>
+                                    <h6 class="design-patterns--box">Opt9: 4col cell3and4</h6>
                                 </div>
 
                                 <p class="information">Opt10: 4col cell1and2and3 <code>class="layout--span-1-9"</code><br>
                                     Opt10: 4col cell4 <code>class="layout--span-10-12"</code></p>
 
                                 <div class="layout--span-1-9">
-                                    <h6 class="docs--box">Opt10: 4col cell1and2and3</h6>
+                                    <h6 class="design-patterns--box">Opt10: 4col cell1and2and3</h6>
                                 </div>
                                 <div class="layout--span-10-12">
-                                    <h6 class="docs--box">Opt10: 4col cell4</h6>
+                                    <h6 class="design-patterns--box">Opt10: 4col cell4</h6>
                                 </div>
 
                                 <p class="information">Opt11: 4col cell1 <code>class="layout--span-1-3"</code><br>
                                     Opt11: 4col cell2and3and4 <code>class="layout--span-4-12"</code></p>
 
                                 <div class="layout--span-1-3">
-                                    <h6 class="docs--box">Opt11: 4col cell1</h6>
+                                    <h6 class="design-patterns--box">Opt11: 4col cell1</h6>
                                 </div>
                                 <div class="layout--span-4-12">
-                                    <h6 class="docs--box">Opt11: 4col cell2and3and4</h6>
+                                    <h6 class="design-patterns--box">Opt11: 4col cell2and3and4</h6>
                                 </div>
 
                             </div><!-- this `/div` is just for clearfix child elements in this design patterns doc -->
@@ -409,57 +378,57 @@
                                 <p class="information">2 teasers over full page span <code>class="nested-list-2-column"</code></p>
                                 <div class="nested-list-2-column">
                                     <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
-                                        <h6 class="docs--box">Teaser 1</h6>
+                                        <h6 class="design-patterns--box">Teaser 1</h6>
                                     </article>
                                     <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
-                                        <h6 class="docs--box">Teaser 2</h6>
+                                        <h6 class="design-patterns--box">Teaser 2</h6>
                                     </article>
                                     <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
-                                        <h6 class="docs--box">Teaser 3</h6>
+                                        <h6 class="design-patterns--box">Teaser 3</h6>
                                     </article>
                                     <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
-                                        <h6 class="docs--box">Teaser 4</h6>
+                                        <h6 class="design-patterns--box">Teaser 4</h6>
                                     </article>
                                     <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
-                                        <h6 class="docs--box">Teaser 5</h6>
+                                        <h6 class="design-patterns--box">Teaser 5</h6>
                                     </article>
                                 </div>
 
                                 <p class="information">3 teasers over full page span <code>class="nested-list-3-column"</code></p>
                                 <div class="nested-list-3-column">
                                     <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
-                                        <h6 class="docs--box">Teaser 1</h6>
+                                        <h6 class="design-patterns--box">Teaser 1</h6>
                                     </article>
                                     <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
-                                        <h6 class="docs--box">Teaser 2</h6>
+                                        <h6 class="design-patterns--box">Teaser 2</h6>
                                     </article>
                                     <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
-                                        <h6 class="docs--box">Teaser 3</h6>
+                                        <h6 class="design-patterns--box">Teaser 3</h6>
                                     </article>
                                     <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
-                                        <h6 class="docs--box">Teaser 4</h6>
+                                        <h6 class="design-patterns--box">Teaser 4</h6>
                                     </article>
                                     <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
-                                        <h6 class="docs--box">Teaser 5</h6>
+                                        <h6 class="design-patterns--box">Teaser 5</h6>
                                     </article>
                                 </div>
 
                                 <p class="information">4 teasers over full page span <code>class="nested-list-4-column"</code></p>
                                 <div class="nested-list-4-column">
                                     <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
-                                        <h6 class="docs--box">Teaser 1</h6>
+                                        <h6 class="design-patterns--box">Teaser 1</h6>
                                     </article>
                                     <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
-                                        <h6 class="docs--box">Teaser 2</h6>
+                                        <h6 class="design-patterns--box">Teaser 2</h6>
                                     </article>
                                     <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
-                                        <h6 class="docs--box">Teaser 3</h6>
+                                        <h6 class="design-patterns--box">Teaser 3</h6>
                                     </article>
                                     <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
-                                        <h6 class="docs--box">Teaser 4</h6>
+                                        <h6 class="design-patterns--box">Teaser 4</h6>
                                     </article>
                                     <article class="nested" role="article" itemscope itemtype="http://schema.org/Article">
-                                        <h6 class="docs--box">Teaser 5</h6>
+                                        <h6 class="design-patterns--box">Teaser 5</h6>
                                     </article>
                                 </div>
 
