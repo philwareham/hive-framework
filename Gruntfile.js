@@ -127,8 +127,7 @@ module.exports = function (grunt)
                         'public/assets/js/prettify.js': ['bower_components/google-code-prettify/src/prettify.js'],
                         'public/assets/js/require.js': ['bower_components/requirejs/require.js'],
                         'public/assets/js/responsivenav.js': ['bower_components/responsive-nav/responsive-nav.js'],
-                        'public/assets/js/responsiveslides.js': ['bower_components/ResponsiveSlides.js/responsiveslides.js'],
-                        'public/assets/js/stellar.js': ['bower_components/jquery.stellar/jquery.stellar.js']
+                        'public/assets/js/responsiveslides.js': ['bower_components/ResponsiveSlides.js/responsiveslides.js']
                     },
                     {
                         expand: true,

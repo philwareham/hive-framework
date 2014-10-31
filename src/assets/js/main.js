@@ -26,8 +26,7 @@
             'details': ['jquery'],
             'flowplayer': ['jquery'],
             'jqueryui': ['jquery'],
-            'placeholder': ['jquery'],
-            'stellar': ['jquery']
+            'placeholder': ['jquery']
         }
     });
 
@@ -61,8 +60,7 @@
             fields = $('form textarea'),
             placeholder = $('textarea[placeholder], input[placeholder]'),
             player = $('.videoplayer'),
-            slider = $('.rslides'),
-            stellar = $('.parallax');
+            slider = $('.rslides');
 
         /**
          * Syntax highlighting, via 'Google Code Prettify'.
@@ -167,21 +165,6 @@
                     namespace: 'rslides',   // String: change the default namespace used
                     before: function () {}, // Function: Before callback
                     after: function () {}   // Function: After callback
-                });
-            });
-        }
-
-        /**
-         * Parallax scrolling effects, via 'Stellar.js'.
-         *
-         * More info - https://github.com/markdalgleish/stellar.js.
-         */
-
-        if (stellar.length) {
-            require(['stellar'], function ()
-            {
-                $.stellar({
-                    horizontalScrolling: false
                 });
             });
         }
