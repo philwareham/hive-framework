@@ -57,7 +57,7 @@ $colors: (
 .design-patterns--color {
     position: relative;
     display: block;
-    border: 1px solid #cccccc;
+    border: 1px solid lighten($color-border, 9%);
     height: 2.375em; // 38px / 16px
 
     &:after {
