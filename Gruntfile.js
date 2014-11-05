@@ -3,8 +3,10 @@ module.exports = function (grunt)
     'use strict';
 
     // Load Grunt plugins.
+    grunt.loadNpmTasks('grunt-combine-media-queries');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-compress');
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -24,6 +26,20 @@ module.exports = function (grunt)
             }
         },
 
+        // Combine any matching media queries.
+        cmq: {
+            css: {
+                files: {
+                    'tmp/assets/css': [
+                        'tmp/assets/css/*.css',
+                        // Ignore these non-concatenated files.
+                        '!tmp/assets/css/style.css',
+                        '!tmp/assets/css/jquery-ui.css'
+                    ]
+                }
+            }
+        },
+
         // Gzip compress JavaScript, CSS and SVG files.
         compress: {
             dist: {
@@ -36,6 +52,18 @@ module.exports = function (grunt)
                     {expand: true, src: ['public/assets/**/*.css'], ext: '.css.gz'},
                     {expand: true, src: ['public/assets/**/*.svg'], ext: '.svg.gz'}
                 ]
+            }
+        },
+
+        // Concatenate CSS files prior to matching media queries.
+        concat: {
+            css: {
+                src: [
+                    'tmp/assets/css/style.css',
+                    'tmp/assets/css/jquery-ui.css',
+                    'src/assets/js/libs/flowplayer/skin/minimalist.css'
+                ],
+                dest: 'tmp/assets/css/main.css'
             }
         },
 
@@ -58,15 +86,11 @@ module.exports = function (grunt)
             }
         },
 
-        // Concatenate, minify and copy CSS files to `public/assets/css/`.
+        // Minify and copy CSS files to `public/assets/css/`.
         cssmin: {
             main: {
                 files: {
-                    'public/assets/css/main.css': [
-                        'tmp/assets/css/style.css',
-                        'tmp/assets/css/jquery-ui.css',
-                        'src/assets/js/libs/flowplayer/skin/minimalist.css'
-                    ],
+                    'public/assets/css/main.css': ['tmp/assets/css/main.css'],
                     'public/assets/css/ie8.css': ['tmp/assets/css/ie8.css'],
                     'public/assets/css/design-patterns.css': ['tmp/assets/css/design-patterns.css']
                 }
@@ -149,7 +173,7 @@ module.exports = function (grunt)
 
             js: {
                 files: 'src/assets/js/*.js',
-                tasks: ['jshint', 'copy', 'uglify']
+                tasks: ['jshint', 'copy:js', 'uglify']
             }
         }
 
@@ -158,7 +182,7 @@ module.exports = function (grunt)
     // Register tasks.
     grunt.registerTask('build', ['jshint', 'sass', 'copy:js', 'uglify', 'compress']);
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('sass', ['compass', 'cssmin', 'copy:css']);
+    grunt.registerTask('sass', ['compass', 'concat', 'cmq', 'cssmin', 'copy:css']);
     grunt.registerTask('test', ['jshint']);
     grunt.registerTask('travis', ['jshint', 'compass']);
 };
