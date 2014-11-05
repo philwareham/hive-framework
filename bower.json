@@ -1,6 +1,6 @@
 {
   "name": "hive-framework",
-  "version": "0.5.3",
+  "version": "0.6.0",
   "directory": "bower_components",
   "dependencies": {
     "google-code-prettify": "1.0.3",
