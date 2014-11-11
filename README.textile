@@ -1,6 +1,6 @@
 h1. Hive framework
 
-!https://travis-ci.org/philwareham/hive-framework.png?branch=master!:https://travis-ci.org/philwareham/hive-framework
+!https://travis-ci.org/philwareham/hive-framework.png?branch=master!:https://travis-ci.org/philwareham/hive-framework !Built with Grunt!:https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/
 
 "Demo":http://testing3.designhive.com/.
 
