@@ -251,9 +251,8 @@ a.ui-state-default:focus {
  */
 
 .ui-widget-shadow {
-    @include border-radius;
-
     margin: -0.5em 0 0 -0.5em;
+    border-radius: $default-border-radius;
     padding: 0.5em;
     background-color: #999999;
     opacity: 0.33;

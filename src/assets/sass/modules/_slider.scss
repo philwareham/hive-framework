@@ -13,12 +13,12 @@
  */
 
 .rslides-container {
-    @include border-radius;
     @include box-shadow;
 
     position: relative;
     margin: 0 0 1em 0;
     border: solid 1px $color-border;
+    border-radius: $default-border-radius;
     padding: 0.375em;
     background: $color-background;
 }
@@ -95,11 +95,10 @@ a.rslides_nav {
     a {
         @include adjust-font-size-to(12px, 0.75);
         @include hide-text;
-        @include border-radius(50%);
 
         display: block;
-        border: 1px solid;
-        border-color: $color-border;
+        border: 1px solid $color-border;
+        border-radius: 50%;
         background: $color-background;
         width: 1em;  // 12px
         height: 1em; // 12px

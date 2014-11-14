@@ -21,12 +21,12 @@
     text-align: left;
 
     .ui-slider-handle {
-        @include border-radius(50%);
         @include box-shadow(0 0 0.5em rgba(0, 0, 0, 0.2));
         @include touch-action;
 
         position: absolute;
         z-index: 2;
+        border-radius: 50%;
         width: 20px;
         height: 20px;
         cursor: default;

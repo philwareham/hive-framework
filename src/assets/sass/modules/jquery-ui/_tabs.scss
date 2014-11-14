@@ -47,12 +47,11 @@
         background: none;
 
         li {
-            @include border-radius($default-border-radius $default-border-radius 0 0);
-
             position: relative;
             top: 0;
             float: left;
             border-bottom-width: 0;
+            border-radius: $default-border-radius $default-border-radius 0 0;
             list-style: none;
             white-space: nowrap;
 
@@ -68,11 +67,10 @@
             }
 
             @include breakpoint(max-width $breakpoint-2) {
-                @include border-radius(0);
-
                 float: none;
                 margin-top: 2px;
                 border-bottom-width: 1px;
+                border-radius: 0;
 
                 &.ui-tabs-active {
                     margin-bottom: 0;
