@@ -1,0 +1,11 @@
+/* Animation `keyframes` need to appear outside of `screen` rules.
+   ========================================================================== */
+
+@include keyframes(spinning) {
+    from {
+        @include transform(rotate(0deg));
+    }
+    to {
+        @include transform(rotate(360deg));
+    }
+}
