@@ -14,10 +14,10 @@
 .is-mouseover.flowplayer .fp-controls{bottom:0}
 .flowplayer .fp-waiting{display:none;margin:19% auto;text-align:center;}
 .flowplayer .fp-waiting *{-webkit-box-shadow:0 0 5px #333;-moz-box-shadow:0 0 5px #333;box-shadow:0 0 5px #333}
-.flowplayer .fp-waiting em{width:1em;height:1em;-webkit-border-radius:1em;-moz-border-radius:1em;border-radius:1em;background-color:rgba(255,255,255,0.8);display:inline-block;-webkit-animation:pulse .6s infinite;-moz-animation:pulse .6s infinite;animation:pulse .6s infinite;margin:.3em;opacity:0;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);}
-.flowplayer .fp-waiting em:nth-child(1){-webkit-animation-delay:.3s;-moz-animation-delay:.3s;animation-delay:.3s}
-.flowplayer .fp-waiting em:nth-child(2){-webkit-animation-delay:.45s;-moz-animation-delay:.45s;animation-delay:.45s}
-.flowplayer .fp-waiting em:nth-child(3){-webkit-animation-delay:.6s;-moz-animation-delay:.6s;animation-delay:.6s}
+.flowplayer .fp-waiting em{width:1em;height:1em;-webkit-border-radius:1em;-moz-border-radius:1em;border-radius:1em;background-color:rgba(255,255,255,0.8);display:inline-block;-webkit-animation:pulse .6s infinite;animation:pulse .6s infinite;margin:.3em;opacity:0;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);}
+.flowplayer .fp-waiting em:nth-child(1){-webkit-animation-delay:.3s;animation-delay:.3s}
+.flowplayer .fp-waiting em:nth-child(2){-webkit-animation-delay:.45s;animation-delay:.45s}
+.flowplayer .fp-waiting em:nth-child(3){-webkit-animation-delay:.6s;animation-delay:.6s}
 .flowplayer .fp-waiting p{color:#ccc;font-weight:bold}
 .flowplayer .fp-speed{font-size:30px;background-color:#333;background-color:rgba(51,51,51,0.8);color:#eee;margin:0 auto;text-align:center;width:120px;padding:.1em 0 0;opacity:0;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);-webkit-transition:opacity .5s;-moz-transition:opacity .5s;transition:opacity .5s;}
 .flowplayer .fp-speed.fp-hilite{opacity:1;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100)}
@@ -198,18 +198,10 @@
 .flowplayer .fp-context-menu li a{color:#00a7c8;font-size:110%}
 .flowplayer .fp-context-menu li:hover:not(.copyright){background-color:#eee}
 .flowplayer .fp-context-menu li.copyright{margin:0;padding-left:110px;background-image:url("img/flowplayer.png");background-repeat:no-repeat;background-size:100px 20px;background-position:5px 5px;border-bottom:1px solid #bbb;}
-@media (-webkit-min-device-pixel-ratio: 2){.flowplayer .fp-context-menu li.copyright{background-image:url("img/flowplayer@2x.png")}
-}@-moz-keyframes pulse{0%{opacity:0}
-100%{opacity:1}
-}@-webkit-keyframes pulse{0%{opacity:0}
-100%{opacity:1}
-}@-o-keyframes pulse{0%{opacity:0}
-100%{opacity:1}
-}@-ms-keyframes pulse{0%{opacity:0}
-100%{opacity:1}
-}@keyframes pulse{0%{opacity:0}
-100%{opacity:1}
-}.flowplayer .fp-controls{background-color:#333;background-color:rgba(51,51,51,0.6)}
+@media (-webkit-min-device-pixel-ratio: 2){.flowplayer .fp-context-menu li.copyright{background-image:url("img/flowplayer@2x.png")}}
+@-webkit-keyframes pulse{0%{opacity:0}100%{opacity:1}}
+@keyframes pulse{0%{opacity:0}100%{opacity:1}}
+.flowplayer .fp-controls{background-color:#333;background-color:rgba(51,51,51,0.6)}
 .flowplayer.fixed-controls .fp-controls{background-color:#333}
 .flowplayer .fp-timeline{background-color:#666}
 .flowplayer .fp-buffer{background-color:#eee}
