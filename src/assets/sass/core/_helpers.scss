@@ -45,3 +45,11 @@
     -ms-touch-action: $taction;
         touch-action: $taction;
 }
+
+// inline elements with specified border/padding/margin wrapping each fragment
+
+@mixin box-decoration-break($boxdecbreak: clone) {
+    -webkit-box-decoration-break: $boxdecbreak;
+         -o-box-decoration-break: $boxdecbreak;
+            box-decoration-break: $boxdecbreak;
+}
