@@ -1,10 +1,15 @@
+<!-- Prefetch DNS for external assets -->
+<link rel="dns-prefetch" href="http://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://ajax.googleapis.com">
+<link rel="dns-prefetch" href="https://platform.twitter.com">
+
 <!-- CSS -->
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic">
 <link rel="stylesheet" href="<txp:site_url />assets/css/main.css">
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="generator" content="Textpattern CMS">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="mstile-144x144.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
