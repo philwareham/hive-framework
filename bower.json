@@ -4,7 +4,6 @@
   "directory": "bower_components",
   "dependencies": {
     "google-code-prettify": "1.0.3",
-    "html5shiv": "3.7.2",
     "jquery-autosize": "1.18.16",
     "jquery.cookie": "1.4.1",
     "jquery-details": "0.1.0",
@@ -12,7 +11,6 @@
     "picturefill": "2.2.0",
     "responsive-nav": "1.0.32",
     "ResponsiveSlides.js": "latest",
-    "selectivizr": "1.0.2",
     "requirejs": "2.1.15"
   }
 }

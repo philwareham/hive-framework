@@ -72,9 +72,7 @@ module.exports = function (grunt)
             js: {
                 files: [
                     {expand: true, cwd: 'src/', src: ['*'], dest: 'public/', filter: 'isFile'},
-                    {expand: true, cwd: 'src/assets/js/libs/', src: ['**'], dest: 'public/assets/js/'},
-                    // Also, Selectivizr breaks Uglify, so just copy it as-is.
-                    {src: 'bower_components/selectivizr/selectivizr.js', dest: 'public/assets/js/selectivizr.js'}
+                    {expand: true, cwd: 'src/assets/js/libs/', src: ['**'], dest: 'public/assets/js/'}
                 ]
             },
 
@@ -146,7 +144,6 @@ module.exports = function (grunt)
                         'public/assets/js/autosize.js': ['bower_components/jquery-autosize/jquery.autosize.js'],
                         'public/assets/js/cookie.js': ['bower_components/jquery.cookie/jquery.cookie.js'],
                         'public/assets/js/details.js': ['bower_components/jquery-details/jquery.details.js'],
-                        'public/assets/js/html5shiv.js': ['bower_components/html5shiv/dist/html5shiv.js'],
                         'public/assets/js/picturefill.js': ['bower_components/picturefill/dist/picturefill.min.js'],
                         'public/assets/js/placeholder.js': ['bower_components/jquery-placeholder/jquery.placeholder.js'],
                         'public/assets/js/prettify.js': ['bower_components/google-code-prettify/src/prettify.js'],
