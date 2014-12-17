@@ -5,7 +5,6 @@ module.exports = function (grunt)
     // Load Grunt plugins.
     grunt.loadNpmTasks('grunt-combine-media-queries');
     grunt.loadNpmTasks('grunt-contrib-compass');
-    grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -37,21 +36,6 @@ module.exports = function (grunt)
                         '!tmp/assets/css/jquery-ui.css'
                     ]
                 }
-            }
-        },
-
-        // Gzip compress JavaScript, CSS and SVG files.
-        compress: {
-            dist: {
-                options: {
-                    mode: 'gzip'
-                },
-                files: [
-                    {expand: true, src: ['public/assets/**/*.js'], ext: '.js.gz'},
-                    {expand: true, src: ['public/assets/**/*.min.js'], ext: '.min.js.gz'},
-                    {expand: true, src: ['public/assets/**/*.css'], ext: '.css.gz'},
-                    {expand: true, src: ['public/assets/**/*.svg'], ext: '.svg.gz'}
-                ]
             }
         },
 
@@ -177,7 +161,7 @@ module.exports = function (grunt)
     });
 
     // Register tasks.
-    grunt.registerTask('build', ['jshint', 'sass', 'copy:js', 'uglify', 'compress']);
+    grunt.registerTask('build', ['jshint', 'sass', 'copy:js', 'uglify']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('sass', ['compass', 'concat', 'cmq', 'cssmin', 'copy:css']);
     grunt.registerTask('test', ['jshint']);
