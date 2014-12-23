@@ -67,8 +67,6 @@ Where the @[task]@ is either @default@, @build@, @critical@, @test@ or @updatede
 
 h2. Textpattern templates
 
-*Currently under development.*
-
 Optional "Textpattern CMS":http://textpattern.com theme 'forms' and 'pages' templates are included, for reference. They can be found in the @public/templates@ directory, and follow the structure expected by the "rah_flat":https://github.com/gocom/rah_flat Textpattern plugin.
 
 h2. License
