@@ -11,6 +11,7 @@ module.exports = function (grunt)
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-dev-update');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -75,6 +76,16 @@ module.exports = function (grunt)
                     'public/assets/css/main.css': ['tmp/assets/css/main.css'],
                     'public/assets/css/ie8.css': ['tmp/assets/css/ie8.css'],
                     'public/assets/css/design-patterns.css': ['tmp/assets/css/design-patterns.css']
+                }
+            }
+        },
+
+        // Report on any available updates for development dependencies.
+        devUpdate: {
+            main: {
+                options: {
+                    updateType: 'report',
+                    reportUpdated: false // Don't report up-to-date packages.
                 }
             }
         },
@@ -165,5 +176,6 @@ module.exports = function (grunt)
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('sass', ['compass', 'concat', 'cmq', 'cssmin', 'copy:css']);
     grunt.registerTask('test', ['jshint']);
+    grunt.registerTask('devupdate', ['devUpdate']);
     grunt.registerTask('travis', ['jshint', 'compass']);
 };
