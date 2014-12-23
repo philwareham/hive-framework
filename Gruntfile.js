@@ -11,7 +11,7 @@ module.exports = function (grunt)
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-criticalcss');
+    grunt.loadNpmTasks('grunt-critical');
     grunt.loadNpmTasks('grunt-dev-update');
 
     grunt.initConfig({
@@ -70,16 +70,21 @@ module.exports = function (grunt)
             }
         },
 
-        // Dissect and provide critical above-the-fold CSS.
-        // Usage info: https://github.com/filamentgroup/grunt-criticalcss
-        criticalcss: {
-            options: {
-                url: 'http://localhost:4000', // Change URL to the actual location of a page to examine.
-                width: 1200,
-                height: 900,
-                outputfile: 'public/css/critical.css',
-                filename: 'public/css/main.css',
-                buffer: 800*1024
+        // Dissect and provide example file of critical above-the-fold CSS.
+        // Usage info: https://github.com/addyosmani/critical
+        critical: {
+            test: {
+                options: {
+                    base: './',
+                    css: [
+                        'tmp/assets/css/main.css'
+                    ],
+                    width: 1280,
+                    height: 900,
+                    minify: false
+                },
+                src: 'public/index.html',
+                dest: 'public/assets/css/critical.css'
             }
         },
 
@@ -187,7 +192,7 @@ module.exports = function (grunt)
 
     // Register tasks.
     grunt.registerTask('build', ['jshint', 'sass', 'copy:js', 'uglify']);
-    grunt.registerTask('critical', ['criticalcss']);
+    grunt.registerTask('criticalcss', ['sass', 'critical']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('sass', ['compass', 'concat', 'cmq', 'cssmin', 'copy:css']);
     grunt.registerTask('test', ['jshint']);

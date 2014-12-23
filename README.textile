@@ -57,11 +57,11 @@ This repository hosts sources and needs to be built before it can be used. After
 
 bc. $ grunt [task]
 
-Where the @[task]@ is either @default@, @build@, @critical@, @test@ or @updatedev@.
+Where the @[task]@ is either @default@, @build@, @criticalcss@, @test@ or @updatedev@.
 
 * The @default@ task will launch a task that watches for file changes; the project is then automatically built if a source file is modified.
 * The @build@ task builds the project.
-* The @critical@ task analyses a page of your website and provides an example file of CSS rules that it deduces are critical to rendering 'above-the-fold content'. This can be helpful in improving page rendering performance and speed test results (e.g., "Google PageSpeed Insights":https://developers.google.com/speed/pagespeed/insights/).
+* The @criticalcss@ task analyses a page of your website and provides an example file of CSS rules that it deduces are critical to rendering 'above-the-fold content'. This can be helpful in improving page rendering performance and speed test results (e.g., "Google PageSpeed Insights":https://developers.google.com/speed/pagespeed/insights/).
 * The @test@ task runs JSHint over your JavaScript files, checking the code quality.
 * The @updatedev@ task checks that development dependencies (Grunt plugins) are the latest versions, and if not, updates them.
 
