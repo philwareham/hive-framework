@@ -11,6 +11,7 @@ module.exports = function (grunt)
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-criticalcss');
     grunt.loadNpmTasks('grunt-dev-update');
 
     grunt.initConfig({
@@ -66,6 +67,19 @@ module.exports = function (grunt)
                 files: [
                     {expand: true, cwd: 'src/assets/js/libs/flowplayer/skin/img/', src: ['**'], dest: 'public/assets/css/img/'}
                 ]
+            }
+        },
+
+        // Dissect and provide critical above-the-fold CSS.
+        // Usage info: https://github.com/filamentgroup/grunt-criticalcss
+        criticalcss: {
+            options: {
+                url: 'http://localhost:4000', // Change URL to the actual location of a page to examine.
+                width: 1200,
+                height: 900,
+                outputfile: 'public/css/critical.css',
+                filename: 'public/css/main.css',
+                buffer: 800*1024
             }
         },
 
@@ -173,9 +187,10 @@ module.exports = function (grunt)
 
     // Register tasks.
     grunt.registerTask('build', ['jshint', 'sass', 'copy:js', 'uglify']);
+    grunt.registerTask('critical', ['criticalcss']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('sass', ['compass', 'concat', 'cmq', 'cssmin', 'copy:css']);
     grunt.registerTask('test', ['jshint']);
-    grunt.registerTask('devupdate', ['devUpdate']);
     grunt.registerTask('travis', ['jshint', 'compass']);
+    grunt.registerTask('updatedev', ['devUpdate']);
 };
