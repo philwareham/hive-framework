@@ -57,7 +57,7 @@ This repository hosts sources and needs to be built before it can be used. After
 
 bc. $ grunt [task]
 
-Where the @[task]@ is either @test@, @build@ or @watch@. Watch will launch a task that watches for file changes. The project is automatically built if a source file is modified. The build task builds the project.
+Where the @[task]@ is either @test@, @devupdate@, @build@ or @watch@. Watch will launch a task that watches for file changes; the project is automatically built if a source file is modified. The build task builds the project. The devupdate task checks that development dependencies (Grunt plugins) are the latest versions, and if not, updates them.
 
 h2. Textpattern templates
 
