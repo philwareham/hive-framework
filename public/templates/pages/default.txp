@@ -31,7 +31,7 @@
         <div class="container">
 
 <!-- Main content -->
-            <main role="main" aria-label="Main content">
+            <main role="main" aria-label="Main content" itemprop="mainContentOfPage">
 
                 <!-- is this the search result page? also omits the pagination links below (uses pagination format within search_results.article.txp instead) -->
                 <txp:if_search>

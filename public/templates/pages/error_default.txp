@@ -19,7 +19,7 @@
         <div class="container">
 
 <!-- Main content -->
-            <main role="main" aria-label="Main content">
+            <main role="main" aria-label="Main content" itemprop="mainContentOfPage">
                 <h1 class="error-status"><txp:error_status /></h1>
                 <p class="error-msg"><txp:error_message /></p>
             </main>

@@ -19,7 +19,7 @@
         <div class="container">
 
 <!-- Main content -->
-            <main role="main" aria-label="Main content">
+            <main role="main" aria-label="Main content" itemprop="mainContentOfPage">
 
                 <txp:if_article_list>
 
