@@ -92,10 +92,10 @@
  * Don't allow site to collapse smaller than large breakpoint.
  */
 
+.container,
 .site-header,
 .site-footer,
-.container,
-.nav-collapse ul {
+.site-navigation ul {
     min-width: $breakpoint-3;
 }
 
@@ -103,7 +103,7 @@
  * Desktop version of navigation menu.
  */
 
-.nav-collapse {
+.site-navigation {
     .js & {
         max-height: none;
     }

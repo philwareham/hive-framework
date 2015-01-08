@@ -190,9 +190,10 @@
 
     require(['responsivenav'], function ()
     {
-        responsiveNav('.nav-collapse', {
+        responsiveNav('.site-navigation', {
             transition: 400,
-            insert: 'after'
+            insert: 'after',
+            navClass: 'site-navigation'
         });
     });
 

@@ -7,7 +7,7 @@
  *
  * Example HTML:
  *
- * <nav class="nav-collapse">
+ * <nav class="site-navigation">
  *     <ul>
  *         <li class="active"><a></li>
  *         <li><a></li>
@@ -16,7 +16,7 @@
  * </nav>
  */
 
-.nav-collapse {
+.site-navigation {
     font-family: $font-sans-serif;
     font-weight: bold;
     background-color: $color-gradient-to;
