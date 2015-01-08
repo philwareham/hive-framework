@@ -23,14 +23,14 @@
     <txp:output_form form="head" />
 </head>
 
-<body class="<txp:if_section name=""><txp:if_search>search<txp:else />front</txp:if_search><txp:else /><txp:section /></txp:if_section>-page">
+<body class="<txp:if_section name=""><txp:if_search>search<txp:else />front</txp:if_search><txp:else /><txp:section /></txp:if_section>-page" itemscope itemtype="http://schema.org/WebPage">
 
     <txp:output_form form="body_header" />
 
     <div class="wrapper">
         <div class="container">
 
-<!-- left (main) column -->
+<!-- Main content -->
             <main role="main" aria-label="Main content">
 
                 <!-- is this the search result page? also omits the pagination links below (uses pagination format within search_results.article.txp instead) -->
@@ -100,22 +100,10 @@
 
                 </txp:if_search>
 
-            </main> <!-- /main -->
+            </main>
 
-<!-- right (complementary) column -->
-            <div role="complementary">
-                <txp:search_input /> <!-- links by default to form: 'search_input.misc.txp' unless you specify a different form -->
-
-                <!-- Feed links, default flavor is rss, so we don't need to specify a flavor on the first feed_link -->
-                <p>
-                    <txp:feed_link class="feed-rss" label="RSS" />
-                    /
-                    <txp:feed_link class="feed-atom" flavor="atom" label="Atom" />
-                </p>
-
-                <h4>External links</h4>
-                <txp:linklist wraptag="ul" break="li" limit="10" /> <!-- links by default to form: 'plainlinks.link.txp' unless you specify a different form -->
-            </div> <!-- /complementary -->
+<!-- Complementary content -->
+            <txp:output_form form="complementary" />
 
         </div> <!-- /.container -->
     </div> <!-- /.wrapper -->
