@@ -31,7 +31,7 @@
         <div class="container">
 
 <!-- Main content -->
-            <main role="main" aria-label="Main content" itemprop="mainContentOfPage">
+            <main role="main" aria-label="Main content">
 
                 <!-- is this the search result page? also omits the pagination links below (uses pagination format within search_results.article.txp instead) -->
                 <txp:if_search>
@@ -49,7 +49,10 @@
                     <txp:if_category>
 
                         <section role="region" itemscope itemtype="http://schema.org/CollectionPage">
-                            <h1 itemprop="name">Category <txp:category title="1" /></h1>
+                            <h1 itemprop="name">
+                                Category:
+                                <txp:category title="1" />
+                            </h1>
                             <div itemprop="mainContentOfPage">
                                 <txp:article class="article-list" form="article_listing" limit="5" wraptag="ul" />
                             </div>
@@ -61,7 +64,10 @@
                         <txp:if_author>
 
                             <section role="region" itemscope itemtype="http://schema.org/CollectionPage">
-                                <h1>Author <txp:author /></h1>
+                                <h1>
+                                    Author:
+                                    <txp:author />
+                                </h1>
                                 <div itemprop="mainContentOfPage">
                                     <txp:article class="article-list" form="article_listing" limit="5" wraptag="ul" />
                                 </div>
