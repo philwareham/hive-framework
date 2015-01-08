@@ -52,27 +52,27 @@
 
 </head>
 
-<body>
+<body itemscope itemtype="http://schema.org/WebPage">
 
 <!-- Header -->
-    <header role="banner">
+    <header class="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
         <h1>Sitename</h1>
     </header>
 
 <!-- Navigation -->
-    <nav class="nav-collapse" role="navigation" aria-label="Site navigation">
+    <nav class="nav-collapse" role="navigation" aria-label="Site navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
         <ul>
-            <li class="active">
-                <a href="#" title="Home">Home</a>
+            <li class="active" itemprop="name">
+                <a itemprop="url" href="#">Home</a>
             </li>
-            <li>
-                <a href="#" title="About">About</a>
+            <li itemprop="name">
+                <a itemprop="url" href="#">About</a>
             </li>
-            <li>
-                <a href="#" title="Services">Services</a>
+            <li itemprop="name">
+                <a itemprop="url" href="#">Services</a>
             </li>
-            <li>
-                <a href="#" title="Contact">Contact</a>
+            <li itemprop="name">
+                <a itemprop="url" href="#">Contact</a>
             </li>
         </ul>
     </nav>
@@ -755,33 +755,61 @@
                             <h2>Breadcrumbs</h2>
                             <p>Two style options available: <code>.breadcrumbs</code> or <code>.breadcrumbs--path</code>.</p>
 
-                            <nav role="navigation" aria-label="Breadcrumb navigation">
-                                <ol class="breadcrumbs">
-                                    <li>
-                                        <a href="#">Home</a>
+                            <nav role="navigation" aria-label="Breadcrumb navigation (style option 1)">
+                                <ol class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+                                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                        <a itemprop="item" href="#">
+                                            <span itemprop="name">Home</span>
+                                        </a>
+                                        <meta itemprop="position" content="1">
                                     </li>
-                                    <li>
-                                        <a href="#">Projects</a>
+                                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                        <a itemprop="item" href="#">
+                                            <span itemprop="name">Projects</span>
+                                        </a>
+                                        <meta itemprop="position" content="2">
                                     </li>
-                                    <li>
-                                        <a href="#">Gene Splicing</a>
+                                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                        <a itemprop="item" href="#">
+                                            <span itemprop="name">Gene Splicing</span>
+                                        </a>
+                                        <meta itemprop="position" content="3">
                                     </li>
-                                    <li class="current">Test subject X11</li>
+                                    <li class="current" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                        <b itemprop="item">
+                                            <span itemprop="name">Test subject X11</span>
+                                        </b>
+                                        <meta itemprop="position" content="4">
+                                    </li>
                                 </ol>
                             </nav>
 
-                            <nav role="navigation" aria-label="Breadcrumb navigation">
-                                <ol class="breadcrumbs--path">
-                                    <li>
-                                        <a href="#">Home</a>
+                            <nav role="navigation" aria-label="Breadcrumb navigation (style option 2)">
+                                <ol class="breadcrumbs--path" itemscope itemtype="http://schema.org/BreadcrumbList">
+                                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                        <a itemprop="item" href="#">
+                                            <span itemprop="name">Home</span>
+                                        </a>
+                                        <meta itemprop="position" content="1">
                                     </li>
-                                    <li>
-                                        <a href="#">Projects</a>
+                                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                        <a itemprop="item" href="#">
+                                            <span itemprop="name">Projects</span>
+                                        </a>
+                                        <meta itemprop="position" content="2">
                                     </li>
-                                    <li>
-                                        <a href="#">Gene Splicing</a>
+                                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                        <a itemprop="item" href="#">
+                                            <span itemprop="name">Gene Splicing</span>
+                                        </a>
+                                        <meta itemprop="position" content="3">
                                     </li>
-                                    <li class="current">Test subject X11 (deceased)</li>
+                                    <li class="current" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                        <b itemprop="item">
+                                            <span itemprop="name">Test subject X11 (deceased)</span>
+                                        </b>
+                                        <meta itemprop="position" content="4">
+                                    </li>
                                 </ol>
                             </nav>
                         </section>
@@ -1838,11 +1866,11 @@
     </div><!-- /.wrapper -->
 
 <!-- Footer -->
-    <footer role="contentinfo">
-        <!-- possible schema types: Organization, Corporation, etc (see http://schema.org/Organization for more info) -->
+    <footer class="site-footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
         <p>
             <small>
                 Copyright
+                <!-- possible schema types: Organization, Corporation, etc (see http://schema.org/Organization for more info) -->
                 <span itemscope itemtype="http://schema.org/Organization">
                     <span itemprop="name">Organisation Name</span>
                 </span>

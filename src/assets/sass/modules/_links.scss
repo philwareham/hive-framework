@@ -43,10 +43,10 @@ a {
 }
 
 /**
- * Additional styling for child links within `header`.
+ * Additional styling for child links within site header.
  */
 
-header a {
+.site-header a {
     border-radius: $default-border-radius / 4;
     color: $color-text;
 
