@@ -4,7 +4,7 @@
     </h1>
 </header>
 
-<nav class="nav-collapse" role="navigation" aria-label="Site navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<nav class="site-navigation" role="navigation" aria-label="Site navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <txp:section_list default_title="Home" include_default="1" wraptag="ul" break="">
         <li<txp:if_section name='<txp:section />'> class="active"</txp:if_section>>
             <a itemprop="url" href="<txp:section url="1" />">
