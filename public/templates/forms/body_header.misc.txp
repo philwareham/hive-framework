@@ -1,5 +1,5 @@
 <header class="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
-    <h1>
+    <h1 itemprop="name">
         <txp:site_name />
     </h1>
 </header>
