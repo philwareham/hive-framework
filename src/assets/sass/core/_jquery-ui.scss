@@ -208,6 +208,7 @@ a.ui-state-default:focus {
 .ui-state-disabled {
     background-image: none;
     opacity: 0.33;
+    pointer-events: none;
     cursor: default !important;
 
     a {
