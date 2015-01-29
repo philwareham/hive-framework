@@ -22,6 +22,7 @@
 <link rel="icon" sizes="96x96" href="favicon-96x96.png">
 <link rel="icon" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" sizes="16x16" href="favicon-16x16.png">
+<txp:feed_link flavor="rss" format="link" label="RSS" />
 
 <txp:if_section name="">
     <link rel="canonical" href="<txp:site_url />">
@@ -36,11 +37,19 @@
 
 <!-- Open Graph - required for Facebook API -->
 <meta property="og:site_name" content="<txp:site_name />">
-<meta property="og:title" content="<txp:variable name='page-title' />">
+<meta property="og:title" content="<txp:variable name="page-title" />">
 <meta property="og:type" content="article">
 <meta property="og:url" content="<txp:if_individual_article><txp:permlink /><txp:else /><txp:if_section><txp:section url='1' /><txp:else /><txp:if_category><txp:category url='1' /><txp:else /><txp:site_url /></txp:if_category></txp:if_section></txp:if_individual_article>">
 <meta property="og:image" content="<txp:if_individual_article><txp:if_article_image><txp:images limit='1'><txp:image_url/></txp:images><txp:else /><txp:site_url />assets/img/windows-site-tile/square.png</txp:if_article_image><txp:else /><txp:site_url />assets/img/windows-site-tile/square.png</txp:if_individual_article>">
 <meta property="og:description" content="">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="">
+<meta name="twitter:title" content="<txp:variable name="page-title" />">
+<meta name="twitter:url" content="<txp:if_individual_article><txp:permlink /><txp:else /><txp:if_section><txp:section url='1' /><txp:else /><txp:if_category><txp:category url='1' /><txp:else /><txp:site_url /></txp:if_category></txp:if_section></txp:if_individual_article>">
+<meta name="twitter:image:src" content="<txp:if_individual_article><txp:if_article_image><txp:images limit='1'><txp:image_url/></txp:images><txp:else /><txp:site_url />assets/img/windows-site-tile/square.png</txp:if_article_image><txp:else /><txp:site_url />assets/img/windows-site-tile/square.png</txp:if_individual_article>">
+<meta name="twitter:description" content="">
 
 <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
