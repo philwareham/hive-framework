@@ -14,30 +14,34 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="mstile-144x144.png">
 
-<!-- specify robots, canonical and author -->
-<txp:if_search>
-    <meta name="robots" content="none">
-<txp:else />
-    <txp:if_category>
-        <meta name="robots" content="noindex, follow, noodp, noydir">
+<!-- specify robots, canonical, author - depending on context -->
+<txp:if_status>
+    <txp:if_search>
+        <meta name="robots" content="none">
     <txp:else />
-        <txp:if_author>
+        <txp:if_category>
             <meta name="robots" content="noindex, follow, noodp, noydir">
         <txp:else />
-            <meta name="robots" content="index, follow, noodp, noydir">
-        </txp:if_author>
-    </txp:if_category>
-    <txp:if_section name="">
-        <link rel="canonical" href="<txp:site_url />">
-    <txp:else />
-        <txp:if_individual_article>
-            <link rel="canonical" href="<txp:permlink />">
-            <txp:meta_author title="1" />
+            <txp:if_author>
+                <meta name="robots" content="noindex, follow, noodp, noydir">
+            <txp:else />
+                <meta name="robots" content="index, follow, noodp, noydir">
+            </txp:if_author>
+        </txp:if_category>
+        <txp:if_section name="">
+            <link rel="canonical" href="<txp:site_url />">
         <txp:else />
-            <link rel="canonical" href="<txp:section url="1" />">
-        </txp:if_individual_article>
-    </txp:if_section>
-</txp:if_search>
+            <txp:if_individual_article>
+                <link rel="canonical" href="<txp:permlink />">
+                <txp:meta_author title="1" />
+            <txp:else />
+                <link rel="canonical" href="<txp:section url="1" />">
+            </txp:if_individual_article>
+        </txp:if_section>
+    </txp:if_search>
+<txp:else />
+    <meta name="robots" content="none">
+</txp:if_status>
 
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
 <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
