@@ -58,3 +58,13 @@
 .error_message li {
     color: $color-error-text;
 }
+
+/**
+ * Highlighting for comment form errors.
+ */
+
+.comments_error {
+    @include box-shadow(0 0 4px 2px $color-error-text);
+
+    border-color: $color-error-text;
+}
