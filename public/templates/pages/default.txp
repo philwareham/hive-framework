@@ -3,23 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-
     <txp:output_form form="page_title" />
-
-    <txp:if_search>
-        <meta name="robots" content="none">
-    <txp:else />
-        <txp:if_category>
-            <meta name="robots" content="noindex, follow, noodp, noydir">
-        <txp:else />
-            <txp:if_author>
-                <meta name="robots" content="noindex, follow, noodp, noydir">
-            <txp:else />
-                <meta name="robots" content="index, follow, noodp, noydir">
-            </txp:if_author>
-        </txp:if_category>
-    </txp:if_search>
-
     <txp:output_form form="head" />
 </head>
 

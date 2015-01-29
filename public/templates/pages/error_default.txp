@@ -3,11 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-
     <title><txp:error_status /></title>
-
-    <meta name="robots" content="none">
-
     <txp:output_form form="head" />
 </head>
 
