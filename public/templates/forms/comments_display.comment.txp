@@ -1,5 +1,5 @@
 <!-- added an id attribute to the section so we can link directly to here e.g. http://mysite.com/section/article#comments-head -->
-<section id="comments-head">
+<section id="comments-head" role="region">
     <h3>Comments</h3>
 
 <!-- if there are comments, display them (note: example code below overrides the global preference setting for comments wrapping by stating
@@ -43,7 +43,7 @@
 
 <!-- if new comments are allowed for this article then display comment form, if not then display 'closed' messages -->
 <txp:if_comments_allowed>
-    <section id="comments-form">
+    <section id="comments-form" role="region">
 
         <!-- comment invite text is taken for the article's comment invitation field on the 'write' screen -->
         <h3>
