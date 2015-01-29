@@ -13,6 +13,32 @@
 <meta name="generator" content="Textpattern CMS">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="mstile-144x144.png">
+
+<!-- specify robots, canonical and author -->
+<txp:if_search>
+    <meta name="robots" content="none">
+<txp:else />
+    <txp:if_category>
+        <meta name="robots" content="noindex, follow, noodp, noydir">
+    <txp:else />
+        <txp:if_author>
+            <meta name="robots" content="noindex, follow, noodp, noydir">
+        <txp:else />
+            <meta name="robots" content="index, follow, noodp, noydir">
+        </txp:if_author>
+    </txp:if_category>
+    <txp:if_section name="">
+        <link rel="canonical" href="<txp:site_url />">
+    <txp:else />
+        <txp:if_individual_article>
+            <link rel="canonical" href="<txp:permlink />">
+            <txp:meta_author title="1" />
+        <txp:else />
+            <link rel="canonical" href="<txp:section url="1" />">
+        </txp:if_individual_article>
+    </txp:if_section>
+</txp:if_search>
+
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
 <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
 <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
@@ -23,17 +49,6 @@
 <link rel="icon" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" sizes="16x16" href="favicon-16x16.png">
 <txp:feed_link flavor="rss" format="link" label="RSS" />
-
-<txp:if_section name="">
-    <link rel="canonical" href="<txp:site_url />">
-<txp:else />
-    <txp:if_individual_article>
-        <link rel="canonical" href="<txp:permlink />">
-        <txp:meta_author title="1" />
-    <txp:else />
-        <link rel="canonical" href="<txp:section url="1" />">
-    </txp:if_individual_article>
-</txp:if_section>
 
 <!-- Open Graph - required for Facebook API -->
 <meta property="og:site_name" content="<txp:site_name />">
