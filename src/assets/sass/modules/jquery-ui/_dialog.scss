@@ -41,7 +41,6 @@
     left: 0;
     z-index: 1002;
     padding: 0.25em;
-    overflow: hidden;
 
     .ui-dialog-titlebar {
         position: relative;
@@ -93,12 +92,50 @@
         cursor: pointer;
     }
 
+    .ui-resizable-n {
+        height: 2px;
+        top: 0;
+    }
+
+    .ui-resizable-e {
+        width: 2px;
+        right: 0;
+    }
+
+    .ui-resizable-s {
+        height: 2px;
+        bottom: 0;
+    }
+
+    .ui-resizable-w {
+        width: 2px;
+        left: 0;
+    }
+
+    .ui-resizable-se,
+    .ui-resizable-sw,
+    .ui-resizable-ne,
+    .ui-resizable-nw {
+        width: 7px;
+        height: 7px;
+    }
+
     .ui-resizable-se {
-        right: -5px;
-        bottom: -5px;
-        width: 12px;
-        height: 12px;
-        background-position: 16px 16px;
+        right: 0;
+        bottom: 0;
+    }
+
+    .ui-resizable-sw {
+        left: 0;
+        bottom: 0;
+    }
+    .ui-resizable-ne {
+        right: 0;
+        top: 0;
+    }
+    .ui-resizable-nw {
+        left: 0;
+        top: 0;
     }
 }
 
