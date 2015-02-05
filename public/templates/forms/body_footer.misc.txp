@@ -14,3 +14,4 @@
 </footer>
 
 <script data-main="<txp:site_url />assets/js/main.js" src="<txp:site_url />assets/js/require.js"></script>
+<noscript>JavaScript is currently disabled in your browser - please activate it for the best experience.</noscript>
