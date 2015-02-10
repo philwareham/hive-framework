@@ -7,7 +7,23 @@
     <txp:output_form form="head" />
 </head>
 
-<body class="<txp:if_section name=""><txp:if_search>search<txp:else />front</txp:if_search><txp:else /><txp:section /></txp:if_section>-page" itemscope itemtype="http://schema.org/WebPage">
+<txp:if_section name="">
+    <txp:if_search>
+        <body class="search-page" itemscope itemtype="http://schema.org/SearchResultsPage"
+    <txp:else />
+        <txp:if_category>
+            <body class="listing-page" itemscope itemtype="http://schema.org/CollectionPage">
+        <txp:else />
+            <txp:if_author>
+                <body class="listing-page" itemscope itemtype="http://schema.org/CollectionPage">
+            <txp:else />
+                <body class="front-page" itemscope itemtype="http://schema.org/WebPage">
+            </txp:if_author>
+        </txp:if_category>
+    </txp:if_search>
+<txp:else />
+    <body class="<txp:section />-page" itemscope itemtype="http://schema.org/WebPage">
+</txp:if_section>
 
     <txp:output_form form="body_header" />
 
@@ -15,47 +31,35 @@
         <div class="container">
 
 <!-- Main content -->
-            <main role="main" aria-label="Main content">
+            <main role="main" aria-label="Main content" itemprop="mainContentOfPage">
 
                 <!-- is this the search result page? also omits the pagination links below (uses pagination format within search_results.article.txp instead) -->
                 <txp:if_search>
 
-                    <section role="region" itemscope itemtype="http://schema.org/SearchResultsPage">
-                        <h1 itemprop="name">Search results</h1>
-                        <div itemprop="mainContentOfPage">
-                            <txp:output_form form="search_results" />
-                        </div>
-                    </section>
+                    <h1 itemprop="name">Search results</h1>
+                    <txp:output_form form="search_results" />
 
                 <txp:else />
 
                     <!-- else is this an article category list? -->
                     <txp:if_category>
 
-                        <section role="region" itemscope itemtype="http://schema.org/CollectionPage">
-                            <h1 itemprop="name">
-                                Category:
-                                <txp:category title="1" />
-                            </h1>
-                            <div itemprop="mainContentOfPage">
-                                <txp:article class="article-list" form="article_listing" limit="5" wraptag="ul" />
-                            </div>
-                        </section>
+                        <h1 itemprop="name">
+                            Category:
+                            <txp:category title="1" />
+                        </h1>
+                        <txp:article class="article-list" form="article_listing" limit="5" wraptag="ul" />
 
                     <txp:else />
 
                         <!-- else is this an article author list? -->
                         <txp:if_author>
 
-                            <section role="region" itemscope itemtype="http://schema.org/CollectionPage">
-                                <h1>
-                                    Author:
-                                    <txp:author />
-                                </h1>
-                                <div itemprop="mainContentOfPage">
-                                    <txp:article class="article-list" form="article_listing" limit="5" wraptag="ul" />
-                                </div>
-                            </section>
+                            <h1>
+                                Author:
+                                <txp:author />
+                            </h1>
+                            <txp:article class="article-list" form="article_listing" limit="5" wraptag="ul" />
 
                         <txp:else />
 
@@ -66,7 +70,7 @@
                     </txp:if_category>
 
                     <!-- add pagination links to foot of article/article listings/category listings/author listings if there are more articles available,
-                        this method is more flexibile than using simple txp:link_to_prev/txp:link_to_next or txp:older/txp:newer tags -->
+                         this method is more flexibile than using simple txp:link_to_prev/txp:link_to_next or txp:older/txp:newer tags -->
                     <txp:variable name="more" value='<txp:older /><txp:newer />' />
                     <txp:variable name="prev" value='<txp:older />' />
                     <txp:variable name="next" value='<txp:newer />' />

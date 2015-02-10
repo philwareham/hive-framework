@@ -7,7 +7,11 @@
     <txp:output_form form="head" />
 </head>
 
-<body class="<txp:section />-page" itemscope itemtype="http://schema.org/WebPage">
+<txp:if_article_list>
+    <body class="<txp:section />-page" itemscope itemtype="http://schema.org/CollectionPage">
+<txp:else />
+    <body class="<txp:section />-page" itemscope itemtype="http://schema.org/WebPage">
+</txp:if_article_list>
 
     <txp:output_form form="body_header" />
 
@@ -15,53 +19,18 @@
         <div class="container">
 
 <!-- Main content -->
-            <main role="main" aria-label="Main content">
+            <main role="main" aria-label="Main content" itemprop="mainContentOfPage">
 
                 <txp:if_article_list>
 
-                    <section role="region" itemscope itemtype="http://schema.org/CollectionPage">
-                        <h1 itemprop="name">
-                            <txp:section title="1" />
-                        </h1>
-                        <div itemprop="mainContentOfPage">
-                            <txp:article class="article-list" listform="article_listing" limit="5" wraptag="ul" />
-                            <!-- or if you want to list all articles from all sections instead, then replace txp:article with txp:article_custom -->
-                        </div>
-                    </section>
+                    <h1 itemprop="name">
+                        <txp:section title="1" />
+                    </h1>
+                    <txp:article class="article-list" listform="article_listing" limit="5" wraptag="ul" />
+                    <!-- or if you want to list all articles from all sections instead, then replace txp:article with txp:article_custom -->
 
-                <txp:else />
-
-                    <txp:article />
-
-                </txp:if_article_list>
-
-                <!-- add pagination links to foot of article/article listings if there are more articles available,
-                    this method is more flexibile than using simple txp:link_to_prev/txp:link_to_next or txp:older/txp:newer tags -->
-                <txp:if_individual_article>
-
-                    <txp:variable name="more" value='<txp:link_to_prev /><txp:link_to_next />' />
-                    <txp:variable name="prev" value='<txp:link_to_prev />' />
-                    <txp:variable name="next" value='<txp:link_to_next />' />
-
-                    <txp:if_variable name="more" value="">
-                    <txp:else />
-                        <nav class="paginator" role="navigation" aria-label="Article navigation">
-
-                            <txp:if_variable name="prev" value="">
-                            <txp:else />
-                                <a rel="prev" href="<txp:link_to_prev />" title="<txp:prev_title />" aria-label="<txp:prev_title />">← Older</a>
-                            </txp:if_variable>
-
-                            <txp:if_variable name="next" value="">
-                            <txp:else />
-                                <a rel="next" href="<txp:link_to_next />" title="<txp:next_title />" aria-label="<txp:next_title />" >Newer →</a>
-                            </txp:if_variable>
-
-                        </nav>
-                    </txp:if_variable>
-
-                <txp:else />
-
+                    <!-- add pagination links to foot of article/article listings if there are more articles available,
+                         this method is more flexibile than using simple txp:link_to_prev/txp:link_to_next or txp:older/txp:newer tags -->
                     <txp:variable name="more" value='<txp:older /><txp:newer />' />
                     <txp:variable name="prev" value='<txp:older />' />
                     <txp:variable name="next" value='<txp:newer />' />
@@ -83,7 +52,34 @@
                         </nav>
                     </txp:if_variable>
 
-                </txp:if_individual_article>
+                <txp:else />
+
+                    <txp:article />
+
+                    <!-- add pagination links to foot of article/article listings if there are more articles available,
+                         this method is more flexibile than using simple txp:link_to_prev/txp:link_to_next or txp:older/txp:newer tags -->
+                    <txp:variable name="more" value='<txp:link_to_prev /><txp:link_to_next />' />
+                    <txp:variable name="prev" value='<txp:link_to_prev />' />
+                    <txp:variable name="next" value='<txp:link_to_next />' />
+
+                    <txp:if_variable name="more" value="">
+                    <txp:else />
+                        <nav class="paginator" role="navigation" aria-label="Article navigation">
+
+                            <txp:if_variable name="prev" value="">
+                            <txp:else />
+                                <a rel="prev" href="<txp:link_to_prev />" title="<txp:prev_title />" aria-label="<txp:prev_title />">← Older</a>
+                            </txp:if_variable>
+
+                            <txp:if_variable name="next" value="">
+                            <txp:else />
+                                <a rel="next" href="<txp:link_to_next />" title="<txp:next_title />" aria-label="<txp:next_title />" >Newer →</a>
+                            </txp:if_variable>
+
+                        </nav>
+                    </txp:if_variable>
+
+                </txp:if_article_list>
 
             </main>
 
