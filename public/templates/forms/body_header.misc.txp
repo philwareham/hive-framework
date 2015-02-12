@@ -1,3 +1,5 @@
+<meta itemprop="accessibilityAPI" content="ARIA">
+
 <header class="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
     <h1 itemprop="name">
         <txp:site_name />
