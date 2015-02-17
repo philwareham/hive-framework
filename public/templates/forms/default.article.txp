@@ -15,24 +15,29 @@
 </txp:if_individual_article>
 
     <p>
-        <strong>Posted</strong>
+        <strong>Posted:</strong>
         <time datetime="<txp:posted format="iso8601" />" itemprop="datePublished">
             <txp:posted />
         </time>
-        <br>
-        <strong>Comments</strong>
-        <a href="<txp:permlink />#comments-head" title="View comments" itemprop="discussionUrl" itemscope itemtype="http://schema.org/UserComments">
 
-            <!-- if comments then display the number, if no comments then print 'none' -->
-            <txp:if_comments>
+        <!-- only display comments count if comments posted, or if new comments allowed -->
+        <txp:if_comments>
+            <br>
+            <strong>Comments:</strong>
+            <a href="<txp:permlink />#comments-head" title="View comments" itemprop="discussionUrl" itemscope itemtype="http://schema.org/UserComments">
                 <span itemprop="interactionCount">
                     <txp:comments_count />
                 </span>
-            <txp:else />
-                <span itemprop="interactionCount">none</span>
-            </txp:if_comments>
-
-        </a>
+            </a>
+        <txp:else />
+            <txp:if_comments_allowed>
+                <br>
+                <strong>Comments</strong>
+                <a href="<txp:permlink />#comments-head" title="View comments" itemprop="discussionUrl" itemscope itemtype="http://schema.org/UserComments">
+                    <span itemprop="interactionCount">0</span>
+                </a>
+            </txp:if_comments_allowed>
+        </txp:if_comments>
     </p>
 
     <txp:if_article_image>
@@ -44,7 +49,7 @@
     </div>
 
     <p>
-        <strong>Author</strong>
+        <strong>Author:</strong>
         <span itemprop="author" itemscope itemtype="http://schema.org/Person">
             <span itemprop="name">
                 <txp:author link="1" this_section="1" />
@@ -54,7 +59,7 @@
         <!-- only display categories if they are actually set for an article, otherwise omit -->
         <txp:if_article_category>
             <br>
-            <strong>Category</strong>
+            <strong>Category:</strong>
             <span itemprop="keywords">
                 <txp:if_article_category number="1"><txp:category1 title="1" link="1" /></txp:if_article_category><txp:if_article_category number="2"><txp:if_article_category number="1">, </txp:if_article_category><txp:category2 title="1" link="1" /></txp:if_article_category>
             </span>
