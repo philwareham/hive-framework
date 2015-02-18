@@ -21,11 +21,19 @@
     [rel="prev"] {
         float: left;
         margin: 0 1em 0 0;
+
+        &:before {
+            content: "\2190" "\00A0";
+        }
     }
 
     [rel="next"] {
         float: right;
         margin: 0 0 0 1em;
+
+        &:after {
+            content: "\00A0" "\2192";
+        }
     }
 }
 
