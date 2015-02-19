@@ -32,7 +32,7 @@
         <txp:else />
             <txp:if_comments_allowed>
                 <br>
-                <strong>Comments</strong>
+                <strong>Comments:</strong>
                 <a href="<txp:permlink />#comments-head" title="View comments" itemprop="discussionUrl" itemscope itemtype="http://schema.org/UserComments">
                     <span itemprop="interactionCount">0</span>
                 </a>
