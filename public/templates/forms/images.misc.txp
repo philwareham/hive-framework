@@ -4,7 +4,7 @@
 <!-- ...now use that image caption and wrap img inside a figure with figcaption tags, otherwise just use a plain img tag -->
 <txp:if_variable name="caption" value="">
 
-<!-- image - overriding the width and height to let the image scale to fit parent container -->
+    <!-- image - overriding the width and height to let the image scale to fit parent container -->
     <p itemprop="image">
         <txp:image width="0" height="0" />
     </p>
@@ -13,12 +13,12 @@
 
     <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
 
-<!-- image - overriding the width and height to let the image scale to fit parent container -->
+        <!-- image - overriding the width and height to let the image scale to fit parent container -->
         <span itemprop="contentUrl">
             <txp:image width="0" height="0" />
         </span>
 
-<!-- you do not need to specify the attribute type="caption" as that is the default setting for <txp:image_info /> tag -->
+        <!-- you do not need to specify the attribute type="caption" as that is the default setting for <txp:image_info /> tag -->
         <figcaption itemprop="caption">
             <txp:image_info />
         </figcaption>
