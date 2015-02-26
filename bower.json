@@ -3,8 +3,8 @@
   "version": "0.6.0",
   "directory": "bower_components",
   "dependencies": {
+    "autosize": "2.0.0",
     "google-code-prettify": "1.0.3",
-    "jquery-autosize": "1.18.18",
     "jquery.cookie": "1.4.1",
     "jquery-details": "0.1.0",
     "jquery-placeholder": "2.1.0",
