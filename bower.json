@@ -5,7 +5,7 @@
   "dependencies": {
     "autosize": "2.0.0",
     "dropcap.js": "1.0.0",
-    "google-code-prettify": "1.0.3",
+    "google-code-prettify": "1.0.4",
     "jquery.cookie": "1.4.1",
     "jquery-details": "0.1.0",
     "jquery-placeholder": "2.1.0",
