@@ -4,6 +4,7 @@
   "directory": "bower_components",
   "dependencies": {
     "autosize": "2.0.0",
+    "dropcap.js": "1.0.0",
     "google-code-prettify": "1.0.3",
     "jquery.cookie": "1.4.1",
     "jquery-details": "0.1.0",
