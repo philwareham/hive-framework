@@ -1,6 +1,5 @@
 <!-- CSS -->
-<link rel="dns-prefetch" href="http://fonts.googleapis.com">
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic">
 <link rel="stylesheet" href="<txp:site_url />assets/css/main.css">
 
 <!-- Prefetch DNS for external JavaScript assets -->
