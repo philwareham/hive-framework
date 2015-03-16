@@ -30,7 +30,7 @@
 <!-- display resulting articles (10 per page; default setting) -->
 <txp:article class="article-list" wraptag="ul">
 
-    <li role="article" itemscope itemtype="http://schema.org/Article">
+    <li itemscope itemtype="http://schema.org/Article">
         <h4 itemprop="name headline">
             <a href="<txp:permlink />" itemprop="url">
                 <txp:title />
@@ -72,7 +72,7 @@
     <txp:variable name="prev" value='<txp:older />' />
     <txp:variable name="next" value='<txp:newer />' />
 
-    <nav class="paginator" role="navigation" aria-label="Article navigation">
+    <nav class="paginator" aria-label="Article navigation">
 
         <txp:if_variable name="next" value="">
         <txp:else />

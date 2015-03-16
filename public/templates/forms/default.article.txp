@@ -1,5 +1,5 @@
 <!-- possible article schema types: Article, Blog (see http://schema.org/CreativeWork for more info) -->
-<article role="article" itemscope itemtype="http://schema.org/Article">
+<article itemscope itemtype="http://schema.org/Article">
 
 <!-- if not an individual article then make the title h1 a link -->
 <txp:if_individual_article>

@@ -31,7 +31,7 @@
         <div class="container">
 
 <!-- Main content -->
-            <main role="main" aria-label="Main content">
+            <main aria-label="Main content">
 
                 <!-- is this the search result page? also omits the pagination links below (uses pagination format within search_results.article.txp instead) -->
                 <txp:if_search>
@@ -77,7 +77,7 @@
 
                     <txp:if_variable name="more" value="">
                     <txp:else />
-                        <nav class="paginator" role="navigation" aria-label="Article navigation">
+                        <nav class="paginator" aria-label="Article navigation">
 
                             <txp:if_variable name="prev" value="">
                             <txp:else />

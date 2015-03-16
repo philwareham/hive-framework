@@ -3,7 +3,7 @@
 <txp:variable name="file_download_description" value='<txp:file_download_description />' />
 <txp:variable name="file_download_category" value='<txp:file_download_category />' />
 
-<section role="region" itemscope itemtype="http://schema.org/DataDownloads">
+<section itemscope itemtype="http://schema.org/DataDownloads">
     <h6 class="accessibility">File download</h6>
 
     <!-- ...if exists, use the file title, otherwise use file name -->

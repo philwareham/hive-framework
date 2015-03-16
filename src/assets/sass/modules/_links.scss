@@ -60,7 +60,7 @@ a {
  * Additional styling for `h1` heading links within `main`.
  */
 
-[role="main"] h1 a {
+main h1 a {
     border-radius: $default-border-radius / 4;
     color: $color-text;
 
