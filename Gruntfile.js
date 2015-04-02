@@ -138,6 +138,7 @@ module.exports = function (grunt)
                     module: true,
                     require: true,
                     requirejs: true,
+                    autosize: true,
                     responsiveNav: true,
                     prettyPrint: true
                 }
@@ -155,7 +156,7 @@ module.exports = function (grunt)
                 files: [
                     {
                         'public/assets/js/main.js': ['src/assets/js/main.js'],
-                        'public/assets/js/autosize.js': ['bower_components/autosize/dest/autosize.js'],
+                        'public/assets/js/autosize.js': ['bower_components/autosize/jquery.autosize.js'],
                         'public/assets/js/cookie.js': ['bower_components/jquery.cookie/jquery.cookie.js'],
                         'public/assets/js/details.js': ['bower_components/jquery-details/jquery.details.js'],
                         'public/assets/js/picturefill.js': ['bower_components/picturefill/dist/picturefill.js'],
