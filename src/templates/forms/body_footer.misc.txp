@@ -13,5 +13,5 @@
     </p>
 </footer>
 
-<script data-main="<txp:site_url />assets/js/main.1428049310888.js" src="<txp:site_url />assets/js/require.1428049310888.js"></script>
+<script data-main="<txp:site_url />assets/js/main.@@timestamp.js" src="<txp:site_url />assets/js/require.@@timestamp.js"></script>
 <noscript>JavaScript is currently disabled in your browser - please activate it for the best experience.</noscript>

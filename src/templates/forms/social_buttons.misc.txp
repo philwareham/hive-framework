@@ -1,0 +1,14 @@
+<!-- Also requires JavaScript from /assets/js/main.js -->
+<aside>
+    <h5 class="accessibility">Share this</h5>
+    <p>
+        <!-- Google+ '+1' button -->
+        <a class="g-plusone" rel="external" href="https://plus.google.com/" data-size="medium" data-annotation="none" data-expandTo="top" data-href="<txp:permlink />">+1</a>
+
+        <!-- Twitter 'Tweet' button (optional: add a `data-via="twitterusername"` attribute with your own Twitter username) -->
+        <a class="twitter-share-button" rel="external" href="https://twitter.com/share" data-count="none" data-url="<txp:permlink />" data-text="<txp:title />">Tweet</a>
+
+        <!-- Facebook 'Like' button AMEND THE URL TO REFLECT YOUR OWN SITE DETAILS -->
+        <iframe class="facebook-like-button" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Ftesting3.designhive.com%2F<txp:article_url_title />&amp;locale=en_GB&amp;layout=button_count&amp;height=20"></iframe>
+    </p>
+</aside>

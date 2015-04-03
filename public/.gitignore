@@ -4,6 +4,7 @@
 /images
 /rpc
 /sites
+/templates/*/
 /textpattern
 /.htaccess
 /HISTORY.txt

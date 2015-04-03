@@ -1,0 +1,49 @@
+<p>
+    <strong>Enter your comment below.</strong>
+    Fields marked
+    <abbr class="required" title="Required">*</abbr>
+    are required. You must preview your comment first before finally posting.
+</p>
+
+<!-- if there is an error, then inform user -->
+<txp:if_comments_error>
+    <txp:comments_error class="error_message" wraptag="ol" break="li" />
+</txp:if_comments_error>
+
+<fieldset>
+
+    <p class="large">
+        <label for="name">Name <abbr class="required" title="Required field">*</abbr></label>
+        <br>
+        <txp:comment_name_input />
+    </p>
+
+    <p class="large">
+        <label for="email">Email <abbr class="required" title="Required field">*</abbr></label>
+        <br>
+        <txp:comment_email_input />
+    </p>
+
+    <p class="large">
+        <label for="web">Website</label>
+        <br>
+        <txp:comment_web_input />
+    </p>
+
+    <p>
+        <txp:comment_remember />
+    </p>
+
+    <p class="small">
+        <label for="message">Message <abbr class="required" title="Required field">*</abbr></label>
+        <br>
+        <txp:comment_message_input />
+    </p>
+
+</fieldset>
+
+<!-- preview and submit buttons (note: submit button will have a class of 'disabled' applied until you have previewed the message at least once) -->
+<p>
+    <txp:comment_preview />
+    <txp:comment_submit />
+</p>

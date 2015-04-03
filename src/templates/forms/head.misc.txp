@@ -1,6 +1,6 @@
 <!-- CSS -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic">
-<link rel="stylesheet" href="<txp:site_url />assets/css/main.1428049310888.css">
+<link rel="stylesheet" href="<txp:site_url />assets/css/main.@@timestamp.css">
 
 <!-- Prefetch DNS for external JavaScript assets -->
 <link rel="dns-prefetch" href="https://ajax.googleapis.com">
@@ -68,5 +68,5 @@
 <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
-    <link rel="stylesheet" href="<txp:site_url />assets/css/ie8.1428049310888.css">
+    <link rel="stylesheet" href="<txp:site_url />assets/css/ie8.@@timestamp.css">
 <![endif]-->

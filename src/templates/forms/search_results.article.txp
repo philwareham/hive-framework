@@ -1,0 +1,89 @@
+<!-- count how many results return -->
+<txp:article pgonly="1" />
+
+<txp:if_search_results>
+
+<!-- if search result count greater than 200 then display excessive results message, otherwise show search result count -->
+    <txp:if_search_results max="200">
+        <h3>
+            <txp:search_result_count />
+            matching your search request
+            <q>
+                <txp:search_term />
+            </q>
+        </h3>
+    <txp:else />
+        <h3>
+            It seems like you are looking for a very common search term, maybe try a more specific phrase than
+            <q>
+                <txp:search_term />
+            </q>
+        </h3>
+    </txp:if_search_results>
+
+<!-- if no search results, then display no search results message -->
+<txp:else />
+    <h3>Sorry, no results found matching your search request</h3>
+
+</txp:if_search_results>
+
+<!-- display resulting articles (10 per page; default setting) -->
+<txp:article class="article-list" wraptag="ul">
+
+    <li itemscope itemtype="http://schema.org/Article">
+        <h4 itemprop="name headline">
+            <a href="<txp:permlink />" itemprop="url">
+                <txp:title />
+            </a>
+        </h4>
+
+<!-- if the article has an excerpt, display that, otherwise show highlighted keywords in context of article -->
+        <div itemprop="description">
+            <txp:if_excerpt>
+                <txp:excerpt />
+            <txp:else />
+                <p>
+                    <txp:search_result_excerpt />
+                </p>
+            </txp:if_excerpt>
+        </div>
+
+        <p class="footnote">
+            Posted:
+            <time datetime="<txp:posted format="iso8601" />" itemprop="datePublished">
+                <txp:posted />
+            </time>
+            &#183;
+            Author:
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <span itemprop="name">
+                    <txp:author link="1" this_section="1" />
+                </span>
+            </span>
+        </p>
+    </li>
+
+</txp:article>
+
+<!-- check if there are further results and provide pagination links or disabled buttons depending on the result,
+    this method is more flexibile than using simple txp:older/txp:newer tags -->
+<txp:if_search_results min="11">
+
+    <txp:variable name="prev" value='<txp:older />' />
+    <txp:variable name="next" value='<txp:newer />' />
+
+    <nav class="paginator" aria-label="Article navigation">
+
+        <txp:if_variable name="next" value="">
+        <txp:else />
+            <a rel="prev" href="<txp:newer />" title="Go to previous page" aria-label="Go to previous page">Prev</a>
+        </txp:if_variable>
+
+        <txp:if_variable name="prev" value="">
+        <txp:else />
+            <a rel="next" href="<txp:older />" title="Go to next page" aria-label="Go to next page">Next</a>
+        </txp:if_variable>
+
+    </nav>
+
+</txp:if_search_results>

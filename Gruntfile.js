@@ -13,9 +13,15 @@ module.exports = function (grunt)
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-critical');
     grunt.loadNpmTasks('grunt-dev-update');
+    grunt.loadNpmTasks('grunt-replace');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+
+        // Set up timestamp.
+        opt : {
+            timestamp: '<%= new Date().getTime() %>'
+        },
 
         // Use 'config.rb' file to configure Compass.
         compass: {
@@ -145,6 +151,22 @@ module.exports = function (grunt)
             }
         },
 
+        // Generate filename timestamps within template/mockup files.
+        replace: {
+            theme: {
+                options: {
+                    patterns: [{
+                            match: 'timestamp',
+                            replacement: '<%= opt.timestamp %>'
+                    }]
+                },
+                files: [
+                    {expand: true, cwd: 'src/templates/', src: ['**'], dest: 'public/templates/'},
+                    {src: ['src/assets/js/main.js'], dest: 'tmp/assets/js/main.js'}
+                ]
+            }
+        },
+
         // Uglify and copy JavaScript files from `bower-components`, and also `main.js`, to `public/assets/js/`.
         uglify: {
             dist: {
@@ -155,7 +177,7 @@ module.exports = function (grunt)
 
                 files: [
                     {
-                        'public/assets/js/main.js': ['src/assets/js/main.js'],
+                        'public/assets/js/main.js': ['tmp/assets/js/main.js'],
                         'public/assets/js/autosize.js': ['bower_components/autosize/jquery.autosize.js'],
                         'public/assets/js/cookie.js': ['bower_components/jquery.cookie/jquery.cookie.js'],
                         'public/assets/js/details.js': ['bower_components/jquery-details/jquery.details.js'],
@@ -192,7 +214,7 @@ module.exports = function (grunt)
     });
 
     // Register tasks.
-    grunt.registerTask('build', ['jshint', 'sass', 'copy:js', 'uglify']);
+    grunt.registerTask('build', ['jshint', 'sass', 'copy:js', 'replace', 'uglify']);
     grunt.registerTask('criticalcss', ['sass', 'critical']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('sass', ['compass', 'concat', 'cmq', 'cssmin', 'copy:css']);
