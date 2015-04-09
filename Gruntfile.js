@@ -177,7 +177,15 @@ module.exports = function (grunt)
 
                 files: [
                     {
+<<<<<<< Updated upstream
                         'public/assets/js/main.js': ['tmp/assets/js/main.js'],
+=======
+<<<<<<< HEAD
+                        'public/assets/js/main.js': ['src/assets/js/main.js'],
+=======
+                        'public/assets/js/main.js': ['tmp/assets/js/main.js'],
+>>>>>>> origin/master
+>>>>>>> Stashed changes
                         'public/assets/js/autosize.js': ['bower_components/autosize/jquery.autosize.js'],
                         'public/assets/js/cookie.js': ['bower_components/jquery.cookie/jquery.cookie.js'],
                         'public/assets/js/details.js': ['bower_components/jquery-details/jquery.details.js'],
