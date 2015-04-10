@@ -9,8 +9,8 @@
     "jquery.cookie": "1.4.1",
     "jquery-details": "0.1.0",
     "jquery-placeholder": "2.1.1",
-    "picturefill": "2.3.0",
-    "responsive-nav": "1.0.38",
+    "picturefill": "2.3.1",
+    "responsive-nav": "1.0.39",
     "ResponsiveSlides.js": "latest",
     "requirejs": "2.1.17"
   }
