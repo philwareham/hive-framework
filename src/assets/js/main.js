@@ -21,12 +21,8 @@
         },
         shim:
         {
-            'autosize': ['jquery'],
             'cookie': ['jquery'],
-            'details': ['jquery'],
-            'flowplayer': ['jquery'],
-            'jqueryui': ['jquery'],
-            'placeholder': ['jquery']
+            'jqueryui': ['jquery']
         }
     });
 
