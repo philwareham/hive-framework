@@ -1,5 +1,4 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
-
     RewriteRule ^(.*?)\.[0-9]+\.(css|js)$ $1.$2 [L]
 </IfModule>
