@@ -3,7 +3,7 @@
   "version": "0.6.0",
   "directory": "bower_components",
   "dependencies": {
-    "autosize": "1.18.18",
+    "autosize": "3.0.3",
     "dropcap.js": "1.0.0",
     "google-code-prettify": "1.0.4",
     "jquery.cookie": "1.4.1",
