@@ -14,6 +14,7 @@ module.exports = function (grunt)
     grunt.loadNpmTasks('grunt-critical');
     grunt.loadNpmTasks('grunt-dev-update');
     grunt.loadNpmTasks('grunt-replace');
+    grunt.loadNpmTasks('grunt-scss-lint');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -167,6 +168,17 @@ module.exports = function (grunt)
             }
         },
 
+        // Validate Sass files via scss-lint.
+        scsslint: {
+            all: ['src/assets/sass/**/*.scss'],
+            options: {
+                bundleExec: true,
+                //config: '.scss-lint.yml',
+                reporterOutput: 'scss-lint-report.xml',
+                colorizeOutput: true
+            }
+        },
+
         // Uglify and copy JavaScript files from `bower-components`, and also `main.js`, to `public/assets/js/`.
         uglify: {
             dist: {
@@ -217,7 +229,7 @@ module.exports = function (grunt)
     grunt.registerTask('build', ['jshint', 'sass', 'copy:js', 'replace', 'uglify']);
     grunt.registerTask('criticalcss', ['sass', 'critical']);
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('sass', ['compass', 'concat', 'cmq', 'cssmin', 'copy:css']);
+    grunt.registerTask('sass', ['scsslint', 'compass', 'concat', 'cmq', 'cssmin', 'copy:css']);
     grunt.registerTask('test', ['jshint']);
     grunt.registerTask('travis', ['jshint', 'compass']);
     grunt.registerTask('updatedev', ['devUpdate']);
