@@ -34,37 +34,37 @@
         height: 32px;
         background-size: 32px 32px;
 
-        &.facebook {
-            background-image: url("../img/facebook.svg");
-        }
-
-        &.flickr {
-            background-image: url("../img/flickr.svg");
-        }
-
-        &.googleplus {
-            background-image: url("../img/googleplus.svg");
-        }
-
-        &.linkedin {
-            background-image: url("../img/linkedin.svg");
-        }
-
-        &.pinterest {
-            background-image: url("../img/pinterest.svg");
-        }
-
-        &.twitter {
-            background-image: url("../img/twitter.svg");
-        }
-
-        &.youtube {
-            background-image: url("../img/youtube.svg");
-        }
-
         &:hover {
-            @include filter(#{"brightness(1.1)"}); // TODO: temporary workaround for Sass/Compass bug when using @include filter(brightness(1.1));
+            @include filter(brightness(1.1));
         }
+    }
+
+    .facebook {
+        background-image: url("../img/facebook.svg");
+    }
+
+    .flickr {
+        background-image: url("../img/flickr.svg");
+    }
+
+    .googleplus {
+        background-image: url("../img/googleplus.svg");
+    }
+
+    .linkedin {
+        background-image: url("../img/linkedin.svg");
+    }
+
+    .pinterest {
+        background-image: url("../img/pinterest.svg");
+    }
+
+    .twitter {
+        background-image: url("../img/twitter.svg");
+    }
+
+    .youtube {
+        background-image: url("../img/youtube.svg");
     }
 }
 

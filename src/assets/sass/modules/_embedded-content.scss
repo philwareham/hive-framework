@@ -12,16 +12,11 @@ video {
 }
 
 /**
+ * Images and alignments (compatible with Textile markup syntax).
+ *
  * 1. Remove the gap between images and the bottom of their containers.
  * 2. Remove border when inside `a` element in IE 8-10.
- */
-
-img {
-    vertical-align: middle; /* 1 */
-    border: 0; /* 2 */
-}
-
-/**
+ *
  * Image alignment (compatible with Textile markup syntax).
  *
  * Example HTML:
@@ -29,9 +24,19 @@ img {
  * <img class="align-left">
  * <img class="align-right">
  * <img class="align-center">
+ *
+ * Image alignment via `position: absolute`.
+ *
+ * Example HTML:
+ *
+ * <img class="align-hard-left">
+ * <img class="align-hard-right">
  */
 
 img {
+    vertical-align: middle; /* 1 */
+    border: 0; /* 2 */
+
     &.align-left {
         float: left;
         margin: 1em 1em 1em 0;
@@ -46,18 +51,7 @@ img {
         display: block;
         margin: 1em auto;
     }
-}
 
-/**
- * Image alignment via `position: absolute`.
- *
- * Example HTML:
- *
- * <img class="align-hard-left">
- * <img class="align-hard-right">
- */
-
-img {
     &.align-hard-left {
         position: absolute;
         left: 0;

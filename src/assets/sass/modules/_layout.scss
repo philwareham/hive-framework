@@ -5,14 +5,14 @@
  * 1. Always force scrollbar padding so we don't get 'jumping'.
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
- * 3. As 2 above, for Windows Phone.
+ * 3. Non-prefixed version of the above.
  */
 
 html {
     -webkit-tap-highlight-color: rgba($color-link-hover, 0.5);
     overflow-y: scroll; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
-    -ms-text-size-adjust: 100%; /* 3 */
+    text-size-adjust: 100%; /* 3 */
 }
 
 /**

@@ -28,6 +28,7 @@ linters:
 # variable declarations.
   ColorVariable:
     enabled: true
+    severity: warning
 
 # Prefer `//` comments over `/* ... */`.
   Comment:
@@ -159,8 +160,8 @@ linters:
       'border',
       'padding',
       'width',
-      'height',
       'max-width',
+      'height',
       'max-height'
     ]
 
@@ -290,7 +291,8 @@ linters:
     identifier_list: base
     additional_identifiers: []
     excluded_identifiers: [
-      '-ms-touch-action'
+      '-ms-touch-action',
+      '-webkit-tap-highlight-color'
     ]
 
 # Omit length units on zero values.

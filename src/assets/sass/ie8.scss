@@ -153,31 +153,31 @@ hr {
     background-image: url("../img/hr.png");
 }
 
-.social-channels a.facebook {
+.social-channels .facebook {
     background-image: url("../img/facebook.png");
 }
 
-.social-channels a.flickr {
+.social-channels .flickr {
     background-image: url("../img/flickr.png");
 }
 
-.social-channels a.googleplus {
+.social-channels .googleplus {
     background-image: url("../img/googleplus.png");
 }
 
-.social-channels a.linkedin {
+.social-channels .linkedin {
     background-image: url("../img/linkedin.png");
 }
 
-.social-channels a.pinterest {
+.social-channels .pinterest {
     background-image: url("../img/pinterest.png");
 }
 
-.social-channels a.twitter {
+.social-channels .twitter {
     background-image: url("../img/twitter.png");
 }
 
-.social-channels a.youtube {
+.social-channels .youtube {
     background-image: url("../img/youtube.png");
 }
 
@@ -188,23 +188,23 @@ hr {
    ========================================================================== */
 
 .ui-helper-zfix {
-    filter: Alpha(Opacity=0);
+    filter: alpha(opacity=0);
 }
 
 .ui-priority-secondary {
-    filter: Alpha(Opacity=66);
+    filter: alpha(opacity=66);
 }
 
 .ui-state-disabled {
-    filter: Alpha(Opacity=33);
+    filter: alpha(opacity=33);
 
     .ui-icon {
-        filter: Alpha(Opacity=33); // fix inheritance bug
+        filter: alpha(opacity=33); // fix inheritance bug
     }
 }
 
 .ui-widget-shadow {
-    filter: Alpha(Opacity=33);
+    filter: alpha(opacity=33);
 }
 
 .ui-widget-overlay {
