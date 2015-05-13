@@ -156,13 +156,28 @@ linters:
     min_properties: 2
     separate_groups: false
     order: [
+      'position',
+      'top',
+      'right',
+      'bottom',
+      'left',
+      'z-index',
+      'display',
+      'float',
       'margin',
       'border',
       'padding',
       'width',
+      'min-width',
       'max-width',
       'height',
-      'max-height'
+      'min-height',
+      'max-height',
+      'font-family',
+      'color',
+      'background',
+      'background-color',
+      'opacity'
     ]
 
 # Reports when you use an unknown CSS property (ignoring vendor-prefixed).
