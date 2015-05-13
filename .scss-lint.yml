@@ -18,7 +18,7 @@ linters:
 # Prefer the terser `border: 0` over `border: none`.
   BorderZero:
     enabled: true
-    convention: 0
+    convention: zero
 
 # Prefer hexadecimal colour codes over colour keywords.
   ColorKeyword:
@@ -37,8 +37,9 @@ linters:
   Compass::*:
     enabled: true
     severity: warning
-    ignore:
-      - 'border-radius'
+    ignore: [
+        'border-radius'
+    ]
 
 # Reports @debug statements (which you probably left behind accidentally).
   DebugStatement:
@@ -72,6 +73,7 @@ linters:
 # Files should always have a final newline.
   FinalNewline:
     enabled: true
+    present: true
 
 # You can specify whether you prefer shorthand or long-form hexadecimal colours.
   HexLength:
@@ -138,10 +140,9 @@ linters:
 
 # Limit the number of properties in a rule set.
   PropertyCount:
-    enabled: true
-    severity: warning
+    enabled: false
     include_nested: false
-    max_properties: 12
+    max_properties: 10
 
 # Sort properties in a strict order.
   PropertySortOrder:
@@ -150,20 +151,21 @@ linters:
     ignore_unspecified: true
     min_properties: 2
     separate_groups: false
-    order:
-      - margin
-      - border
-      - padding
-      - width
-      - height
-      - max-width
-      - max-height
+    order: [
+      'margin',
+      'border',
+      'padding',
+      'width',
+      'height',
+      'max-width',
+      'max-height'
+    ]
 
 # Reports when you use an unknown CSS property (ignoring vendor-prefixed).
   PropertySpelling:
     enabled: true
     severity: warning
-    #extra_properties:
+    extra_properties: []
 
 # Configure which units are allowed for property values.
   PropertyUnits:
@@ -178,7 +180,7 @@ linters:
       'dpi', 'dpcm', 'dppx',                   # Resolution
       '%',                                     # Other
     ]
-    #properties:
+    properties: {}
 
 # Avoid qualifying elements in selectors (a.k.a. 'tag-qualifying').
   QualifyingElement:
@@ -273,9 +275,10 @@ linters:
   VariableForProperty:
     enabled: true
     severity: warning
-    properties:
-      - color
-      - font
+    properties: [
+      'color',
+      'font'
+    ]
 
 # Avoid vendor prefixes. That is, don't write them yourself.
   VendorPrefix:
