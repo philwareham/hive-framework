@@ -173,9 +173,9 @@ module.exports = function (grunt)
             all: ['src/assets/sass/**/*.scss'],
             options: {
                 bundleExec: true,
+                colorizeOutput: false,
                 //config: '.scss-lint.yml',
-                reporterOutput: 'scss-lint-report.xml',
-                colorizeOutput: true
+                reporterOutput: 'scss-lint-report.xml'
             }
         },
 
