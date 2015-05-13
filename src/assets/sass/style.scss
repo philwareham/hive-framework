@@ -23,25 +23,25 @@
 
 @media screen {
 
-@import "core/layout";
-@import "modules/layout";
-@import "modules/navigation";
-@import "modules/links";
-@import "modules/typography";
-@import "modules/alerts";
-@import "modules/embedded-content";
-@import "modules/tables";
-@import "modules/lists";
-@import "modules/forms";
-@import "modules/buttons";
-@import "modules/cookie-disclaimer";
-@import "modules/code-prettify";
-@import "modules/pagination";
-@import "modules/breadcrumbs";
-@import "modules/slider";
-@import "modules/social";
-@import "modules/misc";
-@import "modules/comments";
+    @import "core/layout";
+    @import "modules/layout";
+    @import "modules/navigation";
+    @import "modules/links";
+    @import "modules/typography";
+    @import "modules/alerts";
+    @import "modules/embedded-content";
+    @import "modules/tables";
+    @import "modules/lists";
+    @import "modules/forms";
+    @import "modules/buttons";
+    @import "modules/cookie-disclaimer";
+    @import "modules/code-prettify";
+    @import "modules/pagination";
+    @import "modules/breadcrumbs";
+    @import "modules/slider";
+    @import "modules/social";
+    @import "modules/misc";
+    @import "modules/comments";
 
 }
 
@@ -55,6 +55,6 @@
 
 @media print {
 
-@import "core/print";
+    @import "core/print";
 
 }

@@ -38,7 +38,10 @@ linters:
     enabled: true
     severity: warning
     ignore: [
-        'border-radius'
+      'border-radius',
+      'inline-block',
+      'opacity',
+      'text-shadow'
     ]
 
 # Reports @debug statements (which you probably left behind accidentally).
@@ -286,7 +289,9 @@ linters:
     severity: warning
     identifier_list: base
     additional_identifiers: []
-    excluded_identifiers: []
+    excluded_identifiers: [
+      '-ms-touch-action'
+    ]
 
 # Omit length units on zero values.
   ZeroUnit:
