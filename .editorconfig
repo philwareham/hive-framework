@@ -12,9 +12,6 @@ indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[{*.md}]
-trim_trailing_whitespace = false
-
-[{.scss-lint.yml,.travis.yml,bower.json,Gemfile.lock,humans.txt,package.json}]
+[{*.yml,*.json,Gemfile.lock,humans.txt}]
 indent_size = 2
 indent_style = space
