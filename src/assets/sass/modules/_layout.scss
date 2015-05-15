@@ -22,7 +22,7 @@ html {
 ::selection {
     color: #ffffff;
     background: $color-link-focus;
-    text-shadow: none !important
+    text-shadow: none !important;
 }
 
 /**
@@ -119,9 +119,9 @@ article {
     margin-top: 2em;
 
     &:before {
-        display: block;
-        content: "";
-        height: 2em;
         margin: -2em 0 0;
+        display: block;
+        height: 2em;
+        content: "";
     }
 }

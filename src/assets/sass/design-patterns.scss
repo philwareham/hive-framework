@@ -118,12 +118,12 @@ $colors: (
 }
 
 .jquery-ui-icons li {
-    margin: 2px;
     position: relative;
-    padding: 4px 0;
-    cursor: pointer;
     float: left;
+    margin: 2px;
+    padding: 4px 0;
     list-style: none;
+    cursor: pointer;
 }
 
 .jquery-ui-icons span.ui-icon {
@@ -136,9 +136,9 @@ $colors: (
  */
 
 .jquery-ui-slider-vertical span {
-    height: 120px;
     float: left;
     margin: 15px;
+    height: 120px;
 }
 
 /**
@@ -183,9 +183,9 @@ $colors: (
 .design-patterns--breakpoint-1,
 .design-patterns--breakpoint-2,
 .design-patterns--breakpoint-3 {
-    color: #ffffff;
-    background-color: red;
     padding: 0.5em;
+    color: #ffffff;
+    background-color: #ff0000;
 }
 
 .design-patterns--breakpoint-1,

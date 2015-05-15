@@ -16,7 +16,7 @@
     @include box-shadow;
 
     position: relative;
-    margin: 0 0 1em 0;
+    margin: 0 0 1em;
     border: solid 1px $color-border;
     border-radius: $default-border-radius;
     padding: 0.375em;
@@ -36,17 +36,17 @@
 
 .rslides {
     position: relative;
-    list-style: none;
-    overflow: hidden;
     margin: 0;
     padding: 0;
+    list-style: none;
+    overflow: hidden;
 
     li {
         -webkit-backface-visibility: hidden;
         position: absolute;
-        display: none;
-        left: 0;
         top: 0;
+        left: 0;
+        display: none;
         width: 100%;
     }
 
@@ -88,8 +88,8 @@ a.rslides_nav {
     line-height: 1;
 
     li {
-        margin: 0.375em 0.25em 0;
         display: inline-block;
+        margin: 0.375em 0.25em 0;
     }
 
     a {
@@ -99,9 +99,9 @@ a.rslides_nav {
         display: block;
         border: 1px solid $color-border;
         border-radius: 50%;
-        background: $color-background;
         width: 1em;  // 12px
         height: 1em; // 12px
+        background: $color-background;
 
         &:hover {
             border-color: $color-link-hover;

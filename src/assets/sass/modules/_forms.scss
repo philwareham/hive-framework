@@ -152,7 +152,7 @@ input[type="checkbox"],
 input[type="radio"] {
     padding: 0; /* 1 */
 
-    & + label {
+    + label {
         margin-right: 0.5em; /* 2 */
 
         &:last-of-type {
@@ -260,11 +260,11 @@ textarea[disabled],
 span.disabled {
     @include box-shadow(none !important);
 
-    opacity: 1; /* 2 */
     border-color: lighten($color-border, 9%) !important;
     color: #aaaaaa !important;
     background: #eeeeee !important;
     text-shadow: none !important;
+    opacity: 1; /* 2 */
     cursor: default !important; /* 3 */
 }
 
@@ -301,8 +301,8 @@ input {
  */
 
 abbr.required {
-    color: $color-error-text;
     border: 0;
+    color: $color-error-text;
 }
 
 /**
