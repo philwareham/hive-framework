@@ -71,7 +71,7 @@ $colors: (
         top: 0.5em;
         padding: 1px 0.2142857em; // 3px / 14px
         font-family: $font-mono;
-        background-color: #ffffff; // IE 8 support.
+        background-color: $color-background; // IE 8 support.
         background-color: rgba(255, 255, 255, 0.66);
     }
 }
@@ -184,7 +184,7 @@ $colors: (
 .design-patterns--breakpoint-2,
 .design-patterns--breakpoint-3 {
     padding: 0.5em;
-    color: #ffffff;
+    color: $color-text-inverse;
     background-color: #ff0000;
 }
 

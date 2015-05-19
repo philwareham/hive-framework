@@ -203,11 +203,8 @@ hr {
     }
 }
 
+.ui-widget-overlay,
 .ui-widget-shadow {
-    filter: alpha(opacity=33);
-}
-
-.ui-widget-overlay {
     background: url("../img/overlay-no-rgba.png");
 }
 

@@ -20,7 +20,7 @@ html {
  */
 
 ::selection {
-    color: #ffffff;
+    color: $color-text-inverse;
     background: $color-link-focus;
     text-shadow: none !important;
 }
@@ -119,8 +119,8 @@ article {
     margin-top: 2em;
 
     &:before {
-        margin: -2em 0 0;
         display: block;
+        margin: -2em 0 0;
         height: 2em;
         content: "";
     }
