@@ -1,6 +1,6 @@
 /*!
 
-   Flowplayer v6.0.0 (Thursday, 21. May 2015 06:01PM) | flowplayer.org/license
+   Flowplayer v6.0.1 (Wednesday, 27. May 2015 06:31AM) | flowplayer.org/license
 
 */
 /*! (C) WebReflection Mit Style License */
@@ -12,6 +12,8 @@ var common = module.exports = {},
     $ = window.jQuery,
     punycode = require('punycode'),
     computedStyle = require('computed-style');
+
+common.noop = function() {};
 
 common.removeNode = function(el) {
   if (!el || !el.parentNode) return;
@@ -584,7 +586,7 @@ engineImpl = function flashEngine(player, root) {
       },
 
       // not supported yet
-      speed: function(){},
+      speed: common.noop,
 
 
       unload: function() {
@@ -695,7 +697,7 @@ var EVENTS = {
    // empty: 0,
    error: 'error',
    dataunavailable: 'error',
-   webkitendfullscreen: 'unload'
+   webkitendfullscreen: !flowplayer.support.inlineVideo && 'unload'
 
 };
 
@@ -793,6 +795,10 @@ engine = function(player, root) {
          }
          //TODO subtitles support
 
+         // IE does not fire delegated timeupdate events
+         bean.off(api, 'timeupdate', common.noop);
+         bean.on(api, 'timeupdate', common.noop);
+
          common.prop(api, 'loop', !!(video.loop || conf.loop));
 
          if (typeof volumeLevel !== 'undefined') {
@@ -873,6 +879,7 @@ engine = function(player, root) {
 
       Object.keys(EVENTS).forEach(function(type) {
         var flow = EVENTS[type];
+        if (!flow) return;
         root.addEventListener(type, function(e) {
           video = api.listeners[instanceId];
           if (!e.target || !ClassList(e.target).contains('fp-engine')) return;
@@ -1221,7 +1228,7 @@ flowplayer(function(player, root) {
      var c = common.pick(player.conf, props);
      if (c.logo) c.logo = common.createElement('img', {src: c.logo}).src;
      c.clip = player.video;
-     var script = "var w=window,d=document,e;w._fpes||(w._fpes=[],w.addEventListener(\"load\",function(){var s=d.createElement(\"script\");s.src=\"//embed.flowplayer.org/6.0.0/embed.min.js\",d.body.appendChild(s)})),e=[].slice.call(d.getElementsByTagName(\"script\"),-1)[0].parentNode,w._fpes.push({e:e,l:\"$library\",c:$conf});\n".replace('$conf', JSON.stringify(c)).replace('$library', embedConf.library || '');
+     var script = "var w=window,d=document,e;w._fpes||(w._fpes=[],w.addEventListener(\"load\",function(){var s=d.createElement(\"script\");s.src=\"//embed.flowplayer.org/6.0.1/embed.min.js\",d.body.appendChild(s)})),e=[].slice.call(d.getElementsByTagName(\"script\"),-1)[0].parentNode,w._fpes.push({e:e,l:\"$library\",c:$conf});\n".replace('$conf', JSON.stringify(c)).replace('$library', embedConf.library || '');
 
      return '<a href="$href">Watch video!\n<script>$script</script></a>'.replace('$href', player.conf.origin || window.location.href).replace('$script', script);
 
@@ -1470,7 +1477,7 @@ flowplayer(function(player, root) {
 
    player.on(FS_ENTER, function(e) {
       rootClasses.add("is-fullscreen");
-      if (!FS_SUPPORT) common.css(root, 'position', 'absolute');
+      if (!FS_SUPPORT) common.css(root, 'position', 'fixed');
       player.isFullscreen = true;
 
    }).on(FS_EXIT, function(e) {
@@ -1484,6 +1491,8 @@ flowplayer(function(player, root) {
       if (!FS_SUPPORT && player.engine === "html5") setTimeout(function() { root.css('opacity', oldOpacity); });
       player.isFullscreen = false;
       win.scrollTo(scrollX, scrollY);
+   }).on('unload', function() {
+     if (player.isFullscreen) player.fullscreen();
    });
 
    player.on('shutdown', function() {
@@ -1661,12 +1670,6 @@ if (flowplayer.support.touch || isIeMobile) {
              }
            });
          });
-      }
-
-      if (isIeMobile) { //IE Mobile does not fire timeupdates delegated
-        player.on('ready', function() {
-          common.find('video.fp-engine', root)[0].addEventListener('timeupdate', function() { });
-        });
       }
 
       // hide volume
@@ -2640,7 +2643,8 @@ flowplayer(function(api, root) {
 
 
    }).on("unload", function() {
-      if (!origRatio) ratio.css("paddingTop", "");
+     if (!origRatio) ratio.css("paddingTop", "");
+     timelineApi.slide(0);
 
    // buffer
    }).on("buffer", function() {
@@ -2785,13 +2789,13 @@ flowplayer(function(api, root) {
    });
 
    bean.on(root, 'contextmenu', function(ev) {
-      ev.preventDefault();
       var o = common.offset(root),
           w = window,
           left = ev.clientX - o.left,
           t = ev.clientY - (o.top + w.scrollY);
       var menu = common.find('.fp-context-menu', root)[0];
       if (!menu) return;
+      ev.preventDefault();
       common.css(menu,
       {left: left + 'px',
          top: t + 'px',
@@ -2832,7 +2836,7 @@ flowplayer(function(api, root) {
 
    }
 
-   if (!has_bg && typeof conf.splash === 'string') {
+   if (typeof conf.splash === 'string') {
      common.css(root, 'background-image', "url('" + conf.splash + "')");
    }
 
@@ -2939,7 +2943,7 @@ var flowplayer = module.exports = function(fn, opts, callback) {
 
 extend(flowplayer, {
 
-   version: '6.0.0',
+   version: '6.0.1',
 
    engines: [],
 
@@ -2975,8 +2979,8 @@ extend(flowplayer, {
 
       live: false,
 
-      swf: "//releases.flowplayer.org/6.0.0/flowplayer.swf",
-      swfHls: "//releases.flowplayer.org/6.0.0/flowplayerhls.swf",
+      swf: "//releases.flowplayer.org/6.0.1/flowplayer.swf",
+      swfHls: "//releases.flowplayer.org/6.0.1/flowplayerhls.swf",
 
       speeds: [0.25, 0.5, 1, 1.5, 2],
 
@@ -3505,12 +3509,12 @@ require('./ext/playlist');
 require('./ext/cuepoint');
 require('./ext/subtitle');
 require('./ext/analytics');
-require('./ext/mobile');
 require('./ext/embed');
 //Have to add fullscreen last
 require('./ext/fullscreen');
 
-flowplayer(function(e,o){function a(e){var o=document.createElement("a");return o.href=e,i.hostname(o.hostname)}var n=function(e,o){var a=e.className.split(" ");-1===a.indexOf(o)&&(e.className+=" "+o)},r=function(e){return"none"!==window.getComputedStyle(e).display},l=e.conf,i=flowplayer.common,t=i.createElement,d=l.swf.indexOf("flowplayer.org")&&l.e&&l.origin,p=d?a(d):i.hostname(),s=(document,l.key);"file:"==location.protocol&&(p="localhost"),e.load.ed=1,l.hostname=p,l.origin=d||location.href,d&&n(o,"is-embedded"),"string"==typeof s&&(s=s.split(/,\s*/));var f=function(e,a){var n=t("a",{href:a,className:"fp-brand"});n.innerHTML=e,i.find(".fp-controls",o)[0].appendChild(n)};if(s&&"function"==typeof key_check&&key_check(s,p)){if(l.logo){var c=t("a",{href:d,className:"fp-logo"});l.embed&&l.embed.popup&&(c.target="_blank");var h=t("img",{src:l.logo});c.appendChild(h),o.appendChild(c)}l.brand&&d||l.brand&&l.brand.showOnOrigin?f(l.brand.text||l.brand,d||location.href):i.addClass(o,"no-brand")}else{f("flowplayer","http://flowplayer.org");var c=t("a",{href:"http://flowplayer.org"});o.appendChild(c);var y=t("div",{className:"fp-context-menu"},'<ul><li class="copyright">&copy; 2015</li><li><a href="http://flowplayer.org">About Flowplayer</a></li><li><a href="http://flowplayer.org/license">GPL based license</a></li></ul>');o.appendChild(y),e.on("pause resume finish unload ready",function(e,a){var n=-1;if(a.video.src){var l=[["org","flowplayer","drive"],["org","flowplayer","my"]];for(var t in l)if(n=a.video.src.indexOf("://"+l[t].reverse().join(".")),-1!==n)break}if((4===n||5===n)&&i.addClass(o,"no-brand"),/pause|resume/.test(e.type)&&"flash"!=a.engine.engineName&&4!=n&&5!=n){var d={display:"block",position:"absolute",left:"16px",bottom:"36px",zIndex:99999,width:"100px",height:"20px",backgroundImage:"url("+[".png","logo","/",".net",".cloudfront","d32wqyuo10o653","//"].reverse().join("")+")"};for(var p in d)d.hasOwnProperty(p)&&(c.style[p]=d[p]);a.load.ed=r(c)&&y.parentNode==o,a.load.ed||a.pause()}else c.style.display="none"})}});
+require('./ext/mobile');
+flowplayer(function(e,o){function a(e){var o=document.createElement("a");return o.href=e,i.hostname(o.hostname)}var n=function(e,o){var a=e.className.split(" ");-1===a.indexOf(o)&&(e.className+=" "+o)},r=function(e){return"none"!==window.getComputedStyle(e).display},l=e.conf,i=flowplayer.common,t=i.createElement,d=l.swf.indexOf("flowplayer.org")&&l.e&&l.origin,s=d?a(d):i.hostname(),p=(document,l.key);"file:"==location.protocol&&(s="localhost"),e.load.ed=1,l.hostname=s,l.origin=d||location.href,d&&n(o,"is-embedded"),"string"==typeof p&&(p=p.split(/,\s*/));var f=function(e,a){var n=t("a",{href:a,className:"fp-brand"});n.innerHTML=e,i.find(".fp-controls",o)[0].appendChild(n)};if(p&&"function"==typeof key_check&&key_check(p,s)){if(l.logo){var c=t("a",{href:d,className:"fp-logo"});l.embed&&l.embed.popup&&(c.target="_blank");var h=t("img",{src:l.logo});c.appendChild(h),o.appendChild(c)}l.brand&&d||l.brand&&l.brand.showOnOrigin?f(l.brand.text||l.brand,d||location.href):i.addClass(o,"no-brand")}else{f("flowplayer","http://flowplayer.org");var c=t("a",{href:"http://flowplayer.org"});o.appendChild(c);var y=t("div",{className:"fp-context-menu"},'<ul><li class="copyright">&copy; 2015</li><li><a href="http://flowplayer.org">About Flowplayer</a></li><li><a href="http://flowplayer.org/license">GPL based license</a></li></ul>'),u=window.location.href.indexOf("localhost");7!==u&&o.appendChild(y),e.on("pause resume finish unload ready",function(e,a){var n=-1;if(a.video.src){var l=[["org","flowplayer","drive"],["org","flowplayer","my"]];for(var t in l)if(n=a.video.src.indexOf("://"+l[t].reverse().join(".")),-1!==n)break}if((4===n||5===n)&&i.addClass(o,"no-brand"),/pause|resume/.test(e.type)&&"flash"!=a.engine.engineName&&4!=n&&5!=n){var d={display:"block",position:"absolute",left:"16px",bottom:"46px",zIndex:99999,width:"100px",height:"20px",backgroundImage:"url("+[".png","logo","/",".net",".cloudfront","d32wqyuo10o653","//"].reverse().join("")+")"};for(var s in d)d.hasOwnProperty(s)&&(c.style[s]=d[s]);a.load.ed=r(c)&&7===u||y.parentNode==o,a.load.ed||a.pause()}else c.style.display="none"})}});
 
 
 },{"./engine/embed":2,"./engine/flash":3,"./engine/html5":4,"./ext/analytics":5,"./ext/cuepoint":6,"./ext/embed":7,"./ext/fullscreen":9,"./ext/keyboard":10,"./ext/mobile":11,"./ext/playlist":12,"./ext/subtitle":15,"./ext/support":16,"./ext/ui":17,"./flowplayer":18,"es5-shim":25}],20:[function(require,module,exports){

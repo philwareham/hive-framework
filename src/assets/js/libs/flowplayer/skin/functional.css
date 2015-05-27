@@ -130,7 +130,6 @@
 .flowplayer.is-ready.is-closeable .fp-fullscreen{right:50px}
 .flowplayer.is-fullscreen .fp-fullscreen{display:block !important;}
 .flowplayer.is-fullscreen .fp-fullscreen:before{content:"\e601"}
-.flowplayer.is-fullscreen .fp-unload,.flowplayer.is-fullscreen .fp-close{display:none !important}
 .flowplayer .fp-timeline{height:3px;position:relative;overflow:hidden;top:10px;height:10px;margin:0 225px 0 55px;}
 .no-brand.flowplayer .fp-timeline{margin-right:160px;}
 .has-menu.no-brand.flowplayer .fp-timeline{margin-right:187px}
@@ -297,6 +296,7 @@
 .flowplayer.is-mouseout .fp-volume,.flowplayer.is-mouseout .fp-brand,.flowplayer.is-mouseout .fp-play,.flowplayer.is-mouseout .fp-time{-webkit-transition:none;-moz-transition:none;transition:none;opacity:0;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0)}
 .flowplayer.fixed-controls .fp-elapsed,.flowplayer.fixed-controls.is-mouseover .fp-elapsed{left:50px}
 .flowplayer.fixed-controls .fp-controls,.flowplayer.fixed-controls.is-mouseover .fp-controls{bottom:-30px;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;left:0;right:0;}
+.is-fullscreen.flowplayer.fixed-controls .fp-controls,.is-fullscreen.flowplayer.fixed-controls.is-mouseover .fp-controls{bottom:0}
 .flowplayer.fixed-controls .fp-controls .fp-play,.flowplayer.fixed-controls.is-mouseover .fp-controls .fp-play{left:10px}
 .flowplayer.fixed-controls .fp-controls .fp-timeline,.flowplayer.fixed-controls.is-mouseover .fp-controls .fp-timeline{margin-left:95px;}
 .is-long.flowplayer.fixed-controls .fp-controls .fp-timeline,.is-long.flowplayer.fixed-controls.is-mouseover .fp-controls .fp-timeline{margin-left:125px}

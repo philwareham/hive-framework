@@ -130,7 +130,6 @@
 .flowplayer.is-ready.is-closeable .fp-fullscreen{right:50px}
 .flowplayer.is-fullscreen .fp-fullscreen{display:block !important;}
 .flowplayer.is-fullscreen .fp-fullscreen:before{content:"\e601"}
-.flowplayer.is-fullscreen .fp-unload,.flowplayer.is-fullscreen .fp-close{display:none !important}
 .flowplayer .fp-timeline{height:3px;position:relative;overflow:hidden;top:10px;height:10px;margin:0 225px 0 55px;}
 .no-brand.flowplayer .fp-timeline{margin-right:160px;}
 .has-menu.no-brand.flowplayer .fp-timeline{margin-right:187px}
