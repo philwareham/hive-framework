@@ -72,7 +72,7 @@
         }
 
         // Details polyfill, via 'jQuery Details'.
-        // Adds `details` and `summary` HTML elements for unsupported browsers.
+        // Adds `details` and `summary` HTML5.1 elements for unsupported browsers.
         // More info - https://github.com/mathiasbynens/jquery-details.
         // Browser support info - http://caniuse.com/#feat=details.
 
@@ -96,7 +96,7 @@
         }
 
         // Placeholder polyfill, via 'jQuery Placeholder'.
-        // Adds `placeholder` attribute to `input` and `textarea` for unsupported browsers.
+        // Adds `placeholder` HTML5 attribute to `input` and `textarea` for unsupported browsers.
         // More info - https://github.com/mathiasbynens/jquery-placeholder.
         // Browser support info - http://caniuse.com/#feat=placeholder.
 
