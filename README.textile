@@ -37,10 +37,9 @@ h3. Installing required tools
 The project uses "Grunt":http://gruntjs.com/ to run tasks and "Sass":http://sass-lang.com/ for CSS pre-processing. First make sure you have base dependencies installed: "Ruby":http://www.ruby-lang.org/en/, "Node.js":http://nodejs.org/, "Bundler":http://bundler.io/, "Grunt":http://gruntjs.com/ and "Bower":http://bower.io/. You can install Node and Ruby using their installers, Bundler with gem and the rest with npm:
 
 bc. $ gem install bundler
-$ npm install -g grunt-cli
-$ npm install -g bower
+$ npm install -g bower grunt-cli
 
-Consult the tools' documentation for more instructions.
+Consult the tools' documentation for more instructions. You might need to use @sudo npm install -g bower grunt-cli@ instead when installing on certain Unix-based systems.
 
 h3. Installing dependencies
 
@@ -51,7 +50,7 @@ $ npm install
 $ bundle install
 $ bower install
 
-*npm* installs Node modules for Grunt, *bundle* takes care of Ruby gems, and *bower* manages client-side scripts.
+*npm* installs Node modules for Grunt, *bundle* takes care of Ruby gems, and *bower* manages client-side scripts. You might need to use @sudo npm install@ instead when installing on certain Unix-based systems.
 
 h2. Building
 
