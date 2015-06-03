@@ -1,7 +1,6 @@
 {
   "name": "hive-framework",
   "version": "0.6.0",
-  "directory": "bower_components",
   "dependencies": {
     "autosize": "3.0.6",
     "dropcap.js": "1.0.0",
