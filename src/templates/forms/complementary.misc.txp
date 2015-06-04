@@ -1,4 +1,4 @@
-<aside class="complementary-content" itemscope itemtype="http://schema.org/WPSideBar">
+<aside class="complementary-content">
     <txp:search_input /> <!-- links by default to form: 'search_input.misc.txp' unless you specify a different form -->
 
     <!-- Feed links, default flavour is RSS, so we don't need to specify a flavour on the first feed_link -->
