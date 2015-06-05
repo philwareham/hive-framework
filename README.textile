@@ -72,4 +72,4 @@ Optional "Textpattern CMS":http://textpattern.com theme 'forms' and 'pages' temp
 
 h2. License
 
-Licensed under MIT license except Texpattern templates, which are licensed under GPLv2 license.
+Licensed under MIT license except Textpattern templates, which are licensed under GPLv2 license.
