@@ -250,6 +250,10 @@ linters:
   SpaceAfterPropertyName:
     enabled: true
 
+# Variables should be formatted with no space between the name and the colon.
+  SpaceAfterVariableName:
+    enabled: true
+
 # Opening braces should be preceded by a single space.
   SpaceBeforeBrace:
     enabled: true
@@ -269,6 +273,10 @@ linters:
 # Property values; `@extend`, `@include`, and `@import` directives; and variable
 # declarations should always end with a semicolon.
   TrailingSemicolon:
+    enabled: true
+
+# Reports lines containing trailing whitespace.
+  TrailingWhitespace:
     enabled: true
 
 # Don't write trailing zeros for numeric values with a decimal point.
