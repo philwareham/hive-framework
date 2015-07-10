@@ -2,7 +2,7 @@
   "name": "hive-framework",
   "version": "0.6.0",
   "dependencies": {
-    "autosize": "3.0.7",
+    "autosize": "3.0.8",
     "dropcap.js": "1.0.0",
     "google-code-prettify": "1.0.4",
     "jquery.cookie": "1.4.1",
