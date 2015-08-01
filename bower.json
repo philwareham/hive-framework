@@ -9,10 +9,10 @@
     "jquery-autosize": "1.18.18",
     "jquery-details": "0.1.0",
     "jquery-placeholder": "2.1.1",
-    "js-cookie": "2.0.2",
+    "js-cookie": "2.0.3",
     "picturefill": "2.3.1",
     "responsive-nav": "1.0.39",
     "ResponsiveSlides.js": "latest",
-    "requirejs": "2.1.19"
+    "requirejs": "2.1.20"
   }
 }
