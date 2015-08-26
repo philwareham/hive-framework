@@ -15,19 +15,19 @@
     <p class="large">
         <label for="name">Name <abbr class="required" title="Required field">*</abbr></label>
         <br>
-        <txp:comment_name_input />
+        <txp:comment_name_input size="32" />
     </p>
 
     <p class="large">
         <label for="email">Email <abbr class="required" title="Required field">*</abbr></label>
         <br>
-        <txp:comment_email_input />
+        <txp:comment_email_input size="32" />
     </p>
 
     <p class="large">
         <label for="web">Website</label>
         <br>
-        <txp:comment_web_input />
+        <txp:comment_web_input size="32" />
     </p>
 
     <p>
@@ -37,7 +37,7 @@
     <p class="small">
         <label for="message">Message <abbr class="required" title="Required field">*</abbr></label>
         <br>
-        <txp:comment_message_input />
+        <txp:comment_message_input cols="64" rows="4" />
     </p>
 
 </fieldset>
