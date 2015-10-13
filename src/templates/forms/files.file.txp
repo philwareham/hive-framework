@@ -3,7 +3,7 @@
 <txp:variable name="file_download_description" value='<txp:file_download_description />' />
 <txp:variable name="file_download_category" value='<txp:file_download_category />' />
 
-<section itemscope itemtype="http://schema.org/DataDownloads">
+<section itemscope itemtype="http://schema.org/DataDownload">
     <h6 class="accessibility">File download</h6>
 
     <!-- ...if exists, use the file title, otherwise use file name -->
@@ -57,8 +57,11 @@
         </time>
         &#183;
         <strong>Download count:</strong>
-        <span itemprop="interactionCount">
-            <txp:file_download_downloads />
+        <span itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+            <meta itemprop="interactionType" content="http://schema.org/DownloadAction" />
+            <span itemprop="userInteractionCount">
+                <txp:file_download_downloads />
+            </span>
         </span>
 
     </footer>
