@@ -80,12 +80,12 @@
 
 .ui-datepicker {
     @include adjust-font-size-to(16px, 0.91666666666667); // 22px line height.
-    @include box-shadow(0 0 0.5em rgba(0, 0, 0, 0.2));
 
     display: none;
     padding: 0.25em 0.25em 0;
     width: 14.5em;
     font-family: $font-sans-serif;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
 
     .ui-datepicker-header {
         position: relative;

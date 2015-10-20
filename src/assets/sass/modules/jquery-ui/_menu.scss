@@ -64,13 +64,13 @@
 .ui-menu {
     font-size: 100%; /* 1 */
     @include adjust-font-size-to(16px, 0.91666666666667); // 22px line height.
-    @include box-shadow(0 0 0.5em rgba(0, 0, 0, 0.2));
 
     display: block;
     margin: 0;
     padding: 0;
     font-family: $font-sans-serif;
     list-style: none;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
     outline: 0;
 
     .ui-menu {

@@ -78,9 +78,8 @@
     padding-left: 2em;
 
     ol {
-        @include box-shadow(inset 1.9375em 0 0 $color-background-box, inset 2em 0 0 lighten($color-border, 9%));
-
         margin: 0;
+        box-shadow: inset 1.9375em 0 0 $color-background-box, inset 2em 0 0 lighten($color-border, 9%);
     }
 
     li {

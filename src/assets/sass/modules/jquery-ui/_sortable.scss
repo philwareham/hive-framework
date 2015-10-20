@@ -24,7 +24,7 @@
  */
 
 .ui-sortable-helper {
-    @include box-shadow(0 0 0.5em rgba(0, 0, 0, 0.2));
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
 }
 
 .ui-sortable-handle {

@@ -7,10 +7,9 @@
 *:after,
 *:first-letter,
 *:first-line {
-    @include box-shadow(none !important);
-
     color: $color-text-print !important;
     background: transparent !important;
+    box-shadow: none !important;
     text-shadow: none !important;
 }
 

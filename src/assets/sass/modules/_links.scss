@@ -88,7 +88,7 @@ main h1 a {
         outline: 0;
 
         img {
-            @include box-shadow(0 0 4px 2px $color-link-focus);
+            box-shadow: 0 0 4px 2px $color-link-focus;
         }
     }
 }

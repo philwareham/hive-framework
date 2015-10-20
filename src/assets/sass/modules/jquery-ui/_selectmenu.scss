@@ -53,9 +53,8 @@
     cursor: pointer;
 
     &:focus {
-        @include box-shadow(0 0 4px 2px $color-link-focus);
-
         border-color: $color-link-focus;
+        box-shadow: 0 0 4px 2px $color-link-focus;
         outline: 0;
     }
 
