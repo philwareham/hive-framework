@@ -28,7 +28,7 @@
 }
 
 .ui-sortable-handle {
-    @include touch-action;
+    touch-action: none;
 }
 
 .ui-sortable-placeholder {

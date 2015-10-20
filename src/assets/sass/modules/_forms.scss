@@ -36,8 +36,7 @@ optgroup,
 textarea,
 a.button,
 span.button {
-    @include box-sizing;
-
+    box-sizing: border-box;
     font-size: 100%; /* 1 */
     @include adjust-font-size-to(16px, 0.91666666666667); // 22px line height.
 

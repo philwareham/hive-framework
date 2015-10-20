@@ -21,8 +21,7 @@
     text-align: left;
 
     .ui-slider-handle {
-        @include touch-action;
-
+        touch-action: none;
         position: absolute;
         z-index: 2;
         border-radius: 50%;

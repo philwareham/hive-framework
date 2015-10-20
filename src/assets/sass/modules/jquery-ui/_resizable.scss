@@ -21,8 +21,7 @@
 }
 
 .ui-resizable-handle {
-    @include touch-action;
-
+    touch-action: none;
     position: absolute;
     display: block;
     font-size: 0.1px;

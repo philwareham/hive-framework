@@ -18,7 +18,7 @@
  */
 
 .ui-selectable {
-    @include touch-action;
+    touch-action: none;
 }
 
 /**

@@ -19,7 +19,7 @@
 }
 
 .ui-draggable-handle {
-    @include touch-action;
+    touch-action: none;
 }
 
 /**

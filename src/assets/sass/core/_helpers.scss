@@ -36,13 +36,6 @@
     @include background-image(radial-gradient($color-gradient-from, $color-gradient-to));
 }
 
-// touch actions
-
-@mixin touch-action($taction: none) {
-    -ms-touch-action: $taction;
-    touch-action: $taction;
-}
-
 // inline elements with specified border/padding/margin wrapping each fragment
 
 @mixin box-decoration-break($boxdecbreak: clone) {
