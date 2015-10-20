@@ -25,9 +25,9 @@
     font-size: 100%; /* 1 */
     @include adjust-font-size-to(16px, 0.91666666666667); // 22px line height.
     @include gradient-linear($color-gradient-from, $color-gradient-to);
-    @include transition(box-shadow 0.1s linear);
 
     -webkit-appearance: none; /* 2 */
+    transition: box-shadow 0.1s linear;
     background-clip: padding-box;
     position: relative;
     display: inline-block;

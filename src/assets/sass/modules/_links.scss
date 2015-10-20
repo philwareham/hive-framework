@@ -80,7 +80,7 @@ main h1 a {
 
 .a--img {
     img {
-        @include transition(box-shadow 0.1s linear);
+        transition: box-shadow 0.1s linear;
 
     }
 

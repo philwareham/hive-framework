@@ -109,9 +109,8 @@ input[type="url"],
 input[type="week"],
 select,
 textarea {
-    @include transition(border-color 0.1s linear, box-shadow 0.1s linear);
-
     -webkit-appearance: none; /* 1 */
+    transition: border-color 0.1s linear, box-shadow 0.1s linear;
     border: 1px solid $color-border;
     border-radius: 0;
     padding: 0.5em 0.1875em; // 8px / 16px + 3px / 16px

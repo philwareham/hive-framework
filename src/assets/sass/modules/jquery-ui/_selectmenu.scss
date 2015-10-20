@@ -37,8 +37,7 @@
  */
 
 .ui-selectmenu-button {
-    @include transition(box-shadow 0.1s linear);
-
+    transition: box-shadow 0.1s linear;
     font-size: 100%; /* 1 */
     @include adjust-font-size-to(16px, 0.91666666666667); // 22px line height.
 
