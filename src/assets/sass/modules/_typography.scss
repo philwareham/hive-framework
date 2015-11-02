@@ -14,10 +14,10 @@
  */
 
 body {
-    @include enable-ligatures; /* 1 */
-
     font-family: $font-serif;
     color: $color-text;
+    -webkit-font-feature-settings: "liga","dlig"; /* 1 */
+    font-feature-settings: "liga","dlig"; /* 1 */
 }
 
 /**

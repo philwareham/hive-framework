@@ -32,8 +32,6 @@ GEM
     singularitygs (1.6.2)
       breakpoint (~> 2.4)
       sass (~> 3.3)
-    toolkit (2.9.0)
-      sass (~> 3.3)
 
 PLATFORMS
   ruby
@@ -43,7 +41,6 @@ DEPENDENCIES
   sass (= 3.4.19)
   scss_lint (= 0.42.2)
   singularitygs (= 1.6.2)
-  toolkit (= 2.9.0)
 
 BUNDLED WITH
    1.10.6

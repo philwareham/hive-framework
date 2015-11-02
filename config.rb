@@ -3,9 +3,6 @@
 # Singularity.gs - https://github.com/at-import/Singularity
 require "singularitygs"
 
-# Toolkit - https://github.com/at-import/toolkit
-require 'toolkit'
-
 
 
 # Set this to the root of your project when deployed:
