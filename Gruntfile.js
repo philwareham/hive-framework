@@ -188,7 +188,6 @@ module.exports = function (grunt)
                 options: {
                     preserveComments: 'some'
                 },
-
                 files: [
                     {
                         'public/assets/js/main.js': ['tmp/assets/js/main.js'],
