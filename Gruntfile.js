@@ -192,8 +192,7 @@ module.exports = function (grunt)
                 files: [
                     {
                         'public/assets/js/main.js': ['tmp/assets/js/main.js'],
-                        'public/assets/js/autosize.js': ['bower_components/jquery-autosize/jquery.autosize.js'],
-                        //'public/assets/js/autosize.js': ['bower_components/autosize/dist/autosize.js'], // TODO: migrate to autosize v3
+                        'public/assets/js/autosize.js': ['node_modules/autosize/dist/autosize.js'],
                         'public/assets/js/cookie.js': ['bower_components/jquery.cookie/jquery.cookie.js'],
                         //'public/assets/js/cookie.js': ['bower_components/js-cookie/src/js.cookie.js'], // TODO: migrate to JS Cookie v2
                         'public/assets/js/details.js': ['bower_components/jquery-details/jquery.details.js'],

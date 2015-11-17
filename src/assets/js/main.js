@@ -89,9 +89,9 @@
         // on visitor input. More info - https://github.com/jackmoore/autosize.
 
         if (fields.length) {
-            require(['autosize'], function ()
+            define(['autosize'], function (autosize)
             {
-                fields.autosize();
+                autosize(this.$('textarea'));
             });
         }
 
