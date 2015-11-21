@@ -53,8 +53,7 @@
 
         var code = $('pre code'),
             details = $('details'),
-            fields = $('form textarea'),
-            placeholder = $('textarea[placeholder], input[placeholder]'),
+            fields = $('textarea'),
             player = $('.videoplayer'),
             slider = $('.rslides');
 
@@ -92,18 +91,6 @@
             define(['autosize'], function (autosize)
             {
                 autosize(this.$('textarea'));
-            });
-        }
-
-        // Placeholder polyfill, via 'jQuery Placeholder'.
-        // Adds `placeholder` HTML5 attribute to `input` and `textarea` for unsupported browsers.
-        // More info - https://github.com/mathiasbynens/jquery-placeholder.
-        // Browser support info - http://caniuse.com/#feat=placeholder.
-
-        if (placeholder.length) {
-            require(['placeholder'], function ()
-            {
-                placeholder.placeholder();
             });
         }
 
