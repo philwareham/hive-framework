@@ -54,26 +54,27 @@ module.exports = function (grunt)
                 src: [
                     'tmp/assets/css/style.css',
                     'tmp/assets/css/jquery-ui.css',
-                    'src/assets/js/libs/flowplayer/skin/minimalist.css'
+                    'node_modules/flowplayer/dist/skin/minimalist.css'
                 ],
                 dest: 'tmp/assets/css/main.css'
             }
         },
 
         copy: {
-            // Copy files from `src/` to `public/`.
+            // Copy files from various sources.
             js: {
                 files: [
                     {expand: true, cwd: 'src/', src: ['*'], dest: 'public/', filter: 'isFile'},
-                    {expand: true, cwd: 'src/assets/js/libs/', src: ['**'], dest: 'public/assets/js/'}
+                    {expand: true, cwd: 'src/assets/js/libs/', src: ['**'], dest: 'public/assets/js/'},
+                    {expand: true, cwd: 'node_modules/flowplayer/dist/', src: ['**'], dest: 'public/assets/js/flowplayer/'}
                 ]
             },
 
-            // Copy Flowplayer images and fonts to CSS folder (because Flowplayer's CSS expects relative path of `img/`).
+            // Copy Flowplayer images and fonts to CSS folder (because Flowplayer's CSS expects relative path to these).
             css: {
                 files: [
-                    {expand: true, cwd: 'src/assets/js/libs/flowplayer/skin/img/', src: ['**'], dest: 'public/assets/css/img/'},
-                    {expand: true, cwd: 'src/assets/js/libs/flowplayer/skin/fonts/', src: ['**'], dest: 'public/assets/css/fonts/'}
+                    {expand: true, cwd: 'node_modules/flowplayer/dist/skin/img/', src: ['**'], dest: 'public/assets/css/img/'},
+                    {expand: true, cwd: 'node_modules/flowplayer/dist/skin/fonts/', src: ['**'], dest: 'public/assets/css/fonts/'}
                 ]
             }
         },
