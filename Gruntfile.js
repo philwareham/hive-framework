@@ -199,7 +199,7 @@ module.exports = function (grunt)
                         'public/assets/js/picturefill.js': ['bower_components/picturefill/dist/picturefill.js'],
                         'public/assets/js/placeholder.js': ['bower_components/jquery-placeholder/jquery.placeholder.js'],
                         'public/assets/js/prettify.js': ['bower_components/google-code-prettify/src/prettify.js'],
-                        'public/assets/js/require.js': ['bower_components/requirejs/require.js'],
+                        'public/assets/js/require.js': ['node_modules/requirejs/require.js'],
                         'public/assets/js/responsivenav.js': ['bower_components/responsive-nav/responsive-nav.js'],
                         'public/assets/js/responsiveslides.js': ['bower_components/ResponsiveSlides.js/responsiveslides.js']
                     },

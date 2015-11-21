@@ -9,7 +9,6 @@
     "js-cookie": "2.0.4",
     "picturefill": "3.0.1",
     "responsive-nav": "1.0.39",
-    "ResponsiveSlides.js": "latest",
-    "requirejs": "2.1.20"
+    "ResponsiveSlides.js": "latest"
   }
 }
