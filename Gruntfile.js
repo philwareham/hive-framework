@@ -8,6 +8,22 @@ module.exports = function (grunt)
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        // Set up paths.
+        paths: {
+            src: {
+                sass: 'src/assets/sass/',
+                js: 'src/assets/js/'
+            },
+            tmp: {
+                css: 'tmp/assets/css/',
+                js: 'tmp/assets/js/'
+            },
+            dest: {
+                css: 'public/assets/css/',
+                js: 'public/assets/js/'
+            }
+        },
+
         // Set up timestamp.
         opt : {
             timestamp: '<%= new Date().getTime() %>'
@@ -28,10 +44,10 @@ module.exports = function (grunt)
             css: {
                 files: {
                     'tmp/assets/css': [
-                        'tmp/assets/css/*.css',
+                        '<%= paths.tmp.css %>*.css',
                         // Ignore these non-concatenated files.
-                        '!tmp/assets/css/style.css',
-                        '!tmp/assets/css/jquery-ui.css'
+                        '!<%= paths.tmp.css %>style.css',
+                        '!<%= paths.tmp.css %>jquery-ui.css'
                     ]
                 }
             }
@@ -41,11 +57,11 @@ module.exports = function (grunt)
         concat: {
             css: {
                 src: [
-                    'tmp/assets/css/style.css',
-                    'tmp/assets/css/jquery-ui.css',
+                    '<%= paths.tmp.css %>style.css',
+                    '<%= paths.tmp.css %>jquery-ui.css',
                     'node_modules/flowplayer/dist/skin/minimalist.css'
                 ],
-                dest: 'tmp/assets/css/main.css'
+                dest: '<%= paths.tmp.css %>main.css'
             }
         },
 
@@ -54,16 +70,16 @@ module.exports = function (grunt)
             js: {
                 files: [
                     {expand: true, cwd: 'src/', src: ['*'], dest: 'public/', filter: 'isFile'},
-                    {expand: true, cwd: 'src/assets/js/libs/', src: ['**'], dest: 'public/assets/js/'},
-                    {expand: true, cwd: 'node_modules/flowplayer/dist/', src: ['**'], dest: 'public/assets/js/flowplayer/'}
+                    {expand: true, cwd: '<%= paths.src.js %>libs/', src: ['**'], dest: '<%= paths.dest.js %>'},
+                    {expand: true, cwd: 'node_modules/flowplayer/dist/', src: ['**'], dest: '<%= paths.dest.js %>flowplayer/'}
                 ]
             },
 
             // Copy Flowplayer images and fonts to CSS folder (because Flowplayer's CSS expects relative path to these).
             css: {
                 files: [
-                    {expand: true, cwd: 'node_modules/flowplayer/dist/skin/img/', src: ['**'], dest: 'public/assets/css/img/'},
-                    {expand: true, cwd: 'node_modules/flowplayer/dist/skin/fonts/', src: ['**'], dest: 'public/assets/css/fonts/'}
+                    {expand: true, cwd: 'node_modules/flowplayer/dist/skin/img/', src: ['**'], dest: '<%= paths.dest.css %>img/'},
+                    {expand: true, cwd: 'node_modules/flowplayer/dist/skin/fonts/', src: ['**'], dest: '<%= paths.dest.css %>fonts/'}
                 ]
             }
         },
@@ -75,14 +91,14 @@ module.exports = function (grunt)
                 options: {
                     base: './',
                     css: [
-                        'tmp/assets/css/main.css'
+                        '<%= paths.tmp.css %>main.css'
                     ],
                     width: 1280,
                     height: 900,
                     minify: false
                 },
                 src: 'public/index.html',
-                dest: 'public/assets/css/critical.css'
+                dest: '<%= paths.dest.css %>critical.css'
             }
         },
 
@@ -90,26 +106,16 @@ module.exports = function (grunt)
         cssmin: {
             main: {
                 files: {
-                    'public/assets/css/main.css': ['tmp/assets/css/main.css'],
-                    'public/assets/css/ie8.css': ['tmp/assets/css/ie8.css'],
-                    'public/assets/css/design-patterns.css': ['tmp/assets/css/design-patterns.css']
-                }
-            }
-        },
-
-        // Report on any available updates for development dependencies.
-        devUpdate: {
-            main: {
-                options: {
-                    updateType: 'report',
-                    reportUpdated: false // Don't report up-to-date packages.
+                    '<%= paths.dest.css %>main.css': ['<%= paths.tmp.css %>main.css'],
+                    '<%= paths.dest.css %>ie8.css': ['<%= paths.tmp.css %>ie8.css'],
+                    '<%= paths.dest.css %>design-patterns.css': ['<%= paths.tmp.css %>design-patterns.css']
                 }
             }
         },
 
         // Check code quality of Gruntfile.js and site-specific JavaScript using JSHint.
         jshint: {
-            files: ['Gruntfile.js', 'src/assets/js/*.js'],
+            files: ['Gruntfile.js', '<%= paths.src.js %>*.js'],
             options: {
                 bitwise: true,
                 camelcase: true,
@@ -154,21 +160,17 @@ module.exports = function (grunt)
                 },
                 files: [
                     {expand: true, cwd: 'src/templates/', src: ['**'], dest: 'public/templates/'},
-                    {src: ['src/assets/js/main.js'], dest: 'tmp/assets/js/main.js'}
+                    {src: ['<%= paths.src.js %>main.js'], dest: '<%= paths.tmp.js %>main.js'}
                 ]
             }
         },
 
-        // Validate Sass files via scss-lint.
-        scsslint: {
-            all: ['src/assets/sass/**/*.scss'],
+        // Validate Sass files via sass-lint.
+        sasslint: {
             options: {
-                bundleExec: true,
-                colorizeOutput: false,
-                config: '.scss-lint.yml',
-                force: true,
-                reporterOutput: 'scss-lint-report.xml'
-            }
+                configFile: '.sass-lint.yml'
+            },
+            target: ['<%= paths.src.sass %>**/*.scss']
         },
 
         // Uglify and copy JavaScript files from `bower_components`, and also `main.js`, to `public/assets/js/`.
@@ -180,23 +182,22 @@ module.exports = function (grunt)
                 },
                 files: [
                     {
-                        'public/assets/js/main.js': ['tmp/assets/js/main.js'],
-                        'public/assets/js/autosize.js': ['node_modules/autosize/dist/autosize.js'],
-                        'public/assets/js/cookie.js': ['bower_components/jquery.cookie/jquery.cookie.js'],
-                        //'public/assets/js/cookie.js': ['bower_components/js-cookie/src/js.cookie.js'], // TODO: migrate to JS Cookie v2
-                        'public/assets/js/details.js': ['bower_components/jquery-details/jquery.details.js'],
-                        'public/assets/js/picturefill.js': ['bower_components/picturefill/dist/picturefill.js'],
-                        'public/assets/js/placeholder.js': ['bower_components/jquery-placeholder/jquery.placeholder.js'],
-                        'public/assets/js/prettify.js': ['bower_components/google-code-prettify/src/prettify.js'],
-                        'public/assets/js/require.js': ['node_modules/requirejs/require.js'],
-                        'public/assets/js/responsivenav.js': ['bower_components/responsive-nav/responsive-nav.js'],
-                        'public/assets/js/responsiveslides.js': ['bower_components/ResponsiveSlides.js/responsiveslides.js']
+                        '<%= paths.dest.js %>main.js': ['<%= paths.tmp.js %>main.js'],
+                        '<%= paths.dest.js %>autosize.js': ['node_modules/autosize/dist/autosize.js'],
+                        '<%= paths.dest.js %>cookie.js': ['bower_components/jquery.cookie/jquery.cookie.js'],
+                        //'<%= paths.dest.js %>cookie.js': ['bower_components/js-cookie/src/js.cookie.js'], // TODO: migrate to JS Cookie v2
+                        '<%= paths.dest.js %>details.js': ['bower_components/jquery-details/jquery.details.js'],
+                        '<%= paths.dest.js %>picturefill.js': ['bower_components/picturefill/dist/picturefill.js'],
+                        '<%= paths.dest.js %>prettify.js': ['bower_components/google-code-prettify/src/prettify.js'],
+                        '<%= paths.dest.js %>require.js': ['node_modules/requirejs/require.js'],
+                        '<%= paths.dest.js %>responsivenav.js': ['bower_components/responsive-nav/responsive-nav.js'],
+                        '<%= paths.dest.js %>responsiveslides.js': ['bower_components/ResponsiveSlides.js/responsiveslides.js']
                     },
                     {
                         expand: true,
                         cwd: 'bower_components/google-code-prettify/src/',
                         src: 'lang-*.js',
-                        dest: 'public/assets/js/'
+                        dest: '<%= paths.dest.js %>'
                     }
                 ]
             }
@@ -205,12 +206,12 @@ module.exports = function (grunt)
         // Directories watched and tasks performed by invoking `grunt watch`.
         watch: {
             sass: {
-                files: 'src/assets/sass/**',
+                files: '<%= paths.src.sass %>**',
                 tasks: ['sass']
             },
 
             js: {
-                files: 'src/assets/js/*.js',
+                files: '<%= paths.src.js %>*.js',
                 tasks: ['jshint', 'copy:js', 'uglify']
             }
         }
@@ -221,8 +222,7 @@ module.exports = function (grunt)
     grunt.registerTask('build', ['jshint', 'sass', 'copy:js', 'replace', 'uglify']);
     grunt.registerTask('criticalcss', ['sass', 'critical']);
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('sass', ['scsslint', 'compass', 'concat', 'cmq', 'cssmin', 'copy:css']);
+    grunt.registerTask('sass', ['sasslint', 'compass', 'concat', 'cmq', 'cssmin', 'copy:css']);
     grunt.registerTask('test', ['jshint']);
     grunt.registerTask('travis', ['jshint', 'compass']);
-    grunt.registerTask('updatedev', ['devUpdate']);
 };
