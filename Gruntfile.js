@@ -2,19 +2,8 @@ module.exports = function (grunt)
 {
     'use strict';
 
-    // Load Grunt plugins.
-    grunt.loadNpmTasks('grunt-combine-media-queries');
-    grunt.loadNpmTasks('grunt-contrib-compass');
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-critical');
-    grunt.loadNpmTasks('grunt-dev-update');
-    grunt.loadNpmTasks('grunt-replace');
-    grunt.loadNpmTasks('grunt-scss-lint');
+    // Load all Grunt tasks.
+    require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
