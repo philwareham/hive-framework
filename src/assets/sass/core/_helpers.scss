@@ -17,7 +17,7 @@
     background-size: $hdwidth $hdheight;
     @media (min-resolution: 1.25dppx),
         (min-resolution: 120dpi) {
-        background-image: url("../img/" + $hdfilename) !important;
+        background-image: url("../img/" + $hdfilename);
     }
 }
 
