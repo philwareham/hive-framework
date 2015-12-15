@@ -36,7 +36,6 @@
   },
   "dependencies": {
     "autosize": "3.0.14",
-    "bourbon": "4.2.6",
     "flowplayer": "6.0.4",
     "requirejs": "2.1.22"
   },
