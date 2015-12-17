@@ -106,9 +106,9 @@ module.exports = function (grunt)
         cssmin: {
             main: {
                 files: {
-                    '<%= paths.dest.css %>main.css': ['<%= paths.tmp.css %>main.css'],
-                    '<%= paths.dest.css %>ie8.css': ['<%= paths.tmp.css %>ie8.css'],
-                    '<%= paths.dest.css %>design-patterns.css': ['<%= paths.tmp.css %>design-patterns.css']
+                    '<%= paths.dest.css %>main.css': '<%= paths.tmp.css %>main.css',
+                    '<%= paths.dest.css %>ie8.css': '<%= paths.tmp.css %>ie8.css',
+                    '<%= paths.dest.css %>design-patterns.css': '<%= paths.tmp.css %>design-patterns.css'
                 }
             }
         },
