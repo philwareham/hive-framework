@@ -237,7 +237,7 @@ module.exports = function (grunt)
             },
             js: {
                 files: '<%= paths.src.js %>**',
-                tasks: ['jshint', 'uglify']
+                tasks: ['jshint', 'copy:js', 'uglify']
             },
             templates: {
                 files: '<%= paths.src.templates %>**',
