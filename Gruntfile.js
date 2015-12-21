@@ -31,15 +31,12 @@ module.exports = function (grunt)
             timestamp: '<%= new Date().getTime() %>'
         },
 
-        // Use 'config.rb' file to configure Compass.
-        compass: {
-            dev: {
-                options: {
-                    config: 'config.rb',
-                    force: true
-                }
-            }
-        },
+        // Clean distribution and temporary directories to start afresh.
+        clean: [
+            'tmp/',
+            '<%= paths.dest.css %>',
+            '<%= paths.dest.js %>'
+        ],
 
         // Combine any matching media queries.
         cmq: {
@@ -55,6 +52,16 @@ module.exports = function (grunt)
             }
         },
 
+        // Use 'config.rb' file to configure Compass.
+        compass: {
+            dev: {
+                options: {
+                    config: 'config.rb',
+                    force: true
+                }
+            }
+        },
+
         // Concatenate CSS files prior to matching media queries.
         concat: {
             css: {
@@ -65,6 +72,16 @@ module.exports = function (grunt)
                 ],
                 dest: '<%= paths.tmp.css %>main.css'
             }
+        },
+
+        // Run some tasks in parallel to speed up the build process.
+        concurrent: {
+            dist: [
+                'jshint',
+                'css',
+                'replace',
+                'devUpdate'
+            ]
         },
 
         copy: {
@@ -93,6 +110,20 @@ module.exports = function (grunt)
                     '<%= paths.dest.css %>main.css': '<%= paths.tmp.css %>main.css',
                     '<%= paths.dest.css %>ie8.css': '<%= paths.tmp.css %>ie8.css',
                     '<%= paths.dest.css %>design-patterns.css': '<%= paths.tmp.css %>design-patterns.css'
+                }
+            }
+        },
+
+        // Report on any available updates for dependencies.
+        devUpdate: {
+            main: {
+                options: {
+                    updateType: 'report',
+                    reportUpdated: false, // Don't report up-to-date packages.
+                    packages: {
+                        dependencies: true,
+                        devDependencies: true
+                    }
                 }
             }
         },
@@ -217,7 +248,7 @@ module.exports = function (grunt)
     });
 
     // Register tasks.
-    grunt.registerTask('build', ['jshint', 'css', 'copy:js', 'replace', 'uglify']);
+    grunt.registerTask('build', ['clean', 'concurrent', 'copy:js', 'uglify']);
     grunt.registerTask('css', ['sasslint', 'compass', 'concat', 'cmq', 'cssmin', 'copy:css']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('travis', ['jshint', 'compass']);
