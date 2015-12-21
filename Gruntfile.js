@@ -42,7 +42,7 @@ module.exports = function (grunt)
         cmq: {
             css: {
                 files: {
-                    'tmp/assets/css': [
+                    '<%= paths.tmp.css %>': [
                         '<%= paths.tmp.css %>*.css',
                         // Ignore these non-concatenated files.
                         '!<%= paths.tmp.css %>style.css',
@@ -88,17 +88,43 @@ module.exports = function (grunt)
             // Copy files from various sources.
             js: {
                 files: [
-                    {expand: true, cwd: 'src/', src: ['*'], dest: 'public/', filter: 'isFile'},
-                    {expand: true, cwd: '<%= paths.src.js %>libs/', src: ['**'], dest: '<%= paths.dest.js %>'},
-                    {expand: true, cwd: 'node_modules/flowplayer/dist/', src: ['**'], dest: '<%= paths.dest.js %>flowplayer/'}
+                    {
+                        expand: true,
+                        cwd: 'src/',
+                        src: '*',
+                        dest: 'public/',
+                        filter: 'isFile'
+                    },
+                    {
+                        expand: true,
+                        cwd: '<%= paths.src.js %>libs/',
+                        src: '**',
+                        dest: '<%= paths.dest.js %>'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'node_modules/flowplayer/dist/',
+                        src: '**',
+                        dest: '<%= paths.dest.js %>flowplayer/'
+                    }
                 ]
             },
 
             // Copy Flowplayer images and fonts to CSS folder (because Flowplayer's CSS expects relative path to these).
             css: {
                 files: [
-                    {expand: true, cwd: 'node_modules/flowplayer/dist/skin/img/', src: ['**'], dest: '<%= paths.dest.css %>img/'},
-                    {expand: true, cwd: 'node_modules/flowplayer/dist/skin/fonts/', src: ['**'], dest: '<%= paths.dest.css %>fonts/'}
+                    {
+                        expand: true,
+                        cwd: 'node_modules/flowplayer/dist/skin/img/',
+                        src: '**',
+                        dest: '<%= paths.dest.css %>img/'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'node_modules/flowplayer/dist/skin/fonts/',
+                        src: '**',
+                        dest: '<%= paths.dest.css %>fonts/'
+                    }
                 ]
             }
         },
@@ -196,7 +222,7 @@ module.exports = function (grunt)
             options: {
                 configFile: '.sass-lint.yml'
             },
-            target: ['<%= paths.src.sass %>**/*.scss']
+            target: '<%= paths.src.sass %>**/*.scss'
         },
 
         // Uglify and copy JavaScript files from `bower_components`, and also `main.js`, to `public/assets/js/`.
