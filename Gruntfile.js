@@ -12,7 +12,8 @@ module.exports = function (grunt)
         paths: {
             src: {
                 sass: 'src/assets/sass/',
-                js: 'src/assets/js/'
+                js: 'src/assets/js/',
+                templates: 'src/templates/'
             },
             tmp: {
                 css: 'tmp/assets/css/',
@@ -20,7 +21,8 @@ module.exports = function (grunt)
             },
             dest: {
                 css: 'public/assets/css/',
-                js: 'public/assets/js/'
+                js: 'public/assets/js/',
+                templates: 'public/templates/'
             }
         },
 
@@ -84,24 +86,6 @@ module.exports = function (grunt)
             }
         },
 
-        // Dissect and provide example file of critical above-the-fold CSS.
-        // Usage info: https://github.com/addyosmani/critical
-        critical: {
-            test: {
-                options: {
-                    base: './',
-                    css: [
-                        '<%= paths.tmp.css %>main.css'
-                    ],
-                    width: 1280,
-                    height: 900,
-                    minify: false
-                },
-                src: 'public/index.html',
-                dest: '<%= paths.dest.css %>critical.css'
-            }
-        },
-
         // Minify and copy CSS files to `public/assets/css/`.
         cssmin: {
             main: {
@@ -115,7 +99,6 @@ module.exports = function (grunt)
 
         // Check code quality of Gruntfile.js and site-specific JavaScript using JSHint.
         jshint: {
-            files: ['Gruntfile.js', '<%= paths.src.js %>*.js'],
             options: {
                 bitwise: true,
                 camelcase: true,
@@ -146,7 +129,11 @@ module.exports = function (grunt)
                     responsiveNav: true,
                     prettyPrint: true
                 }
-            }
+            },
+            files: [
+                'Gruntfile.js',
+                '<%= paths.src.js %>*.js'
+            ]
         },
 
         // Generate filename timestamps within template/mockup files.
@@ -159,8 +146,16 @@ module.exports = function (grunt)
                     }]
                 },
                 files: [
-                    {expand: true, cwd: 'src/templates/', src: ['**'], dest: 'public/templates/'},
-                    {src: ['<%= paths.src.js %>main.js'], dest: '<%= paths.tmp.js %>main.js'}
+                    {
+                        expand: true,
+                        cwd: '<%= paths.src.templates %>',
+                        src: '**',
+                        dest: '<%= paths.dest.templates %>'
+                    },
+                    {
+                        src: '<%= paths.src.js %>main.js',
+                        dest: '<%= paths.tmp.js %>main.js'
+                    }
                 ]
             }
         },
@@ -206,23 +201,24 @@ module.exports = function (grunt)
         // Directories watched and tasks performed by invoking `grunt watch`.
         watch: {
             sass: {
-                files: '<%= paths.src.sass %>**',
-                tasks: ['sass']
+                files: '<%= paths.src.sass %>**/*.scss',
+                tasks: 'css'
             },
-
             js: {
-                files: '<%= paths.src.js %>*.js',
-                tasks: ['jshint', 'copy:js', 'uglify']
+                files: '<%= paths.src.js %>**',
+                tasks: ['jshint', 'uglify']
+            },
+            templates: {
+                files: '<%= paths.src.templates %>**',
+                tasks: 'replace'
             }
         }
 
     });
 
     // Register tasks.
-    grunt.registerTask('build', ['jshint', 'sass', 'copy:js', 'replace', 'uglify']);
-    grunt.registerTask('criticalcss', ['sass', 'critical']);
+    grunt.registerTask('build', ['jshint', 'css', 'copy:js', 'replace', 'uglify']);
+    grunt.registerTask('css', ['sasslint', 'compass', 'concat', 'cmq', 'cssmin', 'copy:css']);
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('sass', ['sasslint', 'compass', 'concat', 'cmq', 'cssmin', 'copy:css']);
-    grunt.registerTask('test', ['jshint']);
     grunt.registerTask('travis', ['jshint', 'compass']);
 };
