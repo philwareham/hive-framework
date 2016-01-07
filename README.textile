@@ -10,13 +10,10 @@ A website development framework built with Sass and Compass, and incorporating j
 
 Source image files (Adobe Illustrator .ai and Adobe Photoshop .psd formats) are also included, within the @/src/assets/img/@ directory.
 
-h2. Minimum browser support
+h2. Supported web browsers
 
-* Apple Safari 5+
-* Google Chrome 30+
-* Microsoft Internet Explorer 8+
-* Mozilla Firefox 24+
-* Opera Browser 12+
+* Internet Explorer 11.
+* Chrome, Edge, Firefox, Safari and Opera the last two recent stable releases.
 
 Older versions of the above and other browsers may work, but these are the ones we verify.
 
