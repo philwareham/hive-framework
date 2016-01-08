@@ -21,7 +21,7 @@ h2. Requirements
 
 Building this repository requires:
 
-* "Node.js":http://nodejs.org/ >=0.10.0
+* "Node.js":http://nodejs.org/ >=0.12.0
 * "Ruby":http://www.ruby-lang.org/en/
 * "Bundler":http://bundler.io/
 * "Grunt":http://gruntjs.com/ ~0.4.0
