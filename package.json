@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "autoprefixer": "6.2.3",
-    "eyeglass": "0.8.0",
+    "eyeglass": "0.8.1",
     "grunt": "~0.4.5",
     "grunt-cli": "~0.1",
     "grunt-concurrent": "2.1.0",

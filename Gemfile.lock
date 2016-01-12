@@ -19,10 +19,10 @@ GEM
       sass (>= 3.2, < 3.5)
     ffi (1.9.10)
     multi_json (1.11.2)
-    rb-fsevent (0.9.6)
+    rb-fsevent (0.9.7)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
-    sass (3.4.20)
+    sass (3.4.21)
     sassy-maps (0.4.0)
       sass (~> 3.3)
     singularitygs (1.6.2)
@@ -34,7 +34,7 @@ PLATFORMS
 
 DEPENDENCIES
   compass (= 1.0.3)
-  sass (= 3.4.20)
+  sass (= 3.4.21)
   singularitygs (= 1.6.2)
 
 BUNDLED WITH
