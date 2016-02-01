@@ -21,25 +21,25 @@
     text-align: left;
 
     .ui-slider-handle {
-        touch-action: none;
         position: absolute;
-        z-index: 2;
-        border-radius: 50%;
         width: 20px;
         height: 20px;
-        cursor: default;
+        border-radius: 50%;
         background-color: $color-background;
-        box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+        box-shadow: $standard-shadow;
+        cursor: default;
+        z-index: 2;
+        touch-action: none;
     }
 
     .ui-slider-range {
         @include adjust-font-size-to(12px, 0.75);
 
-        position: absolute;
-        z-index: 1;
         display: block;
+        position: absolute;
         border: 0;
         background-position: 0 0;
+        z-index: 1;
     }
 }
 
@@ -52,8 +52,8 @@
  */
 
 .ui-slider-horizontal {
-    margin-bottom: 1em;
     height: 12px;
+    margin-bottom: 1em;
 
     .ui-slider-handle {
         top: -5px;

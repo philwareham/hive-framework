@@ -29,8 +29,8 @@
 
 .ui-accordion {
     .ui-accordion-header {
-        position: relative;
         display: block;
+        position: relative;
         margin: 2px 0 0;
         padding: 0.5em 1em;
         font-size: 100%;
@@ -50,8 +50,8 @@
     }
 
     .ui-accordion-content {
-        border-top: 0;
         padding: 1px 1em;
+        border-top: 0;
         overflow: auto;
     }
 }

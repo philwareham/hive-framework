@@ -67,8 +67,8 @@
             }
 
             @include breakpoint(max-width $breakpoint-2) {
-                float: none;
                 margin-top: 2px;
+                float: none;
                 border-bottom-width: 1px;
                 border-radius: 0;
 
@@ -80,8 +80,8 @@
         }
 
         .ui-tabs-anchor {
-            float: left;
             padding: 0.5em 1em;
+            float: left;
             color: $color-text;
             text-decoration: none;
         }
@@ -97,8 +97,8 @@
     .ui-tabs-panel {
         display: block;
         margin: 0 0 1em;
-        border-width: 1px 0;
         padding: 1px 0;
+        border-width: 1px 0;
         background: none;
 
         @include breakpoint(max-width $breakpoint-2) {

@@ -7,6 +7,8 @@
  * Some classes and HTML elements generally added via JavaScript, more info -
  * https://jqueryui.com/datepicker/
  *
+ * 1. Correct font size not being inherited in all browsers.
+ *
  * Example HTML:
  *
  * <div class="ui-datepicker">
@@ -79,13 +81,13 @@
  */
 
 .ui-datepicker {
-    @include adjust-font-size-to(16px, 0.91666666666667); // 22px line height.
-
     display: none;
-    padding: 0.25em 0.25em 0;
     width: 14.5em;
+    padding: 0.25em 0.25em 0;
     font-family: $font-sans-serif;
-    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+    font-size: $base-font-size; /* 1 */
+    line-height: 1.375em; // 22px / 16px
+    box-shadow: $standard-shadow;
 
     .ui-datepicker-header {
         position: relative;
@@ -96,9 +98,9 @@
     .ui-datepicker-next {
         position: absolute;
         top: 0.25em;
-        border-radius: $default-border-radius;
         width: 1.5em;
         height: 1.5em;
+        border-radius: $default-border-radius;
         background-color: transparent;
     }
 
@@ -112,10 +114,10 @@
 
     .ui-datepicker-prev span,
     .ui-datepicker-next span {
+        display: block;
         position: absolute;
         top: 50%;
         left: 50%;
-        display: block;
         margin-top: -8px;
         margin-left: -8px;
     }
@@ -136,13 +138,13 @@
     }
 
     table {
-        margin: 0 0 0.25em;
         width: 100%;
+        margin: 0 0 0.25em;
     }
 
     th {
-        border: 0;
         padding: 0.25em;
+        border: 0;
         text-align: center;
 
         :first-child & {
@@ -151,8 +153,8 @@
     }
 
     td {
-        border: 0;
         padding: 1px;
+        border: 0;
 
         a,
         span {
@@ -182,19 +184,19 @@
 
     .ui-datepicker-buttonpane {
         margin: 0.75em 0 0;
-        border-left: 0;
+        padding: 0 0.25em;
         border-right: 0;
         border-bottom: 0;
-        padding: 0 0.25em;
+        border-left: 0;
         background-image: none;
 
         button {
-            float: right;
+            width: auto;
             margin: 0.5em 0.25em;
             padding: 0.25em 0.5em;
-            width: auto;
-            overflow: visible;
+            float: right;
             cursor: pointer;
+            overflow: visible;
 
             &.ui-datepicker-current {
                 float: left;
@@ -216,8 +218,8 @@
         float: left;
 
         table {
-            margin: 0 auto 0.5em;
             width: 95%;
+            margin: 0 auto 0.5em;
         }
     }
 
@@ -244,7 +246,7 @@
 }
 
 .ui-datepicker-row-break {
-    clear: both;
     width: 100%;
+    clear: both;
     font-size: 0;
 }

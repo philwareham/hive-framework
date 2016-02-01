@@ -42,5 +42,5 @@
 .ui-progressbar-indeterminate .ui-progressbar-value {
     @include hires-graphic(ui-progressbar-indeterminate, gif, 16px, 16px);
 
-    background-color: #cccccc;
+    background-color: $color-border;
 }

@@ -62,16 +62,15 @@
  */
 
 .ui-menu {
-    font-size: 100%; /* 1 */
-    @include adjust-font-size-to(16px, 0.91666666666667); // 22px line height.
-
     display: block;
     margin: 0;
     padding: 0;
-    font-family: $font-sans-serif;
-    list-style: none;
-    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
     outline: 0;
+    font-family: $font-sans-serif;
+    font-size: $base-font-size; /* 1 */
+    line-height: 1.375em; // 22px / 16px
+    list-style: none;
+    box-shadow: $standard-shadow;
 
     .ui-menu {
         position: absolute;
@@ -82,8 +81,6 @@
         margin: 0;
         padding: 0.25em 1em 0.25em 0.5em;
         cursor: pointer;
-        /* support: IE 10, see #8844 */
-        list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
 
         a {
             color: $color-text;
@@ -92,9 +89,9 @@
     }
 
     .ui-menu-divider {
+        height: 0;
         margin: 0.5em 0;
         border-width: 1px 0 0;
-        height: 0;
         font-size: 0;
         line-height: 0;
     }

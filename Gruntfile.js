@@ -52,16 +52,6 @@ module.exports = function (grunt)
             }
         },
 
-        // Use 'config.rb' file to configure Compass.
-        compass: {
-            dev: {
-                options: {
-                    config: 'config.rb',
-                    force: true
-                }
-            }
-        },
-
         // Concatenate CSS files prior to matching media queries.
         concat: {
             css: {
@@ -192,6 +182,23 @@ module.exports = function (grunt)
             ]
         },
 
+        // Add vendor prefixed styles and other post-processing transformations.
+        postcss: {
+            options: {
+                processors: [
+                    require('autoprefixer')({
+                        browsers: ['last 2 versions']
+                    })
+                ]
+            },
+            dist: {
+                files: [
+                    {'<%= paths.tmp.css %>main.css': '<%= paths.tmp.css %>main.css'},
+                    {'<%= paths.tmp.css %>design-patterns.css': '<%= paths.tmp.css %>design-patterns.css'}
+                ]
+            }
+        },
+
         // Generate filename timestamps within template/mockup files.
         replace: {
             theme: {
@@ -212,6 +219,21 @@ module.exports = function (grunt)
                         src: '<%= paths.src.js %>main.js',
                         dest: '<%= paths.tmp.js %>main.js'
                     }
+                ]
+            }
+        },
+
+        // Sass configuration.
+        sass: {
+            options: require('eyeglass')({
+                outputStyle: 'expanded', // outputStyle = expanded, nested, compact or compressed.
+                sourceMap: false
+            }),
+            dist: {
+                files: [
+                    {'<%= paths.tmp.css %>style.css': '<%= paths.src.sass %>style.scss'},
+                    {'<%= paths.tmp.css %>jquery-ui.css': '<%= paths.src.sass %>jquery-ui.scss'},
+                    {'<%= paths.tmp.css %>design-patterns.css': '<%= paths.src.sass %>design-patterns.scss'}
                 ]
             }
         },
@@ -270,7 +292,7 @@ module.exports = function (grunt)
 
     // Register tasks.
     grunt.registerTask('build', ['clean', 'concurrent', 'copy:js', 'uglify']);
-    grunt.registerTask('css', ['sasslint', 'compass', 'concat', 'cmq', 'cssmin', 'copy:css']);
+    grunt.registerTask('css', ['sasslint', 'sass', 'concat', 'cmq', 'postcss', 'cssmin', 'copy:css']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('travis', ['jshint', 'compass']);
 };

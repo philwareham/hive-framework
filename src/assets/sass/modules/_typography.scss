@@ -2,10 +2,13 @@
    ========================================================================== */
 
 /**
- * Global font size and leading.
+ * Establish baseline.
  */
 
-@include establish-baseline;
+html {
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+}
 
 /**
  * Global font and text colour.
@@ -16,7 +19,6 @@
 body {
     font-family: $font-serif;
     color: $color-text;
-    -webkit-font-feature-settings: "liga","dlig"; /* 1 */
     font-feature-settings: "liga","dlig"; /* 1 */
 }
 
@@ -94,8 +96,8 @@ address {
 blockquote {
     @include adjust-font-size-to(20px, 1.1666667);
 
-    font-style: italic;
     margin: 0.8em 0; // 16px / 20px
+    font-style: italic;
     text-align: center;
 }
 
@@ -113,7 +115,6 @@ dfn {
 
 abbr[title],
 dfn[title] {
-    -webkit-text-decoration: dotted underline;
     text-decoration: dotted underline;
     cursor: help;
 }
@@ -124,10 +125,10 @@ dfn[title] {
 
 mark,
 var {
-    border-radius: $default-border-radius / 2;
     padding: 0 0.25em; // 0 4px
-    color: $color-text;
+    border-radius: $default-border-radius / 2;
     background: $color-selected;
+    color: $color-text;
 }
 
 /**
@@ -143,8 +144,8 @@ samp {
     border: 1px solid lighten($color-border, 9%);
     border-radius: 0.2857143em; // 4px / 14px
     font-family: $font-mono;
-    color: $color-text;
     background-color: $color-background-box;
+    color: $color-text;
 }
 
 code,
@@ -162,16 +163,16 @@ samp {
  */
 
 pre {
+    padding: 0.5714286em 1.1428571em; // 8px / 14px + 16px / 14px
     word-wrap: normal; /* 1 */
     overflow-x: auto; /* 2 */
-    padding: 0.5714286em 1.1428571em; // 8px / 14px + 16px / 14px
     tab-size: 4; /* 3 */
 
     code {
-        font-size: 1em; // 14px
-        border: 0;
         padding: 0;
+        border: 0;
         background-color: transparent;
+        font-size: 1em; // 14px
     }
 }
 
@@ -182,9 +183,9 @@ pre {
 sub,
 sup.footnote, // override Textile class
 sup {
-    @include adjust-font-size-to(10px, 0);
-
     position: relative;
+    font-size: 10px;
+    line-height: 0;
     vertical-align: baseline;
 }
 
@@ -204,7 +205,8 @@ small,
 figcaption,
 tfoot,
 .footnote {
-    @include adjust-font-size-to(12px, 0.75);
+    font-size: $small-font-size;
+    line-height: $small-line-height;
 }
 
 figcaption,
@@ -223,9 +225,9 @@ figcaption {
  */
 
 hr {
-    box-sizing: content-box;
-    border: 0; // remove the default `hr` border
     height: 24px;
+    border: 0; // remove the default `hr` border
     background: url("../img/hr.svg") 50% 50% no-repeat;
     background-size: 240px 24px;
+    box-sizing: content-box;
 }

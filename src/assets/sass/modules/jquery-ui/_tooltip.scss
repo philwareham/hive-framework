@@ -19,8 +19,8 @@
 
 .ui-tooltip {
     position: absolute;
-    z-index: 9999;
-    padding: 0.5em 1em;
     max-width: 22em;
-    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+    padding: 0.5em 1em;
+    box-shadow: $standard-shadow;
+    z-index: 9999;
 }

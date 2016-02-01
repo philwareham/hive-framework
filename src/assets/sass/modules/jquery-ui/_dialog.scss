@@ -37,9 +37,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1002;
     padding: 0.25em;
-    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+    box-shadow: $standard-shadow;
+    z-index: 1002;
 
     .ui-dialog-titlebar {
         position: relative;
@@ -47,37 +47,37 @@
     }
 
     .ui-dialog-title {
-        float: left;
-        margin: 0.125em 0; // 2px / 16px
         width: 90%;
-        overflow: hidden;
-        white-space: nowrap;
+        margin: 0.125em 0; // 2px / 16px
+        float: left;
         text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
 
     .ui-dialog-titlebar-close {
         position: absolute;
         top: 50%;
         right: 0.25em;
-        margin: -10px 0 0;
-        border: 0;
         width: 20px;
         height: 20px;
+        margin: -10px 0 0;
+        border: 0;
         background: none;
     }
 
     .ui-dialog-content {
         position: relative;
-        border: 0;
         padding: 0.5em 1em;
+        border: 0;
         background: none;
         overflow: auto;
     }
 
     .ui-dialog-buttonpane {
         margin-top: 0.5em;
-        border-width: 1px 0 0;
         padding: 0.5em;
+        border-width: 1px 0 0;
         background-image: none;
         text-align: left;
     }

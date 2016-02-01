@@ -21,10 +21,10 @@
 }
 
 .ui-resizable-handle {
-    touch-action: none;
-    position: absolute;
     display: block;
+    position: absolute;
     font-size: 0.1px;
+    touch-action: none;
 }
 
 /**
