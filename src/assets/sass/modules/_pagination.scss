@@ -12,15 +12,15 @@
  */
 
 .paginator {
-    clear: both;
-    text-align: center;
     margin: 1em 0;
-    border-top: 1px dashed $color-border;
     padding-top: 1em;
+    clear: both;
+    border-top: 1px dashed $color-border;
+    text-align: center;
 
     [rel="prev"] {
-        float: left;
         margin: 0 1em 0 0;
+        float: left;
 
         &:before {
             content: "\2190" "\00A0";
@@ -28,8 +28,8 @@
     }
 
     [rel="next"] {
-        float: right;
         margin: 0 0 0 1em;
+        float: right;
 
         &:after {
             content: "\00A0" "\2192";
@@ -56,9 +56,9 @@
 
 .pagination {
     display: inline-block;
-    list-style: none;
     margin: 0;
     padding: 0;
+    list-style: none;
 
     li {
         float: left;
@@ -72,12 +72,12 @@
     a,
     b {
         display: block;
-        padding: 0 0.1875em; // 3px / 16px
         min-width: 1.25em;
+        padding: 0 0.1875em; // 3px / 16px
     }
 
     b {
-        cursor: default;
         font-weight: normal;
+        cursor: default;
     }
 }

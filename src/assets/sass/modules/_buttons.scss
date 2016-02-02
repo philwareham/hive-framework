@@ -2,19 +2,19 @@
    ========================================================================== */
 
 /**
- * 1. Address `overflow` set to `hidden` in IE 8/9/10/11.
- * 2. Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * 1. Correct `button` style inheritance in Firefox, IE 11 and Opera.
+ * 2. Address `overflow` set to `hidden` in IE 11.
  */
 
 button {
-    overflow: visible; /* 1 */
-    text-transform: none; /* 2 */
+    text-transform: none; /* 1 */
+    overflow: visible; /* 2 */
 }
 
 /**
  * 1. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
- * 2. Remove iOS Safari default styling.
+ * 2. Remove browser-specific default styling.
  */
 
 button,

@@ -181,7 +181,8 @@ pre {
  */
 
 sub,
-sup.footnote, // override Textile class
+// override Textile class
+sup.footnote,
 sup {
     position: relative;
     font-size: 10px;

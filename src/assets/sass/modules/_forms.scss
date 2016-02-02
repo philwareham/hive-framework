@@ -51,8 +51,8 @@ span.button {
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-    border: 0;
     padding: 0;
+    border: 0;
 }
 
 /**
@@ -193,7 +193,7 @@ select[size="1"] {
 }
 
 /**
- * Normalise styling of `optgroup`.
+ * Normalize styling of `optgroup`.
  */
 
 optgroup {

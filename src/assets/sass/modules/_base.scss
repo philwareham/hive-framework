@@ -2,8 +2,8 @@
    ========================================================================== */
 
 /**
- * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for any HTML5 element in older browsers.
+ * Correct `block` display not defined for `details` or `summary` in IE 11 and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
 
@@ -23,24 +23,17 @@ summary {
 }
 
 /**
- * 1. Correct `inline-block` display not defined in IE 8/9.
- * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ * Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
 
-audio,
-canvas,
-progress,
-video {
-    display: inline-block; /* 1 */
-    vertical-align: baseline; /* 2 */
+progress {
+    vertical-align: baseline;
 }
 
 /**
- * Address `[hidden]` styling not present in IE 8/9/10.
- * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ * Hide the `template` element in IE 11 and Safari.
  */
 
-[hidden],
 template {
     display: none;
 }
@@ -71,8 +64,8 @@ summary {
 
 .no-details details {
     > summary:before {
-        float: left;
         width: 20px;
+        float: left;
         content: "► ";
     }
 
@@ -102,8 +95,8 @@ nav ol,
 .nested-list-4-column,
 .paginator {
     &:after {
-        content: "";
         display: table;
         clear: both;
+        content: "";
     }
 }

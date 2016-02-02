@@ -31,7 +31,7 @@ dd {
 }
 
 /**
- * Italicise definition terms.
+ * Italicize definition terms.
  */
 
 dt {
@@ -48,8 +48,8 @@ dt {
  */
 
 .list--no-bullets {
-    list-style: none;
     padding: 0;
+    list-style: none;
 }
 
 /**
@@ -73,10 +73,10 @@ dt {
  */
 
 .article-list {
-    list-style: none;
     margin: 0 0 2em;
-    border-top: 1px solid $color-border;
     padding: 0;
+    border-top: 1px solid $color-border;
+    list-style: none;
 
     li {
         margin-bottom: 0;

@@ -15,9 +15,9 @@
 .rslides-container {
     position: relative;
     margin: 0 0 1em;
+    padding: 0.375em;
     border: solid 1px $color-border;
     border-radius: $border-radius;
-    padding: 0.375em;
     background: $color-background;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
@@ -41,12 +41,12 @@
     overflow: hidden;
 
     li {
-        -webkit-backface-visibility: hidden;
+        display: none;
         position: absolute;
         top: 0;
         left: 0;
-        display: none;
         width: 100%;
+        backface-visibility: hidden;
     }
 
     img {
@@ -83,8 +83,8 @@ a.rslides_nav {
 .rslides_tabs {
     margin: 0;
     padding: 0;
-    text-align: center;
     line-height: 1;
+    text-align: center;
 
     li {
         display: inline-block;
@@ -96,10 +96,10 @@ a.rslides_nav {
         @include hide-text;
 
         display: block;
-        border: 1px solid $color-border;
-        border-radius: 50%;
         width: 1em;  // 12px
         height: 1em; // 12px
+        border: 1px solid $color-border;
+        border-radius: 50%;
         background: $color-background;
 
         &:hover {

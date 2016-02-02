@@ -12,8 +12,8 @@
  */
 
 .tabular-data {
-    overflow-x: auto;
     margin-bottom: 1em;
+    overflow-x: auto;
 }
 
 /**
@@ -21,9 +21,9 @@
  */
 
 table {
+    width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
-    width: 100%;
 }
 
 /**
@@ -31,9 +31,9 @@ table {
  */
 
 caption {
+    margin-bottom: 0.5em;
     font-style: italic;
     text-align: left;
-    margin-bottom: 0.5em;
 }
 
 /**
@@ -42,9 +42,9 @@ caption {
 
 th,
 td {
-    vertical-align: top;
-    text-align: left;
     padding: 0.25em 0;
+    text-align: left;
+    vertical-align: top;
 }
 
 /**
@@ -111,8 +111,8 @@ tfoot {
 .table--bordered {
     th,
     td {
-        border-bottom: 1px solid $color-border;
         padding: 0.25em;
+        border-bottom: 1px solid $color-border;
 
         &:empty {
             border: 0;

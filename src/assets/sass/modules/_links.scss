@@ -2,27 +2,24 @@
    ========================================================================== */
 
 /**
- * 1. Remove default underline style from non-hover state links.
- * 2. Interrupt the decoration line to let the shape of the text show through
+ * 1. Remove potential background colour from active links.
+ * 2. Specify link colour.
+ * 3. Remove default underline style from non-hover state links.
+ * 4. Interrupt the decoration line to let the shape of the text show through
  *    in supported browsers.
- * 3. Specify link colour.
- * 4. Remove the grey background color from active links in IE 10.
- * 5. Expanded CSS level 3 `text-decoration` property in supported browsers,
- *    older browsers will fallback to legacy `text-decoration` property.
  */
 
 a {
-    text-decoration: none; /* 1 */
-    text-decoration-skip: ink edges; /* 2 */
-    color: $color-link; /* 3 */
-    background-color: transparent; /* 4 */
+    background-color: transparent; /* 1 */
+    color: $color-link; /* 2 */
+    text-decoration: none; /* 3 */
+    text-decoration-skip: ink edges; /* 4 */
 
     &:hover,
     &:active {
         outline: 0;
-        text-decoration: underline;
-        text-decoration: $color-link-hover solid underline; /* 5 */
         color: $color-link-hover;
+        text-decoration: underline;
     }
 
     &:focus {
@@ -62,9 +59,9 @@ main h1 a {
 
     &:hover,
     &:active {
-        text-decoration: none;
-        color: $color-text;
         background-color: darken($color-background-box, 4%);
+        color: $color-text;
+        text-decoration: none;
     }
 }
 
@@ -107,12 +104,12 @@ main h1 a {
 a[href^="tel"],
 a[href^="sms"] {
     color: $color-text;
-    pointer-events: none;
     cursor: default;
+    pointer-events: none;
 
     [itemprop="telephone"] & {
         color: $color-link;
-        pointer-events: auto;
         cursor: pointer;
+        pointer-events: auto;
     }
 }

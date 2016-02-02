@@ -16,28 +16,28 @@
 .warning,
 .error,
 .information {
-    border-radius: $border-radius / 2;
     padding: 0 0.25em; // 4px / 16px
+    border-radius: $border-radius / 2;
 }
 
 .success {
-    color: $color-success-text;
     background: $color-success-background;
+    color: $color-success-text;
 }
 
 .warning {
-    color: $color-warning-text;
     background: $color-warning-background;
+    color: $color-warning-text;
 }
 
 .error {
-    color: $color-error-text;
     background: $color-error-background;
+    color: $color-error-text;
 }
 
 .information {
-    color: $color-info-text;
     background: $color-info-background;
+    color: $color-info-text;
 }
 
 /**
@@ -69,8 +69,8 @@
  */
 
 .alert-block {
-    border: 1px solid;
     padding: 0.5em 1em;
+    border: 1px solid;
     word-wrap: break-word; /* 1 */
 
     &.success {
