@@ -31,7 +31,7 @@
  */
 
 .spin {
-    @include animation(spinning 2s infinite linear);
+    animation: spinning linear 2s infinite;
 }
 
 /**

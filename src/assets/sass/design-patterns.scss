@@ -65,13 +65,13 @@ $colors: (
     border: 1px solid $color-border;
 
     &:after {
-        @include adjust-font-size-to(14px, 0.875);
-
         position: absolute;
         top: 0.5em;
         padding: 1px 0.2142857em; // 3px / 14px
         background-color: rgba(255, 255, 255, 0.66);
         font-family: $font-mono;
+        font-size: $code-font-size;
+        line-height: $base-line-height;
     }
 }
 

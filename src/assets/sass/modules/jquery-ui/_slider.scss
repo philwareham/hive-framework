@@ -33,12 +33,11 @@
     }
 
     .ui-slider-range {
-        @include adjust-font-size-to(12px, 0.75);
-
         display: block;
         position: absolute;
         border: 0;
         background-position: 0 0;
+        font-size: $small-font-size;
         z-index: 1;
     }
 }

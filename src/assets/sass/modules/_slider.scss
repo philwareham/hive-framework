@@ -92,7 +92,6 @@ a.rslides_nav {
     }
 
     a {
-        @include adjust-font-size-to(12px, 0.75);
         @include hide-text;
 
         display: block;
@@ -101,6 +100,7 @@ a.rslides_nav {
         border: 1px solid $color-border;
         border-radius: 50%;
         background: $color-background;
+        font-size: $small-font-size;
 
         &:hover {
             border-color: $color-link-hover;

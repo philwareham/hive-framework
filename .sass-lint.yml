@@ -203,6 +203,7 @@ rules:
         'vh'
       ]
       per-property: {
+        animation: ['s'],
         transition: ['s']
       }
 
