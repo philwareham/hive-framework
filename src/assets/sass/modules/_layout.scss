@@ -16,16 +16,6 @@ html {
 }
 
 /**
- * Styling for selections.
- */
-
-::selection {
-    color: $color-text-inverse;
-    background: $color-link-focus;
-    text-shadow: none !important;
-}
-
-/**
  * 1. Set `body` to `relative` to allow positioning of absolute elements.
  * 2. Remove default margin.
  */

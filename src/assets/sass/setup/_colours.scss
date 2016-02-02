@@ -1,0 +1,70 @@
+// slightly lighten a colour
+@function tint($color, $percentage) {
+    @return mix(white, $color, $percentage);
+}
+
+// slightly darken a colour
+@function shade($color, $percentage) {
+    @return mix(black, $color, $percentage);
+}
+
+// text colours
+
+$color-text:                     #333333 !default;
+$color-text-button:              $color-text !default;
+$color-text-button-hover:        $color-text-button !default;
+$color-text-button-active:       darken($color-text-button, 10%) !default;
+$color-text-form:                #000000 !default;
+$color-text-form-disabled:       #aaaaaa !default;
+$color-text-footnote:            #777777 !default;
+$color-text-inverse:             #ffffff !default;
+$color-text-print:               #000000 !default; // solid black prints faster/cleaner
+
+// interaction colours
+
+$color-link:                     #004cbf !default;
+$color-link-hover:               #0066ff !default;
+$color-link-focus:               $color-link-hover !default;
+$color-link-visited:             shade($color-link, 33%) !default;
+$color-selecting:                tint($color-link-hover, 80%) !default;
+$color-selected:                 tint($color-link-hover, 90%) !default;
+
+// borders
+
+$color-border:                   #cccccc !default;
+$color-border-light:             #d4d4d4 !default;
+
+// neutral colours
+
+$color-background:               #ffffff !default;
+$color-background-box:           #f7f7f7 !default;
+$color-background-form:          #ffffff !default;
+$color-background-form-disabled: #eeeeee !default;
+$color-gradient-from:            #eeeeee !default;
+$color-gradient-to:              darken($color-gradient-from, 6.5%) !default;
+$color-gradient-border:          darken($color-gradient-from, 13.5%) !default;
+
+// accent colours
+
+$color-highlight-box:            #fff9e1 !default;
+
+// button colours
+
+$color-button-gradient-from:     $color-gradient-from !default;
+$color-button-gradient-to:       darken($color-button-gradient-from, 6.5%) !default;
+$color-button-border:            darken($color-button-gradient-to, 7%) !default;
+
+// alert colours
+
+$color-success-text:             #238c23 !default;
+$color-success-background:       #dff0d8 !default;
+$color-success-border:           darken($color-success-background, 20%) !default;
+$color-warning-text:             #cc8c00 !default;
+$color-warning-background:       #f7eedb !default;
+$color-warning-border:           darken($color-warning-background, 20%) !default;
+$color-error-text:               #9d261d !default;
+$color-error-background:         #f2dede !default;
+$color-error-border:             darken($color-error-background, 12%) !default;
+$color-info-text:                #3a87ad !default;
+$color-info-background:          #e7f6fc !default;
+$color-info-border:              darken($color-info-background, 12%) !default;

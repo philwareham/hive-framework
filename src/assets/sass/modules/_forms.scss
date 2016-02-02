@@ -2,31 +2,30 @@
    ========================================================================== */
 
 /**
- * 1. Define consistent fieldset border, margin, and padding.
- * 2. Address width being affected by wide descendants in Chrome, Firefox.
+ * 1. Address width being affected by wide descendants in Chrome, Firefox.
+ * 2. Define consistent fieldset border, margin, and padding.
  */
 
 fieldset {
-    margin: 1em 0; /* 1 */
-    border: 1px solid $color-border; /* 1 */
-    padding: 1px 1em; /* 1 */
-    min-width: 0; /* 2 */
+    min-width: 0; /* 1 */
+    margin: 1em 0; /* 2 */
+    padding: 1px 1em; /* 2 */
+    border: 1px solid $color-border; /* 2 */
 }
 
 /**
- * 1. Correct `color` not being inherited in IE 8/9/10/11.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * Normalize styling of `legend`.
  */
 
 legend {
-    border: 0; /* 1 */
-    padding: 0; /* 2 */
+    padding: 0;
+    border: 0;
 }
 
 /**
- * 1. Correct font properties not being inherited.
+ * 1. Prevent elements from spilling out of their parent.
  * 2. Address margins set differently in Firefox 4+, Safari, and Chrome.
- * 3. Prevent elements from spilling out of their parent.
+ * 3. Correct font properties not being inherited.
  */
 
 button,
@@ -36,25 +35,14 @@ optgroup,
 textarea,
 a.button,
 span.button {
-    box-sizing: border-box;
-    font-size: 100%; /* 1 */
-    @include adjust-font-size-to(16px, 0.91666666666667); // 22px line height.
-
+    max-width: 100%;  /* 1 */
     margin: 0;  /* 2 */
-    max-width: 100%;  /* 3 */
+    color: $color-text-form;
     font-family: $font-sans-serif;
+    font-size: $base-font-size;
+    line-height: 1.375em; // 22px / 16px
     vertical-align: baseline;
-}
-
-/**
- * Colour for placeholder text.
- */
-
-input,
-textarea {
-    @include input-placeholder {
-        color: $color-text-footnote;
-    }
+    box-sizing: border-box;
 }
 
 /**
@@ -68,9 +56,9 @@ input::-moz-focus-inner {
 }
 
 /**
- * Remove inner padding and search cancel button in Safari and Chrome on OS X.
- * Safari (but not Chrome) clips the cancel button when the search input has
- * padding (and `textfield` appearance).
+ * Remove inner padding in Safari and Chrome on OS X. Safari (but not Chrome)
+ * clips the cancel button when the search input has padding (and `textfield`
+ * appearance).
  */
 
 input[type="search"]::-webkit-search-decoration {
@@ -80,7 +68,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Styling of form input fields.
  *
- * 1. Remove iOS Safari default styling.
+ * 1. Remove browser-specific default styling.
  */
 
 input[type="color"],
@@ -99,16 +87,17 @@ input[type="url"],
 input[type="week"],
 select,
 textarea {
-    -webkit-appearance: none; /* 1 */
+    height: 2.5em; // 40px / 16px
+    padding: 0.5em 0.1875em; // 8px / 16px + 3px / 16px
     transition: border-color 0.1s linear, box-shadow 0.1s linear;
     border: 1px solid $color-border;
     border-radius: 0;
-    padding: 0.5em 0.1875em; // 8px / 16px + 3px / 16px
-    height: 2.5em; // 40px / 16px
     background: $color-background;
+    appearance: none; /* 1 */
 
     &:focus {
         border-color: $color-link-focus;
+        outline: 0;
     }
 }
 
@@ -132,7 +121,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 /**
- * 1. Remove excess padding in IE 8/9/10.
+ * 1. Remove any excess padding.
  * 2. Correct margins for inline checkbox/radio labels.
  */
 
@@ -141,10 +130,10 @@ input[type="radio"] {
     padding: 0; /* 1 */
 
     + label {
-        margin-right: 0.5em; /* 2 */
+        margin: 0 0.5em 0 0; /* 2 */
 
         &:last-of-type {
-            margin-right: 0; /* 2 */
+            margin: 0; /* 2 */
         }
     }
 }
@@ -158,7 +147,7 @@ select {
 }
 
 /**
- * Override height set in a previous rule and allow auto heght.
+ * Override height set in a previous rule and allow auto height.
  */
 
 select[size],
@@ -197,7 +186,7 @@ select[size="1"] {
     select[size="0"],
     select[size="1"] {
         padding-right: 1.5em; // 24px / 16px
-        background: $color-background url("data:image/svg+xml,<svg version='1.1' baseProfile='full' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='17px' height='5px' viewBox='0 0 17 5' enable-background='new 0 0 17 5' xml:space='preserve'><polygon fill='#333333' points='0,0 5,5 10,0'/></svg>") right center no-repeat;
+        background: $color-background-form url("data:image/svg+xml,<svg version='1.1' baseProfile='full' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='17px' height='5px' viewBox='0 0 17 5' enable-background='new 0 0 17 5' xml:space='preserve'><polygon fill='#333333' points='0,0 5,5 10,0'/></svg>") right center no-repeat;
         background-size: 1.0625em 0.3125em; // 17px / 16px, 5px / 16px
     }
 
@@ -208,36 +197,35 @@ select[size="1"] {
  */
 
 optgroup {
+    color: $color-text-form;;
     font-style: normal;
     font-weight: bold;
-    color: $color-text;
 }
 
 /**
- * 1. Remove default vertical scrollbar in IE 8/9/10/11.
- * 2. Restrict to vertical resizing to prevent layout breakage.
- * 3. Remove unwanted space below `textarea` in Safari, Chrome, Opera.
+ * 1. Remove default vertical scrollbar in IE 11.
+ * 2. Remove unwanted space below `textarea` in Safari, Chrome, Opera.
+ * 3. Restrict to vertical resizing to prevent layout breakage.
  */
 
 textarea {
-    overflow: auto; /* 1 */
-    resize: vertical; /* 2 */
-    vertical-align: top; /* 3 */
     width: 100%;
     height: auto;
     min-height: 3em;
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+    resize: vertical; /* 3 */
 }
 
 /**
  * Make sure disabled elements really are disabled and styled appropriately.
  *
- * 1. `html` is a workaround for an Android 4 bug.
+ * 1. Re-set default cursor for disabled elements.
  * 2. Override default iOS opacity setting.
- * 3. Re-set default cursor for disabled elements.
  */
 
 button[disabled],
-html input[disabled], /* 1 */
+input[disabled],
 input[type="button"][disabled],
 input[type="reset"][disabled],
 input[type="submit"][disabled],
@@ -246,13 +234,13 @@ select[disabled] option,
 select[disabled] optgroup,
 textarea[disabled],
 span.disabled {
-    border-color: lighten($color-border, 9%) !important;
-    color: #aaaaaa !important;
-    background: #eeeeee !important;
-    box-shadow: none !important;
+    border-color: $color-border-light !important;
+    background: $color-background-form-disabled !important;
+    color: $color-text-form-disabled !important;
     text-shadow: none !important;
+    box-shadow: none !important;
+    cursor: default !important; /* 1 */
     opacity: 1; /* 2 */
-    cursor: default !important; /* 3 */
 }
 
 /**
@@ -301,6 +289,6 @@ select,
 textarea {
     &:focus:invalid {
         border-color: $color-error-text;
-        box-shadow: none; // Normalise Firefox styling
+        box-shadow: none; // Normalize Firefox styling
     }
 }

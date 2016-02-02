@@ -1,6 +1,3 @@
-// import all Compass core mixins
-@import "compass";
-
 // import Breakpoint
 @import "breakpoint";
 
@@ -15,10 +12,7 @@
     $hdfilename: $hdfile + "@2x." + $hdtype;
     background-image: url("../img/" + $filename);
     background-size: $hdwidth $hdheight;
-    @media (min-resolution: 1.25dppx),
-        (min-resolution: 120dpi) {
-        background-image: url("../img/" + $hdfilename);
-    }
+    @media (min-resolution: 1.25dppx), (min-resolution: 120dpi) {background-image: url("../img/" + $hdfilename);}
 }
 
 // standard gradients
@@ -33,10 +27,11 @@
     background-image: radial-gradient($color-gradient-from, $color-gradient-to);
 }
 
-// inline elements with specified border/padding/margin wrapping each fragment
+// hide text
 
-@mixin box-decoration-break($boxdecbreak: clone) {
-    -webkit-box-decoration-break: $boxdecbreak;
-    -o-box-decoration-break: $boxdecbreak;
-    box-decoration-break: $boxdecbreak;
+@mixin hide-text {
+    text-indent: 110%;
+    text-transform: capitalize;
+    white-space: nowrap;
+    overflow: hidden;
 }
