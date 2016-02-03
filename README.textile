@@ -6,7 +6,7 @@ h1. Hive framework
 
 "Demo":http://testing3.designhive.com/.
 
-A website development framework built with Sass and Compass, and incorporating jQuery UI. The theme styling is intentionally minimal to make re-skinning easier.
+A website development framework built with Grunt and Sass, and incorporating jQuery UI. The theme styling is intentionally minimal to make re-skinning easier.
 
 Source image files (Adobe Illustrator .ai and Adobe Photoshop .psd formats) are also included, within the @/src/assets/img/@ directory.
 
