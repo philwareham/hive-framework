@@ -52,7 +52,6 @@
         // Load objects as variables.
 
         var code = $('pre code'),
-            details = $('details'),
             fields = $('textarea'),
             player = $('.videoplayer'),
             slider = $('.rslides');
@@ -70,27 +69,13 @@
             });
         }
 
-        // Details polyfill, via 'jQuery Details'.
-        // Adds `details` and `summary` HTML5.1 elements for unsupported browsers.
-        // More info - https://github.com/mathiasbynens/jquery-details.
-        // Browser support info - http://caniuse.com/#feat=details.
-
-        if (details.length) {
-            require(['details'], function ()
-            {
-                details.details();
-                $('html').addClass($.fn.details.support ? 'details' : 'no-details');
-            });
-        }
-
         // Auto-growing textareas, via 'Autosize'.
         // Allows dynamic resizing of textarea height, so that it grows as based
         // on visitor input. More info - https://github.com/jackmoore/autosize.
 
         if (fields.length) {
-            define(['autosize'], function (autosize)
-            {
-                autosize(this.$('textarea'));
+            require(['autosize'], function (autosize) {
+                autosize($('textarea'));
             });
         }
 
@@ -101,8 +86,7 @@
             require(['flowplayer'], function ()
             {
                 player.flowplayer({
-                    splash: true,
-                    ratio: 0.417
+                    splash: true
                 });
             });
         }

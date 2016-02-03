@@ -124,6 +124,7 @@
     border: 1px solid $color-border;
     background-image: url("../img/hamburger.svg");
     background-size: 32px 32px;
+    user-select: none;
 
     @include breakpoint($breakpoint-2) {
         display: none;

@@ -53,7 +53,6 @@
     &:focus {
         border-color: $color-link-focus;
         outline: 0;
-        box-shadow: 0 0 4px 2px $color-link-focus;
     }
 
     span.ui-icon {
@@ -66,7 +65,7 @@
 
     span.ui-selectmenu-text {
         display: block;
-        padding: 0.5em 1.5em 0.5em 0.5em; // 8px / 16px + 24px / 16px
+        padding: 0.5em 1.125em 0.5em 0.5em;
         text-align: left;
         text-overflow: ellipsis;
         white-space: nowrap;

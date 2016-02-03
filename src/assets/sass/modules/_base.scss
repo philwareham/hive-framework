@@ -48,32 +48,6 @@ button {
     touch-action: none;
 }
 
-/**
- * Correct `summary` not showing as clickable.
- */
-
-summary {
-    cursor: pointer;
-}
-
-/**
- * `summary` styling for jquery-details polyfill.
- *
- * This rule can be removed if you are not using the polyfill.
- */
-
-.no-details details {
-    > summary:before {
-        width: 20px;
-        float: left;
-        content: "► ";
-    }
-
-    &.open > summary:before {
-        content: "▼ ";
-    }
-}
-
 
 /* Clearfix
    ========================================================================== */

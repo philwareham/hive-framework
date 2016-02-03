@@ -40,9 +40,11 @@
   "dependencies": {
     "autosize": "3.0.15",
     "flowplayer": "6.0.5",
+    "js-cookie": "2.1.0",
     "lory.js": "2.0.1",
     "picturefill": "3.0.1",
-    "requirejs": "2.1.22"
+    "requirejs": "2.1.22",
+    "responsive-nav": "1.0.39"
   },
   "scripts": {
     "test": "grunt travis --verbose"
