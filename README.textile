@@ -22,7 +22,7 @@ h2. Requirements
 Building this repository requires:
 
 * "Node.js":http://nodejs.org/ >=0.12.0
-* "Grunt":http://gruntjs.com/ ~0.4.0
+* "Grunt":http://gruntjs.com/ >=0.4.0
 * "Bower":http://bower.io/ >=1.0.0
 
 h2. Setup
