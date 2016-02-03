@@ -294,5 +294,5 @@ module.exports = function (grunt)
     grunt.registerTask('build', ['clean', 'concurrent', 'copy:js', 'uglify']);
     grunt.registerTask('css', ['sasslint', 'sass', 'concat', 'cmq', 'postcss', 'cssmin', 'copy:css']);
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('travis', ['jshint', 'compass']);
+    grunt.registerTask('travis', ['jshint', 'sass']);
 };
