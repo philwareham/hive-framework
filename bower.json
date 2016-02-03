@@ -3,7 +3,6 @@
   "version": "0.6.0",
   "dependencies": {
     "google-code-prettify": "1.0.4",
-    "jquery.cookie": "1.4.1",
     "ResponsiveSlides.js": "latest"
   }
 }

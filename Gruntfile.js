@@ -253,8 +253,7 @@ module.exports = function (grunt)
                     {
                         '<%= paths.dest.js %>main.js': ['<%= paths.tmp.js %>main.js'],
                         '<%= paths.dest.js %>autosize.js': ['node_modules/autosize/dist/autosize.js'],
-                        '<%= paths.dest.js %>cookie.js': ['bower_components/jquery.cookie/jquery.cookie.js'],
-                        //'<%= paths.dest.js %>cookie.js': ['node_modules/js-cookie/src/js.cookie.js'], // TODO: migrate to JS Cookie v2
+                        '<%= paths.dest.js %>cookie.js': ['node_modules/jquery.cookie/jquery.cookie.js'],
                         '<%= paths.dest.js %>picturefill.js': ['node_modules/picturefill/dist/picturefill.js'],
                         '<%= paths.dest.js %>prettify.js': ['bower_components/google-code-prettify/src/prettify.js'],
                         '<%= paths.dest.js %>require.js': ['node_modules/requirejs/require.js'],
