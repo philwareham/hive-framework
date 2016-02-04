@@ -41,10 +41,10 @@
     "autosize": "3.0.15",
     "flowplayer": "6.0.5",
     "jquery.cookie": "1.4.1",
-    "lory.js": "2.0.1",
     "picturefill": "3.0.1",
     "requirejs": "2.1.22",
-    "responsive-nav": "1.0.39"
+    "responsive-nav": "1.0.39",
+    "slick-carousel": "1.5.9"
   },
   "scripts": {
     "test": "grunt travis --verbose"

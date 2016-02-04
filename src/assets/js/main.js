@@ -54,7 +54,7 @@
         var code = $('pre code'),
             fields = $('textarea'),
             player = $('.videoplayer'),
-            slider = $('.rslides');
+            slider = $('.slider');
 
         // Syntax highlighting, via 'Google Code Prettify'.
         // Automatically applies syntax highlighting to `pre code` HTML elements.
@@ -75,7 +75,7 @@
 
         if (fields.length) {
             require(['autosize'], function (autosize) {
-                autosize($('textarea'));
+                autosize(fields);
             });
         }
 
@@ -91,32 +91,66 @@
             });
         }
 
-        // Responsive slider, via 'ResponsiveSlides'.
-        // More info - https://github.com/viljamis/ResponsiveSlides.js.
+        // Slider, via 'Lory'.
+        // More info - https://github.com/meandmax/lory.
 
         if (slider.length) {
-            require(['responsiveslides'], function ()
+            require(['slick'], function ()
             {
-                slider.responsiveSlides({
-                    auto: true,             // Boolean: Animate automatically, true or false
-                    speed: 1200,            // Integer: Speed of the transition, in milliseconds
-                    timeout: 4800,          // Integer: Time between slide transitions, in milliseconds
-                    pager: true,            // Boolean: Show pager, true or false
-                    nav: true,              // Boolean: Show navigation, true or false
-                    random: false,          // Boolean: Randomize the order of the slides, true or false
-                    pause: false,           // Boolean: Pause on hover, true or false
-                    pauseControls: false,   // Boolean: Pause when hovering controls, true or false
-                    prevText: '&#8592;',    // String: Text for the "previous" button
-                    nextText: '&#8594;',    // String: Text for the "next" button
-                    maxwidth: '',           // Integer: Max-width of the slideshow, in pixels
-                    navContainer: '',       // Selector: Where auto generated controls should be appended to, default is after the <ul>
-                    manualControls: '',     // Selector: Declare custom pager navigation
-                    namespace: 'rslides',   // String: change the default namespace used
-                    before: function () {}, // Function: Before callback
-                    after: function () {}   // Function: After callback
+                slider.slick({
+                    //accessibility: true,
+                    //adaptiveHeight: false,
+                    //appendArrows: $(element),
+                    //appendDots: $(element),
+                    //arrows: true,
+                    //asNavFor: null,
+                    //prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button">Previous</button>',
+                    //nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button">Next</button>',
+                    //autoplay: false,
+                    //autoplaySpeed: 3000,
+                    //centerMode: false,
+                    //centerPadding: '50px',
+                    //cssEase: 'ease',
+                    //customPaging: function(slider, i) {
+                    //    return '<button type="button" data-role="none" role="button" aria-required="false" tabindex="0">' + (i + 1) + '</button>';
+                    //},
+                    dots: true,
+                    //dotsClass: 'slick-dots',
+                    //draggable: true,
+                    easing: 'swing',
+                    //edgeFriction: 0.35,
+                    //fade: false,
+                    //focusOnSelect: false,
+                    //infinite: true,
+                    //initialSlide: 0,
+                    //lazyLoad: 'ondemand',
+                    //mobileFirst: false,
+                    //pauseOnHover: true,
+                    //pauseOnDotsHover: false,
+                    //respondTo: 'window',
+                    //responsive: null,
+                    //rows: 1,
+                    //rtl: false,
+                    //slide: '',
+                    //slidesPerRow: 1,
+                    //slidesToShow: 1,
+                    //slidesToScroll: 1,
+                    speed: 300
+                    //swipe: true,
+                    //swipeToSlide: false,
+                    //touchMove: true,
+                    //touchThreshold: 5,
+                    //useCSS: true,
+                    //useTransform: false,
+                    //variableWidth: false,
+                    //vertical: false,
+                    //verticalSwiping: false,
+                    //waitForAnimate: true,
+                    //zIndex: 1000
                 });
             });
         }
+
     });
 
     // If no SVG support, replace SVGs with PNGs.
