@@ -6,7 +6,6 @@
  */
 
 .slick-slider {
-    display: block;
     position: relative;
     user-select: none;
     touch-action: pan-y;
@@ -15,7 +14,6 @@
 }
 
 .slick-list {
-    display: block;
     position: relative;
     overflow: hidden;
 
@@ -30,7 +28,6 @@
 }
 
 .slick-track {
-    display: block;
     position: relative;
     top: 0;
     left: 0;
@@ -96,21 +93,21 @@
 }
 
 /*
- * Slider loading spinner.
+ * Slider lazy loading spinner (can be deleted if not using Slick lazy loader).
  */
 
 .slick-list {
     .slick-loading & {
         @include hires-graphic(spinner, gif, 16px, 16px);
 
-        background-color: #ffffff;
+        background-color: $color-background;
         background-repeat: no-repeat;
         background-position: center center;
     }
 }
 
 /*
- * Slider icons.
+ * Slider icon font.
  */
 
 @font-face {
