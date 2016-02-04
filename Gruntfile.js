@@ -101,6 +101,7 @@ module.exports = function (grunt)
             },
 
             // Copy Flowplayer images and fonts to CSS folder (because Flowplayer's CSS expects relative path to these).
+            // Copy Slick icon font too.
             css: {
                 files: [
                     {
@@ -114,6 +115,10 @@ module.exports = function (grunt)
                         cwd: 'node_modules/flowplayer/dist/skin/fonts/',
                         src: '**',
                         dest: '<%= paths.dest.css %>fonts/'
+                    },
+                    {
+                        src: 'node_modules/slick-carousel/slick/fonts/slick.woff',
+                        dest: '<%= paths.dest.css %>fonts/slick.woff'
                     }
                 ]
             }
