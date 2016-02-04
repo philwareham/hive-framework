@@ -125,6 +125,7 @@
     background-image: url("../img/hamburger.svg");
     background-size: 32px 32px;
     user-select: none;
+    -webkit-touch-callout: none;
 
     @include breakpoint($breakpoint-2) {
         display: none;
