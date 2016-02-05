@@ -1,7 +1,0 @@
-{
-  "name": "hive-framework",
-  "version": "0.6.0",
-  "dependencies": {
-    "google-code-prettify": "1.0.4"
-  }
-}
