@@ -50,8 +50,6 @@ span.button {
     }
 
     &:active {
-        @include gradient-linear(darken($color-gradient-to, 4%), darken($color-gradient-from, 4%));
-
         @include gradient-linear(darken($color-button-gradient-from, 3%), darken($color-button-gradient-to, 3%));
 
         border-color: darken($color-button-border, 13%);
