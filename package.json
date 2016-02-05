@@ -1,6 +1,15 @@
 {
   "name": "hive-framework",
+  "description": "A website development framework built with Grunt and Sass, and incorporating jQuery UI.",
   "version": "0.7.0",
+  "keywords": [
+    "css",
+    "framework",
+    "front-end",
+    "responsive",
+    "sass",
+    "web"
+  ],
   "author": {
     "name": "Phil Wareham",
     "url": "https://twitter.com/philwareham"
