@@ -39,7 +39,7 @@ span.button {
     margin: 0;  /* 2 */
     color: $color-text-form;
     font-family: $font-form;
-    font-size: $base-font-size;
+    font-size: $base-font-size; /* 3 */
     line-height: 1.375em; // 22px / 16px
     vertical-align: baseline;
     box-sizing: border-box;
@@ -89,10 +89,10 @@ select,
 textarea {
     height: 2.5em; // 40px / 16px
     padding: 0.5em 0.1875em; // 8px / 16px + 3px / 16px
-    transition: border-color 0.1s linear, box-shadow 0.1s linear;
+
     border: 1px solid $color-border;
     border-radius: 0;
-    background: $color-background;
+    background: $color-background-form;
     appearance: none; /* 1 */
 
     &:focus {
