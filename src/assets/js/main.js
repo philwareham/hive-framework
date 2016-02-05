@@ -51,21 +51,19 @@
     {
         // Load objects as variables.
 
-        var code = $('pre code'),
+        var code = $('code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'),
             fields = $('textarea'),
             player = $('.videoplayer'),
             slider = $('.slider');
 
-        // Syntax highlighting, via 'Google Code Prettify'.
-        // Automatically applies syntax highlighting to `pre code` HTML elements.
-        // More info - https://github.com/tcollard/google-code-prettify.
+        // Syntax highlighting, via 'Prism'.
+        // Applies syntax highlighting to `code` HTML elements.
+        // More info - http://prismjs.com.
 
         if (code.length) {
-            code.parent().addClass('prettyprint');
-
-            require(['prettify'], function ()
+            require(['prism'], function ()
             {
-                prettyPrint();
+                Prism.highlightAll();
             });
         }
 

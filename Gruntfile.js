@@ -178,7 +178,7 @@ module.exports = function (grunt)
                     requirejs: true,
                     autosize: true,
                     responsiveNav: true,
-                    prettyPrint: true
+                    Prism: true
                 }
             },
             files: [
@@ -251,7 +251,7 @@ module.exports = function (grunt)
             target: ['<%= paths.src.sass %>**/*.scss']
         },
 
-        // Uglify and copy JavaScript files from `bower_components`, and also `main.js`, to `public/assets/js/`.
+        // Uglify and copy JavaScript files from `node_modules`, and also `main.js`, to `public/assets/js/`.
         uglify: {
             dist: {
                 files: [
@@ -261,15 +261,17 @@ module.exports = function (grunt)
                         '<%= paths.dest.js %>cookie.js': ['node_modules/jquery.cookie/jquery.cookie.js'],
                         '<%= paths.dest.js %>slick.js': ['node_modules/slick-carousel/slick/slick.js'],
                         '<%= paths.dest.js %>picturefill.js': ['node_modules/picturefill/dist/picturefill.js'],
-                        '<%= paths.dest.js %>prettify.js': ['bower_components/google-code-prettify/src/prettify.js'],
+                        '<%= paths.dest.js %>prism.js': [
+                            'node_modules/prismjs/prism.js',
+                            // Add any plugins
+                            'node_modules/prismjs/plugins/line-numbers/prism-line-numbers.js',
+                            'node_modules/prismjs/plugins/show-language/prism-show-language.js',
+                            // Add any additional languages
+                            'node_modules/prismjs/components/prism-scss.js',
+                            'node_modules/prismjs/components/prism-textile.js'
+                        ],
                         '<%= paths.dest.js %>require.js': ['node_modules/requirejs/require.js'],
                         '<%= paths.dest.js %>responsivenav.js': ['node_modules/responsive-nav/responsive-nav.js']
-                    },
-                    {
-                        expand: true,
-                        cwd: 'bower_components/google-code-prettify/src/',
-                        src: 'lang-*.js',
-                        dest: '<%= paths.dest.js %>'
                     }
                 ]
             }
@@ -294,7 +296,7 @@ module.exports = function (grunt)
     });
 
     // Register tasks.
-    grunt.registerTask('build', ['clean', 'concurrent', 'copy:js', 'uglify']);
+    grunt.registerTask('build', ['clean', 'concurrent', 'uglify', 'copy:js']);
     grunt.registerTask('css', ['sasslint', 'sass', 'concat', 'cmq', 'postcss', 'cssmin', 'copy:css']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('travis', ['jshint', 'build']);
