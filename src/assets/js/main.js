@@ -72,7 +72,8 @@
         // on visitor input. More info - https://github.com/jackmoore/autosize.
 
         if (fields.length) {
-            require(['autosize'], function (autosize) {
+            require(['autosize'], function (autosize)
+            {
                 autosize(fields);
             });
         }
