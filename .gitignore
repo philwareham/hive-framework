@@ -15,7 +15,3 @@ Thumbs.db
 /npm-debug.log
 /tmp
 /vendor
-
-# Page cache #
-##############
-/cache
