@@ -185,7 +185,7 @@ sub,
 sup.footnote,
 sup {
     position: relative;
-    font-size: 10px;
+    font-size: 0.625em; // 10px / 16px
     line-height: 0;
     vertical-align: baseline;
 }
