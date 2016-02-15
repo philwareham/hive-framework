@@ -11,8 +11,6 @@
 <txp:meta_description />
 <txp:meta_keywords separator="," />
 <meta name="generator" content="Textpattern CMS">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="mstile-144x144.png">
 
 <!-- specify robots, canonical, author - depending on context -->
 <txp:if_status>
