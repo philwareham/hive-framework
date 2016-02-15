@@ -38,20 +38,6 @@ module.exports = function (grunt)
             '<%= paths.dest.js %>'
         ],
 
-        // Combine any matching media queries.
-        cmq: {
-            css: {
-                files: {
-                    '<%= paths.tmp.css %>': [
-                        '<%= paths.tmp.css %>*.css',
-                        // Ignore these non-concatenated files.
-                        '!<%= paths.tmp.css %>style.css',
-                        '!<%= paths.tmp.css %>jquery-ui.css'
-                    ]
-                }
-            }
-        },
-
         // Concatenate CSS files prior to matching media queries.
         concat: {
             css: {
@@ -124,16 +110,6 @@ module.exports = function (grunt)
             }
         },
 
-        // Minify and copy CSS files to `public/assets/css/`.
-        cssmin: {
-            main: {
-                files: {
-                    '<%= paths.dest.css %>main.css': '<%= paths.tmp.css %>main.css',
-                    '<%= paths.dest.css %>design-patterns.css': '<%= paths.tmp.css %>design-patterns.css'
-                }
-            }
-        },
-
         // Report on any available updates for dependencies.
         devUpdate: {
             main: {
@@ -191,15 +167,17 @@ module.exports = function (grunt)
         postcss: {
             options: {
                 processors: [
+                    require('css-mqpacker')(),
                     require('autoprefixer')({
                         browsers: ['last 2 versions']
-                    })
+                    }),
+                    require('cssnano')()
                 ]
             },
             dist: {
                 files: [
-                    {'<%= paths.tmp.css %>main.css': '<%= paths.tmp.css %>main.css'},
-                    {'<%= paths.tmp.css %>design-patterns.css': '<%= paths.tmp.css %>design-patterns.css'}
+                    {'<%= paths.dest.css %>main.css': '<%= paths.tmp.css %>main.css'},
+                    {'<%= paths.dest.css %>design-patterns.css': '<%= paths.tmp.css %>design-patterns.css'}
                 ]
             }
         },
@@ -297,7 +275,7 @@ module.exports = function (grunt)
 
     // Register tasks.
     grunt.registerTask('build', ['clean', 'concurrent', 'uglify', 'copy:js']);
-    grunt.registerTask('css', ['sasslint', 'sass', 'concat', 'cmq', 'postcss', 'cssmin', 'copy:css']);
+    grunt.registerTask('css', ['sasslint', 'sass', 'concat', 'postcss', 'copy:css']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('travis', ['jshint', 'build']);
 };
