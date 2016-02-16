@@ -53,15 +53,15 @@ module.exports = function (grunt)
         // Run some tasks in parallel to speed up the build process.
         concurrent: {
             dist: [
-                'jshint',
                 'css',
-                'replace',
-                'devUpdate'
+                'devUpdate',
+                'jshint',
+                'replace'
             ]
         },
 
         copy: {
-            // Copy files from various sources.
+            // Copy JavaScript files from various sources.
             js: {
                 files: [
                     {
@@ -85,7 +85,6 @@ module.exports = function (grunt)
                     }
                 ]
             },
-
             // Copy Flowplayer images and fonts to CSS folder (because Flowplayer's CSS expects relative path to these).
             // Copy Slick icon font too.
             css: {
@@ -182,7 +181,7 @@ module.exports = function (grunt)
             }
         },
 
-        // Generate filename timestamps within template/mockup files.
+        // Generate filename timestamps within templates files and main.js.
         replace: {
             theme: {
                 options: {
@@ -263,7 +262,7 @@ module.exports = function (grunt)
             },
             js: {
                 files: '<%= paths.src.js %>**',
-                tasks: ['jshint', 'copy:js', 'uglify']
+                tasks: ['jshint', 'uglify', 'copy:js']
             },
             templates: {
                 files: '<%= paths.src.templates %>**',
