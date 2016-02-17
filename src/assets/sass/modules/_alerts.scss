@@ -41,19 +41,19 @@
 }
 
 /**
- * Highlight background.
+ * Highlighted background.
  *
  * Example HTML:
  *
  * <table>
  *     <tr>
- *         <td class="highlight></td>
+ *         <td class="highlighted></td>
  *         <td></td>
  *     </tr>
  * </table>
  */
 
-.highlight {
+.highlighted {
     background: $color-highlight-box;
 }
 
