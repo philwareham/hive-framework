@@ -26,18 +26,6 @@
         }
     });
 
-    // Detect whether browser supports SVG format.
-
-    define('feature', function ()
-    {
-        return {
-            svg: function ()
-            {
-                return document.createElementNS || document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect;
-            }
-        };
-    });
-
     // Detect whether user enabled 'Do No Track' in their browser, and honour it.
 
     define('track', function ()
@@ -150,18 +138,6 @@
             });
         }
 
-    });
-
-    // If no SVG support, replace SVGs with PNGs.
-
-    require(['jquery', 'feature'], function ($, supports)
-    {
-        if (!supports.svg) {
-            $('img.svg').attr('src', function ()
-            {
-                return $(this).attr('src').replace('.svg', '.png');
-            });
-        }
     });
 
     // Responsive navigation menu, via 'Responsive Nav'.
