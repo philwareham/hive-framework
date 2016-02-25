@@ -40,7 +40,6 @@
     display: inline-block;
     position: relative;
     //width: 14em; TODO: check this when jQuery UI 1.12.0 releases
-    transition: box-shadow 0.1s linear;
     background-color: $color-background;
     font-family: $font-sans-serif;
     font-size: $base-font-size; /* 1 */
@@ -71,6 +70,11 @@
         white-space: nowrap;
         overflow: hidden;
     }
+}
+
+.ui-selectmenu-icon.ui-icon {
+    float: right;
+    margin-top: 0;
 }
 
 .ui-selectmenu-menu {
