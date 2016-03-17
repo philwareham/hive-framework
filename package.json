@@ -24,7 +24,7 @@
   "devDependencies": {
     "autoprefixer": "6.3.3",
     "breakpoint-sass": "2.7.0",
-    "css-mqpacker": "4.0.0",
+    "css-mqpacker": "4.0.1",
     "cssnano": "3.5.2",
     "eyeglass": "0.8.3",
     "grunt": "~0.4",
@@ -34,7 +34,7 @@
     "grunt-contrib-concat": "1.0.0",
     "grunt-contrib-copy": "1.0.0",
     "grunt-contrib-jshint": "1.0.0",
-    "grunt-contrib-uglify": "1.0.0",
+    "grunt-contrib-uglify": "1.0.1",
     "grunt-contrib-watch": "1.0.0",
     "grunt-dev-update": "1.4.0",
     "grunt-postcss": "0.8.0",
