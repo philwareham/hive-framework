@@ -96,7 +96,7 @@ textarea {
 
     &:focus {
         border-color: $color-link-focus;
-        outline: 0;
+        outline-width: 0;
     }
 }
 

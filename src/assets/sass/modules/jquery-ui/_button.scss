@@ -77,7 +77,7 @@ a.ui-button {
 
 .ui-button.ui-state-focus {
     border-color: $color-link-focus;
-    outline: 0;
+    outline-width: 0;
     box-shadow: $inset-highlighting, 0 0 7px $color-link-hover;
 }
 

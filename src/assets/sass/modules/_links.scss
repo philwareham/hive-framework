@@ -17,7 +17,7 @@ a {
 
     &:hover,
     &:active {
-        outline: 0;
+        outline-width: 0;
         color: $color-link-hover;
         text-decoration: underline;
     }
@@ -82,7 +82,7 @@ main h1 a {
     }
 
     &:focus {
-        outline: 0;
+        outline-width: 0;
 
         img {
             box-shadow: 0 0 4px 2px $color-link-focus;
