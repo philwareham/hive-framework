@@ -18,9 +18,9 @@ button {
  */
 
 button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"],
+[type="button"],
+[type="reset"],
+[type="submit"],
 a.button,
 span.button {
     @include gradient-linear($color-button-gradient-from, $color-button-gradient-to);

@@ -16,12 +16,18 @@ fieldset {
 /**
  * Normalize styling of `legend`.
  *
- * 1. Correct `color` not being inherited from fieldset in IE 11.
+ * 1. Correct wrapping not present in IE 11 and Edge 12/13.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * 3. Correct `color` not being inherited from fieldset in IE 11.
  */
 
 legend {
-    padding: 0;
-    color: inherit; /* 1 */
+    display: table; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 2 */
+    color: inherit; /* 3 */
+    white-space: normal; /* 1 */
+    box-sizing: border-box; /* 1 */
 }
 
 /**
@@ -63,7 +69,7 @@ input::-moz-focus-inner {
  * appearance).
  */
 
-input[type="search"]::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
@@ -73,20 +79,20 @@ input[type="search"]::-webkit-search-decoration {
  * 1. Remove browser-specific default styling.
  */
 
-input[type="color"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="email"],
-input[type="month"],
-input[type="number"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="time"],
-input[type="url"],
-input[type="week"],
+[type="color"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
 select,
 textarea {
     height: 2.5em; // 40px / 16px
@@ -106,7 +112,7 @@ textarea {
  * Remove padding from `color` fields.
  */
 
-input[type="color"] {
+[type="color"] {
     padding: 0;
 }
 
@@ -116,8 +122,8 @@ input[type="color"] {
  * decrement button to change from `default` to `text`.
  */
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
     height: auto;
 }
 
@@ -126,8 +132,8 @@ input[type="number"]::-webkit-outer-spin-button {
  * 2. Correct margins for inline checkbox/radio labels.
  */
 
-input[type="checkbox"],
-input[type="radio"] {
+[type="checkbox"],
+[type="radio"] {
     padding: 0; /* 1 */
 
     + label {
@@ -210,15 +216,9 @@ textarea {
  * 2. Override default iOS opacity setting.
  */
 
-button[disabled],
-input[disabled],
-input[type="button"][disabled],
-input[type="reset"][disabled],
-input[type="submit"][disabled],
-select[disabled],
-select[disabled] option,
-select[disabled] optgroup,
-textarea[disabled],
+[disabled],
+[disabled] option,
+[disabled] optgroup,
 span.disabled {
     border-color: $color-border-light !important;
     background: $color-background-form-disabled !important;
