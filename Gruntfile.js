@@ -236,7 +236,7 @@ module.exports = function (grunt)
                         '<%= paths.dest.js %>main.js': ['<%= paths.tmp.js %>main.js'],
                         '<%= paths.dest.js %>autosize.js': ['node_modules/autosize/dist/autosize.js'],
                         '<%= paths.dest.js %>cookie.js': ['node_modules/jquery.cookie/jquery.cookie.js'],
-                        '<%= paths.dest.js %>slick.js': ['node_modules/slick-carousel/slick/slick.js'],
+                        '<%= paths.dest.js %>list.js': ['node_modules/list.js/dist/list.js'], // TODO: hook this up
                         '<%= paths.dest.js %>picturefill.js': ['node_modules/picturefill/dist/picturefill.js'],
                         '<%= paths.dest.js %>prism.js': [
                             'node_modules/prismjs/prism.js',
@@ -248,7 +248,8 @@ module.exports = function (grunt)
                             'node_modules/prismjs/components/prism-textile.js'
                         ],
                         '<%= paths.dest.js %>require.js': ['node_modules/requirejs/require.js'],
-                        '<%= paths.dest.js %>responsivenav.js': ['node_modules/responsive-nav/responsive-nav.js']
+                        '<%= paths.dest.js %>responsivenav.js': ['node_modules/responsive-nav/responsive-nav.js'],
+                        '<%= paths.dest.js %>slick.js': ['node_modules/slick-carousel/slick/slick.js']
                     }
                 ]
             }
