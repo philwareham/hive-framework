@@ -1,0 +1,98 @@
+/* Controlgroup
+   ========================================================================== */
+
+/**
+ * jQuery UI Controlgroup.
+ *
+ * Some classes and HTML elements generally added via JavaScript, more info -
+ * https://jqueryui.com/controlgroup/
+ *
+ * Example HTML:
+ *
+ * <fieldset>
+ *     <legend>Favourite drink</legend>
+ *     <div id="radio">
+ *         <input id="tea" name="drink" type="radio">
+ *         <label for="tea">Tea</label>
+ *         <input id="coffee" name="drink" type="radio" checked="checked">
+ *         <label for="coffee">Coffee</label>
+ *         <input id="tequila" name="drink" type="radio">
+ *         <label for="tequila">Tequila</label>
+ *     </div>
+ * </fieldset>
+ */
+
+.ui-controlgroup {
+    display: inline-block;
+    vertical-align: middle;
+
+    > .ui-controlgroup-item {
+        margin-right: 0;
+        margin-left: 0;
+        float: left;
+
+        &:focus,
+        &.ui-visual-focus {
+            z-index: 9999;
+        }
+    }
+
+    .ui-controlgroup-label {
+        padding: 0.4em 1em;
+
+        span {
+            font-size: 80%;
+        }
+    }
+}
+
+.ui-controlgroup-horizontal {
+    .ui-controlgroup-label {
+        + .ui-controlgroup-item {
+            border-left: 0;
+        }
+
+        &.ui-widget-content {
+            border-right: 0;
+        }
+    }
+}
+
+.ui-controlgroup-vertical {
+    > .ui-controlgroup-item {
+        display: block;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        float: none;
+        text-align: left;
+    }
+
+    .ui-controlgroup-item {
+        box-sizing: border-box;
+    }
+
+    .ui-controlgroup-label {
+        + .ui-controlgroup-item {
+            border-top: 0;
+        }
+
+        &.ui-widget-content {
+            border-bottom: 0;
+        }
+    }
+}
+
+/**
+ * Spinner specific style fixes.
+ */
+
+.ui-controlgroup-vertical {
+    .ui-spinner-input {
+        width: calc(100% - 2.4em);
+    }
+
+    .ui-spinner .ui-spinner-up {
+        border-top-style: solid;
+    }
+}
