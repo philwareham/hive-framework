@@ -25,7 +25,7 @@
     "autoprefixer": "6.3.6",
     "breakpoint-sass": "2.7.0",
     "css-mqpacker": "5.0.1",
-    "cssnano": "3.5.2",
+    "cssnano": "3.6.2",
     "eyeglass": "0.8.3",
     "grunt": "~1.0",
     "grunt-cli": "~1",
