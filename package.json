@@ -25,9 +25,9 @@
     "autoprefixer": "6.3.6",
     "breakpoint-sass": "2.7.0",
     "css-mqpacker": "5.0.1",
-    "cssnano": "3.7.0",
+    "cssnano": "3.7.1",
     "eyeglass": "0.8.3",
-    "family.scss": "1.0.6",
+    "family.scss": "1.0.8",
     "grunt": "~1.0",
     "grunt-cli": "~1",
     "grunt-concurrent": "2.3.0",
@@ -43,8 +43,8 @@
     "grunt-sass": "1.2.0",
     "grunt-sass-lint": "0.2.0",
     "load-grunt-tasks": "~3.5",
-    "node-sass": "3.7.0",
-    "sass-lint": "1.7.0",
+    "node-sass": "3.8.0",
+    "sass-lint": "1.8.2",
     "singularitygs": "1.7.0"
   },
   "dependencies": {
