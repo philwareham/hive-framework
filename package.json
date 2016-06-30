@@ -49,6 +49,7 @@
   },
   "dependencies": {
     "autosize": "3.0.15",
+    "flexibility": "2.0.1",
     "flowplayer": "6.0.5",
     "jquery.cookie": "1.4.1",
     "list.js": "1.2.0",
