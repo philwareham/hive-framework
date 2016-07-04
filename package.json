@@ -22,7 +22,7 @@
     "url": "https://github.com/philwareham/hive-framework/issues"
   },
   "devDependencies": {
-    "autoprefixer": "6.3.6",
+    "autoprefixer": "6.3.7",
     "breakpoint-sass": "2.7.0",
     "css-mqpacker": "5.0.1",
     "cssnano": "3.7.1",
