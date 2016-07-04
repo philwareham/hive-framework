@@ -27,7 +27,6 @@
     "css-mqpacker": "5.0.1",
     "cssnano": "3.7.1",
     "eyeglass": "0.8.3",
-    "family.scss": "1.0.8",
     "grunt": "~1.0",
     "grunt-cli": "~1",
     "grunt-concurrent": "2.3.0",
