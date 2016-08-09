@@ -20,7 +20,7 @@
  *         <option>Fast</option>
  *         <option>Faster</option>
  *     </select>
- *     <span class="ui-selectmenu-button ui-widget ui-state-default ui-corner-all" style="width:87px;">
+ *     <span class="ui-selectmenu-button ui-widget ui-state-default ui-corner-all">
  *         <span class="ui-icon ui-icon-triangle-1-s"></span>
  *         <span class="ui-selectmenu-text">Medium</span>
  *     </span>
@@ -36,44 +36,8 @@
  * </div>
  */
 
-.ui-selectmenu-button {
-    display: inline-block;
-    position: relative;
-    //width: 14em; TODO: check this when jQuery UI 1.12.0 releases
-    background-color: $color-background;
-    font-family: $font-sans-serif;
-    font-size: $base-font-size; /* 1 */
-    line-height: 1.375; // 22px / 16px
-    text-decoration: none;
-    cursor: pointer;
-    overflow: hidden;
-    vertical-align: top;
-
-    &:focus {
-        border-color: $color-link-focus;
-        outline-width: 0;
-    }
-
-    span.ui-icon {
-        position: absolute;
-        top: 50%;
-        right: 0.25em;
-        left: auto;
-        margin-top: -8px;
-    }
-
-    span.ui-selectmenu-text {
-        display: block;
-        padding: 0.5em 1.125em 0.5em 0.5em;
-        text-align: left;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-    }
-}
-
 .ui-selectmenu-icon.ui-icon {
-    margin-top: 0;
+    margin: 0 -0.25em 0 0.25em;
     float: right;
 }
 
@@ -108,4 +72,27 @@
 
 .ui-selectmenu-open {
     display: block;
+}
+
+.ui-selectmenu-text {
+    display: block;
+    margin-right: 1em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.ui-selectmenu-button.ui-button {
+    white-space: nowrap;
+}
+
+.ui-selectmenu-button:not(.ui-controlgroup-item) {
+    border-radius: $border-radius;
+}
+
+.ui-selectmenu-button.ui-controlgroup-item.ui-corner-tr {
+    border-radius: 0 $border-radius $border-radius 0;
+}
+
+.ui-selectmenu-button.ui-controlgroup-item.ui-corner-tl {
+    border-radius: $border-radius 0 0 $border-radius;
 }
