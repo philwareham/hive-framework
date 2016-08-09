@@ -38,6 +38,7 @@
     top: 0;
     left: 0;
     padding: 0.25em;
+    outline: 0;
     box-shadow: $standard-shadow;
     z-index: 1002;
 
@@ -62,8 +63,6 @@
         width: 20px;
         height: 20px;
         margin: -10px 0 0;
-        border: 0;
-        background: none;
     }
 
     .ui-dialog-content {
@@ -89,54 +88,6 @@
     .ui-dialog-buttonpane button {
         margin: 0.5em 0.25em 0.5em 0;
         cursor: pointer;
-    }
-
-    .ui-resizable-n {
-        top: 0;
-        height: 2px;
-    }
-
-    .ui-resizable-e {
-        right: 0;
-        width: 2px;
-    }
-
-    .ui-resizable-s {
-        bottom: 0;
-        height: 2px;
-    }
-
-    .ui-resizable-w {
-        left: 0;
-        width: 2px;
-    }
-
-    .ui-resizable-se,
-    .ui-resizable-sw,
-    .ui-resizable-ne,
-    .ui-resizable-nw {
-        width: 7px;
-        height: 7px;
-    }
-
-    .ui-resizable-se {
-        right: 0;
-        bottom: 0;
-    }
-
-    .ui-resizable-sw {
-        bottom: 0;
-        left: 0;
-    }
-
-    .ui-resizable-ne {
-        top: 0;
-        right: 0;
-    }
-
-    .ui-resizable-nw {
-        top: 0;
-        left: 0;
     }
 }
 
