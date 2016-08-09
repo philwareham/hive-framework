@@ -22,7 +22,7 @@
     "url": "https://github.com/philwareham/hive-framework/issues"
   },
   "devDependencies": {
-    "autoprefixer": "6.3.7",
+    "autoprefixer": "6.4.0",
     "breakpoint-sass": "2.7.0",
     "css-mqpacker": "5.0.1",
     "cssnano": "3.7.3",
@@ -34,7 +34,7 @@
     "grunt-contrib-concat": "1.0.1",
     "grunt-contrib-copy": "1.0.0",
     "grunt-contrib-jshint": "1.0.0",
-    "grunt-contrib-uglify": "1.0.1",
+    "grunt-contrib-uglify": "2.0.0",
     "grunt-contrib-watch": "1.0.0",
     "grunt-dev-update": "2.0.0",
     "grunt-postcss": "0.8.0",
@@ -47,7 +47,7 @@
     "singularitygs": "1.7.0"
   },
   "dependencies": {
-    "autosize": "3.0.16",
+    "autosize": "3.0.17",
     "flexibility": "2.0.1",
     "flowplayer": "6.0.5",
     "jquery.cookie": "1.4.1",
