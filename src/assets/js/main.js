@@ -5,18 +5,19 @@
     document.documentElement.className = 'js';
 
     // Detect whether jQuery v2 features required, otherwise use jQuery v1 for higher compatibility.
+    // TODO: use jQuery v3?
 
-    var jqueryVersion = '1.12.3';
+    var jqueryVersion = '1.12.4';
 
     if (typeof JSON !== 'undefined' && 'querySelector' in document && 'addEventListener' in window) {
-        jqueryVersion = '2.2.3';
+        jqueryVersion = '2.2.4';
     }
 
     requirejs.config({
         paths:
         {
             'jquery': 'https://ajax.googleapis.com/ajax/libs/jquery/'+jqueryVersion+'/jquery.min',
-            'jqueryui': 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min',
+            'jqueryui': 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min',
             'flowplayer': 'flowplayer/flowplayer.min'
         },
         shim:
