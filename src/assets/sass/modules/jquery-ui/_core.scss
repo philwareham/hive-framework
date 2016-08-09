@@ -43,7 +43,7 @@
  * Clearfix jQuery UI elements.
  */
 
-.ui-helper-clearfix:after {
+.ui-helper-clearfix::after {
     display: table;
     clear: both;
     border-collapse: collapse;
@@ -127,13 +127,25 @@ a.ui-state-default:focus {
 }
 
 /**
- * Hover/focus jQuery UI widget interaction states.
+ * Hover jQuery UI widget interaction states.
  */
 
-.ui-state-hover,
-.ui-state-focus {
+.ui-state-hover {
     border-color: darken($color-gradient-border, 13%);
     background-color: lighten($color-gradient-from, 4%);
+}
+
+/**
+ * Focus jQuery UI widget interaction states.
+ */
+
+.ui-state-focus {
+    border-color: $color-link-focus;
+    outline-width: 0;
+
+    a {
+        outline-width: 0;
+    }
 }
 
 /**
