@@ -64,14 +64,13 @@ $colors: (
     margin: 1em 0;
     border: 1px solid $color-border;
 
-    &:after {
+    &::after {
         position: absolute;
         top: 0.5em;
         padding: 1px 0.2142857em; // 3px / 14px
         background-color: rgba(255, 255, 255, 0.66);
         font-family: $font-code;
         font-size: $code-font-size;
-        line-height: $base-line-height;
     }
 }
 
@@ -79,7 +78,7 @@ $colors: (
     .design-patterns--color-#{$name} {
         background: $color;
 
-        &:after {
+        &::after {
             content: "#{$color}";
         }
     }
@@ -111,11 +110,6 @@ $colors: (
  * The list of all available icons.
  */
 
-.jquery-ui-icons {
-    margin: 0;
-    padding: 0;
-}
-
 .jquery-ui-icons li {
     position: relative;
     margin: 2px;
@@ -125,7 +119,7 @@ $colors: (
     cursor: pointer;
 }
 
-.jquery-ui-icons span.ui-icon {
+.jquery-ui-icons .ui-icon {
     margin: 0 4px;
     float: left;
 }
@@ -221,4 +215,30 @@ $colors: (
     .design-patterns--breakpoint-3 {
         display: block;
     }
+}
+
+/**
+ * Prism language indicator (plugin).
+ */
+
+div.prism-show-language {
+    position: relative;
+}
+
+div.prism-show-language > div.prism-show-language-label {
+    display: inline-block;
+    position: absolute;
+    top: -0.75em;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    width: auto;
+    height: auto;
+    padding: 0 0.25em; // 3px / 12px
+    border-radius: 0 0.25em; // 3px / 12px
+    background-color: $color-text-footnote;
+    color: #ffffff;
+    font-family: $font-body;
+    font-size: $small-font-size;
+    z-index: 1;
 }
