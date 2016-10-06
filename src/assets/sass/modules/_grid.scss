@@ -22,8 +22,7 @@
  * Generate sizes all for grid column cells.
  *
  * Because this is mobile first, cells are all initially a 1 column span
- * (full width, 12 cell span). We will then adjust them at various breakpoints
- * listed below.
+ * (full width, 12 cell span). We will then adjust them at various breakpoints.
  *
  * Example HTML:
  *
@@ -46,83 +45,4 @@
 .layout-4col-3span,
 .nested {
     width: 100%;
-}
-
-/**
- * Grid column cell changes at 1st breakpoint.
- *
- * Cells for 4 column layout are generated if `.at-break1` class is specified,
- * (otherwise they stay as 1 column layout cells), but as 2 column layout
- * intitially (they will change to 4 column at a higher breakpoint).
- *
- * Nested cells for 4 column layout are also generated, also as 2 column layout
- * intitially (they will change to 4 column at a higher breakpoint).
- */
-
-@include breakpoint($breakpoint-1) {
-
-    .layout-4col {
-        width: 50%;
-    }
-
-}
-
-/**
- * Grid column cell changes at 2nd breakpoint.
- *
- * Cells for 2 column layout are generated if `.at-break2` class is specified,
- * otherwise they stay as 1 column layout cells.
- *
- * Cells for 3 column layout cells and nested cells for 3 column layout are
- * also generated.
- */
-
-@include breakpoint($breakpoint-2) {
-
-    .txp-layout-2col {
-        width: 50%;
-    }
-
-    .layout-3col {
-        width: 33.333%;
-    }
-
-    .layout-3col-2span {
-        width: 66.666%;
-    }
-
-}
-
-/**
- * Grid column cell changes at 3rd (final) breakpoint.
- *
- * Cells for 2 column layout are generated if they were not stated as
- * `.at-break2` class previously. Nested 2 column layout cells as generated.
- *
- * Cells for 4 column layout cells and nested cells for 4 column layout are
- * also generated.
- *
- * Also, various variations of 3 and 4 column cell spans are generated.
- *
- * Example HTML:
- *
- * <div class="layout--span-1-9"></div>
- * <div class="layout--span-10-12"></div>
- */
-
-@include breakpoint($breakpoint-3) {
-
-    .txp-layout-4col,
-    .txp-layout-4col-alt {
-        width: 25%;
-    }
-
-    .layout-4col-2span {
-        width: 50%;
-    }
-
-    .txp-layout-4col-3span {
-        width: 75%;
-    }
-
 }

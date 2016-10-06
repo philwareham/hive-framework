@@ -129,10 +129,6 @@
     user-select: none;
     -webkit-touch-callout: none; /* 1 */
 
-    @include breakpoint($breakpoint-2) {
-        display: none;
-    }
-
     &:hover,
     &.active {
         background-color: $color-selected;
