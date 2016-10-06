@@ -7,7 +7,7 @@
 <link rel="dns-prefetch" href="https://platform.twitter.com">
 <link rel="dns-prefetch" href="https://www.google-analytics.com">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <txp:meta_description />
 <txp:meta_keywords separator="," />
 <meta name="generator" content="Textpattern CMS">

@@ -22,7 +22,7 @@
         margin: 0 1em 0 0;
         float: left;
 
-        &:before {
+        &::before {
             content: "\2190" "\00A0";
         }
     }
@@ -31,7 +31,7 @@
         margin: 0 0 0 1em;
         float: right;
 
-        &:after {
+        &::after {
             content: "\00A0" "\2192";
         }
     }

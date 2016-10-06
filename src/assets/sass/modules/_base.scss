@@ -63,14 +63,18 @@ footer,
 nav ul,
 nav ol,
 .clearfix,
-.container,
-.nested-list-2-column,
-.nested-list-3-column,
-.nested-list-4-column,
 .paginator {
-    &:after {
+    &::after {
         display: table;
         clear: both;
         content: "";
     }
+}
+
+/**
+ * Basic float clearer.
+ */
+
+.clear {
+    clear: both;
 }
