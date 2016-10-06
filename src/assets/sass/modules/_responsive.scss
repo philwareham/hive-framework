@@ -42,6 +42,39 @@
         width: 66.666%;
     }
 
+    /**
+     * Navigation layout changes.
+     */
+
+    .site-navigation {
+        border-top: 1px solid $color-border;
+
+        .js & {
+            max-height: none;
+        }
+
+        ul {
+            width: 88%;
+        }
+
+        li {
+            float: left;
+            border-top: 0;
+            border-right: solid 1px $color-gradient-border;
+
+            &:first-child {
+                border-left: solid 1px $color-gradient-border;
+            }
+        }
+
+        a {
+            padding: 0.5em 1em;
+        }
+
+        &.opened {
+            max-height: 9999px;
+        }
+    }
 
     /**
      * Remove navigation toggle show/hide button for navigation.
@@ -49,6 +82,35 @@
 
     .nav-toggle {
         display: none;
+    }
+
+    /**
+     * jQuery UI Tabs layout changes.
+     */
+
+    .ui-tabs {
+        .ui-tabs-nav {
+            li {
+                margin-top: 2px;
+                float: none;
+                border-bottom-width: 1px;
+                border-radius: 0;
+
+                &.ui-tabs-active {
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
+            }
+
+            .ui-tabs-anchor {
+                display: block;
+                float: none;
+            }
+        }
+
+        .ui-tabs-panel {
+            border-top-width: 0;
+        }
     }
 
 }

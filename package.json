@@ -23,10 +23,7 @@
   },
   "devDependencies": {
     "autoprefixer": "6.5.0",
-    "breakpoint-sass": "2.7.0",
-    "css-mqpacker": "5.0.1",
     "cssnano": "3.7.6",
-    "eyeglass": "1.1.2",
     "grunt": "~1.0",
     "grunt-cli": "~1",
     "grunt-concurrent": "2.3.1",

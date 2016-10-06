@@ -21,19 +21,11 @@
     font-family: $font-sans-serif;
     font-weight: bold;
 
-    @include breakpoint($breakpoint-2) {
-        border-top: 1px solid $color-border;
-    }
-
     .js & {
         display: block;
         max-height: 0;
         overflow: hidden;
         clip: rect(0 0 0 0);
-
-        @include breakpoint($breakpoint-2) {
-            max-height: none;
-        }
     }
 
     ul {
@@ -42,10 +34,6 @@
         margin: 0 auto;
         padding: 0;
         list-style: none;
-
-        @include breakpoint($breakpoint-2) {
-            width: 88%;
-        }
     }
 
     li {
@@ -66,16 +54,6 @@
         &.active {
             background-color: lighten($color-gradient-from, 8%);
         }
-
-        @include breakpoint($breakpoint-2) {
-            float: left;
-            border-top: 0;
-            border-right: solid 1px $color-gradient-border;
-
-            &:first-child {
-                border-left: solid 1px $color-gradient-border;
-            }
-        }
     }
 
     a {
@@ -92,10 +70,6 @@
         &:active {
             color: darken($color-text, 10%);
             text-decoration: none;
-        }
-
-        @include breakpoint($breakpoint-2) {
-            padding: 0.5em 1em;
         }
     }
 

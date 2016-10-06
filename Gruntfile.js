@@ -166,7 +166,6 @@ module.exports = function (grunt)
         postcss: {
             options: {
                 processors: [
-                    require('css-mqpacker')(),
                     require('autoprefixer')({
                         browsers: ['last 2 versions']
                     }),
@@ -207,10 +206,10 @@ module.exports = function (grunt)
 
         // Sass configuration.
         sass: {
-            options: require('eyeglass')({
+            options: {
                 outputStyle: 'expanded', // outputStyle = expanded, nested, compact or compressed.
                 sourceMap: false
-            }),
+            },
             dist: {
                 files: [
                     {'<%= paths.tmp.css %>style.css': '<%= paths.src.sass %>style.scss'},
