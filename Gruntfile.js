@@ -43,7 +43,6 @@ module.exports = function (grunt)
             css: {
                 src: [
                     '<%= paths.tmp.css %>style.css',
-                    '<%= paths.tmp.css %>jquery-ui.css',
                     'node_modules/flowplayer/dist/skin/minimalist.css'
                 ],
                 dest: '<%= paths.tmp.css %>main.css'
@@ -213,7 +212,6 @@ module.exports = function (grunt)
             dist: {
                 files: [
                     {'<%= paths.tmp.css %>style.css': '<%= paths.src.sass %>style.scss'},
-                    {'<%= paths.tmp.css %>jquery-ui.css': '<%= paths.src.sass %>jquery-ui.scss'},
                     {'<%= paths.tmp.css %>design-patterns.css': '<%= paths.src.sass %>design-patterns.scss'}
                 ]
             }
@@ -234,7 +232,6 @@ module.exports = function (grunt)
                     {
                         '<%= paths.dest.js %>main.js': ['<%= paths.tmp.js %>main.js'],
                         '<%= paths.dest.js %>autosize.js': ['node_modules/autosize/dist/autosize.js'],
-                        '<%= paths.dest.js %>cookie.js': ['node_modules/jquery.cookie/jquery.cookie.js'],
                         '<%= paths.dest.js %>list.js': ['node_modules/list.js/dist/list.js'], // TODO: hook this up
                         '<%= paths.dest.js %>picturefill.js': ['node_modules/picturefill/dist/picturefill.js'],
                         '<%= paths.dest.js %>prism.js': [
