@@ -6,7 +6,7 @@
 
 ![Hive logo](https://github.com/philwareham/hive-framework/blob/master/public/favicon-192x192.png)
 
-[Demo](http://testing3.designhive.com/)
+[Demo](http://hive-framework.philwareham.co.uk/)
 
 A website development framework built with Grunt and Sass, and incorporating jQuery UI. The theme styling is intentionally minimal to make re-skinning easier.
 
