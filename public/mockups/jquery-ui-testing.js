@@ -49,131 +49,37 @@ require(['main'], function ()
 
         $('.jquery-ui-button').button();
 
-        // Button set.
-
-        $('.jquery-ui-buttonset').buttonset();
-
         // Icon button.
 
         $('.jquery-ui-button-icon-only').button({
-            icons: {
-                primary: 'ui-icon-locked'
-            },
-            text: false
+            showLabel: false,
+            icon: 'ui-icon-gear'
         });
+
         $('.jquery-ui-button-icon-left').button({
-            icons: {
-                primary: 'ui-icon-locked'
-            }
+            icon: 'ui-icon-locked'
         });
+
         $('.jquery-ui-button-icon-right').button({
-            icons: {
-                secondary: 'ui-icon-gear'
-            }
-        });
-        $('.jquery-ui-button-icon-two').button({
-            icons: {
-                primary: 'ui-icon-locked',
-                secondary: 'ui-icon-disk'
-            }
-        });
-        $('.jquery-ui-button-icon-two-only').button({
-            icons: {
-                primary: 'ui-icon-locked',
-                secondary: 'ui-icon-disk'
-            },
-            text: false
-        });
-
-        // Split button.
-
-        $('#split-rerun-example')
-            .button()
-            .click(function ()
-            {
-                alert('Running the last action');
-            })
-            .next()
-            .button({
-                text: false,
-                icons: {
-                    primary: 'ui-icon-triangle-1-s'
-                }
-            })
-            .click(function ()
-            {
-                var menu = $(this).parent().next().show().position({
-                    my: 'left top',
-                    at: 'left bottom',
-                    of: this
-                });
-                $(document).one( 'click', function ()
-                {
-                    menu.hide();
-                });
-                return false;
-            })
-            .parent()
-            .buttonset()
-            .next()
-            .hide()
-            .menu();
-
-        // Split button search example.
-
-        $('.txp-search-button')
-            .button({
-                text: false,
-                icons: {
-                    primary: 'ui-icon-search'
-                }
-            })
-            .click(function ()
-            {
-                alert('Running the last action');
-            })
-            .next()
-            .button({
-                text: false,
-                icons: {
-                    primary: 'ui-icon-triangle-1-s'
-                }
-            })
-            .click(function ()
-            {
-                var menu = $(this).parent().next().show().position({
-                    my: 'left top',
-                    at: 'left bottom',
-                    of: this
-                });
-                $(document).one('click blur', function ()
-                {
-                    menu.hide();
-                });
-                return false;
-            })
-            .parent()
-            .buttonset()
-            .next()
-            .hide()
-            .menu();
-
-        // Options button.
-
-        $('#detail-toggle').button({
-            text: false,
-            icons: {
-                primary: 'ui-icon-gear'
-            }
+            icon: 'ui-icon-disk',
+            iconPosition: 'end'
         });
 
         // Checkboxradio.
 
-        $('#jquery-ui-checkboxradio [type="radio"]').checkboxradio();
+        $('.jquery-ui-checkboxradio-checkbox input').checkboxradio({
+            icon: false
+        });
+
+        $('.jquery-ui-checkboxradio-radio input').checkboxradio();
 
         // Controlgroup.
 
-        $('#jquery-ui-controlgroup').controlgroup();
+        $('.jquery-ui-controlgroup').controlgroup();
+
+        $('.jquery-ui-controlgroup-vertical').controlgroup({
+            direction: 'vertical'
+        });
 
         // Datepicker.
 
@@ -182,7 +88,9 @@ require(['main'], function ()
         // Dialog (basic).
 
         $('#jquery-ui-dialog').dialog({
-            autoOpen: false
+            autoOpen: false,
+            minWidth: 300,
+            minHeight: 300
         });
 
         // Dialog (modal) link.
