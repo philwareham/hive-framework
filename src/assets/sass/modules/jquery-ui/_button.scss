@@ -36,8 +36,6 @@
     font-size: $base-font-size; /* 1 */
     line-height: 1.375; // 22px / 16px
     text-align: center;
-    text-shadow: $text-shadow-light;
-    box-shadow: $inset-highlighting;
     cursor: pointer; /* 2 */
     overflow: visible; /* 3 */
     vertical-align: baseline;
@@ -78,7 +76,6 @@ a.ui-button {
 .ui-button.ui-state-focus {
     border-color: $color-link-focus;
     outline-width: 0;
-    box-shadow: $inset-highlighting, 0 0 7px $color-link-hover;
 }
 
 /**
