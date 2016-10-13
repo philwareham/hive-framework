@@ -20,9 +20,12 @@
  * </fieldset>
  */
 
-.ui-checkboxradio-label .ui-icon-background {
-    border: 0;
-    border-radius: 0.12em;
+.ui-checkboxradio-label {
+    .ui-icon-background {
+        border: 0;
+        border-radius: 0.12em;
+        box-shadow: inset 1px 1px 1px #cccccc;
+    }
 }
 
 .ui-checkboxradio-radio-label {
@@ -48,4 +51,33 @@
 
 .ui-checkboxradio-disabled {
     pointer-events: none;
+}
+
+/**
+ * Checkboxes as buttons - pressed state.
+ *
+ * Example HTML:
+ *
+ * <input class="ui-checkboxradio ui-helper-hidden-accessible" id="check" type="checkbox">
+ * <label for="check" class="ui-checkboxradio-label ui-corner-all ui-button ui-widget ui-checkboxradio-checked ui-state-active">Dogs</label>
+ */
+
+.ui-checkboxradio-checked {
+    &.ui-button {
+        @include gradient-linear($color-button-selected-gradient-from, $color-button-selected-gradient-to);
+
+        border-color: $color-button-selected-border;
+    }
+
+    &.ui-button:hover {
+        @include gradient-linear(lighten($color-button-selected-gradient-from, 3%), lighten($color-button-selected-gradient-to, 2%));
+
+        border-color: darken($color-button-selected-border, 15%);
+    }
+
+    &.ui-button:active {
+        @include gradient-linear(darken($color-button-selected-gradient-from, 5%), darken($color-button-selected-gradient-to, 5%));
+
+        border-color: darken($color-button-selected-border, 15%);
+    }
 }
