@@ -265,6 +265,19 @@ input {
 }
 
 /**
+ * Styling for form field validation.
+ */
+
+input,
+select,
+textarea {
+    &:focus:invalid {
+        border-color: $color-error-text;
+        box-shadow: none; // Normalize Firefox styling
+    }
+}
+
+/**
  * Styling for required field indicators.
  *
  * Example HTML:
@@ -278,14 +291,11 @@ abbr.required {
 }
 
 /**
- * Styling for form field validation.
+ * 1. Add the correct display in IE 11.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
 
-input,
-select,
-textarea {
-    &:focus:invalid {
-        border-color: $color-error-text;
-        box-shadow: none; // Normalize Firefox styling
-    }
+progress {
+    display: inline-block; /* 1 */
+    vertical-align: baseline; /* 2 */
 }

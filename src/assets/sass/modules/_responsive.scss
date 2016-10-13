@@ -26,11 +26,11 @@
      *
      * Example HTML:
      *
-     * <div class="txp-layout-3col"></div>
-     * <div class="txp-layout-3col-2span"></div>
+     * <div class="layout-3col"></div>
+     * <div class="layout-3col-2span"></div>
      */
 
-    .txp-layout-2col {
+    .layout-2col {
         width: 50%;
     }
 
@@ -127,12 +127,12 @@
      *
      * Example HTML:
      *
-     * <div class="txp-layout-4col-3span"></div>
-     * <div class="txp-layout-4col-alt"></div>
+     * <div class="layout-4col-3span"></div>
+     * <div class="layout-4col-alt"></div>
      */
 
-    .txp-layout-4col,
-    .txp-layout-4col-alt {
+    .layout-4col,
+    .layout-4col-alt {
         width: 25%;
     }
 
@@ -140,7 +140,7 @@
         width: 50%;
     }
 
-    .txp-layout-4col-3span {
+    .layout-4col-3span {
         width: 75%;
     }
 
