@@ -17,7 +17,7 @@
         paths:
         {
             'jquery': 'https://ajax.googleapis.com/ajax/libs/jquery/'+jqueryVersion+'/jquery.min',
-            'jqueryui': 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min',
+            'jqueryui': 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min',
             'flowplayer': 'flowplayer/flowplayer.min'
         },
         shim:
