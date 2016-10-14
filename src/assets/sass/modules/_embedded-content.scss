@@ -32,13 +32,6 @@ video {
  * <img class="align-left">
  * <img class="align-right">
  * <img class="align-center">
- *
- * Image alignment via `position: absolute`.
- *
- * Example HTML:
- *
- * <img class="align-hard-left">
- * <img class="align-hard-right">
  */
 
 img {
@@ -57,18 +50,6 @@ img {
     &.align-center {
         display: block;
         margin: 1em auto;
-    }
-
-    &.align-hard-left {
-        position: absolute;
-        left: 0;
-        z-index: 5;
-    }
-
-    &.align-hard-right {
-        position: absolute;
-        right: 0;
-        z-index: 5;
     }
 }
 

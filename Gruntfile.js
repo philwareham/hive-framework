@@ -16,7 +16,6 @@ module.exports = function (grunt)
                 templates: 'src/templates/'
             },
             tmp: {
-                css: 'tmp/assets/css/',
                 js: 'tmp/assets/js/'
             },
             dest: {
@@ -37,17 +36,6 @@ module.exports = function (grunt)
             '<%= paths.dest.css %>',
             '<%= paths.dest.js %>'
         ],
-
-        // Concatenate CSS files prior to matching media queries.
-        concat: {
-            css: {
-                src: [
-                    '<%= paths.tmp.css %>style.css',
-                    'node_modules/flowplayer/dist/skin/minimalist.css'
-                ],
-                dest: '<%= paths.tmp.css %>main.css'
-            }
-        },
 
         // Run some tasks in parallel to speed up the build process.
         concurrent: {
@@ -84,22 +72,9 @@ module.exports = function (grunt)
                     }
                 ]
             },
-            // Copy Flowplayer images and fonts to CSS folder (because Flowplayer's CSS expects relative path to these).
-            // Copy Slick icon font too.
+            // Copy Slick icon font to CSS folder (because Slick's CSS expects relative path to this).
             css: {
                 files: [
-                    {
-                        expand: true,
-                        cwd: 'node_modules/flowplayer/dist/skin/img/',
-                        src: '**',
-                        dest: '<%= paths.dest.css %>img/'
-                    },
-                    {
-                        expand: true,
-                        cwd: 'node_modules/flowplayer/dist/skin/fonts/',
-                        src: '**',
-                        dest: '<%= paths.dest.css %>fonts/'
-                    },
                     {
                         src: 'node_modules/slick-carousel/slick/fonts/slick.woff',
                         dest: '<%= paths.dest.css %>fonts/slick.woff'
@@ -173,8 +148,13 @@ module.exports = function (grunt)
             },
             dist: {
                 files: [
-                    {'<%= paths.dest.css %>main.css': '<%= paths.tmp.css %>main.css'},
-                    {'<%= paths.dest.css %>design-patterns.css': '<%= paths.tmp.css %>design-patterns.css'}
+                    {
+                        expand: true,
+                        cwd: '<%= paths.dest.css %>',
+                        src: '*.css',
+                        dest: '<%= paths.dest.css %>',
+                        ext: '.min.css'
+                    }
                 ]
             }
         },
@@ -211,8 +191,8 @@ module.exports = function (grunt)
             },
             dist: {
                 files: [
-                    {'<%= paths.tmp.css %>style.css': '<%= paths.src.sass %>style.scss'},
-                    {'<%= paths.tmp.css %>design-patterns.css': '<%= paths.src.sass %>design-patterns.scss'}
+                    {'<%= paths.dest.css %>style.css': '<%= paths.src.sass %>style.scss'},
+                    {'<%= paths.dest.css %>design-patterns.css': '<%= paths.src.sass %>design-patterns.scss'}
                 ]
             }
         },
@@ -271,7 +251,7 @@ module.exports = function (grunt)
 
     // Register tasks.
     grunt.registerTask('build', ['clean', 'concurrent', 'uglify', 'copy:js']);
-    grunt.registerTask('css', ['sasslint', 'sass', 'concat', 'postcss', 'copy:css']);
+    grunt.registerTask('css', ['sasslint', 'sass', 'postcss', 'copy:css']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('travis', ['jshint', 'build']);
 };
