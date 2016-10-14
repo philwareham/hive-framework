@@ -37,7 +37,7 @@
  * </div>
  */
 
-.ui-tabs {
+.ui-tabs:not(.ui-tabs-vertical) {
     position: relative; /* 1 */
     border: 0;
 
@@ -49,6 +49,7 @@
         li {
             position: relative;
             top: 0;
+            margin-right: 2px;
             float: left;
             border-bottom-width: 0;
             border-radius: $border-radius $border-radius 0 0;
@@ -90,4 +91,18 @@
 
 .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
     cursor: pointer;
+}
+
+/**
+ * Additonal styling for tabs vertical.
+ */
+
+.ui-tabs-vertical {
+    .ui-tabs-nav .ui-tabs-active {
+        background: $color-highlight-box;
+    }
+
+    .ui-tabs-nav .ui-state-focus a {
+        outline: thin solid $color-link-focus;
+    }
 }
