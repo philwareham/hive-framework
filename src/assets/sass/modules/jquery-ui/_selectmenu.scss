@@ -36,9 +36,33 @@
  * </div>
  */
 
-.ui-selectmenu-icon.ui-icon {
+.ui-selectmenu-button {
+    display: inline-flex;
+}
+
+.ui-selectmenu-button:not(.ui-controlgroup-item) {
+    border-radius: $border-radius;
+}
+
+.ui-selectmenu-button.ui-controlgroup-item.ui-corner-tr {
+    border-radius: 0 $border-radius $border-radius 0;
+}
+
+.ui-selectmenu-button.ui-controlgroup-item.ui-corner-tl {
+    border-radius: $border-radius 0 0 $border-radius;
+}
+
+.ui-selectmenu-icon {
+    flex: none;
+    order: 2;
     margin: 0 -0.25em 0 0.25em;
-    float: right;
+}
+
+.ui-selectmenu-text {
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .ui-selectmenu-menu {
@@ -56,7 +80,7 @@
         .ui-selectmenu-optgroup {
             height: auto;
             margin: 0.5em 0 0;
-            padding: 0.25em 0.5em;
+            padding: 2px 0.5em; // 8px / 16px
             border-top: 1px solid $color-border;
             font-size: $base-font-size;
             font-weight: bold;
@@ -72,27 +96,4 @@
 
 .ui-selectmenu-open {
     display: block;
-}
-
-.ui-selectmenu-text {
-    display: block;
-    margin-right: 1em;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-.ui-selectmenu-button.ui-button {
-    white-space: nowrap;
-}
-
-.ui-selectmenu-button:not(.ui-controlgroup-item) {
-    border-radius: $border-radius;
-}
-
-.ui-selectmenu-button.ui-controlgroup-item.ui-corner-tr {
-    border-radius: 0 $border-radius $border-radius 0;
-}
-
-.ui-selectmenu-button.ui-controlgroup-item.ui-corner-tl {
-    border-radius: $border-radius 0 0 $border-radius;
 }
