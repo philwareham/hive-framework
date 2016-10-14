@@ -84,11 +84,15 @@
         display: none;
     }
 
+}
+
+@media screen and (max-width: $breakpoint-2) {
+
     /**
      * jQuery UI Tabs layout changes.
      */
 
-    .ui-tabs {
+    .ui-tabs:not(.ui-tabs-vertical) {
         .ui-tabs-nav {
             li {
                 margin-top: 2px;
