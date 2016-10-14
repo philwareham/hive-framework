@@ -9,10 +9,14 @@
  * <span class="ui-icon ui-icon-caret-1-n"></span>
  * <span class="ui-icon ui-icon-folder-collapsed"></span>
  * <span class="ui-icon ui-icon-play"></span>
+ *
+ * TODO: Use `mask` in future (http://caniuse.com/#search=mask), instead of
+ * `filter` or dedicated image.
  */
 
 .ui-icon {
     display: inline-block;
+    position: relative;
     width: 16px;
     height: 16px;
     background-image: url("../img/ui-icon-sprite-333333.svg");
@@ -21,18 +25,39 @@
     text-indent: -9999px;
     overflow: hidden;
     vertical-align: text-bottom;
+    //mask: url("../img/ui-icon-sprite.svg");
+    //mask-repeat: no-repeat;
+    //mask-size: 256px 272px;
 }
 
-.ui-state-default .ui-icon {
-    background-image: url("../img/ui-icon-sprite-555555.svg");
+.ui-widget-icon-block {
+    display: block;
+    left: 50%;
+    margin-left: -8px;
 }
+
+/**
+ * Default state icons.
+ *
+ * TODO: Use `mask` in future.
+ */
+
+.ui-state-default .ui-icon {
+    filter: brightness(1.6666667);
+}
+
+/**
+ * Weighted content icons and interaction state icons.
+ *
+ * TODO: Use `mask` in future.
+ */
 
 .ui-widget-content .ui-icon,
 .ui-widget-header .ui-icon,
 .ui-state-hover .ui-icon,
 .ui-state-focus .ui-icon,
 .ui-state-active .ui-icon {
-    background-image: url("../img/ui-icon-sprite-333333.svg");
+    filter: none;
 }
 
 /**
@@ -44,6 +69,8 @@
  *     <span class="ui-icon ui-icon-check"></span>
  *     Success!
  * </p>
+ *
+ * TODO: Use `mask` in future.
  */
 
 .success .ui-icon {
@@ -59,6 +86,8 @@
  *     <span class="ui-icon ui-icon-alert"></span>
  *     Warning!
  * </p>
+ *
+ * TODO: Use `mask` in future.
  */
 
 .ui-state-highlight .ui-icon,
@@ -72,9 +101,11 @@
  * Example HTML:
  *
  * <p class="error">
- *     <span class="ui-icon ui-icon-closethick"></span>
+ *     <span class="ui-icon ui-icon-alert"></span>
  *     Error!
  * </p>
+ *
+ * TODO: Use `mask` in future.
  */
 
 .ui-state-error .ui-icon,
@@ -92,6 +123,8 @@
  *     <span class="ui-icon ui-icon-info"></span>
  *     Content
  * </p>
+ *
+ * TODO: Use `mask` in future.
  */
 
 .information .ui-icon {
@@ -99,7 +132,19 @@
 }
 
 /**
+ * Reversed out (white) icons option.
+ *
+ * TODO: Use `mask` in future.
+ */
+
+.ui-icon-inversed.ui-icon {
+    background-image: url("../img/ui-icon-sprite-ffffff.svg");
+}
+
+/**
  * Icon sprite positionings.
+ *
+ * TODO: Use `mask` in future.
  */
 
 .ui-icon-blank { background-position: 16px 16px; }

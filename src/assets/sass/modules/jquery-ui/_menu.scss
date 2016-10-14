@@ -11,6 +11,7 @@
  * https://jqueryui.com/menu/
  *
  * 1. Correct font size not being inherited in all browsers.
+ * 2. Workaround for IE 11 and Edge incorrectly displaying a list marker.
  *
  * Example HTML:
  *
@@ -65,6 +66,7 @@
     display: block;
     margin: 0;
     padding: 0;
+    border-color: $color-border-light;
     outline-width: 0;
     font-family: $font-sans-serif;
     font-size: $base-font-size; /* 1 */
@@ -77,10 +79,9 @@
     }
 
     .ui-menu-item {
-        position: relative;
         margin: 0;
-        padding: 0.25em 1em 0.25em 0.5em;
         cursor: pointer;
+        list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"); /* 2 */
 
         a {
             color: $color-text;
@@ -88,9 +89,14 @@
         }
     }
 
+    .ui-menu-item-wrapper {
+        position: relative;
+        padding: 0.25em 1em 0.25em 0.5em; // 4px / 16px + 8px / 16px
+    }
+
     .ui-menu-divider {
         height: 0;
-        margin: 0.5em 0;
+        margin: 0.25em 0; // 4px / 16px
         border-width: 1px 0 0;
         font-size: 0;
         line-height: 0;
@@ -98,7 +104,7 @@
 
     .ui-state-focus,
     .ui-state-active {
-        background-color: $color-selecting;
+        background-color: $color-selected;
     }
 
     // left-aligned
@@ -124,7 +130,7 @@
 .ui-menu-icons {
     position: relative;
 
-    .ui-menu-item {
+    .ui-menu-item-wrapper {
         padding-left: 2em;
     }
 }
