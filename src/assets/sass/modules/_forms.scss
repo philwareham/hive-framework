@@ -286,8 +286,8 @@ textarea {
  */
 
 abbr.required {
-    border: 0;
     color: $color-error-text;
+    text-decoration: none;
 }
 
 /**
