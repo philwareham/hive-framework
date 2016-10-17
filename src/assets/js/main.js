@@ -18,7 +18,7 @@
         {
             'jquery': 'https://ajax.googleapis.com/ajax/libs/jquery/'+jqueryVersion+'/jquery.min',
             'jqueryui': 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min',
-            'flowplayer': 'flowplayer/flowplayer.min'
+            'flowplayer': 'https://releases.flowplayer.org/6.0.5/flowplayer.min'
         },
         shim:
         {
@@ -70,7 +70,7 @@
         // More info - https://github.com/flowplayer/flowplayer.
 
         if (player.length) {
-            require(['flowplayer'], function ()
+            require(['jquery', 'flowplayer'], function ()
             {
                 player.flowplayer({
                     splash: true

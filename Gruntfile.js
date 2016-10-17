@@ -63,12 +63,6 @@ module.exports = function (grunt)
                         cwd: '<%= paths.src.js %>libs/',
                         src: '**',
                         dest: '<%= paths.dest.js %>'
-                    },
-                    {
-                        expand: true,
-                        cwd: 'node_modules/flowplayer/dist/',
-                        src: '**',
-                        dest: '<%= paths.dest.js %>flowplayer/'
                     }
                 ]
             },
