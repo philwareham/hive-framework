@@ -321,7 +321,7 @@ thead {
     display: table-header-group;
 
     th {
-        border-top: solid 1pt $color-text-print;
+        border-top: 1pt solid $color-text-print;
     }
 }
 
@@ -340,7 +340,7 @@ tr {
 th,
 td {
     padding: 4pt 8pt;
-    border-bottom: solid 1pt $color-text-print;
+    border-bottom: 1pt solid $color-text-print;
 }
 
 /**
