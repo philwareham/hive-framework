@@ -111,11 +111,11 @@ textarea {
 }
 
 /**
- * Remove padding from `color` fields.
+ * Fix vertical alignment of `color` fields with their label.
  */
 
 [type="color"] {
-    padding: 0;
+    vertical-align: middle;
 }
 
 /**
