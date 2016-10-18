@@ -53,12 +53,8 @@
     min-height: 1px;
     float: left;
 
-    //[dir="rtl"] & {
-    //    float: right;
-    //}
-
     &:focus {
-        outline-width: 0;
+        outline: 0;
     }
 
     img {
@@ -170,34 +166,16 @@
 .slick-prev {
     left: -24px;
 
-    //[dir="rtl"] & {
-    //    right: -25px;
-    //    left: auto;
-    //}
-
     &::before {
         content: "\2190";
-
-        //[dir="rtl"] & {
-        //    content: "\2192";
-        //}
     }
 }
 
 .slick-next {
     right: -24px;
 
-    //[dir="rtl"] & {
-    //    right: auto;
-    //    left: -25px;
-    //}
-
     &::before {
         content: "\2192";
-
-        //[dir="rtl"] & {
-        //    content: "\2190";
-        //}
     }
 }
 
