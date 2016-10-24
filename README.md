@@ -47,7 +47,7 @@ $ cd hive-framework
 $ npm install
 ```
 
-**npm** installs Node modules for Grunt. You might need to use `sudo npm install` instead when installing on certain Unix-based systems.
+**npm** installs Node modules for Grunt. You might need to use `sudo npm install` instead when installing on certain Unix-based systems (you can also install via Yarn, instead of npm).
 
 ## Building
 
