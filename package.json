@@ -42,7 +42,7 @@
     "sass-lint": "1.9.1"
   },
   "dependencies": {
-    "autosize": "3.0.17",
+    "autosize": "3.0.18",
     "list.js": "1.2.0",
     "picturefill": "3.0.2",
     "prismjs": "1.5.1",
