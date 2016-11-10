@@ -31,7 +31,7 @@
     define('track', function ()
     {
         return {
-            allow : navigator.doNotTrack !== 'yes' && navigator.doNotTrack !== '1' && window.doNotTrack !== "yes" && window.doNotTrack !== "1"
+            allow : navigator.doNotTrack !== 'yes' && navigator.doNotTrack !== '1' && window.doNotTrack !== 'yes' && window.doNotTrack !== '1'
         };
     });
 
