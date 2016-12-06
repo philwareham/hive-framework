@@ -134,6 +134,8 @@ var {
 
 /**
  * Harmonize size and style of computer text.
+ *
+ * 1. Don't use ligatures on monospace font.
  */
 
 pre,
@@ -147,6 +149,7 @@ samp {
     font-family: $font-code;
     font-size: $code-font-size;
     line-height: $base-line-height;
+    font-feature-settings: normal; /* 1 */
 }
 
 code,
