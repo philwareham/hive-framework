@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE svg>
-<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
-<path fill="#333333" d="M27,19h-2v-6h2V19z M13,13h2v6h-2V13z M9,13h2v6H9V13z M21,19v-6h2v6H21z M19,13v6h-2v-6H19z M13,21h2v6h-2V21z M9,21h2v6H9V21z M21,27v-6h2v6H21z M19,21v6h-2v-6H19z M7,13v6H5v-6H7z M5,26c0-0.833,0-5,0-5h2v6c0,0-0.333,0-1,0C5.417,27,5,26.667,5,26z M25,21h2c0,0,0,4.167,0,5c0,0.646-0.438,1-1,1c-0.667,0-1,0-1,0V21z M26.5,30c1.933,0,3.5-1.567,3.5-3.5V13h1v-3H18.75l5.75-5.798c0.504-0.504,0.719-1.321,0.215-1.824c-0.504-0.504-1.461-0.504-1.965,0L15.25,10H1v3h1v13.5C2,28.433,3.567,30,5.5,30H26.5z"/>
-</svg>
