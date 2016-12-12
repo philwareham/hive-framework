@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "autoprefixer": "6.5.3",
-    "cssnano": "3.8.1",
+    "cssnano": "3.8.2",
     "grunt": "~1.0",
     "grunt-cli": "~1",
     "grunt-concurrent": "2.3.1",
