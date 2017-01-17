@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <txp:output_form form="page_title" />
     <txp:output_form form="head" />
+    <txp:output_form form="page_title" />
 </head>
 
 <txp:if_section name="">

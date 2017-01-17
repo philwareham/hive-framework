@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title><txp:error_status /></title>
     <txp:output_form form="head" />
+    <title><txp:error_status /></title>
 </head>
 
 <body class="error-page" itemscope itemtype="http://schema.org/WebPage">
