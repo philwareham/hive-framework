@@ -32,7 +32,6 @@ module.exports = function (grunt)
 
         // Clean distribution and temporary directories to start afresh.
         clean: [
-            'tmp/',
             '<%= paths.dest.css %>',
             '<%= paths.dest.js %>'
         ],
@@ -166,7 +165,7 @@ module.exports = function (grunt)
                     },
                     {
                         src: '<%= paths.src.js %>main.js',
-                        dest: '<%= paths.tmp.js %>main.js'
+                        dest: '<%= paths.dest.js %>main.js'
                     }
                 ]
             }
@@ -199,7 +198,7 @@ module.exports = function (grunt)
             dist: {
                 files: [
                     {
-                        '<%= paths.dest.js %>main.js': ['<%= paths.tmp.js %>main.js'],
+                        '<%= paths.dest.js %>main.js': ['<%= paths.dest.js %>main.js'],
                         '<%= paths.dest.js %>autosize.js': ['node_modules/autosize/dist/autosize.js'],
                         '<%= paths.dest.js %>list.js': ['node_modules/list.js/dist/list.js'], // TODO: hook this up
                         '<%= paths.dest.js %>picturefill.js': ['node_modules/picturefill/dist/picturefill.js'],

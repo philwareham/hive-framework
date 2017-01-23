@@ -22,7 +22,7 @@
     "url": "https://github.com/philwareham/hive-framework/issues"
   },
   "devDependencies": {
-    "autoprefixer": "6.6.1",
+    "autoprefixer": "6.7.0",
     "cssnano": "3.10.0",
     "grunt": "~1.0",
     "grunt-cli": "~1",
@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "autosize": "3.0.20",
-    "list.js": "1.4.0",
+    "list.js": "1.4.1",
     "picturefill": "3.0.2",
     "prismjs": "1.6.0",
     "requirejs": "2.3.2",
