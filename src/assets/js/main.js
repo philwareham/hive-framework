@@ -18,7 +18,7 @@
         {
             'jquery': 'https://ajax.googleapis.com/ajax/libs/jquery/'+jqueryVersion+'/jquery.min',
             'jqueryui': 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min',
-            'flowplayer': 'https://releases.flowplayer.org/7.0.0/flowplayer.min'
+            'flowplayer': 'https://releases.flowplayer.org/7.0.1/flowplayer.min'
         },
         shim:
         {
