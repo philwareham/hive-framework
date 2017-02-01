@@ -1,8 +1,6 @@
 # Hive framework
 
 [![Build Status](https://img.shields.io/travis/philwareham/hive-framework/master.svg)](https://travis-ci.org/philwareham/hive-framework)
-[![Dependency Status](http://img.shields.io/david/philwareham/hive-framework.svg)](https://david-dm.org/philwareham/hive-framework)
-[![devDependency Status](http://img.shields.io/david/dev/philwareham/hive-framework.svg)](https://david-dm.org/philwareham/hive-framework?type=dev)
 
 ![Hive logo](https://github.com/philwareham/hive-framework/blob/master/public/favicon-192x192.png)
 
