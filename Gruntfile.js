@@ -200,7 +200,6 @@ module.exports = function (grunt)
                     {
                         '<%= paths.dest.js %>main.js': ['<%= paths.dest.js %>main.js'],
                         '<%= paths.dest.js %>autosize.js': ['node_modules/autosize/dist/autosize.js'],
-                        '<%= paths.dest.js %>list.js': ['node_modules/list.js/dist/list.js'], // TODO: hook this up
                         '<%= paths.dest.js %>picturefill.js': ['node_modules/picturefill/dist/picturefill.js'],
                         '<%= paths.dest.js %>prism.js': [
                             'node_modules/prismjs/prism.js',

@@ -22,7 +22,7 @@
     "url": "https://github.com/philwareham/hive-framework/issues"
   },
   "devDependencies": {
-    "autoprefixer": "6.7.0",
+    "autoprefixer": "6.7.2",
     "cssnano": "3.10.0",
     "grunt": "~1.0",
     "grunt-cli": "~1",
@@ -38,13 +38,12 @@
     "grunt-sass": "2.0.0",
     "grunt-sass-lint": "0.2.2",
     "load-grunt-tasks": "~3.5",
-    "node-sass": "4.3.0",
+    "node-sass": "4.5.0",
     "sass-lint": "1.10.2"
   },
   "dependencies": {
     "autosize": "3.0.20",
-    "flowplayer": "7.0.1",
-    "list.js": "1.4.1",
+    "flowplayer": "7.0.0",
     "picturefill": "3.0.2",
     "prismjs": "1.6.0",
     "requirejs": "2.3.2",
