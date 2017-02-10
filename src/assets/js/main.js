@@ -10,7 +10,7 @@
     var jqueryVersion = '1.12.4';
 
     if (typeof JSON !== 'undefined' && 'querySelector' in document && 'addEventListener' in window) {
-        jqueryVersion = '2.2.4';
+        jqueryVersion = '3.1.1';
     }
 
     requirejs.config({
@@ -18,7 +18,7 @@
         {
             'jquery': 'https://ajax.googleapis.com/ajax/libs/jquery/'+jqueryVersion+'/jquery.min',
             'jqueryui': 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min',
-            'flowplayer': 'https://releases.flowplayer.org/7.0.1/flowplayer.min'
+            'flowplayer': 'https://releases.flowplayer.org/7.0.2/flowplayer.min'
         },
         shim:
         {
