@@ -10,8 +10,6 @@
 
 A website development framework built with Grunt and Sass, and incorporating jQuery UI. The theme styling is intentionally minimal to make re-skinning easier.
 
-Source image files (Adobe Illustrator .ai and Adobe Photoshop .psd formats) are also included, within the `/src/assets/img/` directory.
-
 ## Supported web browsers
 
 * Internet Explorer 11.
