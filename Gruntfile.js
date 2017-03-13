@@ -40,7 +40,6 @@ module.exports = function (grunt)
         concurrent: {
             dist: [
                 'css',
-                'devUpdate',
                 'jshint',
                 'replace'
             ]
@@ -73,20 +72,6 @@ module.exports = function (grunt)
                         dest: '<%= paths.dest.css %>fonts/slick.woff'
                     }
                 ]
-            }
-        },
-
-        // Report on any available updates for dependencies.
-        devUpdate: {
-            main: {
-                options: {
-                    updateType: 'report',
-                    reportUpdated: false, // Don't report up-to-date packages.
-                    packages: {
-                        dependencies: true,
-                        devDependencies: true
-                    }
-                }
             }
         },
 
