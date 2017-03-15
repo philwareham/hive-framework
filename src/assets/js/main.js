@@ -70,7 +70,7 @@
         }
 
         // Slider, via 'Slick'.
-        // More info - http://kenwheeler.github.io/slick/.
+        // More info - https://kenwheeler.github.io/slick/.
 
         if (slider.length) {
             require(['slick'], function ()
