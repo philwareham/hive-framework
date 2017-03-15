@@ -4,19 +4,10 @@
 
     document.documentElement.className = 'js';
 
-    // Detect whether jQuery v2 features required, otherwise use jQuery v1 for higher compatibility.
-    // TODO: use jQuery v3?
-
-    var jqueryVersion = '1.12.4';
-
-    if (typeof JSON !== 'undefined' && 'querySelector' in document && 'addEventListener' in window) {
-        jqueryVersion = '3.1.1';
-    }
-
     requirejs.config({
         paths:
         {
-            'jquery': 'https://ajax.googleapis.com/ajax/libs/jquery/'+jqueryVersion+'/jquery.min',
+            'jquery': 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.slim.min',
             'jqueryui': 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min',
             'flowplayer': 'https://releases.flowplayer.org/7.0.2/flowplayer.min'
         },
@@ -78,8 +69,8 @@
             });
         }
 
-        // Slider, via 'Lory'.
-        // More info - https://github.com/meandmax/lory.
+        // Slider, via 'Slick'.
+        // More info - http://kenwheeler.github.io/slick/.
 
         if (slider.length) {
             require(['slick'], function ()
