@@ -7,8 +7,8 @@
     requirejs.config({
         paths:
         {
-            'jquery': 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min',
-            'jqueryui': 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min',
+            'jquery': 'https://code.jquery.com/jquery-3.2.1.min',
+            'jqueryui': 'https://code.jquery.com/ui/1.12.1/jquery-ui.min',
             'flowplayer': 'https://releases.flowplayer.org/7.0.2/flowplayer.min'
         },
         shim:
