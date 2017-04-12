@@ -28,3 +28,12 @@
     white-space: nowrap;
     overflow: hidden;
 }
+
+// ellipsis overflow text
+
+@mixin ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    word-wrap: normal;
+}

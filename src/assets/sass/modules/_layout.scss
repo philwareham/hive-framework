@@ -24,6 +24,22 @@ body {
 }
 
 /**
+ * Force blocks.
+ */
+
+.block {
+    display: block;
+}
+
+/**
+ * Force inline blocks.
+ */
+
+.inline-block {
+    display: inline-block;
+}
+
+/**
  * Outer wrapper for main layouts.
  *
  * Example HTML:

@@ -237,3 +237,15 @@ hr {
     overflow: visible; /* 1 */
     box-sizing: content-box; /* 2 */
 }
+
+/**
+ * Overflow text with ellipsis.
+ *
+ * Example HTML:
+ *
+ * <li class="ellipsis">
+ */
+
+.ellipsis {
+    @include ellipsis;
+}
