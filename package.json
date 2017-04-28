@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "autosize": "3.0.20",
-    "flowplayer": "7.0.3",
+    "flowplayer": "7.0.4",
     "jquery": "3.2.1",
     "picturefill": "3.0.2",
     "prismjs": "1.6.0",
