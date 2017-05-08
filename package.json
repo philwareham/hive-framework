@@ -50,6 +50,10 @@
     "responsive-nav": "1.0.39",
     "slick-carousel": "1.6.0"
   },
+  "browserslist": [
+    "last 3 versions",
+    "not ie <= 11"
+  ],
   "scripts": {
     "test": "grunt travis --verbose"
   },
