@@ -22,7 +22,7 @@
     "url": "https://github.com/philwareham/hive-framework/issues"
   },
   "devDependencies": {
-    "autoprefixer": "7.0.1",
+    "autoprefixer": "7.1.0",
     "cssnano": "3.10.0",
     "grunt": "~1.0",
     "grunt-cli": "~1",
