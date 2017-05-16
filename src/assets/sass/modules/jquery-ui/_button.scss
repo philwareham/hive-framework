@@ -29,7 +29,7 @@
     transition: box-shadow 0.1s linear;
     border: 1px solid $color-button-border;
     background-clip: padding-box;
-    color: $color-text;
+    color: $color-text-button;
     font-family: $font-form;
     font-size: $base-font-size; /* 1 */
     line-height: 1.375; // 22px / 16px
@@ -56,6 +56,11 @@
         color: $color-text-button-active;
         text-decoration: none;
         box-shadow: inset 0 0.2em 0.25em rgba(#000000, 0.15);
+    }
+
+    &:focus {
+        border-color: $color-link-focus;
+        outline: 0;
     }
 }
 
