@@ -20,8 +20,8 @@ Older versions of the above and other browsers may work, but these are the ones 
 
 Building this repository requires:
 
-* [Node.js](http://nodejs.org/) >=0.12.0
-* [Grunt](http://gruntjs.com/) >=0.4.0
+* [Node.js](http://nodejs.org/) >=1.0.0
+* [Grunt](http://gruntjs.com/) >=1.0.0
 
 ## Setup
 
