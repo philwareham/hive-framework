@@ -27,7 +27,7 @@
     <link rel="icon" sizes="16x16" href="favicon-16x16.png">
 
 <!-- Canonical URL -->
-    <link rel="canonical" href="http://testing3.designhive.com">
+    <link rel="canonical" href="http://hive-framework.philwareham.co.uk/index.html">
 
 <!-- JUST FOR DESIGN PATTERNS DOC - NOT IN ACTUAL FRAMEWORK -->
     <link rel="stylesheet" href="assets/css/design-patterns.css">
@@ -79,8 +79,14 @@
             <main aria-label="Main content">
 
                 <article itemscope itemtype="http://schema.org/Article">
-
                     <h1 itemprop="name headline">Design patterns</h1>
+
+                    <span class="article-data">
+                        <meta itemprop="mainEntityOfPage" content="http://hive-framework.philwareham.co.uk/index.html">
+                        <meta itemprop="datePublished" content="2016-09-21T10:43:39Z">
+                        <meta itemprop="dateModified" content="2016-10-22T14:32:01Z">
+                        <meta itemprop="author" content="Phil Wareham">
+                    </span>
 
                     <div itemprop="description">
                         <p>Article containing examples of various inline/block elements that should be considered and styled within any theme. Supported browsers: Chrome, Edge, Firefox, Safari and Opera the last two recent stable releases, Internet Explorer 11. Development environment uses <a href="http://gruntjs.com" rel="external" title="Go to the Grunt website">Grunt</a> and <a href="http://sass-lang.com" rel="external" title="Go to the Sass website">Sass</a>.</p>
@@ -381,7 +387,7 @@
                             <h3>Contact details</h3>
                             <p>Uses both the <a href="http://schema.org/" rel="external" title="Go to the Schema.org website">Schema.org</a> and <a href="http://microformats.org/wiki/hcard" rel="external" title="Go to the hCard website">hCard</a> mircoformats.</p>
                             <!-- possible schema types: Organization, Corporation, etc (see http://schema.org/Organization for more info) -->
-                            <div class="vcard" role="group" itemscope itemtype="http://schema.org/Organization">
+                            <div class="vcard" role="group" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
                                 <p class="org fn" itemprop="name">Organisation Name</p>
                                 <address class="adr" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                                     <span class="street-address" itemprop="streetAddress">13 Mystreet</span>,
@@ -390,17 +396,25 @@
                                     <span class="postal-code" itemprop="postalCode">GU1 0AB</span>,
                                     <span class="country" itemprop="addressCountry">United Kingdom</span>
                                 </address>
-                                <p class="tel" itemprop="contactPoint">
-                                    <span class="type" itemprop="name">Telephone</span>
-                                    <span class="value" itemprop="telephone">01234 456789</span>
+                                <p itemprop="contactPoint" class="tel" itemscope itemtype="http://schema.org/contactPoint">
+                                    <span class="type" itemprop="contactType name">Customer Service</span>
+                                    <span class="value" itemprop="telephone">+44-1234-456789</span>
                                 </p>
-                                <p class="tel" itemprop="contactPoint">
-                                    <span class="type" itemprop="name">Mobile</span>
-                                    <span class="value" itemprop="telephone">07900 123456</span>
+                                <p itemprop="contactPoint" class="tel" itemscope itemtype="http://schema.org/contactPoint">
+                                    <span class="type" itemprop="contactType name">Emergency</span>
+                                    <span class="value" itemprop="telephone">+44-7900-123456</span>
                                 </p>
-                                <p itemprop="contactPoint">
-                                    <span itemprop="name">Email</span>
-                                    <a class="email" href="mailto:anon@anon.com" itemprop="email" title="Email us">anon@anon.com</a>
+                                <p>
+                                    <span>Email</span>
+                                    <a class="email" href="mailto:anon@example.com" itemprop="email" title="Email us">anon@example.com</a>
+                                </p>
+                                <p>
+                                    <span>Website</span>
+                                    <a class="url" href="http://hive-framework.philwareham.co.uk/" itemprop="url" title="Visit our website">http://hive-framework.philwareham.co.uk/</a>
+                                </p>
+                                <p>
+                                    <span>Photo</span>
+                                    <img class="photo" src="https://github.com/philwareham/hive-framework/blob/master/public/favicon-192x192.png" itemprop="logo" alt="Photo">
                                 </p>
                             </div>
 
@@ -522,7 +536,9 @@
 
                             <h3>Figures</h3>
                             <figure itemscope itemtype="http://schema.org/ImageObject" itemprop="image">
-                                <img src="mockups/img/480x240.png" alt="Alt text" itemprop="contentUrl">
+                                <img src="mockups/img/480x240.png" alt="Alt text" itemprop="url">
+                                <meta itemprop="width" content="480">
+                                <meta itemprop="height" content="240">
                                 <figcaption itemprop="caption">Figcaption content</figcaption>
                             </figure>
 
@@ -548,6 +564,7 @@
                                     <source itemprop="contentUrl" type="video/webm" src="http://clips.vorwaerts-gmbh.de/VfE.webm">
                                 </video>
                                 <meta itemprop="duration" content="T60S">
+                                <meta itemprop="uploadDate" content="2016-09-21T10:44:26Z">
                             </div>
 
                         </section>
@@ -1074,13 +1091,13 @@
                             <p class="information">Change the Twitter attribute <code>data=via="twitterapi"</code> to the Twitter username of the production site.</p>
                             <p>
                                 <!-- Google+ '+1' button -->
-                                <a class="g-plusone" rel="external" href="https://plus.google.com/" data-size="medium" data-annotation="none" data-expandTo="top" data-href="http://testing3.designhive.com/">+1</a>
+                                <a class="g-plusone" rel="external" href="https://plus.google.com/" data-size="medium" data-annotation="none" data-expandTo="top" data-href="http://hive-framework.philwareham.co.uk/">+1</a>
 
                                 <!-- Twitter 'Tweet' button -->
-                                <a class="twitter-share-button" rel="external" href="https://twitter.com/share" data-via="twitterapi" data-count="none" data-url="http://testing3.designhive.com/" data-text="Hive Framework - design patterns document">Tweet</a>
+                                <a class="twitter-share-button" rel="external" href="https://twitter.com/share" data-via="twitterapi" data-count="none" data-url="http://hive-framework.philwareham.co.uk/" data-text="Hive Framework - design patterns document">Tweet</a>
 
                                 <!-- Facebook 'Like' button -->
-                                <iframe class="facebook-like-button" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Ftesting3.designhive.com&amp;locale=en_GB&amp;layout=button_count&amp;height=20"></iframe>
+                                <iframe class="facebook-like-button" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fhttp://hive-framework.philwareham.co.uk&amp;locale=en_GB&amp;layout=button_count&amp;height=20"></iframe>
                             </p>
                         </section>
 
