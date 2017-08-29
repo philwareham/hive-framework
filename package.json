@@ -38,7 +38,6 @@
     "grunt-sass-lint": "0.2.3",
     "load-grunt-tasks": "~3.5",
     "node-sass": "4.5.3",
-    "postcss-cssnext": "3.0.2",
     "sass-lint": "1.11.1"
   },
   "dependencies": {
