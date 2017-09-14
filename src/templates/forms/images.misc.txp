@@ -11,7 +11,7 @@
 
 <txp:else />
 
-    <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+    <figure itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
 
         <!-- image - overriding the width and height to let the image scale to fit parent container -->
         <span itemprop="contentUrl">

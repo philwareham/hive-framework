@@ -91,7 +91,7 @@ bc(prettyprint linenums). <section class="alert alert-error fade in" role="alert
 
 h3. Blockquotes
 
-bq.:http://textpattern.com/ Here is an example of a block quote. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+bq.:https://textpattern.com/ Here is an example of a block quote. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 
 h2. Embedded content
 

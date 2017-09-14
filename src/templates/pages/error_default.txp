@@ -7,7 +7,7 @@
     <title><txp:error_status /></title>
 </head>
 
-<body class="error-page" itemscope itemtype="http://schema.org/WebPage">
+<body class="error-page" itemscope itemtype="https://schema.org/WebPage">
 
     <txp:output_form form="body_header" />
 

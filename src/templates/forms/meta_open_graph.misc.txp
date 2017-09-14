@@ -1,6 +1,6 @@
 <!-- Open Graph tags - more info at: http://ogp.me -->
-
 <meta property="og:site_name" content="<txp:site_name />">
+<meta property="og:type" content="website">
 <meta property="og:title" content="<txp:variable name='page-title' />">
 <meta property="og:description" content="<txp:meta_description format="" />">
 <meta property="og:type" content="article">

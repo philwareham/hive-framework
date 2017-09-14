@@ -1,14 +1,13 @@
 <footer class="site-footer">
     <p>
         <small>
-            Copyright
-            <txp:php>echo date('Y');</txp:php>
+            Copyright <txp:php>echo date('Y');</txp:php>
 
-            <!-- possible schema types: Organization, Corporation, etc (see http://schema.org/Organization for more info) -->
-            <span itemscope itemtype="http://schema.org/Organization">
+            <!-- possible schema types: Organization, Corporation, etc (see https://schema.org/Organization for more info) -->
+            <span itemscope itemtype="https://schema.org/Organization">
                 <span itemprop="name">Organisation Name</span>
             </span>. Published with
-            <a href="http://textpattern.com/" rel="external" title="Go to the Textpattern CMS website">Textpattern CMS</a>.
+            <a href="https://textpattern.com/" rel="external" title="Go to the Textpattern CMS website">Textpattern CMS</a>.
         </small>
     </p>
 </footer>

@@ -8,9 +8,9 @@
 </head>
 
 <txp:if_article_list>
-    <body class="<txp:section />-page" itemscope itemtype="http://schema.org/CollectionPage">
+    <body class="<txp:section />-page" itemscope itemtype="https://schema.org/CollectionPage">
 <txp:else />
-    <body class="<txp:section />-page" itemscope itemtype="http://schema.org/WebPage">
+    <body class="<txp:section />-page" itemscope itemtype="https://schema.org/WebPage">
 </txp:if_article_list>
 
     <txp:output_form form="body_header" />

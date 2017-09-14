@@ -61,7 +61,7 @@ Where the `@task@` is either `build` or `watch`.
 
 ## Textpattern templates
 
-Optional [Textpattern CMS](http://textpattern.com) theme 'forms' and 'pages' templates are included, for reference. They can be found in the `public/templates` directory, and follow the structure expected by the [rah_flat](https://github.com/gocom/rah_flat) Textpattern plugin.
+Optional [Textpattern CMS](https://textpattern.com) theme 'forms' and 'pages' templates are included, for reference. They can be found in the `public/templates` directory, and follow the structure expected by the [rah_flat](https://github.com/gocom/rah_flat) Textpattern plugin.
 
 ## License
 

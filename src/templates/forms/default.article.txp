@@ -1,5 +1,5 @@
-<!-- possible article schema types: Article, Blog (see http://schema.org/CreativeWork for more info) -->
-<article itemscope itemtype="http://schema.org/Article">
+<!-- possible article schema types: Article, Blog (see https://schema.org/CreativeWork for more info) -->
+<article itemscope itemtype="https://schema.org/Article">
 
 <!-- if not an individual article then make the title h1 a link -->
 <txp:if_individual_article>
@@ -28,8 +28,8 @@
             <a href="<txp:permlink />#comments-head" title="View comments" itemprop="discussionUrl">
                 <txp:comments_count />
             </a>
-            <span itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
-                <meta itemprop="interactionType" content="http://schema.org/CommentAction" />
+            <span itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="https://schema.org/CommentAction" />
                 <meta itemprop="userInteractionCount" content="<txp:comments_count />" />
             </span>
         <txp:else />
@@ -37,8 +37,8 @@
                 <br>
                 <strong>Comments:</strong>
                 <a href="<txp:permlink />#comments-head" title="View comments" itemprop="discussionUrl">0</a>
-                <span itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
-                    <meta itemprop="interactionType" content="http://schema.org/CommentAction" />
+                <span itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter">
+                    <meta itemprop="interactionType" content="https://schema.org/CommentAction" />
                     <meta itemprop="userInteractionCount" content="0" />
                 </span>
             </txp:if_comments_allowed>
@@ -55,7 +55,7 @@
 
     <p>
         <strong>Author:</strong>
-        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="author" itemscope itemtype="https://schema.org/Person">
             <span itemprop="name">
                 <txp:author link="1" this_section="1" />
             </span>

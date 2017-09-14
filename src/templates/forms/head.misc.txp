@@ -1,16 +1,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<!-- CSS -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic">
 <link rel="stylesheet" href="<txp:site_url />assets/css/style.@@timestamp.css">
-
-<!-- Prefetch DNS for external JavaScript assets -->
 <link rel="dns-prefetch" href="https://code.jquery.com">
 <link rel="dns-prefetch" href="https://platform.twitter.com">
 <link rel="dns-prefetch" href="https://www.google-analytics.com">
+<link rel="icon" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" sizes="16x16" href="/favicon-16x16.png">
+<link rel="alternate" type="application/rss+xml" title="RSS feed" href="<txp:site_url />rss">
 
 <txp:meta_description />
 <txp:meta_keywords separator="," />
+
 <meta name="generator" content="Textpattern CMS">
 
 <!-- specify robots, canonical, author - depending on context -->
@@ -53,7 +53,3 @@
 <txp:else />
     <meta name="robots" content="none">
 </txp:if_status>
-
-<link rel="icon" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" sizes="16x16" href="favicon-16x16.png">
-<txp:feed_link flavor="rss" format="link" label="RSS" />
