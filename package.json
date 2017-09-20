@@ -43,13 +43,13 @@
   },
   "dependencies": {
     "autosize": "4.0.0",
-    "flowplayer": "7.1.2",
+    "flowplayer": "7.0.4",
     "jquery": "3.2.1",
     "picturefill": "3.0.2",
     "prismjs": "1.8.1",
     "requirejs": "2.3.5",
     "responsive-nav": "1.0.39",
-    "slick-carousel": "1.8.0"
+    "slick-carousel": "1.7.1"
   },
   "browserslist": [
     "last 2 versions",
