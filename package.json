@@ -50,7 +50,7 @@
     "prismjs": "1.8.1",
     "requirejs": "2.3.5",
     "responsive-nav": "1.0.39",
-    "slick-carousel": "1.7.1"
+    "slick-carousel": "1.8.0"
   },
   "browserslist": [
     "last 2 versions",
