@@ -38,8 +38,7 @@
     "grunt-sass-lint": "0.2.4",
     "load-grunt-tasks": "~3.5",
     "node-sass": "4.7.2",
-    "sass-lint": "1.12.1",
-    "webpack": "3.10.0"
+    "sass-lint": "1.12.1"
   },
   "dependencies": {
     "autosize": "4.0.0",
