@@ -31,6 +31,14 @@ legend {
 }
 
 /**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+    vertical-align: baseline;
+}
+
+/**
  * 1. Prevent elements from spilling out of their parent.
  * 2. Address margins set differently in Firefox 4+, Safari, and Chrome.
  * 3. Correct font properties not being inherited.
@@ -66,9 +74,7 @@ button::-moz-focus-inner,
 }
 
 /**
- * Remove inner padding in Safari and Chrome on OS X. Safari (but not Chrome)
- * clips the cancel button when the search input has padding (and `textfield`
- * appearance).
+ * Remove the inner padding in Chrome and Safari on macOS.
  */
 
 [type="search"]::-webkit-search-decoration {
@@ -288,14 +294,4 @@ textarea {
 abbr.required {
     color: $color-error-text;
     text-decoration: none;
-}
-
-/**
- * 1. Add the correct display in IE 11.
- * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-
-progress {
-    display: inline-block; /* 1 */
-    vertical-align: baseline; /* 2 */
 }

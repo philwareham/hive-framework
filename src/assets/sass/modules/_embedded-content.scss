@@ -78,22 +78,6 @@ img {
 }
 
 /**
- * Address margin not present in Safari.
- */
-
-figure {
-    margin: 0;
-}
-
-/**
- * Correct overflow not hidden in IE 11.
- */
-
-svg:not(:root) {
-    overflow: hidden;
-}
-
-/**
  * Reset fonts and sets background colour for Flowplayer video player.
  *
  * This rule can be removed if you are not using Flowplayer.
