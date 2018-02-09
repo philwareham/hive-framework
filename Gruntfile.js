@@ -11,6 +11,7 @@ module.exports = function (grunt)
         // Set up paths.
         paths: {
             src: {
+                fonts: 'src/assets/fonts/',
                 sass: 'src/assets/sass/',
                 js: 'src/assets/js/',
                 templates: 'src/templates/'
@@ -20,6 +21,7 @@ module.exports = function (grunt)
             },
             dest: {
                 css: 'public/assets/css/',
+                fonts: 'public/assets/fonts/',
                 js: 'public/assets/js/',
                 templates: 'public/templates/'
             }
@@ -39,6 +41,7 @@ module.exports = function (grunt)
         // Run some tasks in parallel to speed up the build process.
         concurrent: {
             dist: [
+                'copy:fonts',
                 'css',
                 'jshint',
                 'replace'
@@ -46,6 +49,17 @@ module.exports = function (grunt)
         },
 
         copy: {
+            // Copy fonts.
+            fonts: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= paths.src.fonts %>',
+                        src: ['**'],
+                        dest: '<%= paths.dest.fonts %>'
+                    }
+                ]
+            },
             // Copy JavaScript files from various sources.
             js: {
                 files: [
