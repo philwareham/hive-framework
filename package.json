@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "autosize": "4.0.0",
-    "flowplayer": "7.2.1",
+    "flowplayer": "7.2.4",
     "ga-lite": "2.0.1",
     "jquery": "3.3.1",
     "picturefill": "3.0.2",
