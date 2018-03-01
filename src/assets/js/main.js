@@ -9,7 +9,7 @@
         {
             'jquery': 'https://code.jquery.com/jquery-3.2.1.min',
             'jqueryui': 'https://code.jquery.com/ui/1.12.1/jquery-ui.min',
-            'flowplayer': 'https://releases.flowplayer.org/7.0.4/flowplayer.min'
+            'flowplayer': 'https://releases.flowplayer.org/7.2.5/flowplayer.min'
         },
         shim:
         {
