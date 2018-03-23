@@ -41,7 +41,7 @@
     "sass-lint": "1.12.1"
   },
   "dependencies": {
-    "autosize": "4.0.0",
+    "autosize": "4.0.1",
     "flowplayer": "7.2.5",
     "ga-lite": "2.0.1",
     "jquery": "3.3.1",
