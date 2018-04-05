@@ -9,7 +9,7 @@
      */
 
     .layout-4col {
-        width: 50%;
+        grid-column: span 6;
     }
 
 }
@@ -31,15 +31,15 @@
      */
 
     .layout-2col {
-        width: 50%;
+        grid-column: span 6;
     }
 
     .layout-3col {
-        width: 33.333%;
+        grid-column: span 4;
     }
 
     .layout-3col-2span {
-        width: 66.666%;
+        grid-column: span 8;
     }
 
     /**
@@ -137,15 +137,15 @@
 
     .layout-4col,
     .layout-4col-alt {
-        width: 25%;
+        grid-column: span 3;
     }
 
     .layout-4col-2span {
-        width: 50%;
+        grid-column: span 6;
     }
 
     .layout-4col-3span {
-        width: 75%;
+        grid-column: span 9;
     }
 
 }
