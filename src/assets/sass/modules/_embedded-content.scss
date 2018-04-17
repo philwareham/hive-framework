@@ -69,6 +69,14 @@ img {
 }
 
 /**
+ * Consistent margins on `figure`.
+ */
+
+figure {
+    margin: 1em 0;
+}
+
+/**
  * Reset fonts and sets background colour for Flowplayer video player.
  *
  * This rule can be removed if you are not using Flowplayer.

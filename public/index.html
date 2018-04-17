@@ -693,27 +693,39 @@
                                     itemprop="image">
                             </p>
 
-                            <h3>Images</h3>
-                            <p>
-                                <img src="mockups/img/160x160.png" alt="Alt text" itemprop="image">
-                            </p>
+                            <div class="layout-container">
 
-                            <h3>Images with links</h3>
-                            <p>
-                                <a class="a--img" href="#" title="Title text">
-                                    <img src="mockups/img/160x160.png" alt="Alt text" itemprop="image">
-                                </a>
-                            </p>
+                                <div class="layout-4col">
+                                    <h3>Images</h3>
+                                    <p>
+                                        <img src="mockups/img/160x160.png" alt="Alt text" itemprop="image">
+                                    </p>
+                                </div>
 
-                            <h3>Rounded images</h3>
-                            <p>
-                                <img class="img--rounded" src="mockups/img/160x160.png" alt="Alt text" itemprop="image">
-                            </p>
+                                <div class="layout-4col">
+                                    <h3>Images with links</h3>
+                                    <p>
+                                        <a class="a--img" href="#" title="Title text">
+                                            <img src="mockups/img/160x160.png" alt="Alt text" itemprop="image">
+                                        </a>
+                                    </p>
+                                </div>
 
-                            <h3>Circular images</h3>
-                            <p>
-                                <img class="img--circular" src="mockups/img/160x160.png" alt="Alt text" itemprop="image">
-                            </p>
+                                <div class="layout-4col">
+                                    <h3>Rounded images</h3>
+                                    <p>
+                                        <img class="img--rounded" src="mockups/img/160x160.png" alt="Alt text" itemprop="image">
+                                    </p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Circular images</h3>
+                                    <p>
+                                        <img class="img--circular" src="mockups/img/160x160.png" alt="Alt text" itemprop="image">
+                                    </p>
+                                </div>
+
+                            </div>
 
                             <h3>Figures</h3>
                             <figure itemscope itemtype="https://schema.org/ImageObject" itemprop="image">
@@ -731,11 +743,6 @@
 
                             <h3>Centred image</h3>
                             <p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img src="mockups/img/160x160.png" class="align-center" alt="160x160px placeholder" itemprop="image"> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor. Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet. Curabitur neque mauris, porta vel, lacinia quis, placerat ultrices, orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In lectus nisl, porttitor eget, fermentum et, viverra a, odio. Sed semper. Praesent vulputate nibh eget nisi. Sed ligula. Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis.</p>
-
-                            <h3><span class="caps">SVG</span></h3>
-                            <svg width="100px" height="100px">
-                                <circle cx="100" cy="100" r="100" fill="#999999"/>
-                            </svg>
 
                             <h3>Videos</h3>
                             <p>Via <a href="http://flowplayer.org/" rel="external" title="Go to the Flowplayer website">Flowplayer</a> (GPL version).</p>
@@ -1081,20 +1088,22 @@
                             <form>
                                 <h3>Inputs</h3>
                                 <p>
-                                    <input id="test_checkbox_1" name="test_checkbox_1" type="checkbox">
+                                    <input type="checkbox" id="test_checkbox_1" name="test_checkbox_1" checked>
                                     <label for="test_checkbox_1">Test checkbox 1</label>
-                                    <input id="test_checkbox_2" name="test_checkbox_2" type="checkbox">
+                                    <input type="checkbox" id="test_checkbox_2" name="test_checkbox_2">
                                     <label for="test_checkbox_2">Test checkbox 2</label>
-                                    <input id="test_checkbox_3" name="test_checkbox_3" type="checkbox">
-                                    <label for="test_checkbox_3">Test checkbox 3</label>
+                                    <input type="checkbox" id="test_checkbox_3" name="test_checkbox_3" disabled>
+                                    <label for="test_checkbox_3">Test checkbox 3 (disabled)</label>
+                                    <input type="checkbox" id="test_checkbox_4" name="test_checkbox_4" disabled checked>
+                                    <label for="test_checkbox_4">Test checkbox 4 (disabled checked)</label>
                                 </p>
                                 <p>
-                                    <input id="test_radio_1" name="test_radio_group" type="radio">
+                                    <input type="radio" id="test_radio_1" name="test_radio_group" checked>
                                     <label for="test_radio_1">Test radio 1</label>
-                                    <input id="test_radio_2" name="test_radio_group" type="radio">
+                                    <input type="radio" id="test_radio_2" name="test_radio_group">
                                     <label for="test_radio_2">Test radio 2</label>
-                                    <input id="test_radio_3" name="test_radio_group" type="radio">
-                                    <label for="test_radio_3">Test radio 3</label>
+                                    <input type="radio" id="test_radio_3" name="test_radio_group" disabled>
+                                    <label for="test_radio_3">Test radio 3 (disabled)</label>
                                 </p>
                                 <p>
                                     <label for="select_dd">Inline form elements</label><br>
@@ -1164,71 +1173,82 @@
                                     <label for="textarea">Textarea</label><br>
                                     <textarea id="textarea" name="textarea" rows="5" placeholder="This is an example of HTML5 placeholder text."></textarea>
                                 </p>
-                                <p>
-                                    <label for="url">URL</label><br>
-                                    <input id="url" name="url" type="url">
-                                </p>
-                                <p>
-                                    <label for="email">Email</label><br>
-                                    <input id="email" name="email" type="email" placeholder="name@example.com">
-                                </p>
-                                <p>
-                                    <label for="text">Text <abbr class="required" title="Required">*</abbr></label><br>
-                                    <input id="text" name="text" type="text">
-                                </p>
-                                <p>
-                                    <label for="text-data">Text with data list</label><br>
-                                    <input id="text-data" name="text-data" type="text" list="text-data-list">
-                                    <datalist id="text-data-list">
-                                        <option value="Afghanistan">
-                                        <option value="Albania">
-                                        <option value="Algeria">
-                                        <option value="Andorra">
-                                        <option value="Angola">
-                                    </datalist>
-                                </p>
-                                <p>
-                                    <label for="datetime-local">Datetime local</label><br>
-                                    <input id="datetime-local" name="datetime-local" type="datetime-local">
-                                </p>
-                                <p>
-                                    <label for="number">Number</label><br>
-                                    <input id="number" name="number" type="number" min="0" max="999" step="1">
-                                </p>
-                                <p>
-                                    <label for="tel">Tel (phone)</label><br>
-                                    <input id="tel" name="tel" type="tel">
-                                </p>
-                                <p>
-                                    <label for="datetime">Datetime</label><br>
-                                    <input id="datetime" name="datetime" type="datetime">
-                                </p>
-                                <p>
-                                    <label for="date">Date</label><br>
-                                    <input id="date" name="date" type="date">
-                                </p>
-                                <p>
-                                    <label for="month">Month</label><br>
-                                    <input id="month" name="month" type="month">
-                                </p>
-                                <p>
-                                    <label for="search">Search</label><br>
-                                    <input id="search" name="search" type="search">
-                                </p>
-                                <p>
-                                    <label for="range">Range</label><br>
-                                    <input id="range" name="range" type="range">
-                                </p>
-                                <p>
-                                    <label for="range">Range (min = 100, max = 500, step = 50, start value = 100)</label><br>
-                                    <script>function printValue(sliderID, textbox) { var x = document.getElementById(textbox); var y = document.getElementById(sliderID); x.value = y.value; } window.onload = function() { printValue('range1', 'rangeValue1'); } </script>
-                                    <input id="range1" name="range1" type="range" min="100" max="500" step="50" value="100" onchange="printValue('range1','rangeValue1')"><br>
-                                    <input id="rangeValue1" name="rangeValue1" type="text" size="3">
-                                </p>
-                                <p>
-                                    <label for="color">Colour</label><br>
-                                    <input type="color" id="color" name="color" value="#cc0000">
-                                </p>
+
+                                <div class="layout-container">
+
+                                    <div class="layout-4col">
+                                        <label for="url">URL</label><br>
+                                        <input id="url" name="url" type="url">
+                                    </div>
+
+                                    <div class="layout-4col">
+                                        <label for="email">Email</label><br>
+                                        <input id="email" name="email" type="email" placeholder="name@example.com">
+                                    </div>
+
+                                    <div class="layout-4col">
+                                        <label for="text">Text <abbr class="required" title="Required">*</abbr></label><br>
+                                        <input id="text" name="text" type="text">
+                                    </div>
+
+                                    <div class="layout-4col">
+                                        <label for="text-data">Text with data list</label><br>
+                                        <input id="text-data" name="text-data" type="text" list="text-data-list">
+                                        <datalist id="text-data-list">
+                                            <option value="Afghanistan">
+                                            <option value="Albania">
+                                            <option value="Algeria">
+                                            <option value="Andorra">
+                                            <option value="Angola">
+                                        </datalist>
+                                    </div>
+
+                                    <div class="layout-4col">
+                                        <label for="datetime-local">Datetime local</label><br>
+                                        <input id="datetime-local" name="datetime-local" type="datetime-local">
+                                    </div>
+
+                                    <div class="layout-4col">
+                                        <label for="number">Number</label><br>
+                                        <input id="number" name="number" type="number" min="0" max="999" step="1">
+                                    </div>
+
+                                    <div class="layout-4col">
+                                        <label for="tel">Tel (phone)</label><br>
+                                        <input id="tel" name="tel" type="tel">
+                                    </div>
+
+                                    <div class="layout-4col">
+                                        <label for="datetime">Datetime</label><br>
+                                        <input id="datetime" name="datetime" type="datetime">
+                                    </div>
+
+                                    <div class="layout-4col">
+                                        <label for="date">Date</label><br>
+                                        <input id="date" name="date" type="date">
+                                    </div>
+
+                                    <div class="layout-4col">
+                                        <label for="month">Month</label><br>
+                                        <input id="month" name="month" type="month">
+                                    </div>
+
+                                    <div class="layout-4col">
+                                        <label for="search">Search</label><br>
+                                        <input id="search" name="search" type="search">
+                                    </div>
+
+                                    <div class="layout-4col">
+                                        <label for="range">Range</label><br>
+                                        <input id="range" name="range" type="range">
+                                    </div>
+
+                                    <div class="layout-4col">
+                                        <label for="color">Colour</label><br>
+                                        <input type="color" id="color" name="color" value="#cc0000">
+                                    </div>
+
+                                </div>
 
                                 <h3>Form Groups</h3>
                                 <fieldset>
