@@ -67,7 +67,9 @@ require(['main'], function ()
 
         // Checkboxradio.
 
-        $('.jquery-ui-checkboxradio-checkbox input').checkboxradio({
+        $('.jquery-ui-checkboxradio-checkbox1 input').checkboxradio();
+
+        $('.jquery-ui-checkboxradio-checkbox2 input').checkboxradio({
             icon: false
         });
 
@@ -89,8 +91,7 @@ require(['main'], function ()
 
         $('#jquery-ui-dialog').dialog({
             autoOpen: false,
-            minWidth: 300,
-            minHeight: 300
+            minWidth: 300
         });
 
         // Dialog (modal) link.
@@ -198,9 +199,13 @@ require(['main'], function ()
             }
         });
 
-        // Tabs.
+        // Tabs - horizontal.
 
         $('.jquery-ui-tabs').tabs();
+
+        // Tabs - vertical.
+
+        $('.jquery-ui-tabs-vertical').tabs().addClass('ui-tabs-vertical ui-helper-clearfix');
 
         // Tooltips.
 

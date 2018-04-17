@@ -111,22 +111,159 @@ textarea {
 }
 
 /**
- * Fix vertical alignment of `color` fields with their label.
+ * Styling of range sliders.
  */
 
-[type="color"] {
-    vertical-align: middle;
+[type="range"] {
+    width: 100%;
+    max-width: 16em; // 256px / 16px
+    appearance: none;
+
+    &:focus {
+        outline: 0;
+    }
 }
 
-/**
- * Fix the cursor style for Chrome's increment/decrement buttons. For certain
- * `font-size` values of the `input`, it causes the cursor style of the
- * decrement button to change from `default` to `text`.
- */
+// WebKit/Blink.
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-    height: auto;
+[type="range"]::-webkit-slider-thumb {
+    width: 1.25em; // 20px / 16px
+    height: 1.25em; // 20px / 16px
+    margin-top: -0.3125em; // 5px / 16px
+    border: 1px solid $color-border;
+    border-radius: 50%;
+    background-color: $color-background;
+    box-shadow: $standard-shadow;
+    cursor: pointer;
+    appearance: none;
+}
+
+[type="range"]:hover::-webkit-slider-thumb {
+    border-color: darken($color-border, 13%);
+}
+
+[type="range"]:active::-webkit-slider-thumb,
+[type="range"]:focus::-webkit-slider-thumb {
+    border-color: $color-link-focus;
+}
+
+[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 0.75em; // 12px / 16px
+    border: 1px solid $color-border;
+    border-radius: 0.375em;
+    background-color: #e7e7e7;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+[type="range"]:hover::-webkit-slider-runnable-track {
+    border-color: darken($color-border, 13%);
+}
+
+[type="range"]:active::-webkit-slider-runnable-track,
+[type="range"]:focus::-webkit-slider-runnable-track {
+    border-color: $color-link-focus;
+}
+
+// Gecko/Quantum.
+
+[type="range"]::-moz-range-thumb {
+    width: 1.25em; // 20px / 16px
+    height: 1.25em; // 20px / 16px
+    border: 1px solid $color-border;
+    border-radius: 50%;
+    background-color: $color-background;
+    box-shadow: $standard-shadow;
+    cursor: pointer;
+    /* autoprefixer: off */
+    appearance: none;
+}
+
+[type="range"]:hover::-moz-range-thumb {
+    border-color: darken($color-border, 13%);
+}
+
+[type="range"]:focus::-moz-range-thumb {
+    border-color: $color-link-focus;
+}
+
+[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 0.75em; // 12px / 16px
+    border: 1px solid $color-border;
+    border-radius: 0.375em;
+    background-color: #e7e7e7;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+[type="range"]:hover::-moz-range-track {
+    border-color: darken($color-border, 13%);
+}
+
+[type="range"]:focus::-moz-range-track {
+    border-color: $color-link-focus;
+}
+
+// Trident/EdgeHTML.
+
+[type="range"]::-ms-thumb {
+    width: 1.25em; // 20px / 16px
+    height: 1.25em; // 20px / 16px
+    border: 1px solid $color-border;
+    border-radius: 50%;
+    background-color: $color-background;
+    box-shadow: $standard-shadow;
+    cursor: pointer;
+    /* autoprefixer: off */
+    appearance: none;
+}
+
+[type="range"]:hover::-ms-thumb {
+    border-color: darken($color-border, 13%);
+}
+
+[type="range"]:focus::-ms-thumb {
+    border-color: $color-link-focus;
+}
+
+[type="range"]::-ms-track {
+    width: 100%;
+    height: 0.75em; // 12px / 16px
+    border-width: 0.25em 0;
+    border-color: transparent;
+    background: transparent;
+    color: transparent;
+    cursor: pointer;
+}
+
+[type="range"]::-ms-fill-lower {
+    border: 1px solid $color-border;
+    border-radius: 0.375em;
+    background-color: #e7e7e7;
+}
+
+[type="range"]::-ms-fill-upper {
+    border: 1px solid $color-border;
+    border-radius: 0.375em;
+    background-color: #e7e7e7;
+}
+
+[type="range"]:hover::-ms-fill-lower {
+    border-color: darken($color-border, 13%);
+}
+
+[type="range"]:hover::-ms-fill-upper {
+    border-color: darken($color-border, 13%);
+}
+
+[type="range"]:focus::-ms-fill-lower {
+    border-color: $color-link-focus;
+}
+
+[type="range"]:focus::-ms-fill-upper {
+    border-color: $color-link-focus;
 }
 
 /**
@@ -310,6 +447,10 @@ span.disabled,
     box-shadow: none !important;
     cursor: default !important; /* 1 */
     opacity: 1; /* 2 */
+
+    .ui-icon {
+        opacity: 0.33 !important;
+    }
 }
 
 /**
