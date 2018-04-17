@@ -32,6 +32,7 @@
 
         var code = $('code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'),
             fields = $('textarea'),
+            navmenu = $('site-navigation'),
             player = $('.videoplayer'),
             slider = $('.slider');
 
@@ -54,6 +55,19 @@
             require(['autosize'], function (autosize)
             {
                 autosize(fields);
+            });
+        }
+
+        // Responsive navigation menu.
+
+        if (navmenu.length) {
+            var navtoggle = document.getElementById('site-navigation-toggle');
+
+            navtoggle.addEventListener('click', function(e)
+            {
+                e.preventDefault();
+                navtoggle.classList.toggle('site-navigation-toggle-active');
+                navmenu.classList.toggle('site-navigation-open');
             });
         }
 
@@ -129,28 +143,6 @@
             });
         }
 
-    });
-
-    // Responsive navigation menu, via 'Responsive Nav'.
-    // More info - https://github.com/viljamis/responsive-nav.js.
-
-    require(['responsivenav'], function ()
-    {
-        responsiveNav('.site-navigation', {
-            transition: 400,
-            insert: 'after',
-            navClass: 'site-navigation'
-        });
-    });
-
-    // `picture` tag and/or `img` tag with `srcset` and `sizes` attributes polyfill, via 'Picturefill'.
-    // More info - https://github.com/scottjehl/picturefill.
-
-    require(['jquery'], function ($)
-    {
-        if ($('img[srcset], img[sizes], picture').length) {
-            require(['picturefill']);
-        }
     });
 
     // Google+ '+1' button.

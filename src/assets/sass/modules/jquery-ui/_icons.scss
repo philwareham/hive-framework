@@ -16,10 +16,11 @@
     position: relative;
     width: 16px;
     height: 16px;
+    margin-bottom: -2px;
     background-size: 16px 16px;
     text-indent: -9999px;
     overflow: hidden;
-    vertical-align: text-bottom;
+    vertical-align: baseline;
 }
 
 .ui-widget-icon-block {

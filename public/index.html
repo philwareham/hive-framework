@@ -104,6 +104,7 @@
                             <li><a href="#section-block-semantics">Block text-level semantics</a></li>
                             <li><a href="#section-media">Embedded content</a></li>
                             <li><a href="#section-labels">Inline text labels</a></li>
+                            <li><a href="#section-progress">Progress indicators</a></li>
                             <li><a href="#section-alerts">Alert boxes</a></li>
                             <li><a href="#section-pagination">Pagination</a></li>
                             <li><a href="#section-breadcrumbs">Breadcrumbs</a></li>
@@ -179,6 +180,12 @@
 
                                     <p><code>highlight-box</code></p>
                                     <div class="design-patterns--color design-patterns--color-highlight-box"></div>
+
+                                    <p><code>strong-highlight-box</code></p>
+                                    <div class="design-patterns--color design-patterns--color-strong-highlight-box"></div>
+
+                                    <p><code>highlight</code></p>
+                                    <div class="design-patterns--color design-patterns--color-highlight"></div>
 
                                 </div>
 
@@ -434,30 +441,205 @@
                         <section class="section" id="section-text-semantics">
                             <h2>Inline text-level semantics</h2>
 
-                            <p>
-                                The <a href="http://codeispottery.com/">a element</a> example<br>
-                                The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples<br>
-                                The <b>b element</b> example<br>
-                                The <cite>cite element</cite> example<br>
-                                The <code>code element</code> example<br>
-                                The <del>del element</del> example<br>
-                                The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples<br>
-                                The <em>em element</em> example<br>
-                                The <i>i element</i> example<br>
-                                The <ins>ins element</ins> example<br>
-                                The <kbd>kbd element</kbd> example<br>
-                                The <mark>mark element</mark> example<br>
-                                The <q>q element <q>inside</q> a q element</q> example<br>
-                                The <s>s element</s> example<br>
-                                The <samp>samp element</samp> example<br>
-                                The <small>small element</small> example<br>
-                                The <span>span element</span> example<br>
-                                The <strong>strong element</strong> example<br>
-                                The <sub>sub element</sub> example<br>
-                                The <sup>sup element</sup> example<br>
-                                The <u>u element</u> example<br>
-                                The <var>var element</var> example
-                            </p>
+                            <div class="layout-container">
+
+                                <div class="layout-4col">
+                                    <h3>Anchor</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup" dir="ltr">&lt;a&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <a href="#">a element</a> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Abbreviation</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup" dir="ltr">&lt;abbr&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Bold</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup" dir="ltr">&lt;b&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The non-semantic <b>b element</b> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Citation</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup" dir="ltr">&lt;cite&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <cite>cite element</cite> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Code</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup" dir="ltr">&lt;code&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <code dir="ltr">code element</code> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Deleted</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup" dir="ltr">&lt;del&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <del>del element</del> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Definition</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup" dir="ltr">&lt;dfn&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Emphasis</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup" dir="ltr">&lt;em&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <em>em element</em> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Italic</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup" dir="ltr">&lt;i&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The non-semantic <i>i element</i> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Inserted</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup" dir="ltr">&lt;ins&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <ins>ins element</ins> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Keyboard Input</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup" dir="ltr">&lt;kbd&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <kbd>kbd element</kbd> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Mark</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup" dir="ltr">&lt;mark&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <mark>mark element</mark> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Quote</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup" dir="ltr">&lt;q&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <q>q element <q>inside</q> a q element</q></p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Strikethrough</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup" dir="ltr">&lt;s&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <s>s element</s> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Sample</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup" dir="ltr">&lt;samp&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <samp>samp element</samp> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Small</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup" dir="ltr">&lt;small&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <small>small element</small> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Span</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup" dir="ltr">&lt;span&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <span>span element</span> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Strong</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup" dir="ltr">&lt;strong&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <strong>strong element</strong> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Subscript</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup" dir="ltr">&lt;sub&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <sub>sub element</sub> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Superscript</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup" dir="ltr">&lt;sup&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <sup>sup element</sup> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Underline</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup" dir="ltr">&lt;u&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <u>u element</u> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h2 class="design-patterns--heading">Variable</h2>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup" dir="ltr">&lt;var&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <var>var element</var> example</p>
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                        <section class="section" id="section-progress">
+                            <h2>Progress indicators</h2>
+
+                            <h3>Progress indicator</h3>
+                            <p><strong>Code:</strong></p>
+                            <pre><code class="language-markup">&lt;progress value="0.66"&gt;&lt;/progress&gt;</code></pre>
+                            <p><strong>Example:</strong></p>
+                            <p><progress value="0.66"></progress> <b class="data-progress" data-progress="66">66%</b></p>
+                            <p><progress value="1"></progress> <b class="data-progress" data-progress="100">100%</b></p>
+
+                            <h3>Progress indicator (indeterminate value)</h3>
+                            <p><strong>Code:</strong></p>
+                            <pre><code class="language-markup">&lt;progress&gt;&lt;/progress&gt;</code></pre>
+                            <p><strong>Example:</strong></p>
+                            <p><progress></progress></p>
+
                         </section>
 
 
@@ -1794,10 +1976,10 @@
                             <h2>Miscellaneous</h2>
 
                             <h3>Loading spinner (for light backgrounds)</h3>
-                            <p><span class="spinner"></span></p>
+                            <p><span class="spin ui-icon ui-icon-refresh"></span></p>
 
                             <h3>Loading spinner (for dark backgrounds)</h3>
-                            <p><span class="spinner inverse"></span></p>
+                            <p><span style="color:#fff;background:#333;"><span class="spin ui-icon-inversed ui-icon ui-icon-refresh"></span></span></p>
 
                             <h3>Spin any element</h3>
                             <p>Via <a rel="external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation">CSS3 Animation</a>.</p>
