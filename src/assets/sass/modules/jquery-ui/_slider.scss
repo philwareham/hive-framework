@@ -29,15 +29,14 @@
         box-shadow: $standard-shadow;
         cursor: pointer;
         z-index: 2;
-        touch-action: none;
+        touch-action: manipulation;
     }
 
     .ui-slider-range {
         display: block;
         position: absolute;
         border: 0;
-        background-position: 0 0;
-        font-size: $small-font-size;
+        font-size: 10px;
         z-index: 1;
     }
 }

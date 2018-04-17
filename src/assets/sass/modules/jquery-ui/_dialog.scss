@@ -34,16 +34,22 @@
  */
 
 .ui-dialog {
+    display: flex;
     position: absolute;
     top: 0;
     left: 0;
+    flex-flow: column;
+    max-width: 90vw;
+    max-height: 90vh;
     padding: 0.25em;
     outline: 0;
     box-shadow: $standard-shadow;
+    overflow: hidden;
     z-index: 1002;
 
     .ui-dialog-titlebar {
         position: relative;
+        flex: none;
         padding: 0.5em 1em;
     }
 
@@ -67,6 +73,7 @@
 
     .ui-dialog-content {
         position: relative;
+        flex: 1 1 auto;
         padding: 0.5em 1em;
         border: 0;
         background: none;

@@ -22,30 +22,49 @@
 
 .ui-checkboxradio-label {
     .ui-icon-background {
-        border: 0;
-        border-radius: 0.12em;
-        box-shadow: inset 1px 1px 1px #cccccc;
+        border: 1px solid darken($color-border, 13%);
+        border-radius: 0.2em;
+        background-color: $color-background-box;
+        box-sizing: border-box;
+    }
+
+    &.ui-checkboxradio-checked {
+        .ui-icon {
+            border: 0;
+            background: $color-text-footnote url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+        }
+
+        &.ui-state-focus .ui-icon {
+            background-color: $color-link-focus;
+        }
+    }
+
+    &.ui-checkboxradio-checked:hover .ui-icon {
+        background-color: $color-text;
     }
 }
 
 .ui-checkboxradio-radio-label {
     .ui-icon-background {
-        width: 16px;
-        height: 16px;
-        border: 0;
-        border-radius: 1em;
-        overflow: visible;
+        border-radius: 100%;
     }
 
-    &.ui-checkboxradio-checked,
-    &.ui-checkboxradio-checked:hover {
+    &.ui-checkboxradio-checked {
         .ui-icon {
-            width: 8px;
-            height: 8px;
-            border-width: 4px;
-            border-style: solid;
-            background-image: none;
+            border: 5px solid $color-text-footnote;
+            border-radius: 100%;
+            background: $color-background-form;
         }
+
+        &.ui-state-focus .ui-icon {
+            border-color: $color-link-focus;
+            background-color: $color-background-form;
+        }
+    }
+
+    &.ui-checkboxradio-checked:hover .ui-icon {
+        border-color: $color-text;
+        background: $color-background-form;
     }
 }
 

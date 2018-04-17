@@ -82,7 +82,7 @@
  */
 
 .ui-widget .ui-widget {
-    font-size: $base-font-size;
+    font-size: 1rem;
 }
 
 /**
@@ -218,7 +218,7 @@ a.ui-state-default:focus {
  * Visually disabled jQuery UI text and anchors.
  */
 
-.ui-state-disabled {
+.ui-state-disabled:not(.ui-button) {
     background-image: none;
     cursor: default !important;
     opacity: 0.33;
