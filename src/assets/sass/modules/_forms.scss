@@ -301,7 +301,8 @@ textarea {
 [disabled],
 [disabled] option,
 [disabled] optgroup,
-span.disabled {
+span.disabled,
+.ui-checkboxradio-disabled {
     border-color: $color-border-light !important;
     background: $color-background-form-disabled !important;
     color: $color-text-form-disabled !important;
