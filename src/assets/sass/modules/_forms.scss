@@ -207,6 +207,10 @@ textarea {
     border-color: $color-link-focus;
 }
 
+[type="range"]::-moz-focus-outer {
+    border-style: none;
+}
+
 // Trident/EdgeHTML.
 
 [type="range"]::-ms-thumb {
