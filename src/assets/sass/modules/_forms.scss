@@ -352,6 +352,15 @@ textarea {
 }
 
 /**
+ * Correct the cursor style of increment and decrement buttons in Safari.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+/**
  * Use indicator icon to signify the drop-down ability of `select`.
  */
 
