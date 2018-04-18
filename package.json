@@ -46,7 +46,7 @@
     "jquery": "3.3.1",
     "prismjs": "1.13.0",
     "requirejs": "2.3.5",
-    "slick-carousel": "1.8.1"
+    "slick-carousel": "1.9.0"
   },
   "browserslist": [
     "> 0.5%",
