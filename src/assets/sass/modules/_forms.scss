@@ -204,7 +204,7 @@ textarea {
         border: 1px solid $color-border;
         border-radius: 0;
         background: $color-background-form;
-        appearance: none; /* 1 */
+        appearance: none;
 
         &:hover {
             border-color: darken($color-border, 13%);
