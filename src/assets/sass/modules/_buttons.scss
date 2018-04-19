@@ -10,24 +10,6 @@ button {
 }
 
 /**
- * Style the button on file inputs.
- */
-
-::-webkit-file-upload-button {
-    @include gradient-linear($color-button-gradient-from, $color-button-gradient-to);
-
-    padding: 0 0.25em;
-    border: 0;
-    color: $color-text-button;
-    font-family: inherit;
-    font-size: 1rem;
-    font-weight: normal;
-    line-height: inherit;
-    cursor: pointer;
-    appearance: none;
-}
-
-/**
  * 1. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  * 2. Remove browser-specific default styling.

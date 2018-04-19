@@ -62,7 +62,6 @@ span.button {
 [type="datetime"],
 [type="datetime-local"],
 [type="email"],
-[type="file"],
 [type="month"],
 [type="number"],
 [type="password"],
@@ -191,11 +190,60 @@ textarea {
 }
 
 /**
- * Additonal styling for file inputs.
+ * Styling for file inputs.
  */
 
 [type="file"] {
     cursor: pointer;
+}
+
+@supports (-webkit-appearance: none) {
+    [type="file"] {
+        height: 2em; // 32px / 16px
+        padding: 0.25em 0.1875em; // 8px / 16px + 3px / 16px
+        border: 1px solid $color-border;
+        border-radius: 0;
+        background: $color-background-form;
+        appearance: none; /* 1 */
+
+        &:hover {
+            border-color: darken($color-border, 13%);
+        }
+
+        &:focus {
+            border-color: $color-link-focus;
+            outline: 1px solid transparent; // Allows for repainting in high contrast modes.
+        }
+    }
+}
+
+::-webkit-file-upload-button {
+    @include gradient-linear($color-button-gradient-from, $color-button-gradient-to);
+
+    padding: 0 0.25em;
+    border: 0;
+    color: $color-text-button;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: inherit;
+    cursor: pointer;
+    appearance: none;
+}
+
+::-ms-browse {
+    @include gradient-linear($color-button-gradient-from, $color-button-gradient-to);
+
+    padding: 0 0.25em;
+    border: 0;
+    color: $color-text-button;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: inherit;
+    cursor: pointer;
+    /* autoprefixer: off */
+    appearance: none;
 }
 
 /**
