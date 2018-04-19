@@ -62,6 +62,7 @@ span.button {
 [type="datetime"],
 [type="datetime-local"],
 [type="email"],
+[type="file"],
 [type="month"],
 [type="number"],
 [type="password"],
@@ -187,6 +188,14 @@ textarea {
         bottom: -0.1em;
         -moz-appearance: radio;
     }
+}
+
+/**
+ * Additonal styling for file inputs.
+ */
+
+[type="file"] {
+    cursor: pointer;
 }
 
 /**
