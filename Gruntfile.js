@@ -199,6 +199,7 @@ module.exports = function (grunt)
                             // Add any plugins
                             'node_modules/prismjs/plugins/line-numbers/prism-line-numbers.js',
                             // Add any additional languages
+                            'node_modules/prismjs/components/prism-markup-templating.js',
                             'node_modules/prismjs/components/prism-php.js',
                             'node_modules/prismjs/components/prism-scss.js'
                         ],
