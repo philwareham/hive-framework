@@ -9,21 +9,12 @@
         {
             'jquery': 'https://code.jquery.com/jquery-3.2.1.min',
             'jqueryui': 'https://code.jquery.com/ui/1.12.1/jquery-ui.min',
-            'flowplayer': 'https://releases.flowplayer.org/7.2.5/flowplayer.min'
+            'flowplayer': 'https://releases.flowplayer.org/7.2.6/flowplayer.min'
         },
         shim:
         {
             'jqueryui': ['jquery']
         }
-    });
-
-    // Detect whether user enabled 'Do No Track' in their browser, and honour it.
-
-    define('track', function ()
-    {
-        return {
-            allow : navigator.doNotTrack !== 'yes' && navigator.doNotTrack !== '1' && window.doNotTrack !== 'yes' && window.doNotTrack !== '1'
-        };
     });
 
     require(['jquery'], function ($)
@@ -160,23 +151,6 @@
     {
         if ($('.twitter-share-button').length) {
             require(['https://platform.twitter.com/widgets.js']);
-        }
-    });
-
-    // Google Analytics - remember to amend the user account ID number!
-
-    require(['track'], function(track)
-    {
-        if (track.allow) {
-            window._gaq = window._gaq || [];
-            window._gaq.push(['_setAccount', 'UA-xxxxxxxx-x', 'auto']);
-            window._gaq.push(['_setDomainName', 'none']);
-            window._gaq.push(['_gat._anonymizeIp']);
-            window._gaq.push(['_setVisitorCookieTimeout', 0]);
-            window._gaq.push(['_setSessionCookieTimeout', 0]);
-            window._gaq.push(['_setCampaignCookieTimeout', 0]);
-            window._gaq.push(['_trackPageview']);
-            require(['https://www.google-analytics.com/ga.js']);
         }
     });
 
