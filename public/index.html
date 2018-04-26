@@ -101,10 +101,10 @@
                             <li><a href="#section-slider">Image slider/carousel</a></li>
                             <li><a href="#section-type">Typography</a></li>
                             <li><a href="#section-text-semantics">Inline text-level semantics</a></li>
+                            <li><a href="#section-progress">Progress indicators</a></li>
                             <li><a href="#section-block-semantics">Block text-level semantics</a></li>
                             <li><a href="#section-media">Embedded content</a></li>
                             <li><a href="#section-labels">Inline text labels</a></li>
-                            <li><a href="#section-progress">Progress indicators</a></li>
                             <li><a href="#section-alerts">Alert boxes</a></li>
                             <li><a href="#section-pagination">Pagination</a></li>
                             <li><a href="#section-breadcrumbs">Breadcrumbs</a></li>
@@ -642,9 +642,22 @@
 
                         </section>
 
-
                         <section class="section" id="section-block-semantics">
                             <h2>Block text-level semantics</h2>
+
+                            <h3>Disclosure (details/summary)</h3>
+                            <p><strong>Code:</strong></p>
+                            <pre><code class="language-markup">&lt;details&gt;
+    &lt;summary&gt;System requirements&lt;/summary&gt;
+    &lt;p&gt;Requires a computer running an operating system. The computer must have some memory and ideally some kind of long-term storage.&lt;/p&gt;
+    &lt;p&gt;An input device as well as some form of output device is recommended.&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+                            <p><strong>Example:</strong></p>
+                            <details>
+                                <summary>System requirements</summary>
+                                <p>Requires a computer running an operating system. The computer must have some memory and ideally some kind of long-term storage.</p>
+                                <p>An <a href="#">input device</a> as well as some form of <a href="#">output device</a> is recommended.</p>
+                            </details>
 
                             <h3>Pre-formatted text blocks</h3>
                             <pre>This is an example of a non-code
@@ -1182,13 +1195,53 @@
                                 <div class="layout-container">
 
                                     <div class="layout-4col">
-                                        <label for="url">URL</label><br>
-                                        <input id="url" name="url" type="url">
+                                        <label for="color">Colour</label><br>
+                                        <input type="color" id="color" name="color" value="#cc0000">
+                                    </div>
+
+                                    <div class="layout-4col">
+                                        <label for="date">Date</label><br>
+                                        <input id="date" name="date" type="date">
+                                    </div>
+
+                                    <div class="layout-4col">
+                                        <label for="datetime-local">Datetime local</label><br>
+                                        <input id="datetime-local" name="datetime-local" type="datetime-local">
                                     </div>
 
                                     <div class="layout-4col">
                                         <label for="email">Email</label><br>
                                         <input id="email" name="email" type="email" placeholder="name@example.com">
+                                    </div>
+
+                                    <div class="layout-4col">
+                                        <label for="month">Month</label><br>
+                                        <input id="month" name="month" type="month">
+                                    </div>
+
+                                    <div class="layout-4col">
+                                        <label for="number">Number</label><br>
+                                        <input id="number" name="number" type="number" min="0" max="999" step="1">
+                                    </div>
+
+                                    <div class="layout-4col">
+                                        <label for="password">Password</label><br>
+                                        <input id="password" name="password" type="password">
+                                    </div>
+
+                                    <div class="layout-4col">
+                                        <label for="range">Range</label><br>
+                                        <input id="range" name="range" type="range">
+                                    </div>
+
+                                    <div class="layout-4col">
+                                        <label for="search">Search</label><br>
+                                        <input id="search" name="search" type="search">
+                                    </div>
+
+                                    <div class="layout-4col">
+                                        <label for="tel">Tel (phone)</label><br>
+                                        <input id="tel" name="tel" type="tel">
                                     </div>
 
                                     <div class="layout-4col">
@@ -1209,48 +1262,18 @@
                                     </div>
 
                                     <div class="layout-4col">
-                                        <label for="datetime-local">Datetime local</label><br>
-                                        <input id="datetime-local" name="datetime-local" type="datetime-local">
+                                        <label for="time">Time</label><br>
+                                        <input id="time" name="time" type="time">
                                     </div>
 
                                     <div class="layout-4col">
-                                        <label for="number">Number</label><br>
-                                        <input id="number" name="number" type="number" min="0" max="999" step="1">
+                                        <label for="url">URL</label><br>
+                                        <input id="url" name="url" type="url">
                                     </div>
 
                                     <div class="layout-4col">
-                                        <label for="tel">Tel (phone)</label><br>
-                                        <input id="tel" name="tel" type="tel">
-                                    </div>
-
-                                    <div class="layout-4col">
-                                        <label for="datetime">Datetime</label><br>
-                                        <input id="datetime" name="datetime" type="datetime">
-                                    </div>
-
-                                    <div class="layout-4col">
-                                        <label for="date">Date</label><br>
-                                        <input id="date" name="date" type="date">
-                                    </div>
-
-                                    <div class="layout-4col">
-                                        <label for="month">Month</label><br>
-                                        <input id="month" name="month" type="month">
-                                    </div>
-
-                                    <div class="layout-4col">
-                                        <label for="search">Search</label><br>
-                                        <input id="search" name="search" type="search">
-                                    </div>
-
-                                    <div class="layout-4col">
-                                        <label for="range">Range</label><br>
-                                        <input id="range" name="range" type="range">
-                                    </div>
-
-                                    <div class="layout-4col">
-                                        <label for="color">Colour</label><br>
-                                        <input type="color" id="color" name="color" value="#cc0000">
+                                        <label for="url">Week</label><br>
+                                        <input id="week" name="week" type="week">
                                     </div>
 
                                 </div>
