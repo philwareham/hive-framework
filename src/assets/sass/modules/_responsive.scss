@@ -46,7 +46,7 @@
      * Navigation layout changes.
      */
 
-    .site-navigation {
+    #site-navigation {
         border-top: 1px solid $color-border;
 
         .js & {
@@ -70,17 +70,13 @@
         a {
             padding: 0.5em 1em;
         }
-
-        &.opened {
-            max-height: 9999px;
-        }
     }
 
     /**
      * Remove navigation toggle show/hide button for navigation.
      */
 
-    .nav-toggle {
+    #site-navigation-toggle {
         display: none;
     }
 

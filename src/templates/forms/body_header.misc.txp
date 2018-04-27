@@ -11,7 +11,7 @@
     </h1>
 </header>
 
-<nav class="site-navigation" aria-label="Site navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+<nav id="site-navigation" aria-label="Site navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
     <txp:section_list default_title="Home" include_default="1" wraptag="ul" break="">
         <li<txp:if_section name='<txp:section />'> class="active"</txp:if_section>>
             <a itemprop="url" href="<txp:section url="1" />">
@@ -20,3 +20,4 @@
         </li>
     </txp:section_list>
 </nav>
+<a id="site-navigation-toggle" href="#" role="button" aria-controls="site-navigation">Menu</a>

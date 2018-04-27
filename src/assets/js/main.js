@@ -2,6 +2,8 @@
 {
     'use strict';
 
+    // If JavaScript enabled, add a class to `<html>` tag.
+
     document.documentElement.className = 'js';
 
     requirejs.config({
@@ -23,7 +25,7 @@
 
         var code = $('code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'),
             fields = $('textarea'),
-            navmenu = $('site-navigation'),
+            navmenu = document.getElementById('site-navigation'),
             player = $('.videoplayer'),
             slider = $('.slider');
 
@@ -51,7 +53,7 @@
 
         // Responsive navigation menu.
 
-        if (navmenu.length) {
+        if (navmenu) {
             var navtoggle = document.getElementById('site-navigation-toggle');
 
             navtoggle.addEventListener('click', function(e)
