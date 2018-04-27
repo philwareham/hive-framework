@@ -1124,9 +1124,8 @@ FileETag None
 # <IfModule mod_rewrite.c>
 #     RewriteEngine On
 #     RewriteCond %{REQUEST_FILENAME} !-f
-#     RewriteRule ^(.+)\.(\d+)\.(bmp|css|cur|gif|ico|jpe?g|js|png|svgz?|webp|webmanifest)$ $1.$3 [L]
+#     RewriteRule ^(.+)\.(\d+)\.(bmp|css|cur|gif|ico|jpe?g|m?js|png|svgz?|webp|webmanifest)$ $1.$3 [L]
 # </IfModule>
-
 
 # ######################################################################
 # # TEXTPATTERN (REMOVE THIS IF NOT USING TEXTPATTERN)                 #
@@ -1147,7 +1146,6 @@ FileETag None
     RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
 
 </IfModule>
-
 
 # ######################################################################
 # # Redirects                                                          #
