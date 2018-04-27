@@ -1,0 +1,42 @@
+/* Disclosure boxes (summary/details)
+   ========================================================================== */
+
+/**
+ * Example HTML:
+ *
+ * <details>
+ *     <summary>Summary text</summary>
+ *     <p>Detailed content.</p>
+ * </details>
+ */
+
+details {
+    > * {
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+
+    &[open] {
+        padding-bottom: 1px;
+        outline: 1px solid $color-border;
+    }
+}
+
+summary {
+    position: relative;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    outline: 1px solid $color-border;
+    background-color: $color-background-box;
+    cursor: pointer;
+    z-index: 2;
+
+    &:hover,
+    &:active {
+        outline: 1px solid darken($color-border, 13%);
+    }
+
+    &:focus {
+        outline: 1px solid $color-link-focus;
+    }
+}
