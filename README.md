@@ -20,8 +20,8 @@ Older versions of the above and other browsers may work, but these are the ones 
 
 Building this repository requires:
 
-* [Node.js](http://nodejs.org/) >=1.0.0
-* [Grunt](http://gruntjs.com/) >=1.0.0
+* [Node.js](https://nodejs.org/)
+* [Grunt](https://gruntjs.com/)
 
 ## Setup
 
@@ -33,7 +33,7 @@ The project uses [Grunt](http://gruntjs.com/) to run tasks and [Sass](http://sas
 $ npm install -g grunt-cli
 ```
 
-Consult the Grunt documentation for more instructions if necessary. You might need to use `sudo npm install -g grunt-cli` instead when installing on certain Unix-based systems.
+Consult the Grunt documentation for more instructions if necessary.
 
 ### Installing dependencies
 
@@ -44,7 +44,7 @@ $ cd hive-framework
 $ npm install
 ```
 
-**npm** installs Node modules for Grunt. You might need to use `sudo npm install` instead when installing on certain Unix-based systems (you can also install via Yarn, instead of npm).
+**npm** installs Node modules for Grunt (you can also install via Yarn, instead of NPM, if you prefer).
 
 ## Building
 
@@ -61,7 +61,7 @@ Where the `@task@` is either `build` or `watch`.
 
 ## Textpattern templates
 
-Optional [Textpattern CMS](https://textpattern.com) theme 'forms' and 'pages' templates are included, for reference. They can be found in the `public/templates` directory, and follow the structure expected by the [rah_flat](https://github.com/gocom/rah_flat) Textpattern plugin.
+Optional [Textpattern CMS](https://textpattern.com) theme 'forms' and 'pages' templates are included, for reference. They can be found in the `public/templates` directory, and follow the structure expected by Textpattern themes.
 
 ## License
 
