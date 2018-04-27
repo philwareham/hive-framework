@@ -29,7 +29,7 @@ Building this repository requires:
 
 The project uses [Grunt](http://gruntjs.com/) to run tasks and [Sass](http://sass-lang.com/) for CSS pre-processing. First make sure you have base dependencies installed: [Node.js](http://nodejs.org/) and [Grunt](http://gruntjs.com/). You can install Node using the [installer](https://nodejs.org) and Grunt with npm:
 
-```ShellSession
+```bash
 $ npm install -g grunt-cli
 ```
 
@@ -39,7 +39,7 @@ Consult the Grunt documentation for more instructions if necessary.
 
 After you have the base dependencies taken care of, you can install the project's dependencies. Navigate to the project's directory, and run the dependency manager:
 
-```ShellSession
+```bash
 $ cd hive-framework
 $ npm install
 ```
@@ -50,7 +50,7 @@ $ npm install
 
 This repository hosts sources and needs to be built before it can be used. After you have installed all dependencies, you will be able to run tasks using Grunt, including building:
 
-```ShellSession
+```bash
 $ grunt @task@
 ```
 
