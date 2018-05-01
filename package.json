@@ -42,7 +42,7 @@
     "sass-lint": "1.12.1"
   },
   "dependencies": {
-    "autosize": "4.0.1",
+    "autosize": "4.0.2",
     "flowplayer": "7.2.5",
     "jquery": "3.3.1",
     "prismjs": "1.14.0",
