@@ -2,9 +2,28 @@
 <html lang="en-gb">
 
 <head>
-    <meta charset="utf-8">
     <txp:output_form form="head" />
-    <txp:output_form form="page_title" />
+    <title><txp:page_title /></title>
+    <txp:if_author>
+        <meta name="robots" content="noindex, follow">
+    <txp:else />
+        <txp:meta_description />
+        <txp:if_article_list>
+            <txp:article pgonly="1" limit="10" />
+            <txp:variable name="page" value='<txp:page_url type="pg" />' />
+            <txp:if_variable name="page" value="1">
+                <meta name="robots" content="index, follow">
+                <link rel="canonical" href="<txp:section url="1" />">
+            <txp:else />
+                <meta name="robots" content="noindex, follow">
+            </txp:if_variable>
+        <txp:else />
+            <txp:meta_keywords separator="," />
+            <txp:meta_author title="1" />
+            <meta name="robots" content="<txp:if_expires>unavailable_after: <txp:expires gmt="1" format="%d-%b-%y %T" /> GMT<txp:else />index, follow</txp:if_expires>">
+            <link rel="canonical" href="<txp:permlink />">
+        </txp:if_article_list>
+    </txp:if_author>
 </head>
 
 <txp:if_article_list>

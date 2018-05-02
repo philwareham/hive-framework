@@ -2,9 +2,9 @@
 <html lang="en-gb">
 
 <head>
-    <meta charset="utf-8">
     <txp:output_form form="head" />
     <title><txp:error_status /></title>
+    <meta name="robots" content="none">
 </head>
 
 <body class="error-page" itemscope itemtype="https://schema.org/WebPage">

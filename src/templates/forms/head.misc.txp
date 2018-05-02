@@ -1,54 +1,8 @@
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
-<link rel="stylesheet" href="<txp:site_url />assets/css/style.@@timestamp.css">
+<link rel="stylesheet" href="<txp:page_url type="theme_path" />/styles/default.@@timestamp.css">
 <link rel="dns-prefetch" href="https://code.jquery.com">
-<link rel="dns-prefetch" href="https://platform.twitter.com">
-<link rel="dns-prefetch" href="https://www.google-analytics.com">
 <link rel="icon" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" sizes="16x16" href="/favicon-16x16.png">
 <link rel="alternate" type="application/rss+xml" title="RSS feed" href="<txp:site_url />rss">
-
-<txp:meta_description />
-<txp:meta_keywords separator="," />
-
 <meta name="generator" content="Textpattern CMS">
-
-<!-- specify robots, canonical, author - depending on context -->
-<txp:if_status>
-    <txp:if_search>
-        <meta name="robots" content="none">
-    <txp:else />
-        <txp:if_category>
-            <meta name="robots" content="noindex, follow">
-        <txp:else />
-            <txp:if_author>
-                <meta name="robots" content="noindex, follow">
-            <txp:else />
-                <meta name="robots" content="index, follow">
-            </txp:if_author>
-        </txp:if_category>
-        <txp:if_section name="">
-            <link rel="canonical" href="<txp:site_url />">
-        <txp:else />
-            <txp:if_individual_article>
-                <meta name="twitter:card" content="summary_large_image">
-                <meta name="twitter:site" content="@Design_Hive_Ltd">
-                <meta name="twitter:title" content="<txp:variable name="page-title" />">
-                <meta name="twitter:description" content="">
-                <meta name="twitter:image:src" content="<txp:if_article_image><txp:images limit="1"><txp:image_url /></txp:images><txp:else /><txp:site_url />favicon-192x192.png</txp:if_article_image>">
-                <meta name="twitter:url" content="<txp:permlink />">
-                <link rel="canonical" href="<txp:permlink />">
-                <txp:meta_author title="1" />
-            <txp:else />
-                <meta name="twitter:card" content="summary_large_image">
-                <meta name="twitter:site" content="@Design_Hive_Ltd">
-                <meta name="twitter:title" content="<txp:variable name="page-title" />">
-                <meta name="twitter:description" content="">
-                <meta name="twitter:image:src" content="<txp:site_url />favicon-192x192.png">
-                <meta name="twitter:url" content="<txp:if_section><txp:section url='1' /><txp:else /><txp:if_category><txp:category url='1' /><txp:else /><txp:site_url /></txp:if_category></txp:if_section>">
-                <link rel="canonical" href="<txp:if_section><txp:section url='1' /><txp:else /><txp:if_category><txp:category url='1' /><txp:else /><txp:site_url /></txp:if_category></txp:if_section>">
-            </txp:if_individual_article>
-        </txp:if_section>
-    </txp:if_search>
-<txp:else />
-    <meta name="robots" content="none">
-</txp:if_status>
