@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en-gb">
-
 <head>
     <txp:output_form form="head" />
     <title><txp:page_title /></title>
@@ -33,11 +32,8 @@
 </txp:if_article_list>
 
     <txp:output_form form="body_header" />
-
     <div class="wrapper">
         <div class="container">
-
-<!-- Main content -->
             <main aria-label="Main content">
 
                 <txp:if_article_list>
@@ -83,41 +79,23 @@
 
                     <txp:article />
 
-                    <!-- add pagination links to foot of article if there are more articles available, this method
-                         is more flexibile than using simple txp:link_to_prev/txp:link_to_next or txp:older/txp:newer tags -->
-                    <txp:variable name="more" value='<txp:link_to_prev /><txp:link_to_next />' />
-                    <txp:variable name="prev" value='<txp:link_to_prev />' />
-                    <txp:variable name="next" value='<txp:link_to_next />' />
-
-                    <txp:if_variable name="more" value="">
-                    <txp:else />
+                    <txp:evaluate>
                         <nav class="paginator" aria-label="Article navigation">
-
-                            <txp:if_variable name="prev" value="">
-                            <txp:else />
+                            <txp:evaluate>
                                 <a rel="prev" href="<txp:link_to_prev />" title="<txp:prev_title />" aria-label="<txp:prev_title />">Older</a>
-                            </txp:if_variable>
-
-                            <txp:if_variable name="next" value="">
-                            <txp:else />
+                            </txp:evaluate>
+                            <txp:evaluate>
                                 <a rel="next" href="<txp:link_to_next />" title="<txp:next_title />" aria-label="<txp:next_title />" >Newer</a>
-                            </txp:if_variable>
-
+                            </txp:evaluate>
                         </nav>
-                    </txp:if_variable>
+                    </txp:evaluate>
 
                 </txp:if_article_list>
 
             </main>
-
-<!-- Complementary content -->
             <txp:output_form form="complementary" />
-
-        </div> <!-- /.container -->
-    </div> <!-- /.wrapper -->
-
-<!-- Footer -->
+        </div>
+    </div>
     <txp:output_form form="body_footer" />
-
 </body>
 </html>

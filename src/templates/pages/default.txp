@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en-gb">
-
 <head>
     <txp:output_form form="head" />
     <title><txp:page_title /></title>
@@ -47,14 +46,10 @@
 </txp:if_section>
 
     <txp:output_form form="body_header" />
-
     <div class="wrapper">
         <div class="container">
-
-<!-- Main content -->
             <main aria-label="Main content">
 
-                <!-- is this the search result page? also omits the pagination links below (uses pagination format within search_results.article.txp instead) -->
                 <txp:if_search>
 
                     <h1 itemprop="name">Search results</h1>
@@ -62,69 +57,42 @@
 
                 <txp:else />
 
-                    <!-- else is this an article category list? -->
                     <txp:if_category>
 
-                        <h1 itemprop="name">
-                            Category:
-                            <txp:category title="1" />
-                        </h1>
+                        <h1 itemprop="name">Category: <txp:category title="1" /></h1>
                         <txp:article class="article-list" form="article_listing" limit="5" wraptag="ul" />
 
                     <txp:else />
 
-                        <!-- else is this an article author list? -->
                         <txp:if_author>
 
-                            <h1>
-                                Author:
-                                <txp:author />
-                            </h1>
+                            <h1>Author: <txp:author /></h1>
                             <txp:article class="article-list" form="article_listing" limit="5" wraptag="ul" />
 
                         <txp:else />
 
-                            <!-- else display articles normally -->
-                            <txp:article limit="5" /> <!-- links by default to form: 'default.article.txp' unless you specify a different form -->
+                            <txp:article limit="5" />
 
                         </txp:if_author>
                     </txp:if_category>
 
-                    <!-- add pagination links to foot of article listings/category listings/author listings if there are more articles available,
-                         this method is more flexibile than using simple txp:link_to_prev/txp:link_to_next or txp:older/txp:newer tags -->
-                    <txp:variable name="more" value='<txp:newer /><txp:older />' />
-                    <txp:variable name="prev" value='<txp:newer />' />
-                    <txp:variable name="next" value='<txp:older />' />
-
-                    <txp:if_variable name="more" value="">
-                    <txp:else />
+                    <txp:evaluate>
                         <nav class="paginator" aria-label="Article navigation">
-
-                            <txp:if_variable name="prev" value="">
-                            <txp:else />
+                            <txp:evaluate>
                                 <a rel="prev" href="<txp:newer />" title="Go to newer articles" aria-label="Go to newer articles">Newer</a>
-                            </txp:if_variable>
-
-                            <txp:if_variable name="next" value="">
-                            <txp:else />
+                            </txp:evaluate>
+                            <txp:evaluate>
                                 <a rel="next" href="<txp:older />" title="Go to older articles" aria-label="Go to older articles">Older</a>
-                            </txp:if_variable>
-
+                            </txp:evaluate>
                         </nav>
-                    </txp:if_variable>
+                    </txp:evaluate>
 
                 </txp:if_search>
 
             </main>
-
-<!-- Complementary content -->
             <txp:output_form form="complementary" />
-
-        </div> <!-- /.container -->
-    </div> <!-- /.wrapper -->
-
-<!-- footer -->
+        </div>
+    </div>
     <txp:output_form form="body_footer" />
-
 </body>
 </html>

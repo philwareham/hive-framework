@@ -1,32 +1,21 @@
 <!DOCTYPE html>
 <html lang="en-gb">
-
 <head>
     <txp:output_form form="head" />
     <title><txp:error_status /></title>
     <meta name="robots" content="none">
 </head>
-
 <body class="error-page" itemscope itemtype="https://schema.org/WebPage">
-
     <txp:output_form form="body_header" />
-
     <div class="wrapper">
         <div class="container">
-
-<!-- Main content -->
             <main aria-label="Main content">
                 <h1 class="error-status"><txp:error_status /></h1>
                 <p class="error-msg"><txp:error_message /></p>
             </main>
-
-<!-- Complementary content -->
             <txp:output_form form="complementary" />
-
-        </div> <!-- /.container -->
-    </div> <!-- /.wrapper -->
-
+        </div>
+    </div>
     <txp:output_form form="body_footer" />
-
 </body>
 </html>
