@@ -24,7 +24,7 @@
   "devDependencies": {
     "apache-server-configs": "3.0.0",
     "autoprefixer": "8.6.3",
-    "cssnano": "4.0.0-rc.2",
+    "cssnano": "4.0.0",
     "grunt": "~1.0",
     "grunt-cli": "~1",
     "grunt-concurrent": "2.3.1",
