@@ -2,6 +2,8 @@ module.exports = function (grunt)
 {
     'use strict';
 
+    const sass = require('node-sass');
+
     // Load all Grunt tasks.
     require('load-grunt-tasks')(grunt);
 
@@ -93,23 +95,11 @@ module.exports = function (grunt)
         jshint: {
             options: {
                 bitwise: true,
-                camelcase: true,
+                browser: true,
                 curly: true,
                 eqeqeq: true,
-                es3: true,
+                esversion: 6,
                 forin: true,
-                immed: true,
-                indent: 4,
-                latedef: true,
-                noarg: true,
-                noempty: true,
-                nonew: true,
-                quotmark: 'single',
-                undef: true,
-                unused: true,
-                strict: true,
-                trailing: true,
-                browser: true,
                 globals: {
                     jQuery: true,
                     Zepto: true,
@@ -120,7 +110,13 @@ module.exports = function (grunt)
                     autosize: true,
                     responsiveNav: true,
                     Prism: true
-                }
+                },
+                latedef: true,
+                noarg: true,
+                nonew: true,
+                strict: true,
+                undef: true,
+                unused: true
             },
             files: [
                 'Gruntfile.js',
@@ -168,6 +164,7 @@ module.exports = function (grunt)
         // Sass configuration.
         sass: {
             options: {
+                implementation: sass,
                 outputStyle: 'expanded', // outputStyle = expanded, nested, compact or compressed.
                 sourceMap: false
             },
