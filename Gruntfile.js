@@ -2,7 +2,7 @@ module.exports = function (grunt)
 {
     'use strict';
 
-    const sass = require('node-sass');
+    const sass = require('dart-sass');
 
     // Load all Grunt tasks.
     require('load-grunt-tasks')(grunt);
@@ -108,7 +108,6 @@ module.exports = function (grunt)
                     require: true,
                     requirejs: true,
                     autosize: true,
-                    responsiveNav: true,
                     Prism: true
                 },
                 latedef: true,
