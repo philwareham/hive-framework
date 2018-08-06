@@ -2,6 +2,8 @@ module.exports = function (grunt)
 {
     'use strict';
 
+    // Define Sass implmentation (Dart-Sass).
+    const Fiber = require('fibers');
     const sass = require('dart-sass');
 
     // Load all Grunt tasks.
@@ -163,6 +165,7 @@ module.exports = function (grunt)
         // Sass configuration.
         sass: {
             options: {
+                fiber: Fiber,
                 implementation: sass,
                 outputStyle: 'expanded', // outputStyle = expanded, nested, compact or compressed.
                 sourceMap: false
