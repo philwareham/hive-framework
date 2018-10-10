@@ -5,7 +5,7 @@
 
 ![Hive logo](https://github.com/philwareham/hive-framework/blob/master/public/favicon-192x192.png)
 
-[Demo](http://hive-framework.philwareham.co.uk/)
+[Demo](https://hive-framework.philwareham.co.uk/)
 
 A website development framework built with Grunt and Sass, and incorporating jQuery UI. The theme styling is intentionally minimal to make re-skinning easier.
 
@@ -13,6 +13,7 @@ A website development framework built with Grunt and Sass, and incorporating jQu
 
 * Internet Explorer 11.
 * Chrome, Edge, Firefox, Safari and Opera the last two recent stable releases.
+* Firefox ESR latest major point release.
 
 Older versions of the above and other browsers may work, but these are the ones we verify.
 
@@ -27,7 +28,7 @@ Building this repository requires:
 
 ### Installing required tools
 
-The project uses [Grunt](http://gruntjs.com/) to run tasks and [Sass](http://sass-lang.com/) for CSS pre-processing. First make sure you have base dependencies installed: [Node.js](http://nodejs.org/) and [Grunt](http://gruntjs.com/). You can install Node using the [installer](https://nodejs.org) and Grunt with npm:
+The project uses [Grunt](https://gruntjs.com/) to run tasks and [Sass](https://sass-lang.com/) for CSS pre-processing. First make sure you have base dependencies installed: Node.js and Grunt. You can install Node using the [installer](https://nodejs.org) and Grunt with npm:
 
 ```bash
 $ npm install -g grunt-cli
@@ -61,7 +62,7 @@ Where the `@task@` is either `build` or `watch`.
 
 ## Textpattern templates
 
-Optional [Textpattern CMS](https://textpattern.com) theme 'forms' and 'pages' templates are included, for reference. They can be found in the `public/templates` directory, and follow the structure expected by Textpattern themes.
+Optional [Textpattern CMS](https://textpattern.com/) theme 'forms' and 'pages' templates are included, for reference. They can be found in the `public/templates` directory, and follow the structure expected by Textpattern themes.
 
 ## License
 
