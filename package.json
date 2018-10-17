@@ -24,7 +24,7 @@
   "devDependencies": {
     "apache-server-configs": "3.0.0",
     "autoprefixer": "9.2.1",
-    "cssnano": "4.1.4",
+    "cssnano": "4.1.5",
     "dart-sass": "1.14.2",
     "fibers": "3.0.0",
     "grunt": "~1",
