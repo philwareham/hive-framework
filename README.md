@@ -1,7 +1,7 @@
 # Hive framework
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/philwareham/hive-framework.svg)](https://greenkeeper.io/)
-[![Build Status](https://img.shields.io/travis/philwareham/hive-framework.svg)](https://travis-ci.org/philwareham/hive-framework)
+[![Greenkeeper](https://badges.greenkeeper.io/philwareham/hive-framework.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/philwareham/hive-framework.svg)](https://travis-ci.org/philwareham/hive-framework)
 
 ![Hive logo](https://github.com/philwareham/hive-framework/blob/master/public/favicon-192x192.png)
 
