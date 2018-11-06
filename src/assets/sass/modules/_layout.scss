@@ -23,6 +23,12 @@ body {
     background: $color-background-box;
 }
 
+@media (prefers-color-scheme: dark) {
+    body {
+        background: $dark-color-background-box;
+    }
+}
+
 /**
  * Force blocks.
  */
@@ -56,6 +62,14 @@ body {
     border-top: 1px solid $color-border;
     border-bottom: 1px solid $color-border;
     background: $color-background;
+}
+
+@media (prefers-color-scheme: dark) {
+    .wrapper {
+        border-top-color: $color-border;
+        border-bottom-color: $color-border;
+        background-color: $dark-color-background;
+    }
 }
 
 /**

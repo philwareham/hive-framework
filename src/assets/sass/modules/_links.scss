@@ -24,6 +24,21 @@ a {
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    a {
+        color: $dark-color-link;
+
+        &:hover,
+        &:active {
+            color: $dark-color-link-hover;
+        }
+
+        &:focus {
+            outline: thin solid $dark-color-link-focus;
+        }
+    }
+}
+
 /**
  * Additional styling for heading links.
  *
