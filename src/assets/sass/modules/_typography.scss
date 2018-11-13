@@ -42,6 +42,17 @@ h6 {
     font-family: $font-sans-serif;
 }
 
+@media (prefers-color-scheme: dark) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $dark-color-text-variation;
+    }
+}
+
 h1 {
     margin: 0.6315789em 0; // 24px / 38px
     font-size: 2.375rem; // 38px / 16px
