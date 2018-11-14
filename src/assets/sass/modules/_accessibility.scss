@@ -1,0 +1,11 @@
+@media (-ms-high-contrast: active) {
+    .ui-icon {
+        -ms-high-contrast-adjust: none;
+    }
+}
+
+@media (-ms-high-contrast: white-on-black) {
+    .ui-icon {
+        filter: invert(1) brightness(1.2);
+    }
+}

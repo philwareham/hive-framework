@@ -55,7 +55,7 @@ $color-gradient-to:                   darken($color-gradient-from, 6.5%) !defaul
 $color-gradient-border:               darken($color-gradient-from, 13.5%) !default;
 
 $dark-color-background:               #373e45 !default;
-$dark-color-background-box:           tint($dark-color-background, 10%) !default;
+$dark-color-background-box:           shade($dark-color-background, 14%) !default;
 
 // accent colours
 
@@ -89,13 +89,13 @@ $color-info-border:                   darken($color-info-background, 12%) !defau
 
 $dark-color-success-text:             #66cc33 !default;
 $dark-color-success-background:       #2a4125 !default;
-$dark-color-success-border:           tint($dark-color-success-background, 20%) !default;
+$dark-color-success-border:           rgba($dark-color-success-text, 0.33) !default;
 $dark-color-warning-text:             #ffbe3c !default;
 $dark-color-warning-background:       #484123 !default;
-$dark-color-warning-border:           tint($dark-color-warning-background, 20%) !default;
+$dark-color-warning-border:           rgba($dark-color-warning-text, 0.33) !default;
 $dark-color-error-text:               #ff3382 !default;
 $dark-color-error-background:         #47232a !default;
-$dark-color-error-border:             tint($dark-color-error-background, 20%) !default;
+$dark-color-error-border:             rgba($dark-color-error-text, 0.44) !default;
 $dark-color-info-text:                #44aaff !default;
 $dark-color-info-background:          #0e304a !default;
-$dark-color-info-border:              tint($dark-color-info-background, 20%) !default;
+$dark-color-info-border:              rgba($dark-color-info-text, 0.38) !default;

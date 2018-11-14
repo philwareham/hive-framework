@@ -47,29 +47,26 @@
     @import "modules/comments";
 
 
-    /* ==========================================================================
-       jQuery UI global
-       ========================================================================== */
+    // jQuery UI core
 
     @import "modules/jquery-ui/core";
 
 
-    /* ==========================================================================
-       jQuery UI interactions
-       ========================================================================== */
+    // jQuery UI icons
 
-    // comment out any components that are not required
+    @import "modules/jquery-ui/icons";
+
+
+    // jQuery UI interactions
+
     @import "modules/jquery-ui/draggable";
     @import "modules/jquery-ui/resizable";
     @import "modules/jquery-ui/selectable";
     @import "modules/jquery-ui/sortable";
 
 
-    /* ==========================================================================
-       jQuery UI widgets
-       ========================================================================== */
+    // jQuery UI widgets
 
-    // comment out any components that are not required
     @import "modules/jquery-ui/accordion";
     @import "modules/jquery-ui/autocomplete";
     @import "modules/jquery-ui/button";
@@ -85,22 +82,30 @@
     @import "modules/jquery-ui/tabs";
     @import "modules/jquery-ui/tooltip";
 
-
-    /* ==========================================================================
-       jQuery UI icons
-       ========================================================================== */
-
-    // comment out any components that are not required
-    @import "modules/jquery-ui/icons";
-    @import "modules/jquery-ui/icons-color-success-text";
-    @import "modules/jquery-ui/icons-color-warning-text";
-    @import "modules/jquery-ui/icons-color-error-text";
-    @import "modules/jquery-ui/icons-color-information-text";
-    @import "modules/jquery-ui/icons-color-text-inverse";
-
 }
 
+
+
+/* ==========================================================================
+   Responsive layout for screen media
+   ========================================================================== */
+
 @import "modules/responsive";
+
+
+
+/* ==========================================================================
+   Additonal accessibility for screen media
+   ========================================================================== */
+
+@import "modules/accessibility";
+
+
+
+/* ==========================================================================
+   Animation `keyframes` need to appear outside of `screen` rules
+   ========================================================================== */
+
 @import "modules/animation-keyframes";
 
 
