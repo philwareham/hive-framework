@@ -71,7 +71,6 @@ pre[class*="language-"] {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-    background: hsla(0, 0%, 100%, 0.5);
     color: #a67f59;
 }
 
@@ -142,4 +141,68 @@ pre.line-numbers > code {
     color: #999999;
     text-align: right;
     content: counter(linenumber);
+}
+
+@media (prefers-color-scheme: dark) {
+    token.comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata {
+        color: #708090;
+    }
+
+    .token.punctuation {
+        color: #ffffff;
+    }
+
+    .token.property,
+    .token.tag,
+    .token.boolean,
+    .token.number,
+    .token.constant,
+    .token.symbol,
+    .token.deleted {
+        color: $dark-color-error-text;
+    }
+
+    .token.selector,
+    .token.attr-name,
+    .token.string,
+    .token.char,
+    .token.builtin,
+    .token.inserted {
+        color: $dark-color-success-text;
+    }
+
+    .token.operator,
+    .token.entity,
+    .token.url,
+    .language-css .token.string,
+    .style .token.string {
+        color: $dark-color-warning-text;
+    }
+
+    .token.atrule,
+    .token.attr-value,
+    .token.keyword {
+        color: $dark-color-info-text;
+    }
+
+    .token.function {
+        color: #dd4a68;
+    }
+
+    .token.regex,
+    .token.important,
+    .token.variable {
+        color: #ee9900;
+    }
+
+    .line-numbers .line-numbers-rows {
+        border-right-color: $dark-color-text-footnote;
+    }
+
+    .line-numbers-rows > span::before {
+        color: $dark-color-text-footnote;
+    }
 }
