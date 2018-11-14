@@ -66,8 +66,8 @@ body {
 
 @media (prefers-color-scheme: dark) {
     .wrapper {
-        border-top-color: $color-border;
-        border-bottom-color: $color-border;
+        border-top-color: $dark-color-border;
+        border-bottom-color: $dark-color-border;
         background-color: $dark-color-background;
     }
 }

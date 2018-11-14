@@ -38,11 +38,11 @@ $dark-color-link-focus:               $dark-color-link-hover !default;
 
 // borders
 
-$color-border:                        #9ca3aa !default;
+$color-border:                        #cccccc !default;
 $color-border-light:                  #d4d4d4 !default;
 
-$dark-color-border:                   #555555 !default;
-$dark-color-border-light:             #777777 !default;
+$dark-color-border:                   shade($dark-color-text, 40%) !default;
+$dark-color-border-light:             shade($dark-color-border, 20%) !default;
 
 // neutral colours
 
