@@ -138,15 +138,6 @@
 
     });
 
-    // Google+ '+1' button.
-
-    require(['jquery'], function ($)
-    {
-        if ($('.g-plusone').length) {
-            require(['https://apis.google.com/js/platform.js']);
-        }
-    });
-
     // Twitter 'Tweet' button.
 
     require(['jquery'], function ($)
