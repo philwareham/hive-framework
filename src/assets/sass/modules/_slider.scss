@@ -137,7 +137,7 @@
     color: transparent;
     font-size: 0;
     line-height: 0;
-    cursor: pointer;
+    box-shadow: none;
 
     &::before {
         color: $color-text;
@@ -154,6 +154,7 @@
     &:hover,
     &:active,
     &:focus {
+        top: 50%;
         background: transparent;
         color: transparent;
 
@@ -205,7 +206,7 @@
             color: transparent;
             font-size: 0;
             line-height: 0;
-            cursor: pointer;
+            box-shadow: none;
 
             &::before {
                 position: absolute;
@@ -225,6 +226,8 @@
             &:hover,
             &:active,
             &:focus {
+                top: 0;
+
                 &::before {
                     opacity: 1;
                 }

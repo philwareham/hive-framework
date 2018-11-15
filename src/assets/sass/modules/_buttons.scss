@@ -24,21 +24,22 @@ span.button {
     @include gradient-linear($color-button-gradient-from, $color-button-gradient-to);
 
     display: inline-block;
+    position: relative;
     width: auto;
     height: 2em; // 32px / 16px
-    padding: 0.25em 0.75em; // 8px / 16px, 12px / 16px
-    transition: box-shadow 0.1s linear;
+    padding: 0.25em 1em; // 4px / 16px
     border: 1px solid $color-button-border;
-    border-radius: $border-radius;
+    border-radius: 1em;
     background-clip: padding-box;
     color: $color-text-button;
     font-weight: normal;
     text-align: center;
+    box-shadow: 0 2px 0 $color-button-shadow;
     cursor: pointer; /* 1 */
     appearance: none; /* 2 */
 
     &:hover {
-        @include gradient-linear(lighten($color-button-gradient-from, 4%), lighten($color-button-gradient-to, 4%));
+        @include gradient-linear(lighten($color-button-gradient-from, 2%), lighten($color-button-gradient-to, 2%));
 
         border-color: darken($color-button-border, 13%);
         color: $color-text-button-hover;
@@ -46,12 +47,11 @@ span.button {
     }
 
     &:active {
-        @include gradient-linear(darken($color-button-gradient-from, 3%), darken($color-button-gradient-to, 3%));
-
+        top: 2px;
         border-color: darken($color-button-border, 13%);
         color: $color-text-button-active;
         text-decoration: none;
-        box-shadow: inset 0 0.2em 0.25em rgba(#000000, 0.15);
+        box-shadow: none;
     }
 
     &:focus {
@@ -60,23 +60,23 @@ span.button {
     }
 
     &.button-success {
-        @include gradient-linear(lighten($color-success-text, 10%), $color-success-text);
+        @include gradient-linear(tint($color-success-text, 10%), $color-success-text);
 
-        border-color: darken($color-success-text, 5%);
+        border-color: shade($color-success-text, 5%);
         color: $color-text-inverse;
+        box-shadow: 0 2px 0 shade($color-success-text, 33%);
 
         &:hover {
-            @include gradient-linear(lighten($color-success-text, 18%), lighten($color-success-text, 8%));
+            @include gradient-linear(tint($color-success-text, 18%), tint($color-success-text, 8%));
 
             border-color: darken($color-success-text, 12%);
             color: $color-text-inverse;
         }
 
         &:active {
-            @include gradient-linear($color-success-text, lighten($color-success-text, 8%));
-
             border-color: darken($color-success-text, 12%);
             color: darken($color-text-inverse, 10%);
+            box-shadow: none;
         }
 
         &:focus {
@@ -85,29 +85,40 @@ span.button {
     }
 
     &.button-danger {
-        @include gradient-linear(lighten($color-error-text, 10%), $color-error-text);
+        @include gradient-linear(tint($color-error-text, 10%), $color-error-text);
 
-        border-color: darken($color-error-text, 5%);
+        border-color: shade($color-error-text, 5%);
         color: $color-text-inverse;
+        box-shadow: 0 2px 0 shade($color-error-text, 33%);
 
         &:hover {
-            @include gradient-linear(lighten($color-error-text, 18%), lighten($color-error-text, 8%));
+            @include gradient-linear(tint($color-error-text, 18%), tint($color-error-text, 8%));
 
             border-color: darken($color-error-text, 12%);
             color: $color-text-inverse;
         }
 
         &:active {
-            @include gradient-linear($color-error-text, lighten($color-error-text, 8%));
-
             border-color: darken($color-error-text, 12%);
             color: darken($color-text-inverse, 10%);
+            box-shadow: none;
         }
 
         &:focus {
             border-color: $color-link-focus;
         }
     }
+}
+
+/**
+ * Disbaled button additional styling.
+ */
+
+button[disabled],
+[type="button"][disabled],
+[type="reset"][disabled],
+[type="submit"][disabled] {
+    top: 2px !important;
 }
 
 /**
