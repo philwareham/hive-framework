@@ -451,7 +451,7 @@ select {
 
 select:-moz-focusring {
     color: transparent;
-    text-shadow: 0 0 0 $color-text-form;
+    text-shadow: none;
 }
 
 /**
@@ -507,7 +507,6 @@ textarea {
  * Make sure disabled elements really are disabled and styled appropriately.
  *
  * 1. Re-set default cursor for disabled elements.
- * 2. Override default iOS opacity setting.
  */
 
 [disabled],
@@ -515,16 +514,20 @@ textarea {
 [disabled] optgroup,
 span.disabled,
 .ui-checkboxradio-disabled {
-    border-color: $color-border-light !important;
-    background: $color-background-form-disabled !important;
-    color: $color-text-form-disabled !important;
-    text-shadow: none !important;
+    border: 1px solid $color-border !important;
     box-shadow: none !important;
     cursor: default !important; /* 1 */
-    opacity: 1; /* 2 */
+    opacity: 0.33 !important;
+}
 
-    .ui-icon {
-        opacity: 0.33 !important;
+@media (prefers-color-scheme: dark) {
+    [disabled],
+    [disabled] option,
+    [disabled] optgroup,
+    span.disabled,
+    .ui-checkboxradio-disabled {
+        border: 1px solid $dark-color-border !important;
+        opacity: 0.20 !important;
     }
 }
 

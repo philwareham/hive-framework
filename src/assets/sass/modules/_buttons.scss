@@ -117,8 +117,9 @@ span.button {
 button[disabled],
 [type="button"][disabled],
 [type="reset"][disabled],
-[type="submit"][disabled] {
-    top: 2px !important;
+[type="submit"][disabled],
+.button.disabled {
+    top: 0 !important;
 }
 
 /**
