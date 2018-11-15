@@ -13,6 +13,12 @@ fieldset {
     border: 1px solid $color-border; /* 2 */
 }
 
+@media (prefers-color-scheme: dark) {
+    fieldset {
+        border-color: $dark-color-border;
+    }
+}
+
 /**
  * Normalize styling of `legend`.
  *
@@ -51,6 +57,18 @@ span.button {
     box-sizing: border-box;
 }
 
+@media (prefers-color-scheme: dark) {
+    button,
+    input,
+    select,
+    optgroup,
+    textarea,
+    a.button,
+    span.button {
+        color: $dark-color-text-form;
+    }
+}
+
 /**
  * Styling of form input fields.
  *
@@ -87,6 +105,36 @@ textarea {
     &:focus {
         border-color: $color-link-focus;
         outline: 1px solid transparent; // Allows for repainting in high contrast modes.
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    [type="color"],
+    [type="date"],
+    [type="datetime"],
+    [type="datetime-local"],
+    [type="email"],
+    [type="month"],
+    [type="number"],
+    [type="password"],
+    [type="search"],
+    [type="tel"],
+    [type="text"],
+    [type="time"],
+    [type="url"],
+    [type="week"],
+    select,
+    textarea {
+        border-color: $dark-color-border;
+        background-color: $dark-color-background-form;
+
+        &:hover {
+            border-color: tint($dark-color-border, 15%);
+        }
+
+        &:focus {
+            border-color: $dark-color-link-focus;
+        }
     }
 }
 
@@ -436,6 +484,12 @@ optgroup {
     font-weight: bold;
 }
 
+@media (prefers-color-scheme: dark) {
+    optgroup {
+        color: $dark-color-text-form;
+    }
+}
+
 /**
  * 1. Remove unwanted space below `textarea` in Safari, Chrome, Opera.
  * 2. Restrict to vertical resizing to prevent layout breakage.
@@ -511,6 +565,16 @@ textarea {
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    input,
+    select,
+    textarea {
+        &:focus:invalid {
+            border-color: $dark-color-error-text;
+        }
+    }
+}
+
 /**
  * Styling for required field indicators.
  *
@@ -522,4 +586,10 @@ textarea {
 abbr.required {
     color: $color-error-text;
     text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    abbr.required {
+        color: $dark-color-error-text;
+    }
 }

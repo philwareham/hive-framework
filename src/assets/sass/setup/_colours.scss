@@ -21,8 +21,8 @@ $color-text-inverse:                  #ffffff !default;
 $color-text-print:                    #000000 !default; // solid black prints faster/cleaner
 
 $dark-color-text:                     #ced4da !default;
-$dark-color-text-variation:           #ffffff !default;
 $dark-color-text-footnote:            #9ca3aa !default;
+$dark-color-text-form:                #ffffff !default;
 
 // interaction colours
 
@@ -32,9 +32,9 @@ $color-link-focus:                    $color-link-hover !default;
 $color-selecting:                     tint($color-link-hover, 80%) !default;
 $color-selected:                      tint($color-link-hover, 90%) !default;
 
-$dark-color-link:                     tint(#0066ff, 40%) !default;
-$dark-color-link-hover:               invert(#0066ff) !default;
-$dark-color-link-focus:               $dark-color-link-hover !default;
+$dark-color-link:                     tint(#0066ff, 50%) !default;
+$dark-color-link-hover:               tint($dark-color-link, 25%) !default;
+$dark-color-link-focus:               #ff9900 !default;
 
 // borders
 
@@ -56,6 +56,7 @@ $color-gradient-border:               darken($color-gradient-from, 13.5%) !defau
 
 $dark-color-background:               #373e45 !default;
 $dark-color-background-box:           shade($dark-color-background, 14%) !default;
+$dark-color-background-form:          shade($dark-color-background, 28%) !default;
 
 // accent colours
 

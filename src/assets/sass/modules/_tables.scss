@@ -148,6 +148,29 @@ tfoot {
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    .table--bordered {
+        th,
+        td {
+            border-bottom-color: $dark-color-border;
+        }
+
+        thead tr:last-child {
+            th,
+            td {
+                border-bottom-color: $dark-color-border;
+            }
+        }
+
+        tbody tr:first-child {
+            td,
+            th {
+                border-top-color: $dark-color-border;
+            }
+        }
+    }
+}
+
 /**
  * Set widths of `col` elements using classes whose numbers represent a percentage
  * width for that column - we leave one column free of a class so that column can

@@ -81,3 +81,18 @@
         cursor: default;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    .paginator {
+        border-top-color: $dark-color-border;
+    }
+
+    .pagination li {
+        border-color: $dark-color-background;
+
+        &.current {
+            border-color: $dark-color-border;
+            background-color: $dark-color-background-box;
+        }
+    }
+}
