@@ -10,7 +10,6 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 0 2em;
-    overflow: auto; // Avoid content spillage.
 }
 
 /**
@@ -38,5 +37,6 @@
 .layout-4col-alt,
 .layout-4col-2span,
 .layout-4col-3span {
+    overflow: auto; // Avoid content spillage.
     grid-column: span 12;
 }
