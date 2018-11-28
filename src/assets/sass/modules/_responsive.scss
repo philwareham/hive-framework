@@ -5,6 +5,54 @@
 @media screen and (min-width: $breakpoint-1) {
 
     /**
+     * Grid container.
+     */
+
+    .layout-container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 0 2em;
+
+        > * {
+            overflow: auto; // Avoid content spillage.
+        }
+    }
+
+    /**
+     * Generate sizes all for grid column cells.
+     *
+     * We will then adjust them at various breakpoints.
+     *
+     * Example HTML:
+     *
+     * <div class="layout-1col"></div>
+     *
+     * <div class="layout-2col">
+     * <div class="layout-2col">
+     *
+     * <div class="layout-4col-3span"></div>
+     * <div class="layout-4col"></div>
+     */
+
+    .layout-1col,
+    .layout-2col,
+    .layout-3col,
+    .layout-3col-2span,
+    .layout-4col-alt,
+    .layout-4col-2span,
+    .layout-4col-3span {
+        grid-column: span 12;
+    }
+
+    /**
+     * Cells for 4 column layouts are generated, but as 2 columns at this width.
+     */
+
+    .layout-4col {
+        grid-column: span 6;
+    }
+
+    /**
      * Screen size-specific elements.
      */
 
@@ -14,14 +62,6 @@
 
     .screen-large {
         display: initial; // TODO: use `display: revert` when browser support is widespread.
-    }
-
-    /**
-     * Cells for 4 column layouts are generated, but as 2 columns at this width.
-     */
-
-    .layout-4col {
-        grid-column: span 6;
     }
 
 }
