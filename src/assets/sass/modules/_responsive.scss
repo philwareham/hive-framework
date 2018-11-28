@@ -175,6 +175,25 @@
 @media screen and (min-width: $breakpoint-3) {
 
     /**
+     * Adjust baseline.
+     */
+
+    html,
+    h6,
+    pre,
+    code,
+    kbd,
+    samp,
+    small,
+    figcaption,
+    tfoot,
+    .footnote,
+    .ui-helper-reset,
+    .ui-selectmenu-optgroup {
+        line-height: $line-height-desktop;
+    }
+
+    /**
      * Cells for 4 column layouts are generated.
      *
      * Example HTML:

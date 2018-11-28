@@ -7,7 +7,7 @@
 
 html {
     font-size: $base-font-size;
-    line-height: $base-line-height;
+    line-height: $line-height-mobile;
 }
 
 /**
@@ -89,7 +89,7 @@ h5 {
 h6 {
     margin: 1em 0; // 16px
     font-size: 1rem; // 16px
-    line-height: $base-line-height;
+    line-height: $line-height-mobile;
 }
 
 /**
@@ -167,7 +167,7 @@ samp {
     color: $color-text;
     font-family: $font-code;
     font-size: $code-font-size;
-    line-height: $base-line-height;
+    line-height: $line-height-mobile;
     font-feature-settings: normal; /* 1 */
 }
 
@@ -248,7 +248,7 @@ figcaption,
 tfoot,
 .footnote {
     font-size: $small-font-size;
-    line-height: $base-line-height;
+    line-height: $line-height-mobile;
 }
 
 figcaption,
