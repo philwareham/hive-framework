@@ -58,6 +58,33 @@ $colors: (
     "info-background":      $color-info-background
 );
 
+$dark-colors: (
+    "text":                 $dark-color-text,
+    "text-footnote":        $dark-color-text-footnote,
+    "gradient-from":        $color-gradient-from,
+    "gradient-to":          $color-gradient-to,
+    "gradient-border":      $color-gradient-border,
+    "border":               $dark-color-border,
+    "link":                 $dark-color-link,
+    "link-hover":           $dark-color-link-hover,
+    "link-focus":           $dark-color-link-focus,
+    "link-selecting":       $color-selecting,
+    "link-selected":        $color-selected,
+    "background":           $dark-color-background,
+    "background-box":       $dark-color-background-box,
+    "highlight":            $color-highlight,
+    "strong-highlight-box": $color-strong-highlight-box,
+    "highlight-box":        $color-highlight-box,
+    "success-text":         $dark-color-success-text,
+    "success-background":   $dark-color-success-background,
+    "warning-text":         $dark-color-warning-text,
+    "warning-background":   $dark-color-warning-background,
+    "error-text":           $dark-color-error-text,
+    "error-background":     $dark-color-error-background,
+    "info-text":            $dark-color-info-text,
+    "info-background":      $dark-color-info-background
+);
+
 .design-patterns--color {
     display: block;
     position: relative;
@@ -75,12 +102,34 @@ $colors: (
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    .design-patterns--color {
+        border-color: $dark-color-border;
+
+        &::after {
+            background-color: rgba(0, 0, 0, 0.66);
+        }
+    }
+}
+
 @each $name, $color in $colors {
     .design-patterns--color-#{$name} {
         background: $color;
 
         &::after {
             content: "#{$color}";
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    @each $name, $color in $dark-colors {
+        .design-patterns--color-#{$name} {
+            background: $color;
+
+            &::after {
+                content: "#{$color}";
+            }
         }
     }
 }
@@ -216,30 +265,4 @@ $colors: (
     .design-patterns--breakpoint-3 {
         display: block;
     }
-}
-
-/**
- * Prism language indicator (plugin).
- */
-
-div.prism-show-language {
-    position: relative;
-}
-
-div.prism-show-language > div.prism-show-language-label {
-    display: inline-block;
-    position: absolute;
-    top: -0.75em;
-    right: 0;
-    bottom: auto;
-    left: auto;
-    width: auto;
-    height: auto;
-    padding: 0 0.25em; // 3px / 12px
-    border-radius: 0 0.25em; // 3px / 12px
-    background-color: $color-text-footnote;
-    color: #ffffff;
-    font-family: $font-sans-serif;
-    font-size: $small-font-size;
-    z-index: 1;
 }
