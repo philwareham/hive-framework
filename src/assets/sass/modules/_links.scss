@@ -91,6 +91,22 @@ h6 {
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    .a--img {
+        img {
+            border-color: $dark-color-border;
+        }
+
+        &:hover img {
+            border-color: $dark-color-link-hover;
+        }
+
+        &:focus img {
+            border-color: $dark-color-link-focus;
+        }
+    }
+}
+
 /**
  * Only target phone numbers you want clickable and stop mobile phones from
  * linking other numbers that look like, but are not phone numbers - use
@@ -112,5 +128,16 @@ a[href^="sms"] {
         color: $color-link;
         cursor: pointer;
         pointer-events: auto;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    a[href^="tel"],
+    a[href^="sms"] {
+        color: $dark-color-text;
+
+        [itemprop="telephone"] & {
+            color: $dark-color-link;
+        }
     }
 }

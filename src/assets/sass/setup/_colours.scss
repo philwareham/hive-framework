@@ -21,8 +21,10 @@ $color-text-inverse:                  #ffffff !default;
 $color-text-print:                    #000000 !default; // solid black prints faster/cleaner
 
 $dark-color-text:                     #ced4da !default;
-$dark-color-text-footnote:            #9ca3aa !default;
 $dark-color-text-form:                #ffffff !default;
+$dark-color-text-form-disabled:       #aaaaaa !default;
+$dark-color-text-footnote:            #9ca3aa !default;
+$dark-color-text-inverse:             #000000 !default;
 
 // interaction colours
 
@@ -57,6 +59,7 @@ $color-gradient-border:               darken($color-gradient-from, 13.5%) !defau
 $dark-color-background:               #373e45 !default;
 $dark-color-background-box:           shade($dark-color-background, 14%) !default;
 $dark-color-background-form:          shade($dark-color-background, 28%) !default;
+$dark-color-background-form-disabled: #eeeeee !default;
 
 // accent colours
 

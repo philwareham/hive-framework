@@ -94,3 +94,9 @@ figure {
     background-color: $color-text;
     font-family: sans-serif;
 }
+
+@media (prefers-color-scheme: dark) {
+    .videoplayer {
+        background-color: $dark-color-text;
+    }
+}

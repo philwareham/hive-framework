@@ -39,16 +39,16 @@ span.button {
     appearance: none; /* 2 */
 
     &:hover {
-        @include gradient-linear(lighten($color-button-gradient-from, 2%), lighten($color-button-gradient-to, 2%));
+        @include gradient-linear(tint($color-button-gradient-from, 8%), tint($color-button-gradient-to, 8%));
 
-        border-color: darken($color-button-border, 13%);
+        border-color: shade($color-button-border, 15%);
         color: $color-text-button-hover;
         text-decoration: none;
     }
 
     &:active {
         top: 2px;
-        border-color: darken($color-button-border, 13%);
+        border-color: shade($color-button-border, 15%);
         color: $color-text-button-active;
         text-decoration: none;
         box-shadow: none;
@@ -69,13 +69,13 @@ span.button {
         &:hover {
             @include gradient-linear(tint($color-success-text, 18%), tint($color-success-text, 8%));
 
-            border-color: darken($color-success-text, 12%);
+            border-color: shade($color-success-text, 15%);
             color: $color-text-inverse;
         }
 
         &:active {
-            border-color: darken($color-success-text, 12%);
-            color: darken($color-text-inverse, 10%);
+            border-color: shade($color-success-text, 15%);
+            color: shade($color-text-inverse, 10%);
             box-shadow: none;
         }
 
@@ -94,18 +94,35 @@ span.button {
         &:hover {
             @include gradient-linear(tint($color-error-text, 18%), tint($color-error-text, 8%));
 
-            border-color: darken($color-error-text, 12%);
+            border-color: shade($color-error-text, 15%);
             color: $color-text-inverse;
         }
 
         &:active {
-            border-color: darken($color-error-text, 12%);
-            color: darken($color-text-inverse, 10%);
+            border-color: shade($color-error-text, 15%);
+            color: shade($color-text-inverse, 10%);
             box-shadow: none;
         }
 
         &:focus {
             border-color: $color-link-focus;
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"],
+    a.button,
+    span.button {
+        &:hover {
+            border-color: tint($color-button-border, 15%);
+        }
+
+        &:active {
+            border-color: tint($color-button-border, 15%);
         }
     }
 }

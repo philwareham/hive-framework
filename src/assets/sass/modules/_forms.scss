@@ -58,13 +58,12 @@ span.button {
 }
 
 @media (prefers-color-scheme: dark) {
-    button,
-    input,
+    input:not([type="button"]),
+    input:not([type="reset"]),
+    input:not([type="submit"]),
     select,
     optgroup,
-    textarea,
-    a.button,
-    span.button {
+    textarea {
         color: $dark-color-text-form;
     }
 }
@@ -99,7 +98,7 @@ textarea {
     appearance: none; /* 1 */
 
     &:hover {
-        border-color: darken($color-border, 13%);
+        border-color: shade($color-border, 15%);
     }
 
     &:focus {
@@ -150,7 +149,7 @@ textarea {
     width: 16px;
     height: 16px;
     padding: 0; /* 1 */
-    border: 1px solid darken($color-border, 13%);
+    border: 1px solid shade($color-border, 15%);
     background: $color-background-form;
     appearance: none;
     box-sizing: border-box;
@@ -236,12 +235,27 @@ textarea {
         appearance: none;
 
         &:hover {
-            border-color: darken($color-border, 13%);
+            border-color: shade($color-border, 15%);
         }
 
         &:focus {
             border-color: $color-link-focus;
             outline: 1px solid transparent; // Allows for repainting in high contrast modes.
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        [type="file"] {
+            border-color: $dark-color-border;
+            background-color: $dark-color-background-form;
+
+            &:hover {
+                border-color: tint($dark-color-border, 15%);
+            }
+
+            &:focus {
+                border-color: $dark-color-link-focus;
+            }
         }
     }
 }
