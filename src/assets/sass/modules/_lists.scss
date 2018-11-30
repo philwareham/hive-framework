@@ -83,3 +83,13 @@ dt {
         border-bottom: 1px solid $color-border;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    .article-list {
+        border-top-color: $dark-color-border;
+
+        li {
+            border-bottom-color: $dark-color-border;
+        }
+    }
+}

@@ -68,8 +68,8 @@ $dark-colors: (
     "link":                 $dark-color-link,
     "link-hover":           $dark-color-link-hover,
     "link-focus":           $dark-color-link-focus,
-    "link-selecting":       $color-selecting,
-    "link-selected":        $color-selected,
+    "link-selecting":       $dark-color-selecting,
+    "link-selected":        $dark-color-selected,
     "background":           $dark-color-background,
     "background-box":       $dark-color-background-box,
     "highlight":            $color-highlight,
@@ -141,7 +141,7 @@ $dark-colors: (
 .design-patterns--box {
     margin-top: 0;
     padding: 1em;
-    background: #aaaaaa;
+    background: rgba(0, 0, 0, 0.33);
 }
 
 /**

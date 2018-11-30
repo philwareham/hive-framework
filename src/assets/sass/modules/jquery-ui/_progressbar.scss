@@ -17,8 +17,7 @@
 .ui-progressbar {
     height: 0.75em;
     margin-bottom: 1em;
-    border-radius: 0.375em;
-    background-color: #e7e7e7;
+    background-color: shade($color-background-box, 7.5%);
     text-align: left;
     overflow: hidden;
 }
@@ -28,11 +27,11 @@
     background-color: $color-highlight;
     background-image: linear-gradient(
         135deg,
-        rgba(255, 255, 255, 0.25) 25%,
+        rgba(255, 255, 255, 0.33) 25%,
         transparent 25%,
         transparent 50%,
-        rgba(255, 255, 255, 0.25) 50%,
-        rgba(255, 255, 255, 0.25) 75%,
+        rgba(255, 255, 255, 0.33) 50%,
+        rgba(255, 255, 255, 0.33) 75%,
         transparent 75%,
         transparent
     );
@@ -54,4 +53,14 @@
 
 .ui-progressbar-indeterminate .ui-progressbar-value {
     background-color: $color-border;
+}
+
+@media (prefers-color-scheme: dark) {
+    .ui-progressbar {
+        background-color: tint($dark-color-background-box, 7.5%);
+    }
+
+    .ui-progressbar-indeterminate .ui-progressbar-value {
+        background-color: $dark-color-border;
+    }
 }

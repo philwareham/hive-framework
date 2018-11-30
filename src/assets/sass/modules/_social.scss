@@ -36,6 +36,7 @@
         background-size: 32px 32px;
 
         &:hover {
+            outline: thin solid $color-link-hover;
             filter: brightness(1.1);
         }
 
@@ -81,4 +82,10 @@
     height: 20px;
     border: 0;
     overflow: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+    .social-channels a:hover {
+        outline: thin solid $dark-color-link-hover;
+    }
 }

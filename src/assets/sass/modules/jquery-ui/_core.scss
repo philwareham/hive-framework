@@ -94,6 +94,13 @@
     background-color: $color-background;
 }
 
+@media (prefers-color-scheme: dark) {
+    .ui-widget-content {
+        border-color: $dark-color-border;
+        background-color: $dark-color-background;
+    }
+}
+
 /**
  * General style for jQuery widget headers.
  */
@@ -166,12 +173,24 @@ a.ui-state-default:focus {
     background-color: $color-selecting;
 }
 
+@media (prefers-color-scheme: dark) {
+    .ui-selecting {
+        background-color: $dark-color-selecting;
+    }
+}
+
 /**
  * Highlight colour for jQuery UI widgets currently in 'selected' state.
  */
 
 .ui-selected {
     background-color: $color-selected;
+}
+
+@media (prefers-color-scheme: dark) {
+    .ui-selected {
+        background-color: $dark-color-selected;
+    }
 }
 
 
@@ -187,6 +206,13 @@ a.ui-state-default:focus {
     background-color: $color-warning-background;
 }
 
+@media (prefers-color-scheme: dark) {
+    .ui-state-highlight {
+        border-color: $dark-color-warning-border;
+        background-color: $dark-color-warning-background;
+    }
+}
+
 /**
  * jQuery UI error cue colouring.
  */
@@ -195,6 +221,14 @@ a.ui-state-default:focus {
     border: 1px solid $color-error-border;
     background-color: $color-error-background;
     color: $color-error-text;
+}
+
+@media (prefers-color-scheme: dark) {
+    .ui-state-error {
+        border-color: $dark-color-error-border;
+        background-color: $dark-color-error-background;
+        color: $dark-color-error-text;
+    }
 }
 
 /**

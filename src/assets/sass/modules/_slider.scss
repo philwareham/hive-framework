@@ -227,6 +227,7 @@
             &:active,
             &:focus {
                 top: 0;
+                background: transparent;
 
                 &::before {
                     opacity: 1;
@@ -246,6 +247,30 @@
                     opacity: 1;
                 }
             }
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .slick-list {
+        .slick-loading & {
+            border-top-color: $dark-color-text;
+            border-bottom-color: $dark-color-text;
+        }
+    }
+
+    .slick-prev,
+    .slick-next {
+        &::before {
+            color: $dark-color-text;
+        }
+    }
+
+    .slick-dots li button {
+
+
+        &::before {
+            color: $dark-color-text;
         }
     }
 }

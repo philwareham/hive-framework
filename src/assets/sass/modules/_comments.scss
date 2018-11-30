@@ -28,6 +28,12 @@
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    .comments {
+        background: $dark-color-background-box;
+    }
+}
+
 /**
  * Additional styling for article author's comments.
  *
@@ -37,7 +43,13 @@
  */
 
 .comments-author {
-    background: darken($color-background-box, 3%);
+    background: shade($color-background-box, 5%);
+}
+
+@media (prefers-color-scheme: dark) {
+    .comments-author {
+        background: tint($dark-color-background-box, 5%);
+    }
 }
 
 /**
@@ -65,5 +77,10 @@
 
 .comments_error {
     border-color: $color-error-text;
-    box-shadow: 0 0 4px 2px $color-error-text;
+}
+
+@media (prefers-color-scheme: dark) {
+    .comments_error {
+        border-color: $dark-color-error-text;
+    }
 }

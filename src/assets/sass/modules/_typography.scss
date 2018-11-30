@@ -147,6 +147,7 @@ var {
 @media (prefers-color-scheme: dark) {
     mark,
     var {
+        background: $dark-color-selected;
         color: $dark-color-text;
     }
 }

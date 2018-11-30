@@ -33,10 +33,32 @@ summary {
 
     &:hover,
     &:active {
-        outline: 1px solid darken($color-border, 13%);
+        outline: 1px solid shade($color-border, 15%);
     }
 
     &:focus {
         outline: 1px solid $color-link-focus;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    details {
+        &[open] {
+            outline: 1px solid $dark-color-border;
+        }
+    }
+
+    summary {
+        outline: 1px solid $dark-color-border;
+        background-color: $dark-color-background-box;
+
+        &:hover,
+        &:active {
+            outline: 1px solid tint($dark-color-border, 15%);
+        }
+
+        &:focus {
+            outline: 1px solid $dark-color-link-focus;
+        }
     }
 }

@@ -34,3 +34,9 @@
 .ui-sortable-placeholder {
     border: 1px dotted $color-link;
 }
+
+@media (prefers-color-scheme: dark) {
+    .ui-sortable-placeholder {
+        border-color: $dark-color-link;
+    }
+}

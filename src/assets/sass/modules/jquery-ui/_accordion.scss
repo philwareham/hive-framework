@@ -60,3 +60,9 @@
         padding-left: 2em;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    .ui-accordion .ui-accordion-header a {
+        color: $dark-color-text;
+    }
+}
