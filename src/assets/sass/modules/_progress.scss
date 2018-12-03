@@ -148,7 +148,7 @@ progress[value="1"]::-ms-fill {
     // WebKit/Blink.
 
     progress::-webkit-progress-bar {
-        background-color: tint($dark-color-background-box, 7.5%);
+        background-color: $dark-color-background-box;
     }
 
     progress:indeterminate::-webkit-progress-bar {

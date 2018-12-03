@@ -51,13 +51,13 @@ meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
 @media (prefers-color-scheme: dark) {
     meter {
         border-color: 1px solid $dark-color-border;
-        background: tint($dark-color-background-box, 7.5%);
+        background: $dark-color-background-box;
     }
 
     // WebKit/Blink/EdgeHTML.
 
     meter::-webkit-meter-bar {
-        background: tint($dark-color-background-box, 7.5%);
+        background: $dark-color-background-box;
     }
 
     meter::-webkit-meter-optimum-value {

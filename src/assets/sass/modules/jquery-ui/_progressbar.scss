@@ -57,7 +57,7 @@
 
 @media (prefers-color-scheme: dark) {
     .ui-progressbar {
-        background-color: tint($dark-color-background-box, 7.5%);
+        background-color: $dark-color-background-box;
     }
 
     .ui-progressbar-indeterminate .ui-progressbar-value {
