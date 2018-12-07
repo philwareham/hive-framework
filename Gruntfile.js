@@ -126,7 +126,7 @@ module.exports = function (grunt)
                     define: true,
                     module: true,
                     require: true,
-                    requirejs: true,
+                    requirejs: true, // TODO: Remove as part of issue #60.
                     autosize: true,
                     Prism: true
                 },
@@ -222,7 +222,6 @@ module.exports = function (grunt)
                         ],
                         '<%= paths.dest.js %>jquery.js': ['node_modules/jquery/dist/jquery.js'],
                         '<%= paths.dest.js %>jqueryui.js': ['node_modules/jquery-ui-dist/jquery-ui.js'],
-                        '<%= paths.dest.js %>require.js': ['node_modules/requirejs/require.js'],
                         '<%= paths.dest.js %>slick.js': ['node_modules/slick-carousel/slick/slick.js']
                     }
                 ]

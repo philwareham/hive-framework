@@ -20,7 +20,6 @@
         var code = $('code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'),
             fields = $('textarea'),
             navmenu = document.getElementById('site-navigation'),
-            player = $('.videoplayer'),
             slider = $('.slider');
 
         // Syntax highlighting, via 'Prism'.

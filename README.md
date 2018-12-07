@@ -11,7 +11,6 @@ A website development framework built with Grunt and Sass, and incorporating jQu
 
 ## Supported web browsers
 
-* Internet Explorer 11.
 * Chrome, Edge, Firefox, Safari and Opera the last two recent stable releases.
 * Firefox ESR latest major point release.
 

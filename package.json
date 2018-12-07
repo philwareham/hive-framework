@@ -50,7 +50,7 @@
     "autosize": "4.0.2",
     "jquery": "3.3.1",
     "jquery-ui-dist": "1.12.1",
-    "requirejs": "2.3.5",
+    "prismjs": "1.15.0",
     "slick-carousel": "1.8.1"
   },
   "browserslist": [
