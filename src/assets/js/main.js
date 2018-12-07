@@ -7,10 +7,6 @@
     document.documentElement.className = 'js';
 
     requirejs.config({
-        paths:
-        {
-            'flowplayer': 'https://releases.flowplayer.org/7.2.7/flowplayer.min'
-        },
         shim:
         {
             'jqueryui': ['jquery']
@@ -59,18 +55,6 @@
                 e.preventDefault();
                 navtoggle.classList.toggle('site-navigation-toggle-active');
                 navmenu.classList.toggle('site-navigation-open');
-            });
-        }
-
-        // HTML5 videos (with Flash fallback), via 'Flowplayer'.
-        // More info - https://github.com/flowplayer/flowplayer.
-
-        if (player.length) {
-            require(['jquery', 'flowplayer'], function ()
-            {
-                player.flowplayer({
-                    splash: true
-                });
             });
         }
 

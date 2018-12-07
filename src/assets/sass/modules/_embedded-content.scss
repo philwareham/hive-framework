@@ -75,28 +75,3 @@ img {
 figure {
     margin: 1em 0;
 }
-
-/**
- * Reset fonts and sets background colour for Flowplayer video player.
- *
- * This rule can be removed if you are not using Flowplayer.
- *
- * Example HTML:
- *
- * <div class="videoplayer">
- *     <video>
- *         <source>
- *     </video>
- * </div>
- */
-
-.videoplayer {
-    background-color: $color-text;
-    font-family: sans-serif;
-}
-
-@media (prefers-color-scheme: dark) {
-    .videoplayer {
-        background-color: $dark-color-text;
-    }
-}

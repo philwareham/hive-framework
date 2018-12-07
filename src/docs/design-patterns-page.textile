@@ -132,10 +132,10 @@ notextile. <svg width="100px" height="100px">
 
 h3. Videos
 
-notextile. <div class="videoplayer">
-<video poster="/mockups/img/flowplayer-poster.jpg">
-<source type="video/mp4"  src="http://stream.flowplayer.org/bauhaus/624x260.mp4">
-<source type="video/webm" src="http://stream.flowplayer.org/bauhaus/624x260.webm">
+notextile. <div>
+<video poster="/mockups/img/video-poster.jpg">
+<source type="video/mp4" src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4">
+<source type="video/webm" src="http://clips.vorwaerts-gmbh.de/VfE.webm">
 </video>
 </div>
 

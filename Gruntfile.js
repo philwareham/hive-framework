@@ -20,9 +20,6 @@ module.exports = function (grunt)
                 js: 'src/assets/js/',
                 templates: 'src/templates/'
             },
-            tmp: {
-                js: 'tmp/assets/js/'
-            },
             dest: {
                 css: 'public/assets/css/',
                 fonts: 'public/assets/fonts/',
