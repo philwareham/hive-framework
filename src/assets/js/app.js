@@ -8,7 +8,8 @@ require('prismjs/components/prism-markup-templating');
 require('prismjs/components/prism-php');
 require('prismjs/components/prism-scss');
 
-//autosize/dist/autosize.js
+import autosize from 'autosize';
+
 //slick-carousel/slick/slick.js
 
 (function ()
@@ -23,8 +24,8 @@ require('prismjs/components/prism-scss');
 
     var code = document.querySelectorAll('code[class*="language-"], [class*="language-"] code'),
         fields = $('textarea'),
-        navmenu = document.getElementById('site-navigation'),
-        slider = $('.slider');
+        navmenu = document.getElementById('site-navigation');
+        //slider = $('.slider');
 
     // Syntax highlighting, via 'Prism'.
     // Applies syntax highlighting to `code` HTML elements.
@@ -34,7 +35,13 @@ require('prismjs/components/prism-scss');
         Prism.highlightAll();
     }
 
-    // TODO AUTOSIZE
+    // Auto-growing textareas, via 'Autosize'.
+    // Allows dynamic resizing of textarea height, so that it grows as based
+    // on visitor input. More info - https://github.com/jackmoore/autosize.
+
+    if (fields.length) {
+        autosize(fields);
+    }
 
     // Responsive navigation menu.
 
