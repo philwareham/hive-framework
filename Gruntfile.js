@@ -82,24 +82,6 @@ module.exports = function (grunt)
                     }
                 ]
             },
-            // Copy JavaScript files from various sources.
-            js: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: 'src/',
-                        src: '*',
-                        dest: 'public/',
-                        filter: 'isFile'
-                    },
-                    {
-                        expand: true,
-                        cwd: '<%= paths.src.js %>libs/',
-                        src: '**',
-                        dest: '<%= paths.dest.js %>'
-                    }
-                ]
-            },
             // Copy Slick icon font to CSS folder (because Slick's CSS expects relative path to this).
             css: {
                 files: [
@@ -204,25 +186,12 @@ module.exports = function (grunt)
             target: ['<%= paths.src.sass %>**/*.scss']
         },
 
-        // Uglify and copy JavaScript files from `node_modules`, and also `main.js`, to `public/assets/js/`.
+        // Minify `app.js`.
         uglify: {
             dist: {
                 files: [
                     {
-                        '<%= paths.dest.js %>main.js': ['<%= paths.dest.js %>main.js'],
-                        '<%= paths.dest.js %>autosize.js': ['node_modules/autosize/dist/autosize.js'],
-                        '<%= paths.dest.js %>prism.js': [
-                            'node_modules/prismjs/prism.js',
-                            // Add any plugins
-                            'node_modules/prismjs/plugins/line-numbers/prism-line-numbers.js',
-                            // Add any additional languages
-                            'node_modules/prismjs/components/prism-markup-templating.js',
-                            'node_modules/prismjs/components/prism-php.js',
-                            'node_modules/prismjs/components/prism-scss.js'
-                        ],
-                        '<%= paths.dest.js %>jquery.js': ['node_modules/jquery/dist/jquery.js'],
-                        '<%= paths.dest.js %>jqueryui.js': ['node_modules/jquery-ui-dist/jquery-ui.js'],
-                        '<%= paths.dest.js %>slick.js': ['node_modules/slick-carousel/slick/slick.js']
+                        '<%= paths.dest.js %>app.js': ['<%= paths.dest.js %>app.js']
                     }
                 ]
             }
@@ -236,7 +205,11 @@ module.exports = function (grunt)
             },
             js: {
                 files: '<%= paths.src.js %>**',
-                tasks: ['jshint', 'uglify', 'copy:js']
+                tasks: [
+                    'jshint',
+                    'browserify',
+                    'uglify'
+                ]
             },
             templates: {
                 files: '<%= paths.src.templates %>**',
@@ -247,7 +220,7 @@ module.exports = function (grunt)
     });
 
     // Register tasks.
-    grunt.registerTask('build', ['clean', 'concurrent', 'uglify', 'copy:js']);
+    grunt.registerTask('build', ['clean', 'concurrent', 'uglify']);
     grunt.registerTask('css', ['sasslint', 'sass', 'postcss', 'copy:css']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('travis', ['build']);
