@@ -202,6 +202,8 @@ module.exports = function (grunt)
                             'node_modules/prismjs/components/prism-php.js',
                             'node_modules/prismjs/components/prism-scss.js'
                         ],
+                        '<%= paths.dest.js %>jquery.js': ['node_modules/jquery/dist/jquery.js'],
+                        '<%= paths.dest.js %>jqueryui.js': ['node_modules/jquery-ui-dist/jquery-ui.js'],
                         '<%= paths.dest.js %>require.js': ['node_modules/requirejs/require.js'],
                         '<%= paths.dest.js %>slick.js': ['node_modules/slick-carousel/slick/slick.js']
                     }

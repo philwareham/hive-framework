@@ -46,6 +46,7 @@
     "autosize": "4.0.2",
     "flowplayer": "7.2.7",
     "jquery": "3.3.1",
+    "jquery-ui-dist": "1.12.1",
     "prismjs": "1.15.0",
     "requirejs": "2.3.5",
     "slick-carousel": "1.8.1"
