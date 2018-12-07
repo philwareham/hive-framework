@@ -11,6 +11,5 @@
         </small>
     </p>
 </footer>
-
-<script data-main="<txp:site_url />assets/js/main.@@timestamp.js" src="<txp:site_url />assets/js/require.@@timestamp.js"></script>
+<script async src="<txp:site_url />assets/js/app.@@timestamp.js"></script>
 <noscript>JavaScript is currently disabled in your browser - please activate it for the best experience.</noscript>
