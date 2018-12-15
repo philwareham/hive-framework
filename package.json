@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.2.2",
-    "@babel/preset-env": "7.1.6",
+    "@babel/preset-env": "7.2.0",
     "apache-server-configs": "3.0.0",
     "autoprefixer": "9.4.2",
     "babelify": "10.0.0",
