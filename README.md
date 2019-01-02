@@ -66,3 +66,5 @@ Optional [Textpattern CMS](https://textpattern.com/) theme 'forms' and 'pages' t
 ## License
 
 Licensed under MIT license except Textpattern templates, which are licensed under GPLv2 license.
+
+Some demo site content is licensed under Creative Commons BY-NC 3.0 (audio: "Moonlight Reprise" from "Irsen's Tale" by Kai Engel) and BY 3.0 (video: "Big Buck Bunny").
