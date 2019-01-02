@@ -40,7 +40,13 @@
     @import "modules/code-highlighting";
     @import "modules/pagination";
     @import "modules/breadcrumbs";
-    @import "modules/slider";
+    //@import "modules/slider";
+
+    // Required Core Stylesheet
+    @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+    // Optional Theme Stylesheet
+    @import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
     @import "modules/social";
     @import "modules/misc";
     @import "modules/comments";

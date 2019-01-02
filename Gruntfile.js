@@ -103,12 +103,12 @@ module.exports = function (grunt)
                 esversion: 6,
                 forin: true,
                 globals: {
+                    $: true,
                     jQuery: true,
                     Zepto: true,
                     define: true,
                     module: true,
                     require: true,
-                    requirejs: true, // TODO: Remove as part of issue #60.
                     autosize: true,
                     Prism: true
                 },

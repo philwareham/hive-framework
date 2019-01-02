@@ -1,6 +1,7 @@
-var $ = require('jquery/dist/jquery');
-
-require('jquery-ui-dist/jquery-ui');
+import {$,jQuery} from 'jquery';
+// export for others scripts to use
+window.$ = $;
+window.jQuery = jQuery;
 
 import Prism from 'prismjs';
 require('prismjs/plugins/line-numbers/prism-line-numbers');
@@ -10,7 +11,7 @@ require('prismjs/components/prism-scss');
 
 import autosize from 'autosize';
 
-//slick-carousel/slick/slick.js
+import Glide from '@glidejs/glide';
 
 (function ()
 {
@@ -23,9 +24,9 @@ import autosize from 'autosize';
     // Load objects as variables.
 
     var code = document.querySelectorAll('code[class*="language-"], [class*="language-"] code'),
-        fields = $('textarea'),
-        navmenu = document.getElementById('site-navigation');
-        //slider = $('.slider');
+        fields = document.querySelectorAll('textarea'),
+        navmenu = document.getElementById('site-navigation'),
+        slider = document.querySelectorAll('.glide');
 
     // Syntax highlighting, via 'Prism'.
     // Applies syntax highlighting to `code` HTML elements.
@@ -56,6 +57,11 @@ import autosize from 'autosize';
         });
     }
 
-    // TODO SLICK
+    // Slider, via 'Glide'.
+    // More info - https://github.com/glidejs/glide.
+
+    if (slider.length) {
+        new Glide('.glide').mount();
+    }
 
 })();

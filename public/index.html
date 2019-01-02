@@ -6,7 +6,7 @@
     <title>Hive Framework | Theming design patterns documentation.</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <meta name="robots" content="index, follow">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <!-- ================================ The description should optimally be around 115 characters >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
     <meta name="description" content="Article containing examples of various inline/block elements that should be considered and styled within any theme.">
 
@@ -349,17 +349,24 @@
 
                         <section class="section" id="section-slider">
                             <h2>Image slider/carousel</h2>
-                            <p>Via <a href="https://kenwheeler.github.io/slick/" rel="external" title="Go to the Slick website">Slick</a>.</p>
+                            <p>Via <a href="https://glidejs.com" rel="external" title="Go to the Glide website">Glide</a>.</p>
 
-                            <div class="slider">
-                                <div>
-                                    <img src="mockups/img/slide01.jpg" alt="Slide 01" itemprop="image">
+                            <div class="glide">
+                                <div class="glide__track" data-glide-el="track">
+                                    <ul class="glide__slides">
+                                        <li class="glide__slide"><img src="mockups/img/slide01.jpg" alt="Slide 01" itemprop="image"></li>
+                                        <li class="glide__slide"><img src="mockups/img/slide02.jpg" alt="Slide 02" itemprop="image"></li>
+                                        <li class="glide__slide"><img src="mockups/img/slide03.jpg" alt="Slide 03" itemprop="image"></li>
+                                    </ul>
                                 </div>
-                                <div>
-                                    <img src="mockups/img/slide02.jpg" alt="Slide 02" itemprop="image">
+                                <div class="glide__arrows" data-glide-el="controls">
+                                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
                                 </div>
-                                <div>
-                                    <img src="mockups/img/slide03.jpg" alt="Slide 03" itemprop="image">
+                                <div class="glide__bullets" data-glide-el="controls[nav]">
+                                    <button class="glide__bullet" data-glide-dir="=0"></button>
+                                    <button class="glide__bullet" data-glide-dir="=1"></button>
+                                    <button class="glide__bullet" data-glide-dir="=2"></button>
                                 </div>
                             </div>
 
@@ -1192,62 +1199,62 @@
 
                                 <div class="layout-container">
 
-                                    <div class="layout-4col">
+                                    <p class="layout-4col">
                                         <label for="color">Colour</label><br>
                                         <input type="color" id="color" name="color" value="#cc0000">
-                                    </div>
+                                    </p>
 
-                                    <div class="layout-4col">
+                                    <p class="layout-4col">
                                         <label for="date">Date</label><br>
                                         <input id="date" name="date" type="date">
-                                    </div>
+                                    </p>
 
-                                    <div class="layout-4col">
+                                    <p class="layout-4col">
                                         <label for="datetime-local">Datetime local</label><br>
                                         <input id="datetime-local" name="datetime-local" type="datetime-local">
-                                    </div>
+                                    </p>
 
-                                    <div class="layout-4col">
+                                    <p class="layout-4col">
                                         <label for="email">Email</label><br>
                                         <input id="email" name="email" type="email" placeholder="name@example.com">
-                                    </div>
+                                    </p>
 
-                                    <div class="layout-4col">
+                                    <p class="layout-4col">
                                         <label for="month">Month</label><br>
                                         <input id="month" name="month" type="month">
-                                    </div>
+                                    </p>
 
-                                    <div class="layout-4col">
+                                    <p class="layout-4col">
                                         <label for="number">Number</label><br>
                                         <input id="number" name="number" type="number" min="0" max="999" step="1">
-                                    </div>
+                                    </p>
 
-                                    <div class="layout-4col">
+                                    <p class="layout-4col">
                                         <label for="password">Password</label><br>
                                         <input id="password" name="password" type="password">
-                                    </div>
+                                    </p>
 
-                                    <div class="layout-4col">
+                                    <p class="layout-4col">
                                         <label for="range">Range</label><br>
                                         <input id="range" name="range" type="range">
-                                    </div>
+                                    </p>
 
-                                    <div class="layout-4col">
+                                    <p class="layout-4col">
                                         <label for="search">Search</label><br>
                                         <input id="search" name="search" type="search">
-                                    </div>
+                                    </p>
 
-                                    <div class="layout-4col">
+                                    <p class="layout-4col">
                                         <label for="tel">Tel (phone)</label><br>
                                         <input id="tel" name="tel" type="tel">
-                                    </div>
+                                    </p>
 
-                                    <div class="layout-4col">
+                                    <p class="layout-4col">
                                         <label for="text">Text <abbr class="required" title="Required">*</abbr></label><br>
                                         <input id="text" name="text" type="text">
-                                    </div>
+                                    </p>
 
-                                    <div class="layout-4col">
+                                    <p class="layout-4col">
                                         <label for="text-data">Text with data list</label><br>
                                         <input id="text-data" name="text-data" type="text" list="text-data-list">
                                         <datalist id="text-data-list">
@@ -1257,22 +1264,22 @@
                                             <option value="Andorra">
                                             <option value="Angola">
                                         </datalist>
-                                    </div>
+                                    </p>
 
-                                    <div class="layout-4col">
+                                    <p class="layout-4col">
                                         <label for="time">Time</label><br>
                                         <input id="time" name="time" type="time">
-                                    </div>
+                                    </p>
 
-                                    <div class="layout-4col">
+                                    <p class="layout-4col">
                                         <label for="url">URL</label><br>
                                         <input id="url" name="url" type="url">
-                                    </div>
+                                    </p>
 
-                                    <div class="layout-4col">
+                                    <p class="layout-4col">
                                         <label for="url">Week</label><br>
                                         <input id="week" name="week" type="week">
-                                    </div>
+                                    </p>
 
                                 </div>
 
@@ -2084,7 +2091,7 @@
     <noscript>JavaScript is currently disabled in your browser - please activate it for the best experience.</noscript>
 
 <!-- Examples of jQuery UI -->
-    <script src="mockups/jquery-ui-testing.js"></script>
+    <!-- <script src="mockups/jquery-ui-testing.js"></script> -->
 
 </body>
 </html>
