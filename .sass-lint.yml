@@ -38,7 +38,18 @@ rules:
       convention: hyphenatedlowercase
       ignore: [
         'error_message',
-        'comments_error'
+        'comments_error',
+        'glide__track',
+        'glide__slides',
+        'glide__slide',
+        'glide__arrow',
+        'glide__arrows',
+        'glide__arrow--disabled',
+        'glide__arrow--left',
+        'glide__arrow--right',
+        'glide__bullets',
+        'glide__bullet',
+        'glide__bullet--active'
       ]
 
   # Enforce whether or not `@import` paths should have leading underscores and/or filename extensions.

@@ -61,7 +61,9 @@ import Glide from '@glidejs/glide';
     // More info - https://github.com/glidejs/glide.
 
     if (slider.length) {
-        new Glide('.glide').mount();
+        new Glide('.glide', {
+            type: 'carousel'
+        }).mount();
     }
 
 })();
