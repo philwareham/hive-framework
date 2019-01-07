@@ -85,49 +85,56 @@
 .glide__arrow {
     position: absolute;
     top: 50%;
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     padding: 0;
     transform: translate(0, -50%);
     border: 0;
-    background: transparent;
+    background: $color-text;
     color: transparent;
     font-size: 0;
     line-height: 0;
     box-shadow: none;
+    opacity: 0.75;
 
     &::before {
         position: absolute;
         top: 0;
         left: 0;
-        width: 20px;
-        height: 20px;
-        background-color: $color-text;
+        width: 24px;
+        height: 24px;
+        background-size: 24px 24px;
         content: "";
-        opacity: 0.75;
     }
 
     &:hover,
     &:active,
     &:focus {
         top: 50%;
-        background: transparent;
-
-        &::before {
-            opacity: 1;
-        }
+        background: $color-text;
+        opacity: 1;
     }
 
     &:focus {
         outline: 1px solid $color-link-focus;
     }
 
-    &--left::before {
+    &--left {
         left: -24px;
+        border-radius: 50% 0 0 50%;
+
+        &::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpolygon fill='%23fff' points='14,20 16,18 10,12 16,6 14,4 6,12 14,20'/%3E%3C/svg%3E");
+        }
     }
 
-    &--right::before {
+    &--right {
         right: -24px;
+        border-radius: 0 50% 50% 0;
+
+        &::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpolygon fill='%23fff' points='10,20 8,18 14,12 8,6 10,4 18,12'/%3E%3C/svg%3E");
+        }
     }
 
     &--disabled::before {
@@ -169,7 +176,7 @@
         left: 0;
         width: 12px;
         height: 12px;
-        border: 2px solid #ffffff;
+        border: 2px solid $color-background;
         border-radius: 50%;
         background-color: $color-text;
         text-align: center;
@@ -194,5 +201,40 @@
 
     &--active::before {
         opacity: 0.75;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .glide__arrow {
+        background: $dark-color-text;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background: $dark-color-text;
+        }
+
+        &:focus {
+            outline: 1px solid $dark-color-link-focus;
+        }
+
+        &--left::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpolygon fill='%23373e45' points='14,20 16,18 10,12 16,6 14,4 6,12 14,20'/%3E%3C/svg%3E");
+        }
+
+        &--right::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpolygon fill='%23373e45' points='10,20 8,18 14,12 8,6 10,4 18,12'/%3E%3C/svg%3E");
+        }
+    }
+
+    .glide__bullet {
+        &::before {
+            border: 2px solid $dark-color-background;
+            background-color: $dark-color-text;
+        }
+
+        &:focus {
+            outline: 1px solid $dark-color-link-focus;
+        }
     }
 }
