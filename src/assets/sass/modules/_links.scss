@@ -53,12 +53,31 @@ h4,
 h5,
 h6 {
     a {
-        color: $color-text;
+        color: $color-text-heading;
 
         &:hover,
         &:active {
-            color: $color-text;
-            text-decoration-color: rgba($color-text, 0.5);  /* 1 */
+            color: $color-text-heading;
+            text-decoration-color: rgba($color-text-heading, 0.5);  /* 1 */
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        a {
+            color: $dark-color-text-heading;
+
+            &:hover,
+            &:active {
+                color: $dark-color-text-heading;
+                text-decoration-color: rgba($dark-color-text-heading, 0.5);  /* 1 */
+            }
         }
     }
 }

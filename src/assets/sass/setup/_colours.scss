@@ -11,6 +11,7 @@
 // text colours
 
 $color-text:                          #333333 !default;
+$color-text-heading:                  #000000 !default;
 $color-text-button:                   $color-text !default;
 $color-text-button-hover:             $color-text-button !default;
 $color-text-button-active:            darken($color-text-button, 10%) !default;
