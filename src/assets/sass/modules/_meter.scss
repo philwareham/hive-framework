@@ -50,7 +50,7 @@ meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
 
 @media (prefers-color-scheme: dark) {
     meter {
-        border-color: 1px solid $dark-color-border;
+        border-color: $dark-color-border;
         background: $dark-color-background-box;
     }
 
