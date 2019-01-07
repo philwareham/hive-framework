@@ -144,13 +144,6 @@ pre.line-numbers > code {
 }
 
 @media (prefers-color-scheme: dark) {
-    token.comment,
-    .token.prolog,
-    .token.doctype,
-    .token.cdata {
-        color: #708090;
-    }
-
     .token.punctuation {
         color: #ffffff;
     }
@@ -186,16 +179,6 @@ pre.line-numbers > code {
     .token.attr-value,
     .token.keyword {
         color: $dark-color-info-text;
-    }
-
-    .token.function {
-        color: #dd4a68;
-    }
-
-    .token.regex,
-    .token.important,
-    .token.variable {
-        color: #ee9900;
     }
 
     .line-numbers .line-numbers-rows {
