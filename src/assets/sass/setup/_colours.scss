@@ -71,6 +71,10 @@ $color-highlight:                     #ffda44 !default;
 $color-strong-highlight-box:          tint($color-highlight, 36%) !default;
 $color-highlight-box:                 tint($color-highlight, 84%) !default;
 
+$dark-color-highlight:                #ffda44 !default;
+$dark-color-strong-highlight-box:     #ac9840 !default;
+$dark-color-highlight-box:            #59563d !default;
+
 // button colours
 
 $color-button-gradient-from:          $color-gradient-from !default;
