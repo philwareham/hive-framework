@@ -164,7 +164,7 @@ textarea {
     }
 
     &:hover {
-        border-color: darken($color-border, 26%);
+        border-color: shade($color-border, 30%);
         cursor: pointer;
     }
 
@@ -178,9 +178,23 @@ textarea {
     }
 }
 
-[type="checkbox"]:not(.ui-checkboxradio) {
-    border-radius: 0.2em;
+@media (prefers-color-scheme: dark) {
+    [type="checkbox"]:not(.ui-checkboxradio),
+    [type="radio"]:not(.ui-checkboxradio) {
+        border-color: tint($dark-color-border, 15%);
+        background-color: $dark-color-background-form;
 
+        &:hover {
+            border-color: tint($dark-color-border, 30%);
+        }
+
+        &:focus {
+            border-color: $dark-color-link-focus;
+        }
+    }
+}
+
+[type="checkbox"]:not(.ui-checkboxradio) {
     &:checked {
         border: 0;
         background: $color-text-footnote url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
@@ -200,6 +214,27 @@ textarea {
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    [type="checkbox"]:not(.ui-checkboxradio) {
+        &:checked {
+            background: $dark-color-text url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+
+            &:hover,
+            &:active {
+                background-color: $dark-color-text-heading;
+            }
+
+            &:focus {
+                background-color: $dark-color-link-focus;
+            }
+        }
+
+        &[disabled]:checked {
+            background: $color-border-light url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E") !important;
+        }
+    }
+}
+
 [type="radio"]:not(.ui-checkboxradio) {
     border-radius: 100%;
 
@@ -213,6 +248,21 @@ textarea {
 
         &:focus {
             border-color: $color-link-focus;
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    [type="radio"]:not(.ui-checkboxradio):checked {
+        border-color: $dark-color-text;
+
+        &:hover,
+        &:active {
+            border-color: $dark-color-text-heading;
+        }
+
+        &:focus {
+            border-color: $dark-color-link-focus;
         }
     }
 }
