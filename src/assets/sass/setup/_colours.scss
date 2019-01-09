@@ -19,13 +19,17 @@ $color-text-form:                     #000000 !default;
 $color-text-form-disabled:            #aaaaaa !default;
 $color-text-footnote:                 #585858 !default;
 $color-text-inverse:                  #ffffff !default;
+
 $color-text-print:                    #000000 !default; // solid black prints faster/cleaner
 
 $dark-color-text:                     #ced4da !default;
 $dark-color-text-heading:             #ffffff !default;
+$dark-color-text-button:              $dark-color-text !default;
+$dark-color-text-button-hover:        $dark-color-text-button !default;
+$dark-color-text-button-active:       tint($dark-color-text-button, 15%) !default;
 $dark-color-text-form:                #ffffff !default;
-$dark-color-text-form-disabled:       #aaaaaa !default;
-$dark-color-text-footnote:            #9ca3aa !default; // TODO
+$dark-color-text-form-disabled:       #aaaaaa !default; // TODO
+$dark-color-text-footnote:            #9ca3aa !default;
 $dark-color-text-inverse:             #000000 !default; // TODO
 
 // interaction colours
@@ -64,6 +68,9 @@ $dark-color-background:               #373e45 !default;
 $dark-color-background-box:           shade($dark-color-background, 14%) !default;
 $dark-color-background-form:          shade($dark-color-background, 28%) !default;
 $dark-color-background-form-disabled: #eeeeee !default; // TODO
+$dark-color-gradient-from:            #eeeeee !default; // TODO
+$dark-color-gradient-to:              darken($color-gradient-from, 6.5%) !default; // TODO
+$dark-color-gradient-border:          darken($color-gradient-from, 13.5%) !default; // TODO
 
 // accent colours
 
@@ -84,6 +91,14 @@ $color-button-shadow:                 darken($color-button-border, 20%) !default
 $color-button-selected-gradient-from: tint($color-link-hover, 90%) !default;
 $color-button-selected-gradient-to:   tint($color-link-hover, 80%) !default;
 $color-button-selected-border:        darken($color-button-selected-gradient-to, 10.5%) !default;
+
+$dark-color-button-gradient-from:          $color-gradient-from !default; // TODO
+$dark-color-button-gradient-to:            darken($color-button-gradient-from, 6%) !default; // TODO
+$dark-color-button-border:                 $color-button-gradient-to !default; // TODO
+$dark-color-button-shadow:                 darken($color-button-border, 20%) !default; // TODO
+$dark-color-button-selected-gradient-from: tint($color-link-hover, 90%) !default; // TODO
+$dark-color-button-selected-gradient-to:   tint($color-link-hover, 80%) !default; // TODO
+$dark-color-button-selected-border:        darken($color-button-selected-gradient-to, 10.5%) !default; // TODO
 
 // alert colours
 
