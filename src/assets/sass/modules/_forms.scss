@@ -744,6 +744,12 @@ textarea {
     opacity: 1;
 }
 
+@media (prefers-color-scheme: dark) {
+    ::placeholder {
+        color: $dark-color-text-form-placeholder;
+    }
+}
+
 /**
  * Styling for required field indicators.
  *
