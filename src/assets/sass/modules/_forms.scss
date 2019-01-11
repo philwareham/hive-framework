@@ -736,6 +736,15 @@ textarea {
 }
 
 /**
+ * Normalize form placeholder style across browsers.
+ */
+
+::placeholder {
+    color: $color-text-form-placeholder;
+    opacity: 1;
+}
+
+/**
  * Styling for required field indicators.
  *
  * Example HTML:

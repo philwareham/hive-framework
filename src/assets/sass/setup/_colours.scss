@@ -16,6 +16,7 @@ $color-text-button:                        #ff0000 !default;
 $color-text-button-hover:                  $color-text-button !default;
 $color-text-button-active:                 shade($color-text-button, 14%) !default;
 $color-text-form:                          #000000 !default;
+$color-text-form-placeholder:              #999999 !default;
 $color-text-form-disabled:                 #aaaaaa !default;
 $color-text-footnote:                      #585858 !default;
 $color-text-inverse:                       #ffffff !default;
@@ -28,9 +29,10 @@ $dark-color-text-button:                   $dark-color-text !default;
 $dark-color-text-button-hover:             $dark-color-text-button !default;
 $dark-color-text-button-active:            tint($dark-color-text-button, 14%) !default;
 $dark-color-text-form:                     #ffffff !default;
+$color-text-form-placeholder:              #000000 !default; // TODO
 $dark-color-text-form-disabled:            #aaaaaa !default; // TODO
 $dark-color-text-footnote:                 #9ca3aa !default;
-$dark-color-text-inverse:                  #000000 !default; // TODO
+$dark-color-text-inverse:                  #373e45 !default;
 
 // interaction colours
 
