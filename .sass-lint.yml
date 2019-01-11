@@ -182,6 +182,7 @@ rules:
   no-misspelled-properties:
     - 1
     - extra-properties:
+        - overscroll-behavior
         - text-decoration-skip
         - touch-callout
 
