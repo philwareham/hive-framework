@@ -12,9 +12,9 @@
 
 $color-text:                               #333333 !default;
 $color-text-heading:                       #000000 !default;
-$color-text-button:                        $color-text !default;
+$color-text-button:                        #ff0000 !default;
 $color-text-button-hover:                  $color-text-button !default;
-$color-text-button-active:                 darken($color-text-button, 10%) !default;
+$color-text-button-active:                 shade($color-text-button, 14%) !default;
 $color-text-form:                          #000000 !default;
 $color-text-form-disabled:                 #aaaaaa !default;
 $color-text-footnote:                      #585858 !default;
@@ -26,7 +26,7 @@ $dark-color-text:                          #ced4da !default;
 $dark-color-text-heading:                  #ffffff !default;
 $dark-color-text-button:                   $dark-color-text !default;
 $dark-color-text-button-hover:             $dark-color-text-button !default;
-$dark-color-text-button-active:            tint($dark-color-text-button, 15%) !default;
+$dark-color-text-button-active:            tint($dark-color-text-button, 14%) !default;
 $dark-color-text-form:                     #ffffff !default;
 $dark-color-text-form-disabled:            #aaaaaa !default; // TODO
 $dark-color-text-footnote:                 #9ca3aa !default;
@@ -95,7 +95,7 @@ $color-button-selected-border:             darken($color-button-selected-gradien
 $dark-color-button-gradient-from:          $color-gradient-from !default; // TODO
 $dark-color-button-gradient-to:            darken($color-button-gradient-from, 6%) !default; // TODO
 $dark-color-button-border:                 $color-button-gradient-to !default; // TODO
-$dark-color-button-shadow:                 darken($color-button-border, 20%) !default; // TODO
+$dark-color-button-shadow:                 tint($dark-color-button-border, 20%) !default;
 $dark-color-button-selected-gradient-from: tint($color-link-hover, 90%) !default; // TODO
 $dark-color-button-selected-gradient-to:   tint($color-link-hover, 80%) !default; // TODO
 $dark-color-button-selected-border:        darken($color-button-selected-gradient-to, 10.5%) !default; // TODO

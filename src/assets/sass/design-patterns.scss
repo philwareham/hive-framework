@@ -61,9 +61,9 @@ $colors: (
 $dark-colors: (
     "text":                 $dark-color-text,
     "text-footnote":        $dark-color-text-footnote,
-    "gradient-from":        $color-gradient-from,
-    "gradient-to":          $color-gradient-to,
-    "gradient-border":      $color-gradient-border,
+    "gradient-from":        $dark-color-gradient-from,
+    "gradient-to":          $dark-color-gradient-to,
+    "gradient-border":      $dark-color-gradient-border,
     "border":               $dark-color-border,
     "link":                 $dark-color-link,
     "link-hover":           $dark-color-link-hover,
