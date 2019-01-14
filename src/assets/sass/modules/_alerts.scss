@@ -52,8 +52,8 @@
  * Example HTML:
  *
  * <table>
- *     <tr>
- *         <td class="highlighted></td>
+ *     <tr class="highlighted>
+ *         <td></td>
  *         <td></td>
  *     </tr>
  * </table>
@@ -61,6 +61,12 @@
 
 .highlighted {
     background: $color-highlight-box;
+}
+
+@media (prefers-color-scheme: dark) {
+    .highlighted {
+        background: $dark-color-highlight-box;
+    }
 }
 
 /**
