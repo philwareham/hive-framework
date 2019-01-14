@@ -35,6 +35,15 @@ legend {
 }
 
 /**
+ * Show the overflow in Edge.
+ */
+
+button,
+input {
+    overflow: visible;
+}
+
+/**
  * 1. Prevent elements from spilling out of their parent.
  * 2. Address margins set differently in Firefox 4+, Safari, and Chrome.
  * 3. Correct font properties not being inherited.
@@ -737,10 +746,13 @@ textarea {
 
 /**
  * Normalize form placeholder style across browsers.
+ *
+ * 1. Fix placeholder font properties inheritance.
  */
 
 ::placeholder {
     color: $color-text-form-placeholder;
+    font: inherit; /* 1 */
     opacity: 1;
 }
 
