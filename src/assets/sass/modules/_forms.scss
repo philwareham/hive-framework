@@ -67,9 +67,7 @@ span.button {
 }
 
 @media (prefers-color-scheme: dark) {
-    input:not([type="button"]),
-    input:not([type="reset"]),
-    input:not([type="submit"]),
+    input,
     select,
     optgroup,
     textarea {

@@ -51,7 +51,7 @@ span.button {
     appearance: none; /* 2 */
 
     &:hover {
-        @include gradient-linear(tint($color-button-gradient-from, 8%), tint($color-button-gradient-to, 8%));
+        @include gradient-linear(lighten($color-button-gradient-from, 4%), lighten($color-button-gradient-to, 4%));
 
         border-color: shade($color-button-border, 15%);
         color: $color-text-button-hover;
@@ -87,7 +87,7 @@ span.button {
 
         &:active {
             border-color: shade($color-success-text, 15%);
-            color: shade($color-text-inverse, 10%);
+            color: $color-text-inverse;
             box-shadow: none;
         }
 
@@ -112,7 +112,7 @@ span.button {
 
         &:active {
             border-color: shade($color-error-text, 15%);
-            color: shade($color-text-inverse, 10%);
+            color: $color-text-inverse;
             box-shadow: none;
         }
 
@@ -129,23 +129,17 @@ span.button {
     [type="submit"],
     a.button,
     span.button {
-        border-color: $dark-color-button-border;
-        color: $dark-color-text-button;
-        box-shadow: 0 2px 0 $dark-color-button-shadow;
-
-        &:hover {
-            border-color: tint($dark-color-button-border, 15%);
-            color: $dark-color-text-button-hover;
-        }
-
-        &:active {
-            border-color: tint($dark-color-button-border, 15%);
-            color: $dark-color-text-button-active;
-            box-shadow: none;
-        }
+        color: $color-text-button;
 
         &:focus {
             border-color: $dark-color-link-focus;
+        }
+
+        &.button-success,
+        &.button-danger {
+            &:focus {
+                border-color: $dark-color-link-focus;
+            }
         }
     }
 }
