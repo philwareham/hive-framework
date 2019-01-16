@@ -124,6 +124,20 @@
         }
     }
 
+    @media (prefers-color-scheme: dark) {
+        #site-navigation {
+            border-top-color: $dark-color-border;
+
+            li {
+                border-right-color: $dark-color-gradient-border;
+
+                &:first-child {
+                    border-left-color: $dark-color-gradient-border;
+                }
+            }
+        }
+    }
+
     /**
      * Remove navigation toggle show/hide button for navigation.
      */

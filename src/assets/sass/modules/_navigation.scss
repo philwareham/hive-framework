@@ -39,7 +39,6 @@
     }
 
     li {
-        transition: box-shadow 0.1s linear;
         border-top: 1px solid $color-border;
         background-color: $color-gradient-from;
 
@@ -48,9 +47,8 @@
         }
 
         &:active {
-            @include gradient-linear(darken($color-gradient-to, 4%), darken($color-gradient-from, 4%));
-
-            box-shadow: inset 0 0.2em 0.25em rgba(#000000, 0.15);
+            background-color: darken($color-gradient-from, 4%);
+            box-shadow: inset 0 2px 2px rgba(#000000, 0.25);
         }
 
         &.active {
@@ -78,6 +76,43 @@
     &.site-navigation-open {
         max-height: 16em;
         transition: max-height 0.33s ease-in-out;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    #site-navigation {
+        background-color: $dark-color-gradient-to;
+
+        li {
+            border-top-color: $dark-color-border;
+            background-color: $dark-color-gradient-from;
+
+            &:hover {
+                background-color: lighten($dark-color-gradient-from, 4%);
+            }
+
+            &:active {
+                background-color: darken($dark-color-gradient-from, 4%);
+                box-shadow: inset 0 2px 2px rgba(#000000, 0.25);
+            }
+
+            &.active {
+                background-color: lighten($dark-color-gradient-from, 8%);
+            }
+        }
+
+        a {
+            color: $dark-color-text;
+
+            &:hover,
+            &:visited {
+                color: $dark-color-text;
+            }
+
+            &:active {
+                color: darken($dark-color-text, 10%);
+            }
+        }
     }
 }
 
