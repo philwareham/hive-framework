@@ -45,14 +45,6 @@ $dark-color-link-focus:                    #ff9900 !default;
 $dark-color-selecting:                     #1b2f48 !default;
 $dark-color-selected:                      #1c3456 !default;
 
-// borders
-
-$color-border:                             #cccccc !default;
-$color-border-light:                       #d4d4d4 !default;
-
-$dark-color-border:                        shade($dark-color-text, 40%) !default;
-$dark-color-border-light:                  shade($dark-color-border, 20%) !default;
-
 // neutral colours
 
 $color-background:                         #ffffff !default;
@@ -61,15 +53,21 @@ $color-background-form:                    #ffffff !default;
 $color-background-form-disabled:           #eeeeee !default;
 $color-gradient-from:                      #eeeeee !default;
 $color-gradient-to:                        darken($color-gradient-from, 6.5%) !default;
-$color-gradient-border:                    darken($color-gradient-from, 13.5%) !default;
 
 $dark-color-background:                    #373e45 !default;
 $dark-color-background-box:                shade($dark-color-background, 14%) !default;
 $dark-color-background-form:               shade($dark-color-background, 28%) !default;
 $dark-color-background-form-disabled:      #eeeeee !default; // TODO
-$dark-color-gradient-from:                 #eeeeee !default; // TODO
-$dark-color-gradient-to:                   darken($color-gradient-from, 6.5%) !default; // TODO
-$dark-color-gradient-border:               darken($color-gradient-from, 13.5%) !default; // TODO
+$dark-color-gradient-from:                 tint($dark-color-background, 8%) !default;
+$dark-color-gradient-to:                   tint($dark-color-background, 16%) !default;
+
+// borders
+
+$color-border:                             #cccccc !default;
+$color-border-light:                       #d4d4d4 !default;
+
+$dark-color-border:                        tint($dark-color-background, 36%) !default;
+$dark-color-border-light:                  tint($dark-color-background, 24%) !default;
 
 // accent colours
 

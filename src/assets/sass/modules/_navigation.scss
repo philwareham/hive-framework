@@ -59,16 +59,15 @@
     a {
         display: block;
         padding: 0.5em 6%;
-        color: $color-text;
+        color: $color-text-heading;
 
         &:hover,
         &:visited {
-            color: $color-text;
+            color: $color-text-heading;
             text-decoration: none;
         }
 
         &:active {
-            color: darken($color-text, 10%);
             text-decoration: none;
         }
     }
@@ -81,10 +80,10 @@
 
 @media (prefers-color-scheme: dark) {
     #site-navigation {
-        background-color: $dark-color-gradient-to;
+        background-color: $dark-color-background-form;
 
         li {
-            border-top-color: $dark-color-border;
+            border-top-color: shade($dark-color-background-form, 15%);
             background-color: $dark-color-gradient-from;
 
             &:hover {
@@ -102,15 +101,11 @@
         }
 
         a {
-            color: $dark-color-text;
+            color: $dark-color-text-heading;
 
             &:hover,
             &:visited {
-                color: $dark-color-text;
-            }
-
-            &:active {
-                color: darken($dark-color-text, 10%);
+                color: $dark-color-text-heading;
             }
         }
     }
@@ -159,7 +154,7 @@
 
 @media (prefers-color-scheme: dark) {
     #site-navigation-toggle {
-        border-color: $dark-color-border;
+        border-color: shade($dark-color-background-form, 15%);
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23ced4da' d='M4 6h24v4H4zm0 8h24v4H4zm0 8h24v4H4z'/%3E%3C/svg%3E");
 
         &:hover {

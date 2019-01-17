@@ -112,10 +112,10 @@
         li {
             float: left;
             border-top: 0;
-            border-right: solid 1px $color-gradient-border;
+            border-right: solid 1px $color-border;
 
             &:first-child {
-                border-left: solid 1px $color-gradient-border;
+                border-left: solid 1px $color-border;
             }
         }
 
@@ -126,13 +126,13 @@
 
     @media (prefers-color-scheme: dark) {
         #site-navigation {
-            border-top-color: $dark-color-border;
+            border-top-color: shade($dark-color-background-form, 15%);
 
             li {
-                border-right-color: $dark-color-gradient-border;
+                border-right-color: shade($dark-color-background-form, 15%);
 
                 &:first-child {
-                    border-left-color: $dark-color-gradient-border;
+                    border-left-color: shade($dark-color-background-form, 15%);
                 }
             }
         }
