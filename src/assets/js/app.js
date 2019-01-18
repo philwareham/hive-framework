@@ -1,7 +1,7 @@
-import {$,jQuery} from 'jquery';
+//import {$,jQuery} from 'jquery';
 // export for others scripts to use
-window.$ = $;
-window.jQuery = jQuery;
+//window.$ = $;
+//window.jQuery = jQuery;
 
 import Prism from 'prismjs';
 require('prismjs/plugins/line-numbers/prism-line-numbers');
