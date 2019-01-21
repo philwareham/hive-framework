@@ -25,7 +25,7 @@
     "@babel/core": "7.2.2",
     "@babel/preset-env": "7.2.3",
     "apache-server-configs": "3.0.0",
-    "autoprefixer": "9.4.5",
+    "autoprefixer": "9.4.6",
     "babelify": "10.0.0",
     "cssnano": "4.1.8",
     "dart-sass": "1.16.1",
