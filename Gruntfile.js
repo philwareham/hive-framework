@@ -130,6 +130,7 @@ module.exports = function (grunt)
             options: {
                 processors: [
                     require('autoprefixer'),
+                    require("css-mqpacker"),
                     require('cssnano')
                 ]
             },
