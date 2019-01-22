@@ -111,6 +111,12 @@
     font-weight: bold;
 }
 
+@media (prefers-color-scheme: dark) {
+    .ui-widget-header {
+        @include gradient-linear($dark-color-gradient-to, $dark-color-gradient-from);
+    }
+}
+
 
 /* Interaction states
    ========================================================================== */
@@ -121,8 +127,16 @@
 
 .ui-state-default {
     border: 1px solid $color-border;
-    background-color: darken($color-background-box, 2%);
+    background-color: shade($color-background-box, 4%);
     color: $color-text;
+}
+
+@media (prefers-color-scheme: dark) {
+    .ui-state-default {
+        border-color: $dark-color-border;
+        background-color: tint($dark-color-background-box, 5%);
+        color: $dark-color-text;
+    }
 }
 
 /**
@@ -135,13 +149,27 @@ a.ui-state-default:focus {
     text-decoration: none;
 }
 
+@media (prefers-color-scheme: dark) {
+    a.ui-state-default:hover,
+    a.ui-state-default:focus {
+        color: $dark-color-text;
+    }
+}
+
 /**
  * Hover jQuery UI widget interaction states.
  */
 
 .ui-state-hover {
-    border-color: darken($color-border, 13.5%);
+    border-color: shade($color-border, 15%);
     background-color: $color-background-box;
+}
+
+@media (prefers-color-scheme: dark) {
+    .ui-state-hover {
+        border-color: tint($dark-color-border, 15%);
+        background-color: $dark-color-background-box;
+    }
 }
 
 /**
@@ -154,6 +182,12 @@ a.ui-state-default:focus {
 
     a {
         outline: 0;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .ui-state-focus {
+        border-color: $dark-color-link-focus;
     }
 }
 

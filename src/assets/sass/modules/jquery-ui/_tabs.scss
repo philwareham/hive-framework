@@ -84,6 +84,12 @@
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav .ui-tabs-anchor {
+        color: $dark-color-text;
+    }
+}
+
 /**
  * Maintain cursor style when collapsing a collapsible tab.
  */
@@ -103,5 +109,17 @@
 
     .ui-tabs-nav .ui-state-focus a {
         outline: thin solid $color-link-focus;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .ui-tabs-vertical {
+        .ui-tabs-nav .ui-tabs-active {
+            background: $dark-color-highlight-box;
+        }
+
+        .ui-tabs-nav .ui-state-focus a {
+            outline: thin solid $dark-color-link-focus;
+        }
     }
 }
