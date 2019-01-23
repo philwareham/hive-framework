@@ -18,6 +18,7 @@
 
 .ui-slider {
     position: relative;
+    background-color: $color-gradient-to;
     text-align: left;
     box-sizing: border-box;
 
@@ -38,7 +39,7 @@
         display: block;
         position: absolute;
         border: 0;
-        background: $color-gradient-to;
+        background: $color-background-box;
         font-size: 0.625em;
         z-index: 1;
     }
@@ -46,13 +47,15 @@
 
 @media (prefers-color-scheme: dark) {
     .ui-slider {
+        background-color: $dark-color-background-box;
+
         .ui-slider-handle {
             background-color: $dark-color-background;
             box-shadow: $dark-standard-shadow;
         }
 
         .ui-slider-range {
-            background: $dark-color-background-box;
+            background: $dark-color-gradient-from;
         }
     }
 }
