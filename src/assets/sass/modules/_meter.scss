@@ -8,7 +8,7 @@
 meter {
     height: 0.75em;
     border: 1px solid $color-border;
-    background: shade($color-background-box, 7.5%);
+    background: $color-gradient-to;
     overflow: hidden;
     vertical-align: -0.0625em;
     appearance: none;
@@ -19,7 +19,7 @@ meter {
 
 meter::-webkit-meter-bar {
     border: 0; // EdgeHTML
-    background: shade($color-background-box, 7.5%);
+    background: $color-gradient-to;
 }
 
 meter::-webkit-meter-optimum-value {

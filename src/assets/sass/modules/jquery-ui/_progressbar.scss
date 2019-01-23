@@ -17,7 +17,7 @@
 .ui-progressbar {
     height: 0.75em;
     margin-bottom: 1em;
-    background-color: shade($color-background-box, 7.5%);
+    background-color: $color-gradient-to;
     text-align: left;
     overflow: hidden;
 }

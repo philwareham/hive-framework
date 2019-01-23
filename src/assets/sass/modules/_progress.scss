@@ -19,7 +19,7 @@ progress {
 // WebKit/Blink.
 
 progress::-webkit-progress-bar {
-    background-color: shade($color-background-box, 7.5%);
+    background-color: $color-gradient-to;
 }
 
 progress::-webkit-progress-value {
