@@ -36,6 +36,10 @@
 }
 
 @media (prefers-color-scheme: dark) {
+    .ui-sortable-helper {
+        box-shadow: $dark-standard-shadow;
+    }
+
     .ui-sortable-placeholder {
         border-color: $dark-color-link;
     }

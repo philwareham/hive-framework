@@ -410,6 +410,37 @@ textarea {
     border-color: $color-link-focus;
 }
 
+@media (prefers-color-scheme: dark) {
+    [type="range"]::-webkit-slider-thumb {
+        border-color: $dark-color-border;
+        background-color: $dark-color-background;
+        box-shadow: $dark-standard-shadow;
+    }
+
+    [type="range"]:hover::-webkit-slider-thumb {
+        border-color: tint($dark-color-border, 15%);
+    }
+
+    [type="range"]:active::-webkit-slider-thumb,
+    [type="range"]:focus::-webkit-slider-thumb {
+        border-color: $dark-color-link-focus;
+    }
+
+    [type="range"]::-webkit-slider-runnable-track {
+        border-color: $dark-color-border;
+        background-color: $dark-color-background-box;
+    }
+
+    [type="range"]:hover::-webkit-slider-runnable-track {
+        border-color: tint($dark-color-border, 15%);
+    }
+
+    [type="range"]:active::-webkit-slider-runnable-track,
+    [type="range"]:focus::-webkit-slider-runnable-track {
+        border-color: $dark-color-link-focus;
+    }
+}
+
 // Gecko/Quantum.
 
 [type="range"]::-moz-range-thumb {
@@ -454,6 +485,34 @@ textarea {
     border-style: none;
 }
 
+@media (prefers-color-scheme: dark) {
+    [type="range"]::-moz-range-thumb {
+        border-color: $dark-color-border;
+        background-color: $dark-color-background;
+    }
+
+    [type="range"]:hover::-moz-range-thumb {
+        border-color: tint($dark-color-border, 15%);
+    }
+
+    [type="range"]:focus::-moz-range-thumb {
+        border-color: $dark-color-link-focus;
+    }
+
+    [type="range"]::-moz-range-track {
+        border-color: $dark-color-border;
+        background-color: $dark-color-background-box;
+    }
+
+    [type="range"]:hover::-moz-range-track {
+        border-color: tint($dark-color-border, 15%);
+    }
+
+    [type="range"]:focus::-moz-range-track {
+        border-color: $dark-color-link-focus;
+    }
+}
+
 // EdgeHTML.
 
 [type="range"]::-ms-thumb {
@@ -496,66 +555,6 @@ textarea {
 }
 
 @media (prefers-color-scheme: dark) {
-    // WebKit/Blink.
-
-    [type="range"]::-webkit-slider-thumb {
-        border-color: $dark-color-border;
-        background-color: $dark-color-background;
-    }
-
-    [type="range"]:hover::-webkit-slider-thumb {
-        border-color: tint($dark-color-border, 15%);
-    }
-
-    [type="range"]:active::-webkit-slider-thumb,
-    [type="range"]:focus::-webkit-slider-thumb {
-        border-color: $dark-color-link-focus;
-    }
-
-    [type="range"]::-webkit-slider-runnable-track {
-        border-color: $dark-color-border;
-        background-color: $dark-color-background-box;
-    }
-
-    [type="range"]:hover::-webkit-slider-runnable-track {
-        border-color: tint($dark-color-border, 15%);
-    }
-
-    [type="range"]:active::-webkit-slider-runnable-track,
-    [type="range"]:focus::-webkit-slider-runnable-track {
-        border-color: $dark-color-link-focus;
-    }
-
-    // Gecko/Quantum.
-
-    [type="range"]::-moz-range-thumb {
-        border-color: $dark-color-border;
-        background-color: $dark-color-background;
-    }
-
-    [type="range"]:hover::-moz-range-thumb {
-        border-color: tint($dark-color-border, 15%);
-    }
-
-    [type="range"]:focus::-moz-range-thumb {
-        border-color: $dark-color-link-focus;
-    }
-
-    [type="range"]::-moz-range-track {
-        border-color: $dark-color-border;
-        background-color: $dark-color-background-box;
-    }
-
-    [type="range"]:hover::-moz-range-track {
-        border-color: tint($dark-color-border, 15%);
-    }
-
-    [type="range"]:focus::-moz-range-track {
-        border-color: $dark-color-link-focus;
-    }
-
-    // EdgeHTML.
-
     [type="range"]::-ms-thumb {
         border-color: $dark-color-border;
         background-color: $dark-color-background;

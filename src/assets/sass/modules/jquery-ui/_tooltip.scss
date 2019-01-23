@@ -24,3 +24,9 @@
     box-shadow: $standard-shadow;
     z-index: 9999;
 }
+
+@media (prefers-color-scheme: dark) {
+    .ui-tooltip {
+        box-shadow: $dark-standard-shadow;
+    }
+}

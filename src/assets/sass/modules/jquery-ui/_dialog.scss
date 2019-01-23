@@ -98,6 +98,20 @@
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    .ui-dialog {
+        box-shadow: $dark-standard-shadow;
+
+        .ui-dialog-content {
+            background: none;
+        }
+
+        .ui-dialog-buttonpane {
+            background-image: none;
+        }
+    }
+}
+
 /**
  * Change cursor when window is being dragged.
  */

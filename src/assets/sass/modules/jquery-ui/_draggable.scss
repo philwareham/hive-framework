@@ -30,3 +30,10 @@
     box-shadow: $standard-shadow;
     z-index: 1000;
 }
+
+@media (prefers-color-scheme: dark) {
+    .ui-draggable-dragging {
+        box-shadow: $dark-standard-shadow;
+        z-index: 1000;
+    }
+}

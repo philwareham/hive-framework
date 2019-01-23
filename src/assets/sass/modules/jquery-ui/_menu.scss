@@ -123,6 +123,22 @@
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    .ui-menu {
+        border-color: $dark-color-border-light;
+        box-shadow: $dark-standard-shadow;
+
+        .ui-menu-item a {
+            color: $dark-color-text;
+        }
+
+        .ui-state-focus,
+        .ui-state-active {
+            background-color: $dark-color-selected;
+        }
+    }
+}
+
 /**
  * Allow additional icons in menu items.
  */

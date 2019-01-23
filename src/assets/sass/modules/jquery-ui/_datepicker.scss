@@ -215,6 +215,8 @@
 
 @media (prefers-color-scheme: dark) {
     .ui-datepicker {
+        box-shadow: $dark-standard-shadow;
+
         .ui-datepicker-prev-hover,
         .ui-datepicker-next-hover {
             background-color: $dark-color-background-box;
