@@ -17,7 +17,6 @@ $color-text-button-hover:                  $color-text-button !default;
 $color-text-button-active:                 $color-text-button !default;
 $color-text-form:                          #000000 !default;
 $color-text-form-placeholder:              #999999 !default;
-$color-text-form-disabled:                 #aaaaaa !default;
 $color-text-footnote:                      #585858 !default;
 $color-text-inverse:                       #ffffff !default;
 
@@ -27,7 +26,6 @@ $dark-color-text:                          #ced4da !default;
 $dark-color-text-heading:                  #ffffff !default;
 $dark-color-text-form:                     #ffffff !default;
 $dark-color-text-form-placeholder:         #747b82 !default;
-$dark-color-text-form-disabled:            #aaaaaa !default; // TODO
 $dark-color-text-footnote:                 #9ca3aa !default;
 $dark-color-text-inverse:                  #373e45 !default;
 
@@ -50,14 +48,14 @@ $dark-color-selected:                      #1c3456 !default;
 $color-background:                         #ffffff !default;
 $color-background-box:                     #f7f7f7 !default;
 $color-background-form:                    #ffffff !default;
-$color-background-form-disabled:           #eeeeee !default;
+$color-background-form-disabled:           #e4e4e4 !default;
 $color-gradient-from:                      #eeeeee !default;
 $color-gradient-to:                        darken($color-gradient-from, 6.5%) !default;
 
 $dark-color-background:                    #373e45 !default;
 $dark-color-background-box:                shade($dark-color-background, 14%) !default;
 $dark-color-background-form:               shade($dark-color-background, 28%) !default;
-$dark-color-background-form-disabled:      #eeeeee !default; // TODO
+$dark-color-background-form-disabled:      shade($dark-color-background, 28%) !default;
 $dark-color-gradient-from:                 tint($dark-color-background, 8%) !default;
 $dark-color-gradient-to:                   tint($dark-color-background, 16%) !default;
 
