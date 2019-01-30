@@ -319,6 +319,12 @@ a.ui-state-default:focus {
     background: rgba(#000000, 0.75);
 }
 
+@media (prefers-color-scheme: dark) {
+    .ui-widget-overlay {
+        background: rgba(#000000, 0.66);
+    }
+}
+
 
 /* Shadows
    ========================================================================== */

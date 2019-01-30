@@ -223,17 +223,17 @@
         }
 
         td {
+            a.ui-state-highlight {
+                border-color: $color-warning-text;
+            }
+
             a.ui-state-active {
-                border-color: lighten($color-link, 42%);
+                border-color: $dark-color-link;
                 background-color: $dark-color-selected;
             }
 
-            a.ui-state-highlight:hover {
-                border-color: lighten($color-warning-text, 8%);
-            }
-
             a.ui-state-active:hover {
-                border-color: lighten($color-link, 27%);
+                border-color: $dark-color-link-hover;
             }
         }
     }

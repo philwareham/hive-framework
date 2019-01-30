@@ -97,3 +97,9 @@
 .ui-selectmenu-open {
     display: block;
 }
+
+@media (prefers-color-scheme: dark) {
+    .ui-selectmenu-optgroup {
+        border-top-color: $dark-color-border;
+    }
+}
