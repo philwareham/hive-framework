@@ -74,16 +74,6 @@
     }
 }
 
-/**
- * Normalize Facebook 'Like' buttons for inline use.
- */
-
-.facebook-like-button {
-    height: 20px;
-    border: 0;
-    overflow: hidden;
-}
-
 @media (prefers-color-scheme: dark) {
     .social-channels a:hover {
         outline: thin solid $dark-color-link-hover;

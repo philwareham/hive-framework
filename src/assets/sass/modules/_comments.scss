@@ -71,6 +71,12 @@
     color: $color-error-text;
 }
 
+@media (prefers-color-scheme: dark) {
+    .error_message li {
+        color: $dark-color-error-text;
+    }
+}
+
 /**
  * Highlighting for comment form errors.
  */
