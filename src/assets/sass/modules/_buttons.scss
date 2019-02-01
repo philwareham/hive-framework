@@ -155,4 +155,5 @@ button[disabled],
 [type="submit"][disabled],
 .button.disabled {
     top: 0 !important;
+    background: $color-background-form-disabled !important;
 }
