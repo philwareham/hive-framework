@@ -83,8 +83,8 @@ $color-button-gradient-from:               $color-gradient-from !default;
 $color-button-gradient-to:                 darken($color-button-gradient-from, 6%) !default;
 $color-button-border:                      $color-button-gradient-to !default;
 $color-button-shadow:                      darken($color-button-border, 20%) !default;
-$color-button-selected-gradient-from:      tint($color-link-hover, 90%) !default;
-$color-button-selected-gradient-to:        tint($color-link-hover, 80%) !default;
+$color-button-selected-gradient-from:      tint($color-link-hover, 84%) !default;
+$color-button-selected-gradient-to:        tint($color-link-hover, 78%) !default;
 $color-button-selected-border:             darken($color-button-selected-gradient-to, 10.5%) !default;
 
 // alert colours
