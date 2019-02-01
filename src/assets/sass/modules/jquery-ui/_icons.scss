@@ -27,6 +27,10 @@
     .ui-icon {
         filter: brightness(3) sepia(1) hue-rotate(168deg) saturate(33%);
     }
+
+    .ui-button .ui-icon {
+        filter: none;
+    }
 }
 
 .ui-widget-icon-block {
