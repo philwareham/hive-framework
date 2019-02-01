@@ -43,7 +43,7 @@
         background-color: $color-gradient-from;
 
         &:hover {
-            background-color: lighten($color-gradient-from, 4%);
+            background-color: $color-background-box;
         }
 
         &:active {

@@ -127,7 +127,7 @@
 
 .ui-state-default {
     border: 1px solid $color-border;
-    background-color: shade($color-background-box, 4%);
+    background-color: $color-gradient-from;
     color: $color-text;
 }
 
