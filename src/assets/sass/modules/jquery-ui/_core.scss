@@ -196,7 +196,7 @@ a.ui-state-default:focus {
  */
 
 .ui-state-active {
-    background-color: tint($color-background-box, 4%);
+    background-color: $color-background;
 }
 
 @media (prefers-color-scheme: dark) {
