@@ -66,9 +66,18 @@
         position: absolute;
         top: 50%;
         right: 0.25em;
-        width: 20px;
         height: 20px;
-        margin: -10px 0 0;
+        transform: translate(0, -50%);
+        border-color: $color-border;
+        box-shadow: none;
+
+        &:hover {
+            border-color: shade($color-button-border, 15%);
+        }
+
+        &:focus {
+            border-color: $color-link-focus;
+        }
     }
 
     .ui-dialog-content {
@@ -91,23 +100,22 @@
     .ui-dialog-buttonpane .ui-dialog-buttonset {
         float: right;
     }
-
-    .ui-dialog-buttonpane button {
-        margin: 0.5em 0.25em 0.5em 0;
-        cursor: pointer;
-    }
 }
 
 @media (prefers-color-scheme: dark) {
     .ui-dialog {
         box-shadow: $dark-standard-shadow;
 
-        .ui-dialog-content {
-            background: none;
-        }
+        .ui-dialog-titlebar-close {
+            border-color: $color-border;
 
-        .ui-dialog-buttonpane {
-            background-image: none;
+            &:hover {
+                border-color: shade($color-button-border, 15%);
+            }
+
+            &:focus {
+                border-color: $dark-color-link-focus;
+            }
         }
     }
 }
