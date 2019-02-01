@@ -196,7 +196,13 @@ a.ui-state-default:focus {
  */
 
 .ui-state-active {
-    background-color: lighten($color-background-box, 3%);
+    background-color: tint($color-background-box, 4%);
+}
+
+@media (prefers-color-scheme: dark) {
+    .ui-state-active {
+        background-color: shade($dark-color-background-box, 4%);
+    }
 }
 
 /**
@@ -295,6 +301,12 @@ a.ui-state-default:focus {
     a {
         text-decoration: none;
         cursor: default;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .ui-state-disabled:not(.ui-button) {
+        opacity: 0.25;
     }
 }
 

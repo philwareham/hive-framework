@@ -82,6 +82,12 @@ a.ui-button {
     text-decoration: none;
 }
 
+@media (prefers-color-scheme: dark) {
+    a.ui-button {
+        color: $color-text-button;
+    }
+}
+
 /**
  * Focus styling for buttons.
  *
@@ -90,6 +96,12 @@ a.ui-button {
 
 .ui-button.ui-state-focus {
     border-color: $color-link-focus !important; /* 1 */
+}
+
+@media (prefers-color-scheme: dark) {
+    .ui-button.ui-state-focus {
+        border-color: $dark-color-link-focus !important; /* 1 */
+    }
 }
 
 /**
