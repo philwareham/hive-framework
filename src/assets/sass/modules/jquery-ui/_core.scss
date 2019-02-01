@@ -134,7 +134,7 @@
 @media (prefers-color-scheme: dark) {
     .ui-state-default {
         border-color: $dark-color-border;
-        background-color: tint($dark-color-background-box, 5%);
+        background-color: $dark-color-background-box;
         color: $dark-color-text;
     }
 }
@@ -168,7 +168,7 @@ a.ui-state-default:focus {
 @media (prefers-color-scheme: dark) {
     .ui-state-hover {
         border-color: tint($dark-color-border, 15%);
-        background-color: $dark-color-background-box;
+        background-color: tint($dark-color-background-box, 5%);
     }
 }
 
@@ -201,7 +201,7 @@ a.ui-state-default:focus {
 
 @media (prefers-color-scheme: dark) {
     .ui-state-active {
-        background-color: shade($dark-color-background-box, 4%);
+        background-color: $dark-color-gradient-from;
     }
 }
 
