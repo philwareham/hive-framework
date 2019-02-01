@@ -22,6 +22,14 @@
     text-align: left;
     box-sizing: border-box;
 
+    &:hover {
+        border-color: shade($color-border, 15%);
+
+        .ui-slider-handle {
+            border-color: shade($color-border, 15%);
+        }
+    }
+
     .ui-slider-handle {
         position: absolute;
         width: 1.25em;
@@ -49,9 +57,22 @@
     .ui-slider {
         background-color: $dark-color-background-box;
 
+        &:hover {
+            border-color: tint($dark-color-border, 15%);
+
+            .ui-slider-handle {
+                border-color: tint($dark-color-border, 15%);
+            }
+        }
+
         .ui-slider-handle {
-            background-color: $dark-color-background;
+            @include gradient-linear($color-button-gradient-from, $color-button-gradient-to);
+
             box-shadow: $dark-standard-shadow;
+
+            &:hover {
+                @include gradient-linear(lighten($color-button-gradient-from, 4%), lighten($color-button-gradient-to, 4%));
+            }
         }
 
         .ui-slider-range {

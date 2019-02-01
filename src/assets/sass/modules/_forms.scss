@@ -412,12 +412,15 @@ textarea {
 
 @media (prefers-color-scheme: dark) {
     [type="range"]::-webkit-slider-thumb {
+        @include gradient-linear($color-button-gradient-from, $color-button-gradient-to);
+
         border-color: $dark-color-border;
-        background-color: $dark-color-background;
         box-shadow: $dark-standard-shadow;
     }
 
     [type="range"]:hover::-webkit-slider-thumb {
+        @include gradient-linear(lighten($color-button-gradient-from, 4%), lighten($color-button-gradient-to, 4%));
+
         border-color: tint($dark-color-border, 15%);
     }
 
@@ -487,11 +490,15 @@ textarea {
 
 @media (prefers-color-scheme: dark) {
     [type="range"]::-moz-range-thumb {
+        @include gradient-linear($color-button-gradient-from, $color-button-gradient-to);
+
         border-color: $dark-color-border;
-        background-color: $dark-color-background;
+        box-shadow: $dark-standard-shadow;
     }
 
     [type="range"]:hover::-moz-range-thumb {
+        @include gradient-linear(lighten($color-button-gradient-from, 4%), lighten($color-button-gradient-to, 4%));
+
         border-color: tint($dark-color-border, 15%);
     }
 
@@ -556,11 +563,15 @@ textarea {
 
 @media (prefers-color-scheme: dark) {
     [type="range"]::-ms-thumb {
+        @include gradient-linear($color-button-gradient-from, $color-button-gradient-to);
+
         border-color: $dark-color-border;
-        background-color: $dark-color-background;
+        box-shadow: $dark-standard-shadow;
     }
 
     [type="range"]:hover::-ms-thumb {
+        @include gradient-linear(lighten($color-button-gradient-from, 4%), lighten($color-button-gradient-to, 4%));
+
         border-color: tint($dark-color-border, 15%);
     }
 

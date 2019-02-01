@@ -37,9 +37,9 @@
         cursor: pointer;
 
         a {
+            outline: 0;
             color: $color-text;
             text-decoration: none;
-            outline: 0;
         }
 
         .ui-accordion-header-icon {

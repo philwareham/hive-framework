@@ -36,20 +36,20 @@
 }
 
 a.ui-icon,
-a:not(.ui-button) .ui-icon,
-button:not(.ui-button) .ui-icon {
-    opacity: 0.66;
+a .ui-icon,
+button .ui-icon {
+    opacity: 0.79;
 }
 
 a:hover.ui-icon,
 a:hover .ui-icon,
-button:not(.ui-button):hover .ui-icon,
+button:hover .ui-icon,
 a:active.ui-icon,
 a:active .ui-icon,
-button:not(.ui-button):active .ui-icon,
+button:active .ui-icon,
 a:focus.ui-icon,
 a:focus .ui-icon,
-button:not(.ui-button):focus .ui-icon {
+button:focus .ui-icon {
     opacity: 1;
 }
 
