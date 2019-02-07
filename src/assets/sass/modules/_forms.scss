@@ -278,40 +278,37 @@ textarea {
  */
 
 [type="file"] {
+    height: auto;
+    min-height: 2em; // 32px / 16px
+    padding: 0.25em 0.1875em; // 8px / 16px + 3px / 16px
+    border: 1px solid $color-border;
+    border-radius: 0;
+    background: $color-background-form;
     cursor: pointer;
+    box-sizing: border-box;
+    appearance: none;
+
+    &:hover {
+        border-color: shade($color-border, 15%);
+    }
+
+    &:focus {
+        border-color: $color-link-focus;
+        outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+    }
 }
 
-@supports (-webkit-appearance: none) {
+@media (prefers-color-scheme: dark) {
     [type="file"] {
-        height: 2em; // 32px / 16px
-        padding: 0.25em 0.1875em; // 8px / 16px + 3px / 16px
-        border: 1px solid $color-border;
-        border-radius: 0;
-        background: $color-background-form;
-        appearance: none;
+        border-color: $dark-color-border;
+        background-color: $dark-color-background-form;
 
         &:hover {
-            border-color: shade($color-border, 15%);
+            border-color: tint($dark-color-border, 15%);
         }
 
         &:focus {
-            border-color: $color-link-focus;
-            outline: 2px solid transparent; // Allows for repainting in high contrast modes.
-        }
-    }
-
-    @media (prefers-color-scheme: dark) {
-        [type="file"] {
-            border-color: $dark-color-border;
-            background-color: $dark-color-background-form;
-
-            &:hover {
-                border-color: tint($dark-color-border, 15%);
-            }
-
-            &:focus {
-                border-color: $dark-color-link-focus;
-            }
+            border-color: $dark-color-link-focus;
         }
     }
 }
@@ -322,11 +319,9 @@ textarea {
     padding: 0 0.25em;
     border: 0;
     color: $color-text-button;
-    font-family: inherit;
-    font-size: 1rem;
-    font-weight: normal;
-    line-height: inherit;
+    font: inherit;
     cursor: pointer;
+    /* autoprefixer: off */
     appearance: none;
 }
 
@@ -346,7 +341,7 @@ textarea {
 }
 
 /**
- * Correct the cursor style of increment and decrement buttons in Safari.
+ * Correct the cursor style of increment and decrement buttons in Chrome.
  */
 
 [type="number"]::-webkit-inner-spin-button,
@@ -598,7 +593,8 @@ textarea {
  */
 
 [type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
+    /* autoprefixer: off */
+    appearance: none;
 }
 
 /**
@@ -749,6 +745,29 @@ textarea {
     select,
     textarea {
         &:focus:invalid {
+            border-color: $dark-color-error-text;
+        }
+    }
+}
+
+/**
+ * Styling for Firefox-specfic form field validation.
+ */
+
+input,
+select,
+textarea {
+    &:-moz-ui-invalid {
+        border-color: $color-error-text;
+        box-shadow: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    input,
+    select,
+    textarea {
+        &:-moz-ui-invalid {
             border-color: $dark-color-error-text;
         }
     }

@@ -2,11 +2,11 @@
    ========================================================================== */
 
 /**
- * 1. Correct `button` style inheritance in Firefox and Opera.
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
  */
 
 button {
-    text-transform: none; /* 1 */
+    text-transform: none;
 }
 
 /**
