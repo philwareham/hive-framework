@@ -24,7 +24,7 @@
   "devDependencies": {
     "@babel/core": "7.2.2",
     "@babel/preset-env": "7.3.1",
-    "apache-server-configs": "3.0.0",
+    "apache-server-configs": "3.1.0",
     "autoprefixer": "9.4.7",
     "babelify": "10.0.0",
     "css-mqpacker": "7.0.0",
