@@ -15,8 +15,8 @@ module.exports = function (grunt)
         // Set up paths.
         paths: {
             src: {
-                fonts: 'src/assets/fonts/',
                 sass: 'src/assets/sass/',
+                fonts: 'src/assets/fonts/',
                 js: 'src/assets/js/',
                 templates: 'src/templates/'
             },
@@ -77,7 +77,7 @@ module.exports = function (grunt)
                     {
                         expand: true,
                         cwd: '<%= paths.src.fonts %>',
-                        src: ['**'],
+                        src: '**',
                         dest: '<%= paths.dest.fonts %>'
                     }
                 ]
