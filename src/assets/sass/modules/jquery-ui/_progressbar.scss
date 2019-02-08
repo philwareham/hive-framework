@@ -53,6 +53,16 @@
 
 .ui-progressbar-indeterminate .ui-progressbar-value {
     background-color: $color-border;
+    background-image: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.25) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.25) 50%,
+        rgba(255, 255, 255, 0.25) 75%,
+        transparent 75%,
+        transparent
+    );
 }
 
 @media (prefers-color-scheme: dark) {
@@ -76,5 +86,15 @@
 
     .ui-progressbar-indeterminate .ui-progressbar-value {
         background-color: $dark-color-border;
+        background-image: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.25) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.25) 50%,
+            rgba(255, 255, 255, 0.25) 75%,
+            transparent 75%,
+            transparent
+        );
     }
 }
