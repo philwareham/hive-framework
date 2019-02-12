@@ -64,6 +64,7 @@ module.exports = function (grunt)
             dist: [
                 'browserify',
                 'copy:fonts',
+                'copy:configs',
                 'css',
                 'jshint',
                 'replace'
@@ -88,6 +89,15 @@ module.exports = function (grunt)
                     {
                         src: 'node_modules/slick-carousel/slick/fonts/slick.woff',
                         dest: '<%= paths.dest.css %>fonts/slick.woff'
+                    }
+                ]
+            },
+            // Server configs.
+            configs: {
+                files: [
+                    {
+                        src: 'node_modules/apache-server-configs/dist/.htaccess',
+                        dest: 'src/docs/htaccess.txt'
                     }
                 ]
             }
