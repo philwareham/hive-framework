@@ -29,6 +29,65 @@ body {
 }
 
 /**
+ * Block-level text alignment/justification.
+ *
+ * Example HTML:
+ *
+ * <p class="align-left">
+ * <p class="align-right">
+ * <p class="align-center">
+ * <p class="align-justify">
+ */
+
+address,
+article,
+aside,
+blockquote,
+dd,
+details,
+dialog,
+div,
+dl,
+dt,
+fieldset,
+figcaption,
+figure,
+footer,
+for,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+li,
+main,
+nav,
+ol,
+p,
+pre,
+section,
+table,
+ul {
+    &.align-left {
+        text-align: left; // TODO: use CSS Text Module Level 3 `start` value when browser support is widespread.
+    }
+
+    &.align-right {
+        text-align: right; // TODO: use CSS Text Module Level 3 `end` value when browser support is widespread.
+    }
+
+    &.align-center {
+        text-align: center;
+    }
+
+    &.align-justify {
+        text-align: justify;
+    }
+}
+
+/**
  * Harmonize size, style and vertical margin of headings.
  */
 
