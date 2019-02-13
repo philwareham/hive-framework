@@ -7,10 +7,6 @@
  * Some classes and HTML elements generally added via JavaScript, more info -
  * https://jqueryui.com/tabs/
  *
- * 1. `position: relative` prevents IE scroll bug (elements with
- *    `position: relative` inside a parent container with `overflow: auto`
- *    appear as "fixed")
- *
  * Example HTML:
  *
  * <div class="ui-tabs>
@@ -37,28 +33,18 @@
  * </div>
  */
 
-.ui-tabs:not(.ui-tabs-vertical) {
-    position: relative; /* 1 */
+.ui-tabs {
     border: 0;
 
     .ui-tabs-nav {
-        margin: 0;
         padding: 0;
+        border-bottom: 1px solid $color-border-light;
         background: none;
 
         li {
-            position: relative;
-            top: 0;
-            float: left;
-            border-bottom-width: 0;
-            border-radius: $border-radius $border-radius 0 0;
+            border: 1px solid $color-border-light;
+            border-bottom: 1px solid transparent;
             list-style: none;
-            white-space: nowrap;
-
-            &.ui-tabs-active {
-                margin-bottom: -1px;
-                padding-bottom: 1px;
-            }
 
             &.ui-tabs-active .ui-tabs-anchor,
             &.ui-state-disabled .ui-tabs-anchor,
@@ -68,10 +54,14 @@
         }
 
         .ui-tabs-anchor {
+            display: block;
             padding: 0.5em 1em;
-            float: left;
             color: $color-text;
             text-decoration: none;
+        }
+
+        .ui-state-focus {
+            border-color: $color-link-focus;
         }
     }
 
@@ -80,12 +70,13 @@
         margin: 0 0 1em;
         padding: 1px 0;
         border-width: 1px 0;
+        border-top-width: 0;
         background: none;
     }
 }
 
 @media (prefers-color-scheme: dark) {
-    .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav .ui-tabs-anchor {
+    .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
         color: $dark-color-text;
     }
 }
@@ -96,30 +87,4 @@
 
 .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
     cursor: pointer;
-}
-
-/**
- * Additonal styling for tabs vertical.
- */
-
-.ui-tabs-vertical {
-    .ui-tabs-nav .ui-tabs-active {
-        background: $color-highlight-box;
-    }
-
-    .ui-tabs-nav .ui-state-focus a {
-        outline: thin solid $color-link-focus;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    .ui-tabs-vertical {
-        .ui-tabs-nav .ui-tabs-active {
-            background: $dark-color-highlight-box;
-        }
-
-        .ui-tabs-nav .ui-state-focus a {
-            outline: thin solid $dark-color-link-focus;
-        }
-    }
 }
