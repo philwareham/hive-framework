@@ -38,12 +38,11 @@
 
     .ui-tabs-nav {
         padding: 0;
-        border-bottom: 1px solid $color-border-light;
         background: none;
 
         li {
+            margin: 2px 0 0;
             border: 1px solid $color-border-light;
-            border-bottom: 1px solid transparent;
             list-style: none;
 
             &.ui-tabs-active .ui-tabs-anchor,
@@ -76,8 +75,24 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
-        color: $dark-color-text;
+    .ui-tabs {
+        .ui-tabs-nav {
+            li {
+                border-color: $dark-color-border-light;
+            }
+
+            .ui-tabs-anchor {
+                color: $dark-color-text;
+            }
+
+            .ui-state-focus {
+                border-color: $dark-color-link-focus;
+
+                a {
+                    outline: 0;
+                }
+            }
+        }
     }
 }
 
