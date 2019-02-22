@@ -71,55 +71,71 @@ span.button {
         border-color: $color-link-focus;
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
     }
+}
 
-    &.button-success {
-        @include gradient-linear(tint($color-success-text, 10%), $color-success-text);
+/**
+ * Success buttons.
+ *
+ * Example HTML:
+ *
+ * <a class="button button-success">
+ */
 
-        border-color: shade($color-success-text, 5%);
+.button-success {
+    @include gradient-linear(tint($color-success-text, 10%), $color-success-text);
+
+    border-color: shade($color-success-text, 5%);
+    color: $color-text-inverse;
+    box-shadow: 0 2px 0 shade($color-success-text, 33%);
+
+    &:hover {
+        @include gradient-linear(tint($color-success-text, 18%), tint($color-success-text, 8%));
+
+        border-color: shade($color-success-text, 15%);
         color: $color-text-inverse;
-        box-shadow: 0 2px 0 shade($color-success-text, 33%);
-
-        &:hover {
-            @include gradient-linear(tint($color-success-text, 18%), tint($color-success-text, 8%));
-
-            border-color: shade($color-success-text, 15%);
-            color: $color-text-inverse;
-        }
-
-        &:active {
-            border-color: shade($color-success-text, 15%);
-            color: $color-text-inverse;
-            box-shadow: none;
-        }
-
-        &:focus {
-            border-color: $color-link-focus;
-        }
     }
 
-    &.button-danger {
-        @include gradient-linear(tint($color-error-text, 10%), $color-error-text);
-
-        border-color: shade($color-error-text, 5%);
+    &:active {
+        border-color: shade($color-success-text, 15%);
         color: $color-text-inverse;
-        box-shadow: 0 2px 0 shade($color-error-text, 33%);
+        box-shadow: none;
+    }
 
-        &:hover {
-            @include gradient-linear(tint($color-error-text, 18%), tint($color-error-text, 8%));
+    &:focus {
+        border-color: $color-link-focus;
+    }
+}
 
-            border-color: shade($color-error-text, 15%);
-            color: $color-text-inverse;
-        }
+/**
+ * Danger buttons.
+ *
+ * Example HTML:
+ *
+ * <a class="button button-danger">
+ */
 
-        &:active {
-            border-color: shade($color-error-text, 15%);
-            color: $color-text-inverse;
-            box-shadow: none;
-        }
+.button-danger {
+    @include gradient-linear(tint($color-error-text, 10%), $color-error-text);
 
-        &:focus {
-            border-color: $color-link-focus;
-        }
+    border-color: shade($color-error-text, 5%);
+    color: $color-text-inverse;
+    box-shadow: 0 2px 0 shade($color-error-text, 33%);
+
+    &:hover {
+        @include gradient-linear(tint($color-error-text, 18%), tint($color-error-text, 8%));
+
+        border-color: shade($color-error-text, 15%);
+        color: $color-text-inverse;
+    }
+
+    &:active {
+        border-color: shade($color-error-text, 15%);
+        color: $color-text-inverse;
+        box-shadow: none;
+    }
+
+    &:focus {
+        border-color: $color-link-focus;
     }
 }
 
@@ -135,12 +151,12 @@ span.button {
         &:focus {
             border-color: $dark-color-link-focus;
         }
+    }
 
-        &.button-success,
-        &.button-danger {
-            &:focus {
-                border-color: $dark-color-link-focus;
-            }
+    .button-success,
+    .button-danger {
+        &:focus {
+            border-color: $dark-color-link-focus;
         }
     }
 }
