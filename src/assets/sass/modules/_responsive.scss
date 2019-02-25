@@ -90,6 +90,30 @@
         }
     }
 
+    /**
+     * Allow two columns of text.
+     */
+
+    .layout-text2col,
+    .layout-text3col,
+    .layout-text4col {
+        column-gap: 2em;
+        column-count: 2;
+
+        :first-child {
+            margin-top: 0;
+        }
+
+        li {
+            page-break-inside: avoid; // Fix Firefox bug.
+            break-inside: avoid;
+        }
+
+        .footnote {
+            display: inline-block;
+        }
+    }
+
 }
 
 
@@ -130,6 +154,15 @@
         .layout-3col-2span {
             width: auto;
         }
+    }
+
+    /**
+     * Allow three columns of text.
+     */
+
+    .layout-text3col,
+    .layout-text4col {
+        column-count: 3;
     }
 
     /**
@@ -272,6 +305,14 @@
         .layout-4col-3span {
             width: auto;
         }
+    }
+
+    /**
+     * Allow four columns of text.
+     */
+
+    .layout-text4col {
+        column-count: 4;
     }
 
 }
