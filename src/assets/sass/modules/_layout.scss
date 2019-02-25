@@ -21,6 +21,7 @@ body {
     position: relative; /* 1 */
     margin: 0; /* 2 */
     background: $color-background-box;
+    scroll-behavior: smooth; // https://caniuse.com/#search=scroll-behavior
 }
 
 @media (prefers-color-scheme: dark) {
