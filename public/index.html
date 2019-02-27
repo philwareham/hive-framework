@@ -246,9 +246,54 @@
                             </ol>
 
                             <h3>Main layout grid</h3>
-                            <p>The main layout grid blocks used for layout throughout a site.</p>
+                            <p>The main layout grid blocks used for layout throughout a site. Requires a parent container with <code>class="layout-container"</code> stated.</p>
 
-                           <div class="layout-container">
+                            <p><strong>Code:</strong></p>
+                            <pre><code class="language-markup">&lt;div class="layout-container"&gt;
+
+    &lt;div class="layout-1col"&gt;Opt1: 1col&lt;/div&gt;
+
+    &lt;div class="layout-2col"&gt;Opt2: 2col cell1&lt;/div&gt;
+    &lt;div class="layout-2col"&gt;Opt2: 2col cell2&lt;/div&gt;
+
+    &lt;div class="layout-3col"&gt;Opt3: 3col cell1&lt;/div&gt;
+    &lt;div class="layout-3col"&gt;Opt3: 3col cell2&lt;/div&gt;
+    &lt;div class="layout-3col"&gt;Opt3: 3col cell3&lt;/div&gt;
+
+    &lt;div class="layout-3col-2span"&gt;Opt4: 3col cell1and2&lt;/div&gt;
+    &lt;div class="layout-3col"&gt;Opt4: 3col cell3&lt;/div&gt;
+
+    &lt;div class="layout-3col"&gt;Opt5: 3col cell1&lt;/div&gt;
+    &lt;div class="layout-3col-2span"&gt;Opt5: 3col cell2and3&lt;/div&gt;
+
+    &lt;div class="layout-4col"&gt;Opt6: 4col cell1&lt;/div&gt;
+    &lt;div class="layout-4col"&gt;Opt6: 4col cell2&lt;/div&gt;
+    &lt;div class="layout-4col"&gt;Opt6: 4col cell3&lt;/div&gt;
+    &lt;div class="layout-4col"&gt;Opt6: 4col cell4&lt;/div&gt;
+
+    &lt;div class="layout-4col-2span"&gt;Opt7: 4col cell1and2&lt;/div&gt;
+    &lt;div class="layout-4col"&gt;Opt7: 4col cell3&lt;/div&gt;
+    &lt;div class="layout-4col"&gt;Opt7: 4col cell4&lt;/div&gt;
+
+    &lt;div class="layout-4col-alt"&gt;Opt8: 4col cell1&lt;/div&gt;
+    &lt;div class="layout-4col-2span"&gt;Opt8: 4col cell2and3&lt;/div&gt;
+    &lt;div class="layout-4col-alt"&gt;Opt8: 4col cell4&lt;/div&gt;
+
+    &lt;div class="layout-4col"&gt;Opt9: 4col cell1&lt;/div&gt;
+    &lt;div class="layout-4col"&gt;Opt9: 4col cell2&lt;/div&gt;
+    &lt;div class="layout-4col-2span"&gt;Opt9: 4col cell3and4&lt;/div&gt;
+
+    &lt;div class="layout-4col-3span"&gt;Opt10: 4col cell1and2and3&lt;/div&gt;
+    &lt;div class="layout-4col-alt"&gt;Opt10: 4col cell4&lt;/div&gt;
+
+    &lt;div class="layout-4col-alt"&gt;Opt11: 4col cell1&lt;/div&gt;
+    &lt;div class="layout-4col-3span"&gt;Opt11: 4col cell2and3and4&lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+
+                            <p><strong>Example:</strong></p>
+
+                            <div class="layout-container">
 
                                 <div class="layout-1col">
                                     <h6 class="design-patterns--box">Opt1: 1col</h6>
