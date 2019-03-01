@@ -146,8 +146,6 @@ span.button {
     [type="submit"],
     a.button,
     span.button {
-        color: $color-text-button;
-
         &:focus {
             border-color: $dark-color-link-focus;
         }
