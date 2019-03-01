@@ -42,7 +42,7 @@ p<>. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam sit amet el
 
 h2. Text-level semantics
 
-The "a element":http://codeispottery.com/ example
+The "a element":https://example.com/ example
 The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples
 The **b element** example
 The ??cite element?? example

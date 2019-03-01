@@ -30,7 +30,7 @@ import Glide from '@glidejs/glide';
 
     // Syntax highlighting, via 'Prism'.
     // Applies syntax highlighting to `code` HTML elements.
-    // More info - http://prismjs.com.
+    // More info - https://prismjs.com.
 
     if (code.length) {
         Prism.highlightAll();
