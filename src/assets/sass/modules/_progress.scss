@@ -11,6 +11,7 @@ progress {
     height: 0.75em;
     margin-right: 0.33em;
     border: 1px solid $color-border;
+    background-color: $color-gradient-to;
     vertical-align: baseline; /* 1 */
     appearance: none;
     box-sizing: border-box;
@@ -143,6 +144,7 @@ progress[value="1"]::-ms-fill {
 @media (prefers-color-scheme: dark) {
     progress {
         border-color: $dark-color-border;
+        background-color: $dark-color-background-box;
     }
 
     // WebKit/Blink.
