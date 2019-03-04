@@ -148,9 +148,9 @@
 
 .glide__bullets {
     position: absolute;
-    bottom: 1em;
+    bottom: 0.75em;
     left: 50%;
-    transform: translate(0, -50%);
+    transform: translate(-50%, -50%);
     list-style: none;
     z-index: 2;
 }
