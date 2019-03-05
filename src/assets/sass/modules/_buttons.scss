@@ -145,12 +145,7 @@ span.button {
     [type="reset"],
     [type="submit"],
     a.button,
-    span.button {
-        &:focus {
-            border-color: $dark-color-link-focus;
-        }
-    }
-
+    span.button,
     .button-success,
     .button-danger {
         &:focus {
