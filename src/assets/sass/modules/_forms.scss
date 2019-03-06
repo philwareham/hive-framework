@@ -170,7 +170,7 @@ textarea {
     }
 
     &:hover {
-        border-color: $color-border-extra-dark;
+        border-color: shade($color-border-extra-dark, 15%);
         cursor: pointer;
     }
 

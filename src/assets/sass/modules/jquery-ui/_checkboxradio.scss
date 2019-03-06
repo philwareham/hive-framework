@@ -28,7 +28,7 @@
     }
 
     &:hover .ui-icon-background {
-        border-color: $color-border-extra-dark;
+        border-color: shade($color-border-extra-dark, 15%);
     }
 
     &.ui-checkboxradio-checked {
