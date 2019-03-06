@@ -55,7 +55,8 @@
 
 @media (prefers-color-scheme: dark) {
     .ui-slider {
-        background-color: $dark-color-background-box;
+        border-color: $dark-color-border-extra-dark;
+        background-color: $dark-color-background-form;
 
         &:hover {
             border-color: $dark-color-border-extra-light;
