@@ -10,12 +10,12 @@ fieldset {
     min-width: 0; /* 1 */
     margin: 1em 0; /* 2 */
     padding: 1px 1em; /* 2 */
-    border: 1px solid $color-border; /* 2 */
+    border: 1px solid $color-border-light; /* 2 */
 }
 
 @media (prefers-color-scheme: dark) {
     fieldset {
-        border-color: $dark-color-border;
+        border-color: $dark-color-border-light;
     }
 }
 
@@ -105,7 +105,7 @@ textarea {
     appearance: none; /* 1 */
 
     &:hover {
-        border-color: shade($color-border, 15%);
+        border-color: $color-border-extra-dark;
     }
 
     &:focus {
@@ -131,11 +131,11 @@ textarea {
     [type="week"],
     select,
     textarea {
-        border-color: $dark-color-border;
+        border-color: $dark-color-border-extra-dark;
         background-color: $dark-color-background-form;
 
         &:hover {
-            border-color: tint($dark-color-border, 15%);
+            border-color: $dark-color-border-extra-light;
         }
 
         &:focus {
@@ -156,7 +156,7 @@ textarea {
     width: 16px;
     height: 16px;
     padding: 0; /* 1 */
-    border: 1px solid shade($color-border, 15%);
+    border: 1px solid $color-border-extra-dark;
     background: $color-background-form;
     appearance: none;
     box-sizing: border-box;
@@ -170,7 +170,7 @@ textarea {
     }
 
     &:hover {
-        border-color: shade($color-border, 30%);
+        border-color: $color-border-extra-dark;
         cursor: pointer;
     }
 
@@ -187,11 +187,11 @@ textarea {
 @media (prefers-color-scheme: dark) {
     [type="checkbox"]:not(.ui-checkboxradio),
     [type="radio"]:not(.ui-checkboxradio) {
-        border-color: tint($dark-color-border, 15%);
+        border-color: $dark-color-border-extra-dark;
         background-color: $dark-color-background-form;
 
         &:hover {
-            border-color: tint($dark-color-border, 30%);
+            border-color: $dark-color-border-extra-light;
         }
 
         &:focus {
@@ -289,7 +289,7 @@ textarea {
     appearance: none;
 
     &:hover {
-        border-color: shade($color-border, 15%);
+        border-color: $color-border-extra-dark;
     }
 
     &:focus {
@@ -300,11 +300,11 @@ textarea {
 
 @media (prefers-color-scheme: dark) {
     [type="file"] {
-        border-color: $dark-color-border;
+        border-color: $dark-color-border-extra-dark;
         background-color: $dark-color-background-form;
 
         &:hover {
-            border-color: tint($dark-color-border, 15%);
+            border-color: $dark-color-border-extra-light;
         }
 
         &:focus {
@@ -382,7 +382,7 @@ textarea {
 }
 
 [type="range"]:hover::-webkit-slider-thumb {
-    border-color: shade($color-border, 15%);
+    border-color: $color-border-extra-dark;
 }
 
 [type="range"]:active::-webkit-slider-thumb,
@@ -400,7 +400,7 @@ textarea {
 }
 
 [type="range"]:hover::-webkit-slider-runnable-track {
-    border-color: shade($color-border, 15%);
+    border-color: $color-border-extra-dark;
 }
 
 [type="range"]:active::-webkit-slider-runnable-track,
@@ -419,7 +419,7 @@ textarea {
     [type="range"]:hover::-webkit-slider-thumb {
         @include gradient-linear(lighten($color-button-gradient-from, 4%), lighten($color-button-gradient-to, 4%));
 
-        border-color: tint($dark-color-border, 15%);
+        border-color: $dark-color-border-extra-light;
     }
 
     [type="range"]:active::-webkit-slider-thumb,
@@ -428,12 +428,12 @@ textarea {
     }
 
     [type="range"]::-webkit-slider-runnable-track {
-        border-color: $dark-color-border;
-        background-color: $dark-color-background-box;
+        border-color: $dark-color-border-extra-dark;
+        background-color: $dark-color-background-form;
     }
 
     [type="range"]:hover::-webkit-slider-runnable-track {
-        border-color: tint($dark-color-border, 15%);
+        border-color: $dark-color-border-extra-light;
     }
 
     [type="range"]:active::-webkit-slider-runnable-track,
@@ -457,7 +457,7 @@ textarea {
 }
 
 [type="range"]:hover::-moz-range-thumb {
-    border-color: shade($color-border, 15%);
+    border-color: $color-border-extra-dark;
 }
 
 [type="range"]:focus::-moz-range-thumb {
@@ -474,7 +474,7 @@ textarea {
 }
 
 [type="range"]:hover::-moz-range-track {
-    border-color: shade($color-border, 15%);
+    border-color: $color-border-extra-dark;
 }
 
 [type="range"]:focus::-moz-range-track {
@@ -496,7 +496,7 @@ textarea {
     [type="range"]:hover::-moz-range-thumb {
         @include gradient-linear(lighten($color-button-gradient-from, 4%), lighten($color-button-gradient-to, 4%));
 
-        border-color: tint($dark-color-border, 15%);
+        border-color: $dark-color-border-extra-light;
     }
 
     [type="range"]:focus::-moz-range-thumb {
@@ -504,12 +504,12 @@ textarea {
     }
 
     [type="range"]::-moz-range-track {
-        border-color: $dark-color-border;
-        background-color: $dark-color-background-box;
+        border-color: $dark-color-border-extra-dark;
+        background-color: $dark-color-background-form;
     }
 
     [type="range"]:hover::-moz-range-track {
-        border-color: tint($dark-color-border, 15%);
+        border-color: $dark-color-border-extra-light;
     }
 
     [type="range"]:focus::-moz-range-track {
@@ -533,7 +533,7 @@ textarea {
 }
 
 [type="range"]:hover::-ms-thumb {
-    border-color: shade($color-border, 15%);
+    border-color: $color-border-extra-dark;
 }
 
 [type="range"]:focus::-ms-thumb {
@@ -550,7 +550,7 @@ textarea {
 }
 
 [type="range"]:hover::-ms-track {
-    border-color: shade($color-border, 15%);
+    border-color: $color-border-extra-dark;
 }
 
 [type="range"]:focus::-ms-track {
@@ -568,7 +568,7 @@ textarea {
     [type="range"]:hover::-ms-thumb {
         @include gradient-linear(lighten($color-button-gradient-from, 4%), lighten($color-button-gradient-to, 4%));
 
-        border-color: tint($dark-color-border, 15%);
+        border-color: $dark-color-border-extra-light;
     }
 
     [type="range"]:focus::-ms-thumb {
@@ -576,12 +576,12 @@ textarea {
     }
 
     [type="range"]::-ms-track {
-        border-color: $dark-color-border;
-        background-color: $dark-color-background-box;
+        border-color: $dark-color-border-extra-dark;
+        background-color: $dark-color-background-form;
     }
 
     [type="range"]:hover::-ms-track {
-        border-color: tint($dark-color-border, 15%);
+        border-color: $dark-color-border-extra-light;
     }
 
     [type="range"]:focus::-ms-track {

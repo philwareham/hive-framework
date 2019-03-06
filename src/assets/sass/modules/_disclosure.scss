@@ -33,7 +33,7 @@ summary {
 
     &:hover,
     &:active {
-        outline: 1px solid shade($color-border, 15%);
+        outline: 1px solid $color-border-extra-dark;
     }
 
     &:focus {
@@ -54,7 +54,7 @@ summary {
 
         &:hover,
         &:active {
-            outline: 1px solid tint($dark-color-border, 15%);
+            outline: 1px solid $dark-color-border-extra-light;
         }
 
         &:focus {

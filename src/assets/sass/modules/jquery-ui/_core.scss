@@ -161,13 +161,13 @@ a.ui-state-default:focus {
  */
 
 .ui-state-hover {
-    border-color: shade($color-border, 15%);
+    border-color: $color-border-extra-dark;
     background-color: $color-background-box;
 }
 
 @media (prefers-color-scheme: dark) {
     .ui-state-hover {
-        border-color: tint($dark-color-border, 15%);
+        border-color: $dark-color-border-extra-light;
         background-color: tint($dark-color-background-box, 5%);
     }
 }

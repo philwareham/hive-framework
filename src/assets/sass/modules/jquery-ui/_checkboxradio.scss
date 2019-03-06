@@ -22,13 +22,13 @@
 
 .ui-checkboxradio-label {
     .ui-icon-background {
-        border: 1px solid shade($color-border, 15%);
+        border: 1px solid $color-border-extra-dark;
         background-color: $color-background-form;
         box-sizing: border-box;
     }
 
     &:hover .ui-icon-background {
-        border-color: shade($color-border, 30%);
+        border-color: $color-border-extra-dark;
     }
 
     &.ui-checkboxradio-checked {

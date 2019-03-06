@@ -23,10 +23,10 @@
     box-sizing: border-box;
 
     &:hover {
-        border-color: shade($color-border, 15%);
+        border-color: $color-border-extra-dark;
 
         .ui-slider-handle {
-            border-color: shade($color-border, 15%);
+            border-color: $color-border-extra-dark;
         }
     }
 
@@ -58,10 +58,10 @@
         background-color: $dark-color-background-box;
 
         &:hover {
-            border-color: tint($dark-color-border, 15%);
+            border-color: $dark-color-border-extra-light;
 
             .ui-slider-handle {
-                border-color: tint($dark-color-border, 15%);
+                border-color: $dark-color-border-extra-light;
             }
         }
 

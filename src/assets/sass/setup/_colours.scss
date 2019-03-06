@@ -71,10 +71,16 @@ $dark-color-highlight-box:            #59563d !default;
 // border colours
 
 $color-border:                        #cccccc !default;
-$color-border-light:                  #d4d4d4 !default;
+$color-border-light:                  tint($color-border, 7%) !default;
+$color-border-extra-light:            tint($color-border, 14%) !default;
+$color-border-dark:                   shade($color-border, 7%) !default;
+$color-border-extra-dark:             shade($color-border, 14%) !default;
 
 $dark-color-border:                   tint($dark-color-background, 36%) !default;
 $dark-color-border-light:             tint($dark-color-background, 24%) !default;
+$dark-color-border-extra-light:       tint($dark-color-background, 12%) !default;
+$dark-color-border-dark:              shade($dark-color-background, 12%) !default;
+$dark-color-border-extra-dark:        shade($dark-color-background, 75%) !default;
 
 // button colours
 
