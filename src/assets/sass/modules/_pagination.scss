@@ -82,7 +82,7 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .paginator {
         border-top-color: $dark-color-border;
     }

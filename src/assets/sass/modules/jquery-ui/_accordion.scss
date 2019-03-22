@@ -62,7 +62,7 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .ui-accordion .ui-accordion-header a {
         color: $dark-color-text;
     }

@@ -31,7 +31,7 @@
     z-index: 100;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .ui-selectable-helper {
         border-color: $dark-color-link;
     }

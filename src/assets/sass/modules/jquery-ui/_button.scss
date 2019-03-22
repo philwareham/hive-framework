@@ -63,7 +63,7 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .ui-button {
         color: $color-text-button;
 
@@ -82,7 +82,7 @@ a.ui-button {
     text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     a.ui-button {
         color: $color-text-button;
     }
@@ -98,7 +98,7 @@ a.ui-button {
     border-color: $color-link-focus !important; /* 1 */
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .ui-button.ui-state-focus {
         border-color: $dark-color-link-focus !important; /* 1 */
     }

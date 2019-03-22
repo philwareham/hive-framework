@@ -53,7 +53,7 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .ui-slider {
         border-color: $dark-color-border-extra-dark;
         background-color: $dark-color-background-form;

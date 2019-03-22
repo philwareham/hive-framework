@@ -28,7 +28,7 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .comments {
         background: $dark-color-background-box;
     }
@@ -46,7 +46,7 @@
     background: shade($color-background-box, 4%);
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .comments-author {
         background: tint($dark-color-background-box, 5%);
     }
@@ -71,7 +71,7 @@
     color: $color-error-text;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .error_message li {
         color: $dark-color-error-text;
     }
@@ -85,7 +85,7 @@
     border-color: $color-error-text;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .comments_error {
         border-color: $dark-color-error-text;
     }

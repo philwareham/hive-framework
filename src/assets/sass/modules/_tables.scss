@@ -148,7 +148,7 @@ tfoot {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .table--bordered {
         th,
         td {

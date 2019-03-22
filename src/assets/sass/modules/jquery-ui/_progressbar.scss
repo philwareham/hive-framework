@@ -65,7 +65,7 @@
     );
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .ui-progressbar {
         background-color: $dark-color-background-box;
     }

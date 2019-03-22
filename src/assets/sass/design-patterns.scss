@@ -102,7 +102,7 @@ $dark-colors: (
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .design-patterns--color {
         border-color: $dark-color-border;
 
@@ -122,7 +122,7 @@ $dark-colors: (
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     @each $name, $color in $dark-colors {
         .design-patterns--color-#{$name} {
             background: $color;

@@ -1,3 +1,19 @@
+// Dark Mode shorthand.
+
+@mixin dark-mode {
+    @media (prefers-color-scheme: dark) {
+        @content;
+    }
+}
+
+// Light Mode shorthand.
+
+@mixin light-mode {
+    @media (prefers-color-scheme: light) {
+        @content;
+    }
+}
+
 // higher resolution background images for high resolution displays
 
 @mixin hires-graphic($hdfile, $hdtype, $hdwidth, $hdheight) {

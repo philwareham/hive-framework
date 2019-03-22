@@ -210,7 +210,7 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .ui-datepicker {
         box-shadow: $dark-standard-shadow;
 

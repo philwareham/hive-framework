@@ -48,7 +48,7 @@ meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
     background: $color-error-text;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     meter {
         border-color: $dark-color-border;
         background: $dark-color-background-box;

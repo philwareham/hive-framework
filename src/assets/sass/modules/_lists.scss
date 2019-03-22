@@ -30,7 +30,7 @@ li::marker {
     color: color-text-heading;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     li::marker {
         color: $dark-color-text-heading;
     }
@@ -98,7 +98,7 @@ dt {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .article-list {
         border-top-color: $dark-color-border;
 

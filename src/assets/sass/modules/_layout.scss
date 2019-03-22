@@ -22,7 +22,7 @@ body {
     scroll-behavior: smooth; // https://caniuse.com/#search=scroll-behavior
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     body {
         background: $dark-color-background-box;
     }
@@ -63,7 +63,7 @@ body {
     background: $color-background;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .wrapper {
         border-top-color: $dark-color-border-extra-dark;
         border-bottom-color: $dark-color-border-extra-dark;

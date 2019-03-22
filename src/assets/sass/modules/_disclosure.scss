@@ -41,7 +41,7 @@ summary {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     details {
         &[open] {
             outline: 1px solid $dark-color-border;

@@ -94,7 +94,7 @@
     background-color: $color-background;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .ui-widget-content {
         border-color: $dark-color-border;
         background-color: $dark-color-background;
@@ -111,7 +111,7 @@
     font-weight: bold;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .ui-widget-header {
         @include gradient-linear($dark-color-gradient-to, $dark-color-gradient-from);
     }
@@ -131,7 +131,7 @@
     color: $color-text;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .ui-state-default {
         border-color: $dark-color-border;
         background-color: $dark-color-background-box;
@@ -149,7 +149,7 @@ a.ui-state-default:focus {
     text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     a.ui-state-default:hover,
     a.ui-state-default:focus {
         color: $dark-color-text;
@@ -165,7 +165,7 @@ a.ui-state-default:focus {
     background-color: $color-background-box;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .ui-state-hover {
         border-color: $dark-color-border-extra-light;
         background-color: tint($dark-color-background-box, 5%);
@@ -185,7 +185,7 @@ a.ui-state-default:focus {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .ui-state-focus {
         border-color: $dark-color-link-focus;
     }
@@ -199,7 +199,7 @@ a.ui-state-default:focus {
     background-color: $color-background;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .ui-state-active {
         background-color: $dark-color-gradient-from;
     }
@@ -213,7 +213,7 @@ a.ui-state-default:focus {
     background-color: $color-selecting;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .ui-selecting {
         background-color: $dark-color-selecting;
     }
@@ -227,7 +227,7 @@ a.ui-state-default:focus {
     background-color: $color-selected;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .ui-selected {
         background-color: $dark-color-selected;
     }
@@ -246,7 +246,7 @@ a.ui-state-default:focus {
     background-color: $color-warning-background;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .ui-state-highlight {
         border-color: $dark-color-warning-border;
         background-color: $dark-color-warning-background;
@@ -263,7 +263,7 @@ a.ui-state-default:focus {
     color: $color-error-text;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .ui-state-error {
         border-color: $dark-color-error-border;
         background-color: $dark-color-error-background;
@@ -304,7 +304,7 @@ a.ui-state-default:focus {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .ui-state-disabled:not(.ui-button) {
         opacity: 0.25;
     }
@@ -331,7 +331,7 @@ a.ui-state-default:focus {
     background: rgba(#000000, 0.75);
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .ui-widget-overlay {
         background: rgba(#000000, 0.66);
     }
@@ -353,7 +353,7 @@ a.ui-state-default:focus {
     box-shadow: $standard-shadow;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .ui-widget-shadow {
         box-shadow: $dark-standard-shadow;
     }

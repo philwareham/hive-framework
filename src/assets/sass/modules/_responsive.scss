@@ -195,7 +195,7 @@
         }
     }
 
-    @media (prefers-color-scheme: dark) {
+    @include dark-mode {
         #site-navigation {
             border-top-color: shade($dark-color-background-form, 15%);
 

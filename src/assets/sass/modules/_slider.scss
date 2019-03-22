@@ -204,7 +204,7 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .glide__arrow {
         background: $dark-color-text;
 
