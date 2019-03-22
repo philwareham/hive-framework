@@ -1,3 +1,19 @@
+// TODO when browser support is univeral (when we ditch IE 11).
+//
+// :root {
+//     --bgColor: $color-background;
+//     --textColor: $color-text;
+// }
+//
+// @media (prefers-color-scheme: dark) {
+//     :root {
+//         --bgColor: $dark-color-background;
+//         --textColor: $dark-color-text;;
+//     }
+// }
+// etc...
+
+
 // slightly lighten a colour
 @function tint($color, $percentage) {
     @return mix(white, $color, $percentage);

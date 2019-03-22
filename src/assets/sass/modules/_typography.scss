@@ -17,6 +17,7 @@ html {
  */
 
 body {
+    // color: var(--textColor); TODO when browser support allows
     color: $color-text;
     font-family: $font-serif;
     font-feature-settings: "liga"; /* 1 */
