@@ -23,7 +23,7 @@ import Glide from '@glidejs/glide';
 
     // Load objects as variables.
 
-    var code = document.querySelectorAll('code[class*="language-"], [class*="language-"] code'),
+    const code = document.querySelectorAll('code[class*="language-"], [class*="language-"] code'),
         fields = document.querySelectorAll('textarea'),
         navmenu = document.getElementById('site-navigation'),
         slider = document.querySelectorAll('.glide');
@@ -66,6 +66,11 @@ import Glide from '@glidejs/glide';
         }).mount();
     }
 
+    // Dark Mode.
+
+    var isDark = window.matchMedia('screen and (prefers-color-scheme: dark)'),
+        bodyClass = document.querySelector('body');
+
     // Specific dark and light images.
     // Example:
     // <img src="assets/img/feature.png"
@@ -96,6 +101,10 @@ import Glide from '@glidejs/glide';
     function toggleDarkMode(isDark)
     {
         if (isDark.matches) {
+            //if (!bodyClass.classList.contains('darkmode')) {
+            //    bodyClass.classList.add('darkmode');
+            //}
+
             makeImagesDark();
 
             console.log("In Dark Mode");
@@ -106,30 +115,37 @@ import Glide from '@glidejs/glide';
         }
     }
 
-    var isDark = window.matchMedia('screen and (prefers-color-scheme: dark)');
     toggleDarkMode(isDark);
     isDark.addListener(toggleDarkMode);
+
+    // Check localStorage for Dark Mode preference.
+
+    if (localStorage.getItem('prefers-color-scheme') === 'dark') {
+        bodyClass.classList.add('darkmode');
+        makeImagesDark();
+    } else if (localStorage.getItem('prefers-color-scheme') === 'light') {
+        bodyClass.classList.remove('darkmode');
+    } else if (isDark.matches) {
+        if (!bodyClass.classList.contains('darkmode')) {
+            bodyClass.classList.add('darkmode');
+        }
+    }
 
     // Switch between Dark Mode/Light Mode manually.
 
     $('#lightswitch').on('click', function()
     {
-        if ($('body').hasClass('darkmode')) {
-            document.querySelector('body').classList.remove('darkmode');
+        if (bodyClass.classList.contains('darkmode')) {
+            bodyClass.classList.remove('darkmode');
             makeImagesLight();
-            localStorage.removeItem('prefers-color-scheme', 'dark');
+            localStorage.setItem('prefers-color-scheme', 'light');
             return false;
         } else {
-            document.querySelector('body').classList.add('darkmode');
+            bodyClass.classList.add('darkmode');
             makeImagesDark();
             localStorage.setItem('prefers-color-scheme', 'dark');
             return false;
         }
     });
-
-    if (localStorage.getItem('prefers-color-scheme') === 'dark') {
-        document.querySelector('body').classList.add('darkmode');
-        makeImagesDark();
-    }
 
 })();
