@@ -101,10 +101,6 @@ import Glide from '@glidejs/glide';
     function toggleDarkMode(isDark)
     {
         if (isDark.matches) {
-            //if (!bodyClass.classList.contains('darkmode')) {
-            //    bodyClass.classList.add('darkmode');
-            //}
-
             makeImagesDark();
 
             console.log("In Dark Mode");
