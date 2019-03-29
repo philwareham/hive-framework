@@ -131,14 +131,6 @@ import Glide from '@glidejs/glide';
     if (localStorage.getItem('prefers-color-scheme') === 'dark') {
         makeImagesDark();
         console.log("In Dark Mode via localStorage");
-    } else if (localStorage.getItem('prefers-color-scheme') === 'light') {
-        bodyClass.classList.remove('darkmode');
-        console.log("In Light Mode via localStorage");
-    } else if (isDark.matches) {
-        if (!bodyClass.classList.contains('darkmode')) {
-            makeImagesDark();
-            console.log("In Dark Mode via localStorage empty and isDark");
-        }
     }
 
     // Switch between Dark Mode/Light Mode manually.
