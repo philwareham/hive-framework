@@ -73,6 +73,21 @@ span.button {
     }
 }
 
+@include dark-mode {
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"],
+    a.button,
+    span.button {
+        color: $color-text-button;
+
+        &:focus {
+            border-color: $dark-color-link-focus;
+        }
+    }
+}
+
 /**
  * Success buttons.
  *
@@ -140,14 +155,10 @@ span.button {
 }
 
 @include dark-mode {
-    button,
-    [type="button"],
-    [type="reset"],
-    [type="submit"],
-    a.button,
-    span.button,
     .button-success,
     .button-danger {
+        color: $color-text-white-out;
+
         &:focus {
             border-color: $dark-color-link-focus;
         }
@@ -165,4 +176,14 @@ button[disabled],
 .button.disabled {
     top: 0 !important;
     background: $color-background-form-disabled !important;
+}
+
+@include dark-mode {
+    button[disabled],
+    [type="button"][disabled],
+    [type="reset"][disabled],
+    [type="submit"][disabled],
+    .button.disabled {
+        background: $color-background-form-disabled !important;
+    }
 }

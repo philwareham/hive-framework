@@ -649,15 +649,8 @@ select::-ms-expand {
  */
 
 optgroup {
-    color: $color-text-form;
     font-style: normal;
     font-weight: bold;
-}
-
-@include dark-mode {
-    optgroup {
-        color: $dark-color-text-form;
-    }
 }
 
 /**
