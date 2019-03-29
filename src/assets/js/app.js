@@ -88,7 +88,7 @@ import Glide from '@glidejs/glide';
             $(this).attr('srcset', $(this).attr('data-dark-srcset'));
         });
 
-        console.log("In Dark Mode");
+        console.log("In Dark Mode IMGs");
     }
 
     function makeImagesLight()
@@ -98,7 +98,7 @@ import Glide from '@glidejs/glide';
             $(this).attr('srcset', $(this).attr('data-light-srcset'));
         });
 
-        console.log("In Light Mode");
+        console.log("In Light Mode IMGs");
     }
 
     // Detect Dark Mode/Light Mode.
@@ -107,8 +107,10 @@ import Glide from '@glidejs/glide';
     {
         if (isDark.matches) {
             makeImagesDark();
+            console.log("In Dark Mode via isDark");
         } else {
             makeImagesLight();
+            console.log("In Light Mode via isDark");
         }
     }
 
