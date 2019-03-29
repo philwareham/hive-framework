@@ -101,7 +101,7 @@ import Glide from '@glidejs/glide';
         console.log("In Light Mode IMGs");
     }
 
-    // Detect Dark Mode/Light Mode (but only if no localStorage preference).
+    // Detect and change Dark Mode/Light Mode (but only if no localStorage preference).
 
     function toggleDarkMode(isDark)
     {
@@ -111,8 +111,11 @@ import Glide from '@glidejs/glide';
                 makeImagesDark();
                 console.log("In Dark Mode via localStorage null and isDark");
             } else {
-                bodyClass.classList.remove('darkmode');
-                makeImagesLight();
+                if (bodyClass.classList.contains('darkmode')) {
+                    makeImagesLight();
+                    bodyClass.classList.remove('darkmode');
+                }
+
                 console.log("In Light Mode via localStorage null and isDark");
             }
         }
@@ -121,7 +124,7 @@ import Glide from '@glidejs/glide';
     toggleDarkMode(isDark);
     isDark.addListener(toggleDarkMode);
 
-    // Check localStorage for Dark Mode preference.
+    // Check localStorage for Dark Mode/Light Mode preference.
 
     if (localStorage.getItem('prefers-color-scheme') === 'dark') {
         bodyClass.classList.add('darkmode');
