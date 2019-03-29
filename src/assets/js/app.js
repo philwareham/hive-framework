@@ -92,8 +92,8 @@ import Glide from '@glidejs/glide';
         //});
 
         $('img.prefers-color-scheme').each(function() {
-            $(this).attr('src', $(this).attr('data-dark-src'));
-            $(this).attr('srcset', $(this).attr('data-dark-srcset'));
+            $(this).attr('src', $(this).attr('data-src-dark'));
+            $(this).attr('srcset', $(this).attr('data-srcset-dark'));
         });
 
         console.log("In Dark Mode IMGs");
@@ -104,8 +104,8 @@ import Glide from '@glidejs/glide';
         bodyClass.classList.remove('darkmode');
 
         $('img.prefers-color-scheme').each(function() {
-            $(this).attr('src', $(this).attr('data-light-src'));
-            $(this).attr('srcset', $(this).attr('data-light-srcset'));
+            $(this).attr('src', $(this).attr('data-src-light'));
+            $(this).attr('srcset', $(this).attr('data-srcset-light'));
         });
 
         console.log("In Light Mode IMGs");
