@@ -69,12 +69,14 @@ import Glide from '@glidejs/glide';
     // Dark Mode.
 
     var bodyClass = document.querySelector('body'),
+        //imgPrefers = document.querySelectorAll('img.prefers-color-scheme'),
         isDark = window.matchMedia('screen and (prefers-color-scheme: dark)'),
         lightSwitch = document.getElementById('lightswitch');
 
     // Specific dark and light images.
     // Example:
-    // <img src="assets/img/feature.png"
+    // <img class="prefers-color-scheme"
+    //     src="assets/img/feature.png"
     //     data-src-light="assets/img/example.png"
     //     data-src-dark="assets/img/example-dark.png"
     //     srcset="assets/img/example@2x.png 2x"
@@ -84,6 +86,10 @@ import Glide from '@glidejs/glide';
     function makeImagesDark()
     {
         bodyClass.classList.add('darkmode');
+
+        //imgPrefers.forEach(function(element) {
+            // TODO
+        //});
 
         $('img.prefers-color-scheme').each(function() {
             $(this).attr('src', $(this).attr('data-dark-src'));
