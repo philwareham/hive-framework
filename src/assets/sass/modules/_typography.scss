@@ -24,9 +24,9 @@ body {
 }
 
 @include dark-mode {
-    body {
-        color: $dark-color-text;
-    }
+    //body {
+    color: $dark-color-text;
+    //}
 }
 
 /**

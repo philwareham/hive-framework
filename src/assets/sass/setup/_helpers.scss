@@ -1,7 +1,8 @@
 // Dark Mode shorthand.
 
 @mixin dark-mode {
-    @media (prefers-color-scheme: dark) {
+    //@media (prefers-color-scheme: dark) {
+    body.darkmode {
         @content;
     }
 }
