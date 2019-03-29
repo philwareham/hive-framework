@@ -95,8 +95,6 @@ import Glide from '@glidejs/glide';
             $(this).attr('src', $(this).attr('data-src-dark'));
             $(this).attr('srcset', $(this).attr('data-srcset-dark'));
         });
-
-        console.log("In Dark Mode IMGs");
     }
 
     function makeImagesLight()
@@ -107,8 +105,6 @@ import Glide from '@glidejs/glide';
             $(this).attr('src', $(this).attr('data-src-light'));
             $(this).attr('srcset', $(this).attr('data-srcset-light'));
         });
-
-        console.log("In Light Mode IMGs");
     }
 
     // Detect and change Dark Mode/Light Mode (but only if no localStorage preference).
@@ -118,13 +114,10 @@ import Glide from '@glidejs/glide';
         if (localStorage.getItem('prefers-color-scheme') === null) {
             if (isDark.matches) {
                 makeImagesDark();
-                console.log("In Dark Mode via localStorage null and isDark");
             } else {
                 if (bodyClass.classList.contains('darkmode')) {
                     makeImagesLight();
                 }
-
-                console.log("In Light Mode via localStorage null and isDark");
             }
         }
     }
@@ -136,7 +129,6 @@ import Glide from '@glidejs/glide';
 
     if (localStorage.getItem('prefers-color-scheme') === 'dark') {
         makeImagesDark();
-        console.log("In Dark Mode via localStorage");
     }
 
     // Switch between Dark Mode/Light Mode manually.
@@ -146,11 +138,9 @@ import Glide from '@glidejs/glide';
         if (bodyClass.classList.contains('darkmode')) {
             makeImagesLight();
             localStorage.setItem('prefers-color-scheme', 'light');
-            console.log("In Light Mode via lightswitch");
         } else {
             makeImagesDark();
             localStorage.setItem('prefers-color-scheme', 'dark');
-            console.log("In Dark Mode via lightswitch");
         }
 
         e.preventDefault();
