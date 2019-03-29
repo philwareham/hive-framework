@@ -42,7 +42,6 @@
 
         li {
             margin: 2px 0 0;
-            border: 1px solid $color-border-light;
             list-style: none;
 
             &.ui-tabs-active .ui-tabs-anchor,
@@ -77,9 +76,7 @@
 @include dark-mode {
     .ui-tabs {
         .ui-tabs-nav {
-            li {
-                border-color: $dark-color-border-light;
-            }
+            background: $dark-color-background;
 
             .ui-tabs-anchor {
                 color: $dark-color-text;

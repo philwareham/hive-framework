@@ -133,7 +133,7 @@
 
 @include dark-mode {
     .ui-state-default {
-        border-color: $dark-color-border;
+        border-color: $dark-color-border-light;
         background-color: $dark-color-background-box;
         color: $dark-color-text;
     }
@@ -167,7 +167,7 @@ a.ui-state-default:focus {
 
 @include dark-mode {
     .ui-state-hover {
-        border-color: $dark-color-border-extra-light;
+        border-color: $dark-color-border;
         background-color: tint($dark-color-background-box, 5%);
     }
 }
@@ -196,11 +196,13 @@ a.ui-state-default:focus {
  */
 
 .ui-state-active {
+    border-color: $color-border;
     background-color: $color-background;
 }
 
 @include dark-mode {
     .ui-state-active {
+        border-color: $dark-color-border;
         background-color: $dark-color-gradient-from;
     }
 }
