@@ -83,6 +83,8 @@ import Glide from '@glidejs/glide';
 
     function makeImagesDark()
     {
+        bodyClass.classList.add('darkmode');
+
         $('img.prefers-color-scheme').each(function() {
             $(this).attr('src', $(this).attr('data-dark-src'));
             $(this).attr('srcset', $(this).attr('data-dark-srcset'));
@@ -93,6 +95,8 @@ import Glide from '@glidejs/glide';
 
     function makeImagesLight()
     {
+        bodyClass.classList.remove('darkmode');
+
         $('img.prefers-color-scheme').each(function() {
             $(this).attr('src', $(this).attr('data-light-src'));
             $(this).attr('srcset', $(this).attr('data-light-srcset'));
@@ -107,13 +111,11 @@ import Glide from '@glidejs/glide';
     {
         if (localStorage.getItem('prefers-color-scheme') === null) {
             if (isDark.matches) {
-                bodyClass.classList.add('darkmode');
                 makeImagesDark();
                 console.log("In Dark Mode via localStorage null and isDark");
             } else {
                 if (bodyClass.classList.contains('darkmode')) {
                     makeImagesLight();
-                    bodyClass.classList.remove('darkmode');
                 }
 
                 console.log("In Light Mode via localStorage null and isDark");
@@ -127,7 +129,6 @@ import Glide from '@glidejs/glide';
     // Check localStorage for Dark Mode/Light Mode preference.
 
     if (localStorage.getItem('prefers-color-scheme') === 'dark') {
-        bodyClass.classList.add('darkmode');
         makeImagesDark();
         console.log("In Dark Mode via localStorage");
     } else if (localStorage.getItem('prefers-color-scheme') === 'light') {
@@ -135,7 +136,6 @@ import Glide from '@glidejs/glide';
         console.log("In Light Mode via localStorage");
     } else if (isDark.matches) {
         if (!bodyClass.classList.contains('darkmode')) {
-            bodyClass.classList.add('darkmode');
             makeImagesDark();
             console.log("In Dark Mode via localStorage empty and isDark");
         }
@@ -147,14 +147,10 @@ import Glide from '@glidejs/glide';
     {
         if (bodyClass.classList.contains('darkmode')) {
             makeImagesLight();
-            bodyClass.classList.remove('darkmode');
-
             localStorage.setItem('prefers-color-scheme', 'light');
             console.log("In Light Mode via lightswitch");
         } else {
             makeImagesDark();
-            bodyClass.classList.add('darkmode');
-
             localStorage.setItem('prefers-color-scheme', 'dark');
             console.log("In Dark Mode via lightswitch");
         }
