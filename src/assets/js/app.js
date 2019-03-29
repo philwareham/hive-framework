@@ -69,7 +69,7 @@ import Glide from '@glidejs/glide';
     // Dark Mode.
 
     var bodyClass = document.querySelector('body'),
-        //imgPrefers = document.querySelectorAll('img.prefers-color-scheme'),
+        imgPrefers = document.querySelectorAll('img.prefers-color-scheme'),
         isDark = window.matchMedia('screen and (prefers-color-scheme: dark)'),
         lightSwitch = document.getElementById('lightswitch');
 
@@ -87,24 +87,30 @@ import Glide from '@glidejs/glide';
     {
         bodyClass.classList.add('darkmode');
 
-        //imgPrefers.forEach(function(element) {
-            // TODO
-        //});
+        for (var i = 0; i < imgPrefers.length; i++) {
+            if (imgPrefers[i].getAttribute('data-src-dark')) {
+                imgPrefers[i].setAttribute('src', imgPrefers[i].getAttribute('data-src-dark'));
+            }
 
-        $('img.prefers-color-scheme').each(function() {
-            $(this).attr('src', $(this).attr('data-src-dark'));
-            $(this).attr('srcset', $(this).attr('data-srcset-dark'));
-        });
+            if (imgPrefers[i].getAttribute('data-srcset-dark')) {
+                imgPrefers[i].setAttribute('srcset', imgPrefers[i].getAttribute('data-srcset-dark'));
+            }
+        }
     }
 
     function makeImagesLight()
     {
         bodyClass.classList.remove('darkmode');
 
-        $('img.prefers-color-scheme').each(function() {
-            $(this).attr('src', $(this).attr('data-src-light'));
-            $(this).attr('srcset', $(this).attr('data-srcset-light'));
-        });
+        for (var i = 0; i < imgPrefers.length; i++) {
+            if (imgPrefers[i].getAttribute('data-src-light')) {
+                imgPrefers[i].setAttribute('src', imgPrefers[i].getAttribute('data-src-light'));
+            }
+
+            if (imgPrefers[i].getAttribute('data-srcset-light')) {
+                imgPrefers[i].setAttribute('srcset', imgPrefers[i].getAttribute('data-srcset-light'));
+            }
+        }
     }
 
     // Detect and change Dark Mode/Light Mode (but only if no localStorage preference).
