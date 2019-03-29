@@ -124,6 +124,7 @@ import Glide from '@glidejs/glide';
     } else if (isDark.matches) {
         if (!bodyClass.classList.contains('darkmode')) {
             bodyClass.classList.add('darkmode');
+            makeImagesDark();
         }
     }
 
