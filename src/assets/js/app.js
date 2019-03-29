@@ -13,7 +13,7 @@ import autosize from 'autosize';
 
 import Glide from '@glidejs/glide';
 
-(function ()
+(function()
 {
     'use strict';
 
@@ -68,8 +68,9 @@ import Glide from '@glidejs/glide';
 
     // Dark Mode.
 
-    var isDark = window.matchMedia('screen and (prefers-color-scheme: dark)'),
-        bodyClass = document.querySelector('body');
+    var bodyClass = document.querySelector('body'),
+        isDark = window.matchMedia('screen and (prefers-color-scheme: dark)'),
+        lightSwitch = document.getElementById('lightswitch');
 
     // Specific dark and light images.
     // Example:
@@ -86,6 +87,8 @@ import Glide from '@glidejs/glide';
             $(this).attr('src', $(this).attr('data-dark-src'));
             $(this).attr('srcset', $(this).attr('data-dark-srcset'));
         });
+
+        console.log("In Dark Mode");
     }
 
     function makeImagesLight()
@@ -94,6 +97,8 @@ import Glide from '@glidejs/glide';
             $(this).attr('src', $(this).attr('data-light-src'));
             $(this).attr('srcset', $(this).attr('data-light-srcset'));
         });
+
+        console.log("In Light Mode");
     }
 
     // Detect Dark Mode/Light Mode.
@@ -102,12 +107,8 @@ import Glide from '@glidejs/glide';
     {
         if (isDark.matches) {
             makeImagesDark();
-
-            console.log("In Dark Mode");
         } else {
             makeImagesLight();
-
-            console.log("In Light Mode");
         }
     }
 
@@ -130,19 +131,23 @@ import Glide from '@glidejs/glide';
 
     // Switch between Dark Mode/Light Mode manually.
 
-    $('#lightswitch').on('click', function()
+    lightSwitch.addEventListener('click', function(e)
     {
         if (bodyClass.classList.contains('darkmode')) {
-            bodyClass.classList.remove('darkmode');
             makeImagesLight();
+            bodyClass.classList.remove('darkmode');
+
             localStorage.setItem('prefers-color-scheme', 'light');
-            return false;
+            console.log("In Light Mode via lightswitch");
         } else {
-            bodyClass.classList.add('darkmode');
             makeImagesDark();
+            bodyClass.classList.add('darkmode');
+
             localStorage.setItem('prefers-color-scheme', 'dark');
-            return false;
+            console.log("In Dark Mode via lightswitch");
         }
+
+        e.preventDefault();
     });
 
 })();
