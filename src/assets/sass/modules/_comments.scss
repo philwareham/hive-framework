@@ -26,11 +26,25 @@
             font-weight: normal;
         }
     }
+
+    code,
+    kbd,
+    pre,
+    samp {
+        background: $color-background;
+    }
 }
 
 @include dark-mode {
     .comments {
         background: $dark-color-background-box;
+
+        code,
+        kbd,
+        pre,
+        samp {
+            background: $dark-color-background-form;
+        }
     }
 }
 
@@ -61,6 +75,12 @@
     padding: 1em;
     border-radius: $border-radius;
     background-color: $color-highlight-box;
+}
+
+@include dark-mode {
+    #cpreview {
+        background-color: $dark-color-highlight-box;
+    }
 }
 
 /**
