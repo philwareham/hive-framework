@@ -795,12 +795,12 @@ textarea {
  */
 
 abbr.required {
-    color: $color-error-text;
+    color: $color-warning-text;
     text-decoration: none;
 }
 
 @include dark-mode {
     abbr.required {
-        color: $dark-color-error-text;
+        color: $dark-color-warning-text;
     }
 }

@@ -27,7 +27,7 @@ li {
  */
 
 li::marker {
-    color: color-text-heading;
+    color: $color-text-heading;
 }
 
 @include dark-mode {
