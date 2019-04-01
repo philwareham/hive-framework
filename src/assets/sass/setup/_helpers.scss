@@ -7,14 +7,6 @@
     }
 }
 
-// Light Mode shorthand.
-
-@mixin light-mode {
-    @media (prefers-color-scheme: light) {
-        @content;
-    }
-}
-
 // higher resolution background images for high resolution displays
 
 @mixin hires-graphic($hdfile, $hdtype, $hdwidth, $hdheight) {
