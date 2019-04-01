@@ -21,6 +21,12 @@
     color: $color-text;
 }
 
+@include dark-mode {
+    .information code {
+        color: $dark-color-text;
+    }
+}
+
 
 /* Colour palette.
    ========================================================================== */
