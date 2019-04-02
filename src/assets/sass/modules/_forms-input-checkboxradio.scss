@@ -1,0 +1,131 @@
+/* Forms - input type checkbox/radio
+   ========================================================================== */
+
+/**
+ * 1. Remove any excess padding.
+ * 2. Correct margins for inline checkbox/radio labels.
+ */
+
+[type="checkbox"]:not(.ui-checkboxradio),
+[type="radio"]:not(.ui-checkboxradio) {
+    position: relative;
+    bottom: -2px;
+    width: 16px;
+    height: 16px;
+    padding: 0; /* 1 */
+    border: 1px solid $color-border-extra-dark;
+    background: $color-background-form;
+    appearance: none;
+    box-sizing: border-box;
+
+    + label:not(.ui-controlgroup-item) {
+        margin: 0 0.5em 0 0; /* 2 */
+
+        &:last-of-type {
+            margin: 0; /* 2 */
+        }
+    }
+
+    &:hover {
+        border-color: shade($color-border-extra-dark, 15%);
+        cursor: pointer;
+    }
+
+    &:focus {
+        border-color: $color-link-focus;
+        outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+    }
+
+    &:not([disabled]) + label:hover {
+        cursor: pointer;
+    }
+}
+
+@include dark-mode {
+    [type="checkbox"]:not(.ui-checkboxradio),
+    [type="radio"]:not(.ui-checkboxradio) {
+        border-color: $dark-color-border-extra-dark;
+        background-color: $dark-color-background-form;
+
+        &:hover {
+            border-color: $dark-color-border-extra-light;
+        }
+
+        &:focus {
+            border-color: $dark-color-link-focus;
+        }
+    }
+}
+
+[type="checkbox"]:not(.ui-checkboxradio) {
+    &:checked {
+        border: 0;
+        background: $color-text-footnote url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+
+        &:hover,
+        &:active {
+            background-color: $color-text;
+        }
+
+        &:focus {
+            background-color: $color-link-focus;
+        }
+    }
+
+    &[disabled]:checked {
+        background: $color-text-footnote url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E") !important;
+    }
+}
+
+@include dark-mode {
+    [type="checkbox"]:not(.ui-checkboxradio) {
+        &:checked {
+            background: $dark-color-text url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+
+            &:hover,
+            &:active {
+                background-color: $dark-color-text-heading;
+            }
+
+            &:focus {
+                background-color: $dark-color-link-focus;
+            }
+        }
+
+        &[disabled]:checked {
+            background: $dark-color-text url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E") !important;
+        }
+    }
+}
+
+[type="radio"]:not(.ui-checkboxradio) {
+    border-radius: 100%;
+
+    &:checked {
+        border: 5px solid $color-text-footnote;
+
+        &:hover,
+        &:active {
+            border-color: $color-text;
+        }
+
+        &:focus {
+            border-color: $color-link-focus;
+        }
+    }
+}
+
+@include dark-mode {
+    [type="radio"]:not(.ui-checkboxradio):checked {
+        border-color: $dark-color-text;
+
+        &:hover,
+        &:active {
+            border-color: $dark-color-text-heading;
+        }
+
+        &:focus {
+            border-color: $dark-color-link-focus;
+        }
+    }
+}

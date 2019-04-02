@@ -1,0 +1,32 @@
+/* Forms - disabled elements
+   ========================================================================== */
+
+/**
+ * Make sure disabled elements really are disabled and styled appropriately.
+ *
+ * 1. Re-set default cursor for disabled elements.
+ */
+
+[disabled],
+[disabled] option,
+[disabled] optgroup,
+span.disabled,
+.ui-checkboxradio-disabled {
+    border: 1px solid $color-border !important;
+    background-color: $color-background-form-disabled !important;
+    box-shadow: none !important;
+    cursor: default !important; /* 1 */
+    opacity: 0.33 !important;
+}
+
+@include dark-mode {
+    [disabled],
+    [disabled] option,
+    [disabled] optgroup,
+    span.disabled,
+    .ui-checkboxradio-disabled {
+        border: 1px solid $dark-color-border !important;
+        background-color: $dark-color-background-form-disabled !important;
+        opacity: 0.25 !important;
+    }
+}

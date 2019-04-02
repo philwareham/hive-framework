@@ -32,7 +32,11 @@
     @import "modules/embedded-content";
     @import "modules/tables";
     @import "modules/lists";
-    @import "modules/forms";
+    @import "modules/forms-base";
+    @import "modules/forms-input-checkboxradio";
+    @import "modules/forms-input-file";
+    @import "modules/forms-input-range";
+    @import "modules/forms-disabled";
     @import "modules/buttons";
     @import "modules/progress";
     @import "modules/meter";

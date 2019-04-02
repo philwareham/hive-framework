@@ -1,0 +1,340 @@
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Address width being affected by wide descendants in Chrome, Firefox.
+ * 2. Define consistent fieldset border, margin, and padding.
+ */
+
+fieldset {
+    min-width: 0; /* 1 */
+    margin: 1em 0; /* 2 */
+    padding: 1px 1em; /* 2 */
+    border: 1px solid $color-border-light; /* 2 */
+}
+
+@include dark-mode {
+    fieldset {
+        border-color: $dark-color-border-light;
+    }
+}
+
+/**
+ * Normalize styling of `legend`.
+ *
+ * 1. Correct wrapping not present in Edge 12/13.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+    display: table; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 2 */
+    white-space: normal; /* 1 */
+    box-sizing: border-box; /* 1 */
+}
+
+/**
+ * Show the overflow in Edge.
+ */
+
+button,
+input {
+    overflow: visible;
+}
+
+/**
+ * 1. Prevent elements from spilling out of their parent.
+ * 2. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ * 3. Correct font properties not being inherited.
+ */
+
+button,
+input,
+select,
+optgroup,
+textarea,
+a.button,
+span.button {
+    max-width: 100%;  /* 1 */
+    margin: 0;  /* 2 */
+    color: $color-text-form;
+    font-family: $font-form;
+    font-size: 1rem; /* 3 */
+    line-height: 1.375; // 22px / 16px
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+@include dark-mode {
+    input,
+    select,
+    optgroup,
+    textarea {
+        color: $dark-color-text-form;
+    }
+}
+
+/**
+ * Styling of form input fields.
+ *
+ * 1. Remove browser-specific default styling.
+ */
+
+[type="color"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+select,
+textarea {
+    height: 2em; // 32px / 16px
+    padding: 0.25em 0.1875em; // 8px / 16px + 3px / 16px
+    border: 1px solid $color-border;
+    border-radius: 0;
+    background: $color-background-form;
+    appearance: none; /* 1 */
+
+    &:hover {
+        border-color: $color-border-extra-dark;
+    }
+
+    &:focus {
+        border-color: $color-link-focus;
+        outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+    }
+}
+
+@include dark-mode {
+    [type="color"],
+    [type="date"],
+    [type="datetime"],
+    [type="datetime-local"],
+    [type="email"],
+    [type="month"],
+    [type="number"],
+    [type="password"],
+    [type="search"],
+    [type="tel"],
+    [type="text"],
+    [type="time"],
+    [type="url"],
+    [type="week"],
+    select,
+    textarea {
+        border-color: $dark-color-border-extra-dark;
+        background-color: $dark-color-background-form;
+
+        &:hover {
+            border-color: $dark-color-border-extra-light;
+        }
+
+        &:focus {
+            border-color: $dark-color-link-focus;
+        }
+    }
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+    /* autoprefixer: off */
+    appearance: none;
+}
+
+/**
+ * Use indicator icon to signify the drop-down ability of `select`.
+ */
+
+select {
+    padding-right: 1.5em; // 24px / 16px
+    background: $color-background-form url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='5' viewBox='0 0 17 5'%3E%3Cpolygon fill='%23333' points='0,0 5,5 10,0'/%3E%3C/svg%3E") right center no-repeat;
+    background-size: 1.0625em 0.3125em; // 17px / 16px, 5px / 16px
+    text-transform: none;
+}
+
+@include dark-mode {
+    select {
+        background-color: $dark-color-background-form;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='5' viewBox='0 0 17 5'%3E%3Cpolygon fill='%23788591' points='0,0 5,5 10,0'/%3E%3C/svg%3E");
+    }
+}
+
+/**
+ * Override height and background set in a previous rule and allow auto height.
+ */
+
+select[size],
+select[multiple] {
+    height: auto;
+    padding-right: 0.5em;
+    background-image: none;
+}
+
+/**
+ * Override height set in rule above and restrict to one line field.
+ */
+
+select[size="0"],
+select[size="1"] {
+    height: 2em; // 32px / 16px
+}
+
+/**
+ * Remove browser-specific `select` UI in IE 11.
+ */
+
+select::-ms-expand {
+    opacity: 0;
+}
+
+/**
+ * Normalize styling of `optgroup`.
+ */
+
+optgroup {
+    font-style: normal;
+    font-weight: bold;
+}
+
+/**
+ * 1. Remove the default vertical scrollbar in IE 11.
+ * 2. Remove unwanted space below `textarea` in Safari, Chrome, Opera.
+ * 3. Restrict to vertical resizing to prevent layout breakage.
+ */
+
+textarea {
+    width: 100%;
+    height: auto;
+    min-height: 3em;
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+    resize: vertical; /* 3 */
+}
+
+/**
+ * Width display options for `input` fields.
+ *
+ * Example HTML:
+ *
+ * <input class="small">
+ * <input class="medium">
+ * <input class="large">
+ */
+
+input {
+    &.small {
+        width: 33%;
+    }
+
+    &.medium {
+        width: 66%;
+    }
+
+    &.large {
+        width: 100%;
+    }
+}
+
+/**
+ * Styling for form field validation.
+ */
+
+input,
+select,
+textarea {
+    &:focus:invalid {
+        border-color: $color-error-text;
+        box-shadow: none; // Normalize Firefox styling
+    }
+}
+
+@include dark-mode {
+    input,
+    select,
+    textarea {
+        &:focus:invalid {
+            border-color: $dark-color-error-text;
+        }
+    }
+}
+
+/**
+ * Styling for Firefox-specfic form field validation.
+ */
+
+input,
+select,
+textarea {
+    &:-moz-ui-invalid {
+        border-color: $color-error-text;
+        box-shadow: none;
+    }
+}
+
+@include dark-mode {
+    input,
+    select,
+    textarea {
+        &:-moz-ui-invalid {
+            border-color: $dark-color-error-text;
+        }
+    }
+}
+
+/**
+ * Normalize form placeholder style across browsers.
+ *
+ * 1. Fix placeholder font properties inheritance.
+ */
+
+::placeholder {
+    color: $color-text-form-placeholder;
+    font: inherit; /* 1 */
+    opacity: 1;
+}
+
+@include dark-mode {
+    ::placeholder {
+        color: $dark-color-text-form-placeholder;
+    }
+}
+
+/**
+ * Styling for required field indicators.
+ *
+ * Example HTML:
+ *
+ * <abbr class="required" title="Required">*</abbr>
+ */
+
+abbr.required {
+    color: $color-warning-text;
+    text-decoration: none;
+}
+
+@include dark-mode {
+    abbr.required {
+        color: $dark-color-warning-text;
+    }
+}
