@@ -68,7 +68,7 @@ import Glide from '@glidejs/glide';
 
     // Dark Mode.
 
-    var bodyClass = document.querySelector('body'),
+    var bodyClass = document.body.classList,
         imgPrefers = document.querySelectorAll('img.prefers-color-scheme'),
         isDark = window.matchMedia('screen and (prefers-color-scheme: dark)'),
         lightSwitch = document.getElementById('lightswitch');
@@ -85,7 +85,7 @@ import Glide from '@glidejs/glide';
 
     function makeImagesDark()
     {
-        bodyClass.classList.add('darkmode');
+        bodyClass.add('darkmode');
 
         for (var i = 0; i < imgPrefers.length; i++) {
             if (imgPrefers[i].getAttribute('data-src-dark')) {
@@ -100,7 +100,7 @@ import Glide from '@glidejs/glide';
 
     function makeImagesLight()
     {
-        bodyClass.classList.remove('darkmode');
+        bodyClass.remove('darkmode');
 
         for (var i = 0; i < imgPrefers.length; i++) {
             if (imgPrefers[i].getAttribute('data-src-light')) {
@@ -121,7 +121,7 @@ import Glide from '@glidejs/glide';
             if (isDark.matches) {
                 makeImagesDark();
             } else {
-                if (bodyClass.classList.contains('darkmode')) {
+                if (bodyClass.contains('darkmode')) {
                     makeImagesLight();
                 }
             }
@@ -141,7 +141,7 @@ import Glide from '@glidejs/glide';
 
     lightSwitch.addEventListener('click', function(e)
     {
-        if (bodyClass.classList.contains('darkmode')) {
+        if (bodyClass.contains('darkmode')) {
             makeImagesLight();
             localStorage.setItem('prefers-color-scheme', 'light');
         } else {
