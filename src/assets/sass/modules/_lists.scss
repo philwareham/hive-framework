@@ -45,11 +45,18 @@ dd {
 }
 
 /**
- * Italicize definition terms.
+ * Visually stronger definition terms.
  */
 
 dt {
-    font-style: italic;
+    color: $color-text-heading;
+    font-weight: bolder;
+}
+
+@include dark-mode {
+    dt {
+        color: $dark-color-text-heading;
+    }
 }
 
 /**
