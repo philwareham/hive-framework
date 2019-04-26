@@ -306,21 +306,26 @@ sub {
 small,
 figcaption,
 tfoot,
-.footnote {
+.footnote,
+.footnotes,
+.card-header,
+.card-footer {
     font-size: $small-font-size;
     line-height: $line-height-mobile;
 }
 
 figcaption,
 tfoot,
-.footnote {
+.footnote,
+.footnotes {
     color: $color-text-footnote;
 }
 
 @include dark-mode {
     figcaption,
     tfoot,
-    .footnote {
+    .footnote,
+    .footnotes {
         color: $dark-color-text-footnote;
     }
 }
