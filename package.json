@@ -47,7 +47,7 @@
     "sass-lint": "1.13.1"
   },
   "dependencies": {
-    "@glidejs/glide": "3.3.0",
+    "@glidejs/glide": "3.4.0",
     "autosize": "4.0.2",
     "jquery": "3.4.1",
     "jquery-ui": "1.12.1",
