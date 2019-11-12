@@ -184,7 +184,7 @@ module.exports = function (grunt)
             }
         },
 
-        // Validate CSS files via sass-lint.
+        // Validate CSS files via stylelint.
         stylelint: {
             options: {
                 configFile: '.stylelintrc.yml'
