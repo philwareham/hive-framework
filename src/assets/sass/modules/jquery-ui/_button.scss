@@ -7,11 +7,11 @@
  * Some classes and HTML elements generally added via JavaScript, more info -
  * https://jqueryui.com/button/
  *
- * 1. Correct font size not being inherited in all browsers.
- * 2. Improve usability and consistency of cursor style between image-type
+ * 1. Show the overflow in Edge.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Remove iOS Safari default styling.
+ * 4. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
- * 3. Show the overflow in Edge.
- * 4. Remove iOS Safari default styling.
  *
  * Example HTML:
  *
@@ -23,22 +23,22 @@
 
     display: inline-block;
     position: relative;
+    box-sizing: border-box;
     height: 2em; // 32px / 16px
     margin: 0 0.125em 0 0; // 2px / 16px
     padding: 0.25em 1em; // 4px / 16px
+    overflow: visible; /* 1 */
     border: 1px solid $color-button-border;
     background-clip: padding-box;
+    box-shadow: 0 2px 0 $color-button-shadow;
     color: $color-text-button;
     font-family: $font-form;
-    font-size: 1rem; /* 1 */
+    font-size: 1rem; /* 2 */
     line-height: 1.375; // 22px / 16px
-    text-align: center;
-    box-shadow: 0 2px 0 $color-button-shadow;
-    cursor: pointer; /* 2 */
-    overflow: visible; /* 3 */
     vertical-align: baseline;
-    box-sizing: border-box;
-    appearance: none; /* 4 */
+    text-align: center;
+    appearance: none; /* 3 */
+    cursor: pointer; /* 4 */
     user-select: none;
 
     &:hover {
@@ -52,9 +52,9 @@
     &:active {
         top: 2px;
         border-color: shade($color-button-border, 15%);
+        box-shadow: none;
         color: $color-text-button-active;
         text-decoration: none;
-        box-shadow: none;
     }
 
     &:focus {
@@ -119,10 +119,10 @@ a.ui-button {
  */
 
 .ui-button-icon-only {
+    box-sizing: border-box;
     width: 2.25em; // 36px / 16px
     text-indent: -9999px;
     white-space: nowrap;
-    box-sizing: border-box;
 }
 
 /**

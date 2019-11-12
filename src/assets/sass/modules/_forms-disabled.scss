@@ -13,10 +13,10 @@
 span.disabled,
 .ui-checkboxradio-disabled {
     border: 1px solid $color-border !important;
+    opacity: 0.33 !important;
     background-color: $color-background-form-disabled !important;
     box-shadow: none !important;
     cursor: default !important; /* 1 */
-    opacity: 0.33 !important;
 }
 
 @include dark-mode {
@@ -26,7 +26,7 @@ span.disabled,
     span.disabled,
     .ui-checkboxradio-disabled {
         border: 1px solid $dark-color-border !important;
-        background-color: $dark-color-background-form-disabled !important;
         opacity: 0.25 !important;
+        background-color: $dark-color-background-form-disabled !important;
     }
 }

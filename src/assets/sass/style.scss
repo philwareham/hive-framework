@@ -23,7 +23,6 @@
    ========================================================================== */
 
 @media screen {
-
     @import "modules/layout";
     @import "modules/navigation";
     @import "modules/links";
@@ -50,16 +49,13 @@
     @import "modules/comments";
     @import "modules/cards";
 
-
     // jQuery UI core
 
     @import "modules/jquery-ui/core";
 
-
     // jQuery UI icons
 
     @import "modules/jquery-ui/icons";
-
 
     // jQuery UI interactions
 
@@ -67,7 +63,6 @@
     @import "modules/jquery-ui/resizable";
     @import "modules/jquery-ui/selectable";
     @import "modules/jquery-ui/sortable";
-
 
     // jQuery UI widgets
 
@@ -85,7 +80,6 @@
     @import "modules/jquery-ui/spinner";
     @import "modules/jquery-ui/tabs";
     @import "modules/jquery-ui/tooltip";
-
 }
 
 
@@ -119,7 +113,5 @@
    ========================================================================== */
 
 @media print {
-
     @import "modules/print";
-
 }

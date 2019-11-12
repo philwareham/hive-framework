@@ -60,9 +60,9 @@ nav ol,
 .clearfix,
 .paginator {
     &::after {
+        content: "";
         display: table;
         clear: both;
-        content: "";
     }
 }
 

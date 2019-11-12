@@ -132,7 +132,7 @@ rules:
   declaration-bang-space-before: always
 
   # Disallow duplicate properties within declaration blocks.
-  declaration-block-no-duplicate-properties: true
+  #declaration-block-no-duplicate-properties:
 
   # Disallow longhand properties that can be combined into one shorthand property.
   declaration-block-no-redundant-longhand-properties: true
@@ -458,7 +458,7 @@ rules:
   selector-max-id: 1
 
   # Limit the number of pseudo-classes in a selector.
-  selector-max-pseudo-class: 2
+  selector-max-pseudo-class: 3
 
   # Limit the specificity of selectors.
   selector-max-specificity: 1,2,1

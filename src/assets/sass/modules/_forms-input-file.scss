@@ -2,15 +2,15 @@
    ========================================================================== */
 
 [type="file"] {
+    box-sizing: border-box;
     height: auto;
     min-height: 2em; // 32px / 16px
     padding: 0.25em 0.1875em; // 8px / 16px + 3px / 16px
     border: 1px solid $color-border;
     border-radius: 0;
     background: $color-background-form;
-    cursor: pointer;
-    box-sizing: border-box;
     appearance: none;
+    cursor: pointer;
 
     &:hover {
         border-color: $color-border-extra-dark;
@@ -44,9 +44,9 @@
     border: 0;
     color: $color-text-button;
     font: inherit;
-    cursor: pointer;
     /* autoprefixer: off */
     appearance: none;
+    cursor: pointer;
 }
 
 ::-ms-browse {
@@ -59,7 +59,7 @@
     font-size: 1rem;
     font-weight: normal;
     line-height: inherit;
-    cursor: pointer;
     /* autoprefixer: off */
     appearance: none;
+    cursor: pointer;
 }

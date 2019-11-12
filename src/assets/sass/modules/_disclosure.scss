@@ -24,12 +24,12 @@ details {
 
 summary {
     position: relative;
+    z-index: 2;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     outline: 1px solid $color-border;
     background-color: $color-background-box;
     cursor: pointer;
-    z-index: 2;
 
     &:hover,
     &:active {

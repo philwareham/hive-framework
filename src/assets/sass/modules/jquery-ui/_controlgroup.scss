@@ -67,11 +67,11 @@
 
     .ui-controlgroup-item {
         display: block;
+        box-sizing: border-box;
         width: 100%;
         margin-top: 0;
         margin-bottom: 0;
         text-align: left;
-        box-sizing: border-box;
     }
 
     .ui-controlgroup-label {

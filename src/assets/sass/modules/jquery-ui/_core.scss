@@ -19,11 +19,11 @@
     height: 1px;
     margin: -1px;
     padding: 0;
-    border: 0;
-    white-space: nowrap;
     overflow: hidden;
     clip: rect(0 0 0 0); // TODO: Deprecated - use `clip-path` when browser support is better.
     //clip-path: inset(50%); // TODO: Currently causes severe performance issues in Chrome.
+    border: 0;
+    white-space: nowrap;
 }
 
 /**
@@ -35,9 +35,9 @@
     padding: 0;
     border: 0;
     outline: 0;
+    list-style: none;
     font-size: 1rem;
     line-height: $line-height-mobile;
-    list-style: none;
     text-decoration: none;
 }
 
@@ -46,10 +46,10 @@
  */
 
 .ui-helper-clearfix::after {
+    content: "";
     display: table;
     clear: both;
     border-collapse: collapse;
-    content: "";
 }
 
 /**
@@ -286,8 +286,8 @@ a.ui-state-default:focus {
  */
 
 .ui-priority-secondary {
-    font-weight: normal;
     opacity: 0.66;
+    font-weight: normal;
 }
 
 /**
@@ -295,9 +295,9 @@ a.ui-state-default:focus {
  */
 
 .ui-state-disabled:not(.ui-button) {
+    opacity: 0.33;
     background-image: none;
     cursor: default !important;
-    opacity: 0.33;
     pointer-events: none;
 
     a {

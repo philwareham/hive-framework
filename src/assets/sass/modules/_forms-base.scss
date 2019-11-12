@@ -28,10 +28,10 @@ fieldset {
 
 legend {
     display: table; /* 1 */
+    box-sizing: border-box; /* 1 */
     max-width: 100%; /* 1 */
     padding: 0; /* 2 */
     white-space: normal; /* 1 */
-    box-sizing: border-box; /* 1 */
 }
 
 /**
@@ -56,6 +56,7 @@ optgroup,
 textarea,
 a.button,
 span.button {
+    box-sizing: border-box;
     max-width: 100%;  /* 1 */
     margin: 0;  /* 2 */
     color: $color-text-form;
@@ -63,7 +64,6 @@ span.button {
     font-size: 1rem; /* 3 */
     line-height: 1.375; // 22px / 16px
     vertical-align: baseline;
-    box-sizing: border-box;
 }
 
 @include dark-mode {
@@ -316,9 +316,9 @@ textarea {
  */
 
 ::placeholder {
+    opacity: 1;
     color: $color-text-form-placeholder;
     font: inherit; /* 1 */
-    opacity: 1;
 }
 
 @include dark-mode {

@@ -19,10 +19,10 @@
 
 .ui-tooltip {
     position: absolute;
+    z-index: 9999;
     max-width: 22em;
     padding: 0.5em 1em;
     box-shadow: $standard-shadow;
-    z-index: 9999;
 }
 
 @include dark-mode {

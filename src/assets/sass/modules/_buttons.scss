@@ -43,12 +43,12 @@ span.button {
     border: 1px solid $color-button-border;
     border-radius: 1em;
     background-clip: padding-box;
+    box-shadow: 0 2px 0 $color-button-shadow;
     color: $color-text-button;
     font-weight: normal;
     text-align: center;
-    box-shadow: 0 2px 0 $color-button-shadow;
-    cursor: pointer; /* 1 */
     appearance: none; /* 2 */
+    cursor: pointer; /* 1 */
     user-select: none;
 
     &:hover {
@@ -62,9 +62,9 @@ span.button {
     &:active {
         top: 2px;
         border-color: shade($color-button-border, 15%);
+        box-shadow: none;
         color: $color-text-button-active;
         text-decoration: none;
-        box-shadow: none;
     }
 
     &:focus {
@@ -130,8 +130,8 @@ span.button-small {
     @include gradient-linear(tint($color-success-text, 10%), $color-success-text);
 
     border-color: shade($color-success-text, 5%);
-    color: $color-text-white-out;
     box-shadow: 0 2px 0 shade($color-success-text, 33%);
+    color: $color-text-white-out;
 
     &:hover {
         @include gradient-linear(tint($color-success-text, 18%), tint($color-success-text, 8%));
@@ -142,8 +142,8 @@ span.button-small {
 
     &:active {
         border-color: shade($color-success-text, 15%);
-        color: $color-text-white-out;
         box-shadow: none;
+        color: $color-text-white-out;
     }
 
     &:focus {
@@ -163,8 +163,8 @@ span.button-small {
     @include gradient-linear(tint($color-error-text, 10%), $color-error-text);
 
     border-color: shade($color-error-text, 5%);
-    color: $color-text-white-out;
     box-shadow: 0 2px 0 shade($color-error-text, 33%);
+    color: $color-text-white-out;
 
     &:hover {
         @include gradient-linear(tint($color-error-text, 18%), tint($color-error-text, 8%));
@@ -175,8 +175,8 @@ span.button-small {
 
     &:active {
         border-color: shade($color-error-text, 15%);
-        color: $color-text-white-out;
         box-shadow: none;
+        color: $color-text-white-out;
     }
 
     &:focus {

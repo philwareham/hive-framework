@@ -24,10 +24,10 @@
     .js & {
         display: block;
         max-height: 0;
-        transition: max-height 0.33s ease-in-out;
         overflow: hidden;
         clip: rect(0 0 0 0); // TODO: Deprecated - use `clip-path` when browser support is better.
         //clip-path: inset(50%); // TODO: Currently causes severe performance issues in Chrome.
+        transition: max-height 0.33s ease-in-out;
     }
 
     ul {

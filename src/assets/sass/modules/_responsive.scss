@@ -23,15 +23,15 @@
     .layout-container {
         display: flex; // Flexbox fallback for browsers without CSS Grid support.
         display: grid;
+        gap: 0 2em;
+        grid-template-columns: repeat(12, 1fr);
         flex-wrap: wrap; // Flexbox fallback for browsers without CSS Grid support.
         margin: 0 -1em; // Flexbox fallback for browsers without CSS Grid support.
-        grid-template-columns: repeat(12, 1fr);
-        grid-gap: 0 2em;
 
         > * {
+            box-sizing: border-box; // Flexbox fallback.
             min-width: 0; // Fix Firefox `pre` overflow issues.
             padding: 0 1em; // Flexbox fallback.
-            box-sizing: border-box; // Flexbox fallback.
         }
     }
 
@@ -58,8 +58,8 @@
     .layout-4col-alt,
     .layout-4col-2span,
     .layout-4col-3span {
-        width: 100%; // Flexbox fallback.
         grid-column: span 12;
+        width: 100%; // Flexbox fallback.
     }
 
     /**
@@ -67,8 +67,8 @@
      */
 
     .layout-4col {
-        width: 50%; // Flexbox fallback.
         grid-column: span 6;
+        width: 50%; // Flexbox fallback.
     }
 
     // Override Flexbox fallback for browsers with CSS Grid support.
@@ -97,8 +97,8 @@
     .layout-text2col,
     .layout-text3col,
     .layout-text4col {
-        column-gap: 2em;
         column-count: 2;
+        column-gap: 2em;
 
         :first-child {
             margin-top: 0;
@@ -113,7 +113,6 @@
             display: inline-block;
         }
     }
-
 }
 
 
@@ -133,18 +132,18 @@
      */
 
     .layout-2col {
-        width: 50%; // Flexbox fallback.
         grid-column: span 6;
+        width: 50%; // Flexbox fallback.
     }
 
     .layout-3col {
-        width: 33.333%; // Flexbox fallback.
         grid-column: span 4;
+        width: 33.333%; // Flexbox fallback.
     }
 
     .layout-3col-2span {
-        width: 66.666%; // Flexbox fallback.
         grid-column: span 8;
+        width: 66.666%; // Flexbox fallback.
     }
 
     // Override Flexbox fallback for browsers with CSS Grid support.
@@ -243,7 +242,6 @@
             border-top-width: 1px;
         }
     }
-
 }
 
 
@@ -283,18 +281,18 @@
 
     .layout-4col,
     .layout-4col-alt {
-        width: 25%; // Flexbox fallback.
         grid-column: span 3;
+        width: 25%; // Flexbox fallback.
     }
 
     .layout-4col-2span {
-        width: 50%; // Flexbox fallback.
         grid-column: span 6;
+        width: 50%; // Flexbox fallback.
     }
 
     .layout-4col-3span {
-        width: 73%; // Flexbox fallback.
         grid-column: span 9;
+        width: 73%; // Flexbox fallback.
     }
 
     // Override Flexbox fallback for browsers with CSS Grid support.
@@ -314,5 +312,4 @@
     .layout-text4col {
         column-count: 4;
     }
-
 }

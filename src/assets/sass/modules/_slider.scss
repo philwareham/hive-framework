@@ -35,19 +35,19 @@
 
 .glide__slides {
     display: flex;
+    backface-visibility: hidden;
     position: relative;
     flex-wrap: nowrap;
     width: 100%;
     padding: 0;
+    overflow: hidden;
+    will-change: transform;
     transform-style: preserve-3d;
     list-style: none;
     white-space: nowrap;
-    overflow: hidden;
-    backface-visibility: hidden;
     touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
-    will-change: transform;
 
     .glide--dragging & {
         user-select: none;
@@ -90,29 +90,29 @@
     padding: 0;
     transform: translate(0, -50%);
     border: 0;
+    opacity: 0.75;
     background: $color-text;
+    box-shadow: none;
     color: transparent;
     font-size: 0;
     line-height: 0;
-    box-shadow: none;
-    opacity: 0.75;
 
     &::before {
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
         width: 24px;
         height: 24px;
         background-size: 24px 24px;
-        content: "";
     }
 
     &:hover,
     &:active,
     &:focus {
         top: 50%;
-        background: $color-text;
         opacity: 1;
+        background: $color-text;
     }
 
     &:focus {
@@ -148,11 +148,11 @@
 
 .glide__bullets {
     position: absolute;
+    z-index: 2;
     bottom: 0.75em;
     left: 50%;
     transform: translate(-50%, -50%);
     list-style: none;
-    z-index: 2;
 }
 
 .glide__bullet {
@@ -164,13 +164,14 @@
     padding: 2px;
     border: 0;
     background: transparent;
+    box-shadow: none;
     color: transparent;
     font-size: 0;
     line-height: 0;
-    box-shadow: none;
     cursor: pointer;
 
     &::before {
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -178,10 +179,9 @@
         height: 12px;
         border: 2px solid $color-background;
         border-radius: 50%;
+        opacity: 0.5;
         background-color: $color-text;
         text-align: center;
-        content: "";
-        opacity: 0.5;
     }
 
     &:hover,

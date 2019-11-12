@@ -17,26 +17,27 @@
 .ui-progressbar {
     height: 0.75em;
     margin-bottom: 1em;
+    overflow: hidden;
     background-color: $color-gradient-to;
     text-align: left;
-    overflow: hidden;
 }
 
 .ui-progressbar-value {
     height: 0.75em;
-    background-color: $color-highlight;
-    background-image: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.33) 25%,
-        transparent 25%,
-        transparent 50%,
-        rgba(255, 255, 255, 0.33) 50%,
-        rgba(255, 255, 255, 0.33) 75%,
-        transparent 75%,
-        transparent
-    );
-    background-size: 24px 24px;
     animation: progressbar-stripes linear 4s infinite;
+    background-color: $color-highlight;
+    background-image:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.33) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.33) 50%,
+            rgba(255, 255, 255, 0.33) 75%,
+            transparent 75%,
+            transparent
+        );
+    background-size: 24px 24px;
 }
 
 /**
@@ -53,40 +54,8 @@
 
 .ui-progressbar-indeterminate .ui-progressbar-value {
     background-color: $color-border;
-    background-image: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.25) 25%,
-        transparent 25%,
-        transparent 50%,
-        rgba(255, 255, 255, 0.25) 50%,
-        rgba(255, 255, 255, 0.25) 75%,
-        transparent 75%,
-        transparent
-    );
-}
-
-@include dark-mode {
-    .ui-progressbar {
-        background-color: $dark-color-background-box;
-    }
-
-    .ui-progressbar-value {
-        background-color: $color-highlight;
-        background-image: linear-gradient(
-            135deg,
-            rgba(255, 255, 255, 0.33) 25%,
-            transparent 25%,
-            transparent 50%,
-            rgba(255, 255, 255, 0.33) 50%,
-            rgba(255, 255, 255, 0.33) 75%,
-            transparent 75%,
-            transparent
-        );
-    }
-
-    .ui-progressbar-indeterminate .ui-progressbar-value {
-        background-color: $dark-color-border;
-        background-image: linear-gradient(
+    background-image:
+        linear-gradient(
             135deg,
             rgba(255, 255, 255, 0.25) 25%,
             transparent 25%,
@@ -96,5 +65,40 @@
             transparent 75%,
             transparent
         );
+}
+
+@include dark-mode {
+    .ui-progressbar {
+        background-color: $dark-color-background-box;
+    }
+
+    .ui-progressbar-value {
+        background-color: $color-highlight;
+        background-image:
+            linear-gradient(
+                135deg,
+                rgba(255, 255, 255, 0.33) 25%,
+                transparent 25%,
+                transparent 50%,
+                rgba(255, 255, 255, 0.33) 50%,
+                rgba(255, 255, 255, 0.33) 75%,
+                transparent 75%,
+                transparent
+            );
+    }
+
+    .ui-progressbar-indeterminate .ui-progressbar-value {
+        background-color: $dark-color-border;
+        background-image:
+            linear-gradient(
+                135deg,
+                rgba(255, 255, 255, 0.25) 25%,
+                transparent 25%,
+                transparent 50%,
+                rgba(255, 255, 255, 0.25) 50%,
+                rgba(255, 255, 255, 0.25) 75%,
+                transparent 75%,
+                transparent
+            );
     }
 }

@@ -10,13 +10,13 @@
 [type="radio"]:not(.ui-checkboxradio) {
     position: relative;
     bottom: -2px;
+    box-sizing: border-box;
     width: 16px;
     height: 16px;
     padding: 0; /* 1 */
     border: 1px solid $color-border-extra-dark;
     background: $color-background-form;
     appearance: none;
-    box-sizing: border-box;
 
     + label:not(.ui-controlgroup-item) {
         margin: 0 0.5em 0 0; /* 2 */
