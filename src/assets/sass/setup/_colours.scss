@@ -15,11 +15,13 @@
 
 
 // slightly lighten a colour
+
 @function tint($color, $percentage) {
     @return mix(white, $color, $percentage);
 }
 
 // slightly darken a colour
+
 @function shade($color, $percentage) {
     @return mix(black, $color, $percentage);
 }

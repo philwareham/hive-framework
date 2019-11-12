@@ -137,7 +137,6 @@ module.exports = function (grunt)
             options: {
                 processors: [
                     require('autoprefixer'),
-                    require("css-mqpacker"),
                     require('cssnano')
                 ]
             },
@@ -185,12 +184,12 @@ module.exports = function (grunt)
             }
         },
 
-        // Validate Sass files via sass-lint.
-        sasslint: {
+        // Validate CSS files via sass-lint.
+        stylelint: {
             options: {
-                configFile: '.sass-lint.yml'
+                configFile: '.stylelintrc.yml'
             },
-            target: ['<%= paths.src.sass %>**/*.scss']
+            src: ['<%= paths.src.sass %>**/*.{css,scss}']
         },
 
         // Minify `app.js`.
@@ -228,7 +227,7 @@ module.exports = function (grunt)
 
     // Register tasks.
     grunt.registerTask('build', ['clean', 'concurrent', 'uglify']);
-    grunt.registerTask('css', ['sasslint', 'sass', 'postcss', 'copy:css']);
+    grunt.registerTask('css', ['stylelint', 'sass', 'postcss', 'copy:css']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('travis', ['build']);
 };
