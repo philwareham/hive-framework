@@ -63,13 +63,13 @@ rules:
   block-closing-brace-empty-line-before: never
 
   # Require a newline or disallow whitespace after the closing brace of blocks.
-  block-closing-brace-newline-after: always
+  #block-closing-brace-newline-after:
 
   # Require a newline or disallow whitespace before the closing brace of blocks.
   block-closing-brace-newline-before: always-multi-line
 
   # Require a single space or disallow whitespace after the closing brace of blocks.
-  block-closing-brace-space-after: always-single-line
+  #block-closing-brace-space-after:
 
   # Require a single space or disallow whitespace before the closing brace of blocks.
   block-closing-brace-space-before: always-single-line
@@ -81,7 +81,7 @@ rules:
   block-opening-brace-newline-after: always-multi-line
 
   #Require a newline or disallow whitespace before the opening brace of blocks.
-  block-opening-brace-newline-before: never-single-line
+  #block-opening-brace-newline-before:
 
   # Require a single space or disallow whitespace after the opening brace of blocks.
   block-opening-brace-space-after: always-single-line
@@ -273,11 +273,7 @@ rules:
   max-empty-lines: 3
 
   # Limit the length of a line.
-  max-line-length:
-    - 80
-    -
-      ignore:
-        - non-comments
+  #max-line-length:
 
   # Limit the depth of nesting.
   max-nesting-depth: 4
@@ -355,13 +351,13 @@ rules:
   no-missing-end-of-source-newline: true
 
   # Disallow unknown animations.
-  no-unknown-animations: true
+  #no-unknown-animations:
 
   # Require or disallow a leading zero for fractional numbers less than 1.
   number-leading-zero: always
 
   # Limit the number of decimal places allowed in numbers.
-  number-max-precision: 7
+  #number-max-precision:
 
   # Disallow trailing zeros in numbers.
   number-no-trailing-zeros: true
@@ -1038,9 +1034,6 @@ rules:
   # Require a single space or disallow whitespace before the colon in `$`-variable declarations.
   scss/dollar-variable-colon-space-before: never
 
-  # Require `!default` flag for `$`-variable declarations.
-  scss/dollar-variable-default: true
-
   # Disallow Sass variables that are used without interpolation with CSS features that use custom identifiers.
   scss/dollar-variable-no-missing-interpolation: true
 
@@ -1049,9 +1042,6 @@ rules:
 
   # Disallow duplicate dollar variables within a stylesheet.
   scss/no-duplicate-dollar-variables: true
-
-  # Require a media feature value be a `$`-variable or disallow `$`-variables in media feature values.
-  scss/media-feature-value-dollar-variable: always
 
   # Disallow linebreaks after Sass operators.
   scss/operator-no-newline-after: true
