@@ -9,3 +9,46 @@
         filter: invert(1) brightness(1.2);
     }
 }
+
+@media screen and (prefers-reduced-motion: reduce), (update: slow) {
+    #site-navigation {
+        .js &,
+        &.site-navigation-open {
+            transition-duration: 0;
+        }
+    }
+
+    .spin {
+        animation: none;
+    }
+
+    .ui-progressbar-value {
+        animation: none;
+        background-image: none;
+    }
+
+    progress::-webkit-progress-value {
+        animation: none;
+        background-image: none;
+    }
+
+    progress:indeterminate::-webkit-progress-bar {
+        animation: none;
+        background-image: none;
+    }
+
+    progress::-moz-progress-bar {
+        animation: none;
+        background-image: none;
+    }
+
+    progress:indeterminate::-moz-progress-bar {
+        animation: none;
+        background-image: none;
+    }
+
+    progress::-ms-fill {
+        animation: none;
+        background-image: none;
+    }
+}
