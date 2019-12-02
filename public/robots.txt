@@ -1,4 +1,4 @@
-# http://www.robotstxt.org
+# https://www.robotstxt.org
 
 User-agent: *
 Disallow: /mockups/
