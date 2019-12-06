@@ -22,7 +22,7 @@
     "url": "https://github.com/philwareham/hive-framework/issues"
   },
   "devDependencies": {
-    "@babel/core": "7.7.4",
+    "@babel/core": "7.7.5",
     "@babel/preset-env": "7.7.4",
     "apache-server-configs": "3.2.1",
     "autoprefixer": "9.7.3",
