@@ -28,12 +28,12 @@
 
 .ui-draggable-dragging {
     z-index: 1000;
+    opacity: 0.66;
     box-shadow: $standard-shadow;
 }
 
 @include dark-mode {
     .ui-draggable-dragging {
-        z-index: 1000;
         box-shadow: $dark-standard-shadow;
     }
 }
