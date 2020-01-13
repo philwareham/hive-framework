@@ -52,7 +52,7 @@
     "autosize": "4.0.2",
     "jquery": "3.4.1",
     "jquery-ui": "1.12.1",
-    "prismjs": "1.18.0"
+    "prismjs": "1.19.0"
   },
   "optionalDependencies": {
     "fibers": "4.0.2"
