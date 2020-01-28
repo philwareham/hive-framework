@@ -45,7 +45,7 @@
     "sass": "1.24.4",
     "stylelint": "12.0.1",
     "stylelint-order": "4.0.0",
-    "stylelint-scss": "3.14.0"
+    "stylelint-scss": "3.14.1"
   },
   "dependencies": {
     "@glidejs/glide": "3.4.1",
