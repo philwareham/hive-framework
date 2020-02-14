@@ -173,14 +173,16 @@
 
         .js & {
             max-height: none;
+            overflow: visible;
         }
 
         ul {
+            display: flex;
+            flex-wrap: wrap;
             width: 88%;
         }
 
         li {
-            float: left;
             border-top: 0;
             border-right: solid 1px $color-border;
 
