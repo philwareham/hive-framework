@@ -40,6 +40,9 @@
     <meta itemprop="accessibilityHazard" content="noSoundHazard">
     <meta itemprop="accessibilityAPI" content="ARIA">
 
+    <a class="a--skip-link" href="#page-navigation">Go to page navigation</a>
+    <a class="a--skip-link" href="#main">Go to main content</a>
+
 <!-- Header -->
     <header class="site-header">
         <h1>Sitename</h1>
@@ -49,7 +52,7 @@
     <nav id="site-navigation" aria-label="Site navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
         <ul>
             <li class="active">
-                <a itemprop="url" href="#">Home</a>
+                <a itemprop="url" href="#" aria-current="page">Home</a>
             </li>
             <li>
                 <a itemprop="url" href="#">About</a>
@@ -67,7 +70,7 @@
 <!-- Content -->
     <div class="wrapper">
         <div class="container">
-            <main aria-label="Main content">
+            <main>
 
                 <article itemscope itemtype="https://schema.org/Article">
                     <h1 itemprop="name headline">Design patterns</h1>
@@ -95,7 +98,7 @@
 
                     <p>Grab the latest source code from <a rel="external" href="https://github.com/philwareham/hive-framework"><strong>the GitHub repository</strong></a>.</p>
 
-                    <nav>
+                    <nav id="page-navigation" aria-label="Page navigation">
                         <h3>Contents</h3>
                         <ol>
                             <li><a href="#section-colourways">Colourways</a></li>
@@ -143,7 +146,7 @@
                         </ol>
                     </nav>
 
-                    <div itemprop="articleBody">
+                    <div id="main" aria-label="Main content" itemprop="articleBody">
 
 
                         <section class="section" id="section-colourways">
