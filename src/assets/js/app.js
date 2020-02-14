@@ -23,7 +23,7 @@ import Glide from '@glidejs/glide';
 
     // Load objects as variables.
 
-    const code = document.querySelectorAll('code[class*="language-"], [class*="language-"] code'),
+    var code = document.querySelectorAll('code[class*="language-"], [class*="language-"] code'),
         fields = document.querySelectorAll('textarea'),
         navmenu = document.getElementById('site-navigation'),
         slider = document.querySelectorAll('.glide');
