@@ -52,7 +52,8 @@
     <nav id="site-navigation" aria-label="Site navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
         <ul>
             <li class="active">
-                <a itemprop="url" href="#" aria-current="page">Home</a>
+                <a itemprop="url" href="#" aria-current="page">Home </a>
+                <span class="accessibility">(current section)</span>
             </li>
             <li>
                 <a itemprop="url" href="#">About</a>
@@ -972,13 +973,13 @@
                         <section class="section" id="section-pagination">
                             <h2>Pagination</h2>
 
-                            <nav class="paginator" aria-label="Article navigation">
+                            <nav class="paginator" aria-label="Article list navigation">
                                 <a rel="prev" href="#" title="Go to previous page" aria-label="Go to previous page">Prev</a>
                                 <a rel="next" href="#" title="Go to next page" aria-label="Go to next page">Next</a>
 
                                 <ul class="pagination">
                                     <li class="current">
-                                        <b title="Current page" aria-label="Current page">1</b>
+                                        <b title="Current page" aria-current="page">1</b>
                                     </li>
                                     <li>
                                         <a href="#" title="Go to page 2" aria-label="Go to page 2">2</a>
@@ -1038,7 +1039,7 @@
                                     </li>
                                     <li class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                                         <b itemprop="item">
-                                            <span itemprop="name">Test subject X11</span>
+                                            <span itemprop="name" aria-current="location">Test subject X11</span>
                                         </b>
                                         <meta itemprop="position" content="4">
                                     </li>
@@ -1067,7 +1068,7 @@
                                     </li>
                                     <li class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                                         <b itemprop="item">
-                                            <span itemprop="name">Test subject X11 (deceased)</span>
+                                            <span itemprop="name" aria-current="location">Test subject X11 (deceased)</span>
                                         </b>
                                         <meta itemprop="position" content="4">
                                     </li>
@@ -1259,7 +1260,7 @@
 
                             <form>
                                 <h3>Inputs</h3>
-                                <p>
+                                <p role="group">
                                     <input type="checkbox" id="test_checkbox_1" name="test_checkbox_1" checked>
                                     <label for="test_checkbox_1">Test checkbox 1</label>
                                     <input type="checkbox" id="test_checkbox_2" name="test_checkbox_2">
@@ -1269,7 +1270,7 @@
                                     <input type="checkbox" id="test_checkbox_4" name="test_checkbox_4" disabled checked>
                                     <label for="test_checkbox_4">Test checkbox 4 (disabled checked)</label>
                                 </p>
-                                <p>
+                                <p role="group">
                                     <input type="radio" id="test_radio_1" name="test_radio_group" checked>
                                     <label for="test_radio_1">Test radio 1</label>
                                     <input type="radio" id="test_radio_2" name="test_radio_group">

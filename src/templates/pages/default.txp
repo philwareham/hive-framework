@@ -48,7 +48,7 @@
     <txp:output_form form="body_header" />
     <div class="wrapper">
         <div class="container">
-            <main aria-label="Main content">
+            <main id="main" aria-label="Main content">
 
                 <txp:if_search>
 

@@ -9,7 +9,7 @@
     <txp:output_form form="body_header" />
     <div class="wrapper">
         <div class="container">
-            <main aria-label="Main content">
+            <main id="main" aria-label="Main content">
                 <h1 class="error-status"><txp:error_status /></h1>
                 <p class="error-msg"><txp:error_message /></p>
             </main>
