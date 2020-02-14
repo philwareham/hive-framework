@@ -47,8 +47,8 @@ import Glide from '@glidejs/glide';
     // Responsive navigation menu.
 
     if (navmenu) {
-        var navtoggle = document.getElementById('site-navigation-toggle');
-        var navlist = document.getElementById('site-navigation-list');
+        var navtoggle = document.getElementById('site-navigation-toggle'),
+            navlist = document.getElementById('site-navigation-list');
 
         navtoggle.addEventListener('click', function(e)
         {
