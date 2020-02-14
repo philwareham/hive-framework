@@ -48,12 +48,25 @@ import Glide from '@glidejs/glide';
 
     if (navmenu) {
         var navtoggle = document.getElementById('site-navigation-toggle');
+        var navlist = document.getElementById('site-navigation-list');
 
         navtoggle.addEventListener('click', function(e)
         {
             e.preventDefault();
             navtoggle.classList.toggle('site-navigation-toggle-active');
             navmenu.classList.toggle('site-navigation-open');
+        });
+
+        navlist.addEventListener('focusin', function()
+        {
+            navtoggle.classList.add('site-navigation-toggle-active');
+            navmenu.classList.add('site-navigation-open');
+        });
+
+        navlist.addEventListener('focusout', function()
+        {
+            navtoggle.classList.remove('site-navigation-toggle-active');
+            navmenu.classList.remove('site-navigation-open');
         });
     }
 
