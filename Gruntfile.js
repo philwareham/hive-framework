@@ -13,20 +13,13 @@ module.exports = function (grunt)
             src: {
                 sass: 'src/assets/sass/',
                 fonts: 'src/assets/fonts/',
-                js: 'src/assets/js/',
-                templates: 'src/templates/'
+                js: 'src/assets/js/'
             },
             dest: {
                 css: 'public/assets/css/',
                 fonts: 'public/assets/fonts/',
-                js: 'public/assets/js/',
-                templates: 'public/templates/'
+                js: 'public/assets/js/'
             }
-        },
-
-        // Set up timestamp.
-        opt : {
-            timestamp: '<%= new Date().getTime() %>'
         },
 
         // Bundle up the JavaScript.
@@ -60,10 +53,8 @@ module.exports = function (grunt)
             dist: [
                 'browserify',
                 'copy:fonts',
-                'copy:configs',
                 'css',
-                'jshint',
-                'replace'
+                'jshint'
             ]
         },
 
@@ -85,15 +76,6 @@ module.exports = function (grunt)
                     {
                         src: 'node_modules/slick-carousel/slick/fonts/slick.woff',
                         dest: '<%= paths.dest.css %>fonts/slick.woff'
-                    }
-                ]
-            },
-            // Server configs.
-            configs: {
-                files: [
-                    {
-                        src: 'node_modules/apache-server-configs/dist/.htaccess',
-                        dest: 'src/docs/htaccess.txt'
                     }
                 ]
             }
@@ -145,30 +127,6 @@ module.exports = function (grunt)
             }
         },
 
-        // Generate filename timestamps within templates files and main.js.
-        replace: {
-            theme: {
-                options: {
-                    patterns: [{
-                            match: 'timestamp',
-                            replacement: '<%= opt.timestamp %>'
-                    }]
-                },
-                files: [
-                    {
-                        expand: true,
-                        cwd: '<%= paths.src.templates %>',
-                        src: '**',
-                        dest: '<%= paths.dest.templates %>'
-                    },
-                    {
-                        src: '<%= paths.src.js %>main.js',
-                        dest: '<%= paths.dest.js %>main.js'
-                    }
-                ]
-            }
-        },
-
         // Sass configuration.
         sass: {
             options: {
@@ -216,10 +174,6 @@ module.exports = function (grunt)
                     'browserify',
                     'uglify'
                 ]
-            },
-            templates: {
-                files: '<%= paths.src.templates %>**',
-                tasks: 'replace'
             }
         }
 

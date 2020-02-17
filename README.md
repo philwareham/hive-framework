@@ -60,12 +60,8 @@ Where the `@task@` is either `build` or `watch`.
 * The `build` task builds the project.
 * The `watch` task will launch a task that watches for file changes; the project is then automatically built if a source file is modified.
 
-## Textpattern templates
-
-Optional [Textpattern CMS](https://textpattern.com/) theme 'forms' and 'pages' templates are included, for reference. They can be found in the `public/templates` directory, and follow the structure expected by Textpattern themes.
-
 ## License
 
-Licensed under MIT license except Textpattern templates, which are licensed under GPLv2 license.
+Licensed under MIT license.
 
 Some demo site content is licensed under Creative Commons BY-NC 3.0 (audio: "Moonlight Reprise" from "Irsen's Tale" by Kai Engel) and BY 3.0 (video: "Big Buck Bunny").
