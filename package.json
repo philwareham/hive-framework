@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.8.7",
-    "@babel/preset-env": "7.8.6",
+    "@babel/preset-env": "7.8.7",
     "autoprefixer": "9.7.4",
     "babelify": "10.0.0",
     "cssnano": "4.1.10",
