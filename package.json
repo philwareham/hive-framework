@@ -48,7 +48,7 @@
   "dependencies": {
     "@glidejs/glide": "3.4.1",
     "autosize": "4.0.2",
-    "jquery": "3.4.1",
+    "jquery": "3.5.0",
     "jquery-ui": "1.12.1",
     "prismjs": "1.20.0"
   },
