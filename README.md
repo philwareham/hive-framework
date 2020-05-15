@@ -1,6 +1,6 @@
 # Hive framework &nbsp; [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=A%20website%20development%20framework%20built%20with%20Grunt%20and%20Sass.%20The%20theme%20styling%20is%20intentionally%20minimal%20to%20make%20re-skinning%20easier.&url=https://hive-framework.philwareham.co.uk/&via=philwareham&hashtags=html,css,js,framework,webdesign)
 
-[![Greenkeeper](https://badges.greenkeeper.io/philwareham/hive-framework.svg)](https://greenkeeper.io/)
+[![Known Vulnerabilities](https://snyk.io/test/github/philwareham/hive-framework/badge.svg?targetFile=package.json)](https://snyk.io/test/github/philwareham/hive-framework?targetFile=package.json)
 [![Build Status](https://travis-ci.org/philwareham/hive-framework.svg)](https://travis-ci.org/philwareham/hive-framework)
 
 ![Hive logo](https://github.com/philwareham/hive-framework/blob/master/public/favicon-192x192.png)
