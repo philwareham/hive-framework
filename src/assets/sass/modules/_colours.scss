@@ -1,10 +1,8 @@
 // TODO when browser support is univeral (when we ditch IE 11).
-//
 // :root {
 //     --bgColor: $color-background;
 //     --textColor: $color-text;
 // }
-//
 // @media (prefers-color-scheme: dark) {
 //     :root {
 //         --bgColor: $dark-color-background;
@@ -12,6 +10,8 @@
 //     }
 // }
 // etc...
+
+/* stylelint-disable custom-property-empty-line-before, declaration-colon-space-after */
 
 :root {
     // text colours
