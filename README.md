@@ -4,6 +4,7 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/philwareham/hive-framework/badge.svg?targetFile=package.json)](https://snyk.io/test/github/philwareham/hive-framework?targetFile=package.json)
 [![Dependencies Status](https://david-dm.org/philwareham/hive-framework/status.svg)](https://david-dm.org/philwareham/hive-framework)
 [![devDependencies Status](https://david-dm.org/philwareham/hive-framework/dev-status.svg)](https://david-dm.org/philwareham/hive-framework?type=dev)
+[![optionalDependencies Status](https://david-dm.org/philwareham/hive-framework/optional-status.svg)](https://david-dm.org/philwareham/hive-framework?type=optional)
 
 ![Hive logo](https://github.com/philwareham/hive-framework/blob/master/public/favicon-192x192.png)
 
