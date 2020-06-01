@@ -41,75 +41,46 @@
     --color-gradient-from:                 hsla(0, 0%, 93%, 1);
     --color-gradient-to:                   hsla(0, 0%, 87%, 1);
     // accent colours
-    --color-highlight:                     #ffda44;
-    --color-strong-highlight-box:          tint($color-highlight, 36%);
-    --color-highlight-box:                 tint($color-highlight, 84%);
-
-    --dark-color-highlight:                #ffda44;
-    --dark-color-strong-highlight-box:     #ac9840;
-    --dark-color-highlight-box:            #59563d;
-
+    --color-highlight:                     hsla(48, 100%, 63%, 1);
+    --color-strong-highlight-box:          hsla(48, 100%, 76%, 1);
+    --color-highlight-box:                 hsla(48, 100%, 94%, 1);
     // border colours
-
-    --color-border:                        #cccccc;
-    --color-border-light:                  tint($color-border, 7%);
+    --color-border:                        hsla(0, 0%, 80%, 1);
+    --color-border-light:                  hsla(0, 0%, 82%, 1);
     --color-border-extra-light:            tint($color-border, 14%);
     --color-border-dark:                   shade($color-border, 7%);
-    --$color-border-extra-dark:             shade($color-border, 14%);
-
-    --dark-color-border:                   tint($dark-color-background, 36%);
-    --dark-color-border-light:             tint($dark-color-background, 24%);
-    --dark-color-border-extra-light:       tint($dark-color-background, 12%);
-    --dark-color-border-dark:              shade($dark-color-background, 12%);
-    --dark-color-border-extra-dark:        shade($dark-color-background, 75%);
-
+    --color-border-extra-dark:             shade($color-border, 14%);
     // button colours
-
-    --color-button-gradient-from:          $color-gradient-from;
+    --color-button-gradient-from:          hsla(0, 0%, 93%, 1);
     --color-button-gradient-to:            darken($color-button-gradient-from, 6%);
-    --color-button-border:                 $color-button-gradient-to;
+    --color-button-border:                 hsla(0, 0%, 87%, 1);
     --color-button-shadow:                 darken($color-button-border, 20%);
     --color-button-selected-gradient-from: tint($color-link-hover, 84%);
     --color-button-selected-gradient-to:   tint($color-link-hover, 78%);
     --color-button-selected-border:        darken($color-button-selected-gradient-to, 10.5%);
-
     // alert colours
-
-    --color-success-text:                  #238c23;
-    --color-success-background:            #dff0d8;
+    --color-success-text:                  hsla(120, 60%, 34%, 1);
+    --color-success-background:            hsla(120, 44%, 89%, 1);
     --color-success-border:                darken($color-success-background, 20%);
-    --color-warning-text:                  #cc8c00;
-    --color-warning-background:            #f7eedb;
+    --color-warning-text:                  hsla(41, 100%, 40%, 1);
+    --color-warning-background:            hsla(41, 64%, 91%, 1);
     --color-warning-border:                darken($color-warning-background, 20%);
-    --color-error-text:                    #9d261d;
-    --color-error-background:              #f2dede;
+    --color-error-text:                    hsla(4, 69%, 36%, 1);
+    --color-error-background:              hsla(4, 43%, 91%, 1);
     --color-error-border:                  darken($color-error-background, 12%);
-    --color-info-text:                     #3a87ad;
-    --color-info-background:               #e7f6fc;
+    --color-info-text:                     hsla(200, 50%, 45%, 1);
+    --color-info-background:               hsla(200, 78%, 95%, 1);
     --color-info-border:                   darken($color-info-background, 12%);
-
-    --dark-color-success-text:             #66cc33;
-    --dark-color-success-background:       #2a4125;
-    --dark-color-success-border:           rgba($dark-color-success-text, 0.33);
-    --dark-color-warning-text:             #ffbe3c;
-    --dark-color-warning-background:       #484123;
-    --dark-color-warning-border:           rgba($dark-color-warning-text, 0.33);
-    --dark-color-error-text:               #ff3382;
-    --dark-color-error-background:         #47232a;
-    --dark-color-error-border:             rgba($dark-color-error-text, 0.44);
-    --dark-color-info-text:                #44aaff;
-    --dark-color-info-background:          #0e304a;
-    --dark-color-info-border:              rgba($dark-color-info-text, 0.38);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         // text colours
         --color-text:                      hsla(210, 14%, 83%, 1);
-        --color-text-heading:              #ffffff;
-        --color-text-form:                 #ffffff;
-        --color-text-form-placeholder:     #747b82;
-        --color-text-footnote:             #c9d1d9;
+        --color-text-heading:              hsla(0, 0%, 100%, 1);
+        --color-text-form:                 hsla(0, 0%, 100%, 1);
+        --color-text-form-placeholder:     hsla(210, 6%, 48%, 1);
+        --color-text-footnote:             hsla(210, 17%, 82%, 1);
         // interaction colours
         --color-link:                      #9cd7ff;
         --color-link-hover:                tint(#9cd7ff, 33%);
@@ -124,5 +95,27 @@
         --color-gradient-from:             tint(#373e45, 8%);
         --color-gradient-to:               tint(#373e45, 16%);
         // accent colours
+        --color-highlight:                 #ffda44;
+        --color-strong-highlight-box:      #ac9840;
+        --color-highlight-box:             #59563d;
+        // border colours
+        --color-border:                    tint($dark-color-background, 36%);
+        --color-border-light:              tint($dark-color-background, 24%);
+        --color-border-extra-light:        tint($dark-color-background, 12%);
+        --color-border-dark:               shade($dark-color-background, 12%);
+        --color-border-extra-dark:         shade($dark-color-background, 75%);
+        // alert colours
+        --color-success-text:              #66cc33;
+        --color-success-background:        #2a4125;
+        --color-success-border:            rgba($dark-color-success-text, 0.33);
+        --color-warning-text:              #ffbe3c;
+        --color-warning-background:        #484123;
+        --color-warning-border:            rgba($dark-color-warning-text, 0.33);
+        --color-error-text:                #ff3382;
+        --color-error-background:          #47232a;
+        --color-error-border:              rgba($dark-color-error-text, 0.44);
+        --color-info-text:                 #44aaff;
+        --color-info-background:           #0e304a;
+        --color-info-border:               rgba($dark-color-info-text, 0.38);
     }
 }
