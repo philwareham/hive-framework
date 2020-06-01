@@ -17,72 +17,72 @@
 
 :root {
     // text colours
-    --color-text:                          hsla(0, 0%, 20%, 1);
-    --color-text-heading:                  hsla(0, 0%, 0%, 1);
-    --color-text-button:                   hsla(0, 0%, 0%, 1);
-    --color-text-button-hover:             hsla(0, 0%, 0%, 1);
-    --color-text-button-active:            hsla(0, 0%, 0%, 1);
-    --color-text-form:                     hsla(0, 0%, 0%, 1);
-    --color-text-form-placeholder:         hsla(0, 0%, 60%, 1);
-    --color-text-footnote:                 hsla(0, 0%, 35%, 1);
-    --color-text-white-out:                hsla(0, 0%, 100%, 1);
+    --color-text:                          hsl(0, 0%, 20%);
+    --color-text-heading:                  hsl(0, 0%, 0%);
+    --color-text-button:                   hsl(0, 0%, 0%);
+    --color-text-button-hover:             hsl(0, 0%, 0%);
+    --color-text-button-active:            hsl(0, 0%, 0%);
+    --color-text-form:                     hsl(0, 0%, 0%);
+    --color-text-form-placeholder:         hsl(0, 0%, 60%);
+    --color-text-footnote:                 hsl(0, 0%, 35%);
+    --color-text-white-out:                hsl(0, 0%, 100%);
     --color-text-print:                    black; // solid black prints faster/cleaner
     // interaction colours
-    --color-link:                          hsla(216, 100%, 37%, 1);
-    --color-link-hover:                    hsla(216, 100%, 50%, 1);
-    --color-link-focus:                    hsla(216, 100%, 50%, 1);
-    --color-selecting:                     hsla(216, 100%, 90%, 1);
-    --color-selected:                      hsla(216, 100%, 95%, 1);
+    --color-link:                          hsl(216, 100%, 37%);
+    --color-link-hover:                    hsl(216, 100%, 50%);
+    --color-link-focus:                    hsl(216, 100%, 50%);
+    --color-selecting:                     hsl(216, 100%, 90%);
+    --color-selected:                      hsl(216, 100%, 95%);
     // neutral colours
-    --color-background:                    hsla(0, 0%, 100%, 1);
-    --color-background-box:                hsla(0, 0%, 97%, 1);
-    --color-background-form:               hsla(0, 0%, 100%, 1);
-    --color-background-form-disabled:      hsla(0, 0%, 89%, 1);
-    --color-gradient-from:                 hsla(0, 0%, 93%, 1);
-    --color-gradient-to:                   hsla(0, 0%, 87%, 1);
+    --color-background:                    hsl(0, 0%, 100%);
+    --color-background-box:                hsl(0, 0%, 97%);
+    --color-background-form:               hsl(0, 0%, 100%);
+    --color-background-form-disabled:      hsl(0, 0%, 89%);
+    --color-gradient-from:                 hsl(0, 0%, 93%);
+    --color-gradient-to:                   hsl(0, 0%, 87%);
     // accent colours
-    --color-highlight:                     hsla(48, 100%, 63%, 1);
-    --color-strong-highlight-box:          hsla(48, 100%, 76%, 1);
-    --color-highlight-box:                 hsla(48, 100%, 94%, 1);
+    --color-highlight:                     hsl(48, 100%, 63%);
+    --color-strong-highlight-box:          hsl(48, 100%, 76%);
+    --color-highlight-box:                 hsl(48, 100%, 94%);
     // border colours
-    --color-border:                        hsla(0, 0%, 80%, 1);
-    --color-border-light:                  hsla(0, 0%, 82%, 1);
+    --color-border:                        hsl(0, 0%, 80%);
+    --color-border-light:                  hsl(0, 0%, 82%);
     --color-border-extra-light:            tint($color-border, 14%);
     --color-border-dark:                   shade($color-border, 7%);
     --color-border-extra-dark:             shade($color-border, 14%);
     // button colours
-    --color-button-gradient-from:          hsla(0, 0%, 93%, 1);
+    --color-button-gradient-from:          hsl(0, 0%, 93%);
     --color-button-gradient-to:            darken($color-button-gradient-from, 6%);
-    --color-button-border:                 hsla(0, 0%, 87%, 1);
+    --color-button-border:                 hsl(0, 0%, 87%);
     --color-button-shadow:                 darken($color-button-border, 20%);
     --color-button-selected-gradient-from: tint($color-link-hover, 84%);
     --color-button-selected-gradient-to:   tint($color-link-hover, 78%);
     --color-button-selected-border:        darken($color-button-selected-gradient-to, 10.5%);
     // alert colours
-    --color-success-text:                  hsla(120, 60%, 34%, 1);
-    --color-success-background:            hsla(120, 44%, 89%, 1);
+    --color-success-text:                  hsl(120, 60%, 34%);
+    --color-success-background:            hsl(120, 44%, 89%);
     --color-success-border:                darken($color-success-background, 20%);
-    --color-warning-text:                  hsla(41, 100%, 40%, 1);
-    --color-warning-background:            hsla(41, 64%, 91%, 1);
+    --color-warning-text:                  hsl(41, 100%, 40%);
+    --color-warning-background:            hsl(41, 64%, 91%);
     --color-warning-border:                darken($color-warning-background, 20%);
-    --color-error-text:                    hsla(4, 69%, 36%, 1);
-    --color-error-background:              hsla(4, 43%, 91%, 1);
+    --color-error-text:                    hsl(4, 69%, 36%);
+    --color-error-background:              hsl(4, 43%, 91%);
     --color-error-border:                  darken($color-error-background, 12%);
-    --color-info-text:                     hsla(200, 50%, 45%, 1);
-    --color-info-background:               hsla(200, 78%, 95%, 1);
+    --color-info-text:                     hsl(200, 50%, 45%);
+    --color-info-background:               hsl(200, 78%, 95%);
     --color-info-border:                   darken($color-info-background, 12%);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         // text colours
-        --color-text:                      hsla(210, 14%, 83%, 1);
-        --color-text-heading:              hsla(0, 0%, 100%, 1);
-        --color-text-form:                 hsla(0, 0%, 100%, 1);
-        --color-text-form-placeholder:     hsla(210, 6%, 48%, 1);
-        --color-text-footnote:             hsla(210, 17%, 82%, 1);
+        --color-text:                      hsl(210, 14%, 83%);
+        --color-text-heading:              hsl(0, 0%, 100%);
+        --color-text-form:                 hsl(0, 0%, 100%);
+        --color-text-form-placeholder:     hsl(210, 6%, 48%);
+        --color-text-footnote:             hsl(210, 17%, 82%);
         // interaction colours
-        --color-link:                      #9cd7ff;
+        --color-link:                      hsl(204, 100%, 81%);
         --color-link-hover:                tint(#9cd7ff, 33%);
         --color-link-focus:                #ff9900;
         --color-selecting:                 #1b2f48;
