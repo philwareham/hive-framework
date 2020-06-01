@@ -54,7 +54,7 @@
         .ui-tabs-anchor {
             display: block;
             padding: 0.5em 1em;
-            color: $color-text;
+            color: var(--color-text);
             text-decoration: none;
         }
 
@@ -77,10 +77,6 @@
     .ui-tabs {
         .ui-tabs-nav {
             background: $dark-color-background;
-
-            .ui-tabs-anchor {
-                color: $dark-color-text;
-            }
 
             .ui-state-focus {
                 border-color: $dark-color-link-focus;

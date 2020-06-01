@@ -19,6 +19,7 @@
     // text colours
     --color-text:                          hsl(0, 0%, 20%);
     --color-text-heading:                  hsl(0, 0%, 0%);
+    --color-text-heading-a50:              hsla(0, 0%, 0%, 0.5);
     --color-text-button:                   hsl(0, 0%, 0%);
     --color-text-button-hover:             hsl(0, 0%, 0%);
     --color-text-button-active:            hsl(0, 0%, 0%);
@@ -26,7 +27,7 @@
     --color-text-form-placeholder:         hsl(0, 0%, 60%);
     --color-text-footnote:                 hsl(0, 0%, 35%);
     --color-text-white-out:                hsl(0, 0%, 100%);
-    --color-text-print:                    hsl(0, 0%, 0%);
+    --color-text-print:                    black;
     // interaction colours
     --color-link:                          hsl(216, 100%, 37%);
     --color-link-hover:                    hsl(216, 100%, 50%);
@@ -78,6 +79,7 @@
         // text colours
         --color-text:                      hsl(210, 14%, 83%);
         --color-text-heading:              hsl(0, 0%, 100%);
+        --color-text-heading-a50:          hsla(0, 0%, 100%, 0.5);
         --color-text-form:                 hsl(0, 0%, 100%);
         --color-text-form-placeholder:     hsl(210, 6%, 48%);
         --color-text-footnote:             hsl(210, 17%, 82%);

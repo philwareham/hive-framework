@@ -64,7 +64,7 @@
 
         &:hover,
         &:active {
-            background-color: $color-text;
+            background-color: var(--color-text);
         }
 
         &:focus {
@@ -106,7 +106,7 @@
 
         &:hover,
         &:active {
-            border-color: $color-text;
+            border-color: var(--color-text);
         }
 
         &:focus {
@@ -117,8 +117,6 @@
 
 @include dark-mode {
     [type="radio"]:not(.ui-checkboxradio):checked {
-        border-color: $dark-color-text;
-
         &:hover,
         &:active {
             border-color: $dark-color-text-heading;

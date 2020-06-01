@@ -91,7 +91,7 @@
     transform: translate(0, -50%);
     border: 0;
     opacity: 0.75;
-    background: $color-text;
+    background: var(--color-text);
     box-shadow: none;
     color: transparent;
     font-size: 0;
@@ -112,7 +112,7 @@
     &:focus {
         top: 50%;
         opacity: 1;
-        background: $color-text;
+        background: var(--color-text);
     }
 
     &:focus {
@@ -180,7 +180,7 @@
         border: 2px solid $color-background;
         border-radius: 50%;
         opacity: 0.5;
-        background-color: $color-text;
+        background-color: var(--color-text);
         text-align: center;
     }
 
@@ -206,14 +206,6 @@
 
 @include dark-mode {
     .glide__arrow {
-        background: $dark-color-text;
-
-        &:hover,
-        &:active,
-        &:focus {
-            background: $dark-color-text;
-        }
-
         &:focus {
             outline: 1px solid $dark-color-link-focus;
         }
@@ -230,7 +222,6 @@
     .glide__bullet {
         &::before {
             border: 2px solid $dark-color-background;
-            background-color: $dark-color-text;
         }
 
         &:focus {

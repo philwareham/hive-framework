@@ -7,7 +7,7 @@
 *::after {
     background: transparent !important;
     box-shadow: none !important;
-    color: $color-text-print !important;
+    color: var(--color-text-print) !important;
     text-shadow: none !important;
 }
 
@@ -35,7 +35,7 @@ body {
  */
 
 .site-header {
-    border-bottom: 1pt solid $color-text-print;
+    border-bottom: 1pt solid var(--color-text-print);
 }
 
 /**
@@ -44,7 +44,7 @@ body {
 
 .site-footer {
     margin-top: 12pt;
-    border-top: 1pt solid $color-text-print;
+    border-top: 1pt solid var(--color-text-print);
 }
 
 /**
@@ -167,7 +167,7 @@ small,
 
 blockquote {
     padding: 0 0 0 8pt;
-    border-left: 3pt solid $color-text-print;
+    border-left: 3pt solid var(--color-text-print);
     font-size: 16pt;
     page-break-inside: avoid; /* 1 */
 }
@@ -181,7 +181,7 @@ blockquote {
 pre {
     margin-bottom: 8pt;
     padding: 8pt;
-    border: 1pt solid $color-text-print;
+    border: 1pt solid var(--color-text-print);
     white-space: pre-wrap !important; /* 1 */
 }
 
@@ -314,7 +314,7 @@ thead {
     display: table-header-group;
 
     th {
-        border-top: 1pt solid $color-text-print;
+        border-top: 1pt solid var(--color-text-print);
     }
 }
 
@@ -333,7 +333,7 @@ tr {
 th,
 td {
     padding: 4pt 8pt;
-    border-bottom: 1pt solid $color-text-print;
+    border-bottom: 1pt solid --color-text-print;
 }
 
 /**

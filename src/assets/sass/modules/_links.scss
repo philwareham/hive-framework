@@ -53,31 +53,12 @@ h4,
 h5,
 h6 {
     a {
-        color: $color-text-heading;
+        color: var(--color-text-heading);
 
         &:hover,
         &:active {
-            color: $color-text-heading;
-            text-decoration-color: rgba($color-text-heading, 0.5);  /* 1 */
-        }
-    }
-}
-
-@include dark-mode {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        a {
-            color: $dark-color-text-heading;
-
-            &:hover,
-            &:active {
-                color: $dark-color-text-heading;
-                text-decoration-color: rgba($dark-color-text-heading, 0.5);  /* 1 */
-            }
+            color: var(--color-text-heading);
+            text-decoration-color: var(--color-text-heading-a50);  /* 1 */
         }
     }
 }
@@ -139,25 +120,14 @@ h6 {
 
 a[href^="tel"],
 a[href^="sms"] {
-    color: $color-text;
+    color: var(--color-text);
     cursor: default;
     pointer-events: none;
 
     [itemprop="telephone"] & {
-        color: $color-link;
+        color: var(--color-link);
         cursor: pointer;
         pointer-events: auto;
-    }
-}
-
-@include dark-mode {
-    a[href^="tel"],
-    a[href^="sms"] {
-        color: $dark-color-text;
-
-        [itemprop="telephone"] & {
-            color: $dark-color-link;
-        }
     }
 }
 
@@ -178,7 +148,7 @@ a[href^="sms"] {
     transform: translateY(-5em);
     transition: transform 0.25s ease-in-out;
     background-color: $color-selected;
-    color: $color-text;
+    color: var(--color-text);
 
     &:focus,
     &:active {
@@ -189,6 +159,5 @@ a[href^="sms"] {
 @include dark-mode {
     .a--skip-link {
         background-color: $dark-color-selecting;
-        color: $dark-color-text;
     }
 }

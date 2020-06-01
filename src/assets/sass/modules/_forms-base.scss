@@ -59,7 +59,7 @@ span.button {
     box-sizing: border-box;
     max-width: 100%;  /* 1 */
     margin: 0;  /* 2 */
-    color: $color-text-form;
+    color: var(--color-text-form);
     font-family: $font-form;
     font-size: 1rem; /* 3 */
     line-height: 1.375; // 22px / 16px
@@ -317,14 +317,8 @@ textarea {
 
 ::placeholder {
     opacity: 1;
-    color: $color-text-form-placeholder;
+    color: var(--color-text-form-placeholder);
     font: inherit; /* 1 */
-}
-
-@include dark-mode {
-    ::placeholder {
-        color: $dark-color-text-form-placeholder;
-    }
 }
 
 /**

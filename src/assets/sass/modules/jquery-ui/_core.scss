@@ -128,14 +128,13 @@
 .ui-state-default {
     border: 1px solid $color-border;
     background-color: $color-gradient-from;
-    color: $color-text;
+    color: var(--color-text);
 }
 
 @include dark-mode {
     .ui-state-default {
         border-color: $dark-color-border-light;
         background-color: $dark-color-background-box;
-        color: $dark-color-text;
     }
 }
 
@@ -145,15 +144,8 @@
 
 a.ui-state-default:hover,
 a.ui-state-default:focus {
-    color: $color-text;
+    color: var(--color-text);
     text-decoration: none;
-}
-
-@include dark-mode {
-    a.ui-state-default:hover,
-    a.ui-state-default:focus {
-        color: $dark-color-text;
-    }
 }
 
 /**
@@ -177,17 +169,11 @@ a.ui-state-default:focus {
  */
 
 .ui-state-focus {
-    border-color: $color-link-focus;
+    border-color: var(--color-link-focus);
     outline: 0;
 
     a {
         outline: 0;
-    }
-}
-
-@include dark-mode {
-    .ui-state-focus {
-        border-color: $dark-color-link-focus;
     }
 }
 

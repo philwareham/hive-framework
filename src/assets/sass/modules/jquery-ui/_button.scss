@@ -31,7 +31,7 @@
     border: 1px solid $color-button-border;
     background-clip: padding-box;
     box-shadow: 0 2px 0 $color-button-shadow;
-    color: $color-text-button;
+    color: var(--color-text-button);
     font-family: $font-form;
     font-size: 1rem; /* 2 */
     line-height: 1.375; // 22px / 16px
@@ -45,7 +45,7 @@
         @include gradient-linear(lighten($color-button-gradient-from, 4%), lighten($color-button-gradient-to, 4%));
 
         border-color: shade($color-button-border, 15%);
-        color: $color-text-button-hover;
+        color: var(--color-text-button-hover);
         text-decoration: none;
     }
 
@@ -53,7 +53,7 @@
         top: 2px;
         border-color: shade($color-button-border, 15%);
         box-shadow: none;
-        color: $color-text-button-active;
+        color: var(--color-text-button-active);
         text-decoration: none;
     }
 
@@ -64,12 +64,8 @@
 }
 
 @include dark-mode {
-    .ui-button {
-        color: $color-text-button;
-
-        &:focus {
-            border-color: $dark-color-link-focus;
-        }
+    .ui-button:focus {
+        border-color: $dark-color-link-focus;
     }
 }
 
@@ -78,14 +74,8 @@
  */
 
 a.ui-button {
-    color: $color-text-button;
+    color: var(--color-text-button);
     text-decoration: none;
-}
-
-@include dark-mode {
-    a.ui-button {
-        color: $color-text-button;
-    }
 }
 
 /**

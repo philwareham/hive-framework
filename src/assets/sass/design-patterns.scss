@@ -18,13 +18,7 @@
  */
 
 .information code {
-    color: $color-text;
-}
-
-@include dark-mode {
-    .information code {
-        color: $dark-color-text;
-    }
+    color: var(--color-text);
 }
 
 
@@ -36,8 +30,8 @@
  */
 
 $colors: (
-    "text":                 $color-text,
-    "text-footnote":        $color-text-footnote,
+    "text":                 var(--color-text),
+    "text-footnote":        var(--color-text-footnote),
     "gradient-from":        $color-gradient-from,
     "gradient-to":          $color-gradient-to,
     "border":               $color-border,
@@ -60,33 +54,6 @@ $colors: (
     "error-background":     $color-error-background,
     "info-text":            $color-info-text,
     "info-background":      $color-info-background
-);
-
-$dark-colors: (
-    "text":                 $dark-color-text,
-    "text-footnote":        $dark-color-text-footnote,
-    "gradient-from":        $dark-color-gradient-from,
-    "gradient-to":          $dark-color-gradient-to,
-    "border":               $dark-color-border,
-    "border-light":         $dark-color-border-light,
-    "link":                 $dark-color-link,
-    "link-hover":           $dark-color-link-hover,
-    "link-focus":           $dark-color-link-focus,
-    "link-selecting":       $dark-color-selecting,
-    "link-selected":        $dark-color-selected,
-    "background":           $dark-color-background,
-    "background-box":       $dark-color-background-box,
-    "highlight":            $dark-color-highlight,
-    "strong-highlight-box": $dark-color-strong-highlight-box,
-    "highlight-box":        $dark-color-highlight-box,
-    "success-text":         $dark-color-success-text,
-    "success-background":   $dark-color-success-background,
-    "warning-text":         $dark-color-warning-text,
-    "warning-background":   $dark-color-warning-background,
-    "error-text":           $dark-color-error-text,
-    "error-background":     $dark-color-error-background,
-    "info-text":            $dark-color-info-text,
-    "info-background":      $dark-color-info-background
 );
 
 .design-patterns--color {
@@ -122,18 +89,6 @@ $dark-colors: (
 
         &::after {
             content: "#{$color}";
-        }
-    }
-}
-
-@include dark-mode {
-    @each $name, $color in $dark-colors {
-        .design-patterns--color-#{$name} {
-            background: $color;
-
-            &::after {
-                content: "#{$color}";
-            }
         }
     }
 }

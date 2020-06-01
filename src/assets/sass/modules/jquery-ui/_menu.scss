@@ -84,7 +84,7 @@
         cursor: pointer;
 
         a {
-            color: $color-text;
+            color: var(--color-text);
             text-decoration: none;
         }
     }
@@ -129,10 +129,6 @@
     .ui-menu {
         border-color: $dark-color-border-light;
         box-shadow: $dark-standard-shadow;
-
-        .ui-menu-item a {
-            color: $dark-color-text;
-        }
 
         .ui-state-focus,
         .ui-state-active {

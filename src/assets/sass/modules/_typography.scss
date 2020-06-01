@@ -17,16 +17,9 @@ html {
  */
 
 body {
-    // color: var(--textColor); TODO when browser support allows
-    color: $color-text;
+    color: var(--color-text);
     font-family: $font-serif;
     font-feature-settings: "liga"; /* 1 */
-}
-
-@include dark-mode {
-    //body {
-    color: $dark-color-text;
-    //}
 }
 
 /**
@@ -201,14 +194,13 @@ var {
     padding: 0 0.25em; // 0 4px
     border-radius: $border-radius / 2;
     background-color: $color-selected;
-    color: $color-text;
+    color: var(--color-text);
 }
 
 @include dark-mode {
     mark,
     var {
         background-color: $dark-color-selected;
-        color: $dark-color-text;
     }
 }
 
@@ -225,7 +217,7 @@ samp {
     border: 1px solid $color-border-extra-light;
     border-radius: 0.2857143em; // 4px / 14px
     background-color: $color-background-box;
-    color: $color-text;
+    color: var(--color-text);
     font-family: $font-code;
     font-feature-settings: normal; /* 1 */
     font-size: $code-font-size;
@@ -239,7 +231,6 @@ samp {
     samp {
         border-color: $dark-color-border-extra-light;
         background-color: $dark-color-background-box;
-        color: $dark-color-text;
     }
 }
 
@@ -317,16 +308,7 @@ figcaption,
 tfoot,
 .footnote,
 .footnotes {
-    color: $color-text-footnote;
-}
-
-@include dark-mode {
-    figcaption,
-    tfoot,
-    .footnote,
-    .footnotes {
-        color: $dark-color-text-footnote;
-    }
+    color: var(--color-text-footnote);
 }
 
 figcaption {
