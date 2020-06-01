@@ -28,7 +28,7 @@
     --color-text-white-out:                hsl(0, 0%, 100%);
     --color-text-print:                    hsl(0, 0%, 0%);
     // interaction colours
-    --color-link:                          hsl(216, 100%, 36%);
+    --color-link:                          hsl(216, 100%, 37%);
     --color-link-hover:                    hsl(216, 100%, 50%);
     --color-link-focus:                    hsl(216, 100%, 50%);
     --color-selecting:                     hsl(216, 100%, 90%);
@@ -60,14 +60,14 @@
     --color-button-selected-border:        hsl(216, 100%, 64%);
     // alert colours
     --color-success-text:                  hsl(120, 60%, 34%);
-    --color-success-background:            hsl(120, 44%, 89%);
-    --color-success-border:                hsl(102, 44%, 69%);
+    --color-success-background:            hsl(120, 40%, 90%);
+    --color-success-border:                hsl(102, 40%, 68%);
     --color-warning-text:                  hsl(41, 100%, 40%);
     --color-warning-background:            hsl(41, 64%, 91%);
     --color-warning-border:                hsl(41, 64%, 71%);
     --color-error-text:                    hsl(4, 69%, 36%);
     --color-error-background:              hsl(4, 43%, 91%);
-    --color-error-border:                  hsl(0, 43%, 79%);
+    --color-error-border:                  hsl(0, 43%, 78%);
     --color-info-text:                     hsl(200, 50%, 45%);
     --color-info-background:               hsl(200, 78%, 95%);
     --color-info-border:                   hsl(200, 78%, 82%);
@@ -82,22 +82,22 @@
         --color-text-form-placeholder:     hsl(210, 6%, 48%);
         --color-text-footnote:             hsl(210, 17%, 82%);
         // interaction colours
-        --color-link:                      hsl(204, 100%, 81%);
-        --color-link-hover:                hsl(204, 100%, 87%);
+        --color-link:                      hsl(210, 100%, 81%);
+        --color-link-hover:                hsl(210, 100%, 87%);
         --color-link-focus:                hsl(36, 100%, 50%);
-        --color-selecting:                 hsl(213, 45%, 19%);
-        --color-selected:                  hsl(215, 51%, 22%);
+        --color-selecting:                 hsl(210, 50%, 18%);
+        --color-selected:                  hsl(210, 50%, 21%);
         // neutral colours
         --color-background:                hsl(210, 11%, 24%);
-        --color-background-box:            hsl(210, 11%, 21%);
-        --color-background-form:           hsl(210, 11%, 18%);
-        --color-background-form-disabled:  hsl(210, 11%, 18%);
-        --color-gradient-from:             hsl(210, 8%, 30%);
+        --color-background-box:            hsl(210, 11%, 20%);
+        --color-background-form:           hsl(210, 11%, 17%);
+        --color-background-form-disabled:  hsl(210, 11%, 17%);
+        --color-gradient-from:             hsl(210, 9%, 30%);
         --color-gradient-to:               hsl(210, 6%, 36%);
         // accent colours
         --color-highlight:                 hsl(48, 100%, 63%);
-        --color-strong-highlight-box:      hsl(48, 46%, 46%);
-        --color-highlight-box:             hsl(54, 19%, 29%);
+        --color-strong-highlight-box:      hsl(48, 42%, 47%);
+        --color-highlight-box:             hsl(48, 20%, 30%);
         // border colours
         --color-border:                    hsl(210, 7%, 53%);
         --color-border-light:              hsl(210, 7%, 43%);
@@ -113,7 +113,7 @@
         --color-warning-border:            hsla(40, 100%, 62%, 0.33);
         --color-error-text:                hsl(337, 100%, 60%);
         --color-error-background:          hsl(348, 34%, 21%);
-        --color-error-border:              hsla(337, 100%, 60%, 0.44);
+        --color-error-border:              hsla(337, 100%, 60%, 0.43);
         --color-info-text:                 hsl(207, 100%, 63%);
         --color-info-background:           hsl(207, 68%, 17%);
         --color-info-border:               hsla(207, 100%, 63%, 0.38);
