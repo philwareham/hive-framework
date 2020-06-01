@@ -26,7 +26,7 @@
     --color-text-form-placeholder:         hsl(0, 0%, 60%);
     --color-text-footnote:                 hsl(0, 0%, 35%);
     --color-text-white-out:                hsl(0, 0%, 100%);
-    --color-text-print:                    black; // solid black prints faster/cleaner
+    --color-text-print:                    hsl(0, 0%, 0%);
     // interaction colours
     --color-link:                          hsl(216, 100%, 37%);
     --color-link-hover:                    hsl(216, 100%, 50%);
@@ -83,21 +83,21 @@
         --color-text-footnote:             hsl(210, 17%, 82%);
         // interaction colours
         --color-link:                      hsl(204, 100%, 81%);
-        --color-link-hover:                tint(#9cd7ff, 33%);
-        --color-link-focus:                #ff9900;
-        --color-selecting:                 #1b2f48;
-        --color-selected:                  #1c3456;
+        --color-link-hover:                hsl(204, 100%, 87%);
+        --color-link-focus:                hsl(36, 100%, 50%);
+        --color-selecting:                 hsl(213, 45%, 19%);
+        --color-selected:                  hsl(215, 51%, 22%);
         // neutral colours
-        --color-background:                #373e45;
-        --color-background-box:            shade(#373e45, 14%);
+        --color-background:                hsl(210, 11%, 24%);
+        --color-background-box:            hsl(210, 11%, 21%);
         --color-background-form:           shade(#373e45, 28%);
         --color-background-form-disabled:  shade(#373e45, 28%);
         --color-gradient-from:             tint(#373e45, 8%);
         --color-gradient-to:               tint(#373e45, 16%);
         // accent colours
-        --color-highlight:                 #ffda44;
-        --color-strong-highlight-box:      #ac9840;
-        --color-highlight-box:             #59563d;
+        --color-highlight:                 hsl(48, 100%, 63%);
+        --color-strong-highlight-box:      hsl(48, 46%, 46%);
+        --color-highlight-box:             hsl(54, 19%, 29%);
         // border colours
         --color-border:                    tint($dark-color-background, 36%);
         --color-border-light:              tint($dark-color-background, 24%);
@@ -105,17 +105,17 @@
         --color-border-dark:               shade($dark-color-background, 12%);
         --color-border-extra-dark:         shade($dark-color-background, 75%);
         // alert colours
-        --color-success-text:              #66cc33;
-        --color-success-background:        #2a4125;
-        --color-success-border:            rgba($dark-color-success-text, 0.33);
-        --color-warning-text:              #ffbe3c;
-        --color-warning-background:        #484123;
-        --color-warning-border:            rgba($dark-color-warning-text, 0.33);
-        --color-error-text:                #ff3382;
-        --color-error-background:          #47232a;
-        --color-error-border:              rgba($dark-color-error-text, 0.44);
-        --color-info-text:                 #44aaff;
-        --color-info-background:           #0e304a;
-        --color-info-border:               rgba($dark-color-info-text, 0.38);
+        --color-success-text:              hsl(100, 60%, 50%);
+        --color-success-background:        hsl(109, 27%, 20%);
+        --color-success-border:            hsla(100, 60%, 50%, 0.33);
+        --color-warning-text:              hsl(40, 100%, 62%);
+        --color-warning-background:        hsl(49, 35%, 21%);
+        --color-warning-border:            hsla(40, 100%, 62%, 0.33);
+        --color-error-text:                hsl(337, 100%, 60%);
+        --color-error-background:          hsl(348, 34%, 21%);
+        --color-error-border:              hsla(337, 100%, 60%, 0.44);
+        --color-info-text:                 hsl(207, 100%, 63%);
+        --color-info-background:           hsl(207, 68%, 17%);
+        --color-info-border:               hsla(207, 100%, 63%, 0.38);
     }
 }
