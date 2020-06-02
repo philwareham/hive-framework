@@ -9,8 +9,8 @@ meter {
     box-sizing: border-box;
     height: 0.75em;
     overflow: hidden;
-    border: 1px solid $color-border;
-    background: $color-gradient-to;
+    border: 1px solid var(--color-border);
+    background: var(--color-background-box);
     vertical-align: -0.0625em;
     appearance: none;
 }
@@ -18,70 +18,31 @@ meter {
 // WebKit/Blink.
 
 meter::-webkit-meter-bar {
-    background: $color-gradient-to;
+    background: var(--color-background-box);
 }
 
 meter::-webkit-meter-optimum-value {
-    background: $color-success-text;
+    background: var(--color-success-text);
 }
 
 meter::-webkit-meter-suboptimum-value {
-    background: $color-warning-text;
+    background: var(--color-warning-text);
 }
 
 meter::-webkit-meter-even-less-good-value {
-    background: $color-error-text;
+    background: var(--color-error-text);
 }
 
 // Gecko/Quantum.
 
 meter:-moz-meter-optimum::-moz-meter-bar {
-    background: $color-success-text;
+    background: var(--color-success-text);
 }
 
 meter:-moz-meter-sub-optimum::-moz-meter-bar {
-    background: $color-warning-text;
+    background: var(--color-warning-text);
 }
 
 meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
-    background: $color-error-text;
-}
-
-@include dark-mode {
-    meter {
-        border-color: $dark-color-border;
-        background: $dark-color-background-box;
-    }
-
-    // WebKit/Blink.
-
-    meter::-webkit-meter-bar {
-        background: $dark-color-background-box;
-    }
-
-    meter::-webkit-meter-optimum-value {
-        background: $dark-color-success-text;
-    }
-
-    meter::-webkit-meter-suboptimum-value {
-        background: $dark-color-warning-text;
-    }
-
-    meter::-webkit-meter-even-less-good-value {
-        background: $dark-color-error-text;
-    }
-
-    // Gecko/Quantum.
-
-    meter:-moz-meter-optimum::-moz-meter-bar {
-        background: $dark-color-success-text;
-    }
-
-    meter:-moz-meter-sub-optimum::-moz-meter-bar {
-        background: $dark-color-warning-text;
-    }
-
-    meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
-        background: $dark-color-error-text;
-    }
+    background: var(--color-error-text);
 }

@@ -58,14 +58,8 @@
     }
 
     &:focus {
-        border-color: $color-link-focus;
+        border-color: var(--color-link-focus);
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
-    }
-}
-
-@include dark-mode {
-    .ui-button:focus {
-        border-color: $dark-color-link-focus;
     }
 }
 
@@ -85,13 +79,7 @@ a.ui-button {
  */
 
 .ui-button.ui-state-focus {
-    border-color: $color-link-focus !important; /* 1 */
-}
-
-@include dark-mode {
-    .ui-button.ui-state-focus {
-        border-color: $dark-color-link-focus !important; /* 1 */
-    }
+    border-color: var(--color-link-focus) !important; /* 1 */
 }
 
 /**

@@ -18,14 +18,8 @@ html {
 body {
     position: relative; /* 1 */
     margin: 0; /* 2 */
-    background: $color-background-box;
+    background: var(--color-background-box);
     scroll-behavior: smooth; // https://caniuse.com/#search=scroll-behavior
-}
-
-@include dark-mode {
-    //body {
-    background: $dark-color-background-box;
-    //}
 }
 
 /**
@@ -60,14 +54,13 @@ body {
     padding: 1px 0 1em;
     border-top: 1px solid $color-border;
     border-bottom: 1px solid $color-border;
-    background: $color-background;
+    background: var(--color-background);
 }
 
 @include dark-mode {
     .wrapper {
         border-top-color: $dark-color-border-extra-dark;
         border-bottom-color: $dark-color-border-extra-dark;
-        background-color: $dark-color-background;
     }
 }
 

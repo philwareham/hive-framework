@@ -8,7 +8,7 @@
     padding: 0.25em 0.1875em; // 8px / 16px + 3px / 16px
     border: 1px solid $color-border;
     border-radius: 0;
-    background: $color-background-form;
+    background: var(--color-background-form);
     appearance: none;
     cursor: pointer;
 
@@ -17,7 +17,7 @@
     }
 
     &:focus {
-        border-color: $color-link-focus;
+        border-color: var(--color-link-focus);
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
     }
 }
@@ -25,20 +25,15 @@
 @include dark-mode {
     [type="file"] {
         border-color: $dark-color-border-extra-dark;
-        background-color: $dark-color-background-form;
 
         &:hover {
             border-color: $dark-color-border-extra-light;
-        }
-
-        &:focus {
-            border-color: $dark-color-link-focus;
         }
     }
 }
 
 ::-webkit-file-upload-button {
-    @include gradient-linear($color-button-gradient-from, $color-button-gradient-to);
+    @include gradient-linear(var(--color-button-gradient-from), var(--color-button-gradient-to));
 
     padding: 0 0.25em;
     border: 0;

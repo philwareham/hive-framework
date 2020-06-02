@@ -43,7 +43,7 @@ span.button {
     border: 1px solid $color-button-border;
     border-radius: 1em;
     background-clip: padding-box;
-    box-shadow: 0 2px 0 $color-button-shadow;
+    box-shadow: 0 2px 0 var(--color-button-shadow);
     color: var(--color-text-button);
     font-weight: normal;
     text-align: center;
@@ -70,19 +70,6 @@ span.button {
     &:focus {
         border-color: var(--color-link-focus);
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
-    }
-}
-
-@include dark-mode {
-    button,
-    [type="button"],
-    [type="reset"],
-    [type="submit"],
-    a.button,
-    span.button {
-        &:focus {
-            border-color: $dark-color-link-focus;
-        }
     }
 }
 
@@ -135,17 +122,13 @@ span.button-small {
         @include gradient-linear(tint($color-success-text, 18%), tint($color-success-text, 8%));
 
         border-color: shade($color-success-text, 15%);
-        color: $color-text-white-out;
+        color: var(--color-text-white-out);
     }
 
     &:active {
         border-color: shade($color-success-text, 15%);
         box-shadow: none;
-        color: $color-text-white-out;
-    }
-
-    &:focus {
-        border-color: $color-link-focus;
+        color: var(--color-text-white-out);
     }
 }
 
@@ -168,26 +151,13 @@ span.button-small {
         @include gradient-linear(tint($color-error-text, 18%), tint($color-error-text, 8%));
 
         border-color: shade($color-error-text, 15%);
-        color: $color-text-white-out;
+        color: var(--color-text-white-out);
     }
 
     &:active {
         border-color: shade($color-error-text, 15%);
         box-shadow: none;
-        color: $color-text-white-out;
-    }
-
-    &:focus {
-        border-color: $color-link-focus;
-    }
-}
-
-@include dark-mode {
-    .button-success,
-    .button-danger {
-        &:focus {
-            border-color: $dark-color-link-focus;
-        }
+        color: var(--color-text-white-out);
     }
 }
 
@@ -201,15 +171,5 @@ button[disabled],
 [type="submit"][disabled],
 .button.disabled {
     top: 0 !important;
-    background: $color-background-form-disabled !important;
-}
-
-@include dark-mode {
-    button[disabled],
-    [type="button"][disabled],
-    [type="reset"][disabled],
-    [type="submit"][disabled],
-    .button.disabled {
-        background: $color-background-form-disabled !important;
-    }
+    background: var(--color-background-form-disabled) !important;
 }

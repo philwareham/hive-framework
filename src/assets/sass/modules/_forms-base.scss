@@ -253,18 +253,8 @@ input,
 select,
 textarea {
     &:focus:invalid {
-        border-color: $color-error-text;
+        border-color: var(--color-error-text);
         box-shadow: none; // Normalize Firefox styling
-    }
-}
-
-@include dark-mode {
-    input,
-    select,
-    textarea {
-        &:focus:invalid {
-            border-color: $dark-color-error-text;
-        }
     }
 }
 
