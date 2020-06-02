@@ -68,7 +68,7 @@
         right: 0.25em;
         height: 20px;
         transform: translate(0, -50%);
-        border-color: $color-border;
+        border-color: var(--color-border);
         box-shadow: none;
 
         &:hover {
@@ -104,8 +104,6 @@
 
 @include dark-mode {
     .ui-dialog .ui-dialog-titlebar-close {
-        border-color: $color-border;
-
         &:hover {
             border-color: shade($color-button-border, 15%);
         }

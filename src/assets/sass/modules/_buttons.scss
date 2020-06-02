@@ -52,18 +52,16 @@ span.button {
     user-select: none;
 
     &:hover {
-        @include gradient-linear(lighten($color-button-gradient-from, 4%), lighten($color-button-gradient-to, 4%));
-
-        border-color: shade($color-button-border, 15%);
-        color: var(--color-text-button-hover);
+        filter: brightness(1.1);
+        color: var(--color-text-button);
         text-decoration: none;
     }
 
     &:active {
         top: 2px;
-        border-color: shade($color-button-border, 15%);
         box-shadow: none;
-        color: var(--color-text-button-active);
+        filter: brightness(0.9);
+        color: var(--color-text-button);
         text-decoration: none;
     }
 
@@ -123,22 +121,32 @@ span.button-small {
  */
 
 .button-success {
-    @include gradient-linear(tint($color-success-text, 10%), $color-success-text);
+    --color-success-text-light: hsl(120, 60%, 38%);
+    --color-success-text-dark: hsl(120, 60%, 30%);
+    --color-success-text-extra-dark: hsl(120, 60%, 20%);
 
-    border-color: shade($color-success-text, 5%);
-    box-shadow: 0 2px 0 shade($color-success-text, 33%);
+    @include gradient-linear(var(--color-success-text), var(--color-success-text));
+
+    border-color: var(--color-success-text-dark);
+    box-shadow: 0 2px 0 var(--color-success-text-extra-dark);
     color: var(--color-text-white-out);
 
     &:hover {
-        @include gradient-linear(tint($color-success-text, 18%), tint($color-success-text, 8%));
-
-        border-color: shade($color-success-text, 15%);
         color: var(--color-text-white-out);
     }
 
     &:active {
-        border-color: shade($color-success-text, 15%);
         box-shadow: none;
+        color: var(--color-text-white-out);
+    }
+}
+
+@include dark-mode {
+    .button-success {
+        --color-success-text-light: hsl(100, 60%, 53%);
+        --color-success-text-dark: hsl(100, 60%, 45%);
+        --color-success-text-extra-dark: hsl(100, 60%, 33%);
+
         color: var(--color-text-white-out);
     }
 }
@@ -152,22 +160,32 @@ span.button-small {
  */
 
 .button-danger {
-    @include gradient-linear(tint($color-error-text, 10%), $color-error-text);
+    --color-error-text-light: hsl(4, 69%, 40%);
+    --color-error-text-dark: hsl(4, 69%, 32%);
+    --color-error-text-extra-dark: hsl(4, 69%, 25%);
 
-    border-color: shade($color-error-text, 5%);
-    box-shadow: 0 2px 0 shade($color-error-text, 33%);
+    @include gradient-linear(var(--color-error-text-light), var(--color-error-text));
+
+    border-color: var(--color-error-text-dark);
+    box-shadow: 0 2px 0 var(--color-error-text-extra-dark);
     color: var(--color-text-white-out);
 
     &:hover {
-        @include gradient-linear(tint($color-error-text, 18%), tint($color-error-text, 8%));
-
-        border-color: shade($color-error-text, 15%);
         color: var(--color-text-white-out);
     }
 
     &:active {
-        border-color: shade($color-error-text, 15%);
         box-shadow: none;
+        color: var(--color-text-white-out);
+    }
+}
+
+@include dark-mode {
+    .button-danger {
+        --color-error-text-light: hsl(337, 100%, 63%);
+        --color-error-text-dark: hsl(337, 100%, 54%);
+        --color-error-text-extra-dark: hsl(337, 100%, 33%);
+
         color: var(--color-text-white-out);
     }
 }
@@ -182,5 +200,4 @@ button[disabled],
 [type="submit"][disabled],
 .button.disabled {
     top: 0 !important;
-    background: var(--color-background-form-disabled) !important;
 }

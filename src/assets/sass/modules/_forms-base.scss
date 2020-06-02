@@ -60,15 +60,6 @@ span.button {
     vertical-align: baseline;
 }
 
-@include dark-mode {
-    input,
-    select,
-    optgroup,
-    textarea {
-        color: $dark-color-text-form;
-    }
-}
-
 /**
  * Styling of form input fields.
  *
@@ -129,6 +120,10 @@ textarea {
 
         &:hover {
             border-color: var(--color-border-extra-light);
+        }
+
+        &:focus {
+            border-color: var(--color-link-focus);
         }
     }
 }

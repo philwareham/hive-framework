@@ -19,14 +19,15 @@
 .ui-slider {
     position: relative;
     box-sizing: border-box;
+    border-color: var(--color-border);
     background-color: var(--color-background-box);
     text-align: left;
 
     &:hover {
-        border-color: $color-border-extra-dark;
+        border-color: var(--color-border-extra-dark);
 
         .ui-slider-handle {
-            border-color: $color-border-extra-dark;
+            border-color: var(--color-border-extra-dark);
         }
     }
 
@@ -56,11 +57,13 @@
 
 @include dark-mode {
     .ui-slider {
+        border-color: var(--color-border-extra-dark);
+
         &:hover {
-            border-color: $dark-color-border-extra-light;
+            border-color: var(--color-border-extra-light);
 
             .ui-slider-handle {
-                border-color: $dark-color-border-extra-light;
+                border-color: var(--color-border-extra-light);
             }
         }
     }

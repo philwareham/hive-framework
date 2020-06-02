@@ -19,7 +19,7 @@
  */
 
 .ui-button {
-    @include gradient-linear($color-button-gradient-from, $color-button-gradient-to);
+    @include gradient-linear(var(--color-button-gradient-from), var(--color-button-gradient-to));
 
     display: inline-block;
     position: relative;
@@ -28,7 +28,7 @@
     margin: 0 0.125em 0 0; // 2px / 16px
     padding: 0.25em 1em; // 4px / 16px
     overflow: visible; /* 1 */
-    border: 1px solid $color-button-border;
+    border: 1px solid var(--color-button-border);
     background-clip: padding-box;
     box-shadow: 0 2px 0 $color-button-shadow;
     color: var(--color-text-button);
@@ -42,18 +42,16 @@
     user-select: none;
 
     &:hover {
-        @include gradient-linear(lighten($color-button-gradient-from, 4%), lighten($color-button-gradient-to, 4%));
-
-        border-color: shade($color-button-border, 15%);
-        color: var(--color-text-button-hover);
+        filter: brightness(1.1);
+        color: var(--color-text-button);
         text-decoration: none;
     }
 
     &:active {
         top: 2px;
-        border-color: shade($color-button-border, 15%);
         box-shadow: none;
-        color: var(--color-text-button-active);
+        filter: brightness(0.9);
+        color: var(--color-text-button);
         text-decoration: none;
     }
 
