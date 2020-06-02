@@ -6,14 +6,14 @@
     height: auto;
     min-height: 2em; // 32px / 16px
     padding: 0.25em 0.1875em; // 8px / 16px + 3px / 16px
-    border: 1px solid $color-border;
+    border: 1px solid var(--color-border);
     border-radius: 0;
     background: var(--color-background-form);
     appearance: none;
     cursor: pointer;
 
     &:hover {
-        border-color: $color-border-extra-dark;
+        border-color: var(--color-border-extra-dark);
     }
 
     &:focus {
@@ -24,15 +24,19 @@
 
 @include dark-mode {
     [type="file"] {
-        border-color: $dark-color-border-extra-dark;
+        border-color: var(--color-border-extra-dark);
 
         &:hover {
-            border-color: $dark-color-border-extra-light;
+            border-color: var(--color-border-extra-light);
+        }
+
+        &:focus {
+            border-color: var(--color-link-focus);
         }
     }
 }
 
-::-webkit-file-upload-button {
+[type="file"]::-webkit-file-upload-button {
     @include gradient-linear(var(--color-button-gradient-from), var(--color-button-gradient-to));
 
     padding: 0 0.25em;
@@ -42,4 +46,12 @@
     /* autoprefixer: off */
     appearance: none;
     cursor: pointer;
+}
+
+[type="file"]:hover::-webkit-file-upload-button {
+    filter: brightness(1.1);
+}
+
+[type="file"]:active::-webkit-file-upload-button {
+    filter: brightness(0.9);
 }

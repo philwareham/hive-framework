@@ -72,11 +72,15 @@
         box-shadow: none;
 
         &:hover {
-            border-color: shade($color-button-border, 15%);
+            filter: brightness(1.1);
+        }
+
+        &:active {
+            filter: brightness(0.9);
         }
 
         &:focus {
-            border-color: $color-link-focus;
+            border-color: var(--color-link-focus);
         }
     }
 
@@ -99,18 +103,6 @@
 
     .ui-dialog-buttonpane .ui-dialog-buttonset {
         float: right;
-    }
-}
-
-@include dark-mode {
-    .ui-dialog .ui-dialog-titlebar-close {
-        &:hover {
-            border-color: shade($color-button-border, 15%);
-        }
-
-        &:focus {
-            border-color: $dark-color-link-focus;
-        }
     }
 }
 

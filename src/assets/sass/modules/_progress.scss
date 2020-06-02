@@ -17,6 +17,12 @@ progress {
     appearance: none;
 }
 
+@include dark-mode {
+    progress {
+        border-color: var(--color-border-extra-dark);
+    }
+}
+
 // WebKit/Blink.
 
 progress::-webkit-progress-bar {

@@ -65,7 +65,8 @@
         border: 1px solid var(--color-background);
 
         &.current {
-            border-color: $color-border;
+            border-color: var(--color-border);
+            background-color: var(--color-background-box);
         }
     }
 
@@ -79,12 +80,5 @@
     b {
         font-weight: normal;
         cursor: default;
-    }
-}
-
-@include dark-mode {
-    .pagination li.current {
-        border-color: $dark-color-border;
-        background-color: $dark-color-background-box;
     }
 }

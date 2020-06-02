@@ -163,6 +163,18 @@ a.ui-state-default:focus {
 .ui-state-active {
     border-color: var(--color-link);
     background-color: var(--color-selected);
+
+    &.ui-state-hover {
+        border-color: var(--color-link-hover);
+    }
+}
+
+@include dark-mode {
+    .ui-state-active.ui-state-hover {
+        --color-link-hover-dark: hsl(210, 100%, 60%);
+
+        border-color: var(--color-link-hover-dark);
+    }
 }
 
 /**
@@ -192,6 +204,18 @@ a.ui-state-default:focus {
 .ui-state-highlight {
     border: 1px solid var(--color-warning-border);
     background-color: var(--color-warning-background);
+
+    &.ui-state-hover {
+        border-color: var(--color-warning-text);
+    }
+}
+
+@include dark-mode {
+    .ui-state-highlight.ui-state-hover {
+        --color-warning-text-dark: hsl(40, 100%, 40%);
+
+        border-color: var(--color-warning-text-dark);
+    }
 }
 
 /**
@@ -202,6 +226,18 @@ a.ui-state-default:focus {
     border: 1px solid var(--color-error-border);
     background-color: var(--color-error-background);
     color: var(--color-error-text);
+
+    &.ui-state-hover {
+        border-color: var(--color-error-text);
+    }
+}
+
+@include dark-mode {
+    .ui-state-error.ui-state-hover {
+        --color-error-text-dark: hsl(337, 100%, 40%);
+
+        border-color: var(--color-error-text-dark);
+    }
 }
 
 /**

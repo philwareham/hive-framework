@@ -22,6 +22,12 @@
     text-align: left;
 }
 
+@include dark-mode {
+    .ui-progressbar {
+        border-color: var(--color-border-extra-dark);
+    }
+}
+
 .ui-progressbar-value {
     height: 0.75em;
     animation: progressbar-stripes linear 4s infinite;
