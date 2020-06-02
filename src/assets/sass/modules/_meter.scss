@@ -15,6 +15,12 @@ meter {
     appearance: none;
 }
 
+@include dark-mode {
+    meter {
+        border-color: var(--color-border-extra-dark);
+    }
+}
+
 // WebKit/Blink.
 
 meter::-webkit-meter-bar {
