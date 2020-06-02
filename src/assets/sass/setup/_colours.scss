@@ -36,7 +36,7 @@ $color-text-form-placeholder:         hsl(0, 0%, 60%);
 $color-text-footnote:                 hsl(0, 0%, 35%) !default;
 $color-text-white-out:                hsl(0, 0%, 100%) !default;
 
-$color-text-print:                    black !default; // solid black prints faster/cleaner
+$color-text-print:                    hsl(0, 0%, 0%) !default; // solid black prints faster/cleaner
 
 $dark-color-text:                     hsl(210, 14%, 83%) !default;
 $dark-color-text-heading:             hsl(0, 0%, 100%) !default;
@@ -72,7 +72,7 @@ $dark-color-background-box:           hsl(210, 11%, 20%) !default;
 $dark-color-background-form:          hsl(210, 11%, 17%) !default;
 $dark-color-background-form-disabled: hsl(210, 11%, 17%) !default;
 $dark-color-gradient-from:            hsl(210, 9%, 30%) !default;
-$dark-color-gradient-to:              hsl(210, 6%, 36%) !default;
+$dark-color-gradient-to:              hsl(210, 7%, 36%) !default;
 
 // accent colours
 

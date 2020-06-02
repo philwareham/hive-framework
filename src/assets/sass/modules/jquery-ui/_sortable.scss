@@ -24,7 +24,7 @@
  */
 
 .ui-sortable-helper {
-    box-shadow: $standard-shadow;
+    box-shadow: var(--standard-shadow);
 }
 
 .ui-sortable-handle {
@@ -32,15 +32,5 @@
 }
 
 .ui-sortable-placeholder {
-    border: 1px dotted $color-link;
-}
-
-@include dark-mode {
-    .ui-sortable-helper {
-        box-shadow: $dark-standard-shadow;
-    }
-
-    .ui-sortable-placeholder {
-        border-color: $dark-color-link;
-    }
+    border: 1px dotted var(--color-link);
 }

@@ -90,15 +90,8 @@
  */
 
 .ui-widget-content {
-    border: 1px solid $color-border;
-    background-color: $color-background;
-}
-
-@include dark-mode {
-    .ui-widget-content {
-        border-color: $dark-color-border;
-        background-color: $dark-color-background;
-    }
+    border: 1px solid var(--color-border);
+    background-color: var(--color-background);
 }
 
 /**
