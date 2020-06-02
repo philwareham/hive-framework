@@ -19,7 +19,7 @@
 .ui-slider {
     position: relative;
     box-sizing: border-box;
-    background-color: $color-gradient-to;
+    background-color: var(--color-background-box);
     text-align: left;
 
     &:hover {
@@ -31,13 +31,14 @@
     }
 
     .ui-slider-handle {
+        @include gradient-linear(var(--color-button-gradient-from), var(--color-button-gradient-to));
+
         position: absolute;
         z-index: 2;
         box-sizing: border-box;
         width: 1.25em;
         height: 1.25em;
         border-radius: 50%;
-        background-color: $color-background;
         box-shadow: var(--standard-shadow);
         cursor: pointer;
         touch-action: manipulation;
@@ -48,34 +49,19 @@
         position: absolute;
         z-index: 1;
         border: 0;
-        background: $color-background-box;
+        background: var(--color-gradient-to);
         font-size: 0.625em;
     }
 }
 
 @include dark-mode {
     .ui-slider {
-        border-color: $dark-color-border-extra-dark;
-        background-color: $dark-color-background-form;
-
         &:hover {
             border-color: $dark-color-border-extra-light;
 
             .ui-slider-handle {
                 border-color: $dark-color-border-extra-light;
             }
-        }
-
-        .ui-slider-handle {
-            @include gradient-linear($color-button-gradient-from, $color-button-gradient-to);
-
-            &:hover {
-                @include gradient-linear(lighten($color-button-gradient-from, 4%), lighten($color-button-gradient-to, 4%));
-            }
-        }
-
-        .ui-slider-range {
-            background: $dark-color-gradient-from;
         }
     }
 }

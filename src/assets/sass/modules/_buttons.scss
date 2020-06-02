@@ -40,7 +40,7 @@ span.button {
     width: auto;
     height: 2em; // 32px / 16px
     padding: 0.25em 1em; // 4px / 16px
-    border: 1px solid $color-button-border;
+    border: 1px solid var(--color-button-border);
     border-radius: 1em;
     background-clip: padding-box;
     box-shadow: 0 2px 0 var(--color-button-shadow);
@@ -70,6 +70,17 @@ span.button {
     &:focus {
         border-color: var(--color-link-focus);
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+    }
+}
+
+@include dark-mode {
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"],
+    a.button,
+    span.button {
+        color: var(--color-text-button);
     }
 }
 

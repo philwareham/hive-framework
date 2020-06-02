@@ -37,7 +37,7 @@
 
 [type="range"]:active::-webkit-slider-thumb,
 [type="range"]:focus::-webkit-slider-thumb {
-    border-color: $color-link-focus;
+    border-color: var(--color-link-focus);
 }
 
 [type="range"]::-webkit-slider-runnable-track {
@@ -55,7 +55,7 @@
 
 [type="range"]:active::-webkit-slider-runnable-track,
 [type="range"]:focus::-webkit-slider-runnable-track {
-    border-color: $color-link-focus;
+    border-color: var(--color-link-focus);
 }
 
 @include dark-mode {
@@ -71,11 +71,6 @@
         border-color: $dark-color-border-extra-light;
     }
 
-    [type="range"]:active::-webkit-slider-thumb,
-    [type="range"]:focus::-webkit-slider-thumb {
-        border-color: $dark-color-link-focus;
-    }
-
     [type="range"]::-webkit-slider-runnable-track {
         border-color: $dark-color-border-extra-dark;
         background-color: $dark-color-background-form;
@@ -83,11 +78,6 @@
 
     [type="range"]:hover::-webkit-slider-runnable-track {
         border-color: $dark-color-border-extra-light;
-    }
-
-    [type="range"]:active::-webkit-slider-runnable-track,
-    [type="range"]:focus::-webkit-slider-runnable-track {
-        border-color: $dark-color-link-focus;
     }
 }
 
@@ -110,7 +100,7 @@
 }
 
 [type="range"]:focus::-moz-range-thumb {
-    border-color: $color-link-focus;
+    border-color: var(--color-link-focus);
 }
 
 [type="range"]::-moz-range-track {
@@ -127,7 +117,7 @@
 }
 
 [type="range"]:focus::-moz-range-track {
-    border-color: $color-link-focus;
+    border-color: var(--color-link-focus);
 }
 
 [type="range"]::-moz-focus-outer {
@@ -147,10 +137,6 @@
         border-color: $dark-color-border-extra-light;
     }
 
-    [type="range"]:focus::-moz-range-thumb {
-        border-color: $dark-color-link-focus;
-    }
-
     [type="range"]::-moz-range-track {
         border-color: $dark-color-border-extra-dark;
         background-color: $dark-color-background-form;
@@ -158,9 +144,5 @@
 
     [type="range"]:hover::-moz-range-track {
         border-color: $dark-color-border-extra-light;
-    }
-
-    [type="range"]:focus::-moz-range-track {
-        border-color: $dark-color-link-focus;
     }
 }

@@ -52,15 +52,15 @@ body {
 
 .wrapper {
     padding: 1px 0 1em;
-    border-top: 1px solid $color-border;
-    border-bottom: 1px solid $color-border;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
     background: var(--color-background);
 }
 
 @include dark-mode {
     .wrapper {
-        border-top-color: $dark-color-border-extra-dark;
-        border-bottom-color: $dark-color-border-extra-dark;
+        border-top-color: var(--color-border-extra-dark);
+        border-bottom-color: var(--color-border-extra-dark);
     }
 }
 

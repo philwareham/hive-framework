@@ -99,15 +99,9 @@
  */
 
 .ui-widget-header {
-    @include gradient-linear($color-gradient-from, $color-gradient-to);
+    @include gradient-linear(var(--color-gradient-from), var(--color-gradient-to));
 
     font-weight: bold;
-}
-
-@include dark-mode {
-    .ui-widget-header {
-        @include gradient-linear($dark-color-gradient-to, $dark-color-gradient-from);
-    }
 }
 
 
@@ -119,16 +113,9 @@
  */
 
 .ui-state-default {
-    border: 1px solid $color-border;
-    background-color: $color-gradient-from;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-background-box);
     color: var(--color-text);
-}
-
-@include dark-mode {
-    .ui-state-default {
-        border-color: $dark-color-border-light;
-        background-color: $dark-color-background-box;
-    }
 }
 
 /**
@@ -146,14 +133,13 @@ a.ui-state-default:focus {
  */
 
 .ui-state-hover {
-    border-color: $color-border-extra-dark;
-    background-color: $color-background-box;
+    border-color: var(--color-border-extra-dark);
+    background-color: var(--color-background-box);
 }
 
 @include dark-mode {
     .ui-state-hover {
-        border-color: $dark-color-border;
-        background-color: tint($dark-color-background-box, 5%);
+        border-color: var(--color-border-extra-light);
     }
 }
 
@@ -175,15 +161,8 @@ a.ui-state-default:focus {
  */
 
 .ui-state-active {
-    border-color: $color-border;
-    background-color: $color-background;
-}
-
-@include dark-mode {
-    .ui-state-active {
-        border-color: $dark-color-border;
-        background-color: $dark-color-gradient-from;
-    }
+    border-color: var(--color-link);
+    background-color: var(--color-selected);
 }
 
 /**
@@ -191,13 +170,7 @@ a.ui-state-default:focus {
  */
 
 .ui-selecting {
-    background-color: $color-selecting;
-}
-
-@include dark-mode {
-    .ui-selecting {
-        background-color: $dark-color-selecting;
-    }
+    background-color: var(--color-selecting);
 }
 
 /**
@@ -205,13 +178,7 @@ a.ui-state-default:focus {
  */
 
 .ui-selected {
-    background-color: $color-selected;
-}
-
-@include dark-mode {
-    .ui-selected {
-        background-color: $dark-color-selected;
-    }
+    background-color: var(--color-selected);
 }
 
 
@@ -223,15 +190,8 @@ a.ui-state-default:focus {
  */
 
 .ui-state-highlight {
-    border: 1px solid $color-warning-border;
-    background-color: $color-warning-background;
-}
-
-@include dark-mode {
-    .ui-state-highlight {
-        border-color: $dark-color-warning-border;
-        background-color: $dark-color-warning-background;
-    }
+    border: 1px solid var(--color-warning-border);
+    background-color: var(--color-warning-background);
 }
 
 /**
@@ -239,17 +199,9 @@ a.ui-state-default:focus {
  */
 
 .ui-state-error {
-    border: 1px solid $color-error-border;
-    background-color: $color-error-background;
-    color: $color-error-text;
-}
-
-@include dark-mode {
-    .ui-state-error {
-        border-color: $dark-color-error-border;
-        background-color: $dark-color-error-background;
-        color: $dark-color-error-text;
-    }
+    border: 1px solid var(--color-error-border);
+    background-color: var(--color-error-background);
+    color: var(--color-error-text);
 }
 
 /**
@@ -309,13 +261,7 @@ a.ui-state-default:focus {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(#000000, 0.75);
-}
-
-@include dark-mode {
-    .ui-widget-overlay {
-        background: rgba(#000000, 0.66);
-    }
+    background: hsla(0, 0%, 0%, 0.66);
 }
 
 

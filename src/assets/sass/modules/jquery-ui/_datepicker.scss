@@ -122,7 +122,7 @@
 
     .ui-datepicker-prev-hover,
     .ui-datepicker-next-hover {
-        background-color: $color-background-box;
+        background-color: var(--color-background-box);
     }
 
     .ui-datepicker-title {
@@ -162,19 +162,6 @@
             text-align: center;
         }
 
-        a.ui-state-active {
-            border-color: lighten($color-link, 42%);
-            background-color: $color-selected;
-        }
-
-        a.ui-state-highlight:hover {
-            border-color: lighten($color-warning-text, 8%);
-        }
-
-        a.ui-state-active:hover {
-            border-color: lighten($color-link, 27%);
-        }
-
         &.ui-datepicker-week-col {
             padding: 0.25em 0;
             text-align: center;
@@ -207,30 +194,6 @@
         display: block;
         top: 0.25em;
         left: 0.5em;
-    }
-}
-
-@include dark-mode {
-    .ui-datepicker {
-        .ui-datepicker-prev-hover,
-        .ui-datepicker-next-hover {
-            background-color: $dark-color-background-box;
-        }
-
-        td {
-            a.ui-state-highlight {
-                border-color: $color-warning-text;
-            }
-
-            a.ui-state-active {
-                border-color: $dark-color-link;
-                background-color: $dark-color-selected;
-            }
-
-            a.ui-state-active:hover {
-                border-color: $dark-color-link-hover;
-            }
-        }
     }
 }
 

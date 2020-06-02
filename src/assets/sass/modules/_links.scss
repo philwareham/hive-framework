@@ -116,17 +116,11 @@ a[href^="sms"] {
     padding: 0.25em 0.5em;
     transform: translateY(-5em);
     transition: transform 0.25s ease-in-out;
-    background-color: $color-selected;
+    background-color: var(--color-selecting);
     color: var(--color-text);
 
     &:focus,
     &:active {
         transform: translateY(0);
-    }
-}
-
-@include dark-mode {
-    .a--skip-link {
-        background-color: $dark-color-selecting;
     }
 }

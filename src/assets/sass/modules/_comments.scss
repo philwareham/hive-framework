@@ -31,18 +31,7 @@
     kbd,
     pre,
     samp {
-        background: $color-background;
-    }
-}
-
-@include dark-mode {
-    .comments {
-        code,
-        kbd,
-        pre,
-        samp {
-            background: $dark-color-background-form;
-        }
+        background: var(--color-background);
     }
 }
 
@@ -55,13 +44,7 @@
  */
 
 .comments-author {
-    background: shade($color-background-box, 4%);
-}
-
-@include dark-mode {
-    .comments-author {
-        background: tint($dark-color-background-box, 5%);
-    }
+    background: var(--color-gradient-from);
 }
 
 /**
@@ -72,13 +55,7 @@
     margin-bottom: 2px;
     padding: 1em;
     border-radius: $border-radius;
-    background-color: $color-highlight-box;
-}
-
-@include dark-mode {
-    #cpreview {
-        background-color: $dark-color-highlight-box;
-    }
+    background-color: var(--color-highlight-box);
 }
 
 /**
