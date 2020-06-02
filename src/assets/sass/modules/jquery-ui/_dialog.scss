@@ -45,7 +45,7 @@
     padding: 0.25em;
     overflow: hidden;
     outline: 0;
-    box-shadow: $standard-shadow;
+    box-shadow: var(--standard-shadow);
 
     .ui-dialog-titlebar {
         position: relative;
@@ -103,19 +103,15 @@
 }
 
 @include dark-mode {
-    .ui-dialog {
-        box-shadow: $dark-standard-shadow;
+    .ui-dialog .ui-dialog-titlebar-close {
+        border-color: $color-border;
 
-        .ui-dialog-titlebar-close {
-            border-color: $color-border;
+        &:hover {
+            border-color: shade($color-button-border, 15%);
+        }
 
-            &:hover {
-                border-color: shade($color-button-border, 15%);
-            }
-
-            &:focus {
-                border-color: $dark-color-link-focus;
-            }
+        &:focus {
+            border-color: $dark-color-link-focus;
         }
     }
 }

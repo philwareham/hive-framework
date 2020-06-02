@@ -84,21 +84,11 @@ dt {
 .article-list {
     margin: 0 0 2em;
     padding: 0;
-    border-top: 1px solid $color-border;
+    border-top: 1px solid var(--color-border);
     list-style: none;
 
     li {
         margin-bottom: 0;
-        border-bottom: 1px solid $color-border;
-    }
-}
-
-@include dark-mode {
-    .article-list {
-        border-top-color: $dark-color-border;
-
-        li {
-            border-bottom-color: $dark-color-border;
-        }
+        border-bottom: 1px solid var(--color-border);
     }
 }

@@ -9,33 +9,18 @@
  */
 
 a {
-    color: $color-link; /* 1 */
+    color: var(--color-link); /* 1 */
     text-decoration: none; /* 2 */
     text-decoration-skip-ink: auto; /* 3 */
 
     &:hover,
     &:active {
-        color: $color-link-hover;
+        color: var(--color-link-hover);
         text-decoration: underline;
     }
 
     &:focus {
-        outline: thin solid $color-link-focus;
-    }
-}
-
-@include dark-mode {
-    a {
-        color: $dark-color-link;
-
-        &:hover,
-        &:active {
-            color: $dark-color-link-hover;
-        }
-
-        &:focus {
-            outline: thin solid $dark-color-link-focus;
-        }
+        outline: thin solid var(--color-link-focus);
     }
 }
 
@@ -75,34 +60,18 @@ h6 {
 
 .a--img {
     img {
-        border: solid 1px $color-border;
+        border: solid 1px var(--color-border);
     }
 
     &:hover img {
-        border-color: $color-link-hover;
+        border-color: var(--color-link-hover);
     }
 
     &:focus {
         outline: 0;
 
         img {
-            border-color: $color-link-focus;
-        }
-    }
-}
-
-@include dark-mode {
-    .a--img {
-        img {
-            border-color: $dark-color-border;
-        }
-
-        &:hover img {
-            border-color: $dark-color-link-hover;
-        }
-
-        &:focus img {
-            border-color: $dark-color-link-focus;
+            border-color: var(--color-link-focus);
         }
     }
 }

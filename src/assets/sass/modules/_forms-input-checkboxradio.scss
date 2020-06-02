@@ -14,8 +14,8 @@
     width: 16px;
     height: 16px;
     padding: 0; /* 1 */
-    border: 1px solid $color-border-extra-dark;
-    background: $color-background-form;
+    border: 1px solid var(--color-border-extra-dark);
+    background: var(--color-background-form);
     appearance: none;
 
     + label:not(.ui-controlgroup-item) {
@@ -32,7 +32,7 @@
     }
 
     &:focus {
-        border-color: $color-link-focus;
+        border-color: var(--color-link-focus);
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
     }
 
@@ -44,15 +44,8 @@
 @include dark-mode {
     [type="checkbox"]:not(.ui-checkboxradio),
     [type="radio"]:not(.ui-checkboxradio) {
-        border-color: $dark-color-border-extra-dark;
-        background-color: $dark-color-background-form;
-
         &:hover {
             border-color: $dark-color-border-extra-light;
-        }
-
-        &:focus {
-            border-color: $dark-color-link-focus;
         }
     }
 }

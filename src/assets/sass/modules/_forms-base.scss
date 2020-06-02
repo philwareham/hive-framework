@@ -10,13 +10,7 @@ fieldset {
     min-width: 0; /* 1 */
     margin: 1em 0; /* 2 */
     padding: 1px 1em; /* 2 */
-    border: 1px solid $color-border-light; /* 2 */
-}
-
-@include dark-mode {
-    fieldset {
-        border-color: $dark-color-border-light;
-    }
+    border: 1px solid var(--color-border-light); /* 2 */
 }
 
 /**
@@ -109,7 +103,7 @@ textarea {
     }
 
     &:focus {
-        border-color: $color-link-focus;
+        border-color: var(--color-link-focus);
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
     }
 }
@@ -136,10 +130,6 @@ textarea {
 
         &:hover {
             border-color: $dark-color-border-extra-light;
-        }
-
-        &:focus {
-            border-color: $dark-color-link-focus;
         }
     }
 }
@@ -205,14 +195,6 @@ select[multiple] {
 select[size="0"],
 select[size="1"] {
     height: 2em; // 32px / 16px
-}
-
-/**
- * Remove browser-specific `select` UI in IE 11.
- */
-
-select::-ms-expand {
-    opacity: 0;
 }
 
 /**
@@ -294,18 +276,8 @@ input,
 select,
 textarea {
     &:-moz-ui-invalid {
-        border-color: $color-error-text;
+        border-color: var(--color-error-text);
         box-shadow: none;
-    }
-}
-
-@include dark-mode {
-    input,
-    select,
-    textarea {
-        &:-moz-ui-invalid {
-            border-color: $dark-color-error-text;
-        }
     }
 }
 
@@ -330,12 +302,6 @@ textarea {
  */
 
 abbr.required {
-    color: $color-warning-text;
+    color: var(--color-warning-text);
     text-decoration: none;
-}
-
-@include dark-mode {
-    abbr.required {
-        color: $dark-color-warning-text;
-    }
 }

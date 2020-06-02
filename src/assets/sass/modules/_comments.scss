@@ -13,7 +13,7 @@
     margin-bottom: 1em;
     padding: 1em 1em 1px;
     border-radius: $border-radius;
-    background: $color-background-box;
+    background: var(--color-background-box);
     word-wrap: break-word;
 
     h4 {
@@ -37,8 +37,6 @@
 
 @include dark-mode {
     .comments {
-        background: $dark-color-background-box;
-
         code,
         kbd,
         pre,
@@ -88,13 +86,7 @@
  */
 
 .error_message li {
-    color: $color-error-text;
-}
-
-@include dark-mode {
-    .error_message li {
-        color: $dark-color-error-text;
-    }
+    color: var(--color-error-text);
 }
 
 /**
@@ -102,11 +94,5 @@
  */
 
 .comments_error {
-    border-color: $color-error-text;
-}
-
-@include dark-mode {
-    .comments_error {
-        border-color: $dark-color-error-text;
-    }
+    border-color: var(--color-error-text);
 }

@@ -331,11 +331,5 @@ a.ui-state-default:focus {
  */
 
 .ui-widget-shadow {
-    box-shadow: $standard-shadow;
-}
-
-@include dark-mode {
-    .ui-widget-shadow {
-        box-shadow: $dark-standard-shadow;
-    }
+    box-shadow: var(--standard-shadow);
 }

@@ -76,7 +76,7 @@
     --standard-shadow:                     0 0 0.5em hsla(0, 0%, 0%, 0.25);
 }
 
-:root body.darkmode {
+@include dark-mode {
     // text colours
     --color-text:                          hsl(210, 14%, 83%);
     --color-text-heading:                  hsl(0, 0%, 100%);
@@ -87,7 +87,7 @@
     // interaction colours
     --color-link:                          hsl(210, 100%, 81%);
     --color-link-hover:                    hsl(210, 100%, 87%);
-    --color-link-focus:                    hsl(36, 100%, 50%);
+    --color-link-focus:                    hsl(312, 100%, 50%);
     --color-selecting:                     hsl(210, 50%, 18%);
     --color-selected:                      hsl(210, 50%, 21%);
     // neutral colours

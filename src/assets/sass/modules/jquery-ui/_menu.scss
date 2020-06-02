@@ -66,9 +66,9 @@
     display: block;
     margin: 0;
     padding: 0;
-    border-color: $color-border-light;
+    border-color: var(--color-border-light);
     outline: 0;
-    box-shadow: $standard-shadow;
+    box-shadow: var(--standard-shadow);
     list-style: none;
     font-family: $font-sans-serif;
     font-size: 1rem; /* 1 */
@@ -104,7 +104,7 @@
 
     .ui-state-focus,
     .ui-state-active {
-        background-color: $color-selected;
+        background-color: var(--color-selected);
     }
 
     // left-aligned
@@ -122,18 +122,6 @@
     .ui-menu-icon {
         right: 0;
         left: auto;
-    }
-}
-
-@include dark-mode {
-    .ui-menu {
-        border-color: $dark-color-border-light;
-        box-shadow: $dark-standard-shadow;
-
-        .ui-state-focus,
-        .ui-state-active {
-            background-color: $dark-color-selected;
-        }
     }
 }
 

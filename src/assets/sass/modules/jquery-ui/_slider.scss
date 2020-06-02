@@ -38,7 +38,7 @@
         height: 1.25em;
         border-radius: 50%;
         background-color: $color-background;
-        box-shadow: $standard-shadow;
+        box-shadow: var(--standard-shadow);
         cursor: pointer;
         touch-action: manipulation;
     }
@@ -68,8 +68,6 @@
 
         .ui-slider-handle {
             @include gradient-linear($color-button-gradient-from, $color-button-gradient-to);
-
-            box-shadow: $dark-standard-shadow;
 
             &:hover {
                 @include gradient-linear(lighten($color-button-gradient-from, 4%), lighten($color-button-gradient-to, 4%));

@@ -15,10 +15,9 @@ meter {
     appearance: none;
 }
 
-// WebKit/Blink/EdgeHTML.
+// WebKit/Blink.
 
 meter::-webkit-meter-bar {
-    border: 0; // EdgeHTML
     background: $color-gradient-to;
 }
 
@@ -54,7 +53,7 @@ meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
         background: $dark-color-background-box;
     }
 
-    // WebKit/Blink/EdgeHTML.
+    // WebKit/Blink.
 
     meter::-webkit-meter-bar {
         background: $dark-color-background-box;

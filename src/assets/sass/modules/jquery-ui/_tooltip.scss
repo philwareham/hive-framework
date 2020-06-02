@@ -22,11 +22,5 @@
     z-index: 9999;
     max-width: 22em;
     padding: 0.5em 1em;
-    box-shadow: $standard-shadow;
-}
-
-@include dark-mode {
-    .ui-tooltip {
-        box-shadow: $dark-standard-shadow;
-    }
+    box-shadow: var(--standard-shadow);
 }

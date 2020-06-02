@@ -18,7 +18,7 @@ details {
 
     &[open] {
         padding-bottom: 1px;
-        outline: 1px solid $color-border;
+        outline: 1px solid var(--color-border);
     }
 }
 
@@ -27,8 +27,8 @@ summary {
     z-index: 2;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    outline: 1px solid $color-border;
-    background-color: $color-background-box;
+    outline: 1px solid var(--color-border);
+    background-color: var(--color-background-box);
     cursor: pointer;
 
     &:hover,
@@ -37,28 +37,15 @@ summary {
     }
 
     &:focus {
-        outline: 1px solid $color-link-focus;
+        outline: 1px solid var(--color-link-focus);
     }
 }
 
 @include dark-mode {
-    details {
-        &[open] {
-            outline: 1px solid $dark-color-border;
-        }
-    }
-
     summary {
-        outline: 1px solid $dark-color-border;
-        background-color: $dark-color-background-box;
-
         &:hover,
         &:active {
             outline: 1px solid $dark-color-border-extra-light;
-        }
-
-        &:focus {
-            outline: 1px solid $dark-color-link-focus;
         }
     }
 }

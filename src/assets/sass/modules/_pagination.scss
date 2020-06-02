@@ -15,7 +15,7 @@
     margin: 1em 0;
     padding-top: 1em;
     clear: both;
-    border-top: 1px dashed $color-border;
+    border-top: 1px dashed var(--color-border);
     text-align: center;
 
     [rel="prev"] {
@@ -62,7 +62,7 @@
 
     li {
         float: left;
-        border: 1px solid $color-background;
+        border: 1px solid var(--color-background);
 
         &.current {
             border-color: $color-border;
@@ -83,16 +83,8 @@
 }
 
 @include dark-mode {
-    .paginator {
-        border-top-color: $dark-color-border;
-    }
-
-    .pagination li {
-        border-color: $dark-color-background;
-
-        &.current {
-            border-color: $dark-color-border;
-            background-color: $dark-color-background-box;
-        }
+    .pagination li.current {
+        border-color: $dark-color-border;
+        background-color: $dark-color-background-box;
     }
 }

@@ -33,7 +33,7 @@ button,
 [type="submit"],
 a.button,
 span.button {
-    @include gradient-linear($color-button-gradient-from, $color-button-gradient-to);
+    @include gradient-linear(var(--color-button-gradient-from), var(--color-button-gradient-to));
 
     display: inline-block;
     position: relative;
@@ -68,7 +68,7 @@ span.button {
     }
 
     &:focus {
-        border-color: $color-link-focus;
+        border-color: var(--color-link-focus);
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
     }
 }

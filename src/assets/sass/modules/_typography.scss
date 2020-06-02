@@ -92,19 +92,8 @@ h4,
 h5,
 h6 {
     clear: both;
-    color: $color-text-heading;
+    color: var(--color-text-heading);
     font-family: $font-sans-serif;
-}
-
-@include dark-mode {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        color: $dark-color-text-heading;
-    }
 }
 
 h1 {
@@ -193,15 +182,8 @@ mark,
 var {
     padding: 0 0.25em; // 0 4px
     border-radius: $border-radius / 2;
-    background-color: $color-selected;
+    background-color: var(--color-selected);
     color: var(--color-text);
-}
-
-@include dark-mode {
-    mark,
-    var {
-        background-color: $dark-color-selected;
-    }
 }
 
 /**
@@ -214,24 +196,14 @@ pre,
 code,
 kbd,
 samp {
-    border: 1px solid $color-border-extra-light;
+    border: 1px solid var(--color-border-extra-light);
     border-radius: 0.2857143em; // 4px / 14px
-    background-color: $color-background-box;
+    background-color: var(--color-background-box);
     color: var(--color-text);
     font-family: $font-code;
     font-feature-settings: normal; /* 1 */
     font-size: $code-font-size;
     line-height: $line-height-mobile;
-}
-
-@include dark-mode {
-    pre,
-    code,
-    kbd,
-    samp {
-        border-color: $dark-color-border-extra-light;
-        background-color: $dark-color-background-box;
-    }
 }
 
 code,

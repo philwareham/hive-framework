@@ -112,7 +112,7 @@ tfoot {
     th,
     td {
         padding: 0.25em;
-        border-bottom: 1px solid $color-border;
+        border-bottom: 1px solid var(--color-border);
 
         &:empty {
             border: 0;
@@ -122,7 +122,7 @@ tfoot {
     thead tr:last-child {
         th,
         td {
-            border-bottom: 2px solid $color-border;
+            border-bottom-width: 2px;
         }
     }
 
@@ -143,30 +143,7 @@ tfoot {
     tbody tr:first-child {
         td,
         th {
-            border-top: 1px solid $color-border;
-        }
-    }
-}
-
-@include dark-mode {
-    .table--bordered {
-        th,
-        td {
-            border-bottom-color: $dark-color-border;
-        }
-
-        thead tr:last-child {
-            th,
-            td {
-                border-bottom-color: $dark-color-border;
-            }
-        }
-
-        tbody tr:first-child {
-            td,
-            th {
-                border-top-color: $dark-color-border;
-            }
+            border-top: 1px solid var(--color-border);
         }
     }
 }

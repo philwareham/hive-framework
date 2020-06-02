@@ -116,7 +116,7 @@
     }
 
     &:focus {
-        outline: 1px solid $color-link-focus;
+        outline: 1px solid var(--color-link-focus);
     }
 
     &--left {
@@ -206,10 +206,6 @@
 
 @include dark-mode {
     .glide__arrow {
-        &:focus {
-            outline: 1px solid $dark-color-link-focus;
-        }
-
         &--left::before {
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpolygon fill='%23373e45' points='14,20 16,18 10,12 16,6 14,4 6,12 14,20'/%3E%3C/svg%3E");
         }
