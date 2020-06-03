@@ -23,27 +23,50 @@
 .ui-checkboxradio-label {
     .ui-icon-background {
         box-sizing: border-box;
-        border: 1px solid $color-border-extra-dark;
-        background-color: $color-background-form;
-    }
-
-    &:hover .ui-icon-background {
-        border-color: shade($color-border-extra-dark, 15%);
+        border: 1px solid var(--color-border-extra-dark);
+        background-color: var(--color-background-form);
     }
 
     &.ui-checkboxradio-checked {
         .ui-icon {
             border: 0;
-            background: $color-text-footnote url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+            background: var(--color-text-footnote) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
         }
 
         &.ui-state-focus .ui-icon {
-            background-color: $color-link-focus;
+            background-color: var(--color-link-focus);
         }
     }
 
     &.ui-checkboxradio-checked:hover .ui-icon {
         background-color: var(--color-text);
+    }
+}
+
+@include dark-mode {
+    .ui-checkboxradio-label {
+        .ui-icon-background {
+            border-color: var(--color-text-footnote);
+            background-color: var(--color-text-white-out);
+        }
+
+        &.ui-checkboxradio-checked {
+            .ui-icon {
+                background-color: var(--color-background);
+            }
+
+            &.ui-button:hover .ui-icon {
+                background-color: var(--color-border-extra-dark);
+            }
+
+            &.ui-state-focus .ui-icon {
+                background-color: var(--color-link-focus);
+            }
+        }
+
+        &.ui-checkboxradio-checked:hover .ui-icon {
+            background-color: var(--color-text);
+        }
     }
 }
 
@@ -54,20 +77,45 @@
 
     &.ui-checkboxradio-checked {
         .ui-icon {
-            border: 5px solid $color-text-footnote;
+            border: 5px solid var(--color-text-footnote);
             border-radius: 100%;
-            background: $color-background-form;
+            background: var(--color-background-form);
         }
 
         &.ui-state-focus .ui-icon {
-            border-color: $color-link-focus;
-            background-color: $color-background-form;
+            border-color: var(--color-link-focus);
+            background-color: var(--color-background-form);
         }
     }
 
     &.ui-checkboxradio-checked:hover .ui-icon {
         border-color: var(--color-text);
-        background: $color-background-form;
+        background-color: var(--color-background-form);
+    }
+}
+
+@include dark-mode {
+    .ui-checkboxradio-radio-label {
+        &.ui-checkboxradio-checked {
+            .ui-icon {
+                border-color: var(--color-background);
+                background-color: var(--color-text-white-out);
+            }
+
+            &.ui-button:hover .ui-icon {
+                background-color: var(--color-text-white-out);
+            }
+
+            &.ui-state-focus .ui-icon {
+                border-color: var(--color-link-focus);
+                background-color: var(--color-text-white-out);
+            }
+        }
+
+        &.ui-checkboxradio-checked:hover .ui-icon {
+            border-color: var(--color-border-extra-dark);
+            background-color: var(--color-text-white-out);
+        }
     }
 }
 
@@ -86,20 +134,8 @@
 
 .ui-checkboxradio-checked {
     &.ui-button {
-        @include gradient-linear($color-button-selected-gradient-from, $color-button-selected-gradient-to);
+        @include gradient-linear(var(--color-button-selected-gradient-from), var(--color-button-selected-gradient-to));
 
-        border-color: $color-button-selected-border;
-    }
-
-    &.ui-button:hover {
-        @include gradient-linear(lighten($color-button-selected-gradient-from, 3%), lighten($color-button-selected-gradient-to, 2%));
-
-        border-color: darken($color-button-selected-border, 15%);
-    }
-
-    &.ui-button:active {
-        @include gradient-linear(darken($color-button-selected-gradient-from, 5%), darken($color-button-selected-gradient-to, 5%));
-
-        border-color: darken($color-button-selected-border, 15%);
+        border-color: var(--color-button-selected-border);
     }
 }

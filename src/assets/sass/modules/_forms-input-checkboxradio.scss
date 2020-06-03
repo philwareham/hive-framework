@@ -27,8 +27,12 @@
     }
 
     &:hover {
-        border-color: shade($color-border-extra-dark, 15%);
+        filter: brightness(1.05);
         cursor: pointer;
+    }
+
+    &:active {
+        filter: brightness(0.95);
     }
 
     &:focus {
@@ -45,7 +49,7 @@
     [type="checkbox"]:not(.ui-checkboxradio),
     [type="radio"]:not(.ui-checkboxradio) {
         &:hover {
-            border-color: $dark-color-border-extra-light;
+            border-color: var(--color-border-extra-light);
         }
     }
 }
@@ -53,7 +57,7 @@
 [type="checkbox"]:not(.ui-checkboxradio) {
     &:checked {
         border: 0;
-        background: $color-text-footnote url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+        background: var(--color-text-footnote) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
 
         &:hover,
         &:active {
@@ -61,32 +65,32 @@
         }
 
         &:focus {
-            background-color: $color-link-focus;
+            background-color: var(--color-link-focus);
         }
     }
 
     &[disabled]:checked {
-        background: $color-text-footnote url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E") !important;
+        background: var(--color-text-footnote) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E") !important;
     }
 }
 
 @include dark-mode {
     [type="checkbox"]:not(.ui-checkboxradio) {
         &:checked {
-            background: $dark-color-text url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+            background: var(--color-text) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
 
             &:hover,
             &:active {
-                background-color: $dark-color-text-heading;
+                background-color: var(--color-text-heading);
             }
 
             &:focus {
-                background-color: $dark-color-link-focus;
+                background-color: var(--color-link-focus);
             }
         }
 
         &[disabled]:checked {
-            background: $dark-color-text url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E") !important;
+            background: var(--color-text) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E") !important;
         }
     }
 }
@@ -95,7 +99,7 @@
     border-radius: 100%;
 
     &:checked {
-        border: 5px solid $color-text-footnote;
+        border: 5px solid var(--color-text-footnote);
 
         &:hover,
         &:active {
@@ -103,7 +107,7 @@
         }
 
         &:focus {
-            border-color: $color-link-focus;
+            border-color: var(--color-link-focus);
         }
     }
 }
@@ -112,11 +116,11 @@
     [type="radio"]:not(.ui-checkboxradio):checked {
         &:hover,
         &:active {
-            border-color: $dark-color-text-heading;
+            border-color: var(--color-text-heading);
         }
 
         &:focus {
-            border-color: $dark-color-link-focus;
+            border-color: var(--color-link-focus);
         }
     }
 }

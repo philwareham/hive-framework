@@ -52,7 +52,7 @@ span.button {
     user-select: none;
 
     &:hover {
-        filter: brightness(1.1);
+        filter: brightness(1.05);
         color: var(--color-text-button);
         text-decoration: none;
     }
@@ -60,7 +60,7 @@ span.button {
     &:active {
         top: 2px;
         box-shadow: none;
-        filter: brightness(0.9);
+        filter: brightness(0.95);
         color: var(--color-text-button);
         text-decoration: none;
     }
@@ -132,11 +132,13 @@ span.button-small {
     color: var(--color-text-white-out);
 
     &:hover {
+        filter: brightness(1.2);
         color: var(--color-text-white-out);
     }
 
     &:active {
         box-shadow: none;
+        filter: brightness(0.8);
         color: var(--color-text-white-out);
     }
 }
@@ -171,11 +173,13 @@ span.button-small {
     color: var(--color-text-white-out);
 
     &:hover {
+        filter: brightness(1.2);
         color: var(--color-text-white-out);
     }
 
     &:active {
         box-shadow: none;
+        filter: brightness(0.8);
         color: var(--color-text-white-out);
     }
 }

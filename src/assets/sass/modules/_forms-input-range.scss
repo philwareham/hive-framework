@@ -33,11 +33,11 @@
 }
 
 [type="range"]:hover::-webkit-slider-thumb {
-    filter: brightness(1.1);
+    filter: brightness(1.05);
 }
 
 [type="range"]:active::-webkit-slider-thumb {
-    filter: brightness(0.9);
+    filter: brightness(0.95);
 }
 
 [type="range"]:focus::-webkit-slider-thumb {
@@ -88,11 +88,11 @@
 }
 
 [type="range"]:hover::-moz-range-thumb {
-    filter: brightness(1.1);
+    filter: brightness(1.05);
 }
 
 [type="range"]:active::-moz-range-thumb {
-    filter: brightness(0.9);
+    filter: brightness(0.95);
 }
 
 [type="range"]:focus::-moz-range-thumb {

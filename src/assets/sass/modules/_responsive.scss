@@ -169,7 +169,7 @@
      */
 
     #site-navigation {
-        border-top: 1px solid $color-border;
+        border-top: 1px solid var(--color-border);
 
         .js & {
             max-height: none;
@@ -184,10 +184,10 @@
 
         li {
             border-top: 0;
-            border-right: solid 1px $color-border;
+            border-right: solid 1px var(--color-border);
 
             &:first-child {
-                border-left: solid 1px $color-border;
+                border-left: solid 1px var(--color-border);
             }
         }
 
@@ -198,13 +198,13 @@
 
     @include dark-mode {
         #site-navigation {
-            border-top-color: shade($dark-color-background-form, 15%);
+            border-top-color: var(--color-border-extra-dark);
 
             li {
-                border-right-color: shade($dark-color-background-form, 15%);
+                border-right-color: var(--color-border-extra-dark);
 
                 &:first-child {
-                    border-left-color: shade($dark-color-background-form, 15%);
+                    border-left-color: var(--color-border-extra-dark);
                 }
             }
         }

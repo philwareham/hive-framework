@@ -22,8 +22,8 @@
     "url": "https://github.com/philwareham/hive-framework/issues"
   },
   "devDependencies": {
-    "@babel/core": "7.10.1",
-    "@babel/preset-env": "7.10.1",
+    "@babel/core": "7.10.2",
+    "@babel/preset-env": "7.10.2",
     "autoprefixer": "9.8.0",
     "babelify": "10.0.0",
     "cssnano": "4.1.10",
@@ -40,9 +40,9 @@
     "grunt-sass": "3.1.0",
     "grunt-stylelint": "0.15.0",
     "load-grunt-tasks": "5.1.0",
-    "sass": "1.26.5",
+    "sass": "1.26.7",
     "stylelint": "13.5.0",
-    "stylelint-order": "4.0.0",
+    "stylelint-order": "4.1.0",
     "stylelint-scss": "3.17.2"
   },
   "dependencies": {

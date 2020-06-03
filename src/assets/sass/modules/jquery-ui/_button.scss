@@ -42,7 +42,7 @@
     user-select: none;
 
     &:hover {
-        filter: brightness(1.1);
+        filter: brightness(1.05);
         color: var(--color-text-button);
         text-decoration: none;
     }
@@ -50,7 +50,7 @@
     &:active {
         top: 2px;
         box-shadow: none;
-        filter: brightness(0.9);
+        filter: brightness(0.95);
         color: var(--color-text-button);
         text-decoration: none;
     }

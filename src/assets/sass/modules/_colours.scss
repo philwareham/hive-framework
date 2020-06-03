@@ -1,18 +1,6 @@
 /* Colourscheme
    ========================================================================== */
 
-// slightly lighten a colour
-
-@function tint($color, $percentage) {
-    @return mix(white, $color, $percentage);
-}
-
-// slightly darken a colour
-
-@function shade($color, $percentage) {
-    @return mix(black, $color, $percentage);
-}
-
 /* stylelint-disable declaration-colon-space-after */
 
 :root {
@@ -81,7 +69,7 @@
     --color-text-heading-a50:              hsla(0, 0%, 100%, 0.5);
     --color-text-form:                     hsl(0, 0%, 100%);
     --color-text-form-placeholder:         hsl(210, 6%, 48%);
-    --color-text-footnote:                 hsl(210, 17%, 82%);
+    --color-text-footnote:                 hsl(210, 14%, 70%);
     // interaction colours
     --color-link:                          hsl(210, 100%, 81%);
     --color-link-hover:                    hsl(210, 100%, 87%);

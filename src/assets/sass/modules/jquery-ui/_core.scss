@@ -116,6 +116,10 @@
     border: 1px solid var(--color-border);
     background-color: var(--color-background-box);
     color: var(--color-text);
+
+    &.ui-state-hover {
+        filter: brightness(1.05);
+    }
 }
 
 /**

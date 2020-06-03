@@ -49,9 +49,9 @@
 }
 
 [type="file"]:hover::-webkit-file-upload-button {
-    filter: brightness(1.1);
+    filter: brightness(1.05);
 }
 
 [type="file"]:active::-webkit-file-upload-button {
-    filter: brightness(0.9);
+    filter: brightness(0.95);
 }
