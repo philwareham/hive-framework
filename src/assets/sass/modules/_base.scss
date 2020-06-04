@@ -2,14 +2,6 @@
    ========================================================================== */
 
 /**
- * Render the `main` element consistently in IE 11.
- */
-
-main {
-    display: block;
-}
-
-/**
  * Add the correct display in Edge and Firefox.
  */
 
@@ -23,14 +15,6 @@ details {
 
 summary {
     display: list-item;
-}
-
-/**
- * Add the correct display in IE 11.
- */
-
-template {
-    display: none;
 }
 
 /**
