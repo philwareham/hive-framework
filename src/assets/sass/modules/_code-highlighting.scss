@@ -1,3 +1,5 @@
+@use "../setup";
+
 /* Code highlighting (via Prism.js)
    ========================================================================== */
 
@@ -135,7 +137,7 @@ pre.line-numbers > code {
     text-align: right;
 }
 
-@include dark-mode {
+@include mixins.dark-mode {
     .token.punctuation {
         color: var(--color-text-white-out);
     }

@@ -1,3 +1,5 @@
+@use "../../setup";
+
 /* Layout helpers
    ========================================================================== */
 
@@ -37,7 +39,7 @@
     outline: 0;
     list-style: none;
     font-size: 1rem;
-    line-height: $line-height-mobile;
+    line-height: config.$line-height-mobile;
     text-decoration: none;
 }
 
@@ -99,7 +101,7 @@
  */
 
 .ui-widget-header {
-    @include gradient-linear(var(--color-gradient-from), var(--color-gradient-to));
+    @include mixins.gradient-linear(var(--color-gradient-from), var(--color-gradient-to));
 
     font-weight: bold;
 }
@@ -141,7 +143,7 @@ a.ui-state-default:focus {
     background-color: var(--color-background-box);
 }
 
-@include dark-mode {
+@include mixins.dark-mode {
     .ui-state-hover {
         border-color: var(--color-border-extra-light);
     }
@@ -173,7 +175,7 @@ a.ui-state-default:focus {
     }
 }
 
-@include dark-mode {
+@include mixins.dark-mode {
     .ui-state-active.ui-state-hover {
         --color-link-hover-dark: hsl(210, 100%, 60%);
 
@@ -214,7 +216,7 @@ a.ui-state-default:focus {
     }
 }
 
-@include dark-mode {
+@include mixins.dark-mode {
     .ui-state-highlight.ui-state-hover {
         --color-warning-text-dark: hsl(40, 100%, 40%);
 
@@ -236,7 +238,7 @@ a.ui-state-default:focus {
     }
 }
 
-@include dark-mode {
+@include mixins.dark-mode {
     .ui-state-error.ui-state-hover {
         --color-error-text-dark: hsl(337, 100%, 40%);
 
@@ -277,7 +279,7 @@ a.ui-state-default:focus {
     }
 }
 
-@include dark-mode {
+@include mixins.dark-mode {
     .ui-state-disabled:not(.ui-button) {
         opacity: 0.25;
     }

@@ -1,3 +1,5 @@
+@use "../setup";
+
 /* Layout
    ========================================================================== */
 
@@ -57,7 +59,7 @@ body {
     background: var(--color-background);
 }
 
-@include dark-mode {
+@include mixins.dark-mode {
     .wrapper {
         border-top-color: var(--color-border-extra-dark);
         border-bottom-color: var(--color-border-extra-dark);
@@ -80,7 +82,7 @@ body {
 .site-footer,
 .container {
     width: 88%;
-    max-width: $container-max-width;
+    max-width: config.$container-max-width;
     margin: 0 auto;
 }
 

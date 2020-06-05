@@ -1,3 +1,5 @@
+@use "../setup";
+
 /* Forms - disabled elements
    ========================================================================== */
 
@@ -19,7 +21,7 @@ span.disabled,
     cursor: default !important; /* 1 */
 }
 
-@include dark-mode {
+@include mixins.dark-mode {
     [disabled],
     [disabled] option,
     [disabled] optgroup,

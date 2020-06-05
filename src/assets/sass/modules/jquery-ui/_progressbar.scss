@@ -1,3 +1,5 @@
+@use "../../setup";
+
 /* Progressbar
    ========================================================================== */
 
@@ -22,7 +24,7 @@
     text-align: left;
 }
 
-@include dark-mode {
+@include mixins.dark-mode {
     .ui-progressbar {
         border-color: var(--color-border-extra-dark);
     }
@@ -73,7 +75,7 @@
         );
 }
 
-@include dark-mode {
+@include mixins.dark-mode {
     .ui-progressbar-value {
         background-image:
             linear-gradient(

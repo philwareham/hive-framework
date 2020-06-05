@@ -1,3 +1,5 @@
+@use "../setup";
+
 /* Progress indicators
    ========================================================================== */
 
@@ -17,7 +19,7 @@ progress {
     appearance: none;
 }
 
-@include dark-mode {
+@include mixins.dark-mode {
     progress {
         border-color: var(--color-border-extra-dark);
     }
@@ -120,7 +122,7 @@ progress[value="1"]::-moz-progress-bar {
     display: inline-block;
     min-width: 2.75em;
     margin-right: 0.5em;
-    font-size: $small-font-size;
+    font-size: config.$small-font-size;
 }
 
 .data-progress[data-progress="100"] {

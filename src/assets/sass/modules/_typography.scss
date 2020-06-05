@@ -1,3 +1,5 @@
+@use "../setup";
+
 /* Typography
    ========================================================================== */
 
@@ -6,8 +8,8 @@
  */
 
 html {
-    font-size: $base-font-size;
-    line-height: $line-height-mobile;
+    font-size: config.$base-font-size;
+    line-height: config.$line-height-mobile;
 }
 
 /**
@@ -18,7 +20,7 @@ html {
 
 body {
     color: var(--color-text);
-    font-family: $font-serif;
+    font-family: config.$font-serif;
     font-feature-settings: "liga"; /* 1 */
 }
 
@@ -93,7 +95,7 @@ h5,
 h6 {
     clear: both;
     color: var(--color-text-heading);
-    font-family: $font-sans-serif;
+    font-family: config.$font-sans-serif;
 }
 
 h1 {
@@ -132,7 +134,7 @@ h5 {
 h6 {
     margin: 1em 0; // 16px
     font-size: 1rem; // 16px
-    line-height: $line-height-mobile;
+    line-height: config.$line-height-mobile;
 }
 
 /**
@@ -181,7 +183,7 @@ abbr[title] {
 mark,
 var {
     padding: 0 0.25em; // 0 4px
-    border-radius: $border-radius / 2;
+    border-radius: config.$border-radius / 2;
     background-color: var(--color-selected);
     color: var(--color-text);
 }
@@ -200,10 +202,10 @@ samp {
     border-radius: 0.2857143em; // 4px / 14px
     background-color: var(--color-background-box);
     color: var(--color-text);
-    font-family: $font-code;
+    font-family: config.$font-code;
     font-feature-settings: normal; /* 1 */
-    font-size: $code-font-size;
-    line-height: $line-height-mobile;
+    font-size: config.$code-font-size;
+    line-height: config.$line-height-mobile;
 }
 
 code,
@@ -272,8 +274,8 @@ tfoot,
 .footnotes,
 .card-header,
 .card-footer {
-    font-size: $small-font-size;
-    line-height: $line-height-mobile;
+    font-size: config.$small-font-size;
+    line-height: config.$line-height-mobile;
 }
 
 figcaption,
@@ -302,7 +304,7 @@ hr {
     background-size: 240px 24px;
 }
 
-@include dark-mode {
+@include mixins.dark-mode {
     hr {
         background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 24'%3E%3Cpath fill='%23ced4da' d='M0,0c1.742,13.61,54.74,20.912,119.995,15.279C184.922,9.679,238.594,13.024,240,24c-1.744-13.613-54.742-20.913-120.005-15.284C55.078,14.32,1.405,10.973,0,0z'/%3E%3C/svg%3E") 50% 50% no-repeat;
     }

@@ -1,3 +1,5 @@
+@use "../setup";
+
 /* Disclosure boxes (summary/details)
    ========================================================================== */
 
@@ -41,7 +43,7 @@ summary {
     }
 }
 
-@include dark-mode {
+@include mixins.dark-mode {
     summary {
         &:hover,
         &:active {

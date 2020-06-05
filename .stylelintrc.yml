@@ -44,11 +44,13 @@ rules:
       ignoreAtRules:
         - each
         - else
+        - forward
         - function
         - if
         - include
         - mixin
         - return
+        - use
 
   # Disallow vendor prefixes for at-rules.
   at-rule-no-vendor-prefix: true

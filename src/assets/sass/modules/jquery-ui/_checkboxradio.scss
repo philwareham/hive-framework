@@ -1,3 +1,5 @@
+@use "../../setup";
+
 /* Checkboxradio
    ========================================================================== */
 
@@ -43,7 +45,7 @@
     }
 }
 
-@include dark-mode {
+@include mixins.dark-mode {
     .ui-checkboxradio-label {
         .ui-icon-background {
             border-color: var(--color-text-footnote);
@@ -94,7 +96,7 @@
     }
 }
 
-@include dark-mode {
+@include mixins.dark-mode {
     .ui-checkboxradio-radio-label {
         &.ui-checkboxradio-checked {
             .ui-icon {
@@ -134,7 +136,7 @@
 
 .ui-checkboxradio-checked {
     &.ui-button {
-        @include gradient-linear(var(--color-button-selected-gradient-from), var(--color-button-selected-gradient-to));
+        @include mixins.gradient-linear(var(--color-button-selected-gradient-from), var(--color-button-selected-gradient-to));
 
         border-color: var(--color-button-selected-border);
     }

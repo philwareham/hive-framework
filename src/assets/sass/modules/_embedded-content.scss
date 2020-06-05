@@ -1,3 +1,5 @@
+@use "../setup";
+
 /* Embedded content
    ========================================================================== */
 
@@ -53,7 +55,7 @@ img {
  */
 
 .img--rounded {
-    border-radius: $border-radius;
+    border-radius: config.$border-radius;
 }
 
 /**

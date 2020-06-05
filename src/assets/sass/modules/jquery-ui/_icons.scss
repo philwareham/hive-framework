@@ -1,3 +1,5 @@
+@use "../../setup";
+
 /* Icons
    ========================================================================== */
 
@@ -23,7 +25,7 @@
     text-indent: -9999px;
 }
 
-@include dark-mode {
+@include mixins.dark-mode {
     .ui-icon {
         filter: brightness(3) sepia(1) hue-rotate(168deg) saturate(33%);
     }
@@ -73,7 +75,7 @@ button:focus .ui-icon {
     filter: brightness(2) sepia(1) hue-rotate(82deg) saturate(250%) brightness(100%);
 }
 
-@include dark-mode {
+@include mixins.dark-mode {
     .success .ui-icon,
     .success.ui-icon {
         filter: brightness(2.4) sepia(1) hue-rotate(82deg) saturate(250%) brightness(100%);
@@ -97,7 +99,7 @@ button:focus .ui-icon {
     filter: brightness(2) sepia(1) hue-rotate(4deg) saturate(500%) brightness(115%);
 }
 
-@include dark-mode {
+@include mixins.dark-mode {
     .ui-state-highlight .ui-icon,
     .warning .ui-icon,
     .warning.ui-icon {
@@ -123,7 +125,7 @@ button:focus .ui-icon {
     filter: brightness(2) sepia(1) hue-rotate(-62deg) saturate(750%) brightness(65%);
 }
 
-@include dark-mode {
+@include mixins.dark-mode {
     .ui-state-error .ui-icon,
     .ui-state-error-text .ui-icon,
     .error .ui-icon,
@@ -148,7 +150,7 @@ button:focus .ui-icon {
     filter: brightness(2) sepia(1) hue-rotate(150deg) saturate(600%) brightness(80%);
 }
 
-@include dark-mode {
+@include mixins.dark-mode {
     .information .ui-icon,
     .information.ui-icon {
         filter: brightness(2.3) sepia(1) hue-rotate(150deg) saturate(600%) brightness(85%);

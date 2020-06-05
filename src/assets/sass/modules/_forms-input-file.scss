@@ -1,3 +1,5 @@
+@use "../setup";
+
 /* Forms - input type file
    ========================================================================== */
 
@@ -22,7 +24,7 @@
     }
 }
 
-@include dark-mode {
+@include mixins.dark-mode {
     [type="file"] {
         border-color: var(--color-border-extra-dark);
 
@@ -37,7 +39,7 @@
 }
 
 [type="file"]::-webkit-file-upload-button {
-    @include gradient-linear(var(--color-button-gradient-from), var(--color-button-gradient-to));
+    @include mixins.gradient-linear(var(--color-button-gradient-from), var(--color-button-gradient-to));
 
     padding: 0 0.25em;
     border: 0;
