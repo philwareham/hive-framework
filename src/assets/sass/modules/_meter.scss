@@ -1,5 +1,4 @@
-@use "../setup/mixins";
-@use "../setup/settings";
+@use "../setup";
 
 /* Meter
    ========================================================================== */
@@ -18,7 +17,7 @@ meter {
     appearance: none;
 }
 
-@include mixins.dark-mode {
+@include setup.dark-mode {
     meter {
         border-color: var(--color-border-extra-dark);
     }

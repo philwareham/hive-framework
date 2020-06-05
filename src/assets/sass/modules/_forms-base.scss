@@ -1,5 +1,4 @@
-@use "../setup/mixins";
-@use "../setup/settings";
+@use "../setup";
 
 /* Forms
    ========================================================================== */
@@ -57,7 +56,7 @@ span.button {
     max-width: 100%;  /* 1 */
     margin: 0;  /* 2 */
     color: var(--color-text-form);
-    font-family: settings.$font-form;
+    font-family: setup.$font-form;
     font-size: 1rem; /* 3 */
     line-height: 1.375; // 22px / 16px
     vertical-align: baseline;
@@ -102,7 +101,7 @@ textarea {
     }
 }
 
-@include mixins.dark-mode {
+@include setup.dark-mode {
     [type="color"],
     [type="date"],
     [type="datetime"],
@@ -160,7 +159,7 @@ select {
     text-transform: none;
 }
 
-@include mixins.dark-mode {
+@include setup.dark-mode {
     select {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='5' viewBox='0 0 17 5'%3E%3Cpolygon fill='%23788591' points='0,0 5,5 10,0'/%3E%3C/svg%3E");
     }
@@ -177,7 +176,7 @@ select[multiple] {
     background-image: none;
 }
 
-@include mixins.dark-mode {
+@include setup.dark-mode {
     select[size],
     select[multiple] {
         background-image: none;

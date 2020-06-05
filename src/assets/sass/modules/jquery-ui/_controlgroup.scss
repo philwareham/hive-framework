@@ -1,5 +1,4 @@
-@use "../../setup/mixins";
-@use "../../setup/settings";
+@use "../../setup";
 
 /* Controlgroup
    ========================================================================== */
@@ -43,7 +42,7 @@
         padding: 0.4em 1em;
 
         span {
-            font-size: settings.$small-font-size;
+            font-size: setup.$small-font-size;
         }
     }
 

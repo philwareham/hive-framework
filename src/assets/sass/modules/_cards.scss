@@ -1,5 +1,4 @@
-@use "../setup/mixins";
-@use "../setup/settings";
+@use "../setup";
 
 /* Cards/article tiles
    ========================================================================== */
@@ -38,20 +37,20 @@
         top: 0;
         left: -1px;
         transform: translateY(-50%);
-        border-radius: (settings.$border-radius / 2) (settings.$border-radius / 2) (settings.$border-radius / 2) 0;
+        border-radius: (setup.$border-radius / 2) (setup.$border-radius / 2) (setup.$border-radius / 2) 0;
     }
 }
 
 .card.align-right .alert-pill {
     right: -1px;
     left: auto;
-    border-radius: (settings.$border-radius / 2) (settings.$border-radius / 2) 0;
+    border-radius: (setup.$border-radius / 2) (setup.$border-radius / 2) 0;
 }
 
 .card.align-center .alert-pill {
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: (settings.$border-radius / 2);
+    border-radius: (setup.$border-radius / 2);
 }
 
 .card-body {

@@ -1,5 +1,4 @@
-@use "../setup/mixins";
-@use "../setup/settings";
+@use "../setup";
 
 /* Buttons
    ========================================================================== */
@@ -36,7 +35,7 @@ button,
 [type="submit"],
 a.button,
 span.button {
-    @include mixins.gradient-linear(var(--color-button-gradient-from), var(--color-button-gradient-to));
+    @include setup.gradient-linear(var(--color-button-gradient-from), var(--color-button-gradient-to));
 
     display: inline-block;
     position: relative;
@@ -74,7 +73,7 @@ span.button {
     }
 }
 
-@include mixins.dark-mode {
+@include setup.dark-mode {
     button,
     [type="button"],
     [type="reset"],
@@ -112,7 +111,7 @@ span.button-large {
 .button-small,
 a.button-small,
 span.button-small {
-    font-size: settings.$small-font-size;
+    font-size: setup.$small-font-size;
 }
 
 /**
@@ -128,7 +127,7 @@ span.button-small {
     --color-success-text-dark: hsl(120, 60%, 30%);
     --color-success-text-extra-dark: hsl(120, 60%, 20%);
 
-    @include mixins.gradient-linear(var(--color-success-text), var(--color-success-text));
+    @include setup.gradient-linear(var(--color-success-text), var(--color-success-text));
 
     border-color: var(--color-success-text-dark);
     box-shadow: 0 2px 0 var(--color-success-text-extra-dark);
@@ -146,7 +145,7 @@ span.button-small {
     }
 }
 
-@include mixins.dark-mode {
+@include setup.dark-mode {
     .button-success {
         --color-success-text-light: hsl(100, 60%, 53%);
         --color-success-text-dark: hsl(100, 60%, 45%);
@@ -169,7 +168,7 @@ span.button-small {
     --color-error-text-dark: hsl(4, 69%, 32%);
     --color-error-text-extra-dark: hsl(4, 69%, 25%);
 
-    @include mixins.gradient-linear(var(--color-error-text-light), var(--color-error-text));
+    @include setup.gradient-linear(var(--color-error-text-light), var(--color-error-text));
 
     border-color: var(--color-error-text-dark);
     box-shadow: 0 2px 0 var(--color-error-text-extra-dark);
@@ -187,7 +186,7 @@ span.button-small {
     }
 }
 
-@include mixins.dark-mode {
+@include setup.dark-mode {
     .button-danger {
         --color-error-text-light: hsl(337, 100%, 63%);
         --color-error-text-dark: hsl(337, 100%, 54%);

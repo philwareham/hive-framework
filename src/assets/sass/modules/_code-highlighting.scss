@@ -1,5 +1,4 @@
-@use "../setup/mixins";
-@use "../setup/settings";
+@use "../setup";
 
 /* Code highlighting (via Prism.js)
    ========================================================================== */
@@ -138,7 +137,7 @@ pre.line-numbers > code {
     text-align: right;
 }
 
-@include mixins.dark-mode {
+@include setup.dark-mode {
     .token.punctuation {
         color: var(--color-text-white-out);
     }

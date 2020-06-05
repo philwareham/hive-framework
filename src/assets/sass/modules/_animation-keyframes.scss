@@ -1,5 +1,4 @@
-@use "../setup/mixins";
-@use "../setup/settings";
+@use "../setup";
 
 /* Animation `keyframes` need to appear outside of `screen` rules.
    ========================================================================== */

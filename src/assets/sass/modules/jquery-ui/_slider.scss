@@ -1,5 +1,4 @@
-@use "../../setup/mixins";
-@use "../../setup/settings";
+@use "../../setup";
 
 /* Slider
    ========================================================================== */
@@ -31,7 +30,7 @@
     }
 
     .ui-slider-handle {
-        @include mixins.gradient-linear(var(--color-button-gradient-from), var(--color-button-gradient-to));
+        @include setup.gradient-linear(var(--color-button-gradient-from), var(--color-button-gradient-to));
 
         position: absolute;
         z-index: 2;
@@ -64,7 +63,7 @@
     }
 }
 
-@include mixins.dark-mode {
+@include setup.dark-mode {
     .ui-slider {
         border-color: var(--color-border-extra-dark);
 

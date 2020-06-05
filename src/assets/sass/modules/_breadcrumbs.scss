@@ -1,5 +1,4 @@
-@use "../setup/mixins";
-@use "../setup/settings";
+@use "../setup";
 
 /* Breadcrumb links
    ========================================================================== */
@@ -25,7 +24,7 @@
     padding: 0 0.3333333em; // 4px / 12px
     background-color: var(--color-background-box);
     list-style: none;
-    font-size: settings.$small-font-size;
+    font-size: setup.$small-font-size;
 
     li {
         display: inline-block;

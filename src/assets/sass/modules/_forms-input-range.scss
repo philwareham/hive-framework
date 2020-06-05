@@ -1,5 +1,4 @@
-@use "../setup/mixins";
-@use "../setup/settings";
+@use "../setup";
 
 /* Forms - input type range
    ========================================================================== */
@@ -23,7 +22,7 @@
 // WebKit/Blink.
 
 [type="range"]::-webkit-slider-thumb {
-    @include mixins.gradient-linear(var(--color-button-gradient-from), var(--color-button-gradient-to));
+    @include setup.gradient-linear(var(--color-button-gradient-from), var(--color-button-gradient-to));
 
     width: 1.25em; // 20px / 16px
     height: 1.25em; // 20px / 16px
@@ -65,7 +64,7 @@
     border-color: var(--color-link-focus);
 }
 
-@include mixins.dark-mode {
+@include setup.dark-mode {
     [type="range"]::-webkit-slider-runnable-track {
         border-color: var(--color-border-extra-dark);
     }
@@ -78,7 +77,7 @@
 // Gecko/Quantum.
 
 [type="range"]::-moz-range-thumb {
-    @include mixins.gradient-linear(var(--color-button-gradient-from), var(--color-button-gradient-to));
+    @include setup.gradient-linear(var(--color-button-gradient-from), var(--color-button-gradient-to));
 
     width: 1.25em; // 20px / 16px
     height: 1.25em; // 20px / 16px
@@ -123,7 +122,7 @@
     border-style: none;
 }
 
-@include mixins.dark-mode {
+@include setup.dark-mode {
     [type="range"]::-moz-range-track {
         border-color: var(--color-border-extra-dark);
     }

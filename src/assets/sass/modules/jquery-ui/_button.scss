@@ -1,5 +1,4 @@
-@use "../../setup/mixins";
-@use "../../setup/settings";
+@use "../../setup";
 
 /* Button
    ========================================================================== */
@@ -22,7 +21,7 @@
  */
 
 .ui-button {
-    @include mixins.gradient-linear(var(--color-button-gradient-from), var(--color-button-gradient-to));
+    @include setup.gradient-linear(var(--color-button-gradient-from), var(--color-button-gradient-to));
 
     display: inline-block;
     position: relative;
@@ -35,7 +34,7 @@
     background-clip: padding-box;
     box-shadow: 0 2px 0 var(--color-button-shadow);
     color: var(--color-text-button);
-    font-family: settings.$font-form;
+    font-family: setup.$font-form;
     font-size: 1rem; /* 2 */
     line-height: 1.375; // 22px / 16px
     vertical-align: baseline;
@@ -117,7 +116,7 @@ input.ui-button.ui-button-icon-only {
  */
 
 .ui-button.ui-corner-all {
-    border-radius: settings.$border-radius;
+    border-radius: setup.$border-radius;
 }
 
 /**
@@ -125,7 +124,7 @@ input.ui-button.ui-button-icon-only {
  */
 
 .ui-button.ui-corner-right {
-    border-radius: 0 settings.$border-radius settings.$border-radius 0;
+    border-radius: 0 setup.$border-radius setup.$border-radius 0;
 }
 
 /**
@@ -133,7 +132,7 @@ input.ui-button.ui-button-icon-only {
  */
 
 .ui-button.ui-corner-left {
-    border-radius: settings.$border-radius 0 0 settings.$border-radius;
+    border-radius: setup.$border-radius 0 0 setup.$border-radius;
 }
 
 /**

@@ -1,5 +1,4 @@
-@use "../setup/mixins";
-@use "../setup/settings";
+@use "../setup";
 
 /* Social media
    ========================================================================== */
@@ -30,7 +29,7 @@
     }
 
     a {
-        @include mixins.hide-text;
+        @include setup.hide-text;
 
         display: block;
         width: 32px;

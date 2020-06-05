@@ -1,5 +1,4 @@
-@use "../setup/mixins";
-@use "../setup/settings";
+@use "../setup";
 
 /* Comments
    ========================================================================== */
@@ -15,7 +14,7 @@
 .comments {
     margin-bottom: 1em;
     padding: 1em 1em 1px;
-    border-radius: settings.$border-radius;
+    border-radius: setup.$border-radius;
     background: var(--color-background-box);
     word-wrap: break-word;
 
@@ -57,7 +56,7 @@
 #cpreview {
     margin-bottom: 2px;
     padding: 1em;
-    border-radius: settings.$border-radius;
+    border-radius: setup.$border-radius;
     background-color: var(--color-highlight-box);
 }
 

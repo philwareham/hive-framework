@@ -1,5 +1,4 @@
-@use "../setup/mixins";
-@use "../setup/settings";
+@use "../setup";
 
 /* Forms - input type checkbox/radio
    ========================================================================== */
@@ -48,7 +47,7 @@
     }
 }
 
-@include mixins.dark-mode {
+@include setup.dark-mode {
     [type="checkbox"]:not(.ui-checkboxradio),
     [type="radio"]:not(.ui-checkboxradio) {
         &:hover {
@@ -77,7 +76,7 @@
     }
 }
 
-@include mixins.dark-mode {
+@include setup.dark-mode {
     [type="checkbox"]:not(.ui-checkboxradio) {
         &:checked {
             background: var(--color-text) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
@@ -115,7 +114,7 @@
     }
 }
 
-@include mixins.dark-mode {
+@include setup.dark-mode {
     [type="radio"]:not(.ui-checkboxradio):checked {
         &:hover,
         &:active {

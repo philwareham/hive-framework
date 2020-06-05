@@ -1,5 +1,4 @@
-@use "../setup/mixins";
-@use "../setup/settings";
+@use "../setup";
 
 /* Colourscheme
    ========================================================================== */
@@ -65,7 +64,7 @@
     --standard-shadow:                     0 0 0.5em hsla(0, 0%, 0%, 0.25);
 }
 
-@include mixins.dark-mode {
+@include setup.dark-mode {
     // text colours
     --color-text:                          hsl(210, 14%, 83%);
     --color-text-heading:                  hsl(0, 0%, 100%);

@@ -1,5 +1,4 @@
-@use "../../setup/mixins";
-@use "../../setup/settings";
+@use "../../setup";
 
 /* Selectmenu
    ========================================================================== */
@@ -44,15 +43,15 @@
 }
 
 .ui-selectmenu-button:not(.ui-controlgroup-item) {
-    border-radius: settings.$border-radius;
+    border-radius: setup.$border-radius;
 }
 
 .ui-selectmenu-button.ui-controlgroup-item.ui-corner-tr {
-    border-radius: 0 settings.$border-radius settings.$border-radius 0;
+    border-radius: 0 setup.$border-radius setup.$border-radius 0;
 }
 
 .ui-selectmenu-button.ui-controlgroup-item.ui-corner-tl {
-    border-radius: settings.$border-radius 0 0 settings.$border-radius;
+    border-radius: setup.$border-radius 0 0 setup.$border-radius;
 }
 
 .ui-selectmenu-icon {
@@ -89,7 +88,7 @@
     border-top: 1px solid var(--color-border);
     font-size: 1rem;
     font-weight: bold;
-    line-height: settings.$line-height-mobile;
+    line-height: setup.$line-height-mobile;
 
     &:first-child {
         margin: 0;

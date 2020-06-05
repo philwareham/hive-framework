@@ -1,5 +1,4 @@
-@use "../setup/mixins";
-@use "../setup/settings";
+@use "../setup";
 
 /* Alert messages
    ========================================================================== */
@@ -62,7 +61,7 @@
 .alert-block {
     padding: 0.5em 1em;
     border: 1px solid;
-    border-radius: settings.$border-radius / 2;
+    border-radius: setup.$border-radius / 2;
     word-wrap: break-word; /* 1 */
 
     &.success {

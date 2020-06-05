@@ -1,5 +1,4 @@
-@use "setup/mixins";
-@use "setup/settings";
+@use "setup";
 
 /* ==========================================================================
    ONLY for use in design patterns - classes NOT USED in actual site builds.
@@ -167,7 +166,7 @@ $colors: (
     display: none;
 }
 
-@media (min-width: settings.$breakpoint-1) {
+@media (min-width: setup.$breakpoint-1) {
     .design-patterns--breakpoint-0 {
         display: none;
     }
@@ -177,7 +176,7 @@ $colors: (
     }
 }
 
-@media (min-width: settings.$breakpoint-2) {
+@media (min-width: setup.$breakpoint-2) {
     .design-patterns--breakpoint-1 {
         display: none;
     }
@@ -187,7 +186,7 @@ $colors: (
     }
 }
 
-@media (min-width: settings.$breakpoint-3) {
+@media (min-width: setup.$breakpoint-3) {
     .design-patterns--breakpoint-2 {
         display: none;
     }

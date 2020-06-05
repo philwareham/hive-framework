@@ -1,5 +1,4 @@
-@use "../setup/mixins";
-@use "../setup/settings";
+@use "../setup";
 
 /**
  * Remove unnecessary global styling from printed media.
@@ -30,7 +29,7 @@ html {
 body {
     margin: 0.5cm;
     padding: 2em 5em;
-    font-family: settings.$font-print;
+    font-family: setup.$font-print;
 }
 
 /**
