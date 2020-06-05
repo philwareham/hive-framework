@@ -1,4 +1,5 @@
-@use "../../setup";
+@use "../../setup/mixins";
+@use "../../setup/settings";
 
 /* Button
    ========================================================================== */
@@ -34,7 +35,7 @@
     background-clip: padding-box;
     box-shadow: 0 2px 0 var(--color-button-shadow);
     color: var(--color-text-button);
-    font-family: config.$font-form;
+    font-family: settings.$font-form;
     font-size: 1rem; /* 2 */
     line-height: 1.375; // 22px / 16px
     vertical-align: baseline;
@@ -116,7 +117,7 @@ input.ui-button.ui-button-icon-only {
  */
 
 .ui-button.ui-corner-all {
-    border-radius: config.$border-radius;
+    border-radius: settings.$border-radius;
 }
 
 /**
@@ -124,7 +125,7 @@ input.ui-button.ui-button-icon-only {
  */
 
 .ui-button.ui-corner-right {
-    border-radius: 0 config.$border-radius config.$border-radius 0;
+    border-radius: 0 settings.$border-radius settings.$border-radius 0;
 }
 
 /**
@@ -132,7 +133,7 @@ input.ui-button.ui-button-icon-only {
  */
 
 .ui-button.ui-corner-left {
-    border-radius: config.$border-radius 0 0 config.$border-radius;
+    border-radius: settings.$border-radius 0 0 settings.$border-radius;
 }
 
 /**

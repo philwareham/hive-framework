@@ -1,10 +1,11 @@
-@use "../setup";
+@use "../setup/mixins";
+@use "../setup/settings";
 
 /* ==========================================================================
    Styling and layout for screen media at 1st breakpoint
    ========================================================================== */
 
-@media screen and (min-width: config.$breakpoint-1) {
+@media screen and (min-width: settings.$breakpoint-1) {
 
     /**
      * Screen size-specific elements.
@@ -122,7 +123,7 @@
    Styling and layout for screen media at 2nd breakpoint
    ========================================================================== */
 
-@media screen and (min-width: config.$breakpoint-2) {
+@media screen and (min-width: settings.$breakpoint-2) {
 
     /**
      * Cells for 2 column and 3 column layouts are generated.
@@ -232,7 +233,7 @@
                 display: inline-block;
                 margin: 0;
                 border-bottom-width: 0;
-                border-radius: config.$border-radius config.$border-radius 0 0;
+                border-radius: settings.$border-radius settings.$border-radius 0 0;
                 white-space: nowrap;
 
                 &.ui-tabs-active {
@@ -253,7 +254,7 @@
    Styling and layout for screen media at 3rd (final) breakpoint
    ========================================================================== */
 
-@media screen and (min-width: config.$breakpoint-3) {
+@media screen and (min-width: settings.$breakpoint-3) {
 
     /**
      * Adjust baseline.
@@ -271,7 +272,7 @@
     .footnote,
     .ui-helper-reset,
     .ui-selectmenu-optgroup {
-        line-height: config.$line-height-desktop;
+        line-height: settings.$line-height-desktop;
     }
 
     /**

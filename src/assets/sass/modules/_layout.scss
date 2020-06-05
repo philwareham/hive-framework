@@ -1,4 +1,5 @@
-@use "../setup";
+@use "../setup/mixins";
+@use "../setup/settings";
 
 /* Layout
    ========================================================================== */
@@ -82,7 +83,7 @@ body {
 .site-footer,
 .container {
     width: 88%;
-    max-width: config.$container-max-width;
+    max-width: settings.$container-max-width;
     margin: 0 auto;
 }
 

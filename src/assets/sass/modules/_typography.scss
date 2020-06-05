@@ -1,4 +1,5 @@
-@use "../setup";
+@use "../setup/mixins";
+@use "../setup/settings";
 
 /* Typography
    ========================================================================== */
@@ -8,8 +9,8 @@
  */
 
 html {
-    font-size: config.$base-font-size;
-    line-height: config.$line-height-mobile;
+    font-size: settings.$base-font-size;
+    line-height: settings.$line-height-mobile;
 }
 
 /**
@@ -20,7 +21,7 @@ html {
 
 body {
     color: var(--color-text);
-    font-family: config.$font-serif;
+    font-family: settings.$font-serif;
     font-feature-settings: "liga"; /* 1 */
 }
 
@@ -95,7 +96,7 @@ h5,
 h6 {
     clear: both;
     color: var(--color-text-heading);
-    font-family: config.$font-sans-serif;
+    font-family: settings.$font-sans-serif;
 }
 
 h1 {
@@ -134,7 +135,7 @@ h5 {
 h6 {
     margin: 1em 0; // 16px
     font-size: 1rem; // 16px
-    line-height: config.$line-height-mobile;
+    line-height: settings.$line-height-mobile;
 }
 
 /**
@@ -183,7 +184,7 @@ abbr[title] {
 mark,
 var {
     padding: 0 0.25em; // 0 4px
-    border-radius: config.$border-radius / 2;
+    border-radius: settings.$border-radius / 2;
     background-color: var(--color-selected);
     color: var(--color-text);
 }
@@ -202,10 +203,10 @@ samp {
     border-radius: 0.2857143em; // 4px / 14px
     background-color: var(--color-background-box);
     color: var(--color-text);
-    font-family: config.$font-code;
+    font-family: settings.$font-code;
     font-feature-settings: normal; /* 1 */
-    font-size: config.$code-font-size;
-    line-height: config.$line-height-mobile;
+    font-size: settings.$code-font-size;
+    line-height: settings.$line-height-mobile;
 }
 
 code,
@@ -274,8 +275,8 @@ tfoot,
 .footnotes,
 .card-header,
 .card-footer {
-    font-size: config.$small-font-size;
-    line-height: config.$line-height-mobile;
+    font-size: settings.$small-font-size;
+    line-height: settings.$line-height-mobile;
 }
 
 figcaption,

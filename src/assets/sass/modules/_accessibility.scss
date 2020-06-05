@@ -1,4 +1,5 @@
-@use "../setup";
+@use "../setup/mixins";
+@use "../setup/settings";
 
 @media screen and (prefers-reduced-motion: reduce), (update: slow) {
     body {

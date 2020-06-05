@@ -1,4 +1,5 @@
-@use "../setup";
+@use "../setup/mixins";
+@use "../setup/settings";
 
 /* Buttons
    ========================================================================== */
@@ -111,7 +112,7 @@ span.button-large {
 .button-small,
 a.button-small,
 span.button-small {
-    font-size: config.$small-font-size;
+    font-size: settings.$small-font-size;
 }
 
 /**

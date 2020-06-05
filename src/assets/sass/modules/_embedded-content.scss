@@ -1,4 +1,5 @@
-@use "../setup";
+@use "../setup/mixins";
+@use "../setup/settings";
 
 /* Embedded content
    ========================================================================== */
@@ -55,7 +56,7 @@ img {
  */
 
 .img--rounded {
-    border-radius: config.$border-radius;
+    border-radius: settings.$border-radius;
 }
 
 /**
