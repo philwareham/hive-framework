@@ -54,6 +54,7 @@ rules:
         - if
         - include
         - mixin
+        - return
         - use
         - warn
         - while
