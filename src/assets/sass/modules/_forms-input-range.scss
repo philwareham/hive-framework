@@ -72,6 +72,11 @@
     [type="range"]:hover::-webkit-slider-runnable-track {
         border-color: var(--color-border-extra-light);
     }
+
+    [type="range"]:active::-webkit-slider-runnable-track,
+    [type="range"]:focus::-webkit-slider-runnable-track {
+        border-color: var(--color-link-focus);
+    }
 }
 
 // Gecko/Quantum.
@@ -129,5 +134,9 @@
 
     [type="range"]:hover::-moz-range-track {
         border-color: var(--color-border-extra-light);
+    }
+
+    [type="range"]:focus::-moz-range-track {
+        border-color: var(--color-link-focus);
     }
 }
