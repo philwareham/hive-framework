@@ -1400,7 +1400,15 @@
 
                                     <p class="layout-4col">
                                         <label for="range">Range</label><br>
-                                        <input id="range" name="range" type="range">
+                                        <input id="range" name="range" type="range" list="range-list" min="0" max="100" step="1" value="0" style="width:66%";>
+                                        <datalist id="range-list">
+                                            <option>0</option>
+                                            <option>25</option>
+                                            <option>50</option>
+                                            <option>75</option>
+                                            <option>100</option>
+                                        </datalist>
+                                        <input id="range-number" type="number" min="0" max="100" step="1" value="0">
                                     </p>
 
                                     <p class="layout-4col">
@@ -2413,7 +2421,7 @@
     <noscript>JavaScript is currently disabled in your browser - please activate it for the best experience.</noscript>
 
 <!-- Examples of jQuery UI -->
-    <script src="mockups/jquery-ui-testing.js"></script>
+    <script src="mockups/mockups.js"></script>
 
 </body>
 </html>

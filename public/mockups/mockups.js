@@ -209,4 +209,16 @@ $(function()
 
     $('.jquery-ui-tooltip').tooltip();
 
+    // Input range slider values.
+
+    var rangeRangeInput = document.getElementById('range'),
+        rangeTextInput = document.getElementById('range-number');
+
+    rangeRangeInput.oninput = function () {
+        rangeTextInput.value = this.value;
+    }
+
+    rangeTextInput.oninput = function () {
+        rangeRangeInput.value = this.value;
+    }
 });
