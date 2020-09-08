@@ -4,6 +4,8 @@
    ========================================================================== */
 
 /**
+ * 1. Add the correct display in Firefox.
+ *
  * Example HTML:
  *
  * <details>
@@ -13,6 +15,8 @@
  */
 
 details {
+    display: block; /* 1 */
+
     > * {
         padding-right: 1em;
         padding-left: 1em;
@@ -24,7 +28,12 @@ details {
     }
 }
 
+/**
+ * 1. Add the correct display in all browsers.
+ */
+
 summary {
+    display: list-item; /* 1 */
     position: relative;
     z-index: 2;
     padding-top: 0.5em;

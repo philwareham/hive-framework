@@ -1,5 +1,33 @@
 @use "../setup";
 
+/* Clearfix
+   ========================================================================== */
+
+/**
+ * Clearfix using the 'A new micro clearfix hack' method.
+ */
+
+header,
+footer,
+nav ul,
+nav ol,
+.clearfix,
+.paginator {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+/**
+ * Basic float clearer.
+ */
+
+.clear {
+    clear: both;
+}
+
 /* Layout
    ========================================================================== */
 
