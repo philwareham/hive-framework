@@ -123,17 +123,11 @@
 
 
 /* ==========================================================================
-   Styling and layout for all media
-   ========================================================================== */
-
-@include meta.load-css("modules/fonts");
-
-
-/* ==========================================================================
    Styling and layout for screen media (mobile first)
    ========================================================================== */
 
 @media screen {
+    @include meta.load-css("modules/fonts");
     @include meta.load-css("modules/layout");
     @include meta.load-css("modules/navigation");
     @include meta.load-css("modules/links");
