@@ -7,6 +7,15 @@
 /* stylelint-disable declaration-colon-space-after */
 
 :root {
+    // font families
+    --font-serif:         source-serif-pro, Georgia, serif;
+    --font-serif-vf:      source-serif-pro-vf, Georgia, serif;
+    --font-sans-serif:    source-sans-pro, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-sans-serif-vf: source-sans-pro-vf, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-form:          source-sans-pro, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-form-vf:       source-sans-pro-vf, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-code:          Menlo, Consolas, Monaco, monospace !default;
+    --font-print:         "Helvetica Neue", sans-serif !default;
     // text colours
     --color-text:                      hsl(0, 0%, 20%);
     --color-text-heading:              hsl(0, 0%, 0%);

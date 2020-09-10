@@ -58,7 +58,7 @@ span.button {
     max-width: 100%;  /* 1 */
     margin: 0;  /* 2 */
     color: var(--color-text-form);
-    font-family: setup.$font-form;
+    font-family: var(--font-form);
     font-size: 1rem; /* 3 */
     line-height: 1.375; // 22px / 16px
     vertical-align: baseline;
@@ -72,7 +72,7 @@ span.button {
     textarea,
     a.button,
     span.button {
-        font-family: setup.$font-form-vf;
+        font-family: var(--font-form-vf);
     }
 }
 

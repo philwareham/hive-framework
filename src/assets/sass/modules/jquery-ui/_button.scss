@@ -34,7 +34,7 @@
     background-clip: padding-box;
     box-shadow: 0 2px 0 var(--color-button-shadow);
     color: var(--color-text-button);
-    font-family: setup.$font-form;
+    font-family: var(--font-form);
     font-size: 1rem; /* 2 */
     line-height: 1.375; // 22px / 16px
     vertical-align: baseline;
@@ -65,7 +65,7 @@
 
 @supports (font-variation-settings: normal) {
     .ui-datepicker {
-        font-family: setup.$font-form-vf;
+        font-family: var(--font-form-vf);
     }
 }
 

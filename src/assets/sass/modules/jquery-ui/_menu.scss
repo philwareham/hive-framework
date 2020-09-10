@@ -72,7 +72,7 @@
     outline: 0;
     box-shadow: var(--standard-shadow);
     list-style: none;
-    font-family: setup.$font-sans-serif;
+    font-family: var(--font-sans-serif);
     font-size: 1rem; /* 1 */
     line-height: 1.375; // 22px / 16px
 
@@ -129,7 +129,7 @@
 
 @supports (font-variation-settings: normal) {
     .ui-menu {
-        font-family: setup.$font-sans-serif-vf;
+        font-family: var(--font-sans-serif-vf);
     }
 }
 

@@ -20,7 +20,7 @@
 
 #site-navigation {
     background-color: var(--color-grad-to);
-    font-family: setup.$font-sans-serif;
+    font-family: var(--font-sans-serif);
     font-weight: 700;
 
     .js & {
@@ -85,7 +85,7 @@
 
 @supports (font-variation-settings: normal) {
     #site-navigation {
-        font-family: setup.$font-sans-serif-vf;
+        font-family: var(--font-sans-serif-vf);
     }
 }
 
