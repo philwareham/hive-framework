@@ -103,7 +103,7 @@
 .ui-widget-header {
     @include setup.gradient-linear(var(--color-gradient-from), var(--color-gradient-to));
 
-    font-weight: bold;
+    font-weight: 700;
 }
 
 
@@ -251,7 +251,7 @@ a.ui-state-default:focus {
  */
 
 .ui-priority-primary {
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /**
@@ -260,7 +260,7 @@ a.ui-state-default:focus {
 
 .ui-priority-secondary {
     opacity: 0.66;
-    font-weight: normal;
+    font-weight: 400;
 }
 
 /**

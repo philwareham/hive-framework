@@ -199,6 +199,12 @@
     }
 }
 
+@supports (font-variation-settings: normal) {
+    .ui-datepicker {
+        font-family: setup.$font-sans-serif-vf;
+    }
+}
+
 /**
  * Multiple calendars.
  */

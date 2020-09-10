@@ -1,8 +1,11 @@
 // font families
 
-$font-serif:           "PT Serif", Georgia, serif !default;
-$font-sans-serif:      system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-serif:           source-serif-pro, Georgia, serif !default;
+$font-serif-vf:        source-serif-pro-vf, Georgia, serif !default;
+$font-sans-serif:      source-sans-pro, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-sans-serif-vf:   source-sans-pro-vf, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $font-form:            $font-sans-serif !default;
+$font-form-vf:         $font-sans-serif-vf !default;
 $font-code:            Menlo, Consolas, Monaco, monospace !default;
 $font-print:           "Helvetica Neue", sans-serif !default;
 

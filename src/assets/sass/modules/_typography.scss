@@ -20,8 +20,16 @@ html {
 
 body {
     color: var(--color-text);
-    font-family: setup.$font-serif;
+    font-family: setup.$font-sans-serif;
     font-feature-settings: "liga"; /* 1 */
+    font-variation-settings: "wght" 400; // older browsers will just ignore this
+    font-weight: 400; // to prevent faux bolding of variable font
+}
+
+@supports (font-variation-settings: normal) {
+    body {
+        font-family: setup.$font-sans-serif-vf;
+    }
 }
 
 /**
@@ -95,7 +103,20 @@ h5,
 h6 {
     clear: both;
     color: var(--color-text-heading);
-    font-family: setup.$font-sans-serif;
+    font-family: setup.$font-serif;
+    font-variation-settings: "wght" 700; // older browsers will just ignore this
+    font-weight: 700; // to prevent faux bolding of variable font
+}
+
+@supports (font-variation-settings: normal) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: setup.$font-serif-vf;
+    }
 }
 
 h1 {
@@ -143,7 +164,7 @@ h6 {
 
 b,
 strong {
-    font-weight: bolder;
+    font-weight: 700;
 }
 
 /**

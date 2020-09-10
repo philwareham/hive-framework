@@ -213,7 +213,7 @@ rules:
   font-family-no-missing-generic-family-keyword: true
 
   # Require numeric or named (where possible) `font-weight` values.
-  font-weight-notation: named-where-possible
+  font-weight-notation: numeric
 
   # Specify a blacklist of disallowed functions.
   #function-blacklist:

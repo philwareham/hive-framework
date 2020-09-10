@@ -64,6 +64,18 @@ span.button {
     vertical-align: baseline;
 }
 
+@supports (font-variation-settings: normal) {
+    button,
+    input,
+    select,
+    optgroup,
+    textarea,
+    a.button,
+    span.button {
+        font-family: setup.$font-form-vf;
+    }
+}
+
 /**
  * Styling of form input fields.
  *
@@ -200,7 +212,7 @@ select[size="1"] {
 
 optgroup {
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /**

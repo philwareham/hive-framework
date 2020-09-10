@@ -63,6 +63,12 @@
     }
 }
 
+@supports (font-variation-settings: normal) {
+    .ui-datepicker {
+        font-family: setup.$font-form-vf;
+    }
+}
+
 /**
  * Remove some styling from `a` links as buttons.
  */

@@ -127,6 +127,12 @@
     }
 }
 
+@supports (font-variation-settings: normal) {
+    .ui-menu {
+        font-family: setup.$font-sans-serif-vf;
+    }
+}
+
 /**
  * Allow additional icons in menu items.
  */

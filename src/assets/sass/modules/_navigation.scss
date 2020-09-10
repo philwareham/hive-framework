@@ -21,7 +21,7 @@
 #site-navigation {
     background-color: var(--color-gradient-to);
     font-family: setup.$font-sans-serif;
-    font-weight: bold;
+    font-weight: 700;
 
     .js & {
         display: block;
@@ -80,6 +80,12 @@
     &.site-navigation-open {
         max-height: 16em;
         transition: max-height 0.33s ease-in-out;
+    }
+}
+
+@supports (font-variation-settings: normal) {
+    #site-navigation {
+        font-family: setup.$font-sans-serif-vf;
     }
 }
 
