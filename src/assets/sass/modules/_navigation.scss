@@ -19,7 +19,7 @@
  */
 
 #site-navigation {
-    background-color: var(--color-gradient-to);
+    background-color: var(--color-grad-to);
     font-family: setup.$font-sans-serif;
     font-weight: 700;
 
@@ -41,7 +41,7 @@
 
     li {
         border-top: 1px solid var(--color-border);
-        background-color: var(--color-gradient-from);
+        background-color: var(--color-grad-from);
 
         &:last-child {
             border-bottom: 1px solid transparent;
@@ -95,10 +95,10 @@
 
         li {
             border-top-color: var(--color-border-extra-dark);
-            background-color: var(--color-gradient-to);
+            background-color: var(--color-grad-to);
 
             &.active {
-                background-color: var(--color-gradient-from);
+                background-color: var(--color-grad-from);
             }
 
             &:active {

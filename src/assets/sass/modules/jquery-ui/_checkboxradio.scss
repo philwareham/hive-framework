@@ -136,7 +136,7 @@
 
 .ui-checkboxradio-checked {
     &.ui-button {
-        @include setup.gradient-linear(var(--color-button-selected-gradient-from), var(--color-button-selected-gradient-to));
+        @include setup.gradient-linear(var(--color-button-selected-grad-from), var(--color-button-selected-grad-to));
 
         border-color: var(--color-button-selected-border);
     }

@@ -101,7 +101,7 @@
  */
 
 .ui-widget-header {
-    @include setup.gradient-linear(var(--color-gradient-from), var(--color-gradient-to));
+    @include setup.gradient-linear(var(--color-grad-from), var(--color-grad-to));
 
     font-weight: 700;
 }

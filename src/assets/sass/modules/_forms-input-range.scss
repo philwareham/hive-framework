@@ -22,7 +22,7 @@
 // WebKit/Blink.
 
 [type="range"]::-webkit-slider-thumb {
-    @include setup.gradient-linear(var(--color-button-gradient-from), var(--color-button-gradient-to));
+    @include setup.gradient-linear(var(--color-button-grad-from), var(--color-button-grad-to));
 
     width: 1.25em; // 20px / 16px
     height: 1.25em; // 20px / 16px
@@ -82,7 +82,7 @@
 // Gecko/Quantum.
 
 [type="range"]::-moz-range-thumb {
-    @include setup.gradient-linear(var(--color-button-gradient-from), var(--color-button-gradient-to));
+    @include setup.gradient-linear(var(--color-button-grad-from), var(--color-button-grad-to));
 
     width: 1.25em; // 20px / 16px
     height: 1.25em; // 20px / 16px

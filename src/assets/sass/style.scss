@@ -1,115 +1,115 @@
 @use "sass:meta";
 @use "setup";
 
-/* Colourscheme
+/* CSS custom variables
    ========================================================================== */
 
 /* stylelint-disable declaration-colon-space-after */
 
 :root {
     // text colours
-    --color-text:                          hsl(0, 0%, 20%);
-    --color-text-heading:                  hsl(0, 0%, 0%);
-    --color-text-heading-a50:              hsla(0, 0%, 0%, 0.5);
-    --color-text-button:                   hsl(0, 0%, 0%);
-    --color-text-form:                     hsl(0, 0%, 0%);
-    --color-text-form-placeholder:         hsl(0, 0%, 60%);
-    --color-text-footnote:                 hsl(0, 0%, 35%);
-    --color-text-white-out:                hsl(0, 0%, 100%);
+    --color-text:                      hsl(0, 0%, 20%);
+    --color-text-heading:              hsl(0, 0%, 0%);
+    --color-text-heading-a50:          hsla(0, 0%, 0%, 0.5);
+    --color-text-button:               hsl(0, 0%, 0%);
+    --color-text-form:                 hsl(0, 0%, 0%);
+    --color-text-form-placeholder:     hsl(0, 0%, 60%);
+    --color-text-footnote:             hsl(0, 0%, 35%);
+    --color-text-white-out:            hsl(0, 0%, 100%);
     // interaction colours
-    --color-link:                          hsl(216, 100%, 37%);
-    --color-link-hover:                    hsl(216, 100%, 50%);
-    --color-link-focus:                    hsl(216, 100%, 50%);
-    --color-selecting:                     hsl(216, 100%, 90%);
-    --color-selected:                      hsl(216, 100%, 95%);
+    --color-link:                      hsl(216, 100%, 37%);
+    --color-link-hover:                hsl(216, 100%, 50%);
+    --color-link-focus:                hsl(216, 100%, 50%);
+    --color-selecting:                 hsl(216, 100%, 90%);
+    --color-selected:                  hsl(216, 100%, 95%);
     // neutral colours
-    --color-background:                    hsl(0, 0%, 100%);
-    --color-background-box:                hsl(0, 0%, 97%);
-    --color-background-form:               hsl(0, 0%, 100%);
-    --color-background-form-disabled:      hsl(0, 0%, 89%);
-    --color-gradient-from:                 hsl(0, 0%, 93%);
-    --color-gradient-to:                   hsl(0, 0%, 87%);
+    --color-background:                hsl(0, 0%, 100%);
+    --color-background-box:            hsl(0, 0%, 97%);
+    --color-background-form:           hsl(0, 0%, 100%);
+    --color-background-form-disabled:  hsl(0, 0%, 89%);
+    --color-grad-from:                 hsl(0, 0%, 93%);
+    --color-grad-to:                   hsl(0, 0%, 87%);
     // accent colours
-    --color-highlight:                     hsl(48, 100%, 63%);
-    --color-strong-highlight-box:          hsl(48, 100%, 76%);
-    --color-highlight-box:                 hsl(48, 100%, 94%);
+    --color-highlight:                 hsl(48, 100%, 63%);
+    --color-strong-highlight-box:      hsl(48, 100%, 76%);
+    --color-highlight-box:             hsl(48, 100%, 94%);
     // border colours
-    --color-border:                        hsl(0, 0%, 80%);
-    --color-border-light:                  hsl(0, 0%, 82%);
-    --color-border-extra-light:            hsl(0, 0%, 84%);
-    --color-border-dark:                   hsl(0, 0%, 75%);
-    --color-border-extra-dark:             hsl(0, 0%, 70%);
+    --color-border:                    hsl(0, 0%, 80%);
+    --color-border-light:              hsl(0, 0%, 82%);
+    --color-border-extra-light:        hsl(0, 0%, 84%);
+    --color-border-dark:               hsl(0, 0%, 75%);
+    --color-border-extra-dark:         hsl(0, 0%, 70%);
     // button colours
-    --color-button-gradient-from:          hsl(0, 0%, 93%);
-    --color-button-gradient-to:            hsl(0, 0%, 87%);
-    --color-button-border:                 hsl(0, 0%, 87%);
-    --color-button-shadow:                 hsl(0, 0%, 67%);
-    --color-button-selected-gradient-from: hsl(216, 100%, 95%);
-    --color-button-selected-gradient-to:   hsl(216, 100%, 90%);
-    --color-button-selected-border:        hsl(216, 100%, 64%);
+    --color-button-grad-from:          hsl(0, 0%, 93%);
+    --color-button-grad-to:            hsl(0, 0%, 87%);
+    --color-button-border:             hsl(0, 0%, 87%);
+    --color-button-shadow:             hsl(0, 0%, 67%);
+    --color-button-selected-grad-from: hsl(216, 100%, 95%);
+    --color-button-selected-grad-to:   hsl(216, 100%, 90%);
+    --color-button-selected-border:    hsl(216, 100%, 64%);
     // alert colours
-    --color-success-text:                  hsl(120, 60%, 34%);
-    --color-success-background:            hsl(120, 40%, 90%);
-    --color-success-border:                hsl(102, 40%, 68%);
-    --color-warning-text:                  hsl(41, 100%, 40%);
-    --color-warning-background:            hsl(41, 64%, 91%);
-    --color-warning-border:                hsl(41, 64%, 71%);
-    --color-error-text:                    hsl(4, 69%, 36%);
-    --color-error-background:              hsl(4, 43%, 91%);
-    --color-error-border:                  hsl(4, 43%, 78%);
-    --color-info-text:                     hsl(200, 50%, 45%);
-    --color-info-background:               hsl(200, 78%, 95%);
-    --color-info-border:                   hsl(200, 78%, 82%);
+    --color-success-text:              hsl(120, 60%, 34%);
+    --color-success-background:        hsl(120, 40%, 90%);
+    --color-success-border:            hsl(102, 40%, 68%);
+    --color-warning-text:              hsl(41, 100%, 40%);
+    --color-warning-background:        hsl(41, 64%, 91%);
+    --color-warning-border:            hsl(41, 64%, 71%);
+    --color-error-text:                hsl(4, 69%, 36%);
+    --color-error-background:          hsl(4, 43%, 91%);
+    --color-error-border:              hsl(4, 43%, 78%);
+    --color-info-text:                 hsl(200, 50%, 45%);
+    --color-info-background:           hsl(200, 78%, 95%);
+    --color-info-border:               hsl(200, 78%, 82%);
     // shadows
-    --standard-shadow:                     0 0 0.5em hsla(0, 0%, 0%, 0.25);
+    --standard-shadow:                 0 0 0.5em hsla(0, 0%, 0%, 0.25);
 }
 
 @include setup.dark-mode {
     // text colours
-    --color-text:                          hsl(210, 14%, 83%);
-    --color-text-heading:                  hsl(0, 0%, 100%);
-    --color-text-heading-a50:              hsla(0, 0%, 100%, 0.5);
-    --color-text-form:                     hsl(0, 0%, 100%);
-    --color-text-form-placeholder:         hsl(210, 6%, 48%);
-    --color-text-footnote:                 hsl(210, 14%, 70%);
+    --color-text:                      hsl(210, 14%, 83%);
+    --color-text-heading:              hsl(0, 0%, 100%);
+    --color-text-heading-a50:          hsla(0, 0%, 100%, 0.5);
+    --color-text-form:                 hsl(0, 0%, 100%);
+    --color-text-form-placeholder:     hsl(210, 6%, 48%);
+    --color-text-footnote:             hsl(210, 14%, 70%);
     // interaction colours
-    --color-link:                          hsl(210, 100%, 81%);
-    --color-link-hover:                    hsl(210, 100%, 87%);
-    --color-link-focus:                    hsl(312, 100%, 50%);
-    --color-selecting:                     hsl(210, 50%, 18%);
-    --color-selected:                      hsl(210, 50%, 21%);
+    --color-link:                      hsl(210, 100%, 81%);
+    --color-link-hover:                hsl(210, 100%, 87%);
+    --color-link-focus:                hsl(312, 100%, 50%);
+    --color-selecting:                 hsl(210, 50%, 18%);
+    --color-selected:                  hsl(210, 50%, 21%);
     // neutral colours
-    --color-background:                    hsl(210, 11%, 24%);
-    --color-background-box:                hsl(210, 11%, 20%);
-    --color-background-form:               hsl(210, 11%, 17%);
-    --color-background-form-disabled:      hsl(210, 11%, 17%);
-    --color-gradient-from:                 hsl(210, 7%, 36%);
-    --color-gradient-to:                   hsl(210, 9%, 30%);
+    --color-background:                hsl(210, 11%, 24%);
+    --color-background-box:            hsl(210, 11%, 20%);
+    --color-background-form:           hsl(210, 11%, 17%);
+    --color-background-form-disabled:  hsl(210, 11%, 17%);
+    --color-grad-from:                 hsl(210, 7%, 36%);
+    --color-grad-to:                   hsl(210, 9%, 30%);
     // accent colours
-    --color-highlight:                     hsl(48, 100%, 63%);
-    --color-strong-highlight-box:          hsl(48, 42%, 47%);
-    --color-highlight-box:                 hsl(48, 20%, 30%);
+    --color-highlight:                 hsl(48, 100%, 63%);
+    --color-strong-highlight-box:      hsl(48, 42%, 47%);
+    --color-highlight-box:             hsl(48, 20%, 30%);
     // border colours
-    --color-border:                        hsl(210, 7%, 53%);
-    --color-border-light:                  hsl(210, 7%, 43%);
-    --color-border-extra-light:            hsl(210, 7%, 33%);
-    --color-border-dark:                   hsl(210, 7%, 20%);
-    --color-border-extra-dark:             hsl(210, 7%, 6%);
+    --color-border:                    hsl(210, 7%, 53%);
+    --color-border-light:              hsl(210, 7%, 43%);
+    --color-border-extra-light:        hsl(210, 7%, 33%);
+    --color-border-dark:               hsl(210, 7%, 20%);
+    --color-border-extra-dark:         hsl(210, 7%, 6%);
     // alert colours
-    --color-success-text:                  hsl(100, 60%, 50%);
-    --color-success-background:            hsl(109, 27%, 20%);
-    --color-success-border:                hsla(100, 60%, 50%, 0.33);
-    --color-warning-text:                  hsl(40, 100%, 62%);
-    --color-warning-background:            hsl(49, 35%, 21%);
-    --color-warning-border:                hsla(40, 100%, 62%, 0.33);
-    --color-error-text:                    hsl(337, 100%, 60%);
-    --color-error-background:              hsl(348, 34%, 21%);
-    --color-error-border:                  hsla(337, 100%, 60%, 0.43);
-    --color-info-text:                     hsl(207, 100%, 63%);
-    --color-info-background:               hsl(207, 68%, 17%);
-    --color-info-border:                   hsla(207, 100%, 63%, 0.38);
+    --color-success-text:              hsl(100, 60%, 50%);
+    --color-success-background:        hsl(109, 27%, 20%);
+    --color-success-border:            hsla(100, 60%, 50%, 0.33);
+    --color-warning-text:              hsl(40, 100%, 62%);
+    --color-warning-background:        hsl(49, 35%, 21%);
+    --color-warning-border:            hsla(40, 100%, 62%, 0.33);
+    --color-error-text:                hsl(337, 100%, 60%);
+    --color-error-background:          hsl(348, 34%, 21%);
+    --color-error-border:              hsla(337, 100%, 60%, 0.43);
+    --color-info-text:                 hsl(207, 100%, 63%);
+    --color-info-background:           hsl(207, 68%, 17%);
+    --color-info-border:               hsla(207, 100%, 63%, 0.38);
     // shadows
-    --standard-shadow:                     0 0 0.5em hsla(0, 0%, 0%, 0.75);
+    --standard-shadow:                 0 0 0.5em hsla(0, 0%, 0%, 0.75);
 }
 
 
@@ -118,7 +118,6 @@
    ========================================================================== */
 
 @include meta.load-css("modules/fonts");
-
 
 
 /* ==========================================================================
@@ -186,13 +185,11 @@
 }
 
 
-
 /* ==========================================================================
    Responsive layout for screen media
    ========================================================================== */
 
 @include meta.load-css("modules/responsive");
-
 
 
 /* ==========================================================================
@@ -202,13 +199,11 @@
 @include meta.load-css("modules/accessibility");
 
 
-
 /* ==========================================================================
    Animation `keyframes` need to appear outside of `screen` rules
    ========================================================================== */
 
 @include meta.load-css("modules/animation-keyframes");
-
 
 
 /* ==========================================================================
