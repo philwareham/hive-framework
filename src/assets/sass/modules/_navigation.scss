@@ -19,11 +19,8 @@
  */
 
 #site-navigation {
-    font-family: var(--font-serif);
-    font-size: 1.125rem; // 18px / 16px
-    font-variation-settings: "wght" 500; // older browsers will just ignore this
-    font-weight: 400;
-    line-height: 1.4444444; // 26px / 18px
+    max-width: setup.$container-max-width;
+    margin: 0 auto;
 
     .js & {
         display: block;
@@ -35,14 +32,17 @@
     }
 
     ul {
-        max-width: setup.$container-max-width;
-        margin: 0 auto;
+        margin: 0;
         padding: 0;
         list-style: none;
     }
 
     li {
-        background-color: var(--color-grad-from);
+        font-family: var(--font-serif);
+        font-size: 1.125rem; // 18px / 16px
+        font-variation-settings: "wght" 500; // older browsers will just ignore this
+        font-weight: 400;
+        line-height: 1.4444444; // 26px / 18px
 
         &:last-child {
             border-bottom: 1px solid transparent;
@@ -92,8 +92,6 @@
 
 @include setup.dark-mode {
     #site-navigation {
-        background-color: var(--color-background-form);
-
         li {
             border-top-color: var(--color-border-extra-dark);
             background-color: var(--color-grad-to);

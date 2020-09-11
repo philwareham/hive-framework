@@ -110,7 +110,7 @@ body {
     right: 0;
     width: 100%;
     border-bottom: 2px solid var(--color-border);
-    background: var(--color-background);
+    background: var(--color-background-box);
 }
 
 @include setup.dark-mode {

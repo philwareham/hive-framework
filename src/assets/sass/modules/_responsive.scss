@@ -171,6 +171,8 @@
      */
 
     #site-navigation {
+        width: 88%;
+
         .js & {
             max-height: none;
             overflow: visible;
@@ -179,7 +181,6 @@
         ul {
             display: flex;
             flex-wrap: wrap;
-            width: 88%;
         }
 
         a {
