@@ -94,6 +94,15 @@ body {
     }
 }
 
+.header {
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--color-background);
+}
+
 /**
  * Wrapper for layouts, and for site header/footer.
  *

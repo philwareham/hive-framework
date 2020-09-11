@@ -19,9 +19,11 @@
  */
 
 #site-navigation {
-    background-color: var(--color-grad-to);
-    font-family: var(--font-sans-serif);
-    font-weight: 700;
+    font-family: var(--font-serif);
+    font-size: 1.125rem; // 18px / 16px
+    font-variation-settings: "wght" 500; // older browsers will just ignore this
+    font-weight: 400;
+    line-height: 1.4444444; // 26px / 18px
 
     .js & {
         display: block;
@@ -40,7 +42,6 @@
     }
 
     li {
-        border-top: 1px solid var(--color-border);
         background-color: var(--color-grad-from);
 
         &:last-child {
@@ -85,7 +86,7 @@
 
 @supports (font-variation-settings: normal) {
     #site-navigation {
-        font-family: var(--font-sans-serif-vf);
+        font-family: var(--font-serif-vf);
     }
 }
 
@@ -121,6 +122,7 @@
 #site-navigation-toggle {
     @include setup.hide-text;
 
+    display: none;
     width: 32px;
     height: 32px;
     margin-right: 6%;
@@ -130,6 +132,10 @@
     background-size: 32px 32px;
     user-select: none;
     -webkit-touch-callout: none; /* 1 */
+
+    .js & {
+        display: block;
+    }
 
     &:hover {
         background-color: var(--color-selected);

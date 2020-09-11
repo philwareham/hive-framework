@@ -171,8 +171,6 @@
      */
 
     #site-navigation {
-        border-top: 1px solid var(--color-border);
-
         .js & {
             max-height: none;
             overflow: visible;
@@ -182,15 +180,6 @@
             display: flex;
             flex-wrap: wrap;
             width: 88%;
-        }
-
-        li {
-            border-top: 0;
-            border-right: solid 1px var(--color-border);
-
-            &:first-child {
-                border-left: solid 1px var(--color-border);
-            }
         }
 
         a {
@@ -216,7 +205,8 @@
      * Remove navigation toggle show/hide button for navigation.
      */
 
-    #site-navigation-toggle {
+    #site-navigation-toggle,
+    .js #site-navigation-toggle {
         display: none;
     }
 
