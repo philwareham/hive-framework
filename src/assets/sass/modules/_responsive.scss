@@ -166,12 +166,22 @@
         column-count: 3;
     }
 
+    #dynamic-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .site-header {
+        width: auto;
+        margin: 0 0 0 6%;
+    }
+
     /**
      * Navigation layout changes.
      */
 
     #site-navigation {
-        width: 88%;
+        margin: 0 6% 0 0;
 
         .js & {
             max-height: none;
@@ -180,25 +190,15 @@
 
         ul {
             display: flex;
-            flex-wrap: wrap;
+            margin: 0.875em 0;
+        }
+
+        li {
+            margin-left: 1px;
         }
 
         a {
             padding: 0.5em 1em;
-        }
-    }
-
-    @include setup.dark-mode {
-        #site-navigation {
-            border-top-color: var(--color-border-extra-dark);
-
-            li {
-                border-right-color: var(--color-border-extra-dark);
-
-                &:first-child {
-                    border-left-color: var(--color-border-extra-dark);
-                }
-            }
         }
     }
 
