@@ -82,7 +82,7 @@ body {
 
 .wrapper {
     padding: 1px 0 1em;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 2px solid var(--color-border);
     background: var(--color-background);
 }
 
@@ -92,13 +92,24 @@ body {
     }
 }
 
+/**
+ * Show/hide header on scroll.
+ *
+ * Example HTML:
+ *
+ * <div id="dynamic-header">
+ *     <header>
+ *     <nav>
+ * </div>
+ */
+
 #dynamic-header {
     position: sticky;
     z-index: 100;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 2px solid var(--color-border);
     background: var(--color-background);
 }
 

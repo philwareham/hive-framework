@@ -123,11 +123,12 @@
     @include setup.hide-text;
 
     display: none;
+    position: absolute;
+    z-index: 101;
+    top: 1.25rem;
+    right: 6%;
     width: 32px;
     height: 32px;
-    margin-right: 6%;
-    float: right;
-    border: 1px solid var(--color-border);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23333' d='M4 6h24v4H4zm0 8h24v4H4zm0 8h24v4H4z'/%3E%3C/svg%3E");
     background-size: 32px 32px;
     user-select: none;
@@ -150,18 +151,12 @@
     }
 
     &:focus {
-        border-color: var(--color-link-focus);
-        outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+        outline: 1px solid var(--color-link-focus);
     }
 }
 
 @include setup.dark-mode {
     #site-navigation-toggle {
-        border-color: var(--color-border-extra-dark);
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23ced4da' d='M4 6h24v4H4zm0 8h24v4H4zm0 8h24v4H4z'/%3E%3C/svg%3E");
-
-        &:focus {
-            border-color: var(--color-link-focus);
-        }
     }
 }
