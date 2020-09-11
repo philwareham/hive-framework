@@ -167,13 +167,11 @@ import Glide from '@glidejs/glide';
 })();
 
 // Hide/show header on scroll
-// By Osvaldas Valutis www.osvaldas.info
 
 (function(document, window) {
 	'use strict';
 
-	var elSelector = '.header',
-		element = document.querySelector(elSelector);
+	var element = document.getElementById('dynamic-header');
 
 	if (!element) {
         return true;
@@ -187,7 +185,7 @@ import Glide from '@glidejs/glide';
 		wScrollBefore	= 0,
 		wScrollDiff		= 0;
 
-	window.addEventListener( 'scroll', function() {
+	window.addEventListener('scroll', function() {
 		elHeight		= element.offsetHeight;
 		dHeight			= document.body.offsetHeight;
 		wHeight			= window.innerHeight;
@@ -201,9 +199,9 @@ import Glide from '@glidejs/glide';
 			element.style.top = (elTop > 0 ? 0 : elTop) + 'px';
         } else if (wScrollDiff < 0) {
 			if (wScrollCurrent + wHeight >= dHeight - elHeight) {
-				element.style.top = ( ( elTop = wScrollCurrent + wHeight - dHeight ) < 0 ? elTop : 0 ) + 'px';
+				element.style.top = ((elTop = wScrollCurrent + wHeight - dHeight ) < 0 ? elTop : 0) + 'px';
             } else {
-				element.style.top = ( Math.abs( elTop ) > elHeight ? -elHeight : elTop ) + 'px';
+				element.style.top = (Math.abs(elTop) > elHeight ? - elHeight : elTop) + 'px';
             }
 		}
 
