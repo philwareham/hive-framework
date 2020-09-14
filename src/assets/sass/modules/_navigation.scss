@@ -89,7 +89,7 @@
 
 @include setup.dark-mode {
     #site-navigation li:hover {
-        filter: brightness(1.15);
+        filter: brightness(1.25);
     }
 }
 
@@ -128,7 +128,7 @@
     }
 
     &.site-navigation-toggle-active {
-        background-color: var(--color-strong-highlight-box);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cg fill='%23333'%3E%3Cpath d='m6.1 23.1 17-17 2.8 2.8-17 17z'/%3E%3Cpath d='m8.9 6.1 17 17-2.8 2.8-17-17z'/%3E%3C/g%3E%3C/svg%3E");
     }
 
     &:focus {
@@ -141,7 +141,11 @@
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23ced4da' d='M4 6h24v4H4zm0 8h24v4H4zm0 8h24v4H4z'/%3E%3C/svg%3E");
 
         &:hover {
-            filter: brightness(1.15);
+            filter: brightness(1.25);
+        }
+
+        &.site-navigation-toggle-active {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cg fill='%23ced4da'%3E%3Cpath d='m6.1 23.1 17-17 2.8 2.8-17 17z'/%3E%3Cpath d='m8.9 6.1 17 17-2.8 2.8-17-17z'/%3E%3C/g%3E%3C/svg%3E");
         }
     }
 }
