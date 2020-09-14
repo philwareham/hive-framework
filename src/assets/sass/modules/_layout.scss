@@ -104,13 +104,16 @@ body {
  */
 
 #dynamic-header {
-    position: sticky;
-    z-index: 100;
-    top: 0;
-    right: 0;
-    width: 100%;
     border-bottom: 2px solid var(--color-border);
     background: var(--color-background-box);
+
+    .js & {
+        position: sticky;
+        z-index: 100;
+        top: 0;
+        right: 0;
+        width: 100%;
+    }
 }
 
 @include setup.dark-mode {
