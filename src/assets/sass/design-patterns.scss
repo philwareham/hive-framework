@@ -135,7 +135,7 @@ $colors: (
  *
  * Example HTML:
  *
- * <ol class="design-patterns--breakpoints list--no-bullets clearfix">
+ * <ol class="design-patterns--breakpoints list--no-bullets">
  *     <li class="design-patterns--breakpoint-0">No breakpoint</li>
  *     <li class="design-patterns--breakpoint-1">Breakpoint 1</li>
  *     <li class="design-patterns--breakpoint-2">Breakpoint 2</li>
@@ -143,8 +143,8 @@ $colors: (
  * </ol>
  */
 
-.design-patterns--breakpoints li {
-    float: left;
+.design-patterns--breakpoints {
+    display: flex;
 }
 
 .design-patterns--breakpoint-0,

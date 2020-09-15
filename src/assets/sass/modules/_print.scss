@@ -159,16 +159,31 @@ small,
 }
 
 /**
- * Simple blockquote styling.
+ * Blockquote styling.
  *
  * 1. Avoid blockquotes breaking across multiple pages.
  */
 
 blockquote {
-    padding: 0 0 0 8pt;
-    border-left: 3pt solid black;
+    margin: 8pt 10%;
     font-size: 16pt;
+    font-style: italic;
+    text-align: center;
     page-break-inside: avoid; /* 1 */
+
+    footer {
+        font-size: 8pt;
+        font-style: normal;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 0.5pt;
+            height: 16pt;
+            margin: 8pt auto;
+            background-color: black;
+        }
+    }
 }
 
 /**
@@ -246,29 +261,14 @@ figcaption {
 }
 
 /**
- * Simple bullet styling for `ul` unordered lists.
+ * Remove margins from nested lists.
  */
 
-ul {
-    padding: 0 0 8pt 1.8em;
-    list-style: square;
-}
-
-/**
- * Simple numerical styling for `ol` ordered lists.
- */
-
-ol {
-    padding: 0 0 8pt 1.8em;
-    list-style: decimal;
-}
-
-/**
- * Normalize margins on `dl` definition lists.
- */
-
-dl {
-    padding: 0 0 8pt 1.8em;
+li {
+    > ul,
+    > ol {
+        margin: 0;
+    }
 }
 
 /**

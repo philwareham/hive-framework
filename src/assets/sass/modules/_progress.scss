@@ -12,7 +12,7 @@ progress {
     width: 100%;
     max-width: 16em; // 256px / 16px
     height: 0.75em;
-    margin-right: 0.33em;
+    margin-inline-end: 0.33em;
     border: 1px solid var(--color-border);
     background-color: var(--color-background-box);
     vertical-align: baseline; /* 1 */
@@ -121,7 +121,7 @@ progress[value="1"]::-moz-progress-bar {
 .data-progress {
     display: inline-block;
     min-width: 2.75em;
-    margin-right: 0.5em;
+    margin-inline-end: 0.5em;
     font-size: setup.$small-font-size;
 }
 
