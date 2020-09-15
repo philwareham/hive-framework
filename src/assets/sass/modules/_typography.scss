@@ -251,10 +251,12 @@ samp {
     border-radius: 0.2857143em; // 4px / 14px
     background-color: var(--color-background-box);
     color: var(--color-text);
+    direction: ltr;
     font-family: var(--font-code);
     font-feature-settings: normal; /* 1 */
     font-size: setup.$code-font-size;
     line-height: setup.$line-height-mobile;
+    text-align: left;
 }
 
 code,
@@ -283,6 +285,7 @@ pre {
         background-color: transparent;
         font-size: 1em; // 14px
         hyphens: none;
+        text-align: left;
         word-wrap: normal;
         word-break: normal;
         word-spacing: normal;
