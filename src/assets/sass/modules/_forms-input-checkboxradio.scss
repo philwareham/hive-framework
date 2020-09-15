@@ -21,7 +21,7 @@
     appearance: none;
 
     + label:not(.ui-controlgroup-item) {
-        margin: 0 0.5em 0 0; /* 2 */
+        margin-inline-end: 0.5em; /* 2 */
 
         &:last-of-type {
             margin: 0; /* 2 */
