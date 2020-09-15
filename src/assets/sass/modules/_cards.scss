@@ -41,6 +41,20 @@
     }
 }
 
+@if setup.$internationalization {
+    [dir="rtl"] .card:not(.align-left):not(.align-center) .alert-pill {
+        right: -1px;
+        left: auto;
+        border-radius: (setup.$border-radius / 2) 0 (setup.$border-radius / 2) (setup.$border-radius / 2);
+    }
+
+    .card.align-left .alert-pill {
+        right: auto;
+        left: -1px;
+        border-radius: (setup.$border-radius / 2) (setup.$border-radius / 2) (setup.$border-radius / 2) 0;
+    }
+}
+
 .card.align-right .alert-pill {
     right: -1px;
     left: auto;

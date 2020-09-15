@@ -210,6 +210,35 @@
     .js #site-navigation-toggle {
         display: none;
     }
+
+    @if setup.$use-jquery-ui {
+        /**
+         * jQuery UI Tabs layout changes.
+         */
+
+        .ui-tabs:not(.ui-tabs-vertical) {
+            .ui-tabs-nav {
+                border-bottom: 0;
+
+                li {
+                    display: inline-block;
+                    margin: 0;
+                    border-bottom-width: 0;
+                    border-radius: setup.$border-radius setup.$border-radius 0 0;
+                    white-space: nowrap;
+
+                    &.ui-tabs-active {
+                        margin-bottom: -1px;
+                        padding-bottom: 1px;
+                    }
+                }
+            }
+
+            .ui-tabs-panel {
+                border-top-width: 1px;
+            }
+        }
+    }
 }
 
 

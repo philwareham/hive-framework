@@ -1,12 +1,3 @@
-// Support non-latin languages?
-$internationalization: true; // true/false
-
-// Support for jQuery UI elements?
-$use-jquery-ui: true; // true/false
-
-// Support for icons (overrode by $use-jquery-ui above)?
-//$use-icons: true; // true/false
-
 @use "sass:meta";
 @use "setup";
 
@@ -163,11 +154,11 @@ $use-jquery-ui: true; // true/false
     @include meta.load-css("modules/comments");
     @include meta.load-css("modules/cards");
 
-    @if $internationalization {
+    @if setup.$internationalization {
         @include meta.load-css("modules/internationalization");
     }
 
-    @if $use-jquery-ui {
+    @if setup.$use-jquery-ui {
         // jQuery UI core
 
         @include meta.load-css("modules/jquery-ui/core");
@@ -199,7 +190,7 @@ $use-jquery-ui: true; // true/false
         @include meta.load-css("modules/jquery-ui/spinner");
         @include meta.load-css("modules/jquery-ui/tabs");
         @include meta.load-css("modules/jquery-ui/tooltip");
-    } @else if $use-icons {
+    } @else if setup.$use-icons {
         @include meta.load-css("modules/jquery-ui/icons");
     }
 }
@@ -210,10 +201,6 @@ $use-jquery-ui: true; // true/false
    ========================================================================== */
 
 @include meta.load-css("modules/responsive");
-
-@if $use-jquery-ui {
-    @include meta.load-css("modules/jquery-ui/responsive");
-}
 
 
 /* ==========================================================================

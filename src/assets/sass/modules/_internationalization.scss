@@ -46,12 +46,3 @@ bdo[dir="rtl"] {
         background-position: 0.5em center; // 8px / 16px
     }
 }
-
-/**
- * Swap ‘skip links’ position in RTL languages.
- */
-
-[dir="rtl"] .skip-link {
-    right: 1px;
-    left: auto;
-}

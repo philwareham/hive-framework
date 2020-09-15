@@ -1,3 +1,12 @@
+// Support non-latin languages?
+$internationalization: true !default; // true/false
+
+// Support for jQuery UI elements?
+$use-jquery-ui: true !default; // true/false
+
+// Support for icons (overrode by $use-jquery-ui above)?
+$use-icons: true !default; // true/false
+
 // typography grid
 
 $base-font-size:       16px !default;

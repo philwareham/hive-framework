@@ -128,3 +128,14 @@ a[href^="sms"] {
         transform: translateY(0);
     }
 }
+
+@if setup.$internationalization {
+    /**
+     * Swap ‘skip links’ position in RTL languages.
+     */
+
+    [dir="rtl"] .a--skip-link {
+        right: 1px;
+        left: auto;
+    }
+}

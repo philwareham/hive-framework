@@ -1,0 +1,2437 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="rtl">
+<head>
+    <meta charset="utf-8">
+<!-- ===== The title should optimally be around 55 characters >>>> -->
+    <title>Hive Framework | Theming design patterns documentation.</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- ================================ The description should optimally be around 115 characters >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <meta name="description" content="Article containing examples of various inline/block elements that should be considered and styled within any theme.">
+
+<!-- All the favicons, touch icons, etc. -->
+    <meta name="theme-color" content="#333333">
+    <meta name="application-name" content="Hive Framework">
+    <link rel="icon" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" sizes="16x16" href="favicon-16x16.png">
+
+<!-- Canonical URL -->
+    <link rel="canonical" href="https://hive-framework.philwareham.co.uk/index.html">
+
+<!-- JUST FOR DESIGN PATTERNS DOC - NOT IN ACTUAL FRAMEWORK -->
+    <link rel="stylesheet" href="assets/css/design-patterns.css">
+
+</head>
+
+<body itemscope itemtype="https://schema.org/WebPage">
+
+<!-- Accessibility microdata properties -->
+    <meta itemprop="accessibilityFeature" content="tableOfContents">
+    <meta itemprop="accessibilityControl" content="fullKeyboardControl">
+    <meta itemprop="accessibilityControl" content="fullMouseControl">
+    <meta itemprop="accessibilityHazard" content="noFlashingHazard">
+    <meta itemprop="accessibilityHazard" content="noMotionSimulationHazard">
+    <meta itemprop="accessibilityHazard" content="noSoundHazard">
+    <meta itemprop="accessibilityAPI" content="ARIA">
+
+    <a class="a--skip-link" href="#page-navigation">Go to page navigation</a>
+    <a class="a--skip-link" href="#main">Go to main content</a>
+
+    <div id="dynamic-header">
+
+<!-- Header -->
+        <header class="site-header">
+            <h2>Sitename</h2>
+        </header>
+
+<!-- Navigation -->
+        <a id="site-navigation-toggle" href="#" role="button" aria-controls="site-navigation">Menu</a>
+        <nav id="site-navigation" aria-label="Site navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+            <ul id="site-navigation-list">
+                <li class="active">
+                    <a itemprop="url" href="#" aria-current="page">Home </a>
+                    <span class="accessibility">(current section)</span>
+                </li>
+                <li>
+                    <a itemprop="url" href="#">About</a>
+                </li>
+                <li>
+                    <a itemprop="url" href="#">Services</a>
+                </li>
+                <li>
+                    <a itemprop="url" href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!--<div class="search" aria-label="Search" itemscope itemtype="https://schema.org/WebSite">
+            <meta itemprop="url" content="http://hive-framework.philwareham.co.uk/">
+            <form role="search" method="get" action="#" itemprop="potentialAction" itemscope itemtype="https://schema.org/SearchAction">
+                <meta itemprop="target" content="http://hive-framework.philwareham.co.uk/?q={q}">
+                <label class="accessibility" for="search">Search</label>
+                <input id="search" name="q" type="search" itemprop="query-input" placeholder="Search">
+            </form>
+        </div>-->
+
+    </div>
+
+<!-- Content -->
+    <div class="wrapper">
+        <div class="container">
+            <main>
+
+                <article itemscope itemtype="https://schema.org/Article">
+                    <h1 itemprop="name headline">Design patterns</h1>
+
+                    <p><a id="lightswitch" href="#"><span class="ui-icon ui-icon-lightbulb"></span> Toggle light/dark mode</a></p>
+
+                    <span class="article-data">
+                        <meta itemprop="mainEntityOfPage" content="https://hive-framework.philwareham.co.uk/index.html">
+                        <meta itemprop="datePublished" content="2016-09-21T10:43:39Z">
+                        <meta itemprop="dateModified" content="2016-10-22T14:32:01Z">
+                        <meta itemprop="author" content="Phil Wareham">
+                    </span>
+
+                    <div itemprop="description">
+                        <p>Article containing examples of various inline/block elements that should be considered and styled within any theme. Supported browsers: Chrome, Edge, Firefox, Safari and Opera the last two recent stable releases. Development environment uses <a href="https://gruntjs.com" rel="external" title="Go to the Grunt website">Grunt</a> and <a href="https://sass-lang.com" rel="external" title="Go to the Sass website">Sass</a>.</p>
+                    </div>
+
+                    <img class="prefers-color-scheme" width="192" height="192" alt="Dark/Light Mode images"
+                        src="mockups/img/hive-light.png"
+                        data-src-light="mockups/img/hive-light.png"
+                        data-src-dark="mockups/img/hive-dark.png"
+                        srcset="mockups/img/hive-light@2x.png 2x"
+                        data-srcset-light="mockups/img/hive-light@2x.png 2x"
+                        data-srcset-dark="mockups/img/hive-dark@2x.png 2x">
+
+                    <p>Grab the latest source code from <a rel="external" href="https://github.com/philwareham/hive-framework"><strong>the GitHub repository</strong></a>.</p>
+
+                    <nav id="page-navigation" aria-label="Page navigation">
+                        <h3>Contents</h3>
+                        <ol>
+                            <li><a href="#section-colourways">Colourways</a></li>
+                            <li><a href="#section-grid">Responsive grid</a></li>
+                            <li><a href="#section-slider">Image slider/carousel</a></li>
+                            <li><a href="#section-type">Typography</a></li>
+                            <li><a href="#section-text-semantics">Inline text-level semantics</a></li>
+                            <li><a href="#section-progress">Progress indicators</a></li>
+                            <li><a href="#section-block-semantics">Block text-level semantics</a></li>
+                            <li><a href="#section-media">Embedded content</a></li>
+                            <li><a href="#section-labels">Inline text labels</a></li>
+                            <li><a href="#section-alerts">Alert boxes</a></li>
+                            <li><a href="#section-pills">Alert pills</a></li>
+                            <li><a href="#section-pagination">Pagination</a></li>
+                            <li><a href="#section-breadcrumbs">Breadcrumbs</a></li>
+                            <li><a href="#section-lists">Lists</a></li>
+                            <li><a href="#section-tables">Tables</a></li>
+                            <li><a href="#section-forms">Forms</a></li>
+                            <li><a href="#section-cards">Cards</a></li>
+                            <li><a href="#section-social">Social media</a></li>
+                            <li><a href="#section-jquery-ui">jQuery UI widgets</a>
+                                <ol>
+                                    <li><a href="#ui-doc-jquery-ui--draggable">Interactions: Draggable</a></li>
+                                    <li><a href="#ui-doc-jquery-ui--resizable">Interactions: Resizable</a></li>
+                                    <li><a href="#ui-doc-jquery-ui--selectable">Interactions: Selectable</a></li>
+                                    <li><a href="#ui-doc-jquery-ui--sortable">Interactions: Sortable</a></li>
+                                    <li><a href="#ui-doc-jquery-ui--accordion">Widgets: Accordion</a></li>
+                                    <li><a href="#ui-doc-jquery-ui--autocomplete">Widgets: Autocomplete</a></li>
+                                    <li><a href="#ui-doc-jquery-ui--button">Widgets: Button</a></li>
+                                    <li><a href="#ui-doc-jquery-ui--checkboxradio">Widgets: Checkboxradio</a></li>
+                                    <li><a href="#ui-doc-jquery-ui--controlgroup">Widgets: Controlgroup</a></li>
+                                    <li><a href="#ui-doc-jquery-ui--datepicker">Widgets: Datepicker</a></li>
+                                    <li><a href="#ui-doc-jquery-ui--dialog">Widgets: Dialog</a></li>
+                                    <li><a href="#ui-doc-jquery-ui--menu">Widgets: Menu</a></li>
+                                    <li><a href="#ui-doc-jquery-ui--progressbar">Widgets: Progressbar</a></li>
+                                    <li><a href="#ui-doc-jquery-ui--selectmenu">Widgets: Selectmenu</a></li>
+                                    <li><a href="#ui-doc-jquery-ui--slider">Widgets: Slider</a></li>
+                                    <li><a href="#ui-doc-jquery-ui--spinner">Widgets: Spinner</a></li>
+                                    <li><a href="#ui-doc-jquery-ui--tabs">Widgets: Tabs</a></li>
+                                    <li><a href="#ui-doc-jquery-ui--tooltip">Widgets: Tooltip</a></li>
+                                    <li><a href="#ui-doc-jquery-ui--icons">Styles: Icons</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#section-misc">Miscellaneous</a></li>
+                        </ol>
+                    </nav>
+
+                    <div id="main" aria-label="Main content" itemprop="articleBody">
+
+
+                        <section class="section" id="section-colourways">
+                            <h2>Colourways</h2>
+
+                            <div class="layout-container">
+
+                                <div class="layout-4col">
+                                    <h3>Neutral</h3>
+
+                                    <p><code>--color-background</code></p>
+                                    <div class="design-patterns--color design-patterns--color-background"></div>
+
+                                    <p><code>--color-background-box</code></p>
+                                    <div class="design-patterns--color design-patterns--color-background-box"></div>
+
+                                    <p><code>--color-grad-from</code></p>
+                                    <div class="design-patterns--color design-patterns--color-grad-from"></div>
+
+                                    <p><code>--color-grad-to</code></p>
+                                    <div class="design-patterns--color design-patterns--color-grad-to"></div>
+
+                                    <p><code>--color-border-extra-light</code></p>
+                                    <div class="design-patterns--color design-patterns--color-border-extra-light"></div>
+
+                                    <p><code>--color-border-light</code></p>
+                                    <div class="design-patterns--color design-patterns--color-border-light"></div>
+
+                                    <p><code>--color-border</code></p>
+                                    <div class="design-patterns--color design-patterns--color-border"></div>
+
+                                    <p><code>--color-border-dark</code></p>
+                                    <div class="design-patterns--color design-patterns--color-border-dark"></div>
+
+                                    <p><code>--color-border-extra-dark</code></p>
+                                    <div class="design-patterns--color design-patterns--color-border-extra-dark"></div>
+
+                                    <p><code>--color-text-footnote</code></p>
+                                    <div class="design-patterns--color design-patterns--color-text-footnote"></div>
+
+                                    <p><code>--color-text</code></p>
+                                    <div class="design-patterns--color design-patterns--color-text"></div>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Accent</h3>
+
+                                    <p><code>--color-highlight-box</code></p>
+                                    <div class="design-patterns--color design-patterns--color-highlight-box"></div>
+
+                                    <p><code>--color-strong-highlight-box</code></p>
+                                    <div class="design-patterns--color design-patterns--color-strong-highlight-box"></div>
+
+                                    <p><code>--color-highlight</code></p>
+                                    <div class="design-patterns--color design-patterns--color-highlight"></div>
+
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Interaction</h3>
+
+                                    <p><code>--color-link-selected</code></p>
+                                    <div class="design-patterns--color design-patterns--color-link-selected"></div>
+
+                                    <p><code>--color-link-selecting</code></p>
+                                    <div class="design-patterns--color design-patterns--color-link-selecting"></div>
+
+                                    <p><code>--color-link-focus</code></p>
+                                    <div class="design-patterns--color design-patterns--color-link-focus"></div>
+
+                                    <p><code>--color-link-hover</code></p>
+                                    <div class="design-patterns--color design-patterns--color-link-hover"></div>
+
+                                    <p><code>--color-link</code></p>
+                                    <div class="design-patterns--color design-patterns--color-link"></div>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>State</h3>
+
+                                    <p><code>--color-success-background</code></p>
+                                    <div class="design-patterns--color design-patterns--color-success-background"></div>
+
+                                    <p><code>--color-success-text</code></p>
+                                    <div class="design-patterns--color design-patterns--color-success-text"></div>
+
+                                    <p><code>--color-warning-background</code></p>
+                                    <div class="design-patterns--color design-patterns--color-warning-background"></div>
+
+                                    <p><code>--color-warning-text</code></p>
+                                    <div class="design-patterns--color design-patterns--color-warning-text"></div>
+
+                                    <p><code>--color-error-background</code></p>
+                                    <div class="design-patterns--color design-patterns--color-error-background"></div>
+
+                                    <p><code>--color-error-text</code></p>
+                                    <div class="design-patterns--color design-patterns--color-error-text"></div>
+
+                                    <p><code>--color-info-background</code></p>
+                                    <div class="design-patterns--color design-patterns--color-info-background"></div>
+
+                                    <p><code>--color-info-text</code></p>
+                                    <div class="design-patterns--color design-patterns--color-info-text"></div>
+                                </div>
+
+                            </div><!-- /.layout-container -->
+
+                        </section>
+
+
+                        <section class="section" id="section-grid">
+                            <h2>Responsive grid</h2>
+                            <p>Grid layout with 1 to 4 column options.</p>
+
+                            <h3>Current active breakpoint</h3>
+                            <ol class="design-patterns--breakpoints list--no-bullets clearfix">
+                                <li class="design-patterns--breakpoint-0">No breakpoint</li>
+                                <li class="design-patterns--breakpoint-1">Breakpoint 1</li>
+                                <li class="design-patterns--breakpoint-2">Breakpoint 2</li>
+                                <li class="design-patterns--breakpoint-3">Breakpoint 3</li>
+                            </ol>
+
+                            <h3>Main layout grid</h3>
+                            <p>The main layout grid blocks used for layout throughout a site. Requires a parent container with <code>class="layout-container"</code> stated.</p>
+
+                            <p><strong>Code:</strong></p>
+                            <pre><code class="language-markup">&lt;div class="layout-container"&gt;
+
+    &lt;div class="layout-1col"&gt;Opt1: 1col&lt;/div&gt;
+
+    &lt;div class="layout-2col"&gt;Opt2: 2col cell1&lt;/div&gt;
+    &lt;div class="layout-2col"&gt;Opt2: 2col cell2&lt;/div&gt;
+
+    &lt;div class="layout-3col"&gt;Opt3: 3col cell1&lt;/div&gt;
+    &lt;div class="layout-3col"&gt;Opt3: 3col cell2&lt;/div&gt;
+    &lt;div class="layout-3col"&gt;Opt3: 3col cell3&lt;/div&gt;
+
+    &lt;div class="layout-3col-2span"&gt;Opt4: 3col cell1and2&lt;/div&gt;
+    &lt;div class="layout-3col"&gt;Opt4: 3col cell3&lt;/div&gt;
+
+    &lt;div class="layout-3col"&gt;Opt5: 3col cell1&lt;/div&gt;
+    &lt;div class="layout-3col-2span"&gt;Opt5: 3col cell2and3&lt;/div&gt;
+
+    &lt;div class="layout-4col"&gt;Opt6: 4col cell1&lt;/div&gt;
+    &lt;div class="layout-4col"&gt;Opt6: 4col cell2&lt;/div&gt;
+    &lt;div class="layout-4col"&gt;Opt6: 4col cell3&lt;/div&gt;
+    &lt;div class="layout-4col"&gt;Opt6: 4col cell4&lt;/div&gt;
+
+    &lt;div class="layout-4col-2span"&gt;Opt7: 4col cell1and2&lt;/div&gt;
+    &lt;div class="layout-4col"&gt;Opt7: 4col cell3&lt;/div&gt;
+    &lt;div class="layout-4col"&gt;Opt7: 4col cell4&lt;/div&gt;
+
+    &lt;div class="layout-4col-alt"&gt;Opt8: 4col cell1&lt;/div&gt;
+    &lt;div class="layout-4col-2span"&gt;Opt8: 4col cell2and3&lt;/div&gt;
+    &lt;div class="layout-4col-alt"&gt;Opt8: 4col cell4&lt;/div&gt;
+
+    &lt;div class="layout-4col"&gt;Opt9: 4col cell1&lt;/div&gt;
+    &lt;div class="layout-4col"&gt;Opt9: 4col cell2&lt;/div&gt;
+    &lt;div class="layout-4col-2span"&gt;Opt9: 4col cell3and4&lt;/div&gt;
+
+    &lt;div class="layout-4col-3span"&gt;Opt10: 4col cell1and2and3&lt;/div&gt;
+    &lt;div class="layout-4col-alt"&gt;Opt10: 4col cell4&lt;/div&gt;
+
+    &lt;div class="layout-4col-alt"&gt;Opt11: 4col cell1&lt;/div&gt;
+    &lt;div class="layout-4col-3span"&gt;Opt11: 4col cell2and3and4&lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+
+                            <p><strong>Example:</strong></p>
+
+                            <div class="layout-container">
+
+                                <div class="layout-1col">
+                                    <h6 class="design-patterns--box">Opt1: 1col</h6>
+                                </div>
+
+                                <div class="layout-2col">
+                                    <h6 class="design-patterns--box">Opt2: 2col cell1</h6>
+                                </div>
+                                <div class="layout-2col">
+                                    <h6 class="design-patterns--box">Opt2: 2col cell2</h6>
+                                </div>
+
+                                <div class="layout-3col">
+                                    <h6 class="design-patterns--box">Opt3: 3col cell1</h6>
+                                </div>
+                                <div class="layout-3col">
+                                    <h6 class="design-patterns--box">Opt3: 3col cell2</h6>
+                                </div>
+                                <div class="layout-3col">
+                                    <h6 class="design-patterns--box">Opt3: 3col cell3</h6>
+                                </div>
+
+                                <div class="layout-3col-2span">
+                                    <h6 class="design-patterns--box">Opt4: 3col cell1and2</h6>
+                                </div>
+                                <div class="layout-3col">
+                                    <h6 class="design-patterns--box">Opt4: 3col cell3</h6>
+                                </div>
+
+                                <div class="layout-3col">
+                                    <h6 class="design-patterns--box">Opt5: 3col cell1</h6>
+                                </div>
+                                <div class="layout-3col-2span">
+                                    <h6 class="design-patterns--box">Opt5: 3col cell2and3</h6>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h6 class="design-patterns--box">Opt6: 4col cell1</h6>
+                                </div>
+                                <div class="layout-4col">
+                                    <h6 class="design-patterns--box">Opt6: 4col cell2</h6>
+                                </div>
+                                <div class="layout-4col">
+                                    <h6 class="design-patterns--box">Opt6: 4col cell3</h6>
+                                </div>
+                                <div class="layout-4col">
+                                    <h6 class="design-patterns--box">Opt6: 4col cell4</h6>
+                                </div>
+
+                                <div class="layout-4col-2span">
+                                    <h6 class="design-patterns--box">Opt7: 4col cell1and2</h6>
+                                </div>
+                                <div class="layout-4col">
+                                    <h6 class="design-patterns--box">Opt7: 4col cell3</h6>
+                                </div>
+                                <div class="layout-4col">
+                                    <h6 class="design-patterns--box">Opt7: 4col cell4</h6>
+                                </div>
+
+                                <div class="layout-4col-alt">
+                                    <h6 class="design-patterns--box">Opt8: 4col cell1</h6>
+                                </div>
+                                <div class="layout-4col-2span">
+                                    <h6 class="design-patterns--box">Opt8: 4col cell2and3</h6>
+                                </div>
+                                <div class="layout-4col-alt">
+                                    <h6 class="design-patterns--box">Opt8: 4col cell4</h6>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h6 class="design-patterns--box">Opt9: 4col cell1</h6>
+                                </div>
+                                <div class="layout-4col">
+                                    <h6 class="design-patterns--box">Opt9: 4col cell2</h6>
+                                </div>
+                                <div class="layout-4col-2span">
+                                    <h6 class="design-patterns--box">Opt9: 4col cell3and4</h6>
+                                </div>
+
+                                <div class="layout-4col-3span">
+                                    <h6 class="design-patterns--box">Opt10: 4col cell1and2and3</h6>
+                                </div>
+                                <div class="layout-4col-alt">
+                                    <h6 class="design-patterns--box">Opt10: 4col cell4</h6>
+                                </div>
+
+                                <div class="layout-4col-alt">
+                                    <h6 class="design-patterns--box">Opt11: 4col cell1</h6>
+                                </div>
+                                <div class="layout-4col-3span">
+                                    <h6 class="design-patterns--box">Opt11: 4col cell2and3and4</h6>
+                                </div>
+
+                            </div><!-- /.layout-container -->
+
+                        </section>
+
+
+                        <section class="section" id="section-slider">
+                            <h2>Image slider/carousel</h2>
+                            <p>Via <a href="https://glidejs.com" rel="external" title="Go to the Glide website">Glide</a>.</p>
+
+                            <div class="glide">
+                                <div class="glide__track" data-glide-el="track">
+                                    <ul class="glide__slides">
+                                        <li class="glide__slide"><img src="mockups/img/slide01.jpg" alt="Slide 01" itemprop="image"></li>
+                                        <li class="glide__slide"><img src="mockups/img/slide02.jpg" alt="Slide 02" itemprop="image"></li>
+                                        <li class="glide__slide"><img src="mockups/img/slide03.jpg" alt="Slide 03" itemprop="image"></li>
+                                    </ul>
+                                </div>
+                                <div class="glide__arrows" data-glide-el="controls">
+                                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+                                </div>
+                                <div class="glide__bullets" data-glide-el="controls[nav]">
+                                    <button class="glide__bullet" data-glide-dir="=0"></button>
+                                    <button class="glide__bullet" data-glide-dir="=1"></button>
+                                    <button class="glide__bullet" data-glide-dir="=2"></button>
+                                </div>
+                            </div>
+
+                        </section>
+
+
+                        <section class="section" id="section-type">
+                            <h2>Typography</h2>
+
+                            <p><strong>Code:</strong></p>
+                            <p><code class="language-markup">&lt;h1&gt;</code></p>
+                            <p><strong>Example:</strong></p>
+                            <h1>h1 Heading 1 h1 Heading 1 h1 Heading 1</h1>
+
+                            <p><strong>Code:</strong></p>
+                            <p><code class="language-markup">&lt;h2&gt;</code></p>
+                            <p><strong>Example:</strong></p>
+                            <h2>h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2</h2>
+
+                            <p><strong>Code:</strong></p>
+                            <p><code class="language-markup">&lt;h3&gt;</code></p>
+                            <p><strong>Example:</strong></p>
+                            <h3>h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3</h3>
+
+                            <p><strong>Code:</strong></p>
+                            <p><code class="language-markup">&lt;h4&gt;</code></p>
+                            <p><strong>Example:</strong></p>
+                            <h4>h4 Heading 4 h4 Heading 4 h4 Heading 4 h4 Heading 4 h4 Heading 4 h4 Heading 4</h4>
+
+                            <p><strong>Code:</strong></p>
+                            <p><code class="language-markup">&lt;h5&gt;</code></p>
+                            <p><strong>Example:</strong></p>
+                            <h5>h5 Heading 5 h5 Heading 5 h5 Heading 5 h5 Heading 5 h5 Heading 5 h5 Heading 5 h5 Heading 5</h5>
+
+                            <p><strong>Code:</strong></p>
+                            <p><code class="language-markup">&lt;h6&gt;</code></p>
+                            <p><strong>Example:</strong></p>
+                            <h6>h6 Heading 6 h6 Heading 6 h6 Heading 6 h6 Heading 6 h6 Heading 6 h6 Heading 6 h6 Heading 6 h6 Heading 6</h6>
+
+                            <p><strong>Code:</strong></p>
+                            <p><code class="language-markup">&lt;p&gt;</code></p>
+                            <p><strong>Example:</strong></p>
+                            <p><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam sit amet elit vitae arcu interdum ullamcorper.</strong> Nullam ultrices, nisi quis scelerisque convallis, augue neque tempor enim, et mattis justo nibh eu elit.</p>
+                            <p>Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor. Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet. Curabitur neque mauris, porta vel, lacinia quis, placerat ultrices, orci.</p>
+
+                            <p><strong>Code:</strong></p>
+                            <p><code class="language-markup" dir="ltr">&lt;p class="footnote"&gt;</code></p>
+                            <p><strong>Example:</strong></p>
+                            <p class="footnote" id="fnanchor1"><sup>1</sup> Here is the footnote.</p>
+
+                            <h3>Contact details</h3>
+                            <p>Uses both the <a href="https://schema.org/" rel="external" title="Go to the Schema.org website">Schema.org</a> and <a href="http://microformats.org/wiki/hcard" rel="external" title="Go to the hCard website">hCard</a> microformats.</p>
+                            <!-- possible schema types: Organization, Corporation, etc (see https://schema.org/Organization for more info) -->
+                            <div class="vcard" role="group" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                                <p class="org fn" itemprop="name">Organisation Name</p>
+                                <address class="adr" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                                    <span class="street-address" itemprop="streetAddress">13 Mystreet</span>,
+                                    <span class="locality" itemprop="addressLocality">Mytown</span>,
+                                    <span class="region" itemprop="addressRegion">Myshire</span>,
+                                    <span class="postal-code" itemprop="postalCode">GU1 0AB</span>,
+                                    <span class="country" itemprop="addressCountry">United Kingdom</span>
+                                </address>
+                                <p itemprop="contactPoint" class="tel" itemscope itemtype="https://schema.org/contactPoint">
+                                    <span class="type" itemprop="contactType name">Customer Service</span>
+                                    <span class="value" itemprop="telephone">+44-1234-456789</span>
+                                </p>
+                                <p itemprop="contactPoint" class="tel" itemscope itemtype="https://schema.org/contactPoint">
+                                    <span class="type" itemprop="contactType name">Emergency</span>
+                                    <span class="value" itemprop="telephone">+44-7900-123456</span>
+                                </p>
+                                <p>
+                                    <span>Email</span>
+                                    <a class="email" href="mailto:anon@example.com" itemprop="email" title="Email us">anon@example.com</a>
+                                </p>
+                                <p>
+                                    <span>Website</span>
+                                    <a class="url" href="https://hive-framework.philwareham.co.uk/" itemprop="url" title="Visit our website">https://hive-framework.philwareham.co.uk/</a>
+                                </p>
+                                <p>
+                                    <span>Photo</span>
+                                    <img class="photo" src="mockups/img/160x160.png" alt="Photo" itemprop="logo">
+                                </p>
+                            </div>
+
+                            <h3>Text ranged left</h3>
+                            <p><strong>Code:</strong></p>
+                            <p><code class="language-markup">&lt;p class="align-left"&gt;</code></p>
+                            <p><strong>Example:</strong></p>
+                            <p class="align-left">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam sit amet elit vitae arcu interdum ullamcorper. Nullam ultrices, nisi quis scelerisque convallis, augue neque tempor enim, et mattis justo nibh eu elit.</p>
+
+                            <h3>Text ranged right</h3>
+                            <p><strong>Code:</strong></p>
+                            <p><code class="language-markup">&lt;p class="align-right"&gt;</code></p>
+                            <p><strong>Example:</strong></p>
+                            <p class="align-right">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam sit amet elit vitae arcu interdum ullamcorper. Nullam ultrices, nisi quis scelerisque convallis, augue neque tempor enim, et mattis justo nibh eu elit.</p>
+
+                            <h3>Text centred</h3>
+                            <p><strong>Code:</strong></p>
+                            <p><code class="language-markup">&lt;p class="align-center"&gt;</code></p>
+                            <p><strong>Example:</strong></p>
+                            <p class="align-center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam sit amet elit vitae arcu interdum ullamcorper. Nullam ultrices, nisi quis scelerisque convallis, augue neque tempor enim, et mattis justo nibh eu elit.</p>
+
+                            <h3>Text justified</h3>
+                            <p><strong>Code:</strong></p>
+                            <p><code class="language-markup">&lt;p class="align-justify"&gt;</code></p>
+                            <p><strong>Example:</strong></p>
+                            <p class="align-justify">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam sit amet elit vitae arcu interdum ullamcorper. Nullam ultrices, nisi quis scelerisque convallis, augue neque tempor enim, et mattis justo nibh eu elit.</p>
+
+                            <h3>Text 2 column span (when breakpoints allow)</h3>
+                            <p><strong>Code:</strong></p>
+                            <p><code class="language-markup">&lt;p class="layout-text2col"&gt;</code></p>
+                            <p><strong>Example:</strong></p>
+                            <p class="layout-text2col">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+                            <h3>Text 3 column span (when breakpoints allow)</h3>
+                            <p><strong>Code:</strong></p>
+                            <p><code class="language-markup">&lt;p class="layout-text3col"&gt;</code></p>
+                            <p><strong>Example:</strong></p>
+                            <p class="layout-text3col">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+                            <h3>Text 4 column span (when breakpoints allow)</h3>
+                            <p><strong>Code:</strong></p>
+                            <p><code class="language-markup">&lt;p class="layout-text4col"&gt;</code></p>
+                            <p><strong>Example:</strong></p>
+                            <p class="layout-text4col">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+                        </section>
+
+
+                        <section class="section" id="section-text-semantics">
+                            <h2>Inline text-level semantics</h2>
+
+                            <div class="layout-container">
+
+                                <div class="layout-4col">
+                                    <h3>Anchor</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup">&lt;a&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <a href="#">a element</a> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Abbreviation</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup">&lt;abbr&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Bold</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup">&lt;b&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The non-semantic <b>b element</b> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Citation</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup">&lt;cite&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <cite>cite element</cite> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Code</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup">&lt;code&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <code>code element</code> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Deleted</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup">&lt;del&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <del>del element</del> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Definition</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup">&lt;dfn&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Emphasis</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup">&lt;em&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <em>em element</em> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Italic</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup">&lt;i&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The non-semantic <i>i element</i> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Inserted</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup">&lt;ins&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <ins>ins element</ins> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Keyboard Input</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup">&lt;kbd&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <kbd>kbd element</kbd> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Mark</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup">&lt;mark&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <mark>mark element</mark> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Meter</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup">&lt;meter&gt;&lt;/meter&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>Memory usage: <meter min="0" low="64" optimum="128" high="224" max="256" value="120" title="GB">120GB out of 256GB used</meter></p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Quote</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup">&lt;q&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <q>q element <q>inside</q> a q element</q></p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Strikethrough</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup">&lt;s&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <s>s element</s> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Sample</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup">&lt;samp&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <samp>samp element</samp> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Small</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup">&lt;small&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <small>small element</small> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Span</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup">&lt;span&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <span>span element</span> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Strong</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup">&lt;strong&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <strong>strong element</strong> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Subscript</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup">&lt;sub&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <sub>sub element</sub> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Superscript</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup">&lt;sup&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <sup>sup element</sup> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Underline</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup">&lt;u&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <u>u element</u> example</p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Variable</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup">&lt;var&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <p>The <var>var element</var> example</p>
+                                </div>
+
+                            </div>
+
+                        </section>
+
+                        <section class="section" id="section-progress">
+                            <h2>Progress indicators</h2>
+
+                            <h3>Progress indicator</h3>
+                            <p><strong>Code:</strong></p>
+                            <pre><code class="language-markup">&lt;progress value="0.66"&gt;&lt;/progress&gt;</code></pre>
+                            <p><strong>Example:</strong></p>
+                            <p><progress value="0.66"></progress> <b class="data-progress" data-progress="66">66%</b></p>
+                            <p><progress value="1"></progress> <b class="data-progress" data-progress="100">100%</b></p>
+
+                            <h3>Progress indicator (indeterminate value)</h3>
+                            <p><strong>Code:</strong></p>
+                            <pre><code class="language-markup">&lt;progress&gt;&lt;/progress&gt;</code></pre>
+                            <p><strong>Example:</strong></p>
+                            <p><progress></progress></p>
+
+                        </section>
+
+                        <section class="section" id="section-block-semantics">
+                            <h2>Block text-level semantics</h2>
+
+                            <h3>Disclosure (details/summary)</h3>
+                            <p><strong>Code:</strong></p>
+                            <pre><code class="language-markup">&lt;details&gt;
+    &lt;summary&gt;System requirements&lt;/summary&gt;
+    &lt;p&gt;Requires a computer running an operating system. The computer must have some memory and ideally some kind of long-term storage.&lt;/p&gt;
+    &lt;p&gt;An input device as well as some form of output device is recommended.&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+                            <p><strong>Example:</strong></p>
+                            <details>
+                                <summary>System requirements</summary>
+                                <p>Requires a computer running an operating system. The computer must have some memory and ideally some kind of long-term storage.</p>
+                                <p>An <a href="#">input device</a> as well as some form of <a href="#">output device</a> is recommended.</p>
+                            </details>
+
+                            <h3>Pre-formatted text blocks</h3>
+                            <pre>This is an example of a non-code
+    pre-formatted text block
+        preserving white spaces</pre>
+
+                            <h3>Pre-formatted code blocks</h3>
+                            <pre><code class="language-markup">&lt;section role=&quot;alert&quot; class=&quot;alert alert-error fade in&quot;&gt;
+    &lt;a class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&amp;amp;times;&lt;/a&gt;
+    &lt;h3&gt;Message pane&lt;/h3&gt;
+    &lt;p&gt;Error message goes here.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+
+                            <h3>Pre-formatted code blocks with line numbers</h3>
+                            <pre class="line-numbers"><code class="language-markup">&lt;section role=&quot;alert&quot; class=&quot;alert alert-error fade in&quot;&gt;
+    &lt;a class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&amp;amp;times;&lt;/a&gt;
+    &lt;h3&gt;Message pane&lt;/h3&gt;
+    &lt;p&gt;Error message goes here.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+
+                            <h3>Blockquotes</h3>
+                            <blockquote cite="https://example.com/">
+                                <p>Here is an example of a block quote. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                <footer>Somebody said this</footer>
+                            </blockquote>
+
+                            <h3>Thematic break (hr tag)</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam sit amet elit vitae arcu interdum ullamcorper.</p>
+                            <hr>
+                            <p>Nullam ultrices, nisi quis scelerisque convallis, augue neque tempor enim, et mattis justo nibh eu elit.</p>
+                        </section>
+
+
+                        <section class="section" id="section-media">
+                            <h2>Embedded content</h2>
+
+                            <h3>Proper responsive images</h3>
+                            <p>Uses <code class="language-markup">&lt;img&gt;</code> along with <code>sizes</code> and <code>srcset</code> attributes to provide images optimised for both screen size and pixel density (DPI).</p>
+                            <p>
+                                <img alt="A proper responsive image"
+                                       src="mockups/img/360x180.png"
+                                    srcset="mockups/img/360x180.png 360w,
+                                            mockups/img/480x240.png 480w,
+                                            mockups/img/640x320.png 640w,
+                                            mockups/img/768x384.png 768w,
+                                            mockups/img/1152x576.png 1152w"
+                                    sizes="88vw"
+                                    itemprop="image">
+                            </p>
+
+                            <div class="layout-container">
+
+                                <div class="layout-4col">
+                                    <h3>Images</h3>
+                                    <p>
+                                        <img src="mockups/img/160x160.png" alt="Alt text" itemprop="image">
+                                    </p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Images with links</h3>
+                                    <p>
+                                        <a class="a--img" href="#" title="Title text">
+                                            <img src="mockups/img/160x160.png" alt="Alt text" itemprop="image">
+                                        </a>
+                                    </p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Rounded images</h3>
+                                    <p>
+                                        <img class="img--rounded" src="mockups/img/160x160.png" alt="Alt text" itemprop="image">
+                                    </p>
+                                </div>
+
+                                <div class="layout-4col">
+                                    <h3>Circular images</h3>
+                                    <p>
+                                        <img class="img--circular" src="mockups/img/160x160.png" alt="Alt text" itemprop="image">
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <h3>Figures</h3>
+                            <figure itemscope itemtype="https://schema.org/ImageObject" itemprop="image">
+                                <img src="mockups/img/480x240.png" alt="Alt text" itemprop="url">
+                                <meta itemprop="width" content="480">
+                                <meta itemprop="height" content="240">
+                                <figcaption itemprop="caption">Figcaption content</figcaption>
+                            </figure>
+
+                            <h3>Left ranged image</h3>
+                            <p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img src="mockups/img/160x160.png" class="align-left" alt="160x160px placeholder" itemprop="image"> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor. Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet. Curabitur neque mauris, porta vel, lacinia quis, placerat ultrices, orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In lectus nisl, porttitor eget, fermentum et, viverra a, odio. Sed semper. Praesent vulputate nibh eget nisi. Sed ligula. Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis.</p>
+
+                            <h3>Right ranged image</h3>
+                            <p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img src="mockups/img/160x160.png" class="align-right" alt="160x160px placeholder" itemprop="image"> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor. Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet. Curabitur neque mauris, porta vel, lacinia quis, placerat ultrices, orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In lectus nisl, porttitor eget, fermentum et, viverra a, odio. Sed semper. Praesent vulputate nibh eget nisi. Sed ligula. Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis.</p>
+
+                            <h3>Centred image</h3>
+                            <p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img src="mockups/img/160x160.png" class="align-center" alt="160x160px placeholder" itemprop="image"> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor. Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet. Curabitur neque mauris, porta vel, lacinia quis, placerat ultrices, orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In lectus nisl, porttitor eget, fermentum et, viverra a, odio. Sed semper. Praesent vulputate nibh eget nisi. Sed ligula. Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis.</p>
+
+                            <h3>Videos</h3>
+                            <div itemprop="video" itemscope itemtype="https://schema.org/VideoObject">
+                                <video controls poster="https://hive-framework.philwareham.co.uk/video/big_buck_bunny.jpg">
+                                    <source itemprop="contentUrl" type="video/mp4" src="https://hive-framework.philwareham.co.uk/video/big_buck_bunny.mp4">
+                                    <source itemprop="contentUrl" type="video/webm" src="https://hive-framework.philwareham.co.uk/video/big_buck_bunny.webm">
+                                    I’m sorry, your browser doesn’t support HTML5 video in MP4 with H.264 or WebM with VP8/VP9.
+                                </video>
+                                <p><small>Video copyright 2008, Blender Foundation / www.bigbuckbunny.org.</small></p>
+                                <meta itemprop="name" content="Video example">
+                                <meta itemprop="description" content="An example HTML5 video file.">
+                                <meta itemprop="duration" content="T60S">
+                                <meta itemprop="uploadDate" content="2018-09-21T10:44:26Z">
+                                <meta itemprop="thumbnailUrl" content="https://hive-framework.philwareham.co.uk/video/big_buck_bunny.jpg">
+                            </div>
+
+                            <h3>Audio</h3>
+                            <div itemprop="audio" itemscope itemtype="https://schema.org/AudioObject">
+                                <audio controls>
+                                    <source itemprop="contentUrl" type="audio/mp3" src="https://hive-framework.philwareham.co.uk/audio/moonlight_reprise.mp3">
+                                    <source itemprop="contentUrl" type="audio/ogg; codecs=vorbis" src="https://hive-framework.philwareham.co.uk/audio/moonlight_reprise.ogg">
+                                    I’m sorry, your browser doesn’t support HTML5 audio.
+                                </audio>
+                                <meta itemprop="name" content="Audio example">
+                                <meta itemprop="description" content="An example HTML5 audio file.">
+                                <meta itemprop="duration" content="T181S">
+                                <meta itemprop="uploadDate" content="2018-09-21T10:48:03Z">
+                                <p><small>“Moonlight Reprise” from “Irsen’s Tale” by Kai Engel. License: <a rel="external" href="https://creativecommons.org/licenses/by-nc/3.0/">Attribution-NonCommercial 3.0 International License</a>.</small></p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="section" id="section-labels">
+                            <h2>Inline text labels</h2>
+
+                            <h3>Safe</h3>
+                            <p>This is an example of a <span class="success">span success label</span> and a <strong class="success">strong success label</strong>.</p>
+
+                            <h3>Warning</h3>
+                            <p>This is an example of a <span class="warning">span warning label</span> and a <strong class="warning">strong warning label</strong>.</p>
+
+                            <h3>Danger</h3>
+                            <p>This is an example of a <span class="error">span error label</span> and a <strong class="error">strong error label</strong>.</p>
+
+                            <h3>Information (no semantic meaning)</h3>
+                            <p>This is an example of a <span class="information">span information label</span> and a <strong class="information">strong information label</strong>.</p>
+
+                        </section>
+
+
+                        <section class="section" id="section-alerts">
+                            <h2>Alert boxes</h2>
+
+                            <h3>System message: success</h3>
+                            <p class="alert-block success"><span class="ui-icon ui-icon-check"></span> <strong>Success:</strong> a suitable success message goes here.</p>
+
+                            <h3>System message: warning</h3>
+                            <p class="alert-block warning"><span class="ui-icon ui-icon-alert"></span> <strong>Warning:</strong> a suitable warning message goes here.</p>
+
+                            <h3>System message: error</h3>
+                            <p class="alert-block error"><span class="ui-icon ui-icon-closethick"></span> <strong>Error:</strong> a suitable error message goes here.</p>
+
+                            <h3>System message: information (no semantic meaning)</h3>
+                            <p class="alert-block information"><span class="ui-icon ui-icon-info"></span> <strong>Information:</strong> a suitable information message goes here.</p>
+
+                        </section>
+
+
+                        <section class="section" id="section-pills">
+                            <h2>Pill boxes</h2>
+
+                            <h3>Pill message: success</h3>
+                            <p><small class="alert-block alert-pill success">Latest</small></p>
+
+                            <h3>Pill message: warning</h3>
+                            <p><small class="alert-block alert-pill warning">Prelease</small></p>
+
+                            <h3>Pill message: error</h3>
+                            <p><small class="alert-block alert-pill error">Obsolete</small></p>
+
+                            <h3>Pill message: information (no semantic meaning)</h3>
+                            <p><small class="alert-block alert-pill information">Deprecated</small></p>
+
+                        </section>
+
+
+                        <section class="section" id="section-pagination">
+                            <h2>Pagination</h2>
+
+                            <nav class="paginator" aria-label="Article list navigation">
+                                <a rel="prev" href="#" title="Go to previous page" aria-label="Go to previous page">Prev</a>
+
+                                <ul class="pagination">
+                                    <li class="current">
+                                        <b title="Current page" aria-current="page">1</b>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Go to page 2" aria-label="Go to page 2">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Go to page 3" aria-label="Go to page 3">3</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Go to page 4" aria-label="Go to page 4">4</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Go to page 5" aria-label="Go to page 5">5</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Go to page 6" aria-label="Go to page 6">6</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Go to page 7" aria-label="Go to page 7">7</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Go to page 8" aria-label="Go to page 8">8</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Go to page 9" aria-label="Go to page 9">9</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="More pages" aria-label="More pages">&hellip;</a>
+                                    </li>
+                                </ul>
+
+                                <a rel="next" href="#" title="Go to next page" aria-label="Go to next page">Next</a>
+                            </nav>
+                        </section>
+
+
+                        <section class="section" id="section-breadcrumbs">
+                            <h2>Breadcrumbs</h2>
+                            <p>Two style options available: <code>.breadcrumbs</code> or <code>.breadcrumbs--path</code>.</p>
+
+                            <nav aria-label="Breadcrumb navigation (style option 1)">
+                                <ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+                                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                        <a itemprop="item" href="#">
+                                            <span itemprop="name">Home</span>
+                                        </a>
+                                        <meta itemprop="position" content="1">
+                                    </li>
+                                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                        <a itemprop="item" href="#">
+                                            <span itemprop="name">Projects</span>
+                                        </a>
+                                        <meta itemprop="position" content="2">
+                                    </li>
+                                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                        <a itemprop="item" href="#">
+                                            <span itemprop="name">Gene Splicing</span>
+                                        </a>
+                                        <meta itemprop="position" content="3">
+                                    </li>
+                                    <li class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                        <b itemprop="item">
+                                            <span itemprop="name" aria-current="location">Test subject X11</span>
+                                        </b>
+                                        <meta itemprop="position" content="4">
+                                    </li>
+                                </ol>
+                            </nav>
+
+                            <nav aria-label="Breadcrumb navigation (style option 2)">
+                                <ol class="breadcrumbs--path" itemscope itemtype="https://schema.org/BreadcrumbList">
+                                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                        <a itemprop="item" href="#">
+                                            <span itemprop="name">Home</span>
+                                        </a>
+                                        <meta itemprop="position" content="1">
+                                    </li>
+                                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                        <a itemprop="item" href="#">
+                                            <span itemprop="name">Projects</span>
+                                        </a>
+                                        <meta itemprop="position" content="2">
+                                    </li>
+                                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                        <a itemprop="item" href="#">
+                                            <span itemprop="name">Gene Splicing</span>
+                                        </a>
+                                        <meta itemprop="position" content="3">
+                                    </li>
+                                    <li class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                        <b itemprop="item">
+                                            <span itemprop="name" aria-current="location">Test subject X11 (deceased)</span>
+                                        </b>
+                                        <meta itemprop="position" content="4">
+                                    </li>
+                                </ol>
+                            </nav>
+                        </section>
+
+
+                        <section class="section" id="section-lists">
+                            <h2>Lists</h2>
+
+                            <div class="layout-container">
+
+                                <div class="layout-2col">
+                                    <h3>Ordered</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup">&lt;ol&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <ol>
+                                        <li>this is an example</li>
+                                        <li>of a numbered</li>
+                                        <li>(ordered) list
+                                            <ol>
+                                                <li>and a second level</li>
+                                                <li>numbered list example</li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </div>
+
+                                <div class="layout-2col">
+                                    <h3>Unordered</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup">&lt;ul&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <ul>
+                                        <li>this is an example</li>
+                                        <li>of a bulletpoint</li>
+                                        <li>(unordered) list
+                                            <ul>
+                                                <li>and a second level</li>
+                                                <li>bulletpoint list example</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="layout-2col">
+                                    <h3>Plain</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup">&lt;ul class="list--no-bullets"&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <ul class="list--no-bullets">
+                                        <li>this is an example</li>
+                                        <li>of a plain</li>
+                                        <li>(unstyled) list
+                                            <ul>
+                                                <li>and a second level</li>
+                                                <li>bulletpoint list example</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="layout-2col">
+                                    <h3>Description</h3>
+                                    <p><strong>Code:</strong></p>
+                                    <p><code class="language-markup">&lt;dl&gt;</code></p>
+                                    <p><strong>Example:</strong></p>
+                                    <dl>
+                                        <dt>This is a definition list term 1</dt>
+                                        <dd>Definition of term 1 here</dd>
+                                        <dd>Another definition of term 1
+                                            <dl>
+                                                <dt>A sub term</dt>
+                                                <dd>With</dd>
+                                                <dd>Subs</dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </div>
+
+                            </div>
+                        </section>
+
+
+                        <section class="section" id="section-tables">
+                            <h2>Tables</h2>
+
+                            <h3>Plain table</h3>
+                            <p>Plain table with <code class="language-markup">&lt;thead&gt;</code> included and a highlighted row, but no <code class="language-markup">&lt;caption&gt;</code>.</p>
+
+                            <div class="tabular-data" itemscope itemtype="https://schema.org/Table">
+                                <h4 class="accessibility" itemprop="about">This describes the table as microdata if no caption is used.</h4>
+                                <table>
+                                    <colgroup>
+                                        <col class="t33">
+                                        <col class="t33">
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Primary</th>
+                                            <th scope="col">Secondary</th>
+                                            <th scope="col">Tertiary</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Roast duck</th>
+                                            <td>Seasonal vegetables</td>
+                                            <td>New potatoes</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Grilled lobster</th>
+                                            <td>Mixed seafood</td>
+                                            <td>Side salad</td>
+                                        </tr>
+                                        <tr class="highlighted">
+                                            <th scope="row">Chicken dinosaurs</th>
+                                            <td>Baked beans</td>
+                                            <td>Waffles</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h3>Bordered table</h3>
+                            <p>Bordered table with <code class="language-markup">&lt;caption&gt;</code>, <code class="language-markup">&lt;thead&gt;</code> and <code class="language-markup">&lt;tfoot&gt;</code> included.</p>
+
+                            <div class="tabular-data" itemscope itemtype="https://schema.org/Table">
+                                <table class="table--bordered">
+                                    <caption itemprop="about">This is a table caption</caption>
+                                    <colgroup>
+                                        <col class="t25">
+                                        <col class="t25">
+                                        <col class="t25">
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Sector</th>
+                                            <th scope="col">Planet</th>
+                                            <th scope="col">Government</th>
+                                            <th class="numerical" scope="col">Population</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" rowspan="3">Alpha</th>
+                                            <td>Diso</td>
+                                            <td>Democracy</td>
+                                            <td class="numerical">4.137 B</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lave</td>
+                                            <td>Dictatorship</td>
+                                            <td class="numerical">2.5 B</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Leesti</td>
+                                            <td>Corporate State</td>
+                                            <td class="numerical">5.01 B</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" rowspan="2">Beta</th>
+                                            <td>Reorte</td>
+                                            <td>Dictatorship</td>
+                                            <td class="numerical">3.119 B</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Zaonce</td>
+                                            <td>Corporate State</td>
+                                            <td class="numerical">5.3 B</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="4">This is the tfoot</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </section>
+
+
+                        <section class="section" id="section-forms">
+                            <h2>Forms</h2>
+
+                            <form>
+                                <h3>Inputs</h3>
+                                <p role="group">
+                                    <input type="checkbox" id="test_checkbox_1" name="test_checkbox_1" checked>
+                                    <label for="test_checkbox_1">Test checkbox 1</label>
+                                    <input type="checkbox" id="test_checkbox_2" name="test_checkbox_2">
+                                    <label for="test_checkbox_2">Test checkbox 2</label>
+                                    <input type="checkbox" id="test_checkbox_3" name="test_checkbox_3" disabled>
+                                    <label for="test_checkbox_3">Test checkbox 3 (disabled)</label>
+                                    <input type="checkbox" id="test_checkbox_4" name="test_checkbox_4" disabled checked>
+                                    <label for="test_checkbox_4">Test checkbox 4 (disabled checked)</label>
+                                </p>
+                                <p role="group">
+                                    <input type="radio" id="test_radio_1" name="test_radio_group" checked>
+                                    <label for="test_radio_1">Test radio 1</label>
+                                    <input type="radio" id="test_radio_2" name="test_radio_group">
+                                    <label for="test_radio_2">Test radio 2</label>
+                                    <input type="radio" id="test_radio_3" name="test_radio_group" disabled>
+                                    <label for="test_radio_3">Test radio 3 (disabled)</label>
+                                </p>
+                                <p>
+                                    <label for="select_dd">Inline form elements</label><br>
+                                    <select id="select_dd" name="select_dd">
+                                        <optgroup label="Group 1">
+                                            <option value="1">Some text goes here</option>
+                                            <option value="2">Another choice could be here</option>
+                                            <option value="3">Yet another item to be chosen</option>
+                                        </optgroup>
+                                        <optgroup label="Group 2">
+                                            <option value="4">Some text goes here</option>
+                                            <option value="5">Another choice could be here</option>
+                                            <option value="6">Yet another item to be chosen</option>
+                                        </optgroup>
+                                        <optgroup label="Group 3">
+                                            <option value="7">Some text goes here</option>
+                                            <option value="8">Another choice could be here</option>
+                                            <option value="9">Yet another item to be chosen</option>
+                                        </optgroup>
+                                    </select>
+                                    <input id="text_inline" name="text_inline" type="text">
+                                    <input type="button" value="Hello">
+                                </p>
+                                <p>
+                                    <label for="select_dd2">Inline form elements (disabled)</label><br>
+                                    <select id="select_dd2" name="select_dd2" disabled>
+                                        <optgroup label="Group 1">
+                                            <option value="1">Some text goes here</option>
+                                            <option value="2">Another choice could be here</option>
+                                            <option value="3">Yet another item to be chosen</option>
+                                        </optgroup>
+                                        <optgroup label="Group 2">
+                                            <option value="4">Some text goes here</option>
+                                            <option value="5">Another choice could be here</option>
+                                            <option value="6">Yet another item to be chosen</option>
+                                        </optgroup>
+                                        <optgroup label="Group 3">
+                                            <option value="7">Some text goes here</option>
+                                            <option value="8">Another choice could be here</option>
+                                            <option value="9">Yet another item to be chosen</option>
+                                        </optgroup>
+                                    </select>
+                                    <input id="text_inline2" name="text_inline2" type="text" disabled>
+                                    <input type="button" value="Hello" disabled>
+                                </p>
+                                <p>
+                                    <label for="file_upload">File upload</label><br>
+                                    <input type="file" id="file_upload" name="file_upload" accept="image/*" multiple>
+                                    <input type="button" value="Upload">
+                                </p>
+                                <p>
+                                    <label for="select_multi">Select multiple</label><br>
+                                    <select id="select_multi" name="select_multi" multiple="multiple" size="10">
+                                        <optgroup label="Group 1">
+                                            <option value="1">Some text goes here</option>
+                                            <option value="2">Another choice could be here</option>
+                                            <option value="3">Yet another item to be chosen</option>
+                                        </optgroup>
+                                        <optgroup label="Group 2">
+                                            <option value="4">Some text goes here</option>
+                                            <option value="5">Another choice could be here</option>
+                                            <option value="6">Yet another item to be chosen</option>
+                                        </optgroup>
+                                        <optgroup label="Group 3">
+                                            <option value="7">Some text goes here</option>
+                                            <option value="8">Another choice could be here</option>
+                                            <option value="9">Yet another item to be chosen</option>
+                                        </optgroup>
+                                    </select>
+                                </p>
+                                <p>
+                                    <label for="textarea">Textarea</label><br>
+                                    <textarea id="textarea" name="textarea" rows="5" placeholder="This is an example of HTML5 placeholder text."></textarea>
+                                </p>
+
+                                <div class="layout-container">
+
+                                    <p class="layout-4col">
+                                        <label for="color">Colour</label><br>
+                                        <input type="color" id="color" name="color" value="#cc0000">
+                                    </p>
+
+                                    <p class="layout-4col">
+                                        <label for="date">Date</label><br>
+                                        <input id="date" name="date" type="date">
+                                    </p>
+
+                                    <p class="layout-4col">
+                                        <label for="datetime-local">Datetime local</label><br>
+                                        <input id="datetime-local" name="datetime-local" type="datetime-local">
+                                    </p>
+
+                                    <p class="layout-4col">
+                                        <label for="email">Email</label><br>
+                                        <input id="email" name="email" type="email" placeholder="name@example.com">
+                                    </p>
+
+                                    <p class="layout-4col">
+                                        <label for="month">Month</label><br>
+                                        <input id="month" name="month" type="month">
+                                    </p>
+
+                                    <p class="layout-4col">
+                                        <label for="number">Number</label><br>
+                                        <input id="number" name="number" type="number" min="0" max="999" step="1">
+                                    </p>
+
+                                    <p class="layout-4col">
+                                        <label for="password">Password</label><br>
+                                        <input id="password" name="password" type="password">
+                                    </p>
+
+                                    <p class="layout-4col">
+                                        <label for="range">Range</label><br>
+                                        <input id="range" name="range" type="range" list="range-list" min="0" max="100" step="1" value="0" style="width:66%";>
+                                        <datalist id="range-list">
+                                            <option>0</option>
+                                            <option>25</option>
+                                            <option>50</option>
+                                            <option>75</option>
+                                            <option>100</option>
+                                        </datalist>
+                                        <input id="range-number" type="number" min="0" max="100" step="1" size="3" value="0">
+                                    </p>
+
+                                    <p class="layout-4col">
+                                        <label for="search">Search</label><br>
+                                        <input id="search" name="search" type="search">
+                                    </p>
+
+                                    <p class="layout-4col">
+                                        <label for="tel">Tel (phone)</label><br>
+                                        <input id="tel" name="tel" type="tel">
+                                    </p>
+
+                                    <p class="layout-4col">
+                                        <label for="text">Text <abbr class="required" title="Required">*</abbr></label><br>
+                                        <input id="text" name="text" type="text">
+                                    </p>
+
+                                    <p class="layout-4col">
+                                        <label for="text-data">Text with data list</label><br>
+                                        <input id="text-data" name="text-data" type="text" list="text-data-list">
+                                        <datalist id="text-data-list">
+                                            <option value="Afghanistan">
+                                            <option value="Albania">
+                                            <option value="Algeria">
+                                            <option value="Andorra">
+                                            <option value="Angola">
+                                        </datalist>
+                                    </p>
+
+                                    <p class="layout-4col">
+                                        <label for="time">Time</label><br>
+                                        <input id="time" name="time" type="time">
+                                    </p>
+
+                                    <p class="layout-4col">
+                                        <label for="url">URL</label><br>
+                                        <input id="url" name="url" type="url">
+                                    </p>
+
+                                    <p class="layout-4col">
+                                        <label for="url">Week</label><br>
+                                        <input id="week" name="week" type="week">
+                                    </p>
+
+                                </div>
+
+                                <h3>Form Groups</h3>
+                                <fieldset>
+                                    <legend>Fieldset legend</legend>
+                                    <p>
+                                        <input id="fieldset_radio_1" name="fieldset_radio_group" type="radio">
+                                        <label for="fieldset_radio_1">Yes</label>
+                                        <input id="fieldset_radio_2" name="fieldset_radio_group" type="radio">
+                                        <label for="fieldset_radio_2">No</label>
+                                        <input id="fieldset_radio_3" name="fieldset_radio_group" type="radio">
+                                        <label for="fieldset_radio_3">Maybe</label>
+                                    </p>
+                                </fieldset>
+
+                                <h3>Buttons</h3>
+                                <p>
+                                    <input type="submit" value="Input - Submit">
+                                    <input type="button" value="Input - Button">
+                                    <input type="reset" value="Input - Reset">
+                                    <button>Button tag</button>
+                                    <a class="button" href="#">Link tag</a>
+                                </p>
+                                <p>
+                                    <a class="button button-large" href="#">Large button</a>
+                                    <a class="button button-small" href="#">Small button</a>
+                                </p>
+                                <p>
+                                    <input class="button-success" type="button" value="Success">
+                                    <input class="button-danger" type="button" value="Danger">
+                                </p>
+                                <p>
+                                    <span class="button disabled">Span tag (disabled)</span>
+                                    <input type="submit" value="Input (disabled)" disabled>
+                                    <button disabled>Button (disabled)</button>
+                                </p>
+                            </form>
+                        </section>
+
+
+                        <section class="section" id="section-cards">
+                            <h2>Cards</h2>
+
+                            <h3>Text-only cards/article tiles</h3>
+                            <div class="layout-container">
+                                <article class="layout-3col card" itemscope itemtype="https://schema.org/Article">
+                                    <meta itemprop="mainEntityOfPage" content="#">
+                                    <meta itemprop="author" content="The Example Development Team">
+                                    <div class="card-body">
+                                        <h3 itemprop="headline"><a href="#">Card with default text</a></h3>
+                                        <span class="article-date">
+                                            <meta itemprop="datePublished" content="2016-09-21T10:43:39Z">
+                                            <meta itemprop="dateModified" content="2016-10-22T14:32:01Z">
+                                        </span>
+                                        <p>No card header or footer. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        <p><a href="#" itemprop="url">Card link</a></p>
+                                    </div>
+                                </article>
+
+                                <article class="layout-3col card align-center" itemscope itemtype="https://schema.org/Article">
+                                    <meta itemprop="mainEntityOfPage" content="#">
+                                    <meta itemprop="author" content="The Example Development Team">
+                                    <header class="card-header">
+                                        <p>Header content</p>
+                                    </header>
+                                    <div class="card-body">
+                                        <h3 itemprop="headline"><a href="#">Card with centred text</a></h3>
+                                        <span class="article-date">
+                                            <meta itemprop="datePublished" content="2016-09-21T10:43:39Z">
+                                            <meta itemprop="dateModified" content="2016-10-22T14:32:01Z">
+                                        </span>
+                                        <p>Also has a card header and footer. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                        <p><a href="#" class="button" itemprop="url">Go somewhere</a></p>
+                                    </div>
+                                    <footer class="card-footer">
+                                        <p>Footer content</p>
+                                    </footer>
+                                </article>
+
+                                <article class="layout-3col card align-left" itemscope itemtype="https://schema.org/Article">
+                                    <meta itemprop="mainEntityOfPage" content="#">
+                                    <meta itemprop="author" content="The Example Development Team">
+                                    <small class="alert-block alert-pill error">NEW</small>
+                                    <div class="card-body">
+                                        <h3 itemprop="headline">Card with aligned left text</h3>
+                                        <span class="article-date">
+                                            <meta itemprop="datePublished" content="2016-09-21T10:43:39Z">
+                                            <meta itemprop="dateModified" content="2016-10-22T14:32:01Z">
+                                        </span>
+                                        <p>Also has a card footer and alert pill. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </div>
+                                    <footer class="card-footer">
+                                        <p>Footer content</p>
+                                    </footer>
+                                </article>
+                            </div>
+
+                            <h3>Text and image cards/article tiles</h3>
+                            <div class="layout-container">
+                                <article class="layout-3col card" itemscope itemtype="https://schema.org/Article">
+                                    <meta itemprop="mainEntityOfPage" content="#">
+                                    <meta itemprop="author" content="The Example Development Team">
+                                    <small class="alert-block alert-pill success">FEATURED</small>
+                                    <img class="card-img" src="mockups/img/600x400.png" alt="Alt text" itemprop="image">
+                                    <div class="card-body">
+                                        <h3 itemprop="headline">Card with default text</h3>
+                                        <span class="article-date">
+                                            <meta itemprop="datePublished" content="2016-09-21T10:43:39Z">
+                                            <meta itemprop="dateModified" content="2016-10-22T14:32:01Z">
+                                        </span>
+                                        <p>No card header or footer, also has alert pill. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+                                </article>
+
+                                <article class="layout-3col card align-center" itemscope itemtype="https://schema.org/Article">
+                                    <meta itemprop="mainEntityOfPage" content="#">
+                                    <meta itemprop="author" content="The Example Development Team">
+                                    <small class="alert-block alert-pill success">FEATURED</small>
+                                    <header class="card-header">
+                                        <p>Header content</p>
+                                    </header>
+                                    <a href="#" title="Card link" aria-label="Card link"><img class="card-img" src="mockups/img/600x400.png" alt="Alt text" itemprop="image"></a>
+                                    <div class="card-body">
+                                        <h3 itemprop="headline"><a href="#">Card with centred text</a></h3>
+                                        <span class="article-date">
+                                            <meta itemprop="datePublished" content="2016-09-21T10:43:39Z">
+                                            <meta itemprop="dateModified" content="2016-10-22T14:32:01Z">
+                                        </span>
+                                        <p>Also has a card header, footer and alert pill. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                        <p><a href="#" class="button button-small" itemprop="url">Go somewhere small</a></p>
+                                    </div>
+                                    <footer class="card-footer">
+                                        <p>Footer content</p>
+                                    </footer>
+                                </article>
+
+                                <article class="layout-3col card" itemscope itemtype="https://schema.org/Article">
+                                    <meta itemprop="mainEntityOfPage" content="#">
+                                    <meta itemprop="author" content="The Example Development Team">
+                                    <div class="card-body">
+                                        <h3 itemprop="headline"><a href="#">Card with default text</a></h3>
+                                        <span class="article-date">
+                                            <meta itemprop="datePublished" content="2016-09-21T10:43:39Z">
+                                            <meta itemprop="dateModified" content="2016-10-22T14:32:01Z">
+                                        </span>
+                                        <p>Also has a card footer. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        <p><a href="#" itemprop="url">Card link</a></p>
+                                    </div>
+                                    <a href="#" title="Card link" aria-label="Card link"><img class="card-img" src="mockups/img/600x400.png" alt="Alt text" itemprop="image"></a>
+                                    <footer class="card-footer">
+                                        <p>Footer content</p>
+                                    </footer>
+                                </article>
+                            </div>
+
+                        </section>
+
+
+                        <section class="section" id="section-social">
+                            <h2>Social media</h2>
+
+                            <ul class="social-channels">
+                                <li>
+                                    <a class="facebook" rel="external" href="https://facebook.com/" title="Follow us on Facebook">Facebook</a>
+                                </li>
+                                <li>
+                                    <a class="github" rel="external" href="https://github.com/" title="Us on GitHub">GitHub</a>
+                                </li>
+                                <li>
+                                    <a class="instagram" rel="external" href="https://www.instagram.com/" title="See our photos on Instagram">Instagram</a>
+                                </li>
+                                <li>
+                                    <a class="linkedin" rel="external" href="https://linkedin.com/" title="Link with us on LinkedIn">LinkedIn</a>
+                                </li>
+                                <li>
+                                    <a class="pinterest" rel="external" href="https://pinterest.com/" title="Pin us on Pinterest">Pinterest</a>
+                                </li>
+                                <li>
+                                    <a class="twitter" rel="external" href="https://twitter.com/" title="Follow us on Twitter">Twitter</a>
+                                </li>
+                                <li>
+                                    <a class="youtube" rel="external" href="https://youtube.com/" title="Watch us on YouTube">YouTube</a>
+                                </li>
+                            </ul>
+                        </section>
+
+
+                        <section class="section" id="section-jquery-ui">
+                            <h2>jQuery UI widgets</h2>
+                            <p>Collection of all the available <a rel="external" href="https://jqueryui.com/" title="Go to the jQuery User Interface website">jQuery UI</a> widgets.</p>
+
+                            <h3 id="ui-doc-jquery-ui--draggable">Interactions: Draggable</h3>
+
+                            <div class="jquery-ui-draggable ui-widget-content" style="padding:0.5em 1em; margin-bottom:1em;">
+                                <strong>Drag me around!</strong>
+                            </div>
+                            <p><a rel="external" href="https://jqueryui.com/draggable/" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+                            <h3 id="ui-doc-jquery-ui--resizable">Interactions: Resizable</h3>
+
+                            <div class="jquery-ui-resizable ui-widget-content" style="padding:0.5em 1em; margin-bottom:1em;">
+                                <strong>Resize me!</strong>
+                            </div>
+                            <p><a rel="external" href="https://jqueryui.com/resizable/" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+                            <h3 id="ui-doc-jquery-ui--selectable">Interactions: Selectable</h3>
+
+                            <ol class="jquery-ui-selectable list--no-bullets">
+                                <li class="ui-widget-content" style="padding:0.5em 1em; border-bottom:0;">Item 1</li>
+                                <li class="ui-widget-content" style="padding:0.5em 1em; border-bottom:0;">Item 2</li>
+                                <li class="ui-widget-content" style="padding:0.5em 1em; border-bottom:0;">Item 3</li>
+                                <li class="ui-widget-content" style="padding:0.5em 1em; border-bottom:0;">Item 4</li>
+                                <li class="ui-widget-content" style="padding:0.5em 1em; border-bottom:0;">Item 5</li>
+                                <li class="ui-widget-content" style="padding:0.5em 1em; border-bottom:0;">Item 6</li>
+                                <li class="ui-widget-content" style="padding:0.5em 1em;">Item 7</li>
+                            </ol>
+                            <p><a rel="external" href="https://jqueryui.com/selectable/" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+                            <h3 id="ui-doc-jquery-ui--sortable">Interactions: Sortable</h3>
+
+                            <ul class="jquery-ui-sortable list--no-bullets">
+                                <li class="ui-widget-content" style="padding:0.5em 1em 0.5em 0.5em; margin:2px 0;">
+                                    <span class="ui-icon ui-icon-arrow-2-n-s"></span>
+                                    Item 1
+                                </li>
+                                <li class="ui-widget-content" style="padding:0.5em 1em 0.5em 0.5em; margin:2px 0;">
+                                    <span class="ui-icon ui-icon-arrow-2-n-s"></span>
+                                    Item 2
+                                </li>
+                                <li class="ui-widget-content" style="padding:0.5em 1em 0.5em 0.5em; margin:2px 0;">
+                                    <span class="ui-icon ui-icon-arrow-2-n-s"></span>
+                                    Item 3
+                                </li>
+                                <li class="ui-widget-content" style="padding:0.5em 1em 0.5em 0.5em; margin:2px 0;">
+                                    <span class="ui-icon ui-icon-arrow-2-n-s"></span>
+                                    Item 4
+                                </li>
+                                <li class="ui-widget-content" style="padding:0.5em 1em 0.5em 0.5em; margin:2px 0;">
+                                    <span class="ui-icon ui-icon-arrow-2-n-s"></span>
+                                    Item 5
+                                </li>
+                                <li class="ui-widget-content" style="padding:0.5em 1em 0.5em 0.5em; margin:2px 0;">
+                                    <span class="ui-icon ui-icon-arrow-2-n-s"></span>
+                                    Item 6
+                                </li>
+                                <li class="ui-widget-content" style="padding:0.5em 1em 0.5em 0.5em; margin:2px 0;">
+                                    <span class="ui-icon ui-icon-arrow-2-n-s"></span>
+                                    Item 7
+                                </li>
+                            </ul>
+                            <p><a rel="external" href="https://jqueryui.com/sortable/" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+                            <h3 id="ui-doc-jquery-ui--accordion">Widgets: Accordion</h3>
+
+                            <div class="jquery-ui-accordion">
+                                <h3><a href="#">Section 1</a></h3>
+                                <div>
+                                    <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+                                </div>
+
+                                <h3><a href="#">Section 2</a></h3>
+                                <div>
+                                    <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna.</p>
+                                </div>
+
+                                <h3><a href="#">Section 3</a></h3>
+                                <div>
+                                    <p> Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.</p>
+                                    <ul>
+                                        <li>List item one</li>
+                                        <li>List item two</li>
+                                        <li>List item three</li>
+                                    </ul>
+                                </div>
+
+                                <h3><a href="#">Section 4</a></h3>
+                                <div>
+                                    <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est.</p>
+                                    <p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                                </div>
+                            </div>
+                            <p><a rel="external" href="https://jqueryui.com/accordion/" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+                            <h3 id="ui-doc-jquery-ui--autocomplete">Widgets: Autocomplete</h3>
+
+                            <p>
+                                <label for="autocomplete-country">Countries</label><br>
+                                <input type="text" id="autocomplete-country">
+                            </p>
+                            <p><a rel="external" href="https://jqueryui.com/autocomplete/" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+                            <h3 id="ui-doc-jquery-ui--button">Widgets: Button</h3>
+
+                            <h4>Default functionality buttons</h4>
+                            <p>
+                                <button class="jquery-ui-button">&lt;button&gt; button</button>
+                                <input class="jquery-ui-button" type="button" value="Input button">
+                                <input class="jquery-ui-button" type="submit" value="Submit button">
+                                <a class="jquery-ui-button" href="#">&lt;a&gt; button</a>
+                            </p>
+
+                            <h4>Icon buttons</h4>
+                            <p>
+                                <button class="jquery-ui-button-icon-only">&lt;button&gt; icon only</button>
+                                <button class="jquery-ui-button-icon-left">&lt;button&gt; icon on the left</button>
+                                <button class="jquery-ui-button-icon-right">&lt;button&gt; icon on the right</button>
+                                <button class="jquery-ui-button-icon-left">&lt;button&gt; two icons <span class="ui-icon ui-icon-gear"></span></button>
+                            </p>
+                            <p>
+                                <a class="jquery-ui-button-icon-only" href="#">&lt;a&gt; icon only</a>
+                                <a class="jquery-ui-button-icon-left" href="#">&lt;a&gt; icon on the left</a>
+                                <a class="jquery-ui-button-icon-right" href="#">&lt;a&gt; icon on the right</a>
+                                <a class="jquery-ui-button-icon-left" href="#">&lt;a&gt; two icons <span class="ui-icon ui-icon-gear"></span></a>
+                            </p>
+
+                            <p><a rel="external" href="https://jqueryui.com/button/" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+                            <h3 id="ui-doc-jquery-ui--checkboxradio">Widgets: Checkboxradio</h3>
+
+                            <h3>Checkboxes</h3>
+                            <p class="jquery-ui-checkboxradio-checkbox1">
+                                <input id="check1" type="checkbox">
+                                <label for="check1">Dogs</label>
+                                <input id="check2" type="checkbox" checked>
+                                <label for="check2">Cats</label>
+                                <input id="check3" type="checkbox">
+                                <label for="check3">Ferrets</label>
+                                <input id="check4" type="checkbox" disabled>
+                                <label for="check4">Disabled</label>
+                                <input id="check5" type="checkbox" disabled checked>
+                                <label for="check5">Disabled checked</label>
+                            </p>
+
+                            <h4>Checkboxes (and without icons)</h4>
+                            <p class="jquery-ui-checkboxradio-checkbox2">
+                                <input id="check6" type="checkbox">
+                                <label for="check6">Dogs</label>
+                                <input id="check7" type="checkbox">
+                                <label for="check7">Cats</label>
+                                <input id="check8" type="checkbox">
+                                <label for="check8">Ferrets</label>
+                            </p>
+
+                            <h4>Radiobuttons</h4>
+                            <p class="jquery-ui-checkboxradio-radio">
+                                <input id="radio1" name="radio1" type="radio" checked>
+                                <label for="radio1">Yes</label>
+                                <input id="radio2" name="radio1" type="radio">
+                                <label for="radio2">Maybe</label>
+                                <input id="radio3" name="radio1" type="radio">
+                                <label for="radio3">No</label>
+                            </p>
+
+                            <p><a rel="external" href="https://jqueryui.com/checkboxradio/" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+                            <h3 id="ui-doc-jquery-ui--controlgroup">Widgets: Controlgroup</h3>
+
+                            <h4>Controlgroup horizontal (checkboxes and select)</h4>
+                            <p class="jquery-ui-controlgroup">
+                                <input id="check9" type="checkbox">
+                                <label for="check9">B</label>
+                                <input id="check10" type="checkbox">
+                                <label for="check10">I</label>
+                                <input id="check11" type="checkbox">
+                                <label for="check11">U</label>
+                                <select class="jquery-ui-selectmenu" id="zoom">
+                                    <option selected disabled>Zoom</option>
+                                    <option>50%</option>
+                                    <option>75%</option>
+                                    <option>90%</option>
+                                    <option>100%</option>
+                                    <option>125%</option>
+                                    <option>150%</option>
+                                    <option>200%</option>
+                                </select>
+                            </p>
+
+                            <h4>Controlgroup horizontal (radiobuttons)</h4>
+                            <p class="jquery-ui-controlgroup">
+                                <input id="radio4" name="radio2" type="radio">
+                                <label for="radio4">Off</label>
+                                <input id="radio5" name="radio2" type="radio" checked>
+                                <label for="radio5">On</label>
+                            </p>
+
+                            <h4>Controlgroup vertical</h4>
+                            <fieldset class="jquery-ui-controlgroup-vertical">
+                                <legend>Favourite drink</legend>
+                                <p>
+                                    <input id="tea" name="drink" type="radio">
+                                    <label for="tea">Tea</label>
+                                    <input id="coffee" name="drink" type="radio">
+                                    <label for="coffee">Coffee</label>
+                                    <input id="tequila" name="drink" type="radio">
+                                    <label for="tequila">Tequila</label>
+                                </p>
+                                <p>
+                                    <input id="check12" type="checkbox">
+                                    <label for="check12">Add milk</label>
+                                    <input id="check13" type="checkbox">
+                                    <label for="check13">Add ice</label>
+                                    <input id="check14" type="checkbox">
+                                    <label for="check14">Add vodka</label>
+                                </p>
+                            </fieldset>
+
+                            <p><a rel="external" href="https://jqueryui.com/controlgroup/" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+                            <h3 id="ui-doc-jquery-ui--datepicker">Widgets: Datepicker</h3>
+
+                            <div class="jquery-ui-datepicker"></div>
+                            <p><a rel="external" href="https://jqueryui.com/datepicker/" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+                            <h3 id="ui-doc-jquery-ui--dialog">Widgets: Dialog</h3>
+
+                            <p><a id="jquery-ui-dialog-link" href="#">Open basic dialog&hellip;</a></p>
+                            <!-- Dialog box (basic) -->
+                            <div id="jquery-ui-dialog" title="Basic dialog example">
+                                <h3>Non-modal dialog</h3>
+                                <p>Lorem ipsum dolor sit amet, <a href="#nowhere">Testlink</a> quo epicuri volutpat no. Causae option accusamus in est. Mea id ignota meliore facilis, cu vim omnium appareat mediocrem. Eu oblique voluptua electram his. Mei eu movet recteque. Vis nulla graeci praesent ad, mediocrem expetenda pro ad.</p>
+                            </div>
+
+                            <p><a id="jquery-ui-dialog-modal-link" href="#">Open modal dialog&hellip;</a></p>
+                            <!-- Dialog box (modal) -->
+                            <div id="jquery-ui-dialog-modal" title="Modal dialog example">
+                                <h3>Modal dialog</h3>
+                                <p>Lorem ipsum dolor sit amet, <a href="#nowhere">Testlink</a> quo epicuri volutpat no. Causae option accusamus in est. Mea id ignota meliore facilis, cu vim omnium appareat mediocrem. Eu oblique voluptua electram his. Mei eu movet recteque. Vis nulla graeci praesent ad, mediocrem expetenda pro ad.</p>
+                            </div>
+
+                            <p><a rel="external" href="https://jqueryui.com/dialog/" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+                            <h3 id="ui-doc-jquery-ui--menu">Widgets: Menu</h3>
+
+                            <ul class="jquery-ui-menu">
+                                <li>
+                                    <div>Aberdeen</div>
+                                </li>
+                                <li class="ui-state-disabled">
+                                    <div>Ada</div>
+                                </li>
+                                <li>
+                                    <div>Adamsville</div>
+                                </li>
+                                <li>-</li>
+                                <li>
+                                    <div>Addyston</div>
+                                </li>
+                                <li>
+                                    <div>Delphi</div>
+                                    <ul>
+                                        <li class="ui-state-disabled">
+                                            <div>Ada</div>
+                                        </li>
+                                        <li>
+                                            <div>Saarland</div>
+                                        </li>
+                                        <li>
+                                            <div>Salzburg</div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>Saarland</div>
+                                </li>
+                                <li>
+                                    <div>Salzburg</div>
+                                    <ul>
+                                        <li>
+                                            <div>Delphi</div>
+                                            <ul>
+                                                <li>
+                                                    <div>Ada</div>
+                                                </li>
+                                                <li>
+                                                    <div>Saarland</div>
+                                                </li>
+                                                <li>
+                                                    <div>Salzburg</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div>Delphi</div>
+                                            <ul>
+                                                <li>
+                                                    <div>Ada</div>
+                                                </li>
+                                                <li>
+                                                    <div>Saarland</div>
+                                                </li>
+                                                <li>
+                                                    <div>Salzburg</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div>Perch</div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="ui-state-disabled">
+                                    <div>Amesville</div>
+                                    <ul>
+                                        <li>
+                                            <div>Ada</div>
+                                        </li>
+                                        <li>
+                                            <div>Saarland</div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <p><span class="warning"><strong>Note:</strong> Currently jQuery UI does not support horizontal menus.</span></p>
+                            <p><a rel="external" href="https://jqueryui.com/menu/" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+                            <h3 id="ui-doc-jquery-ui--progressbar">Widget: Progressbar</h3>
+
+                            <h4>Determinate value</h4>
+                            <div class="jquery-ui-progressbar"></div>
+                            <p><a class="jquery-ui-progressbar-animate" href="#">Animate to random number</a></p>
+                            <h4>Indeterminate value</h4>
+                            <div class="jquery-ui-progressbar2"></div>
+                            <p><a rel="external" href="https://jqueryui.com/progressbar/" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+                            <h3 id="ui-doc-jquery-ui--selectmenu">Widgets: Selectmenu</h3>
+
+                            <h4>Selectmenu - standard</h4>
+                            <p>
+                                <label for="jquery-ui-selectmenu1">Select a speed</label>
+                                <select class="jquery-ui-selectmenu" id="jquery-ui-selectmenu1" name="jquery-ui-selectmenu1">
+                                    <option>Slower</option>
+                                    <option>Slow</option>
+                                    <option selected>Medium</option>
+                                    <option>Fast</option>
+                                    <option>Faster</option>
+                                </select>
+                                <input id="text_inline1" name="text_inline1" type="text">
+                                <input type="button" value="Hello">
+                            </p>
+
+                            <h4>Selectmenu - with option groups</h4>
+                            <p>
+                                <label for="jquery-ui-selectmenu2">Select a file</label>
+                                <select class="jquery-ui-selectmenu" id="jquery-ui-selectmenu2" name="jquery-ui-selectmenu2">
+                                    <optgroup label="Scripts">
+                                        <option value="jquery">jQuery.js</option>
+                                        <option value="jqueryui">ui.jQuery.js</option>
+                                    </optgroup>
+                                    <optgroup label="Other files">
+                                        <option value="somefile">Some unknown file</option>
+                                        <option value="someotherfile">Some other file with a very long option text</option>
+                                    </optgroup>
+                                </select>
+                            </p>
+
+                            <h4>Selectmenu - with disabled options</h4>
+                            <p>
+                                <label for="jquery-ui-selectmenu3">Select a number</label>
+                                <select class="jquery-ui-selectmenu" id="jquery-ui-selectmenu3" name="jquery-ui-selectmenu3">
+                                    <option value="1">1</option>
+                                    <option value="2" selected>2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7" disabled>7</option>
+                                    <option value="8" disabled>8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15" disabled>15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                </select>
+                            </p>
+
+                            <h4>Selectmenu - with disabled optgroup</h4>
+                            <p>
+                                <label for="jquery-ui-selectmenu4">Select a file 2</label>
+                                <select class="jquery-ui-selectmenu" id="jquery-ui-selectmenu4" name="jquery-ui-selectmenu4">
+                                    <optgroup label="Scripts" disabled>
+                                        <option value="jquery">jQuery.js</option>
+                                        <option value="jqueryui">ui.jQuery.js</option>
+                                    </optgroup>
+                                    <optgroup label="Other files">
+                                        <option value="somefile">Some unknown file</option>
+                                        <option value="someotherfile">Some other file</option>
+                                    </optgroup>
+                                </select>
+                            </p>
+                            <p><a rel="external" href="https://jqueryui.com/selectmenu/" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+                            <h3 id="ui-doc-jquery-ui--slider">Widgets: Slider</h3>
+
+                            <h4>Slider - horizontal</h4>
+                            <div class="jquery-ui-slider-horizontal"></div>
+
+                            <h4>Slider - vertical</h4>
+                            <div class="jquery-ui-slider-vertical">
+                                <span>88</span>
+                                <span>77</span>
+                                <span>55</span>
+                                <span>33</span>
+                                <span>40</span>
+                                <span>45</span>
+                                <span>70</span>
+                            </div>
+
+                            <p><a rel="external" href="https://jqueryui.com/slider/" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+                            <h3 id="ui-doc-jquery-ui--spinner">Widgets: Spinner</h3>
+
+                            <p>
+                                <label for="jquery-ui-spinner">Select a value:</label>
+                                <input type="text" id="jquery-ui-spinner" name="value">
+                            </p>
+                            <p><a rel="external" href="https://jqueryui.com/spinner/" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+                            <h3 id="ui-doc-jquery-ui--tabs">Widgets: Tabs</h3>
+
+                            <h4>Tabs - horizontal</h4>
+                            <p><strong>Note:</strong> Horizontal tabs switch to vertical tabs at smaller screen widths.</p>
+                            <div class="jquery-ui-tabs">
+                                <ul>
+                                    <li>
+                                        <a href="#tabgroup1-tab1">Carnivore</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tabgroup1-tab2">Herbivore</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tabgroup1-tab3">Omnivore</a>
+                                    </li>
+                                </ul>
+                                <div id="tabgroup1-tab1">
+                                    <h4>Carnivore tab contents</h4>
+                                    <p>Lorem ipsum dolor sit amet, <a href="#nowhere">Testlink</a> quo epicuri volutpat no. Causae option accusamus in est. Mea id ignota meliore facilis, cu vim omnium appareat mediocrem. Eu oblique voluptua electram his. Mei eu movet recteque. Vis nulla graeci praesent ad, mediocrem expetenda pro ad.</p>
+                                </div>
+                                <div id="tabgroup1-tab2">
+                                    <h4>Herbivore tab contents</h4>
+                                    <p>Timeam mentitum an nam. Mei ne prima perfecto adversarium. Quo eu tamquam invidunt verterem, albucius dissentiet ea eum <a href="#nowhere">Testlink</a>. Facete fabellas referrentur et qui. Cu harum tempor vivendum vel. Nec quem movet nullam in. No stet tota pri.</p>
+                                </div>
+                                <div id="tabgroup1-tab3">
+                                    <h4>Omnivore tab contents</h4>
+                                    <p>Inermis indoctum vis in, has soleat complectitur te <a href="#nowhere">Testlink</a>. Ut est stet civibus, mucius iriure ad duo. Sumo tantas et est, ea duo elitr utroque, ne mea dicant tincidunt scribentur. Sit dico accusata et. Sint inimicus cu nam, odio velit minim sit ut.</p>
+                                </div>
+                            </div>
+
+                            <h4>Tabs - vertical</h4>
+                            <div class="jquery-ui-tabs-vertical">
+                                <ul>
+                                    <li><a href="#tabgroup2-tab1">Meat eater</a></li>
+                                    <li><a href="#tabgroup2-tab2">Vegetarian</a></li>
+                                    <li><a href="#tabgroup2-tab3">Vegan</a></li>
+                                </ul>
+                                <div id="tabgroup2-tab1">
+                                    <h4>Meat eater tab contents</h4>
+                                    <p>Lorem ipsum dolor sit amet, <a href="#nowhere">Testlink</a> quo epicuri volutpat no. Causae option accusamus in est. Mea id ignota meliore facilis, cu vim omnium appareat mediocrem. Eu oblique voluptua electram his. Mei eu movet recteque. Vis nulla graeci praesent ad, mediocrem expetenda pro ad.</p>
+                                </div>
+                                <div id="tabgroup2-tab2">
+                                    <h4>Vegetarian tab contents</h4>
+                                    <p>Timeam mentitum an nam. Mei ne prima perfecto adversarium. Quo eu tamquam invidunt verterem, albucius dissentiet ea eum <a href="#nowhere">Testlink</a>. Facete fabellas referrentur et qui. Cu harum tempor vivendum vel. Nec quem movet nullam in. No stet tota pri.</p>
+                                </div>
+                                <div id="tabgroup2-tab3">
+                                    <h4>Vegan tab contents</h4>
+                                    <p>Inermis indoctum vis in, has soleat complectitur te <a href="#nowhere">Testlink</a>. Ut est stet civibus, mucius iriure ad duo. Sumo tantas et est, ea duo elitr utroque, ne mea dicant tincidunt scribentur. Sit dico accusata et. Sint inimicus cu nam, odio velit minim sit ut.</p>
+                                </div>
+                            </div>
+
+                            <p><a rel="external" href="https://jqueryui.com/tabs/" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+                            <h3 id="ui-doc-jquery-ui--tooltip">Widgets: Tooltip</h3>
+
+                            <p>Here is an example of a <a class="jquery-ui-tooltip" href="#" title="This is a tooltip, it can be of any length (within practical reason).">link with a tooltip</a>, mouseover to reveal it.</p>
+                            <p><a rel="external" href="https://jqueryui.com/tooltip/" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+                            <h3 id="ui-doc-jquery-ui--icons">Styles: Icons</h3>
+
+                            <ul class="jquery-ui-icons list--no-bullets">
+                                <li title=".ui-icon-caret-1-n"><span class="ui-icon ui-icon-caret-1-n"></span></li>
+                                <li title=".ui-icon-caret-1-ne"><span class="ui-icon ui-icon-caret-1-ne"></span></li>
+                                <li title=".ui-icon-caret-1-e"><span class="ui-icon ui-icon-caret-1-e"></span></li>
+                                <li title=".ui-icon-caret-1-se"><span class="ui-icon ui-icon-caret-1-se"></span></li>
+                                <li title=".ui-icon-caret-1-s"><span class="ui-icon ui-icon-caret-1-s"></span></li>
+                                <li title=".ui-icon-caret-1-sw"><span class="ui-icon ui-icon-caret-1-sw"></span></li>
+                                <li title=".ui-icon-caret-1-w"><span class="ui-icon ui-icon-caret-1-w"></span></li>
+                                <li title=".ui-icon-caret-1-nw"><span class="ui-icon ui-icon-caret-1-nw"></span></li>
+                                <li title=".ui-icon-caret-2-n-s"><span class="ui-icon ui-icon-caret-2-n-s"></span></li>
+                                <li title=".ui-icon-caret-2-e-w"><span class="ui-icon ui-icon-caret-2-e-w"></span></li>
+
+                                <li title=".ui-icon-triangle-1-n"><span class="ui-icon ui-icon-triangle-1-n"></span></li>
+                                <li title=".ui-icon-triangle-1-ne"><span class="ui-icon ui-icon-triangle-1-ne"></span></li>
+                                <li title=".ui-icon-triangle-1-e"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+                                <li title=".ui-icon-triangle-1-se"><span class="ui-icon ui-icon-triangle-1-se"></span></li>
+                                <li title=".ui-icon-triangle-1-s"><span class="ui-icon ui-icon-triangle-1-s"></span></li>
+                                <li title=".ui-icon-triangle-1-sw"><span class="ui-icon ui-icon-triangle-1-sw"></span></li>
+                                <li title=".ui-icon-triangle-1-w"><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+                                <li title=".ui-icon-triangle-1-nw"><span class="ui-icon ui-icon-triangle-1-nw"></span></li>
+                                <li title=".ui-icon-triangle-2-n-s"><span class="ui-icon ui-icon-triangle-2-n-s"></span></li>
+                                <li title=".ui-icon-triangle-2-e-w"><span class="ui-icon ui-icon-triangle-2-e-w"></span></li>
+
+                                <li title=".ui-icon-arrow-1-n"><span class="ui-icon ui-icon-arrow-1-n"></span></li>
+                                <li title=".ui-icon-arrow-1-ne"><span class="ui-icon ui-icon-arrow-1-ne"></span></li>
+                                <li title=".ui-icon-arrow-1-e"><span class="ui-icon ui-icon-arrow-1-e"></span></li>
+                                <li title=".ui-icon-arrow-1-se"><span class="ui-icon ui-icon-arrow-1-se"></span></li>
+                                <li title=".ui-icon-arrow-1-s"><span class="ui-icon ui-icon-arrow-1-s"></span></li>
+                                <li title=".ui-icon-arrow-1-sw"><span class="ui-icon ui-icon-arrow-1-sw"></span></li>
+                                <li title=".ui-icon-arrow-1-w"><span class="ui-icon ui-icon-arrow-1-w"></span></li>
+                                <li title=".ui-icon-arrow-1-nw"><span class="ui-icon ui-icon-arrow-1-nw"></span></li>
+                                <li title=".ui-icon-arrow-2-n-s"><span class="ui-icon ui-icon-arrow-2-n-s"></span></li>
+                                <li title=".ui-icon-arrow-2-ne-sw"><span class="ui-icon ui-icon-arrow-2-ne-sw"></span></li>
+                                <li title=".ui-icon-arrow-2-e-w"><span class="ui-icon ui-icon-arrow-2-e-w"></span></li>
+                                <li title=".ui-icon-arrow-2-se-nw"><span class="ui-icon ui-icon-arrow-2-se-nw"></span></li>
+                                <li title=".ui-icon-arrowstop-1-n"><span class="ui-icon ui-icon-arrowstop-1-n"></span></li>
+                                <li title=".ui-icon-arrowstop-1-e"><span class="ui-icon ui-icon-arrowstop-1-e"></span></li>
+                                <li title=".ui-icon-arrowstop-1-s"><span class="ui-icon ui-icon-arrowstop-1-s"></span></li>
+                                <li title=".ui-icon-arrowstop-1-w"><span class="ui-icon ui-icon-arrowstop-1-w"></span></li>
+
+                                <li title=".ui-icon-arrowthick-1-n"><span class="ui-icon ui-icon-arrowthick-1-n"></span></li>
+                                <li title=".ui-icon-arrowthick-1-ne"><span class="ui-icon ui-icon-arrowthick-1-ne"></span></li>
+                                <li title=".ui-icon-arrowthick-1-e"><span class="ui-icon ui-icon-arrowthick-1-e"></span></li>
+                                <li title=".ui-icon-arrowthick-1-se"><span class="ui-icon ui-icon-arrowthick-1-se"></span></li>
+                                <li title=".ui-icon-arrowthick-1-s"><span class="ui-icon ui-icon-arrowthick-1-s"></span></li>
+                                <li title=".ui-icon-arrowthick-1-sw"><span class="ui-icon ui-icon-arrowthick-1-sw"></span></li>
+                                <li title=".ui-icon-arrowthick-1-w"><span class="ui-icon ui-icon-arrowthick-1-w"></span></li>
+                                <li title=".ui-icon-arrowthick-1-nw"><span class="ui-icon ui-icon-arrowthick-1-nw"></span></li>
+                                <li title=".ui-icon-arrowthick-2-n-s"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span></li>
+                                <li title=".ui-icon-arrowthick-2-ne-sw"><span class="ui-icon ui-icon-arrowthick-2-ne-sw"></span></li>
+                                <li title=".ui-icon-arrowthick-2-e-w"><span class="ui-icon ui-icon-arrowthick-2-e-w"></span></li>
+                                <li title=".ui-icon-arrowthick-2-se-nw"><span class="ui-icon ui-icon-arrowthick-2-se-nw"></span></li>
+                                <li title=".ui-icon-arrowthickstop-1-n"><span class="ui-icon ui-icon-arrowthickstop-1-n"></span></li>
+                                <li title=".ui-icon-arrowthickstop-1-e"><span class="ui-icon ui-icon-arrowthickstop-1-e"></span></li>
+                                <li title=".ui-icon-arrowthickstop-1-s"><span class="ui-icon ui-icon-arrowthickstop-1-s"></span></li>
+                                <li title=".ui-icon-arrowthickstop-1-w"><span class="ui-icon ui-icon-arrowthickstop-1-w"></span></li>
+
+                                <li title=".ui-icon-arrowreturnthick-1-w"><span class="ui-icon ui-icon-arrowreturnthick-1-w"></span></li>
+                                <li title=".ui-icon-arrowreturnthick-1-n"><span class="ui-icon ui-icon-arrowreturnthick-1-n"></span></li>
+                                <li title=".ui-icon-arrowreturnthick-1-e"><span class="ui-icon ui-icon-arrowreturnthick-1-e"></span></li>
+                                <li title=".ui-icon-arrowreturnthick-1-s"><span class="ui-icon ui-icon-arrowreturnthick-1-s"></span></li>
+                                <li title=".ui-icon-arrowreturn-1-w"><span class="ui-icon ui-icon-arrowreturn-1-w"></span></li>
+                                <li title=".ui-icon-arrowreturn-1-n"><span class="ui-icon ui-icon-arrowreturn-1-n"></span></li>
+                                <li title=".ui-icon-arrowreturn-1-e"><span class="ui-icon ui-icon-arrowreturn-1-e"></span></li>
+                                <li title=".ui-icon-arrowreturn-1-s"><span class="ui-icon ui-icon-arrowreturn-1-s"></span></li>
+                                <li title=".ui-icon-arrowrefresh-1-w"><span class="ui-icon ui-icon-arrowrefresh-1-w"></span></li>
+                                <li title=".ui-icon-arrowrefresh-1-n"><span class="ui-icon ui-icon-arrowrefresh-1-n"></span></li>
+                                <li title=".ui-icon-arrowrefresh-1-e"><span class="ui-icon ui-icon-arrowrefresh-1-e"></span></li>
+                                <li title=".ui-icon-arrowrefresh-1-s"><span class="ui-icon ui-icon-arrowrefresh-1-s"></span></li>
+
+                                <li title=".ui-icon-arrow-4"><span class="ui-icon ui-icon-arrow-4"></span></li>
+                                <li title=".ui-icon-arrow-4-diag"><span class="ui-icon ui-icon-arrow-4-diag"></span></li>
+                                <li title=".ui-icon-extlink"><span class="ui-icon ui-icon-extlink"></span></li>
+                                <li title=".ui-icon-newwin"><span class="ui-icon ui-icon-newwin"></span></li>
+                                <li title=".ui-icon-refresh"><span class="ui-icon ui-icon-refresh"></span></li>
+                                <li title=".ui-icon-shuffle"><span class="ui-icon ui-icon-shuffle"></span></li>
+                                <li title=".ui-icon-transfer-e-w"><span class="ui-icon ui-icon-transfer-e-w"></span></li>
+                                <li title=".ui-icon-transferthick-e-w"><span class="ui-icon ui-icon-transferthick-e-w"></span></li>
+
+                                <li title=".ui-icon-folder-collapsed"><span class="ui-icon ui-icon-folder-collapsed"></span></li>
+                                <li title=".ui-icon-folder-open"><span class="ui-icon ui-icon-folder-open"></span></li>
+                                <li title=".ui-icon-document"><span class="ui-icon ui-icon-document"></span></li>
+                                <li title=".ui-icon-document-b"><span class="ui-icon ui-icon-document-b"></span></li>
+                                <li title=".ui-icon-note"><span class="ui-icon ui-icon-note"></span></li>
+                                <li title=".ui-icon-mail-closed"><span class="ui-icon ui-icon-mail-closed"></span></li>
+                                <li title=".ui-icon-mail-open"><span class="ui-icon ui-icon-mail-open"></span></li>
+                                <li title=".ui-icon-suitcase"><span class="ui-icon ui-icon-suitcase"></span></li>
+                                <li title=".ui-icon-comment"><span class="ui-icon ui-icon-comment"></span></li>
+                                <li title=".ui-icon-person"><span class="ui-icon ui-icon-person"></span></li>
+                                <li title=".ui-icon-print"><span class="ui-icon ui-icon-print"></span></li>
+                                <li title=".ui-icon-trash"><span class="ui-icon ui-icon-trash"></span></li>
+                                <li title=".ui-icon-locked"><span class="ui-icon ui-icon-locked"></span></li>
+                                <li title=".ui-icon-unlocked"><span class="ui-icon ui-icon-unlocked"></span></li>
+                                <li title=".ui-icon-bookmark"><span class="ui-icon ui-icon-bookmark"></span></li>
+                                <li title=".ui-icon-tag"><span class="ui-icon ui-icon-tag"></span></li>
+
+                                <li title=".ui-icon-home"><span class="ui-icon ui-icon-home"></span></li>
+                                <li title=".ui-icon-flag"><span class="ui-icon ui-icon-flag"></span></li>
+                                <li title=".ui-icon-calculator"><span class="ui-icon ui-icon-calculator"></span></li>
+                                <li title=".ui-icon-cart"><span class="ui-icon ui-icon-cart"></span></li>
+                                <li title=".ui-icon-pencil"><span class="ui-icon ui-icon-pencil"></span></li>
+                                <li title=".ui-icon-clock"><span class="ui-icon ui-icon-clock"></span></li>
+                                <li title=".ui-icon-disk"><span class="ui-icon ui-icon-disk"></span></li>
+                                <li title=".ui-icon-calendar"><span class="ui-icon ui-icon-calendar"></span></li>
+                                <li title=".ui-icon-zoomin"><span class="ui-icon ui-icon-zoomin"></span></li>
+                                <li title=".ui-icon-zoomout"><span class="ui-icon ui-icon-zoomout"></span></li>
+                                <li title=".ui-icon-search"><span class="ui-icon ui-icon-search"></span></li>
+                                <li title=".ui-icon-wrench"><span class="ui-icon ui-icon-wrench"></span></li>
+                                <li title=".ui-icon-gear"><span class="ui-icon ui-icon-gear"></span></li>
+                                <li title=".ui-icon-heart"><span class="ui-icon ui-icon-heart"></span></li>
+                                <li title=".ui-icon-star"><span class="ui-icon ui-icon-star"></span></li>
+                                <li title=".ui-icon-link"><span class="ui-icon ui-icon-link"></span></li>
+
+                                <li title=".ui-icon-cancel"><span class="ui-icon ui-icon-cancel"></span></li>
+                                <li title=".ui-icon-plus"><span class="ui-icon ui-icon-plus"></span></li>
+                                <li title=".ui-icon-plusthick"><span class="ui-icon ui-icon-plusthick"></span></li>
+                                <li title=".ui-icon-minus"><span class="ui-icon ui-icon-minus"></span></li>
+                                <li title=".ui-icon-minusthick"><span class="ui-icon ui-icon-minusthick"></span></li>
+                                <li title=".ui-icon-close"><span class="ui-icon ui-icon-close"></span></li>
+                                <li title=".ui-icon-closethick"><span class="ui-icon ui-icon-closethick"></span></li>
+                                <li title=".ui-icon-key"><span class="ui-icon ui-icon-key"></span></li>
+                                <li title=".ui-icon-lightbulb"><span class="ui-icon ui-icon-lightbulb"></span></li>
+                                <li title=".ui-icon-scissors"><span class="ui-icon ui-icon-scissors"></span></li>
+                                <li title=".ui-icon-clipboard"><span class="ui-icon ui-icon-clipboard"></span></li>
+                                <li title=".ui-icon-copy"><span class="ui-icon ui-icon-copy"></span></li>
+                                <li title=".ui-icon-contact"><span class="ui-icon ui-icon-contact"></span></li>
+                                <li title=".ui-icon-image"><span class="ui-icon ui-icon-image"></span></li>
+                                <li title=".ui-icon-video"><span class="ui-icon ui-icon-video"></span></li>
+                                <li title=".ui-icon-script"><span class="ui-icon ui-icon-script"></span></li>
+
+                                <li title=".ui-icon-alert"><span class="ui-icon ui-icon-alert"></span></li>
+                                <li title=".ui-icon-info"><span class="ui-icon ui-icon-info"></span></li>
+                                <li title=".ui-icon-notice"><span class="ui-icon ui-icon-notice"></span></li>
+                                <li title=".ui-icon-help"><span class="ui-icon ui-icon-help"></span></li>
+                                <li title=".ui-icon-check"><span class="ui-icon ui-icon-check"></span></li>
+                                <li title=".ui-icon-bullet"><span class="ui-icon ui-icon-bullet"></span></li>
+                                <li title=".ui-icon-radio-off"><span class="ui-icon ui-icon-radio-off"></span></li>
+                                <li title=".ui-icon-radio-on"><span class="ui-icon ui-icon-radio-on"></span></li>
+                                <li title=".ui-icon-pin-w"><span class="ui-icon ui-icon-pin-w"></span></li>
+                                <li title=".ui-icon-pin-s"><span class="ui-icon ui-icon-pin-s"></span></li>
+
+                                <li title=".ui-icon-play"><span class="ui-icon ui-icon-play"></span></li>
+                                <li title=".ui-icon-pause"><span class="ui-icon ui-icon-pause"></span></li>
+                                <li title=".ui-icon-seek-next"><span class="ui-icon ui-icon-seek-next"></span></li>
+                                <li title=".ui-icon-seek-prev"><span class="ui-icon ui-icon-seek-prev"></span></li>
+                                <li title=".ui-icon-seek-end"><span class="ui-icon ui-icon-seek-end"></span></li>
+                                <li title=".ui-icon-seek-start"><span class="ui-icon ui-icon-seek-start"></span></li>
+                                <li title=".ui-icon-stop"><span class="ui-icon ui-icon-stop"></span></li>
+                                <li title=".ui-icon-eject"><span class="ui-icon ui-icon-eject"></span></li>
+                                <li title=".ui-icon-volume-off"><span class="ui-icon ui-icon-volume-off"></span></li>
+                                <li title=".ui-icon-volume-on"><span class="ui-icon ui-icon-volume-on"></span></li>
+
+                                <li title=".ui-icon-power"><span class="ui-icon ui-icon-power"></span></li>
+                                <li title=".ui-icon-signal-diag"><span class="ui-icon ui-icon-signal-diag"></span></li>
+                                <li title=".ui-icon-signal"><span class="ui-icon ui-icon-signal"></span></li>
+                                <li title=".ui-icon-battery-0"><span class="ui-icon ui-icon-battery-0"></span></li>
+                                <li title=".ui-icon-battery-1"><span class="ui-icon ui-icon-battery-1"></span></li>
+                                <li title=".ui-icon-battery-2"><span class="ui-icon ui-icon-battery-2"></span></li>
+                                <li title=".ui-icon-battery-3"><span class="ui-icon ui-icon-battery-3"></span></li>
+
+                                <li title=".ui-icon-circle-plus"><span class="ui-icon ui-icon-circle-plus"></span></li>
+                                <li title=".ui-icon-circle-minus"><span class="ui-icon ui-icon-circle-minus"></span></li>
+                                <li title=".ui-icon-circle-close"><span class="ui-icon ui-icon-circle-close"></span></li>
+                                <li title=".ui-icon-circle-triangle-e"><span class="ui-icon ui-icon-circle-triangle-e"></span></li>
+                                <li title=".ui-icon-circle-triangle-s"><span class="ui-icon ui-icon-circle-triangle-s"></span></li>
+                                <li title=".ui-icon-circle-triangle-w"><span class="ui-icon ui-icon-circle-triangle-w"></span></li>
+                                <li title=".ui-icon-circle-triangle-n"><span class="ui-icon ui-icon-circle-triangle-n"></span></li>
+                                <li title=".ui-icon-circle-arrow-e"><span class="ui-icon ui-icon-circle-arrow-e"></span></li>
+                                <li title=".ui-icon-circle-arrow-s"><span class="ui-icon ui-icon-circle-arrow-s"></span></li>
+                                <li title=".ui-icon-circle-arrow-w"><span class="ui-icon ui-icon-circle-arrow-w"></span></li>
+                                <li title=".ui-icon-circle-arrow-n"><span class="ui-icon ui-icon-circle-arrow-n"></span></li>
+                                <li title=".ui-icon-circle-zoomin"><span class="ui-icon ui-icon-circle-zoomin"></span></li>
+                                <li title=".ui-icon-circle-zoomout"><span class="ui-icon ui-icon-circle-zoomout"></span></li>
+                                <li title=".ui-icon-circle-check"><span class="ui-icon ui-icon-circle-check"></span></li>
+
+                                <li title=".ui-icon-circlesmall-plus"><span class="ui-icon ui-icon-circlesmall-plus"></span></li>
+                                <li title=".ui-icon-circlesmall-minus"><span class="ui-icon ui-icon-circlesmall-minus"></span></li>
+                                <li title=".ui-icon-circlesmall-close"><span class="ui-icon ui-icon-circlesmall-close"></span></li>
+                                <li title=".ui-icon-squaresmall-plus"><span class="ui-icon ui-icon-squaresmall-plus"></span></li>
+                                <li title=".ui-icon-squaresmall-minus"><span class="ui-icon ui-icon-squaresmall-minus"></span></li>
+                                <li title=".ui-icon-squaresmall-close"><span class="ui-icon ui-icon-squaresmall-close"></span></li>
+
+                                <li title=".ui-icon-grip-dotted-vertical"><span class="ui-icon ui-icon-grip-dotted-vertical"></span></li>
+                                <li title=".ui-icon-grip-dotted-horizontal"><span class="ui-icon ui-icon-grip-dotted-horizontal"></span></li>
+                                <li title=".ui-icon-grip-solid-vertical"><span class="ui-icon ui-icon-grip-solid-vertical"></span></li>
+                                <li title=".ui-icon-grip-solid-horizontal"><span class="ui-icon ui-icon-grip-solid-horizontal"></span></li>
+                                <li title=".ui-icon-gripsmall-diagonal-se"><span class="ui-icon ui-icon-gripsmall-diagonal-se"></span></li>
+                                <li title=".ui-icon-grip-diagonal-se"><span class="ui-icon ui-icon-grip-diagonal-se"></span></li>
+                            </ul>
+
+                            <h4>My additions to standard jQuery UI icon set</h4>
+                            <ul class="jquery-ui-icons ui-widget ui-helper-clearfix list--no-bullets">
+                                <li title=".ui-extra-icon-crop"><span class="ui-icon ui-extra-icon-crop"></span></li>
+                                <li title=".ui-extra-icon-arrowreturn-1-s-reversed"><span class="ui-icon ui-extra-icon-arrowreturn-1-s-reversed"></span></li>
+                                <li title=".ui-extra-icon-flip-horizontal"><span class="ui-icon ui-extra-icon-flip-horizontal"></span></li>
+                                <li title=".ui-extra-icon-flip-vertical"><span class="ui-icon ui-extra-icon-flip-vertical"></span></li>
+                                <li title=".ui-extra-icon-code"><span class="ui-icon ui-extra-icon-code"></span></li>
+                                <li title=".ui-extra-icon-list"><span class="ui-icon ui-extra-icon-list"></span></li>
+                                <li title=".ui-extra-icon-grid"><span class="ui-icon ui-extra-icon-grid"></span></li>
+                                <li title=".ui-extra-icon-download"><span class="ui-icon ui-extra-icon-download"></span></li>
+                                <li title=".ui-extra-icon-upload"><span class="ui-icon ui-extra-icon-upload"></span></li>
+                                <li title=".ui-extra-icon-attach"><span class="ui-icon ui-extra-icon-attach"></span></li>
+                                <li title=".ui-extra-icon-new-document"><span class="ui-icon ui-extra-icon-new-document"></span></li>
+                                <li title=".ui-extra-icon-facebook"><span class="ui-icon ui-extra-icon-facebook"></span></li>
+                                <li title=".ui-extra-icon-youtube"><span class="ui-icon ui-extra-icon-youtube"></span></li>
+                                <li title=".ui-extra-icon-linkedin"><span class="ui-icon ui-extra-icon-linkedin"></span></li>
+                                <li title=".ui-extra-icon-twitter"><span class="ui-icon ui-extra-icon-twitter"></span></li>
+                                <li title=".ui-extra-icon-instagram"><span class="ui-icon ui-extra-icon-instagram"></span></li>
+                                <li title=".ui-extra-icon-github"><span class="ui-icon ui-extra-icon-github"></span></li>
+                                <li title=".ui-extra-icon-gitlab"><span class="ui-icon ui-extra-icon-gitlab"></span></li>
+                                <li title=".ui-extra-icon-bitbucket"><span class="ui-icon ui-extra-icon-bitbucket"></span></li>
+                            </ul>
+
+                            <h4>Icons inline with text</h4>
+                            <p>Lorem ipsum dolor sit amet, <span class="ui-icon ui-icon-search">Search</span> consectetuer adipiscing elit.</p>
+
+                            <h4>Icons in a (plain) list</h4>
+                            <ul class="list--no-bullets">
+                                <li><span class="ui-icon ui-icon-clock"></span> List item 1</li>
+                                <li><span class="ui-icon ui-icon-star"></span> List item 2</li>
+                                <li><span class="ui-icon ui-extra-icon-list"></span> List item 3</li>
+                                <li><span class="ui-icon ui-extra-icon-grid"></span> List item 4</li>
+                                <li><span class="ui-icon ui-icon-notice"></span> List item 5</li>
+                            </ul>
+
+                            <h4>Icons in a (plain) list as links</h4>
+                            <ul class="list--no-bullets">
+                                <li><a href="#"><span class="ui-icon ui-icon-clock"></span> List item 1</a></li>
+                                <li><a href="#"><span class="ui-icon ui-icon-star"></span> List item 2</a></li>
+                                <li><a href="#"><span class="ui-icon ui-extra-icon-list"></span> List item 3</a></li>
+                                <li><a href="#"><span class="ui-icon ui-extra-icon-grid"></span> List item 4</a></li>
+                                <li><a href="#"><span class="ui-icon ui-icon-notice"></span> List item 5</a></li>
+                            </ul>
+
+                            <h4>Icon colour states</h4>
+                            <ul class="list--no-bullets">
+                                <li class="success"><span class="ui-icon ui-icon-check"></span> Success text.</li>
+                                <li class="warning"><span class="ui-icon ui-icon-alert"></span> Warning text.</li>
+                                <li class="error"><span class="ui-icon ui-icon-closethick"></span> Error text.</li>
+                                <li class="information"><span class="ui-icon ui-icon-info"></span> Information text.</li>
+                            </ul>
+
+                        </section>
+
+
+                        <section class="section" id="section-misc">
+                            <h2>Miscellaneous</h2>
+
+                            <h3>Loading spinner</h3>
+                            <p><span class="spin ui-icon ui-icon-refresh"></span></p>
+
+                            <h3>Spin any element</h3>
+                            <p>Via <a rel="external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation">CSS3 Animation</a>.</p>
+                            <p><img class="spin" src="mockups/img/hi.png" alt="Hello world!" itemprop="image"></p>
+                        </section>
+
+
+                    </div><!-- /itemprop=articleBody -->
+
+                </article>
+
+            </main>
+        </div><!-- /.container -->
+    </div><!-- /.wrapper -->
+
+<!-- Footer -->
+    <footer class="site-footer">
+        <p>
+            <small>
+                Copyright
+                <!-- possible schema types: Organization, Corporation, etc (see https://schema.org/Organization for more info) -->
+                <span itemscope itemtype="https://schema.org/Organization">
+                    <span itemprop="name">Organisation Name</span>
+                </span>
+            </small>
+        </p>
+    </footer>
+
+<!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="assets/js/app.js"></script>
+    <noscript>JavaScript is currently disabled in your browser - please activate it for the best experience.</noscript>
+
+<!-- Examples of jQuery UI -->
+    <script src="mockups/mockups.js"></script>
+
+</body>
+</html>
