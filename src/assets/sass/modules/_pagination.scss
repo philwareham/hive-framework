@@ -14,28 +14,19 @@
  */
 
 .paginator {
+    display: flex;
+    justify-content: space-between;
     margin: 1em 0;
     padding-top: 1em;
     clear: both;
     border-top: 1px dashed var(--color-border);
-    text-align: center;
 
-    [rel="prev"] {
-        margin: 0 1em 0 0;
-        float: left;
-
-        &::before {
-            content: "\2190" "\00A0";
-        }
+    [rel="prev"]::before {
+        content: "\2190" "\00A0";
     }
 
-    [rel="next"] {
-        margin: 0 0 0 1em;
-        float: right;
-
-        &::after {
-            content: "\00A0" "\2192";
-        }
+    [rel="next"]::after {
+        content: "\00A0" "\2192";
     }
 }
 
@@ -57,26 +48,26 @@
  */
 
 .pagination {
-    display: inline-block;
-    margin: 0;
+    flex-grow: 1;
+    margin: 0 0.5em; // 8px / 16px
     padding: 0;
     list-style: none;
+    text-align: center;
 
     li {
-        float: left;
-        border: 1px solid var(--color-background);
+        display: inline-block;
 
-        &.current {
-            border-color: var(--color-border);
-            background-color: var(--color-background-box);
+        &.current b {
+            text-decoration: underline;
+            text-decoration-color: var(--color-text-footnote);
+            text-underline-offset: 0.5rem;
         }
     }
 
     a,
     b {
         display: block;
-        min-width: 1.25em;
-        padding: 0 0.1875em; // 3px / 16px
+        padding: 0 0.5em; // 8px / 16px
     }
 
     b {
