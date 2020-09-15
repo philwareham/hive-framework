@@ -10,7 +10,7 @@
 menu,
 ol,
 ul {
-    padding: 0 0 0 2em;
+    padding-inline-start: 2em;
 }
 
 /**
@@ -37,7 +37,7 @@ li::marker {
  */
 
 dd {
-    margin: 0 0 0 2em;
+    margin-inline-start: 2em;
 }
 
 /**
