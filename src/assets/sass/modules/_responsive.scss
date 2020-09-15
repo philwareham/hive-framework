@@ -173,7 +173,7 @@
 
     .site-header {
         width: auto;
-        margin: 0 0 0 6%;
+        margin-inline-start: 6%;
     }
 
     /**
@@ -181,7 +181,7 @@
      */
 
     #site-navigation {
-        margin: 0 6% 0 0;
+        margin-inline-end: 6%;
 
         .js & {
             max-height: none;

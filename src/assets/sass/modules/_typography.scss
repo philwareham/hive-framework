@@ -75,11 +75,11 @@ section,
 table,
 ul {
     &.align-left {
-        text-align: left; // TODO: use CSS Text Module Level 3 `start` value when browser support is widespread.
+        text-align: left;
     }
 
     &.align-right {
-        text-align: right; // TODO: use CSS Text Module Level 3 `end` value when browser support is widespread.
+        text-align: right;
     }
 
     &.align-center {
