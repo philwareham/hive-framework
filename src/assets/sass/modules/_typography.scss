@@ -12,6 +12,23 @@ html {
     line-height: setup.$line-height-mobile;
 }
 
+@if setup.$internationalization {
+    /**
+     * Bidirectional (bidi) text support for non-latin languages.
+     * See: https://www.w3.org/International/articles/inline-bidi-markup/#cssshim
+     */
+
+    [dir="ltr"],
+    [dir="rtl"] {
+        unicode-bidi: isolate;
+    }
+
+    bdo[dir="ltr"],
+    bdo[dir="rtl"] {
+        unicode-bidi: isolate-override;
+    }
+}
+
 /**
  * Global font and text colour.
  *

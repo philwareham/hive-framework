@@ -154,10 +154,6 @@
     @include meta.load-css("modules/comments");
     @include meta.load-css("modules/cards");
 
-    @if setup.$internationalization {
-        @include meta.load-css("modules/internationalization");
-    }
-
     @if setup.$use-jquery-ui {
         // jQuery UI core
 

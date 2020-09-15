@@ -30,6 +30,22 @@
     }
 }
 
+@if setup.$internationalization {
+    /**
+     * Swap prev/next arrows in RTL languages.
+     */
+
+    .paginator {
+        [rel="prev"]::before {
+            content: "\2192" "\00A0";
+        }
+
+        [rel="next"]::after {
+            content: "\00A0" "\2190";
+        }
+    }
+}
+
 /**
  * Numerical pagination link lists.
  *
