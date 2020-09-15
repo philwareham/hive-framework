@@ -90,27 +90,23 @@ $colors: (
  */
 
 .jquery-ui-icons li {
-    position: relative;
-    margin: 2px;
-    padding: 4px 0;
-    float: left;
+    display: inline-block;
+    padding: 0.25em;
     list-style: none;
-    cursor: pointer;
-}
-
-.jquery-ui-icons .ui-icon {
-    margin: 0 4px;
-    float: left;
 }
 
 /**
  * The vertical slider example.
  */
 
-.jquery-ui-slider-vertical span {
-    height: 120px;
-    margin: 15px;
-    float: left;
+.jquery-ui-slider-vertical {
+    display: flex;
+
+    span {
+        display: block;
+        height: 120px;
+        margin: 0 1rem;
+    }
 }
 
 /**

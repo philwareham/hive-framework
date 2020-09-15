@@ -23,7 +23,6 @@
     box-sizing: border-box;
     border-color: var(--color-border);
     background-color: var(--color-background-box);
-    text-align: left;
 
     &:hover {
         border-color: var(--color-border-extra-dark);
@@ -121,7 +120,7 @@
     height: 100px;
 
     .ui-slider-handle {
-        left: -1.25em;
+        left: -1.3125em;
         margin-bottom: -0.5em;
     }
 

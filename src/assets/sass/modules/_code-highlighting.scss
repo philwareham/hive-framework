@@ -134,7 +134,7 @@ pre.line-numbers > code {
     display: block;
     padding-right: 0.8em;
     color: var(--color-text-footnote);
-    text-align: right;
+    text-align: end;
 }
 
 @include setup.dark-mode {

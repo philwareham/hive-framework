@@ -1,3 +1,12 @@
+// Support non-latin languages?
+$internationalization: true; // true/false
+
+// Support for jQuery UI elements?
+$use-jquery-ui: true; // true/false
+
+// Support for icons (overrode by $use-jquery-ui above)?
+//$use-icons: true; // true/false
+
 @use "sass:meta";
 @use "setup";
 
@@ -154,37 +163,45 @@
     @include meta.load-css("modules/comments");
     @include meta.load-css("modules/cards");
 
-    // jQuery UI core
+    @if $internationalization {
+        @include meta.load-css("modules/internationalization");
+    }
 
-    @include meta.load-css("modules/jquery-ui/core");
+    @if $use-jquery-ui {
+        // jQuery UI core
 
-    // jQuery UI icons
+        @include meta.load-css("modules/jquery-ui/core");
 
-    @include meta.load-css("modules/jquery-ui/icons");
+        // jQuery UI icons
 
-    // jQuery UI interactions
+        @include meta.load-css("modules/jquery-ui/icons");
 
-    @include meta.load-css("modules/jquery-ui/draggable");
-    @include meta.load-css("modules/jquery-ui/resizable");
-    @include meta.load-css("modules/jquery-ui/selectable");
-    @include meta.load-css("modules/jquery-ui/sortable");
+        // jQuery UI interactions
 
-    // jQuery UI widgets
+        @include meta.load-css("modules/jquery-ui/draggable");
+        @include meta.load-css("modules/jquery-ui/resizable");
+        @include meta.load-css("modules/jquery-ui/selectable");
+        @include meta.load-css("modules/jquery-ui/sortable");
 
-    @include meta.load-css("modules/jquery-ui/accordion");
-    @include meta.load-css("modules/jquery-ui/autocomplete");
-    @include meta.load-css("modules/jquery-ui/button");
-    @include meta.load-css("modules/jquery-ui/checkboxradio");
-    @include meta.load-css("modules/jquery-ui/controlgroup");
-    @include meta.load-css("modules/jquery-ui/datepicker");
-    @include meta.load-css("modules/jquery-ui/dialog");
-    @include meta.load-css("modules/jquery-ui/menu");
-    @include meta.load-css("modules/jquery-ui/progressbar");
-    @include meta.load-css("modules/jquery-ui/selectmenu");
-    @include meta.load-css("modules/jquery-ui/slider");
-    @include meta.load-css("modules/jquery-ui/spinner");
-    @include meta.load-css("modules/jquery-ui/tabs");
-    @include meta.load-css("modules/jquery-ui/tooltip");
+        // jQuery UI widgets
+
+        @include meta.load-css("modules/jquery-ui/accordion");
+        @include meta.load-css("modules/jquery-ui/autocomplete");
+        @include meta.load-css("modules/jquery-ui/button");
+        @include meta.load-css("modules/jquery-ui/checkboxradio");
+        @include meta.load-css("modules/jquery-ui/controlgroup");
+        @include meta.load-css("modules/jquery-ui/datepicker");
+        @include meta.load-css("modules/jquery-ui/dialog");
+        @include meta.load-css("modules/jquery-ui/menu");
+        @include meta.load-css("modules/jquery-ui/progressbar");
+        @include meta.load-css("modules/jquery-ui/selectmenu");
+        @include meta.load-css("modules/jquery-ui/slider");
+        @include meta.load-css("modules/jquery-ui/spinner");
+        @include meta.load-css("modules/jquery-ui/tabs");
+        @include meta.load-css("modules/jquery-ui/tooltip");
+    } @else if $use-icons {
+        @include meta.load-css("modules/jquery-ui/icons");
+    }
 }
 
 
@@ -193,6 +210,10 @@
    ========================================================================== */
 
 @include meta.load-css("modules/responsive");
+
+@if $use-jquery-ui {
+    @include meta.load-css("modules/jquery-ui/responsive");
+}
 
 
 /* ==========================================================================
