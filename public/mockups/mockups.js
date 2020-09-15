@@ -1,8 +1,18 @@
+$.uiBackCompat = false;
+
 // This example file is used to demonstrate all available jQuery UI components
 // on the design patterns page.
 
+// Ascertain the page direction (LTR or RTL).
+var langdir = document.documentElement.dir;
+
 $(function()
 {
+    // Spoof RTL on English language `label` tags.
+    // This isn't needed when viewing in proper RTL languages.
+
+    $('[dir="rtl"] label').attr('dir', 'rtl');
+
     // jQuery UI interactions.
 
     // Draggable.
@@ -13,9 +23,16 @@ $(function()
 
     // Resizable.
 
-    $('.jquery-ui-resizable').resizable({
-        minWidth: 200
-    });
+    if (langdir === 'rtl') {
+        $('.jquery-ui-resizable').resizable({
+            handles: 'w, s, sw',
+            minWidth: 200
+        });
+    } else {
+        $('.jquery-ui-resizable').resizable({
+            minWidth: 200
+        });
+    };
 
     // Selectable.
 
@@ -34,6 +51,16 @@ $(function()
 
     $('.jquery-ui-accordion').accordion({
         header: 'h3'
+    });
+
+    // Accordion RTL.
+    // Flip positioning of accordion state icons when in RTL langauges.
+
+    $('[dir="rtl"] .jquery-ui-accordion').accordion({
+        icons: {
+            'header': 'ui-icon-triangle-1-w',
+            'activeHeader': 'ui-icon-triangle-1-s'
+        }
     });
 
     // Autocomplete.
@@ -128,11 +155,23 @@ $(function()
 
     // Menu.
 
-    $('.jquery-ui-menu').menu({
-        position: {
-            at: 'right top-1'
-        }
-    });
+    if (langdir === 'rtl') {
+        $('.jquery-ui-menu').menu({
+            position: {
+                my: 'right top',
+                at: 'left top-1'
+            },
+            icons: {
+                submenu: 'ui-icon-caret-1-w'
+            }
+        });
+    } else {
+        $('.jquery-ui-menu').menu({
+            position: {
+                at: 'right top-1'
+            }
+        });
+    };
 
     // Progressbar.
 
@@ -157,7 +196,16 @@ $(function()
 
     // Selectmenu.
 
-    $('.jquery-ui-selectmenu').selectmenu();
+    if (langdir === 'rtl') {
+        $('.jquery-ui-selectmenu').selectmenu({
+            position: {
+                my: 'left top',
+                at: 'right bottom'
+            }
+        });
+    } else {
+        $('.jquery-ui-selectmenu').selectmenu();
+    };
 
     // Slider - horizontal.
 

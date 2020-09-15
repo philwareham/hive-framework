@@ -32,12 +32,12 @@ nav ol,
    ========================================================================== */
 
 /**
- * 1. Prevent adjustments of font size after orientation changes in
- *    IE on Windows Phone and in iOS.
+ * 1. Prevent adjustments of font size after orientation changes in iOS.
  */
 
 html {
     text-size-adjust: 100%; /* 1 */
+    scroll-padding-top: 1rem;
 }
 
 /**
@@ -49,7 +49,6 @@ body {
     position: relative; /* 1 */
     margin: 0; /* 2 */
     background: var(--color-background-box);
-    scroll-behavior: smooth; // https://caniuse.com/#search=scroll-behavior
 }
 
 /**
@@ -179,16 +178,9 @@ article {
 }
 
 /**
- * Extra pad above sections, useful when used as page anchors.
+ * Extra pad above sections.
  */
 
 .section {
     margin-top: 2em;
-
-    &::before {
-        content: "";
-        display: block;
-        height: 2em;
-        margin: -2em 0 0;
-    }
 }
