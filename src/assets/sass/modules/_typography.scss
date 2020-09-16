@@ -274,6 +274,7 @@ samp {
     font-size: setup.$code-font-size;
     line-height: setup.$line-height-mobile;
     text-align: left;
+    unicode-bidi: isolate;
 }
 
 code,
