@@ -69,15 +69,6 @@ module.exports = function (grunt)
                         dest: '<%= paths.dest.fonts %>'
                     }
                 ]
-            },
-            // Copy Slick icon font to CSS folder (because Slick's CSS expects relative path to this).
-            css: {
-                files: [
-                    {
-                        src: 'node_modules/slick-carousel/slick/fonts/slick.woff',
-                        dest: '<%= paths.dest.css %>fonts/slick.woff'
-                    }
-                ]
             }
         },
 
@@ -181,7 +172,7 @@ module.exports = function (grunt)
 
     // Register tasks.
     grunt.registerTask('build', ['clean', 'concurrent', 'uglify']);
-    grunt.registerTask('css', ['stylelint', 'sass', 'postcss', 'copy:css']);
+    grunt.registerTask('css', ['stylelint', 'sass', 'postcss']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('travis', ['build']);
 };
