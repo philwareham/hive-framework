@@ -280,12 +280,12 @@
         }
 
         .ui-datepicker-buttonpane button {
-            float: left;
+            float: left; // TODO: Use `float: inline-start` when browser support is better.
         }
 
         .ui-datepicker-buttonpane button.ui-datepicker-current,
         .ui-datepicker-group {
-            float: right;
+            float: right; // TODO: Use `float: inline-end` when browser support is better.
         }
     }
 }
