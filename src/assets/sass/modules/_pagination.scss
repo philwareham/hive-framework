@@ -35,7 +35,7 @@
      * Swap prev/next arrows in RTL languages.
      */
 
-    .paginator {
+    [dir="rtl"] .paginator {
         [rel="prev"]::before {
             content: "\2192" "\00A0";
         }
