@@ -141,3 +141,21 @@
         border-color: var(--color-button-selected-border);
     }
 }
+
+/**
+ * Checkboxes as buttons - disabled state.
+ */
+
+.ui-checkboxradio-disabled {
+    border: 1px solid var(--color-border) !important;
+    opacity: 0.33 !important;
+    background-color: var(--color-background-form-disabled) !important;
+    box-shadow: none !important;
+    cursor: default !important; /* 1 */
+}
+
+@include setup.dark-mode {
+    .ui-checkboxradio-disabled {
+        opacity: 0.25 !important;
+    }
+}

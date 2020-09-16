@@ -8,82 +8,63 @@
  * 2. Correct margins for inline checkbox/radio labels.
  */
 
-[type="checkbox"]:not(.ui-checkboxradio),
-[type="radio"]:not(.ui-checkboxradio) {
-    position: relative;
-    bottom: -2px;
-    box-sizing: border-box;
-    width: 16px;
-    height: 16px;
-    padding: 0; /* 1 */
-    border: 1px solid var(--color-border-extra-dark);
-    background: var(--color-background-form);
-    appearance: none;
-
-    + label:not(.ui-controlgroup-item) {
-        margin-inline-end: 0.5em; /* 2 */
-
-        &:last-of-type {
-            margin: 0; /* 2 */
-        }
-    }
-
-    &:hover {
-        filter: brightness(1.05);
-        cursor: pointer;
-    }
-
-    &:active {
-        filter: brightness(0.95);
-    }
-
-    &:focus {
-        border-color: var(--color-link-focus);
-        outline: 2px solid transparent; // Allows for repainting in high contrast modes.
-    }
-
-    &:not([disabled]) + label:hover {
-        cursor: pointer;
-    }
-}
-
-@include setup.dark-mode {
+@if setup.$use-jquery-ui {
     [type="checkbox"]:not(.ui-checkboxradio),
     [type="radio"]:not(.ui-checkboxradio) {
-        &:hover {
-            border-color: var(--color-border-extra-light);
+        position: relative;
+        bottom: -2px;
+        box-sizing: border-box;
+        width: 16px;
+        height: 16px;
+        padding: 0; /* 1 */
+        border: 1px solid var(--color-border-extra-dark);
+        background: var(--color-background-form);
+        appearance: none;
+
+        + label:not(.ui-controlgroup-item) {
+            margin-inline-end: 0.5em; /* 2 */
+
+            &:last-of-type {
+                margin: 0; /* 2 */
+            }
         }
-    }
-}
 
-[type="checkbox"]:not(.ui-checkboxradio) {
-    &:checked {
-        border: 0;
-        background: var(--color-text-footnote) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+        &:hover {
+            filter: brightness(1.05);
+            cursor: pointer;
+        }
 
-        &:hover,
         &:active {
-            background-color: var(--color-text);
+            filter: brightness(0.95);
         }
 
         &:focus {
-            background-color: var(--color-link-focus);
+            border-color: var(--color-link-focus);
+            outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+        }
+
+        &:not([disabled]) + label:hover {
+            cursor: pointer;
         }
     }
 
-    &[disabled]:checked {
-        background: var(--color-text-footnote) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E") !important;
+    @include setup.dark-mode {
+        [type="checkbox"]:not(.ui-checkboxradio),
+        [type="radio"]:not(.ui-checkboxradio) {
+            &:hover {
+                border-color: var(--color-border-extra-light);
+            }
+        }
     }
-}
 
-@include setup.dark-mode {
     [type="checkbox"]:not(.ui-checkboxradio) {
         &:checked {
-            background: var(--color-text) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+            border: 0;
+            background: var(--color-text-footnote) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
 
             &:hover,
             &:active {
-                background-color: var(--color-text-heading);
+                background-color: var(--color-text);
             }
 
             &:focus {
@@ -92,37 +73,177 @@
         }
 
         &[disabled]:checked {
-            background: var(--color-text) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E") !important;
+            background: var(--color-text-footnote) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E") !important;
         }
     }
-}
 
-[type="radio"]:not(.ui-checkboxradio) {
-    border-radius: 100%;
+    @include setup.dark-mode {
+        [type="checkbox"]:not(.ui-checkboxradio) {
+            &:checked {
+                background: var(--color-text) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
 
-    &:checked {
-        border: 5px solid var(--color-text-footnote);
+                &:hover,
+                &:active {
+                    background-color: var(--color-text-heading);
+                }
 
-        &:hover,
+                &:focus {
+                    background-color: var(--color-link-focus);
+                }
+            }
+
+            &[disabled]:checked {
+                background: var(--color-text) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E") !important;
+            }
+        }
+    }
+
+    [type="radio"]:not(.ui-checkboxradio) {
+        border-radius: 100%;
+
+        &:checked {
+            border: 5px solid var(--color-text-footnote);
+
+            &:hover,
+            &:active {
+                border-color: var(--color-text);
+            }
+
+            &:focus {
+                border-color: var(--color-link-focus);
+            }
+        }
+    }
+
+    @include setup.dark-mode {
+        [type="radio"]:not(.ui-checkboxradio):checked {
+            &:hover,
+            &:active {
+                border-color: var(--color-text-heading);
+            }
+
+            &:focus {
+                border-color: var(--color-link-focus);
+            }
+        }
+    }
+} @else {
+    [type="checkbox"],
+    [type="radio"] {
+        position: relative;
+        bottom: -2px;
+        box-sizing: border-box;
+        width: 16px;
+        height: 16px;
+        padding: 0; /* 1 */
+        border: 1px solid var(--color-border-extra-dark);
+        background: var(--color-background-form);
+        appearance: none;
+
+        + label {
+            margin-inline-end: 0.5em; /* 2 */
+
+            &:last-of-type {
+                margin: 0; /* 2 */
+            }
+        }
+
+        &:hover {
+            filter: brightness(1.05);
+            cursor: pointer;
+        }
+
         &:active {
-            border-color: var(--color-text);
+            filter: brightness(0.95);
         }
 
         &:focus {
             border-color: var(--color-link-focus);
+            outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+        }
+
+        &:not([disabled]) + label:hover {
+            cursor: pointer;
         }
     }
-}
 
-@include setup.dark-mode {
-    [type="radio"]:not(.ui-checkboxradio):checked {
-        &:hover,
-        &:active {
-            border-color: var(--color-text-heading);
+    @include setup.dark-mode {
+        [type="checkbox"],
+        [type="radio"] {
+            &:hover {
+                border-color: var(--color-border-extra-light);
+            }
+        }
+    }
+
+    [type="checkbox"] {
+        &:checked {
+            border: 0;
+            background: var(--color-text-footnote) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+
+            &:hover,
+            &:active {
+                background-color: var(--color-text);
+            }
+
+            &:focus {
+                background-color: var(--color-link-focus);
+            }
         }
 
-        &:focus {
-            border-color: var(--color-link-focus);
+        &[disabled]:checked {
+            background: var(--color-text-footnote) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E") !important;
+        }
+    }
+
+    @include setup.dark-mode {
+        [type="checkbox"] {
+            &:checked {
+                background: var(--color-text) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+
+                &:hover,
+                &:active {
+                    background-color: var(--color-text-heading);
+                }
+
+                &:focus {
+                    background-color: var(--color-link-focus);
+                }
+            }
+
+            &[disabled]:checked {
+                background: var(--color-text) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E") !important;
+            }
+        }
+    }
+
+    [type="radio"] {
+        border-radius: 100%;
+
+        &:checked {
+            border: 5px solid var(--color-text-footnote);
+
+            &:hover,
+            &:active {
+                border-color: var(--color-text);
+            }
+
+            &:focus {
+                border-color: var(--color-link-focus);
+            }
+        }
+    }
+
+    @include setup.dark-mode {
+        [type="radio"]:checked {
+            &:hover,
+            &:active {
+                border-color: var(--color-text-heading);
+            }
+
+            &:focus {
+                border-color: var(--color-link-focus);
+            }
         }
     }
 }
