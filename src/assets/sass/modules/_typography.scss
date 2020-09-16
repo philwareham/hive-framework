@@ -5,11 +5,14 @@
 
 /**
  * Establish baseline.
+ *
+ * 1. Prevent adjustments of font size after orientation changes in iOS.
  */
 
 html {
     font-size: setup.$base-font-size;
     line-height: setup.$line-height-mobile;
+    text-size-adjust: 100%; /* 1 */
 }
 
 @if setup.$internationalization {

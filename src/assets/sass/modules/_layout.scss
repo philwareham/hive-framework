@@ -32,12 +32,11 @@ nav ol,
    ========================================================================== */
 
 /**
- * 1. Prevent adjustments of font size after orientation changes in iOS.
+ * 1. Add some breathing space above page anchors.
  */
 
 html {
-    text-size-adjust: 100%; /* 1 */
-    scroll-padding-top: 1rem;
+    scroll-padding-top: 1rem; /* 1 */
 }
 
 /**
