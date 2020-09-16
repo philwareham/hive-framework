@@ -133,12 +133,24 @@ input.ui-button.ui-button-icon-only {
     border-radius: 0 setup.$border-radius setup.$border-radius 0;
 }
 
+@if setup.$internationalization {
+    [dir="rtl"] .ui-button.ui-corner-right {
+        border-radius: setup.$border-radius 0 0 setup.$border-radius;
+    }
+}
+
 /**
  * Button rounded corners on left only.
  */
 
 .ui-button.ui-corner-left {
     border-radius: setup.$border-radius 0 0 setup.$border-radius;
+}
+
+@if setup.$internationalization {
+    [dir="rtl"] .ui-button.ui-corner-left {
+        border-radius: 0 setup.$border-radius setup.$border-radius 0;
+    }
 }
 
 /**

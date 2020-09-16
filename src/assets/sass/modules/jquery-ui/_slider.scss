@@ -23,6 +23,7 @@
     box-sizing: border-box;
     border-color: var(--color-border);
     background-color: var(--color-background-box);
+    text-align: start;
 
     &:hover {
         border-color: var(--color-border-extra-dark);

@@ -129,3 +129,31 @@ progress[value="1"]::-moz-progress-bar {
     background: var(--color-success-background);
     color: var(--color-success-text);
 }
+
+@if setup.$internationalization {
+    /**
+     * Reverse the progress direction in RTL languages.
+     */
+
+    // WebKit/Blink.
+
+    [dir="rtl"] progress::-webkit-progress-value {
+        animation-direction: reverse;
+    }
+
+    [dir="rtl"] progress:indeterminate::-webkit-progress-bar {
+        animation-direction: reverse;
+    }
+
+    // Gecko/Quantum.
+
+    [dir="rtl"] progress::-moz-progress-bar {
+        /* autoprefixer: off */
+        animation-direction: reverse;
+    }
+
+    [dir="rtl"] progress::-moz-progress-bar {
+        /* autoprefixer: off */
+        animation-direction: reverse;
+    }
+}

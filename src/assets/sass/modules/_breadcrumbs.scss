@@ -39,6 +39,16 @@
     content: "\00A0" "\2192" "\00A0";
 }
 
+@if setup.$internationalization {
+    /**
+     * Flip the arrow direction for RTL languages.
+     */
+
+    [dir="rtl"] .breadcrumbs > li + li::before {
+        content: "\00A0" "\2190" "\00A0";
+    }
+}
+
 /**
  * Path-like breadcrumb styling.
  */

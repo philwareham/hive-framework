@@ -81,6 +81,7 @@
     }
 
     .ui-menu-item {
+        display: block;
         margin: 0;
         list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"); /* 2 */
         cursor: pointer;
@@ -93,7 +94,7 @@
 
     .ui-menu-item-wrapper {
         position: relative;
-        padding: 0.25em 1em 0.25em 0.5em; // 4px / 16px + 8px / 16px
+        padding: 0.25em 0.5em; // 4px / 16px + 8px / 16px
     }
 
     .ui-menu-divider {
@@ -142,5 +143,27 @@
 
     .ui-menu-item-wrapper {
         padding-left: 2em;
+    }
+}
+
+@if setup.$internationalization {
+    /**
+     * Menu RTL support.
+     */
+
+    [dir="rtl"] .ui-menu {
+        // left-aligned (flipped to right)
+
+        .ui-icon {
+            right: 0.25em;
+            left: auto;
+        }
+
+        // right-aligned (flipped to left)
+
+        .ui-menu-icon {
+            right: auto;
+            left: 0;
+        }
     }
 }

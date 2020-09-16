@@ -60,6 +60,19 @@
 
     .ui-accordion-icons,
     .ui-accordion-icons .ui-accordion-icons {
-        padding-left: 2em;
+        padding-inline-start: 2em;
+    }
+}
+
+@if setup.$internationalization {
+    /**
+     * Accordion RTL support.
+     */
+
+    [dir="rtl"] .ui-accordion {
+        .ui-accordion-header .ui-accordion-header-icon {
+            right: 0.5em;
+            left: auto;
+        }
     }
 }

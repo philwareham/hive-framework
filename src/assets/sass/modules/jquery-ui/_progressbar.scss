@@ -104,3 +104,13 @@
             );
     }
 }
+
+@if setup.$internationalization {
+    /**
+     * Reverse the progressbar direction in RTL languages.
+     */
+
+    [dir="rtl"] .ui-progressbar-value, {
+        animation-direction: reverse;
+    }
+}

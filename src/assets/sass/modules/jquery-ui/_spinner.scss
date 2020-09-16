@@ -34,7 +34,7 @@
     vertical-align: baseline;
 
     .ui-spinner-input {
-        padding-right: 24px;
+        padding-inline-end: 24px;
     }
 }
 
@@ -66,5 +66,18 @@
     &:active {
         top: inherit;
         bottom: 0;
+    }
+}
+
+@if setup.$internationalization {
+    /**
+     * Spinner RTL support.
+     */
+
+    [dir="rtl"] {
+        .ui-spinner-button {
+            right: auto;
+            left: 0;
+        }
     }
 }

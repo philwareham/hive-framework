@@ -182,12 +182,12 @@
             width: auto;
             margin: 0.5em 0.25em;
             padding: 0.25em 0.5em;
-            float: right;
+            float: right; // TODO: Use `float: inline-end` when browser support is better.
             overflow: visible;
             cursor: pointer;
 
             &.ui-datepicker-current {
-                float: left;
+                float: left; // TODO: Use `float: inline-start` when browser support is better.
             }
         }
     }
@@ -215,7 +215,7 @@
 
 .ui-datepicker-multi {
     .ui-datepicker-group {
-        float: left;
+        float: left; // TODO: Use `float: inline-start` when browser support is better.
 
         table {
             width: 95%;
@@ -225,7 +225,7 @@
 
     .ui-datepicker-group-last .ui-datepicker-header,
     .ui-datepicker-group-middle .ui-datepicker-header {
-        border-left-width: 0;
+        border-inline-start-width: 0;
     }
 
     .ui-datepicker-buttonpane {
@@ -249,4 +249,43 @@
     width: 100%;
     clear: both;
     font-size: 0;
+}
+
+@if setup.$internationalization {
+    /**
+     * Datepicker RTL support.
+     */
+
+    [dir="rtl"] {
+        .ui-datepicker-prev {
+            right: 0.2em;
+            left: auto;
+
+            span {
+                transform: rotate(180deg);
+            }
+        }
+
+        .ui-datepicker-next {
+            right: auto;
+            left: 0.2em;
+
+            span {
+                transform: rotate(180deg);
+            }
+        }
+
+        .ui-datepicker-buttonpane {
+            clear: right;
+        }
+
+        .ui-datepicker-buttonpane button {
+            float: left;
+        }
+
+        .ui-datepicker-buttonpane button.ui-datepicker-current,
+        .ui-datepicker-group {
+            float: right;
+        }
+    }
 }

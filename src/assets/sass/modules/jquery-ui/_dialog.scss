@@ -58,10 +58,16 @@
     .ui-dialog-title {
         width: 90%;
         margin: 0.125em 0; // 2px / 16px
-        float: left;
+        float: left; // TODO: Use `float: inline-start` when browser support is better.
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+
+        @if setup.$internationalization {
+            [dir="rtl"] & {
+                float: right; // TODO: Use `float: inline-end` when browser support is better.
+            }
+        }
     }
 
     .ui-dialog-titlebar-close {
@@ -72,6 +78,13 @@
         transform: translate(0, -50%);
         border-color: var(--color-border);
         box-shadow: none;
+
+        @if setup.$internationalization {
+            [dir="rtl"] & {
+                right: auto;
+                left: 0.25em;
+            }
+        }
 
         &:hover {
             filter: brightness(1.05);
@@ -100,11 +113,23 @@
         padding: 0.5em;
         border-width: 1px 0 0;
         background-image: none;
-        text-align: left;
+        text-align: start;
     }
 
     .ui-dialog-buttonpane .ui-dialog-buttonset {
-        float: right;
+        float: right; // TODO: Use `float: inline-end` when browser support is better.
+
+        @if setup.$internationalization {
+            [dir="rtl"] & {
+                float: left; // TODO: Use `float: inline-start` when browser support is better.
+            }
+        }
+    }
+
+    .ui-dialog-buttonpane button {
+        margin: 0.5em 0;
+        margin-inline-end: 0.4em;
+        cursor: pointer;
     }
 }
 
