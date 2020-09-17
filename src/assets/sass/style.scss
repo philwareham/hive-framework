@@ -8,117 +8,116 @@
 
 :root {
     // font families
-    --font-serif:         source-serif-pro, Georgia, serif;
-    --font-serif-vf:      source-serif-pro-vf, Georgia, serif;
-    --font-sans-serif:    source-sans-pro, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --font-sans-serif-vf: source-sans-pro-vf, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --font-form:          source-sans-pro, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --font-form-vf:       source-sans-pro-vf, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --font-code:          Menlo, Consolas, Monaco, monospace;
-    --font-print:         "Helvetica Neue", sans-serif;
+    --font-serif:         #{meta.inspect(setup.$font-serif)};
+    --font-serif-vf:      #{meta.inspect(setup.$font-serif-vf)};
+    --font-sans-serif:    #{meta.inspect(setup.$font-sans-serif)};
+    --font-sans-serif-vf: #{meta.inspect(setup.$font-sans-serif-vf)};
+    --font-form:          #{meta.inspect(setup.$font-form)};
+    --font-form-vf:       #{meta.inspect(setup.$font-form-vf)};
+    --font-code:          #{meta.inspect(setup.$font-code)};
+    --font-print:         #{meta.inspect(setup.$font-print)};
     // text colours
-    --color-text:                      hsl(0, 0%, 20%);
-    --color-text-heading:              hsl(0, 0%, 0%);
-    --color-text-heading-a50:          hsla(0, 0%, 0%, 0.5);
-    --color-text-button:               hsl(0, 0%, 0%);
-    --color-text-form:                 hsl(0, 0%, 0%);
-    --color-text-form-placeholder:     hsl(0, 0%, 60%);
-    --color-text-footnote:             hsl(0, 0%, 35%);
-    --color-text-white-out:            hsl(0, 0%, 100%);
+    --color-text:                      #{setup.$color-text};
+    --color-text-heading:              #{setup.$color-text-heading};
+    --color-text-heading-a50:          #{setup.$color-text-heading-a50};
+    --color-text-button:               #{setup.$color-text-button};
+    --color-text-form:                 #{setup.$color-text-form};
+    --color-text-form-placeholder:     #{setup.$color-text-form-placeholder};
+    --color-text-footnote:             #{setup.$color-text-footnote};
+    --color-text-white-out:            #{setup.$color-text-white-out};
     // interaction colours
-    --color-link:                      hsl(216, 100%, 37%);
-    --color-link-hover:                hsl(216, 100%, 50%);
-    --color-link-focus:                hsl(216, 100%, 50%);
-    --color-selecting:                 hsl(216, 100%, 90%);
-    --color-selected:                  hsl(216, 100%, 95%);
+    --color-link:                      #{setup.$color-link};
+    --color-link-hover:                #{setup.$color-link-hover};
+    --color-link-focus:                #{setup.$color-link-focus};
+    --color-selecting:                 #{setup.$color-selecting};
+    --color-selected:                  #{setup.$color-selected};
     // neutral colours
-    --color-background:                hsl(0, 0%, 100%);
-    --color-background-box:            hsl(0, 0%, 97%);
-    --color-background-form:           hsl(0, 0%, 100%);
-    --color-background-form-disabled:  hsl(0, 0%, 89%);
-    --color-grad-from:                 hsl(0, 0%, 93%);
-    --color-grad-to:                   hsl(0, 0%, 87%);
+    --color-background:                #{setup.$color-background};
+    --color-background-box:            #{setup.$color-background-box};
+    --color-background-form:           #{setup.$color-background-form};
+    --color-background-form-disabled:  #{setup.$color-background-form-disabled};
+    --color-grad-from:                 #{setup.$color-grad-from};
+    --color-grad-to:                   #{setup.$color-grad-to};
     // accent colours
-    --color-highlight:                 hsl(48, 100%, 63%);
-    --color-strong-highlight-box:      hsl(48, 100%, 76%);
-    --color-highlight-box:             hsl(48, 100%, 94%);
+    --color-highlight:                 #{setup.$color-highlight};
+    --color-strong-highlight-box:      #{setup.$color-strong-highlight-box};
+    --color-highlight-box:             #{setup.$color-highlight-box};
     // border colours
-    --color-border:                    hsl(0, 0%, 80%);
-    --color-border-light:              hsl(0, 0%, 82%);
-    --color-border-extra-light:        hsl(0, 0%, 84%);
-    --color-border-dark:               hsl(0, 0%, 75%);
-    --color-border-extra-dark:         hsl(0, 0%, 70%);
+    --color-border:                    #{setup.$color-border};
+    --color-border-light:              #{setup.$color-border-light};
+    --color-border-extra-light:        #{setup.$color-border-extra-light};
+    --color-border-dark:               #{setup.$color-border-dark};
+    --color-border-extra-dark:         #{setup.$color-border-extra-dark};
     // button colours
-    --color-button-grad-from:          hsl(0, 0%, 93%);
-    --color-button-grad-to:            hsl(0, 0%, 87%);
-    --color-button-border:             hsl(0, 0%, 87%);
-    --color-button-shadow:             hsl(0, 0%, 67%);
-    --color-button-selected-grad-from: hsl(216, 100%, 95%);
-    --color-button-selected-grad-to:   hsl(216, 100%, 90%);
-    --color-button-selected-border:    hsl(216, 100%, 64%);
+    --color-button-grad-from:          #{setup.$color-button-grad-from};
+    --color-button-grad-to:            #{setup.$color-button-grad-to};
+    --color-button-border:             #{setup.$color-button-border};
+    --color-button-shadow:             #{setup.$color-button-shadow};
+    --color-button-selected-grad-from: #{setup.$color-button-selected-grad-from};
+    --color-button-selected-grad-to:   #{setup.$color-button-selected-grad-to};
+    --color-button-selected-border:    #{setup.$color-button-selected-border};
     // alert colours
-    --color-success-text:              hsl(120, 60%, 34%);
-    --color-success-background:        hsl(120, 40%, 90%);
-    --color-success-border:            hsl(102, 40%, 68%);
-    --color-warning-text:              hsl(41, 100%, 40%);
-    --color-warning-background:        hsl(41, 64%, 91%);
-    --color-warning-border:            hsl(41, 64%, 71%);
-    --color-error-text:                hsl(4, 69%, 36%);
-    --color-error-background:          hsl(4, 43%, 91%);
-    --color-error-border:              hsl(4, 43%, 78%);
-    --color-info-text:                 hsl(200, 50%, 45%);
-    --color-info-background:           hsl(200, 78%, 95%);
-    --color-info-border:               hsl(200, 78%, 82%);
+    --color-success-text:              #{setup.$color-success-text};
+    --color-success-background:        #{setup.$color-success-background};
+    --color-success-border:            #{setup.$color-success-border};
+    --color-warning-text:              #{setup.$color-warning-text};
+    --color-warning-background:        #{setup.$color-warning-background};
+    --color-warning-border:            #{setup.$color-warning-border};
+    --color-error-text:                #{setup.$color-error-text};
+    --color-error-background:          #{setup.$color-error-background};
+    --color-error-border:              #{setup.$color-error-border};
+    --color-info-text:                 #{setup.$color-info-text};
+    --color-info-background:           #{setup.$color-info-background};
+    --color-info-border:               #{setup.$color-info-border};
     // shadows
-    --standard-shadow:                 0 0 0.5em hsla(0, 0%, 0%, 0.25);
+    --standard-shadow:                 #{setup.$standard-shadow};
 }
 
 @include setup.dark-mode {
     // text colours
-    --color-text:                      hsl(210, 14%, 83%);
-    --color-text-heading:              hsl(0, 0%, 100%);
-    --color-text-heading-a50:          hsla(0, 0%, 100%, 0.5);
-    --color-text-form:                 hsl(0, 0%, 100%);
-    --color-text-form-placeholder:     hsl(210, 6%, 48%);
-    --color-text-footnote:             hsl(210, 14%, 70%);
+    --color-text:                      #{setup.$dark-color-text};
+    --color-text-heading:              #{setup.$dark-color-text-heading};
+    --color-text-heading-a50:          #{setup.$dark-color-text-heading-a50};
+    --color-text-form:                 #{setup.$dark-color-text-form};
+    --color-text-form-placeholder:     #{setup.$dark-color-text-form-placeholder};
+    --color-text-footnote:             #{setup.$dark-color-text-footnote};
     // interaction colours
-    --color-link:                      hsl(210, 100%, 81%);
-    --color-link-hover:                hsl(210, 100%, 87%);
-    --color-link-focus:                hsl(312, 100%, 50%);
-    --color-selecting:                 hsl(210, 50%, 18%);
-    --color-selected:                  hsl(210, 50%, 21%);
+    --color-link:                      #{setup.$dark-color-link};
+    --color-link-hover:                #{setup.$dark-color-link-hover};
+    --color-link-focus:                #{setup.$dark-color-link-focus};
+    --color-selecting:                 #{setup.$dark-color-selecting};
+    --color-selected:                  #{setup.$dark-color-selected};
     // neutral colours
-    --color-background:                hsl(210, 11%, 24%);
-    --color-background-box:            hsl(210, 11%, 20%);
-    --color-background-form:           hsl(210, 11%, 17%);
-    --color-background-form-disabled:  hsl(210, 11%, 17%);
-    --color-grad-from:                 hsl(210, 7%, 36%);
-    --color-grad-to:                   hsl(210, 9%, 30%);
+    --color-background:                #{setup.$dark-color-background};
+    --color-background-box:            #{setup.$dark-color-background-box};
+    --color-background-form:           #{setup.$dark-color-background-form};
+    --color-background-form-disabled:  #{setup.$dark-color-background-form-disabled};
+    --color-grad-from:                 #{setup.$dark-color-grad-from};
+    --color-grad-to:                   #{setup.$dark-color-grad-to};
     // accent colours
-    --color-highlight:                 hsl(48, 100%, 63%);
-    --color-strong-highlight-box:      hsl(48, 42%, 47%);
-    --color-highlight-box:             hsl(48, 20%, 30%);
+    --color-highlight:                 #{setup.$dark-color-highlight};
+    --color-strong-highlight-box:      #{setup.$dark-color-strong-highlight-box};
+    --color-highlight-box:             #{setup.$dark-color-highlight-box};
     // border colours
-    --color-border:                    hsl(210, 7%, 53%);
-    --color-border-light:              hsl(210, 7%, 43%);
-    --color-border-extra-light:        hsl(210, 7%, 33%);
-    --color-border-dark:               hsl(210, 7%, 20%);
-    --color-border-extra-dark:         hsl(210, 7%, 6%);
+    --color-border:                    #{setup.$dark-color-border};
+    --color-border-light:              #{setup.$dark-color-border-light};
+    --color-border-extra-light:        #{setup.$dark-color-border-extra-light};
+    --color-border-dark:               #{setup.$dark-color-border-dark};
+    --color-border-extra-dark:         #{setup.$dark-color-border-extra-dark};
     // alert colours
-    --color-success-text:              hsl(100, 60%, 50%);
-    --color-success-background:        hsl(109, 27%, 20%);
-    --color-success-border:            hsla(100, 60%, 50%, 0.33);
-    --color-warning-text:              hsl(40, 100%, 62%);
-    --color-warning-background:        hsl(49, 35%, 21%);
-    --color-warning-border:            hsla(40, 100%, 62%, 0.33);
-    --color-error-text:                hsl(337, 100%, 60%);
-    --color-error-background:          hsl(348, 34%, 21%);
-    --color-error-border:              hsla(337, 100%, 60%, 0.43);
-    --color-info-text:                 hsl(207, 100%, 63%);
-    --color-info-background:           hsl(207, 68%, 17%);
-    --color-info-border:               hsla(207, 100%, 63%, 0.38);
+    --color-success-text:              #{setup.$dark-color-success-text};
+    --color-success-background:        #{setup.$dark-color-success-background};
+    --color-success-border:            #{setup.$dark-color-success-border};
+    --color-warning-text:              #{setup.$dark-color-warning-text};
+    --color-warning-background:        #{setup.$dark-color-warning-background};
+    --color-warning-border:            #{setup.$dark-color-warning-border};
+    --color-error-text:                #{setup.$dark-color-error-text};
+    --color-error-background:          #{setup.$dark-color-error-background};
+    --color-error-border:              #{setup.$dark-color-error-border};
+    --color-info-text:                 #{setup.$dark-color-info-text};
+    --color-info-background:           #{setup.$dark-color-info-background};
+    --color-info-border:               #{setup.$dark-color-info-border};
     // shadows
-    --standard-shadow:                 0 0 0.5em hsla(0, 0%, 0%, 0.75);
 }
 
 
