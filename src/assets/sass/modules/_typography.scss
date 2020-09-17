@@ -43,14 +43,14 @@ body {
     font-family: var(--font-sans-serif);
     font-feature-settings: "liga"; /* 1 */
 
-    @if setup.$font-form-vf {
+    @if setup.$font-stack-form-vf {
         font-variation-settings: "wght" 400; // older browsers will just ignore this
     }
 
     font-weight: 400; // to prevent faux bolding of variable font
 }
 
-@if setup.$font-form-vf {
+@if setup.$font-stack-form-vf {
     @supports (font-variation-settings: normal) {
         body {
             font-family: var(--font-form-vf);
@@ -131,14 +131,14 @@ h6 {
     color: var(--color-text-heading);
     font-family: var(--font-serif);
 
-    @if setup.$font-serif-vf {
+    @if setup.$font-stack-serif-vf {
         font-variation-settings: "wght" 700; // older browsers will just ignore this
     }
 
     font-weight: 700; // to prevent faux bolding of variable font
 }
 
-@if setup.$font-serif-vf {
+@if setup.$font-stack-serif-vf {
     @supports (font-variation-settings: normal) {
         h1,
         h2,
@@ -237,7 +237,7 @@ blockquote {
     }
 }
 
-@if setup.$font-serif-vf {
+@if setup.$font-stack-serif-vf {
     @supports (font-variation-settings: normal) {
         blockquote {
             font-family: var(--font-serif-vf);
@@ -245,7 +245,7 @@ blockquote {
     }
 }
 
-@if setup.$font-sans-serif-vf {
+@if setup.$font-stack-sans-serif-vf {
     @supports (font-variation-settings: normal) {
         blockquote footer {
             font-family: var(--font-sans-serif-vf);

@@ -37,7 +37,7 @@
         font-family: var(--font-serif);
         font-size: 1.125rem; // 18px / 16px
 
-        @if setup.$font-serif-vf {
+        @if setup.$font-stack-serif-vf {
             font-variation-settings: "wght" 500; // older browsers will just ignore this
         }
 
@@ -81,7 +81,7 @@
     }
 }
 
-@if setup.$font-serif-vf {
+@if setup.$font-stack-serif-vf {
     @supports (font-variation-settings: normal) {
         #site-navigation {
             font-family: var(--font-serif-vf);

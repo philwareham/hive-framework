@@ -8,14 +8,14 @@
 
 :root {
     // font families
-    --font-serif:         #{meta.inspect(setup.$font-serif)};
-    --font-serif-vf:      #{meta.inspect(setup.$font-serif-vf)};
-    --font-sans-serif:    #{meta.inspect(setup.$font-sans-serif)};
-    --font-sans-serif-vf: #{meta.inspect(setup.$font-sans-serif-vf)};
-    --font-form:          #{meta.inspect(setup.$font-form)};
-    --font-form-vf:       #{meta.inspect(setup.$font-form-vf)};
-    --font-code:          #{meta.inspect(setup.$font-code)};
-    --font-print:         #{meta.inspect(setup.$font-print)};
+    --font-serif:         #{meta.inspect(setup.$font-stack-serif)};
+    --font-serif-vf:      #{meta.inspect(setup.$font-stack-serif-vf)};
+    --font-sans-serif:    #{meta.inspect(setup.$font-stack-sans-serif)};
+    --font-sans-serif-vf: #{meta.inspect(setup.$font-stack-sans-serif-vf)};
+    --font-form:          #{meta.inspect(setup.$font-stack-form)};
+    --font-form-vf:       #{meta.inspect(setup.$font-stack-form-vf)};
+    --font-code:          #{meta.inspect(setup.$font-stack-code)};
+    --font-print:         #{meta.inspect(setup.$font-stack-print)};
     // text colours
     --color-text:                      #{setup.$color-text};
     --color-text-heading:              #{setup.$color-text-heading};

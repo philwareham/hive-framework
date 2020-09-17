@@ -128,7 +128,7 @@
     }
 }
 
-@if setup.$font-sans-serif-vf {
+@if setup.$font-stack-sans-serif-vf {
     @supports (font-variation-settings: normal) {
         .ui-menu {
             font-family: var(--font-sans-serif-vf);

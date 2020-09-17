@@ -11,27 +11,27 @@ $use-jquery-ui:        true !default; // true/false
 $use-icons:            true !default; // true/false
 
 // Font stack defaults
-$font-serif:           source-serif-pro, Georgia, serif !default;
-$font-serif-vf:        source-serif-pro-vf, Georgia, serif !default;
-$font-sans-serif:      source-sans-pro, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$font-sans-serif-vf:   source-sans-pro-vf, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$font-form:            source-sans-pro, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$font-form-vf:         source-sans-pro-vf, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$font-code:            Menlo, Consolas, Monaco, monospace !default;
-$font-print:           "Helvetica Neue", sans-serif !default;
+$font-stack-serif:         source-serif-pro, Georgia, serif !default;
+$font-stack-serif-vf:      source-serif-pro-vf, Georgia, serif !default;
+$font-stack-sans-serif:    source-sans-pro, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-stack-sans-serif-vf: source-sans-pro-vf, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-stack-form:          source-sans-pro, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-stack-form-vf:       source-sans-pro-vf, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-stack-code:          Menlo, Consolas, Monaco, monospace !default;
+$font-stack-print:         "Helvetica Neue", sans-serif !default;
 
 // Typography grid defaults
-$base-font-size:       16px !default;
-$line-height-desktop:  1.5 !default;
-$line-height-mobile:   1.375 !default;
-$code-font-size:       0.875rem !default; // 14px / 16px
-$small-font-size:      0.8125rem !default; // 13px / 16px
+$base-font-size:      16px !default;
+$line-height-desktop: 1.5 !default;
+$line-height-mobile:  1.375 !default;
+$code-font-size:      0.875rem !default; // 14px / 16px
+$small-font-size:     0.8125rem !default; // 13px / 16px
 
 // Layout grid defaults
-$container-max-width:  72em !default; // 1152px / 16px
-$breakpoint-3:         60em !default; // 960px / 16px
-$breakpoint-2:         48em !default; // 768px / 16px
-$breakpoint-1:         30em !default; // 480px / 16px
+$container-max-width: 72em !default; // 1152px / 16px
+$breakpoint-3:        60em !default; // 960px / 16px
+$breakpoint-2:        48em !default; // 768px / 16px
+$breakpoint-1:        30em !default; // 480px / 16px
 
 // Border radius defaults
-$border-radius:        0.5em !default; // 8px / 16px
+$border-radius:       0.5em !default; // 8px / 16px
