@@ -11,14 +11,26 @@ $use-jquery-ui:        true !default; // true/false
 $use-icons:            true !default; // true/false
 
 // Font stack defaults
-$font-stack-serif:         source-serif-pro, Georgia, serif !default;
-$font-stack-serif-vf:      source-serif-pro-vf, Georgia, serif !default;
-$font-stack-sans-serif:    source-sans-pro, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$font-stack-sans-serif-vf: source-sans-pro-vf, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$font-stack-form:          source-sans-pro, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$font-stack-form-vf:       source-sans-pro-vf, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-stack-serif-vf:      hive-framework-serif-vf, Georgia, serif !default;
+$font-stack-serif:         hive-framework-serif, Georgia, serif !default;
+$font-stack-sans-serif-vf: hive-framework-sans-serif-vf, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-stack-sans-serif:    hive-framework-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-stack-form-vf:       hive-framework-sans-serif-vf, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-stack-form:          hive-framework-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $font-stack-code:          Menlo, Consolas, Monaco, monospace !default;
 $font-stack-print:         "Helvetica Neue", sans-serif !default;
+
+// Primary font file defaults
+$font-serif-vf:             null !default;
+$font-serif-vf-weight:      200 900 !default;
+$font-serif:                null !default;
+$font-sans-serif-vf:        null !default;
+$font-sans-serif-vf-weight: 200 900 !default;
+$font-sans-serif:           null !default;
+$font-form-vf:              null !default;
+$font-form:                 null !default;
+$font-code:                 null !default;
+$font-print:                null !default;
 
 // Typography grid defaults
 $base-font-size:      16px !default;
