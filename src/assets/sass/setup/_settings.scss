@@ -1,6 +1,9 @@
 // Support non-latin languages?
 $internationalization: true !default; // true/false
 
+// Support for Dark Mode?
+$use-dark-mode:        true !default; // true/false
+
 // Support for jQuery UI elements?
 $use-jquery-ui:        true !default; // true/false
 
