@@ -63,9 +63,11 @@
     }
 }
 
-@supports (font-variation-settings: normal) {
-    .ui-datepicker {
-        font-family: var(--font-form-vf);
+@if setup.$font-form-vf {
+    @supports (font-variation-settings: normal) {
+        .ui-datepicker {
+            font-family: var(--font-form-vf);
+        }
     }
 }
 

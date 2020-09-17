@@ -42,13 +42,19 @@ body {
     color: var(--color-text);
     font-family: var(--font-sans-serif);
     font-feature-settings: "liga"; /* 1 */
-    font-variation-settings: "wght" 400; // older browsers will just ignore this
+
+    @if setup.$font-form-vf {
+        font-variation-settings: "wght" 400; // older browsers will just ignore this
+    }
+
     font-weight: 400; // to prevent faux bolding of variable font
 }
 
-@supports (font-variation-settings: normal) {
-    body {
-        font-family: var(--font-sans-serif-vf);
+@if setup.$font-form-vf {
+    @supports (font-variation-settings: normal) {
+        body {
+            font-family: var(--font-form-vf);
+        }
     }
 }
 
@@ -124,18 +130,24 @@ h6 {
     clear: both;
     color: var(--color-text-heading);
     font-family: var(--font-serif);
-    font-variation-settings: "wght" 700; // older browsers will just ignore this
+
+    @if setup.$font-serif-vf {
+        font-variation-settings: "wght" 700; // older browsers will just ignore this
+    }
+
     font-weight: 700; // to prevent faux bolding of variable font
 }
 
-@supports (font-variation-settings: normal) {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: var(--font-serif-vf);
+@if setup.$font-serif-vf {
+    @supports (font-variation-settings: normal) {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: var(--font-serif-vf);
+        }
     }
 }
 
@@ -225,11 +237,17 @@ blockquote {
     }
 }
 
-@supports (font-variation-settings: normal) {
-    blockquote {
-        font-family: var(--font-serif-vf);
+@if setup.$font-serif-vf {
+    @supports (font-variation-settings: normal) {
+        blockquote {
+            font-family: var(--font-serif-vf);
+        }
+    }
+}
 
-        footer {
+@if setup.$font-sans-serif-vf {
+    @supports (font-variation-settings: normal) {
+        blockquote footer {
             font-family: var(--font-sans-serif-vf);
         }
     }

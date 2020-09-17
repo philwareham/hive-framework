@@ -64,15 +64,17 @@ span.button {
     vertical-align: baseline;
 }
 
-@supports (font-variation-settings: normal) {
-    button,
-    input,
-    select,
-    optgroup,
-    textarea,
-    a.button,
-    span.button {
-        font-family: var(--font-form-vf);
+@if setup.$font-form-vf {
+    @supports (font-variation-settings: normal) {
+        button,
+        input,
+        select,
+        optgroup,
+        textarea,
+        a.button,
+        span.button {
+            font-family: var(--font-form-vf);
+        }
     }
 }
 

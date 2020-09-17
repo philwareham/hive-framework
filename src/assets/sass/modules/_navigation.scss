@@ -36,7 +36,11 @@
         list-style: none;
         font-family: var(--font-serif);
         font-size: 1.125rem; // 18px / 16px
-        font-variation-settings: "wght" 500; // older browsers will just ignore this
+
+        @if setup.$font-serif-vf {
+            font-variation-settings: "wght" 500; // older browsers will just ignore this
+        }
+
         font-weight: 400;
         line-height: 1.4444444; // 26px / 18px
     }
@@ -77,9 +81,11 @@
     }
 }
 
-@supports (font-variation-settings: normal) {
-    #site-navigation {
-        font-family: var(--font-serif-vf);
+@if setup.$font-serif-vf {
+    @supports (font-variation-settings: normal) {
+        #site-navigation {
+            font-family: var(--font-serif-vf);
+        }
     }
 }
 
