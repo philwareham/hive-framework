@@ -20,11 +20,13 @@ $font-stack-form:          hive-framework-sans-serif, system-ui, -apple-system, 
 $font-stack-code:          Menlo, Consolas, Monaco, monospace !default;
 $font-stack-print:         "Helvetica Neue", sans-serif !default;
 
-// Primary font file defaults
-$font-serif-vf:             null !default;
+// Primary WOFF2 font file defaults
+$font-serif-vf:             source-sans-pro/SourceSans3VF-Roman !default;
+$font-serif-vf-italic:      source-sans-pro/SourceSans3VF-Italic !default;
 $font-serif-vf-weight:      200 900 !default;
 $font-serif:                null !default;
-$font-sans-serif-vf:        null !default;
+$font-sans-serif-vf:        source-serif-pro/SourceSerifVariable-Roman !default;
+$font-sans-serif-vf-italic: source-serif-pro/SourceSerifVariable-Italic !default;
 $font-sans-serif-vf-weight: 200 900 !default;
 $font-sans-serif:           null !default;
 $font-form-vf:              null !default;

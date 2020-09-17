@@ -7,20 +7,24 @@
  * Sans Serif font.
  */
 
-@font-face {
-    font-family: hive-framework-sans-serif-vf;
-    font-style: normal;
-    font-weight: 200 900;
-    font-display: swap;
-    src: url("../fonts/source-sans-pro/SourceSans3VF-Roman.woff2") format("woff2-variations");
+@if setup.$font-sans-serif-vf {
+    @font-face {
+        font-family: hive-framework-sans-serif-vf;
+        font-style: normal;
+        font-weight: setup.$font-sans-serif-vf-weight;
+        font-display: swap;
+        src: url("../fonts/source-sans-pro/SourceSans3VF-Roman.woff2") format("woff2-variations");
+    }
 }
 
-@font-face {
-    font-family: hive-framework-sans-serif-vf;
-    font-style: italic;
-    font-weight: 200 900;
-    font-display: swap;
-    src: url("../fonts/source-sans-pro/SourceSans3VF-Italic.woff2") format("woff2-variations");
+@if setup.$font-sans-serif-vf-italic {
+    @font-face {
+        font-family: hive-framework-sans-serif-vf;
+        font-style: italic;
+        font-weight: setup.$font-sans-serif-vf-weight;
+        font-display: swap;
+        src: url("../fonts/source-sans-pro/SourceSans3VF-Italic.woff2") format("woff2-variations");
+    }
 }
 
 //@font-face {
@@ -123,20 +127,24 @@
  * Serif font.
  */
 
-@font-face {
-    font-family: hive-framework-serif-vf;
-    font-style: normal;
-    font-weight: 200 900;
-    font-display: swap;
-    src: url("../fonts/source-serif-pro/SourceSerifVariable-Roman.woff2") format("woff2-variations");
+@if setup.$font-sans-serif-vf {
+    @font-face {
+        font-family: hive-framework-serif-vf;
+        font-style: normal;
+        font-weight: setup.$font-serif-vf-weight;
+        font-display: swap;
+        src: url("../fonts/source-serif-pro/SourceSerifVariable-Roman.woff2") format("woff2-variations");
+    }
 }
 
-@font-face {
-    font-family: hive-framework-serif-vf;
-    font-style: italic;
-    font-weight: 200 900;
-    font-display: swap;
-    src: url("../fonts/source-serif-pro/SourceSerifVariable-Italic.woff2") format("woff2-variations");
+@if setup.$font-sans-serif-vf-italic {
+    @font-face {
+        font-family: hive-framework-serif-vf;
+        font-style: italic;
+        font-weight: setup.$font-serif-vf-weight;
+        font-display: swap;
+        src: url("../fonts/source-serif-pro/SourceSerifVariable-Italic.woff2") format("woff2-variations");
+    }
 }
 
 //@font-face {
