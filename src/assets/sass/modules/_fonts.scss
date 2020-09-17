@@ -11,7 +11,7 @@
     @font-face {
         font-family: hive-framework-sans-serif-vf;
         font-style: normal;
-        font-weight: setup.$font-sans-serif-vf-weight;
+        font-weight: setup.$font-sans-serif-vf-wght;
         font-display: swap;
         src: url("../fonts/source-sans-pro/SourceSans3VF-Roman.woff2") format("woff2-variations");
     }
@@ -21,7 +21,7 @@
     @font-face {
         font-family: hive-framework-sans-serif-vf;
         font-style: italic;
-        font-weight: setup.$font-sans-serif-vf-weight;
+        font-weight: setup.$font-sans-serif-vf-wght;
         font-display: swap;
         src: url("../fonts/source-sans-pro/SourceSans3VF-Italic.woff2") format("woff2-variations");
     }
@@ -131,7 +131,7 @@
     @font-face {
         font-family: hive-framework-serif-vf;
         font-style: normal;
-        font-weight: setup.$font-serif-vf-weight;
+        font-weight: setup.$font-serif-vf-wght;
         font-display: swap;
         src: url("../fonts/source-serif-pro/SourceSerifVariable-Roman.woff2") format("woff2-variations");
     }
@@ -141,7 +141,7 @@
     @font-face {
         font-family: hive-framework-serif-vf;
         font-style: italic;
-        font-weight: setup.$font-serif-vf-weight;
+        font-weight: setup.$font-serif-vf-wght;
         font-display: swap;
         src: url("../fonts/source-serif-pro/SourceSerifVariable-Italic.woff2") format("woff2-variations");
     }

@@ -20,18 +20,60 @@ $font-stack-form:          hive-framework-sans-serif, system-ui, -apple-system, 
 $font-stack-code:          Menlo, Consolas, Monaco, monospace !default;
 $font-stack-print:         "Helvetica Neue", sans-serif !default;
 
-// Primary WOFF2 font file defaults
-$font-serif-vf:             source-sans-pro/SourceSans3VF-Roman !default;
-$font-serif-vf-italic:      source-sans-pro/SourceSans3VF-Italic !default;
-$font-serif-vf-weight:      200 900 !default;
-$font-serif:                null !default;
-$font-sans-serif-vf:        source-serif-pro/SourceSerifVariable-Roman !default;
-$font-sans-serif-vf-italic: source-serif-pro/SourceSerifVariable-Italic !default;
-$font-sans-serif-vf-weight: 200 900 !default;
-$font-sans-serif:           null !default;
+// Primary serif WOFF2 font file defaults
+$font-serif-vf:         source-sans-pro/SourceSans3VF-Roman !default;
+$font-serif-vf-italic:  source-sans-pro/SourceSans3VF-Italic !default;
+$font-serif-vf-wght:    200 900 !default;
+$font-serif-100:        null !default; // thin
+$font-serif-100-italic: null !default;
+$font-serif-200:        null !default; // extra light
+$font-serif-200-italic: null !default;
+$font-serif-300:        null !default; // light
+$font-serif-300-italic: null !default;
+$font-serif-400:        null !default; // normal/regular
+$font-serif-400-italic: null !default;
+$font-serif-500:        null !default; // medium
+$font-serif-500-italic: null !default;
+$font-serif-600:        null !default; // semi bold
+$font-serif-600-italic: null !default;
+$font-serif-700:        null !default; // bold
+$font-serif-700-italic: null !default;
+$font-serif-800:        null !default; // extra bold
+$font-serif-800-italic: null !default;
+$font-serif-900:        null !default; // black
+$font-serif-900-italic: null !default;
+
+// Primary sans-serif WOFF2 font file defaults
+$font-sans-serif-vf:         source-serif-pro/SourceSerifVariable-Roman !default;
+$font-sans-serif-vf-italic:  source-serif-pro/SourceSerifVariable-Italic !default;
+$font-sans-serif-vf-wght:    200 900 !default;
+$font-sans-serif-100:        null !default; // thin
+$font-sans-serif-100-italic: null !default;
+$font-sans-serif-200:        null !default; // extra light
+$font-sans-serif-200-italic: null !default;
+$font-sans-serif-300:        null !default; // light
+$font-sans-serif-300-italic: null !default;
+$font-sans-serif-400:        null !default; // normal/regular
+$font-sans-serif-400-italic: null !default;
+$font-sans-serif-500:        null !default; // medium
+$font-sans-serif-500-italic: null !default;
+$font-sans-serif-600:        null !default; // semi bold
+$font-sans-serif-600-italic: null !default;
+$font-sans-serif-700:        null !default; // bold
+$font-sans-serif-700-italic: null !default;
+$font-sans-serif-800:        null !default; // extra bold
+$font-sans-serif-800-italic: null !default;
+$font-sans-serif-900:        null !default; // black
+$font-sans-serif-900-italic: null !default;
+
+// Primary form element WOFF2 font file defaults
 $font-form-vf:              null !default;
 $font-form:                 null !default;
+
+// Primary code element WOFF2 font file defaults
 $font-code:                 null !default;
+
+// Primary print WOFF2 font file defaults
 $font-print:                null !default;
 
 // Typography grid defaults
