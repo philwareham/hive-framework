@@ -8,203 +8,83 @@
  */
 
 @if setup.$font-serif-vf {
-    @font-face {
-        font-family: hive-framework-serif-vf;
-        font-style: normal;
-        font-weight: setup.$font-serif-vf-wght;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-serif-vf}.woff2") format("woff2-variations");
-    }
+    @include setup.font-face-vf(hive-framework-serif-vf, normal, setup.$font-serif-vf-wght, setup.$font-serif-vf);
 }
 
 @if setup.$font-serif-vf-italic {
-    @font-face {
-        font-family: hive-framework-serif-vf;
-        font-style: italic;
-        font-weight: setup.$font-serif-vf-wght;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-serif-vf-italic}.woff2") format("woff2-variations");
-    }
+    @include setup.font-face-vf(hive-framework-serif-vf, italic, setup.$font-serif-vf-wght, setup.$font-serif-vf-italic);
 }
 
 @if setup.$font-serif-100 {
-    @font-face {
-        font-family: hive-framework-serif;
-        font-style: normal;
-        font-weight: 100;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-serif-100}.woff2") format("woff2"), url("../fonts/#{setup.$font-serif-100}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-serif, normal, 100, setup.$font-serif-100);
 }
 
 @if setup.$font-serif-100-italic {
-    @font-face {
-        font-family: hive-framework-serif;
-        font-style: italic;
-        font-weight: 100;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-serif-100-italic}.woff2") format("woff2"), url("../fonts/#{setup.$font-serif-100-italic}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-serif, italic, 100, setup.$font-serif-100-italic);
 }
 
 @if setup.$font-serif-200 {
-    @font-face {
-        font-family: hive-framework-serif;
-        font-style: normal;
-        font-weight: 200;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-serif-200}.woff2") format("woff2"), url("../fonts/#{setup.$font-serif-200}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-serif, normal, 200, setup.$font-serif-200);
 }
 
 @if setup.$font-serif-200-italic {
-    @font-face {
-        font-family: hive-framework-serif;
-        font-style: italic;
-        font-weight: 200;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-serif-200-italic}.woff2") format("woff2"), url("../fonts/#{setup.$font-serif-200-italic}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-serif, italic, 200, setup.$font-serif-200-italic);
 }
 
 @if setup.$font-serif-300 {
-    @font-face {
-        font-family: hive-framework-serif;
-        font-style: normal;
-        font-weight: 300;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-serif-300}.woff2") format("woff2"), url("../fonts/#{setup.$font-serif-300}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-serif, normal, 300, setup.$font-serif-300);
 }
 
 @if setup.$font-serif-300-italic {
-    @font-face {
-        font-family: hive-framework-serif;
-        font-style: italic;
-        font-weight: 300;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-serif-300-italic}.woff2") format("woff2"), url("../fonts/#{setup.$font-serif-300-italic}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-serif, italic, 300, setup.$font-serif-300-italic);
 }
 
 @if setup.$font-serif-400 {
-    @font-face {
-        font-family: hive-framework-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-serif-400}.woff2") format("woff2"), url("../fonts/#{setup.$font-serif-400}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-serif, normal, 400, setup.$font-serif-400);
 }
 
 @if setup.$font-serif-400-italic {
-    @font-face {
-        font-family: hive-framework-serif;
-        font-style: italic;
-        font-weight: 400;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-serif-400-italic}.woff2") format("woff2"), url("../fonts/#{setup.$font-serif-400-italic}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-serif, italic, 400, setup.$font-serif-400-italic);
 }
 
 @if setup.$font-serif-500 {
-    @font-face {
-        font-family: hive-framework-serif;
-        font-style: normal;
-        font-weight: 500;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-serif-500}.woff2") format("woff2"), url("../fonts/#{setup.$font-serif-500}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-serif, normal, 500, setup.$font-serif-500);
 }
 
 @if setup.$font-serif-500-italic {
-    @font-face {
-        font-family: hive-framework-serif;
-        font-style: italic;
-        font-weight: 500;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-serif-500-italic}.woff2") format("woff2"), url("../fonts/#{setup.$font-serif-500-italic}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-serif, italic, 500, setup.$font-serif-500-italic);
 }
 
 @if setup.$font-serif-600 {
-    @font-face {
-        font-family: hive-framework-serif;
-        font-style: normal;
-        font-weight: 600;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-serif-600}.woff2") format("woff2"), url("../fonts/#{setup.$font-serif-600}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-serif, normal, 600, setup.$font-serif-600);
 }
 
 @if setup.$font-serif-600-italic {
-    @font-face {
-        font-family: hive-framework-serif;
-        font-style: italic;
-        font-weight: 600;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-serif-600-italic}.woff2") format("woff2"), url("../fonts/#{setup.$font-serif-600-italic}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-serif, italic, 600, setup.$font-serif-600-italic);
 }
 
 @if setup.$font-serif-700 {
-    @font-face {
-        font-family: hive-framework-serif;
-        font-style: normal;
-        font-weight: 700;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-serif-700}.woff2") format("woff2"), url("../fonts/#{setup.$font-serif-700}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-serif, normal, 700, setup.$font-serif-700);
 }
 
 @if setup.$font-serif-700-italic {
-    @font-face {
-        font-family: hive-framework-serif;
-        font-style: italic;
-        font-weight: 700;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-serif-700-italic}.woff2") format("woff2"), url("../fonts/#{setup.$font-serif-700-italic}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-serif, italic, 700, setup.$font-serif-700-italic);
 }
 
 @if setup.$font-serif-800 {
-    @font-face {
-        font-family: hive-framework-serif;
-        font-style: normal;
-        font-weight: 800;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-serif-800}.woff2") format("woff2"), url("../fonts/#{setup.$font-serif-800}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-serif, normal, 800, setup.$font-serif-800);
 }
 
 @if setup.$font-serif-800-italic {
-    @font-face {
-        font-family: hive-framework-serif;
-        font-style: italic;
-        font-weight: 800;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-serif-800-italic}.woff2") format("woff2"), url("../fonts/#{setup.$font-serif-800-italic}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-serif, italic, 800, setup.$font-serif-800-italic);
 }
 
 @if setup.$font-serif-900 {
-    @font-face {
-        font-family: hive-framework-serif;
-        font-style: normal;
-        font-weight: 900;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-serif-900}.woff2") format("woff2"), url("../fonts/#{setup.$font-serif-900}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-serif, normal, 900, setup.$font-serif-500);
 }
 
 @if setup.$font-serif-900-italic {
-    @font-face {
-        font-family: hive-framework-serif;
-        font-style: italic;
-        font-weight: 900;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-serif-900-italic}.woff2") format("woff2"), url("../fonts/#{setup.$font-serif-900-italic}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-serif, italic, 900, setup.$font-serif-500-italic);
 }
 
 /**
@@ -212,201 +92,81 @@
  */
 
 @if setup.$font-sans-serif-vf {
-    @font-face {
-        font-family: hive-framework-sans-serif-vf;
-        font-style: normal;
-        font-weight: setup.$font-sans-serif-vf-wght;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-sans-serif-vf}.woff2") format("woff2-variations");
-    }
+    @include setup.font-face-vf(hive-framework-sans-serif-vf, normal, setup.$font-sans-serif-vf-wght, setup.$font-sans-serif-vf);
 }
 
 @if setup.$font-sans-serif-vf-italic {
-    @font-face {
-        font-family: hive-framework-sans-serif-vf;
-        font-style: italic;
-        font-weight: setup.$font-sans-serif-vf-wght;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-sans-serif-vf-italic}.woff2") format("woff2-variations");
-    }
+    @include setup.font-face-vf(hive-framework-sans-serif-vf, italic, setup.$font-sans-serif-vf-wght, setup.$font-sans-serif-vf-italic);
 }
 
 @if setup.$font-sans-serif-100 {
-    @font-face {
-        font-family: hive-framework-sans-serif;
-        font-style: normal;
-        font-weight: 100;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-sans-serif-100}.woff2") format("woff2"), url("../fonts/#{setup.$font-sans-serif-100}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-sans-serif, normal, 100, setup.$font-sans-serif-100);
 }
 
 @if setup.$font-sans-serif-100-italic {
-    @font-face {
-        font-family: hive-framework-sans-serif;
-        font-style: italic;
-        font-weight: 100;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-sans-serif-100-italic}.woff2") format("woff2"), url("../fonts/#{setup.$font-sans-serif-100-italic}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-sans-serif, italic, 100, setup.$font-sans-serif-100-italic);
 }
 
 @if setup.$font-sans-serif-200 {
-    @font-face {
-        font-family: hive-framework-sans-serif;
-        font-style: normal;
-        font-weight: 200;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-sans-serif-200}.woff2") format("woff2"), url("../fonts/#{setup.$font-sans-serif-200}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-sans-serif, normal, 200, setup.$font-sans-serif-200);
 }
 
 @if setup.$font-sans-serif-200-italic {
-    @font-face {
-        font-family: hive-framework-sans-serif;
-        font-style: italic;
-        font-weight: 200;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-sans-serif-200-italic}.woff2") format("woff2"), url("../fonts/#{setup.$font-sans-serif-200-italic}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-sans-serif, italic, 200, setup.$font-sans-serif-200-italic);
 }
 
 @if setup.$font-sans-serif-300 {
-    @font-face {
-        font-family: hive-framework-sans-serif;
-        font-style: normal;
-        font-weight: 300;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-sans-serif-300}.woff2") format("woff2"), url("../fonts/#{setup.$font-sans-serif-300}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-sans-serif, normal, 300, setup.$font-sans-serif-300);
 }
 
 @if setup.$font-sans-serif-300-italic {
-    @font-face {
-        font-family: hive-framework-sans-serif;
-        font-style: italic;
-        font-weight: 300;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-sans-serif-300-italic}.woff2") format("woff2"), url("../fonts/#{setup.$font-sans-serif-300-italic}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-sans-serif, italic, 300, setup.$font-sans-serif-300-italic);
 }
 
 @if setup.$font-sans-serif-400 {
-    @font-face {
-        font-family: hive-framework-sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-sans-serif-400}.woff2") format("woff2"), url("../fonts/#{setup.$font-sans-serif-400}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-sans-serif, normal, 400, setup.$font-sans-serif-400);
 }
 
 @if setup.$font-sans-serif-400-italic {
-    @font-face {
-        font-family: hive-framework-sans-serif;
-        font-style: italic;
-        font-weight: 400;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-sans-serif-400-italic}.woff2") format("woff2"), url("../fonts/#{setup.$font-sans-serif-400-italic}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-sans-serif, italic, 400, setup.$font-sans-serif-400-italic);
 }
 
 @if setup.$font-sans-serif-500 {
-    @font-face {
-        font-family: hive-framework-sans-serif;
-        font-style: normal;
-        font-weight: 500;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-sans-serif-500}.woff2") format("woff2"), url("../fonts/#{setup.$font-sans-serif-500}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-sans-serif, normal, 500, setup.$font-sans-serif-500);
 }
 
 @if setup.$font-sans-serif-500-italic {
-    @font-face {
-        font-family: hive-framework-sans-serif;
-        font-style: italic;
-        font-weight: 500;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-sans-serif-500-italic}.woff2") format("woff2"), url("../fonts/#{setup.$font-sans-serif-500-italic}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-sans-serif, italic, 500, setup.$font-sans-serif-500-italic);
 }
 
 @if setup.$font-sans-serif-600 {
-    @font-face {
-        font-family: hive-framework-sans-serif;
-        font-style: normal;
-        font-weight: 600;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-sans-serif-600}.woff2") format("woff2"), url("../fonts/#{setup.$font-sans-serif-600}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-sans-serif, normal, 600, setup.$font-sans-serif-600);
 }
 
 @if setup.$font-sans-serif-600-italic {
-    @font-face {
-        font-family: hive-framework-sans-serif;
-        font-style: italic;
-        font-weight: 600;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-sans-serif-600-italic}.woff2") format("woff2"), url("../fonts/#{setup.$font-sans-serif-600-italic}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-sans-serif, italic, 600, setup.$font-sans-serif-600-italic);
 }
 
 @if setup.$font-sans-serif-700 {
-    @font-face {
-        font-family: hive-framework-sans-serif;
-        font-style: normal;
-        font-weight: 700;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-sans-serif-700}.woff2") format("woff2"), url("../fonts/#{setup.$font-sans-serif-700}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-sans-serif, normal, 700, setup.$font-sans-serif-700);
 }
 
 @if setup.$font-sans-serif-700-italic {
-    @font-face {
-        font-family: hive-framework-sans-serif;
-        font-style: italic;
-        font-weight: 700;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-sans-serif-700-italic}.woff2") format("woff2"), url("../fonts/#{setup.$font-sans-serif-700-italic}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-sans-serif, italic, 700, setup.$font-sans-serif-700-italic);
 }
 
 @if setup.$font-sans-serif-800 {
-    @font-face {
-        font-family: hive-framework-sans-serif;
-        font-style: normal;
-        font-weight: 800;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-sans-serif-800}.woff2") format("woff2"), url("../fonts/#{setup.$font-sans-serif-800}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-sans-serif, normal, 800, setup.$font-sans-serif-800);
 }
 
 @if setup.$font-sans-serif-800-italic {
-    @font-face {
-        font-family: hive-framework-sans-serif;
-        font-style: italic;
-        font-weight: 800;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-sans-serif-800-italic}.woff2") format("woff2"), url("../fonts/#{setup.$font-sans-serif-800-italic}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-sans-serif, italic, 800, setup.$font-sans-serif-800-italic);
 }
 
 @if setup.$font-sans-serif-900 {
-    @font-face {
-        font-family: hive-framework-sans-serif;
-        font-style: normal;
-        font-weight: 900;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-sans-serif-800}.woff2") format("woff2"), url("../fonts/#{setup.$font-sans-serif-800}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-sans-serif, normal, 900, setup.$font-sans-serif-900);
 }
 
 @if setup.$font-sans-serif-900-italic {
-    @font-face {
-        font-family: hive-framework-sans-serif;
-        font-style: italic;
-        font-weight: 900;
-        font-display: swap;
-        src: url("../fonts/#{setup.$font-sans-serif-900-italic}.woff2") format("woff2"), url("../fonts/#{setup.$font-sans-serif-900-italic}.woff") format("woff");
-    }
+    @include setup.font-face(hive-framework-sans-serif, italic, 900, setup.$font-sans-serif-900-italic);
 }

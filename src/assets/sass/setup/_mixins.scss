@@ -33,11 +33,35 @@
     background-image: radial-gradient($color-grad-from, $color-grad-to);
 }
 
-// hide text
+// hide text but retain accessibility
 
 @mixin hide-text {
     overflow: hidden;
     text-indent: 110%;
     text-transform: capitalize;
     white-space: nowrap;
+}
+
+// font face (WOFF and WOFF2 standard font)
+
+@mixin font-face($family, $style, $weight, $path) {
+    @font-face {
+        font-family: $family;
+        font-style: $style;
+        font-weight: $weight;
+        font-display: swap;
+        src: url("../fonts/#{$path}.woff2") format("woff2"), url("../fonts/#{$path}.woff") format("woff");
+    }
+}
+
+// font face (WOFF2 variable font)
+
+@mixin font-face-vf($family, $style, $weight, $path) {
+    @font-face {
+        font-family: $family;
+        font-style: $style;
+        font-weight: $weight;
+        font-display: swap;
+        src: url("../fonts/#{$path}.woff2") format("woff2");
+    }
 }
