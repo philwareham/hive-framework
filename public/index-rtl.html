@@ -46,32 +46,33 @@
         </header>
 
 <!-- Navigation -->
-        <a id="site-navigation-toggle" href="#" role="button" aria-controls="site-navigation">Menu</a>
-        <nav id="site-navigation" aria-label="Site navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
-            <ul id="site-navigation-list">
-                <li class="active">
-                    <a itemprop="url" href="#" aria-current="page">Home </a>
-                    <span class="accessibility">(current section)</span>
-                </li>
-                <li>
-                    <a itemprop="url" href="#">About</a>
-                </li>
-                <li>
-                    <a itemprop="url" href="#">Services</a>
-                </li>
-                <li>
-                    <a itemprop="url" href="#">Contact</a>
-                </li>
-            </ul>
-        </nav>
-
-        <div class="search-form" itemscope itemtype="https://schema.org/WebSite">
-            <meta itemprop="url" content="http://hive-framework.philwareham.co.uk/">
-            <form role="search" method="get" action="#" itemprop="potentialAction" itemscope itemtype="https://schema.org/SearchAction">
-                <meta itemprop="target" content="http://hive-framework.philwareham.co.uk/?q={q}">
-                <label class="accessibility" for="q">Search</label>
-                <input id="search" name="q" type="search" itemprop="query-input" placeholder="Search">
-            </form>
+        <div class="site-navigation">
+            <a id="site-navigation-toggle" href="#" role="button" aria-controls="site-navigation">Menu</a>
+            <nav id="site-navigation" aria-label="Site navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                <ul id="site-navigation-list">
+                    <li class="active">
+                        <a itemprop="url" href="#" aria-current="page">Home </a>
+                        <span class="accessibility">(current section)</span>
+                    </li>
+                    <li>
+                        <a itemprop="url" href="#">About</a>
+                    </li>
+                    <li>
+                        <a itemprop="url" href="#">Services</a>
+                    </li>
+                    <li>
+                        <a itemprop="url" href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="search-form" itemscope itemtype="https://schema.org/WebSite">
+                <meta itemprop="url" content="http://hive-framework.philwareham.co.uk/">
+                <form role="search" method="get" action="#" itemprop="potentialAction" itemscope itemtype="https://schema.org/SearchAction">
+                    <meta itemprop="target" content="http://hive-framework.philwareham.co.uk/?q={q}">
+                    <label class="accessibility" for="q">Search</label>
+                    <input id="search" name="q" type="search" itemprop="query-input" placeholder="Search">
+                </form>
+            </div>
         </div>
 
     </div>
