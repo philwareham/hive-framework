@@ -169,6 +169,15 @@ body {
 }
 
 /**
+ * Search form within site header.
+ */
+
+.site-navigation .search-form {
+    width: 14em;
+    margin: 0 6% 1em;
+}
+
+/**
  * Prevent really, really long words in article from breaking layout.
  */
 
