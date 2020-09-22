@@ -1,0 +1,43 @@
+@use "../setup";
+
+/* Social media
+   ========================================================================== */
+
+/**
+ * Link list of social media channel icons.
+ *
+ * Example HTML:
+ *
+ * <ul class="social-channels monochrome">
+ *     <li><a class="facebook">Facebook</a></li>
+ *     <li><a class="github">GitHub</a></li>
+ *     <li><a class="instagram">Instagram</a></li>
+ *     <li><a class="linkedin">LinkedIn</a></li>
+ *     <li><a class="pinterest">Pinterest</a></li>
+ *     <li><a class="twitter">Twitter</a></li>
+ *     <li><a class="youtube">YouTube</a></li>
+ * </ul>
+ */
+
+.social-channels {
+    padding: 0;
+    list-style: none;
+
+    li {
+        display: inline-block;
+        margin-inline-end: 0.5em;
+    }
+
+    a {
+        @include setup.hide-text;
+
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-size: 32px 32px;
+
+        &:hover {
+            filter: brightness(1.1);
+        }
+    }
+}

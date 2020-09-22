@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 <!-- ===== The title should optimally be around 55 characters >>>> -->
-    <title>Hive Framework | Theming design patterns documentation.</title>
+    <title>Hive Framework | Theming design patterns documentation (RTL).</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -35,6 +35,7 @@
     <meta itemprop="accessibilityHazard" content="noSoundHazard">
     <meta itemprop="accessibilityAPI" content="ARIA">
 
+    <a class="a--skip-link" href="#search">Go to search</a>
     <a class="a--skip-link" href="#page-navigation">Go to page navigation</a>
     <a class="a--skip-link" href="#main">Go to main content</a>
 
@@ -67,9 +68,9 @@
             </nav>
             <div class="search-form" itemscope itemtype="https://schema.org/WebSite">
                 <meta itemprop="url" content="http://hive-framework.philwareham.co.uk/">
-                <form role="search" method="get" action="#" itemprop="potentialAction" itemscope itemtype="https://schema.org/SearchAction">
+                <form id="search" role="search" method="get" action="#" itemprop="potentialAction" itemscope itemtype="https://schema.org/SearchAction">
                     <meta itemprop="target" content="http://hive-framework.philwareham.co.uk/?q={q}">
-                    <label class="accessibility" for="q">Search</label>
+                    <label class="accessibility" for="search">Search</label>
                     <input id="search" name="q" type="search" itemprop="query-input" placeholder="Search">
                 </form>
             </div>
@@ -83,7 +84,7 @@
             <main>
 
                 <article itemscope itemtype="https://schema.org/Article">
-                    <h1 itemprop="name headline">Design patterns</h1>
+                    <h1 itemprop="name headline">Design patterns (RTL)</h1>
 
                     <p>
                         <a id="lightswitch" href="#"><span class="ui-icon ui-icon-lightbulb"></span> Toggle light/dark mode</a>
@@ -1629,7 +1630,33 @@
                         <section class="section" id="section-social">
                             <h2>Social media</h2>
 
+                            <h3>Full colour</h3>
                             <ul class="social-channels">
+                                <li>
+                                    <a class="facebook" rel="external" href="https://facebook.com/" title="Follow us on Facebook">Facebook</a>
+                                </li>
+                                <li>
+                                    <a class="github" rel="external" href="https://github.com/" title="Us on GitHub">GitHub</a>
+                                </li>
+                                <li>
+                                    <a class="instagram" rel="external" href="https://www.instagram.com/" title="See our photos on Instagram">Instagram</a>
+                                </li>
+                                <li>
+                                    <a class="linkedin" rel="external" href="https://linkedin.com/" title="Link with us on LinkedIn">LinkedIn</a>
+                                </li>
+                                <li>
+                                    <a class="pinterest" rel="external" href="https://pinterest.com/" title="Pin us on Pinterest">Pinterest</a>
+                                </li>
+                                <li>
+                                    <a class="twitter" rel="external" href="https://twitter.com/" title="Follow us on Twitter">Twitter</a>
+                                </li>
+                                <li>
+                                    <a class="youtube" rel="external" href="https://youtube.com/" title="Watch us on YouTube">YouTube</a>
+                                </li>
+                            </ul>
+
+                            <h3>Monochrome</h3>
+                            <ul class="social-channels monochrome">
                                 <li>
                                     <a class="facebook" rel="external" href="https://facebook.com/" title="Follow us on Facebook">Facebook</a>
                                 </li>

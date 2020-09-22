@@ -148,7 +148,9 @@
     @include meta.load-css("modules/pagination");
     @include meta.load-css("modules/breadcrumbs");
     @include meta.load-css("modules/slider");
-    @include meta.load-css("modules/social");
+    @include meta.load-css("modules/social-base");
+    @include meta.load-css("modules/social-color");
+    @include meta.load-css("modules/social-mono");
     @include meta.load-css("modules/misc");
     @include meta.load-css("modules/comments");
     @include meta.load-css("modules/cards");
