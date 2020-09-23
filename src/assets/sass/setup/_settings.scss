@@ -25,8 +25,8 @@ $font-stack-print:         "Helvetica Neue", sans-serif !default;
 
 // Primary serif font file defaults
 // variable
-$font-serif-vf:         source-serif-pro/SourceSerifVariable-Roman !default;
-$font-serif-vf-italic:  source-serif-pro/SourceSerifVariable-Italic !default;
+$font-serif-vf:         "source-serif-pro/SourceSerifVariable-Roman" !default;
+$font-serif-vf-italic:  "source-serif-pro/SourceSerifVariable-Italic" !default;
 $font-serif-vf-wght:    200 900 !default;
 // thin
 $font-serif-100:        null !default;
@@ -38,8 +38,8 @@ $font-serif-200-italic: null !default;
 $font-serif-300:        null !default;
 $font-serif-300-italic: null !default;
 // normal/regular
-$font-serif-400:        source-serif-pro/SourceSerifPro-Regular !default;
-$font-serif-400-italic: source-serif-pro/SourceSerifPro-It !default;
+$font-serif-400:        "source-serif-pro/SourceSerifPro-Regular" !default;
+$font-serif-400-italic: "source-serif-pro/SourceSerifPro-It" !default;
 // medium
 $font-serif-500:        null !default;
 $font-serif-500-italic: null !default;
@@ -47,8 +47,8 @@ $font-serif-500-italic: null !default;
 $font-serif-600:        null !default;
 $font-serif-600-italic: null !default;
 // bold
-$font-serif-700:        source-serif-pro/SourceSerifPro-Bold !default;
-$font-serif-700-italic: source-serif-pro/SourceSerifPro-BoldIt !default;
+$font-serif-700:        "source-serif-pro/SourceSerifPro-Bold" !default;
+$font-serif-700-italic: "source-serif-pro/SourceSerifPro-BoldIt" !default;
 // extra bold
 $font-serif-800:        null !default;
 $font-serif-800-italic: null !default;
@@ -58,8 +58,8 @@ $font-serif-900-italic: null !default;
 
 // Primary sans-serif font file defaults
 // variable
-$font-sans-serif-vf:         source-sans-pro/SourceSans3VF-Roman !default;
-$font-sans-serif-vf-italic:  source-sans-pro/SourceSans3VF-Italic !default;
+$font-sans-serif-vf:         "source-sans-pro/SourceSans3VF-Roman" !default;
+$font-sans-serif-vf-italic:  "source-sans-pro/SourceSans3VF-Italic" !default;
 $font-sans-serif-vf-wght:    200 900 !default;
 // thin
 $font-sans-serif-100:        null !default;
@@ -71,8 +71,8 @@ $font-sans-serif-200-italic: null !default;
 $font-sans-serif-300:        null !default;
 $font-sans-serif-300-italic: null !default;
 // normal/regular
-$font-sans-serif-400:        source-sans-pro/SourceSans3-Regular !default;
-$font-sans-serif-400-italic: source-sans-pro/SourceSans3-It !default;
+$font-sans-serif-400:        "source-sans-pro/SourceSans3-Regular" !default;
+$font-sans-serif-400-italic: "source-sans-pro/SourceSans3-It" !default;
 // medium
 $font-sans-serif-500:        null !default;
 $font-sans-serif-500-italic: null !default;
@@ -80,8 +80,8 @@ $font-sans-serif-500-italic: null !default;
 $font-sans-serif-600:        null !default;
 $font-sans-serif-600-italic: null !default;
 // bold
-$font-sans-serif-700:        source-sans-pro/SourceSans3-Bold !default;
-$font-sans-serif-700-italic: source-sans-pro/SourceSans3-BoldIt !default;
+$font-sans-serif-700:        "source-sans-pro/SourceSans3-Bold" !default;
+$font-sans-serif-700-italic: "source-sans-pro/SourceSans3-BoldIt" !default;
 // extra bold
 $font-sans-serif-800:        null !default;
 $font-sans-serif-800-italic: null !default;
@@ -114,3 +114,8 @@ $breakpoint-1:        30em !default; // 480px / 16px
 
 // Border radius defaults
 $border-radius:       0.5em !default; // 8px / 16px
+
+// Site logo defaults
+$site-logo-file:   "../../mockups/img/site-logo@2x.png" !default;
+$site-logo-width:  240px !default; // recommended maximum width ~240px.
+$site-logo-height: 40px !default;

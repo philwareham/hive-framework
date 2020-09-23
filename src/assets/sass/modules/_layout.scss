@@ -169,11 +169,29 @@ body {
 }
 
 /**
+ * Site logo.
+ *
+ * Example HTML:
+ *
+ * <h2 class="site-logo">Sitename</h2>
+ */
+
+.site-logo {
+    @include setup.hide-text;
+
+    display: block;
+    width: setup.$site-logo-width;
+    height: setup.$site-logo-height;
+    background: url("#{setup.$site-logo-file}") no-repeat center center;
+    background-size: setup.$site-logo-width setup.$site-logo-height;
+}
+
+/**
  * Search form within site header.
  */
 
 .site-navigation .search-form {
-    width: 14em;
+    width: 15em;
     margin: 0 6% 1em;
 }
 
