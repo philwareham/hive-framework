@@ -64,7 +64,8 @@ h6 {
 
 .a--img {
     img {
-        border: solid 1px var(--color-link);
+        box-sizing: border-box;
+        border: solid 1px transparent;
     }
 
     &:hover img {

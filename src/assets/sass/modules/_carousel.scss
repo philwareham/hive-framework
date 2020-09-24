@@ -1,6 +1,6 @@
 @use "../setup";
 
-/* Slider (via Glide)
+/* Carousel/slider (via Glide)
    ========================================================================== */
 
 /**
@@ -15,8 +15,8 @@
  *         </ul>
  *     </div>
  *     <div class="glide__arrows">
- *         <button class="glide__arrow glide__arrow--left">prev</button>
- *         <button class="glide__arrow glide__arrow--right">next</button>
+ *         <button class="glide__arrow glide__arrow--left"></button>
+ *         <button class="glide__arrow glide__arrow--right"></button>
  *     </div>
  *     <div class="glide__bullets">
  *         <button class="glide__bullet glide__bullet--active"></button>
@@ -69,6 +69,29 @@
     img {
         width: 100%;
         max-width: initial;
+    }
+
+    a {
+        display: block;
+    }
+
+    figure {
+        position: relative;
+        margin: 0;
+    }
+
+    figcaption {
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        bottom: 2.5em;
+        left: 0;
+        margin: 0;
+        padding: 0.5em;
+        background: rgba(0, 0, 0, 0.5);
+        color: var(--color-text-white-out);
+        font-size: 1rem;
+        text-align: center;
     }
 }
 
@@ -165,7 +188,7 @@
 .glide__bullets {
     position: absolute;
     z-index: 2;
-    bottom: 0.75em;
+    bottom: 0;
     left: 50%;
     transform: translate(-50%, -50%);
     list-style: none;
