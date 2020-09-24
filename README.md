@@ -7,7 +7,7 @@
 
 [Demo](https://hive-framework.philwareham.co.uk/)
 
-A website development framework built with Grunt and Sass, and incorporating jQuery UI. The theme styling is intentionally minimal to make re-skinning easier.
+A website development framework built with Grunt and Sass, with optional support for jQuery UI. The theme styling is intentionally minimal to make re-skinning easier.
 
 ## Supported web browsers
 
