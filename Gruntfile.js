@@ -79,7 +79,7 @@ module.exports = function (grunt)
                 browser: true,
                 curly: true,
                 eqeqeq: true,
-                esversion: 6,
+                esversion: 8,
                 forin: true,
                 globals: {
                     $: true,
