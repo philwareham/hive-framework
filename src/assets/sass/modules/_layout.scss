@@ -214,33 +214,58 @@ article {
 /**
  * Gallery layouts.
  *
- * 1. Add gaps between rows and vertically centre images.
- * 2. Images in galleries can expand past their original size.
+ * 1. Images in galleries can expand past their original size.
+ * 2. Add gaps between rows and vertically centre images.
  *
  * Example HTML:
  *
  * <div class="layout-container no-gaps gallery">
-    <div class="layout-3col">
-        <img>
-    </div>
-    <div class="layout-3col">
-        <img>
-    </div>
-    <div class="layout-3col">
-        <img>
-    </div>
-</div>
+ *     <div class="layout-3col">
+ *         <img>
+ *     </div>
+ *     <div class="layout-3col">
+ *         <img>
+ *     </div>
+ *     <div class="layout-3col">
+ *         <img>
+ *     </div>
+ * </div>
+ *
+ *<div class="layout-text3col gallery">
+ *    <img>
+ *    <img>
+ *    <img>
+ *    <img>
+ *    <img>
+ *    <img>
+ *</div>
  */
 
-.gallery {
+.gallery img { /* 1 */
+    width: 100%;
+    max-width: initial;
+}
+
+.layout-container.gallery {
     align-items: center;
 
-    &:not(.no-gaps) { /* 1 */
+    &:not(.no-gaps) { /* 2 */
         gap: 2em;
     }
+}
 
-    img { /* 2 */
-        width: 100%;
-        max-width: initial;
+.layout-text2col.gallery,
+.layout-text3col.gallery,
+.layout-text4col.gallery {
+    &.no-gaps {
+        column-gap: 0;
+    }
+
+    &:not(.no-gaps) {
+        margin-bottom: -2em;
+
+        > * { /* 2 */
+            margin-bottom: 2em;
+        }
     }
 }
