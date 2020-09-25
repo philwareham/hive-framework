@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/philwareham/hive-framework.svg)](https://travis-ci.org/philwareham/hive-framework)
 
-![Hive logo](https://github.com/philwareham/hive-framework/blob/master/public/favicon-192x192.png)
+![Hive logo](https://hive-framework.philwareham.co.uk/favicon-192x192.png)
 
 [Demo](https://hive-framework.philwareham.co.uk/)
 
