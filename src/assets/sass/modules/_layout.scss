@@ -210,3 +210,37 @@ article {
 .section {
     margin-top: 2em;
 }
+
+/**
+ * Gallery layouts.
+ *
+ * 1. Add gaps between rows and vertically centre images.
+ * 2. Images in galleries can expand past their original size.
+ *
+ * Example HTML:
+ *
+ * <div class="layout-container no-gaps gallery">
+    <div class="layout-3col">
+        <img>
+    </div>
+    <div class="layout-3col">
+        <img>
+    </div>
+    <div class="layout-3col">
+        <img>
+    </div>
+</div>
+ */
+
+.gallery {
+    align-items: center;
+
+    &:not(.no-gaps) { /* 1 */
+        gap: 2em;
+    }
+
+    img { /* 2 */
+        width: 100%;
+        max-width: initial;
+    }
+}
