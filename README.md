@@ -1,7 +1,6 @@
 # Hive framework &nbsp; [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=A%20website%20development%20framework%20built%20with%20Grunt%20and%20Sass.%20The%20theme%20styling%20is%20intentionally%20minimal%20to%20make%20re-skinning%20easier.&url=https://hive-framework.philwareham.co.uk/&via=philwareham&hashtags=html,css,js,framework,webdesign)
 
 [![Build Status](https://travis-ci.org/philwareham/hive-framework.svg)](https://travis-ci.org/philwareham/hive-framework)
-[![Known Vulnerabilities](https://snyk.io/test/github/philwareham/hive-framework/badge.svg?targetFile=package.json)](https://snyk.io/test/github/philwareham/hive-framework?targetFile=package.json)
 
 ![Hive logo](https://github.com/philwareham/hive-framework/blob/master/public/favicon-192x192.png)
 
@@ -14,7 +13,7 @@ A website development framework built with Grunt and Sass, with optional support
 * Chrome, Edge, Firefox, Safari and Opera the last two recent stable releases.
 * Firefox ESR latest major point release.
 
-Older versions of the above and other browsers (i.e. Internet Explorer) may work, but these are the ones we verify.
+Older versions of the above and other browsers may work, but these are the ones we verify.
 
 ## Requirements
 
