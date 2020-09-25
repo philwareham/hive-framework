@@ -35,6 +35,12 @@
             min-width: 0; // Fix Firefox `pre` overflow issues.
             padding: 0 1em; // Flexbox fallback.
         }
+
+        &.no-gaps {
+            gap: 0;
+            margin: 0;
+            padding: 0;
+        }
     }
 
     /**
