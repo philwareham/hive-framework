@@ -121,6 +121,14 @@
             display: inline-block;
         }
     }
+
+    /**
+     * Large search field on certain pages.
+     */
+
+    .search-hero input {
+        font-size: 1.5rem;
+    }
 }
 
 
@@ -261,6 +269,14 @@
                 border-top-width: 1px;
             }
         }
+    }
+
+    /**
+     * Large search field on certain pages.
+     */
+
+    .search-hero input {
+        font-size: 1.75rem;
     }
 }
 

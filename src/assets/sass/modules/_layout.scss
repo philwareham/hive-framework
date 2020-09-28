@@ -196,6 +196,19 @@ body {
 }
 
 /**
+ * Large search field on certain pages.
+ */
+
+.search-hero {
+    text-align: center;
+
+    input {
+        margin: 0.5em 0;
+        font-size: 1.25rem;
+    }
+}
+
+/**
  * Prevent really, really long words in article from breaking layout.
  */
 
