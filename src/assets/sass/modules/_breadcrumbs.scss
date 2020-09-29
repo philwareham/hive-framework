@@ -21,7 +21,8 @@
 
 .breadcrumbs,
 .breadcrumbs--path {
-    padding: 0 0.3333333em; // 4px / 12px
+    margin: 0 -0.5384615em;
+    padding: 0.3076923em 0.5384615em; // 4px / 13px + 7px / 13px
     background-color: var(--color-background-box);
     list-style: none;
     font-size: setup.$small-font-size;
