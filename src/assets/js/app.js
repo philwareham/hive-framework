@@ -152,18 +152,20 @@ import Glide from '@glidejs/glide';
 
     // Switch between Dark Mode/Light Mode manually.
 
-    lightSwitch.addEventListener('click', function(e)
-    {
-        if (bodyClass.contains('darkmode')) {
-            makeImagesLight();
-            localStorage.setItem('prefers-color-scheme', 'light');
-        } else {
-            makeImagesDark();
-            localStorage.setItem('prefers-color-scheme', 'dark');
-        }
+    if (lightSwitch) {
+        lightSwitch.addEventListener('click', function(e)
+        {
+            if (bodyClass.contains('darkmode')) {
+                makeImagesLight();
+                localStorage.setItem('prefers-color-scheme', 'light');
+            } else {
+                makeImagesDark();
+                localStorage.setItem('prefers-color-scheme', 'dark');
+            }
 
-        e.preventDefault();
-    });
+            e.preventDefault();
+        });
+    }
 })();
 
 // Hide/show header on scroll
