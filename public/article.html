@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+    <meta charset="utf-8">
+<!-- ===== The title should optimally be around 55 characters >>>> -->
+    <title>Hive Framework | Article example.</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- ================================ The description should optimally be around 115 characters >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <meta name="description" content="Blog-type article example using styles available within Hive Framework.">
+
+<!-- All the favicons, touch icons, etc. -->
+    <meta name="theme-color" content="#333333">
+    <meta name="application-name" content="Hive Framework">
+    <link rel="icon" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" sizes="16x16" href="favicon-16x16.png">
+
+<!-- Canonical URL -->
+    <link rel="canonical" href="https://hive-framework.philwareham.co.uk/article.html">
+</head>
+
+<body itemscope itemtype="https://schema.org/WebPage">
+
+<!-- Accessibility microdata properties -->
+    <meta itemprop="accessibilityFeature" content="tableOfContents">
+    <meta itemprop="accessibilityControl" content="fullKeyboardControl">
+    <meta itemprop="accessibilityControl" content="fullMouseControl">
+    <meta itemprop="accessibilityHazard" content="noFlashingHazard">
+    <meta itemprop="accessibilityHazard" content="noMotionSimulationHazard">
+    <meta itemprop="accessibilityHazard" content="noSoundHazard">
+    <meta itemprop="accessibilityAPI" content="ARIA">
+
+    <a class="a--skip-link" href="#search">Go to search</a>
+    <a class="a--skip-link" href="#main">Go to main content</a>
+
+    <div id="dynamic-header">
+
+<!-- Header -->
+        <header class="site-header">
+            <h2>Sitename</h2>
+        </header>
+
+<!-- Navigation -->
+        <div class="site-navigation">
+            <a id="site-navigation-toggle" href="#" role="button" aria-controls="site-navigation">Menu</a>
+            <nav id="site-navigation" aria-label="Site navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                <ul id="site-navigation-list">
+                    <li>
+                        <a itemprop="url" href="index.html">Home</a>
+                    </li>
+                    <li class="active">
+                        <a itemprop="url" href="article.html" aria-current="page">Articles</a>
+                        <span class="accessibility">(current section)</span>
+                    </li>
+                    <li>
+                        <a itemprop="url" href="#">Services</a>
+                    </li>
+                    <li>
+                        <a itemprop="url" href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <a id="lightswitch" href="#" role="button"><span class="ui-icon ui-icon-medium ui-icon-lightbulb">Toggle light/dark mode</span></a>
+            <div class="search-form" itemscope itemtype="https://schema.org/WebSite">
+                <meta itemprop="url" content="http://hive-framework.philwareham.co.uk/">
+                <form role="search" method="get" action="#" itemprop="potentialAction" itemscope itemtype="https://schema.org/SearchAction">
+                    <meta itemprop="target" content="http://hive-framework.philwareham.co.uk/?q={q}">
+                    <label class="accessibility" for="search">Search</label>
+                    <input id="search" name="q" type="search" itemprop="query-input" placeholder="Search">
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+<!-- Content -->
+    <div class="wrapper">
+        <div class="container">
+            <nav aria-label="Breadcrumb navigation">
+                <ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="#">
+                            <span itemprop="name">Home</span>
+                        </a>
+                        <meta itemprop="position" content="1">
+                    </li>
+                    <li class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <b itemprop="item">
+                            <span itemprop="name" aria-current="location">Article</span>
+                        </b>
+                        <meta itemprop="position" content="2">
+                    </li>
+                </ol>
+            </nav>
+            <main id="main" aria-label="Main content" itemscope itemtype="https://schema.org/Blog">
+
+                <article class="article" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+                    <meta itemprop="mainEntityOfPage" content="https://hive-framework.philwareham.co.uk/article.html">
+                    <header class="article-header">
+                        <p itemprop="keywords">
+                            <a href="#">Some article category</a> | <a href="#">A category about cheese</a>
+                        </p>
+                        <h1 itemprop="name headline">This is a blog-type article example, using Hive Framework</h1>
+
+                        <span class="article-data">
+                            <meta itemprop="mainEntityOfPage" content="https://hive-framework.philwareham.co.uk/index.html">
+                            <meta itemprop="datePublished" content="2020-09-21T10:43:39Z">
+                            <meta itemprop="dateModified" content="2020-10-22T14:32:01Z">
+                            <meta itemprop="author" content="Phil Wareham">
+                        </span>
+                    </header>
+
+                    <div class="article-description" itemprop="description">
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+
+                    <div class="article-body" itemprop="articleBody">
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                        <blockquote cite="https://example.com/">
+                            <p>“Here is an example of a block quote. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.”</p>
+                            <footer>Somebody said this</footer>
+                        </blockquote>
+
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam sit amet elit vitae arcu interdum ullamcorper.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                        <hr class="flourish">
+
+                        <p>Nullam ultrices, nisi quis scelerisque convallis, augue neque tempor enim, et mattis justo nibh eu elit.</p>
+
+                        <pre class="line-numbers"><code class="language-markup">&lt;section role=&quot;alert&quot; class=&quot;alert alert-error fade in&quot;&gt;
+    &lt;a class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&amp;amp;times;&lt;/a&gt;
+    &lt;h3&gt;Message pane&lt;/h3&gt;
+    &lt;p&gt;Error message goes here.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                    </div><!-- /itemprop=articleBody -->
+
+                </article>
+
+            </main>
+        </div><!-- /.container -->
+    </div><!-- /.wrapper -->
+
+<!-- Footer -->
+    <footer class="site-footer">
+        <p>
+            <small>
+                Copyright
+                <!-- possible schema types: Organization, Corporation, etc (see https://schema.org/Organization for more info) -->
+                <span itemscope itemtype="https://schema.org/Organization">
+                    <span itemprop="name">Organisation Name</span>
+                </span>
+            </small>
+        </p>
+    </footer>
+
+<!-- JavaScript -->
+    <script src="assets/js/app.js"></script>
+    <noscript>JavaScript is currently disabled in your browser - please activate it for the best experience.</noscript>
+</body>
+</html>

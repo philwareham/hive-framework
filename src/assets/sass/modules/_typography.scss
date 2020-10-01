@@ -210,10 +210,15 @@ address {
 
 blockquote {
     margin: 0.8em 10%; // 16px / 20px
+    color: var(--color-text-heading);
     font-family: var(--font-serif);
     font-size: 1.5rem; // 24px / 16px
     font-style: italic;
-    font-variation-settings: "wght" 400; // older browsers will just ignore this
+
+    @if setup.$font-stack-serif-vf {
+        font-variation-settings: "wght" 400; // older browsers will just ignore this
+    }
+
     font-weight: 400; // to prevent faux bolding of variable font
     line-height: 1.3333333; // 32px / 24px
     text-align: center;
@@ -223,7 +228,11 @@ blockquote {
         font-family: var(--font-sans-serif);
         font-size: 1rem;
         font-style: normal;
-        font-variation-settings: "wght" 400; // older browsers will just ignore this
+
+        @if setup.$font-stack-serif-vf {
+            font-variation-settings: "wght" 400; // older browsers will just ignore this
+        }
+
         font-weight: 400; // to prevent faux bolding of variable font
 
         &::before {

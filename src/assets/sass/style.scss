@@ -154,8 +154,9 @@
         @include meta.load-css("modules/social-mono");
         @include meta.load-css("modules/social-mono-inverse");
         @include meta.load-css("modules/misc");
-        @include meta.load-css("modules/comments");
         @include meta.load-css("modules/cards");
+        @include meta.load-css("modules/article");
+        @include meta.load-css("modules/article-comments");
 
         @if setup.$use-jquery-ui {
             // jQuery UI core
