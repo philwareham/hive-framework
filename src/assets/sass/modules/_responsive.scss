@@ -202,7 +202,7 @@
 
         .search-form {
             margin: 0.25em 0;
-            margin-inline-start: 1em;
+            margin-inline-start: 1.5em;
         }
     }
 
@@ -269,6 +269,16 @@
                 border-top-width: 1px;
             }
         }
+    }
+
+    /**
+     * Switch between Dark Mode/Light Mode manually.
+     */
+
+    #lightswitch {
+        display: block;
+        position: static;
+        margin-inline-start: 0.5em;
     }
 
     /**

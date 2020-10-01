@@ -164,3 +164,37 @@
         }
     }
 }
+
+/**
+ * Switch between Dark Mode/Light Mode manually.
+ *
+ * Example HTML:
+ *
+ * <a id="lightswitch">
+ *     <span class="ui-icon ui-icon-medium ui-icon-lightbulb">Toggle light/dark mode</span>
+ * </a>
+ */
+
+#lightswitch {
+    position: absolute;
+    z-index: 101;
+    right: 6%;
+    bottom: 1rem;
+    margin: 0 0.25em;
+    background-color: var(--color-background-box);
+
+    span {
+        margin-top: 0.375em;
+        opacity: 1;
+    }
+
+    &:hover {
+        filter: brightness(0.95);
+    }
+}
+
+@include setup.dark-mode {
+    #lightswitch:hover {
+        filter: brightness(1.25);
+    }
+}
