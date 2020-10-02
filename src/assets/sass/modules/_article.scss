@@ -2,14 +2,9 @@
 
 .article-header {
     text-align: center;
-
-    h1 {
-        font-size: 4rem; // 60px / 16px
-    }
 }
 
 .article-description {
-    margin: 1em 18%;
     font-family: var(--font-serif);
     font-size: 1.25rem; // 20px / 16px
 
@@ -26,13 +21,5 @@
         .article-description {
             font-family: var(--font-serif-vf);
         }
-    }
-}
-
-.article-body {
-    margin: 1em 18%;
-
-    pre {
-        margin: 2rem -28.5%;
     }
 }

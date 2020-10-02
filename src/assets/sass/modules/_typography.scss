@@ -132,7 +132,7 @@ h6 {
     font-family: var(--font-serif);
 
     @if setup.$font-stack-serif-vf {
-        font-variation-settings: "wght" 700; // older browsers will just ignore this
+        font-variation-settings: "wght" 680; // older browsers will just ignore this
     }
 
     font-weight: 700; // to prevent faux bolding of variable font
@@ -152,9 +152,9 @@ h6 {
 }
 
 h1 {
-    margin: 0.5em 0; // 24px / 48px
-    font-size: 3rem; // 48px / 16px
-    line-height: 1.1666667; // 56px / 48px
+    margin: 0.5em 0;
+    font-size: 2.5rem; // 40px / 16px
+    line-height: 1.2; // 48px / 40px
 }
 
 h2 {

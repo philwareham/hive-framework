@@ -129,6 +129,19 @@
     .search-hero input {
         font-size: 1.5rem;
     }
+
+    /**
+     * Article layout revisions at breakpoint 1.
+     */
+
+    .article-description,
+    .article-body {
+        margin: 1em 6%;
+    }
+
+    .article-body pre {
+        margin: 2rem -7%;
+    }
 }
 
 
@@ -288,6 +301,28 @@
     .search-hero input {
         font-size: 1.75rem;
     }
+
+    /**
+     * Larger `h1` headings.
+     */
+
+    h1 {
+        font-size: 3rem; // 48px / 16px
+        line-height: 1.1666667; // 56px / 48px
+    }
+
+    /**
+     * Article layout revisions at breakpoint 2.
+     */
+
+    .article-description,
+    .article-body {
+        margin: 1em 12%;
+    }
+
+    .article-body pre {
+        margin: 2rem -16%;
+    }
 }
 
 
@@ -357,5 +392,31 @@
 
     .layout-text4col {
         column-count: 4;
+    }
+
+    /**
+     * Larger `h1` headings.
+     */
+
+    h1 {
+        font-size: 4rem; // 64px / 16px
+        line-height: 1.15625; // 74px / 48px
+    }
+
+    /**
+     * Article layout revisions at breakpoint 3.
+     */
+
+    .article-header h1 {
+        font-size: 4rem; // 60px / 16px
+    }
+
+    .article-description,
+    .article-body {
+        margin: 1em 18%;
+    }
+
+    .article-body pre {
+        margin: 2rem -28.5%;
     }
 }
