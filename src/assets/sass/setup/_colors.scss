@@ -17,7 +17,9 @@ $color-selecting:                 hsl(216, 100%, 90%) !default;
 $color-selected:                  hsl(216, 100%, 95%) !default;
 // neutral colours
 $color-background:                hsl(0, 0%, 100%) !default;
-$color-background-box:            hsl(0, 0%, 97%) !default;
+$color-background-zebra-subtle:   hsl(0, 0%, 96%) !default;
+$color-background-zebra-strong:   hsl(0, 0%, 20%) !default;
+$color-background-box:            hsl(0, 0%, 96%) !default;
 $color-background-form:           hsl(0, 0%, 100%) !default;
 $color-background-form-disabled:  hsl(0, 0%, 89%) !default;
 $color-grad-from:                 hsl(0, 0%, 93%) !default;
@@ -73,6 +75,8 @@ $dark-color-selecting:                hsl(210, 50%, 18%) !default;
 $dark-color-selected:                 hsl(210, 50%, 21%) !default;
 // neutral colours
 $dark-color-background:               hsl(210, 11%, 24%) !default;
+$dark-color-background-zebra-subtle:  hsl(210, 11%, 20%) !default;
+$dark-color-background-zebra-strong:  hsl(210, 11%, 12%) !default;
 $dark-color-background-box:           hsl(210, 11%, 20%) !default;
 $dark-color-background-form:          hsl(210, 11%, 17%) !default;
 $dark-color-background-form-disabled: hsl(210, 11%, 17%) !default;

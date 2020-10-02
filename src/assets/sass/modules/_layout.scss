@@ -117,6 +117,18 @@ body {
 }
 
 /**
+ * 'Zebra stripes'.
+ */
+
+.zebra--subtle {
+    background-color: var(--color-background-zebra-subtle);
+}
+
+.zebra--strong {
+    background-color: var(--color-background-zebra-strong);
+}
+
+/**
  * Wrapper for layouts, and for site header/footer.
  *
  * Example HTML:

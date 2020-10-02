@@ -33,6 +33,8 @@
     --color-selected:                  #{setup.$color-selected};
     // neutral colours
     --color-background:                #{setup.$color-background};
+    --color-background-zebra-subtle:   #{setup.$color-background-zebra-subtle};
+    --color-background-zebra-strong:   #{setup.$color-background-zebra-strong};
     --color-background-box:            #{setup.$color-background-box};
     --color-background-form:           #{setup.$color-background-form};
     --color-background-form-disabled:  #{setup.$color-background-form-disabled};
@@ -89,6 +91,8 @@
     --color-selected:                  #{setup.$dark-color-selected};
     // neutral colours
     --color-background:                #{setup.$dark-color-background};
+    --color-background-zebra-subtle:   #{setup.$dark-color-background-zebra-subtle};
+    --color-background-zebra-strong:   #{setup.$dark-color-background-zebra-strong};
     --color-background-box:            #{setup.$dark-color-background-box};
     --color-background-form:           #{setup.$dark-color-background-form};
     --color-background-form-disabled:  #{setup.$dark-color-background-form-disabled};
