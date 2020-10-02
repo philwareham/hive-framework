@@ -23,7 +23,6 @@
 <body itemscope itemtype="https://schema.org/WebPage">
 
 <!-- Accessibility microdata properties -->
-    <meta itemprop="accessibilityFeature" content="tableOfContents">
     <meta itemprop="accessibilityControl" content="fullKeyboardControl">
     <meta itemprop="accessibilityControl" content="fullMouseControl">
     <meta itemprop="accessibilityHazard" content="noFlashingHazard">
@@ -88,21 +87,39 @@
                 </ol>
             </nav>
             <main id="main" aria-label="Main content" itemscope itemtype="https://schema.org/Blog">
-
                 <article class="article" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+
                     <meta itemprop="mainEntityOfPage" content="https://hive-framework.philwareham.co.uk/article.html">
                     <header class="article-header">
-                        <p itemprop="keywords">
-                            <a href="#">Some article category</a> / <a href="#">A category about cheese</a>
+                        <p>
+                            <span class="ui-icon ui-icon-tag">Category</span>
+                            <span itemprop="keywords"><a href="#">Some article category</a> / <a href="#">A category about cheese</a></span>
                         </p>
                         <h1 itemprop="name headline">This is a blog-type article example, using Hive Framework</h1>
-
-                        <span class="article-data">
-                            <meta itemprop="mainEntityOfPage" content="https://hive-framework.philwareham.co.uk/index.html">
-                            <meta itemprop="datePublished" content="2020-09-21T10:43:39Z">
-                            <meta itemprop="dateModified" content="2020-10-22T14:32:01Z">
-                            <meta itemprop="author" content="Phil Wareham">
-                        </span>
+                        <p>
+                            <span class="ui-icon ui-icon-pencil">Posted by</span>
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <a itemprop="url" href="#"><span itemprop="name">Phil Wareham</span></a>
+                            </span>
+                            <span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                                <meta itemprop="name" content="Hive Framework">
+                                <span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                                    <meta itemprop="url contentUrl" content="https://hive-framework.philwareham.co.uk/mockups/img/img-opengraph-1200x630.png">
+                                </span>
+                            </span>
+                            <span class="separator" role="separator">|</span>
+                            <span class="ui-icon ui-icon-clock">Posted by</span>
+                            <time datetime="2020-09-11T09:52:23Z" itemprop="datePublished">11 September 2020</time>
+                            <meta itemprop="dateModified" content="2020-09-11T09:52:23Z">
+                            <span class="separator" role="separator">|</span>
+                            <span class="ui-icon ui-icon-comment">Comments</span>
+                            <a href="#comments-head" title="Go to comments" itemprop="discussionUrl">
+                                <span itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter">
+                                    <meta itemprop="interactionType" content="https://schema.org/CommentAction">
+                                    <span itemprop="userInteractionCount">12</span>
+                                </span>
+                            </a>
+                        </p>
                     </header>
 
                     <div class="article-description" itemprop="description">
