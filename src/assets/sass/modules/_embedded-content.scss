@@ -11,12 +11,12 @@ img,
 video {
     max-width: 100%;
     height: auto;
-}
 
-img.overstretch {
-    width: 100%;
-    max-width: none;
-    margin-top: -1px; // Ensure wrapper 1px top padding 1px covered.
+    &.overstretch {
+        width: 100%;
+        max-width: none;
+        margin-top: -1px; // Ensure wrapper 1px top padding 1px covered.
+    }
 }
 
 /**
