@@ -51,6 +51,14 @@
 }
 
 /**
+ * Comfortable space between preview and submit buttons.
+ */
+
+input[name="preview"] + input[name="submit"] {
+    margin-inline-start: 0.5rem;
+}
+
+/**
  * Styling for user comments preview.
  */
 
