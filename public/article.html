@@ -160,13 +160,14 @@
                                     <header>
                                         <h4 class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
                                             <span itemprop="name">Donald Swain</span>
+                                            <meta itemprop="url" content="https://docs.textpattern.com/brand/donald-swain">
                                         </h4>
                                         <p class="comment-date"><time datetime="2020-09-11T09:52:23Z" itemprop="dateCreated"><a itemprop="url" href="#" title="Permanent link">Sep 11, 10:52 AM</a></time></p>
                                     </header>
                                     <div itemprop="text">
                                         <p>I enjoy your site very much. Especially all the lovely <code>&lt;code&gt;</code> 😀!</p>
                                         <p>How about including the following?…</p>
-                                        <pre><code class="language-markup">&lt;marquee&gt;Welcome to my page all about the information superhighway&lt;/marquee&gt;</code></pre>
+                                        <pre><code class="language-markup">&lt;marquee&gt;Welcome to my page all about the information superhighway!!!&lt;/marquee&gt;</code></pre>
                                     </div>
                                 </article>
                             </li>
@@ -189,7 +190,7 @@
                         <section id="comments-form">
                             <h3>Leave a comment</h3>
                             <form id="txpCommentInputForm" method="post" action="#">
-                                <p>You must preview your comment before submitting it. Email addresses are used for verification only and are not displayed with your comment. Fields marked <abbr class="required" title="Required" aria-label="Required">●</abbr> are required.</p>
+                                <p><strong>You must preview your comment before submitting it.</strong> Email addresses are used for verification only and are not displayed with your comment. Fields marked <abbr class="required" title="Required" aria-label="Required">●</abbr> are required.</p>
                                 <div class="layout-container">
                                     <p class="layout-2col">
                                         <label for="name">Name <abbr class="required" title="Required" aria-label="Required">●</abbr></label><br>
@@ -202,7 +203,7 @@
                                 </div>
                                 <p>
                                     <label for="message">Message <abbr class="required" title="Required" aria-label="Required">●</abbr></label><br>
-                                    <textarea class="txpCommentInputMessage" id="message" name="message" cols="64" rows="8" required="required" style="overflow: hidden; word-wrap: break-word; resize: none; height: 186px;"></textarea>
+                                    <textarea class="txpCommentInputMessage" id="message" name="message" cols="64" rows="4" required="required" style="overflow: hidden; word-wrap: break-word; resize: none; height: 186px;"></textarea>
                                 </p>
                                 <p>
                                     <input name="preview" class="button" id="txpCommentPreview" type="submit" value="Preview">
