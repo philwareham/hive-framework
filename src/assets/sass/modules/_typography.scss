@@ -42,11 +42,7 @@ body {
     color: var(--color-text);
     font-family: var(--font-sans-serif);
     font-feature-settings: "liga"; /* 1 */
-
-    @if setup.$font-stack-form-vf {
-        font-variation-settings: "wght" 400; // older browsers will just ignore this
-    }
-
+    font-variation-settings: "wght" 400; // older browsers will just ignore this
     font-weight: 400; // to prevent faux bolding of variable font
 }
 
@@ -193,7 +189,8 @@ h6 {
 
 b,
 strong {
-    font-weight: 700;
+    font-variation-settings: "wght" 700; // older browsers will just ignore this
+    font-weight: 700; // to prevent faux bolding of variable font
 }
 
 /**

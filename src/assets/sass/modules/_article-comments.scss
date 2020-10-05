@@ -5,43 +5,49 @@
 
 /**
  * Styling for user comments.
- *
- * Example HTML:
- *
- * <article class="comments">
  */
 
-.comments {
-    margin-bottom: 1em;
-    padding: 1em 1em 1px;
-    border-radius: setup.$border-radius;
-    background: var(--color-background-box);
-    word-wrap: break-word;
+.list--comments {
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
 
-    h4 {
-        .is-author {
-            font-weight: 400;
-        }
+    li {
+        border-top: 1px dashed var(--color-border);
     }
 
-    code,
-    kbd,
-    pre,
-    samp {
-        background: var(--color-background);
+    li:first-child {
+        border-top: 0;
     }
 }
 
-/**
- * Additional styling for article author's comments.
- *
- * Example HTML:
- *
- * <article class="comments comments-author">
- */
+.comments {
+    position: relative;
+    word-wrap: break-word;
 
-.comments-author {
-    background: var(--color-grad-from);
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: -1rem;
+    }
+
+    h4 {
+        margin: 1rem 0;
+
+        .is-author {
+            margin-inline-start: 0.33em;
+            font-family: var(--font-sans-serif);
+            font-size: setup.$small-font-size;
+        }
+    }
+}
+
+@if setup.$font-stack-form-vf {
+    @supports (font-variation-settings: normal) {
+        .comments h4 .is-author {
+            font-family: var(--font-form-vf);
+        }
+    }
 }
 
 /**

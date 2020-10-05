@@ -130,7 +130,6 @@
                     </div>
 
                     <div class="article-body" itemprop="articleBody">
-
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
@@ -141,9 +140,6 @@
 
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam sit amet elit vitae arcu interdum ullamcorper.</p>
                         <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                        <hr class="flourish">
-
                         <p>Nullam ultrices, nisi quis scelerisque convallis, augue neque tempor enim, et mattis justo nibh eu elit.</p>
 
                         <pre class="line-numbers"><code class="language-markup">&lt;section role=&quot;alert&quot; class=&quot;alert alert-error fade in&quot;&gt;
@@ -153,11 +149,72 @@
 &lt;/section&gt;</code></pre>
 
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
 
-                    </div><!-- /itemprop=articleBody -->
+                    <hr class="flourish">
+                    <section id="comments-head" class="article-comments">
+                        <h3>Comments</h3>
+                        <ol class="list--comments">
+                            <li>
+                                <article class="comments" itemscope itemtype="https://schema.org/Comment">
+                                    <header>
+                                        <h4 class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                            <span itemprop="name">Donald Swain</span>
+                                        </h4>
+                                        <p class="comment-date"><time datetime="2020-09-11T09:52:23Z" itemprop="dateCreated"><a itemprop="url" href="#" title="Permanent link">Sep 11, 10:52 AM</a></time></p>
+                                    </header>
+                                    <div itemprop="text">
+                                        <p>I enjoy your site very much. Especially all the lovely <code>&lt;code&gt;</code> 😀!</p>
+                                        <p>How about including the following?…</p>
+                                        <pre><code class="language-markup">&lt;marquee&gt;Welcome to my page all about the information superhighway&lt;/marquee&gt;</code></pre>
+                                    </div>
+                                </article>
+                            </li>
+                            <li>
+                                <article class="comments" itemscope itemtype="https://schema.org/Comment">
+                                    <header>
+                                        <h4 class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                            <span itemprop="name">Phil Wareham</span>
+                                            <small class="is-author alert-block alert-pill information">Author</small>
+                                        </h4>
+                                        <p class="comment-date"><time datetime="2020-09-15T16:23:06Z" itemprop="dateCreated"><a itemprop="url" href="#" title="Permanent link">Sep 15, 4:23 PM</a></time></p>
+                                    </header>
+                                    <div itemprop="text">
+                                        <p><strong>@Donald Swain</strong> Erm, no.</p>
+                                    </div>
+                                </article>
+                            </li>
+                        </ol>
+
+                        <section id="comments-form">
+                            <h3>Leave a comment</h3>
+                            <form id="txpCommentInputForm" method="post" action="#">
+                                <div class="comments-wrapper">
+                                    <p>You must preview your comment before submitting it. Email addresses are used for verification only and are not displayed with your comment. Fields marked <abbr class="required" title="Required" aria-label="Required">●</abbr> are required.</p>
+                                    <div class="layout-container">
+                                        <div class="field layout-2col">
+                                            <label for="name">Name <abbr class="required" title="Required" aria-label="Required">●</abbr></label><br>
+                                            <input class="large" name="name" autocomplete="name" required="required" class="comment_name_input" id="name" type="text" size="32">
+                                        </div>
+                                        <div class="field layout-2col">
+                                            <label for="email">Email <abbr class="required" title="Required" aria-label="Required">●</abbr></label><br>
+                                            <input class="large" name="email" autocomplete="email" required="required" class="comment_email_input" id="email" type="text" size="32">
+                                        </div>
+                                        <div class="field layout-1col">
+                                            <label for="message">Message <abbr class="required" title="Required" aria-label="Required">●</abbr></label><br>
+                                            <textarea class="txpCommentInputMessage" id="message" name="message" cols="64" rows="8" required="required" style="overflow: hidden; word-wrap: break-word; resize: none; height: 186px;"></textarea>
+                                        </div>
+                                        <div class="field layout-1col">
+                                            <input name="preview" class="button" id="txpCommentPreview" type="submit" value="Preview">
+                                            <input name="submit" class="button disabled" id="txpCommentSubmit" type="submit" disabled="disabled" value="Submit">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </section>
+                    </section>
 
                 </article>
-
             </main>
         </div><!-- /.container -->
     </div><!-- /.wrapper -->

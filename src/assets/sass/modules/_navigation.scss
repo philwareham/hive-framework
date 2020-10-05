@@ -36,11 +36,7 @@
         list-style: none;
         font-family: var(--font-serif);
         font-size: 1.125rem; // 18px / 16px
-
-        @if setup.$font-stack-serif-vf {
-            font-variation-settings: "wght" 500; // older browsers will just ignore this
-        }
-
+        font-variation-settings: "wght" 500; // older browsers will just ignore this
         font-weight: 400;
         line-height: 1.4444444; // 26px / 18px
     }
