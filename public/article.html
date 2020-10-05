@@ -189,27 +189,25 @@
                         <section id="comments-form">
                             <h3>Leave a comment</h3>
                             <form id="txpCommentInputForm" method="post" action="#">
-                                <div class="comments-wrapper">
-                                    <p>You must preview your comment before submitting it. Email addresses are used for verification only and are not displayed with your comment. Fields marked <abbr class="required" title="Required" aria-label="Required">●</abbr> are required.</p>
-                                    <div class="layout-container">
-                                        <div class="field layout-2col">
-                                            <label for="name">Name <abbr class="required" title="Required" aria-label="Required">●</abbr></label><br>
-                                            <input class="large" name="name" autocomplete="name" required="required" class="comment_name_input" id="name" type="text" size="32">
-                                        </div>
-                                        <div class="field layout-2col">
-                                            <label for="email">Email <abbr class="required" title="Required" aria-label="Required">●</abbr></label><br>
-                                            <input class="large" name="email" autocomplete="email" required="required" class="comment_email_input" id="email" type="text" size="32">
-                                        </div>
-                                    </div>
-                                    <p>
-                                        <label for="message">Message <abbr class="required" title="Required" aria-label="Required">●</abbr></label><br>
-                                        <textarea class="txpCommentInputMessage" id="message" name="message" cols="64" rows="8" required="required" style="overflow: hidden; word-wrap: break-word; resize: none; height: 186px;"></textarea>
+                                <p>You must preview your comment before submitting it. Email addresses are used for verification only and are not displayed with your comment. Fields marked <abbr class="required" title="Required" aria-label="Required">●</abbr> are required.</p>
+                                <div class="layout-container">
+                                    <p class="layout-2col">
+                                        <label for="name">Name <abbr class="required" title="Required" aria-label="Required">●</abbr></label><br>
+                                        <input class="large" name="name" autocomplete="name" required="required" class="comment_name_input" id="name" type="text" size="32">
                                     </p>
-                                    <p>
-                                        <input name="preview" class="button" id="txpCommentPreview" type="submit" value="Preview">
-                                        <input name="submit" class="button disabled" id="txpCommentSubmit" type="submit" disabled="disabled" value="Submit">
+                                    <p class="layout-2col">
+                                        <label for="email">Email <abbr class="required" title="Required" aria-label="Required">●</abbr></label><br>
+                                        <input class="large" name="email" autocomplete="email" required="required" class="comment_email_input" id="email" type="text" size="32">
                                     </p>
                                 </div>
+                                <p>
+                                    <label for="message">Message <abbr class="required" title="Required" aria-label="Required">●</abbr></label><br>
+                                    <textarea class="txpCommentInputMessage" id="message" name="message" cols="64" rows="8" required="required" style="overflow: hidden; word-wrap: break-word; resize: none; height: 186px;"></textarea>
+                                </p>
+                                <p>
+                                    <input name="preview" class="button" id="txpCommentPreview" type="submit" value="Preview">
+                                    <input name="submit" class="button disabled" id="txpCommentSubmit" type="submit" disabled="disabled" value="Submit">
+                                </p>
                             </form>
                         </section>
                     </section>
