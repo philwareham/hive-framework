@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+    <meta charset="utf-8">
+<!-- ===== The title should optimally be around 55 characters >>>> -->
+    <title>Hive Framework | Homepage example.</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- ================================ The description should optimally be around 115 characters >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <meta name="description" content="Homepage example using styles available within Hive Framework.">
+
+<!-- All the favicons, touch icons, etc. -->
+    <meta name="theme-color" content="#333333">
+    <meta name="application-name" content="Hive Framework">
+    <link rel="icon" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" sizes="16x16" href="favicon-16x16.png">
+
+<!-- Canonical URL -->
+    <link rel="canonical" href="https://hive-framework.philwareham.co.uk/homepage.html">
+</head>
+
+<body itemscope itemtype="https://schema.org/WebPage">
+
+<!-- Accessibility microdata properties -->
+    <meta itemprop="accessibilityControl" content="fullKeyboardControl">
+    <meta itemprop="accessibilityControl" content="fullMouseControl">
+    <meta itemprop="accessibilityHazard" content="noFlashingHazard">
+    <meta itemprop="accessibilityHazard" content="noMotionSimulationHazard">
+    <meta itemprop="accessibilityHazard" content="noSoundHazard">
+    <meta itemprop="accessibilityAPI" content="ARIA">
+
+    <a class="a--skip-link" href="#search">Go to search</a>
+    <a class="a--skip-link" href="#main">Go to main content</a>
+
+    <div id="dynamic-header">
+
+<!-- Header -->
+        <header class="site-header">
+            <h2>Sitename</h2>
+        </header>
+
+<!-- Navigation -->
+        <div class="site-navigation">
+            <a id="site-navigation-toggle" href="#" role="button" aria-controls="site-navigation">Menu</a>
+            <nav id="site-navigation" aria-label="Site navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                <ul id="site-navigation-list">
+                    <li>
+                        <a itemprop="url" href="index.html">Home</a>
+                    </li>
+                    <li class="active">
+                        <a itemprop="url" href="article.html" aria-current="page">Articles</a>
+                        <span class="accessibility">(current section)</span>
+                    </li>
+                </ul>
+            </nav>
+            <a id="lightswitch" href="#" role="button"><span class="ui-icon ui-icon-medium ui-icon-lightbulb">Toggle light/dark mode</span></a>
+            <div class="search-form" itemscope itemtype="https://schema.org/WebSite">
+                <meta itemprop="url" content="http://hive-framework.philwareham.co.uk/">
+                <form role="search" method="get" action="#" itemprop="potentialAction" itemscope itemtype="https://schema.org/SearchAction">
+                    <meta itemprop="target" content="http://hive-framework.philwareham.co.uk/?q={q}">
+                    <label class="accessibility" for="search">Search</label>
+                    <input id="search" name="q" type="search" itemprop="query-input" placeholder="Search">
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <section>
+        <h3 class="accessibility">Gallery</h3>
+        <div class="layout-container gallery no-gaps">
+                <div class="layout-3col">
+                    <img loading="lazy" src="mockups/img/img-1080x1080-1.png" alt="Placeholder Image 1" itemprop="image">
+                </div>
+                <div class="layout-3col">
+                    <img loading="lazy" src="mockups/img/img-1080x1080-2.png" alt="Placeholder Image 2" itemprop="image">
+                </div>
+                <div class="layout-3col">
+                    <img loading="lazy" src="mockups/img/img-1080x1080-3.png" alt="Placeholder Image 3" itemprop="image">
+                </div>
+                <div class="layout-3col">
+                    <img loading="lazy" src="mockups/img/img-1080x1080-4.png" alt="Placeholder Image 4" itemprop="image">
+                </div>
+                <div class="layout-3col">
+                    <img loading="lazy" src="mockups/img/img-1080x1080-5.png" alt="Placeholder Image 5" itemprop="image">
+                </div>
+                <div class="layout-3col">
+                    <img loading="lazy" src="mockups/img/img-1080x1080-6.png" alt="Placeholder Image 6" itemprop="image">
+                </div>
+        </div>
+    </section>
+
+<!-- Content -->
+    <div class="wrapper">
+        <div class="container">
+
+            <main id="main" aria-label="Main content">
+
+                TODO
+
+            </main>
+
+        </div><!-- /.container -->
+    </div><!-- /.wrapper -->
+
+<!-- Footer -->
+    <footer class="site-footer">
+        <div class="layout-container flex-container-justified">
+            <div class="layout-2col">
+                <p><small>
+                    Copyright
+                    <!-- possible schema types: Organization, Corporation, etc (see https://schema.org/Organization for more info) -->
+                    <span itemscope itemtype="https://schema.org/Organization">
+                        <span itemprop="name">Organisation Name</span>
+                    </span>
+                </small></p>
+            </div>
+            <div class="layout-2col">
+                <ul class="social-channels monochrome--inverse">
+                    <li><a rel="external" href="#" class="facebook">Facebook</a></li>
+                    <li><a rel="external" href="#" class="github">GitHub</a></li>
+                    <li><a rel="external" href="#" class="instagram">Instagram</a></li>
+                    <li><a rel="external" href="#" class="linkedin">LinkedIn</a></li>
+                    <li><a rel="external" href="#" class="pinterest">Pinterest</a></li>
+                    <li><a rel="external" href="#" class="twitter">Twitter</a></li>
+                    <li><a rel="external" href="#" class="youtube">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+<!-- JavaScript -->
+    <script src="assets/js/app.js"></script>
+    <noscript><strong>Note:</strong> JavaScript is currently disabled in your browser - please activate it for the best experience.</noscript>
+</body>
+</html>
