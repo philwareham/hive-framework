@@ -123,6 +123,19 @@
     }
 
     /**
+     * Flex containers justified (aligned start/end and centred).
+     */
+
+    .flex-container-justified {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .site-footer .social-channels {
+        text-align: end;
+    }
+
+    /**
      * Large search field on certain pages.
      */
 
