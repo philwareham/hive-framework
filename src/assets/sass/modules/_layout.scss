@@ -234,6 +234,19 @@ article {
 }
 
 /**
+ * Separator as line-break (until 1st breakpoint).
+ */
+
+.separator {
+    visibility: hidden;
+
+    &::after {
+        content: "\a";
+        white-space: pre;
+    }
+}
+
+/**
  * Gallery layouts.
  *
  * 1. Images in galleries can expand past their original size.

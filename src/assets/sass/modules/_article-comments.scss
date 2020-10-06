@@ -8,8 +8,10 @@
  */
 
 .list--comments {
+    padding: 0;
     border-top: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-border);
+    list-style: none;
 
     li {
         border-top: 1px dashed var(--color-border);
@@ -21,7 +23,6 @@
 }
 
 .comments {
-    position: relative;
     word-wrap: break-word;
 
     header {
@@ -56,14 +57,6 @@
 
 [name="preview"] + [name="submit"] {
     margin-inline-start: 0.5rem;
-}
-
-#comments-form .layout-container {
-    margin-bottom: -1rem;
-
-    p {
-        margin-top: 0;
-    }
 }
 
 /**

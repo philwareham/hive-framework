@@ -131,6 +131,18 @@
     }
 
     /**
+     * Separator reset.
+     */
+
+    .separator {
+        visibility: initial;
+
+        &::after {
+            content: none;
+        }
+    }
+
+    /**
      * Article layout revisions at breakpoint 1.
      */
 
@@ -142,6 +154,22 @@
 
     .article-body pre {
         margin: 2rem -7%;
+    }
+
+    /**
+     * Comment layout revisions at breakpoint 1.
+     */
+
+    #comments-form .layout-container {
+        margin-bottom: -1rem;
+
+        p {
+            margin-top: 0;
+        }
+    }
+
+    .list--comments {
+        list-style: decimal;
     }
 }
 
