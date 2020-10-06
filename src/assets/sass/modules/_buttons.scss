@@ -38,14 +38,29 @@ span.button {
     @include setup.gradient-linear(var(--color-button-grad-from), var(--color-button-grad-to));
 
     display: inline-block;
-    position: relative;
+
+    @if setup.$button-box-shadow {
+        position: relative;
+    }
+
     width: auto;
-    height: 2em; // 32px / 16px
-    padding: 0.25em 1em; // 4px / 16px
-    border: 1px solid var(--color-button-border);
-    border-radius: 1em;
+    height: setup.$button-height;
+    padding: setup.$button-padding;
+
+    @if setup.$button-border {
+        border: setup.$button-border var(--color-button-border);
+    }
+
+    @if setup.$button-radius {
+        border-radius: setup.$button-radius;
+    }
+
     background-clip: padding-box;
-    box-shadow: 0 2px 0 var(--color-button-shadow);
+
+    @if setup.$button-box-shadow {
+        box-shadow: setup.$button-box-shadow var(--color-button-shadow);
+    }
+
     color: var(--color-text-button);
     font-weight: 400;
     text-align: center;
@@ -60,16 +75,25 @@ span.button {
     }
 
     &:active {
-        top: 2px;
-        box-shadow: none;
+        @if setup.$button-box-shadow {
+            top: setup.$button-box-shadow-offset-y;
+            box-shadow: none;
+        }
+
         filter: brightness(0.95);
         color: var(--color-text-button);
         text-decoration: none;
     }
 
-    &:focus {
-        border-color: var(--color-link-focus);
-        outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+    @if setup.$button-border {
+        &:focus {
+            border-color: var(--color-link-focus);
+            outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+        }
+    } @else {
+        &:focus {
+            outline: 1px solid var(--color-link-focus); // Allows for repainting in high contrast modes.
+        }
     }
 }
 
@@ -95,9 +119,12 @@ span.button {
 .button-large,
 a.button-large,
 span.button-large {
-    height: 2.5em; // 40px / 16px
-    padding: 0.5em 1em; // 8px / 16px
-    border-radius: 1.25em;
+    height: setup.$button-large-height;
+    padding: setup.$button-large-padding;
+
+    @if setup.$button-radius {
+        border-radius: setup.$button-large-radius;
+    }
 }
 
 /**
@@ -111,8 +138,44 @@ span.button-large {
 .button-small,
 a.button-small,
 span.button-small {
-    padding: 0.3076923em 1em; // 4px / 13px
+    padding: setup.$button-small-padding;
     font-size: setup.$small-font-size;
+}
+
+/**
+ * Primary buttons.
+ *
+ * Example HTML:
+ *
+ * <a class="button button-primary">
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"],
+a.button,
+span.button {
+    &.button-primary {
+        @include setup.gradient-linear(var(--color-button-primary-grad-from), var(--color-button-primary-grad-to));
+
+        @if setup.$button-border {
+            border-color: var(--color-button-primary-border);
+        }
+
+        @if setup.$button-box-shadow {
+            box-shadow: setup.$button-box-shadow var(--color-button-primary-shadow);
+        }
+
+        font-variation-settings: "wght" 700; // older browsers will just ignore this
+        font-weight: 700; // to prevent faux bolding of variable font
+
+        @if setup.$button-box-shadow {
+            &:active {
+                box-shadow: none;
+            }
+        }
+    }
 }
 
 /**
@@ -130,17 +193,26 @@ span.button-small {
 
     @include setup.gradient-linear(var(--color-success-text), var(--color-success-text));
 
-    border-color: var(--color-success-text-dark);
-    box-shadow: 0 2px 0 var(--color-success-text-extra-dark);
+    @if setup.$button-border {
+        border-color: var(--color-success-text-dark);
+    }
+
+    @if setup.$button-box-shadow {
+        box-shadow: setup.$button-box-shadow var(--color-success-text-extra-dark);
+    }
+
     color: var(--color-text-white-out);
 
     &:hover {
-        filter: brightness(1.2);
+        filter: brightness(1.1);
         color: var(--color-text-white-out);
     }
 
     &:active {
-        box-shadow: none;
+        @if setup.$button-box-shadow {
+            box-shadow: none;
+        }
+
         filter: brightness(0.8);
         color: var(--color-text-white-out);
     }
@@ -171,8 +243,14 @@ span.button-small {
 
     @include setup.gradient-linear(var(--color-error-text-light), var(--color-error-text));
 
-    border-color: var(--color-error-text-dark);
-    box-shadow: 0 2px 0 var(--color-error-text-extra-dark);
+    @if setup.$button-border {
+        border-color: var(--color-error-text-dark);
+    }
+
+    @if setup.$button-box-shadow {
+        box-shadow: setup.$button-box-shadow var(--color-error-text-extra-dark);
+    }
+
     color: var(--color-text-white-out);
 
     &:hover {
@@ -181,7 +259,10 @@ span.button-small {
     }
 
     &:active {
-        box-shadow: none;
+        @if setup.$button-box-shadow {
+            box-shadow: none;
+        }
+
         filter: brightness(0.8);
         color: var(--color-text-white-out);
     }
@@ -198,7 +279,7 @@ span.button-small {
 }
 
 /**
- * Disbaled button additional styling.
+ * Disabled button additional styling.
  */
 
 button[disabled],
@@ -206,5 +287,9 @@ button[disabled],
 [type="reset"][disabled],
 [type="submit"][disabled],
 .button.disabled {
-    top: 0 !important;
+    @include setup.gradient-linear(var(--color-button-grad-from), var(--color-button-grad-to));
+
+    @if setup.$button-box-shadow {
+        top: 0 !important;
+    }
 }

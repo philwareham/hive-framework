@@ -26,13 +26,22 @@
     display: inline-block;
     position: relative;
     box-sizing: border-box;
-    height: 2em; // 32px / 16px
-    margin: 0 0.125em 0 0; // 2px / 16px
-    padding: 0.25em 1em; // 4px / 16px
+    height: setup.$button-height;
+    margin: 0;
+    margin-inline-end: 0.125em; // 2px / 16px
+    padding: setup.$button-padding;
     overflow: visible; /* 1 */
-    border: 1px solid var(--color-button-border);
+
+    @if setup.$button-border {
+        border: setup.$button-border var(--color-button-border);
+    }
+
     background-clip: padding-box;
-    box-shadow: 0 2px 0 var(--color-button-shadow);
+
+    @if setup.$button-box-shadow {
+        box-shadow: setup.$button-box-shadow var(--color-button-shadow);
+    }
+
     color: var(--color-text-button);
     font-family: var(--font-form);
     font-size: 1rem; /* 2 */
@@ -50,16 +59,25 @@
     }
 
     &:active {
-        top: 2px;
-        box-shadow: none;
+        @if setup.$button-box-shadow {
+            top: setup.$button-box-shadow-offset-y;
+            box-shadow: none;
+        }
+
         filter: brightness(0.95);
         color: var(--color-text-button);
         text-decoration: none;
     }
 
-    &:focus {
-        border-color: var(--color-link-focus);
-        outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+    @if setup.$button-border {
+        &:focus {
+            border-color: var(--color-link-focus);
+            outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+        }
+    } @else {
+        &:focus {
+            outline: 1px solid var(--color-link-focus); // Allows for repainting in high contrast modes.
+        }
     }
 }
 
@@ -119,39 +137,41 @@ input.ui-button.ui-button-icon-only {
     text-indent: 0;
 }
 
-/**
- * Button rounded corners all.
- */
+@if setup.$button-radius {
+    /**
+     * Button rounded corners all.
+     */
 
-.ui-button.ui-corner-all {
-    border-radius: setup.$border-radius;
-}
-
-/**
- * Button rounded corners on right only.
- */
-
-.ui-button.ui-corner-right {
-    border-radius: 0 setup.$border-radius setup.$border-radius 0;
-}
-
-@if setup.$internationalization {
-    [dir="rtl"] .ui-button.ui-corner-right {
-        border-radius: setup.$border-radius 0 0 setup.$border-radius;
+    .ui-button.ui-corner-all {
+        border-radius: setup.$button-radius;
     }
-}
 
-/**
- * Button rounded corners on left only.
- */
+    /**
+     * Button rounded corners on right only.
+     */
 
-.ui-button.ui-corner-left {
-    border-radius: setup.$border-radius 0 0 setup.$border-radius;
-}
+    .ui-button.ui-corner-right {
+        border-radius: 0 setup.$button-radius setup.$button-radius 0;
+    }
 
-@if setup.$internationalization {
-    [dir="rtl"] .ui-button.ui-corner-left {
-        border-radius: 0 setup.$border-radius setup.$border-radius 0;
+    @if setup.$internationalization {
+        [dir="rtl"] .ui-button.ui-corner-right {
+            border-radius: setup.$button-radius 0 0 setup.$button-radius;
+        }
+    }
+
+    /**
+     * Button rounded corners on left only.
+     */
+
+    .ui-button.ui-corner-left {
+        border-radius: setup.$button-radius 0 0 setup.$button-radius;
+    }
+
+    @if setup.$internationalization {
+        [dir="rtl"] .ui-button.ui-corner-left {
+            border-radius: 0 setup.$button-radius setup.$button-radius 0;
+        }
     }
 }
 
