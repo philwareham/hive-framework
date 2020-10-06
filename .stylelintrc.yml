@@ -32,7 +32,7 @@ rules:
   at-rule-name-case: lower
 
   # Require a newline after at-rule names.
-  at-rule-name-newline-after: always-multi-line
+  #at-rule-name-newline-after: always-multi-line
 
   # Require a single space after at-rule names.
   at-rule-name-space-after: always
