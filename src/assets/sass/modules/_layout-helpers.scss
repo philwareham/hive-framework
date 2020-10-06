@@ -1,0 +1,449 @@
+@use "../setup";
+
+/* Layout helpers
+   ========================================================================== */
+
+/**
+ * Clearfix using the 'A new micro clearfix hack' method.
+ */
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/**
+ * Basic float clearer.
+ */
+
+.clear {
+    clear: both;
+}
+
+/**
+ * Force blocks.
+ */
+
+.block {
+    display: block;
+}
+
+/**
+ * Force inline blocks.
+ */
+
+.inline-block {
+    display: inline-block;
+}
+
+/**
+ * 'Zebra stripes'.
+ */
+
+.zebra--subtle {
+    background-color: var(--color-background-zebra-subtle);
+}
+
+.zebra--strong {
+    background-color: var(--color-background-zebra-strong);
+    color: var(--color-text-white-out);
+}
+
+/**
+ * User-defined margins (inspired by Twitter Bootstrap).
+ */
+
+.m-0 {
+    margin: 0;
+}
+
+.m-1 {
+    margin: 0.25rem;
+}
+
+.m-2 {
+    margin: 0.5rem;
+}
+
+.m-3 {
+    margin: 1rem;
+}
+
+.m-4 {
+    margin: 1.5rem;
+}
+
+.m-5 {
+    margin: 3rem;
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.mx-0 {
+    margin-inline-end: 0;
+    margin-inline-start: 0;
+}
+
+.mx-1 {
+    margin-inline-end: 0.25rem;
+    margin-inline-start: 0.25rem;
+}
+
+.mx-2 {
+    margin-inline-end: 0.5rem;
+    margin-inline-start: 0.5rem;
+}
+
+.mx-3 {
+    margin-inline-end: 1rem;
+    margin-inline-start: 1rem;
+}
+
+.mx-4 {
+    margin-inline-end: 1.5rem;
+    margin-inline-start: 1.5rem;
+}
+
+.mx-5 {
+    margin-inline-end: 3rem;
+    margin-inline-start: 3rem;
+}
+
+.mx-auto {
+    margin-inline-end: auto;
+    margin-inline-start: auto;
+}
+
+.my-0 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.my-1 {
+    margin-block-start: 0.25rem;
+    margin-block-end: 0.25rem;
+}
+
+.my-2 {
+    margin-block-start: 0.5rem;
+    margin-block-end: 0.5rem;
+}
+
+.my-3 {
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+}
+
+.my-4 {
+    margin-block-start: 1.5rem;
+    margin-block-end: 1.5rem;
+}
+
+.my-5 {
+    margin-block-start: 3rem;
+    margin-block-end: 3rem;
+}
+
+.my-auto {
+    margin-block-start: auto;
+    margin-block-end: auto;
+}
+
+.mt-0 {
+    margin-block-start: 0;
+}
+
+.mt-1 {
+    margin-block-start: 0.25rem;
+}
+
+.mt-2 {
+    margin-block-start: 0.5rem;
+}
+
+.mt-3 {
+    margin-block-start: 1rem;
+}
+
+.mt-4 {
+    margin-block-start: 1.5rem;
+}
+
+.mt-5 {
+    margin-block-start: 3rem;
+}
+
+.mt-auto {
+    margin-block-start: auto;
+}
+
+.mr-0 {
+    margin-inline-end: 0;
+}
+
+.mr-1 {
+    margin-inline-end: 0.25rem;
+}
+
+.mr-2 {
+    margin-inline-end: 0.5rem;
+}
+
+.mr-3 {
+    margin-inline-end: 1rem;
+}
+
+.mr-4 {
+    margin-inline-end: 1.5rem;
+}
+
+.mr-5 {
+    margin-inline-end: 3rem;
+}
+
+.mr-auto {
+    margin-inline-end: auto;
+}
+
+.mb-0 {
+    margin-block-end: 0;
+}
+
+.mb-1 {
+    margin-block-end: 0.25rem;
+}
+
+.mb-2 {
+    margin-block-end: 0.5rem;
+}
+
+.mb-3 {
+    margin-block-end: 1rem;
+}
+
+.mb-4 {
+    margin-block-end: 1.5rem;
+}
+
+.mb-5 {
+    margin-block-end: 3rem;
+}
+
+.mb-auto {
+    margin-block-end: auto;
+}
+
+.ml-0 {
+    margin-inline-start: 0;
+}
+
+.ml-1 {
+    margin-inline-start: 0.25rem;
+}
+
+.ml-2 {
+    margin-inline-start: 0.5rem;
+}
+
+.ml-3 {
+    margin-inline-start: 1rem;
+}
+
+.ml-4 {
+    margin-inline-start: 1.5rem;
+}
+
+.ml-5 {
+    margin-inline-start: 3rem;
+}
+
+.ml-auto {
+    margin-inline-start: auto;
+}
+
+/**
+ * User-defined paddings (inspired by Twitter Bootstrap).
+ */
+
+.p-0 {
+    padding: 0;
+}
+
+.p-1 {
+    padding: 0.25rem;
+}
+
+.p-2 {
+    padding: 0.5rem;
+}
+
+.p-3 {
+    padding: 1rem;
+}
+
+.p-4 {
+    padding: 1.5rem;
+}
+
+.p-5 {
+    padding: 3rem;
+}
+
+.px-0 {
+    padding-inline-end: 0;
+    padding-inline-start: 0;
+}
+
+.px-1 {
+    padding-inline-end: 0.25rem;
+    padding-inline-start: 0.25rem;
+}
+
+.px-2 {
+    padding-inline-end: 0.5rem;
+    padding-inline-start: 0.5rem;
+}
+
+.px-3 {
+    padding-inline-end: 1rem;
+    padding-inline-start: 1rem;
+}
+
+.px-4 {
+    padding-inline-end: 1.5rem;
+    padding-inline-start: 1.5rem;
+}
+
+.px-5 {
+    padding-inline-end: 3rem;
+    padding-inline-start: 3rem;
+}
+
+.py-0 {
+    padding-block-start: 0;
+    padding-block-end: 0;
+}
+
+.py-1 {
+    padding-block-start: 0.25rem;
+    padding-block-end: 0.25rem;
+}
+
+.py-2 {
+    padding-block-start: 0.5rem;
+    padding-block-end: 0.5rem;
+}
+
+.py-3 {
+    padding-block-start: 1rem;
+    padding-block-end: 1rem;
+}
+
+.py-4 {
+    padding-block-start: 1.5rem;
+    padding-block-end: 1.5rem;
+}
+
+.py-5 {
+    padding-block-start: 3rem;
+    padding-block-end: 3rem;
+}
+
+.pt-0 {
+    padding-block-start: 0;
+}
+
+.pt-1 {
+    padding-block-start: 0.25rem;
+}
+
+.pt-2 {
+    padding-block-start: 0.5rem;
+}
+
+.pt-3 {
+    padding-block-start: 1rem;
+}
+
+.pt-4 {
+    padding-block-start: 1.5rem;
+}
+
+.pt-5 {
+    padding-block-start: 3rem;
+}
+
+.pr-0 {
+    padding-inline-end: 0;
+}
+
+.pr-1 {
+    padding-inline-end: 0.25rem;
+}
+
+.pr-2 {
+    padding-inline-end: 0.5rem;
+}
+
+.pr-3 {
+    padding-inline-end: 1rem;
+}
+
+.pr-4 {
+    padding-inline-end: 1.5rem;
+}
+
+.pr-5 {
+    padding-inline-end: 3rem;
+}
+
+.pb-0 {
+    padding-block-end: 0;
+}
+
+.pb-1 {
+    padding-block-end: 0.25rem;
+}
+
+.pb-2 {
+    padding-block-end: 0.5rem;
+}
+
+.pb-3 {
+    padding-block-end: 1rem;
+}
+
+.pb-4 {
+    padding-block-end: 1.5rem;
+}
+
+.pb-5 {
+    padding-block-end: 3rem;
+}
+
+.pl-0 {
+    padding-inline-start: 0;
+}
+
+.pl-1 {
+    padding-inline-start: 0.25rem;
+}
+
+.pl-2 {
+    padding-inline-start: 0.5rem;
+}
+
+.pl-3 {
+    padding-inline-start: 1rem;
+}
+
+.pl-4 {
+    padding-inline-start: 1.5rem;
+}
+
+.pl-5 {
+    padding-inline-start: 3rem;
+}

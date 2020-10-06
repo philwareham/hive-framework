@@ -1,29 +1,5 @@
 @use "../setup";
 
-/* Clearfix
-   ========================================================================== */
-
-/**
- * Clearfix using the 'A new micro clearfix hack' method.
- */
-
-.clearfix,
-.paginator {
-    &::after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
-
-/**
- * Basic float clearer.
- */
-
-.clear {
-    clear: both;
-}
-
 /* Layout
    ========================================================================== */
 
@@ -44,22 +20,6 @@ body {
     position: relative; /* 1 */
     margin: 0; /* 2 */
     background: var(--color-background-box);
-}
-
-/**
- * Force blocks.
- */
-
-.block {
-    display: block;
-}
-
-/**
- * Force inline blocks.
- */
-
-.inline-block {
-    display: inline-block;
 }
 
 /**
@@ -114,19 +74,6 @@ body {
     #dynamic-header {
         border-bottom-color: var(--color-border-extra-dark);
     }
-}
-
-/**
- * 'Zebra stripes'.
- */
-
-.zebra--subtle {
-    background-color: var(--color-background-zebra-subtle);
-}
-
-.zebra--strong {
-    background-color: var(--color-background-zebra-strong);
-    color: var(--color-text-white-out);
 }
 
 /**
@@ -241,14 +188,6 @@ noscript {
 
 article {
     word-wrap: break-word;
-}
-
-/**
- * Extra pad above sections.
- */
-
-.section {
-    margin-top: 2em;
 }
 
 /**
