@@ -326,9 +326,11 @@ textarea {
  *
  * Example HTML:
  *
- * <abbr class="required" title="Required">*</abbr>
+ * <b class="required" title="Required">*</b>
+ * <abbr class="required" title="Required">●</abbr>
  */
 
+b.required,
 abbr.required {
     color: var(--color-warning-text);
     text-decoration: none;
