@@ -178,6 +178,24 @@ body {
 }
 
 /**
+ * Polite `noscript` notice after footer.
+ */
+
+noscript {
+    display: block;
+    padding: 0.5em 1em;
+    background-color: var(--color-highlight);
+    font-size: setup.$small-font-size;
+    text-align: center;
+}
+
+@include setup.dark-mode {
+    noscript {
+        color: var(--color-background-form);
+    }
+}
+
+/**
  * Site logo.
  *
  * Example HTML:
