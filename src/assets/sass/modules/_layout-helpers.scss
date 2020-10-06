@@ -52,6 +52,9 @@
 
 /**
  * User-defined margins (inspired by Twitter Bootstrap).
+ *
+ * TODO: use `margin-inline` and `margin-block` shorthand where appropriate
+ * when browser support is more widespread.
  */
 
 .m-0 {
@@ -71,7 +74,7 @@
 }
 
 .m-4 {
-    margin: 1.5rem;
+    margin: 2rem;
 }
 
 .m-5 {
@@ -83,38 +86,38 @@
 }
 
 .mx-0 {
-    margin-inline-end: 0;
     margin-inline-start: 0;
+    margin-inline-end: 0;
 }
 
 .mx-1 {
-    margin-inline-end: 0.25rem;
     margin-inline-start: 0.25rem;
+    margin-inline-end: 0.25rem;
 }
 
 .mx-2 {
-    margin-inline-end: 0.5rem;
     margin-inline-start: 0.5rem;
+    margin-inline-end: 0.5rem;
 }
 
 .mx-3 {
-    margin-inline-end: 1rem;
     margin-inline-start: 1rem;
+    margin-inline-end: 1rem;
 }
 
 .mx-4 {
-    margin-inline-end: 1.5rem;
-    margin-inline-start: 1.5rem;
+    margin-inline-start: 2rem;
+    margin-inline-end: 2rem;
 }
 
 .mx-5 {
-    margin-inline-end: 3rem;
     margin-inline-start: 3rem;
+    margin-inline-end: 3rem;
 }
 
 .mx-auto {
-    margin-inline-end: auto;
     margin-inline-start: auto;
+    margin-inline-end: auto;
 }
 
 .my-0 {
@@ -138,8 +141,8 @@
 }
 
 .my-4 {
-    margin-block-start: 1.5rem;
-    margin-block-end: 1.5rem;
+    margin-block-start: 2rem;
+    margin-block-end: 2rem;
 }
 
 .my-5 {
@@ -169,7 +172,7 @@
 }
 
 .mt-4 {
-    margin-block-start: 1.5rem;
+    margin-block-start: 2rem;
 }
 
 .mt-5 {
@@ -197,7 +200,7 @@
 }
 
 .mr-4 {
-    margin-inline-end: 1.5rem;
+    margin-inline-end: 2rem;
 }
 
 .mr-5 {
@@ -225,7 +228,7 @@
 }
 
 .mb-4 {
-    margin-block-end: 1.5rem;
+    margin-block-end: 2rem;
 }
 
 .mb-5 {
@@ -253,7 +256,7 @@
 }
 
 .ml-4 {
-    margin-inline-start: 1.5rem;
+    margin-inline-start: 2rem;
 }
 
 .ml-5 {
@@ -266,6 +269,9 @@
 
 /**
  * User-defined paddings (inspired by Twitter Bootstrap).
+ *
+ * TODO: use `padding-inline` and `padding-block` shorthand where appropriate
+ * when browser support is more widespread.
  */
 
 .p-0 {
@@ -285,7 +291,7 @@
 }
 
 .p-4 {
-    padding: 1.5rem;
+    padding: 2rem;
 }
 
 .p-5 {
@@ -293,33 +299,33 @@
 }
 
 .px-0 {
-    padding-inline-end: 0;
     padding-inline-start: 0;
+    padding-inline-end: 0;
 }
 
 .px-1 {
-    padding-inline-end: 0.25rem;
     padding-inline-start: 0.25rem;
+    padding-inline-end: 0.25rem;
 }
 
 .px-2 {
-    padding-inline-end: 0.5rem;
     padding-inline-start: 0.5rem;
+    padding-inline-end: 0.5rem;
 }
 
 .px-3 {
-    padding-inline-end: 1rem;
     padding-inline-start: 1rem;
+    padding-inline-end: 1rem;
 }
 
 .px-4 {
-    padding-inline-end: 1.5rem;
-    padding-inline-start: 1.5rem;
+    padding-inline-start: 2rem;
+    padding-inline-end: 2rem;
 }
 
 .px-5 {
-    padding-inline-end: 3rem;
     padding-inline-start: 3rem;
+    padding-inline-end: 3rem;
 }
 
 .py-0 {
@@ -343,8 +349,8 @@
 }
 
 .py-4 {
-    padding-block-start: 1.5rem;
-    padding-block-end: 1.5rem;
+    padding-block-start: 2rem;
+    padding-block-end: 2rem;
 }
 
 .py-5 {
@@ -369,7 +375,7 @@
 }
 
 .pt-4 {
-    padding-block-start: 1.5rem;
+    padding-block-start: 2rem;
 }
 
 .pt-5 {
@@ -393,7 +399,7 @@
 }
 
 .pr-4 {
-    padding-inline-end: 1.5rem;
+    padding-inline-end: 2rem;
 }
 
 .pr-5 {
@@ -417,7 +423,7 @@
 }
 
 .pb-4 {
-    padding-block-end: 1.5rem;
+    padding-block-end: 2rem;
 }
 
 .pb-5 {
@@ -441,7 +447,7 @@
 }
 
 .pl-4 {
-    padding-inline-start: 1.5rem;
+    padding-inline-start: 2rem;
 }
 
 .pl-5 {
