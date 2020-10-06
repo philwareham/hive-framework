@@ -1,0 +1,133 @@
+@use "../setup";
+
+/* Typography helpers
+   ========================================================================== */
+
+/**
+ * Block-level text alignment/justification.
+ *
+ * Example HTML:
+ *
+ * <p class="align-left">
+ * <p class="align-right">
+ * <p class="align-center">
+ * <p class="align-justify">
+ */
+
+address,
+article,
+aside,
+blockquote,
+dd,
+details,
+dialog,
+div,
+dl,
+dt,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+li,
+main,
+nav,
+ol,
+p,
+pre,
+section,
+table,
+ul {
+    &.align-left {
+        text-align: left;
+    }
+
+    &.align-right {
+        text-align: right;
+    }
+
+    &.align-center {
+        text-align: center;
+    }
+
+    &.align-justify {
+        text-align: justify;
+    }
+}
+
+/**
+ * Forced uppercase text.
+ */
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+/**
+ * Forced (non-semantic) text weight regular.
+ */
+
+.font-weight-normal {
+    font-variation-settings: "wght" 400; // older browsers will just ignore this
+    font-weight: 400; // to prevent faux bolding of variable font
+}
+
+/**
+ * Forced (non-semantic) text weight bold.
+ */
+
+.font-weight-bold {
+    font-variation-settings: "wght" 680; // older browsers will just ignore this
+    font-weight: 700; // to prevent faux bolding of variable font
+}
+
+/**
+ * User-defined leading (inspired by Twitter Bootstrap).
+ */
+
+.lh-1 {
+    line-height: 1;
+}
+
+.lh-sm {
+    line-height: setup.$line-height-mobile;
+}
+
+.lh-base {
+    line-height: setup.$line-height-desktop;
+}
+
+.lh-2 {
+    line-height: 2;
+}
+
+/**
+ * Overflow text with ellipsis.
+ *
+ * Example HTML:
+ *
+ * <p class="ellipsis">
+ *
+ * <ul class="ellipsis">
+ *     <li></li>
+ */
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+ul,
+ol {
+    &.ellipsis li {
+        overflow: inherit;
+        text-overflow: inherit;
+    }
+}

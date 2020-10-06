@@ -141,6 +141,7 @@
         @include meta.load-css("modules/navigation");
         @include meta.load-css("modules/links");
         @include meta.load-css("modules/typography");
+        @include meta.load-css("modules/typography-helpers");
         @include meta.load-css("modules/alerts");
         @include meta.load-css("modules/embedded-content");
         @include meta.load-css("modules/tables");
