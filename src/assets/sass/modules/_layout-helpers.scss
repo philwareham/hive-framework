@@ -38,16 +38,62 @@
 }
 
 /**
- * 'Zebra stripes'.
+ * Block-level element alignment/justification.
+ *
+ * Example HTML:
+ *
+ * <p class="align-left">
+ * <p class="align-right">
+ * <p class="align-center">
+ * <p class="align-justify">
  */
 
-.zebra--subtle {
-    background-color: var(--color-background-zebra-subtle);
-}
+address,
+article,
+aside,
+blockquote,
+dd,
+details,
+dialog,
+div,
+dl,
+dt,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+li,
+main,
+nav,
+ol,
+p,
+pre,
+section,
+table,
+ul {
+    &.align-left {
+        text-align: left;
+    }
 
-.zebra--strong {
-    background-color: var(--color-background-zebra-strong);
-    color: var(--color-text-white-out);
+    &.align-right {
+        text-align: right;
+    }
+
+    &.align-center {
+        text-align: center;
+    }
+
+    &.align-justify {
+        text-align: justify;
+    }
 }
 
 /**

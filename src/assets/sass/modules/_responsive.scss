@@ -48,6 +48,80 @@
         }
     }
 
+    .layout-align-justify {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .layout-align-block-center {
+        align-items: center;
+    }
+
+    .layout-align-inline-center {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-right: -1em;
+        margin-left: -1em;
+
+        > * {
+            box-sizing: border-box;
+            min-width: 0;
+            padding-right: 1em;
+            padding-left: 1em;
+        }
+
+        &.gap-0 {
+            margin-right: 0;
+            margin-left: 0;
+
+            > * {
+                padding-right: 0;
+                padding-left: 0;
+            }
+        }
+
+        &.gap-1 {
+            margin-right: -1px;
+            margin-left: -1px;
+
+            > * {
+                padding-right: 1px;
+                padding-left: 1px;
+            }
+        }
+
+        &.gap-2 {
+            margin-right: -2px;
+            margin-left: -2px;
+
+            > * {
+                padding-right: 2px;
+                padding-left: 2px;
+            }
+        }
+
+        &.gap-3 {
+            margin-right: -0.25rem;
+            margin-left: -0.25rem;
+
+            > * {
+                padding-right: 0.25rem;
+                padding-left: 0.25rem;
+            }
+        }
+
+        &.gap-4 {
+            margin-right: -0.5rem;
+            margin-left: -0.5rem;
+
+            > * {
+                padding-right: 0.5rem;
+                padding-left: 0.5rem;
+            }
+        }
+    }
+
     /**
      * Generate sizes all for grid column cells.
      *
@@ -72,6 +146,10 @@
     .layout-4col-2span,
     .layout-4col-3span {
         grid-column: span 12;
+
+        .layout-align-inline-center > & {
+            width: 50%;
+        }
     }
 
     /**
@@ -80,6 +158,10 @@
 
     .layout-4col {
         grid-column: span 6;
+
+        .layout-align-inline-center > & {
+            width: 50%;
+        }
     }
 
     /**
@@ -107,13 +189,8 @@
     }
 
     /**
-     * Flex containers justified (aligned start/end and centred).
+     * Social icons aligned at end of row in footer.
      */
-
-    .flex-container-justified {
-        align-items: center;
-        justify-content: space-between;
-    }
 
     .site-footer .social-channels {
         text-align: end;
@@ -188,14 +265,26 @@
 
     .layout-2col {
         grid-column: span 6;
+
+        .layout-align-inline-center > & {
+            width: 50%;
+        }
     }
 
     .layout-3col {
         grid-column: span 4;
+
+        .layout-align-inline-center > & {
+            width: 33.333%;
+        }
     }
 
     .layout-3col-2span {
         grid-column: span 8;
+
+        .layout-align-inline-center > & {
+            width: 66.666%;
+        }
     }
 
     /**
@@ -378,14 +467,26 @@
     .layout-4col,
     .layout-4col-alt {
         grid-column: span 3;
+
+        .layout-align-inline-center > & {
+            width: 25%;
+        }
     }
 
     .layout-4col-2span {
         grid-column: span 6;
+
+        .layout-align-inline-center > & {
+            width: 50%;
+        }
     }
 
     .layout-4col-3span {
         grid-column: span 9;
+
+        .layout-align-inline-center > & {
+            width: 75%;
+        }
     }
 
     /**

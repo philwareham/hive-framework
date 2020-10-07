@@ -48,6 +48,19 @@ body {
 }
 
 /**
+ * 'Zebra stripes'.
+ */
+
+.zebra--subtle {
+    background-color: var(--color-background-zebra-subtle);
+}
+
+.zebra--strong {
+    background-color: var(--color-background-zebra-strong);
+    color: var(--color-text-white-out);
+}
+
+/**
  * Show/hide header on scroll.
  *
  * Example HTML:
@@ -166,8 +179,11 @@ noscript {
  */
 
 .site-navigation .search-form {
-    width: 15em;
     margin: 0 6% 1em;
+
+    #search {
+        width: 15em;
+    }
 }
 
 /**
@@ -265,31 +281,6 @@ hr.flourish {
 .gallery img { /* 1 */
     width: 100%;
     max-width: initial;
-}
-
-.layout-container.gallery { /* 2 */
-    gap: 2rem;
-    align-items: center;
-
-    &.gap-0 {
-        gap: 0;
-    }
-
-    &.gap-1 {
-        gap: 2px;
-    }
-
-    &.gap-2 {
-        gap: 4px;
-    }
-
-    &.gap-3 {
-        gap: 0.5rem;
-    }
-
-    &.gap-4 {
-        gap: 1rem;
-    }
 }
 
 .layout-text2col.gallery,
