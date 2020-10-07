@@ -23,23 +23,28 @@
      */
 
     .layout-container {
-        display: flex; // Flexbox fallback for browsers without CSS Grid support.
         display: grid;
-        gap: 0 2em;
+        gap: 0 2rem;
         grid-template-columns: repeat(12, 1fr);
-        flex-wrap: wrap; // Flexbox fallback for browsers without CSS Grid support.
-        margin: 0 -1em; // Flexbox fallback for browsers without CSS Grid support.
 
-        > * {
-            box-sizing: border-box; // Flexbox fallback.
-            min-width: 0; // Fix Firefox `pre` overflow issues.
-            padding: 0 1em; // Flexbox fallback.
+        &.gap-0 {
+            gap: 0;
         }
 
-        &.no-gaps {
-            gap: 0;
-            margin: 0;
-            padding: 0;
+        &.gap-1 {
+            gap: 2px;
+        }
+
+        &.gap-2 {
+            gap: 4px;
+        }
+
+        &.gap-3 {
+            gap: 0.5rem;
+        }
+
+        &.gap-4 {
+            gap: 1rem;
         }
     }
 
@@ -67,7 +72,6 @@
     .layout-4col-2span,
     .layout-4col-3span {
         grid-column: span 12;
-        width: 100%; // Flexbox fallback.
     }
 
     /**
@@ -76,26 +80,6 @@
 
     .layout-4col {
         grid-column: span 6;
-        width: 50%; // Flexbox fallback.
-    }
-
-    // Override Flexbox fallback for browsers with CSS Grid support.
-    @supports (display: grid) {
-        .layout-container {
-            margin: 0;
-        }
-
-        .layout-1col,
-        .layout-2col,
-        .layout-3col,
-        .layout-3col-2span,
-        .layout-4col,
-        .layout-4col-alt,
-        .layout-4col-2span,
-        .layout-4col-3span {
-            width: auto;
-            padding: 0;
-        }
     }
 
     /**
@@ -106,7 +90,7 @@
     .layout-text3col,
     .layout-text4col {
         column-count: 2;
-        column-gap: 2em;
+        column-gap: 2rem;
 
         :first-child {
             margin-top: 0;
@@ -162,7 +146,7 @@
     .article-description,
     .article-body,
     .article-comments {
-        margin: 1em 6%;
+        margin: 1rem 6%;
     }
 
     .article-body pre {
@@ -204,26 +188,14 @@
 
     .layout-2col {
         grid-column: span 6;
-        width: 50%; // Flexbox fallback.
     }
 
     .layout-3col {
         grid-column: span 4;
-        width: 33.333%; // Flexbox fallback.
     }
 
     .layout-3col-2span {
         grid-column: span 8;
-        width: 66.666%; // Flexbox fallback.
-    }
-
-    // Override Flexbox fallback for browsers with CSS Grid support.
-    @supports (display: grid) {
-        .layout-2col,
-        .layout-3col,
-        .layout-3col-2span {
-            width: auto;
-        }
     }
 
     /**
@@ -243,7 +215,7 @@
     .site-header {
         width: auto;
         margin-inline-start: 6%;
-        margin-inline-end: 1em;
+        margin-inline-end: 1rem;
     }
 
     .site-navigation {
@@ -251,13 +223,13 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: flex-end;
-        margin: 0.75em 0;
-        margin-inline-start: 1em;
+        margin: 0.75rem 0;
+        margin-inline-start: 1rem;
         margin-inline-end: 6%;
 
         .search-form {
-            margin: 0.25em 0;
-            margin-inline-start: 1.5em;
+            margin: 0.25rem 0;
+            margin-inline-start: 1.5rem;
         }
     }
 
@@ -406,27 +378,14 @@
     .layout-4col,
     .layout-4col-alt {
         grid-column: span 3;
-        width: 25%; // Flexbox fallback.
     }
 
     .layout-4col-2span {
         grid-column: span 6;
-        width: 50%; // Flexbox fallback.
     }
 
     .layout-4col-3span {
         grid-column: span 9;
-        width: 73%; // Flexbox fallback.
-    }
-
-    // Override Flexbox fallback for browsers with CSS Grid support.
-    @supports (display: grid) {
-        .layout-4col,
-        .layout-4col-alt,
-        .layout-4col-2span,
-        .layout-4col-3span {
-            width: auto;
-        }
     }
 
     /**
