@@ -59,6 +59,7 @@
 
     .layout-align-inline-center {
         display: flex;
+        gap: 0 !important;
         flex-wrap: wrap;
         justify-content: center;
         margin-right: -1em;
