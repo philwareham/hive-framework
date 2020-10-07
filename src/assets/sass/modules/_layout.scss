@@ -35,9 +35,8 @@ body {
  */
 
 .wrapper {
-    margin-top: -1px;
-    padding: 1px 0 1em;
-    border-bottom: 2px solid var(--color-border);
+    margin: -1px 0;
+    padding: 1px 0;
     background: var(--color-background);
 }
 
@@ -56,6 +55,8 @@ body {
 }
 
 .zebra--strong {
+    --color-text-heading: hsl(0, 0%, 100%);
+
     background-color: var(--color-background-zebra-strong);
     color: var(--color-text-white-out);
 }
