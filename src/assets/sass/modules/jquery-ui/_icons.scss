@@ -8,9 +8,9 @@
  *
  * Example HTML:
  *
- * %3Cspan class="ui-icon ui-icon-caret-1-n"%3E%3C/span%3E
- * %3Cspan class="ui-icon ui-icon-folder-collapsed"%3E%3C/span%3E
- * %3Cspan class="ui-icon ui-icon-play"%3E%3C/span%3E
+ * <span class="ui-icon ui-icon-caret-1-n"></span>
+ * <span class="ui-icon ui-icon-folder-collapsed"></span>
+ * <span class="ui-icon ui-icon-play"></span>
  */
 
 .ui-icon {
@@ -18,7 +18,7 @@
     position: relative;
     width: 16px;
     height: 16px;
-    margin-bottom: -2px;
+    margin-bottom: -3px;
     overflow: hidden;
     background-size: 16px 16px;
     vertical-align: baseline;
@@ -72,14 +72,14 @@ button:focus .ui-icon {
 }
 
 /**
- * 'Succes' state icons.
+ * 'Success' state icons.
  *
  * Example HTML:
  *
- * %3Cp class="success"%3E
- *     %3Cspan class="ui-icon ui-icon-check"%3E%3C/span%3E
+ * <p class="success">
+ *     <span class="ui-icon ui-icon-check"></span>
  *     Success!
- * %3C/p%3E
+ * </p>
  */
 
 .success .ui-icon,
@@ -99,10 +99,10 @@ button:focus .ui-icon {
  *
  * Example HTML:
  *
- * %3Cp class="warning"%3E
- *     %3Cspan class="ui-icon ui-icon-alert"%3E%3C/span%3E
+ * <p class="warning">
+ *     <span class="ui-icon ui-icon-alert"></span>
  *     Warning!
- * %3C/p%3E
+ * </p>
  */
 
 .ui-state-highlight .ui-icon,
@@ -124,10 +124,10 @@ button:focus .ui-icon {
  *
  * Example HTML:
  *
- * %3Cp class="error"%3E
- *     %3Cspan class="ui-icon ui-icon-alert"%3E%3C/span%3E
+ * <p class="error">
+ *     <span class="ui-icon ui-icon-alert"></span>
  *     Error!
- * %3C/p%3E
+ * </p>
  */
 
 .ui-state-error .ui-icon,
@@ -151,10 +151,10 @@ button:focus .ui-icon {
  *
  * Example HTML:
  *
- * %3Cp class="information"%3E
- *     %3Cspan class="ui-icon ui-icon-info"%3E%3C/span%3E
+ * <p class="information">
+ *     <span class="ui-icon ui-icon-info"></span>
  *     Content
- * %3C/p%3E
+ * </p>
  */
 
 .information .ui-icon,
