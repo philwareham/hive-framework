@@ -110,7 +110,6 @@
 
 .alert-bubble {
     display: inline-block;
-    margin: 0;
 }
 
 .alert-bubble::after {
@@ -120,9 +119,9 @@
     left: 50%;
     width: 0;
     height: 0;
-    margin-top: -0.5em;
-    margin-left: -0.5em;
-    border: 0.5em solid transparent;
+    margin-top: -0.75em;
+    margin-left: -0.75em;
+    border: 0.75em solid transparent;
     border-top: 0;
     border-bottom-color: inherit;
 }
@@ -132,8 +131,8 @@
     bottom: 0;
     left: 50%;
     margin-top: 0;
-    margin-bottom: -0.5em;
-    border: 0.5em solid transparent;
+    margin-bottom: -0.75em;
+    border: 0.75em solid transparent;
     border-top-color: inherit;
     border-bottom: 0;
 }
