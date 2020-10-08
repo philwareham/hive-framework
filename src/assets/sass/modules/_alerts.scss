@@ -59,6 +59,7 @@
  */
 
 .alert-block {
+    position: relative;
     padding: 0.5em 1em;
     border: 1px solid;
     border-radius: setup.$border-radius / 2;
@@ -97,4 +98,42 @@
     display: inline-block;
     padding: 0.125em 0.33em;
     font-weight: 400;
+}
+
+/**
+ * Alert bubbles (with pointer arrows).
+ *
+ * Example HTML:
+ *
+ * <small class="alert-block alert-bubble warning">
+ */
+
+.alert-bubble {
+    display: inline-block;
+    margin: 0;
+}
+
+.alert-bubble::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-top: -0.5em;
+    margin-left: -0.5em;
+    border: 0.5em solid transparent;
+    border-top: 0;
+    border-bottom-color: inherit;
+}
+
+.alert-bubble.over::after {
+    top: auto;
+    bottom: 0;
+    left: 50%;
+    margin-top: 0;
+    margin-bottom: -0.5em;
+    border: 0.5em solid transparent;
+    border-top-color: inherit;
+    border-bottom: 0;
 }
