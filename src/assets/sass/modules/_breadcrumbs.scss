@@ -8,16 +8,30 @@
  *
  * Example HTML:
  *
- * <ol class="breadcrumbs">
- *     <li></li>
- *     <li></li>
- * </ol>
+ * <nav class="breadcrumbs-container">
+ *     <ol class="breadcrumbs">
+ *         <li></li>
+ *         <li></li>
+ *     </ol>
+ * </nav>
  *
- * <ol class="breadcrumbs-path">
- *     <li></li>
- *     <li></li>
- * </ol>
+ * <nav class="breadcrumbs-container">
+ *     <ol class="breadcrumbs-path">
+ *         <li></li>
+ *         <li></li>
+ *     </ol>
+ * </nav>
  */
+
+.breadcrumbs-container {
+    background-color: var(--color-background-box);
+
+    ol {
+        width: 88%;
+        max-width: setup.$container-max-width;
+        margin: 0 auto;
+    }
+}
 
 .breadcrumbs,
 .breadcrumbs--path {

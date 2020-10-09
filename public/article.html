@@ -72,26 +72,26 @@
 
 <!-- Content -->
     <div class="wrapper">
+        <nav class="breadcrumbs-container" aria-label="Breadcrumb navigation">
+            <ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="#">
+                        <span itemprop="name">Home</span>
+                    </a>
+                    <meta itemprop="position" content="1">
+                </li>
+                <li class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <b itemprop="item">
+                        <span itemprop="name" aria-current="location">Article</span>
+                    </b>
+                    <meta itemprop="position" content="2">
+                </li>
+            </ol>
+        </nav>
 
         <img class="overstretch" src="mockups/img/blog-img-example.jpg">
 
         <div class="container">
-            <nav aria-label="Breadcrumb navigation">
-                <ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
-                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <a itemprop="item" href="#">
-                            <span itemprop="name">Home</span>
-                        </a>
-                        <meta itemprop="position" content="1">
-                    </li>
-                    <li class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <b itemprop="item">
-                            <span itemprop="name" aria-current="location">Article</span>
-                        </b>
-                        <meta itemprop="position" content="2">
-                    </li>
-                </ol>
-            </nav>
             <main id="main" aria-label="Main content" itemscope itemtype="https://schema.org/Blog">
                 <article class="article" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
 
