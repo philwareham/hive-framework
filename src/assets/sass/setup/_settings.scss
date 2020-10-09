@@ -113,7 +113,8 @@ $breakpoint-2:        48em !default; // 768px / 16px
 $breakpoint-1:        30em !default; // 480px / 16px
 
 // Border radius defaults
-$border-radius: 0.5em !default; // 8px / 16px
+$border-radius:      0.5rem !default; // 8px / 16px
+$border-radius-form: 0.25rem !default; // 4px / 16px
 
 // Button styling defaults
 $button-height:              2em !default; // 32px / 16px

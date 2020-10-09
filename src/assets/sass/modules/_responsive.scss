@@ -343,6 +343,7 @@
         li {
             margin-inline-start: 1px;
             padding: 0;
+            border-radius: setup.$border-radius / 2;
         }
 
         a {

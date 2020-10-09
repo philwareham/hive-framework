@@ -58,6 +58,10 @@
     }
 
     [type="checkbox"]:not(.ui-checkboxradio) {
+        @if setup.$border-radius-form {
+            border-radius: setup.$border-radius-form;
+        }
+
         &:checked {
             border: 0;
             background: var(--color-text-footnote) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
@@ -177,6 +181,10 @@
     }
 
     [type="checkbox"] {
+        @if setup.$border-radius-form {
+            border-radius: setup.$border-radius-form;
+        }
+
         &:checked {
             border: 0;
             background: var(--color-text-footnote) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
