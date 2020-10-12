@@ -74,23 +74,3 @@ dt {
 .list--numbered {
     list-style-type: decimal;
 }
-
-/**
- * Additional styling for article lists.
- *
- * Example HTML:
- *
- * <ul class="article-list">
- */
-
-.article-list {
-    margin: 0 0 2em;
-    padding: 0;
-    border-top: 1px solid var(--color-border);
-    list-style: none;
-
-    li {
-        margin-bottom: 0;
-        border-bottom: 1px solid var(--color-border);
-    }
-}
