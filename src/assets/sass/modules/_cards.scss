@@ -30,6 +30,11 @@
     flex-direction: column;
     margin: 1em 0;
     border: 1px solid var(--color-border-light);
+
+    @if setup.$border-radius-form {
+        border-radius: setup.$border-radius-form;
+    }
+
     word-wrap: break-word;
 
     .alert-pill {

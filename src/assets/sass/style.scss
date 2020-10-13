@@ -142,7 +142,6 @@
         @include meta.load-css("modules/links");
         @include meta.load-css("modules/typography");
         @include meta.load-css("modules/typography-helpers");
-        @include meta.load-css("modules/alerts");
         @include meta.load-css("modules/embedded-content");
         @include meta.load-css("modules/tables");
         @include meta.load-css("modules/lists");
@@ -165,6 +164,7 @@
         @include meta.load-css("modules/social-mono-inverse");
         @include meta.load-css("modules/misc");
         @include meta.load-css("modules/cards");
+        @include meta.load-css("modules/alerts");
         @include meta.load-css("modules/article");
         @include meta.load-css("modules/article-comments");
 

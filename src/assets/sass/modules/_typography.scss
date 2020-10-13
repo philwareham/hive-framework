@@ -92,12 +92,22 @@ h1 {
     margin: 0.5em 0;
     font-size: 2.5rem; // 40px / 16px
     line-height: 1.2; // 48px / 40px
+
+    sup {
+        top: -1.25em;
+        font-size: 1.25rem;
+    }
 }
 
 h2 {
     margin: 0.75em 0; // 24px / 32px
     font-size: 2rem; // 32px / 16px
     line-height: 1.25; // 40px / 32px
+
+    sup {
+        top: -1em;
+        font-size: 1rem;
+    }
 }
 
 h3 {
@@ -309,7 +319,6 @@ figcaption,
 tfoot,
 .footnote,
 .footnotes,
-.card-header,
 .card-footer {
     font-size: setup.$small-font-size;
     line-height: setup.$line-height-mobile;

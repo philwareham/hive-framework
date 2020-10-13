@@ -31,6 +31,33 @@
 }
 
 /**
+ * Alert backgrounds.
+ *
+ * Example HTML:
+ *
+ * <span class="background--success">
+ * <span class="background--error">
+ * <strong class="background--success">
+ * <strong class="background--error">
+ */
+
+.background--success {
+    background: var(--color-success-background);
+}
+
+.background--warning {
+    background: var(--color-warning-background);
+}
+
+.background--error {
+    background: var(--color-error-background);
+}
+
+.background--information {
+    background: var(--color-info-background);
+}
+
+/**
  * Highlighted background.
  *
  * Example HTML:
