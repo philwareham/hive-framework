@@ -25,12 +25,18 @@
 
 @mixin gradient-linear($color-grad-from, $color-grad-to) {
     background-color: $color-grad-to;
-    background-image: linear-gradient($color-grad-from, $color-grad-to);
+
+    @if $color-grad-from != $color-grad-to { // only render gradient if colours are not equal
+        background-image: linear-gradient($color-grad-from, $color-grad-to);
+    }
 }
 
 @mixin gradient-radial($color-grad-from, $color-grad-to) {
     background-color: $color-grad-to;
-    background-image: radial-gradient($color-grad-from, $color-grad-to);
+
+    @if $color-grad-from != $color-grad-to { // only render gradient if colours are not equal
+        background-image: radial-gradient($color-grad-from, $color-grad-to);
+    }
 }
 
 // hide text but retain accessibility
