@@ -9,8 +9,6 @@ require('prismjs/components/prism-markup-templating');
 require('prismjs/components/prism-php');
 require('prismjs/components/prism-scss');
 
-import autosize from 'autosize';
-
 import Glide from '@glidejs/glide';
 
 (function()
@@ -24,7 +22,6 @@ import Glide from '@glidejs/glide';
     // Load objects as variables.
 
     var code = document.querySelectorAll('code[class*="language-"], [class*="language-"] code'),
-        fields = document.querySelectorAll('textarea'),
         navmenu = document.getElementById('site-navigation'),
         slider = document.querySelectorAll('.glide');
 
@@ -34,14 +31,6 @@ import Glide from '@glidejs/glide';
 
     if (code.length) {
         Prism.highlightAll();
-    }
-
-    // Auto-growing textareas, via 'Autosize'.
-    // Allows dynamic resizing of textarea height, so that it grows as based
-    // on visitor input. More info - https://github.com/jackmoore/autosize.
-
-    if (fields.length) {
-        autosize(fields);
     }
 
     // Responsive navigation menu.

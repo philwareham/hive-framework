@@ -89,7 +89,6 @@ module.exports = function (grunt)
                     define: true,
                     module: true,
                     require: true,
-                    autosize: true,
                     Prism: true
                 },
                 latedef: true,
