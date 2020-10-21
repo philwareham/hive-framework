@@ -257,6 +257,7 @@ samp {
 code,
 kbd,
 samp {
+    display: inline-block;
     padding: 1px 0.1875rem; // 3px / 16px
 }
 
@@ -277,6 +278,7 @@ pre {
     tab-size: 4; /* 3 */
 
     code {
+        display: initial;
         padding: 0;
         border: 0;
         background-color: transparent;
