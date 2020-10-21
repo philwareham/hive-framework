@@ -440,25 +440,6 @@
 @media screen and (min-width: setup.$breakpoint-3) {
 
     /**
-     * Adjust baseline.
-     */
-
-    html,
-    h6,
-    pre,
-    code,
-    kbd,
-    samp,
-    small,
-    figcaption,
-    tfoot,
-    .footnote,
-    .ui-helper-reset,
-    .ui-selectmenu-optgroup {
-        line-height: setup.$line-height-desktop;
-    }
-
-    /**
      * Cells for 4 column layouts are generated.
      *
      * Example HTML:

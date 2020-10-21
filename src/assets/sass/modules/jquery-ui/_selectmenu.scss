@@ -89,7 +89,7 @@
     border-top: 1px solid var(--color-border);
     font-size: 1rem;
     font-weight: 700;
-    line-height: setup.$line-height-mobile;
+    line-height: setup.$base-line-height;
 
     &:first-child {
         margin: 0;
