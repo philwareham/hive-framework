@@ -1,9 +1,12 @@
 @use "../setup";
 
-.search-page main,
-.listing-page main,
-.blog-listing-page main {
-    text-align: center;
+.error-page,
+.search-page,
+.listing-page,
+.blog-listing-page {
+    main {
+        text-align: center;
+    }
 }
 
 .article {
