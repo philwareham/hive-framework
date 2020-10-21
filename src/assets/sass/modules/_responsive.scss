@@ -305,7 +305,7 @@
 
         .search-form {
             margin: 0.25rem 0;
-            margin-inline-start: 1.5rem;
+            margin-inline-start: 1rem;
         }
     }
 
@@ -333,7 +333,7 @@
         }
 
         a {
-            padding: 0.5em 1em;
+            padding: 0.5em 0.75em;
         }
     }
 
@@ -451,6 +451,18 @@
 
     .layout-text4col {
         column-count: 4;
+    }
+
+    .site-navigation .search-form {
+        margin-inline-start: 1.5rem;
+    }
+
+    /**
+     * Navigation layout changes.
+     */
+
+    #site-navigation a {
+        padding: 0.5em 1em;
     }
 
     /**
