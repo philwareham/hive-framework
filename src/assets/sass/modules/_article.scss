@@ -7,11 +7,13 @@
 }
 
 .article {
-    margin: 0 0 2em;
+    margin: 0 0 2rem;
+    font-size: 1.125rem; // 18px / 16px
 }
 
 .article-header {
     margin-top: 2em;
+    font-size: 1rem;
     text-align: center;
 
     .separator {
@@ -25,10 +27,6 @@
     font-variation-settings: "wght" 400; // older browsers will just ignore this
     font-weight: 400; // to prevent faux bolding of variable font
     line-height: 1.4; // 28px / 20px
-}
-
-.article-body {
-    font-size: 1.125rem; // 18px / 16px
 }
 
 @if setup.$font-stack-serif-vf {
