@@ -131,7 +131,6 @@ h5 {
 h6 {
     margin: 1em 0; // 16px
     font-size: 1rem; // 16px
-    line-height: setup.$base-line-height;
 }
 
 /**
@@ -157,7 +156,7 @@ address {
  */
 
 blockquote {
-    margin: 0.8em 10%; // 16px / 20px
+    margin: 0.75em 10%; // 18px / 24px
     color: var(--color-text-heading);
     font-family: var(--font-serif);
     font-size: 1.5rem; // 24px / 16px
@@ -188,7 +187,7 @@ blockquote {
             display: block;
             width: 1px;
             height: 2rem;
-            margin: 13px auto;
+            margin: 0.75rem auto;
             background-color: var(--color-border);
         }
     }
@@ -227,7 +226,7 @@ abbr[title] {
 mark,
 var {
     padding: 0 0.25em; // 0 4px
-    border-radius: setup.$border-radius / 2;
+    border-radius: 0.25rem; // 4px / 16px
     background-color: var(--color-selected);
     color: var(--color-text);
 }
@@ -243,14 +242,13 @@ code,
 kbd,
 samp {
     border: 1px solid var(--color-border-extra-light);
-    border-radius: 0.2857143em; // 4px / 14px
+    border-radius: 0.25rem; // 4px / 16px
     background-color: var(--color-background-box);
     color: var(--color-text);
     direction: ltr;
     font-family: var(--font-code);
     font-feature-settings: normal; /* 1 */
     font-size: setup.$code-font-size;
-    line-height: setup.$base-line-height;
     text-align: left;
     unicode-bidi: isolate;
 }
@@ -258,7 +256,7 @@ samp {
 code,
 kbd,
 samp {
-    padding: 1px 0.2142857em; // 3px / 14px
+    padding: 1px 0.1875rem; // 3px / 16px
 }
 
 /**
@@ -270,7 +268,7 @@ samp {
  */
 
 pre {
-    padding: 0.5714286em 1.1428571em; // 8px / 14px + 16px / 14px
+    padding: 0.5rem 1rem;
     overflow-x: auto; /* 1 */
     word-wrap: normal; /* 2 */
     tab-size: 4; /* 3 */
@@ -321,7 +319,6 @@ tfoot,
 .footnotes,
 .card-footer {
     font-size: setup.$small-font-size;
-    line-height: setup.$base-line-height;
 }
 
 figcaption,
@@ -332,5 +329,5 @@ tfoot,
 }
 
 figcaption {
-    margin: 0.5em 0;
+    margin: 0.5rem 0;
 }
