@@ -218,25 +218,11 @@
     }
 
     /**
-     * Article layout revisions at breakpoint 1.
-     */
-
-    .article-description,
-    .article-body,
-    .article-comments {
-        margin: 1rem 6%;
-    }
-
-    .article-body pre {
-        margin: 2rem -7%;
-    }
-
-    /**
      * Form layout revisions at breakpoint 1.
      */
 
     form .layout-container {
-        margin-bottom: -1rem;
+        margin-bottom: -1em;
 
         p {
             margin-top: 0;
@@ -416,20 +402,6 @@
         font-size: 3rem; // 48px / 16px
         line-height: 1.1666667; // 56px / 48px
     }
-
-    /**
-     * Article layout revisions at breakpoint 2.
-     */
-
-    .article-description,
-    .article-body,
-    .article-comments {
-        margin: 1em 12%;
-    }
-
-    .article-body pre {
-        margin: 2rem -16%;
-    }
 }
 
 
@@ -496,15 +468,5 @@
 
     .article-header h1 {
         font-size: 4rem; // 60px / 16px
-    }
-
-    .article-description,
-    .article-body,
-    .article-comments {
-        margin: 1em 18%;
-    }
-
-    .article-body pre {
-        margin: 2rem -28%;
     }
 }

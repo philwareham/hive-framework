@@ -156,7 +156,7 @@
 
                     <hr class="flourish">
                     <section id="comments-head" class="article-comments">
-                        <h3>Comments</h3>
+                        <h2>Comments</h2>
                         <ol class="list--comments">
                             <li>
                                 <article class="comments" itemscope itemtype="https://schema.org/Comment">
@@ -190,29 +190,27 @@
                             </li>
                         </ol>
 
-                        <section id="comments-form">
-                            <h3>Leave a comment</h3>
-                            <form id="txpCommentInputForm" method="post" action="#">
-                                <div class="layout-container">
-                                    <p class="layout-2col">
-                                        <label for="name">Name</label><br>
-                                        <input class="large" name="name" autocomplete="name" required="required" class="comment_name_input" id="name" type="text" size="32" placeholder="Required">
-                                    </p>
-                                    <p class="layout-2col">
-                                        <label for="email">Email</label><br>
-                                        <input class="large" name="email" autocomplete="email" required="required" class="comment_email_input" id="email" type="text" size="32" placeholder="Required">
-                                    </p>
-                                </div>
-                                <p>
-                                    <label for="message">Message</label><br>
-                                    <textarea class="txpCommentInputMessage" id="message" name="message" cols="64" rows="4" required="required" placeholder="Required"></textarea>
+                        <h3>Leave a comment</h3>
+                        <form id="txpCommentInputForm" method="post" action="#">
+                            <div class="layout-container">
+                                <p class="layout-2col">
+                                    <label for="name">Name</label><br>
+                                    <input class="large" name="name" autocomplete="name" required="required" class="comment_name_input" id="name" type="text" size="32" placeholder="Required">
                                 </p>
-                                <p>
-                                    <input name="preview" class="button" id="txpCommentPreview" type="submit" value="Preview">
-                                    <input name="submit" class="button button-primary disabled" id="txpCommentSubmit" type="submit" disabled="disabled" value="Submit">
+                                <p class="layout-2col">
+                                    <label for="email">Email</label><br>
+                                    <input class="large" name="email" autocomplete="email" required="required" class="comment_email_input" id="email" type="text" size="32" placeholder="Required">
                                 </p>
-                            </form>
-                        </section>
+                            </div>
+                            <p>
+                                <label for="message">Message</label><br>
+                                <textarea class="txpCommentInputMessage" id="message" name="message" cols="64" rows="4" required="required" placeholder="Required"></textarea>
+                            </p>
+                            <p>
+                                <input name="preview" class="button" id="txpCommentPreview" type="submit" value="Preview">
+                                <input name="submit" class="button button-primary disabled" id="txpCommentSubmit" type="submit" disabled="disabled" value="Submit">
+                            </p>
+                        </form>
                     </section>
 
                 </article>

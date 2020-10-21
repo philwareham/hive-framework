@@ -171,6 +171,7 @@ blockquote {
     text-align: center;
 
     footer {
+        margin-bottom: 1.5rem;
         color: var(--color-text-footnote);
         font-family: var(--font-sans-serif);
         font-size: 1rem;
@@ -268,6 +269,7 @@ samp {
  */
 
 pre {
+    box-sizing: border-box;
     padding: 0.5rem 1rem;
     overflow-x: auto; /* 1 */
     word-wrap: normal; /* 2 */

@@ -11,8 +11,29 @@
     font-size: 1.125rem; // 18px / 16px
 }
 
+.article-description,
+.article-body,
+.article-comments {
+    display: grid;
+    grid-template-columns: 1fr min(42rem, 100%) 1fr;
+
+    > * {
+        grid-column: 2;
+        margin-top: 0;
+    }
+
+    .full-bleed {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+}
+
+//.article-body pre {
+//    margin: 2rem -7%;
+//}
+
 .article-header {
-    margin-top: 2em;
+    margin: 2em 0;
     font-size: 1rem;
     text-align: center;
 
