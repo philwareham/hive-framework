@@ -3,19 +3,6 @@
 /* stylelint-disable color-named */
 
 /**
- * Remove unnecessary global styling from printed media.
- */
-
-*,
-*::before,
-*::after {
-    background: transparent !important;
-    box-shadow: none !important;
-    color: black !important;
-    text-shadow: none !important;
-}
-
-/**
  * Use a print-friendly font size.
  */
 
@@ -31,6 +18,7 @@ html {
 body {
     margin: 0.5cm;
     padding: 2em 5em;
+    color: black;
     font-family: var(--font-print);
 }
 
@@ -196,7 +184,7 @@ pre {
     margin-bottom: 8pt;
     padding: 8pt;
     border: 1pt solid black;
-    white-space: pre-wrap !important; /* 1 */
+    white-space: pre-wrap; /* 1 */
 }
 
 /**
