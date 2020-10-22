@@ -63,11 +63,8 @@
 .ellipsis {
     overflow: hidden;
     text-overflow: ellipsis;
-}
 
-ul,
-ol {
-    &.ellipsis li {
+    li {
         overflow: inherit;
         text-overflow: inherit;
     }
