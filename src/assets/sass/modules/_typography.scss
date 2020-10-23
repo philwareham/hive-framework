@@ -88,7 +88,8 @@ h6 {
     }
 }
 
-h1 {
+h1,
+.faux-h1 {
     margin: 0.5em 0;
     font-size: 2.5rem; // 40px / 16px
     line-height: 1.2; // 48px / 40px
@@ -99,7 +100,8 @@ h1 {
     }
 }
 
-h2 {
+h2,
+.faux-h2 {
     margin: 0.75em 0; // 24px / 32px
     font-size: 2rem; // 32px / 16px
     line-height: 1.25; // 40px / 32px
@@ -110,19 +112,22 @@ h2 {
     }
 }
 
-h3 {
+h3,
+.faux-h3 {
     margin: 1em 0; // 24px
     font-size: 1.5rem; // 24px / 16px
     line-height: 1.3333333; // 32px / 24px
 }
 
-h4 {
+h4,
+.faux-h4 {
     margin: 1em 0; // 20px
     font-size: 1.25rem; // 20px / 16px
     line-height: 1.4; // 28px / 20px
 }
 
-h5 {
+h5,
+.faux-h5 {
     margin: 1em 0; // 18px
     font-size: 1.125rem; // 18px / 16px
     line-height: 1.4444444; // 26px / 18px
