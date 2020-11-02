@@ -46,6 +46,12 @@ body {
     font-weight: 400; // to prevent faux bolding of variable font
 }
 
+//@include setup.dark-mode {
+//    body {
+//        font-variation-settings: "wght" 380; // older browsers will just ignore this
+//    }
+//}
+
 @if setup.$font-stack-form-vf {
     @supports (font-variation-settings: normal) {
         body {
