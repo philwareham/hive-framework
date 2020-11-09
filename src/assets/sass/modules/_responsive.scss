@@ -57,8 +57,24 @@
         justify-content: space-between;
     }
 
+    .layout-align-block-start {
+        align-items: start;
+    }
+
+    .layout-align-block-end {
+        align-items: end;
+    }
+
     .layout-align-block-center {
         align-items: center;
+    }
+
+    .layout-align-inline-start {
+        justify-items: start;
+    }
+
+    .layout-align-inline-end {
+        justify-items: end;
     }
 
     .layout-align-inline-center {
