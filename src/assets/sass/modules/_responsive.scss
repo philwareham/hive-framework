@@ -69,19 +69,12 @@
         align-items: center;
     }
 
-    .layout-align-inline-start {
-        justify-items: start;
-    }
-
-    .layout-align-inline-end {
-        justify-items: end;
-    }
-
+    .layout-align-inline-start,
+    .layout-align-inline-end,
     .layout-align-inline-center {
         display: flex;
         gap: 0 !important;
         flex-wrap: wrap;
-        justify-content: center;
         margin-right: -1em;
         margin-left: -1em;
 
@@ -91,6 +84,19 @@
             padding-right: 1em;
             padding-left: 1em;
         }
+    }
+
+
+    .layout-align-inline-start {
+        justify-content: flex-start;
+    }
+
+    .layout-align-inline-end {
+        justify-content: flex-end;
+    }
+
+    .layout-align-inline-center {
+        justify-content: center;
 
         &.gap-0 {
             margin-right: 0;
@@ -169,7 +175,7 @@
         grid-column: span 12;
 
         .layout-align-inline-center > & {
-            width: 50%;
+            width: 100%;
         }
     }
 
@@ -180,6 +186,8 @@
     .layout-4col {
         grid-column: span 6;
 
+        .layout-align-inline-start > &,
+        .layout-align-inline-end > &,
         .layout-align-inline-center > & {
             width: 50%;
         }
@@ -273,6 +281,8 @@
     .layout-2col {
         grid-column: span 6;
 
+        .layout-align-inline-start > &,
+        .layout-align-inline-end > &,
         .layout-align-inline-center > & {
             width: 50%;
         }
@@ -281,6 +291,8 @@
     .layout-3col {
         grid-column: span 4;
 
+        .layout-align-inline-start > &,
+        .layout-align-inline-end > &,
         .layout-align-inline-center > & {
             width: 33.333%;
         }
@@ -289,6 +301,8 @@
     .layout-3col-2span {
         grid-column: span 8;
 
+        .layout-align-inline-start > &,
+        .layout-align-inline-end > &,
         .layout-align-inline-center > & {
             width: 66.666%;
         }
@@ -444,6 +458,8 @@
     .layout-4col-alt {
         grid-column: span 3;
 
+        .layout-align-inline-start > &,
+        .layout-align-inline-end > &,
         .layout-align-inline-center > & {
             width: 25%;
         }
@@ -452,6 +468,8 @@
     .layout-4col-2span {
         grid-column: span 6;
 
+        .layout-align-inline-start > &,
+        .layout-align-inline-end > &,
         .layout-align-inline-center > & {
             width: 50%;
         }
@@ -460,6 +478,8 @@
     .layout-4col-3span {
         grid-column: span 9;
 
+        .layout-align-inline-start > &,
+        .layout-align-inline-end > &,
         .layout-align-inline-center > & {
             width: 75%;
         }
