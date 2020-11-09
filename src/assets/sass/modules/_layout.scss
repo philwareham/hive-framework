@@ -106,6 +106,15 @@ body {
 }
 
 /**
+ * Enforced containment for individual elements.
+ */
+
+.contain {
+    max-width: setup.$container-max-width;
+    margin: 0 auto;
+}
+
+/**
  * Additional styling for child content within site header.
  */
 
