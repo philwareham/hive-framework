@@ -95,11 +95,13 @@ ul {
         text-align: end;
     }
 
-    &.align-center {
+    &.align-center,
+    &.align-inline-center {
         text-align: center;
     }
 
-    &.align-justify {
+    &.align-justify,
+    &.align-inline-justify {
         text-align: justify;
     }
 }

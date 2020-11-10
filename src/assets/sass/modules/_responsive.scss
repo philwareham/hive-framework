@@ -76,6 +76,7 @@
     .layout-align-inline-start,
     .layout-align-right,
     .layout-align-inline-end,
+    .layout-align-center,
     .layout-align-inline-center {
         display: flex;
         gap: 0 !important;
@@ -139,6 +140,7 @@
         justify-content: flex-end;
     }
 
+    .layout-align-center,
     .layout-align-inline-center {
         justify-content: center;
     }
@@ -172,6 +174,7 @@
         .layout-align-inline-start > &,
         .layout-align-right > &,
         .layout-align-inline-end > &,
+        .layout-align-center > &,
         .layout-align-inline-center > & {
             width: 100%;
         }
@@ -188,6 +191,7 @@
         .layout-align-inline-start > &,
         .layout-align-right > &,
         .layout-align-inline-end > &,
+        .layout-align-center > &,
         .layout-align-inline-center > & {
             width: 50%;
         }
@@ -285,6 +289,7 @@
         .layout-align-inline-start > &,
         .layout-align-right > &,
         .layout-align-inline-end > &,
+        .layout-align-center > &,
         .layout-align-inline-center > & {
             width: 50%;
         }
@@ -297,6 +302,7 @@
         .layout-align-inline-start > &,
         .layout-align-right > &,
         .layout-align-inline-end > &,
+        .layout-align-center > &,
         .layout-align-inline-center > & {
             width: 33.333%;
         }
@@ -309,6 +315,7 @@
         .layout-align-inline-start > &,
         .layout-align-right > &,
         .layout-align-inline-end > &,
+        .layout-align-center > &,
         .layout-align-inline-center > & {
             width: 66.666%;
         }
@@ -468,6 +475,7 @@
         .layout-align-inline-start > &,
         .layout-align-right > &,
         .layout-align-inline-end > &,
+        .layout-align-center > &,
         .layout-align-inline-center > & {
             width: 25%;
         }
@@ -480,6 +488,7 @@
         .layout-align-inline-start > &,
         .layout-align-right > &,
         .layout-align-inline-end > &,
+        .layout-align-center > &,
         .layout-align-inline-center > & {
             width: 50%;
         }
@@ -492,6 +501,7 @@
         .layout-align-inline-start > &,
         .layout-align-right > &,
         .layout-align-inline-end > &,
+        .layout-align-center > &,
         .layout-align-inline-center > & {
             width: 75%;
         }

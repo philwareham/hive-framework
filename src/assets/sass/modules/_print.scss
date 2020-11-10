@@ -221,12 +221,25 @@ img {
         float: left;
     }
 
+    &.align-inline-start {
+        margin: 1em;
+        margin-inline-start: 0;
+        float: inline-start;
+    }
+
     &.align-right {
         margin: 1em 0 1em 1em;
         float: right;
     }
 
-    &.align-center {
+    &.align-inline-end {
+        margin: 1em;
+        margin-inline-end: 0;
+        float: inline-end;
+    }
+
+    &.align-center,
+    &.align-inline-center {
         display: block;
         margin: 1em auto;
     }
