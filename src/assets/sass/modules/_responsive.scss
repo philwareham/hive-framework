@@ -167,6 +167,10 @@
     .layout-4col-3span {
         grid-column: span 12;
 
+        .layout-align-left > &,
+        .layout-align-inline-start > &,
+        .layout-align-right > &,
+        .layout-align-inline-end > &,
         .layout-align-inline-center > & {
             width: 100%;
         }
@@ -179,7 +183,9 @@
     .layout-4col {
         grid-column: span 6;
 
+        .layout-align-left > &,
         .layout-align-inline-start > &,
+        .layout-align-right > &,
         .layout-align-inline-end > &,
         .layout-align-inline-center > & {
             width: 50%;
@@ -274,7 +280,9 @@
     .layout-2col {
         grid-column: span 6;
 
+        .layout-align-left > &,
         .layout-align-inline-start > &,
+        .layout-align-right > &,
         .layout-align-inline-end > &,
         .layout-align-inline-center > & {
             width: 50%;
@@ -284,7 +292,9 @@
     .layout-3col {
         grid-column: span 4;
 
+        .layout-align-left > &,
         .layout-align-inline-start > &,
+        .layout-align-right > &,
         .layout-align-inline-end > &,
         .layout-align-inline-center > & {
             width: 33.333%;
@@ -294,7 +304,9 @@
     .layout-3col-2span {
         grid-column: span 8;
 
+        .layout-align-left > &,
         .layout-align-inline-start > &,
+        .layout-align-right > &,
         .layout-align-inline-end > &,
         .layout-align-inline-center > & {
             width: 66.666%;
@@ -451,7 +463,9 @@
     .layout-4col-alt {
         grid-column: span 3;
 
+        .layout-align-left > &,
         .layout-align-inline-start > &,
+        .layout-align-right > &,
         .layout-align-inline-end > &,
         .layout-align-inline-center > & {
             width: 25%;
@@ -461,7 +475,9 @@
     .layout-4col-2span {
         grid-column: span 6;
 
+        .layout-align-left > &,
         .layout-align-inline-start > &,
+        .layout-align-right > &,
         .layout-align-inline-end > &,
         .layout-align-inline-center > & {
             width: 50%;
@@ -471,7 +487,9 @@
     .layout-4col-3span {
         grid-column: span 9;
 
+        .layout-align-left > &,
         .layout-align-inline-start > &,
+        .layout-align-right > &,
         .layout-align-inline-end > &,
         .layout-align-inline-center > & {
             width: 75%;
