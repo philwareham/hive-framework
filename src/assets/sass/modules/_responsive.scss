@@ -57,10 +57,12 @@
         justify-content: space-between;
     }
 
+    .layout-align-top,
     .layout-align-block-start {
         align-items: start;
     }
 
+    .layout-align-bottom,
     .layout-align-block-end {
         align-items: end;
     }
@@ -69,7 +71,9 @@
         align-items: center;
     }
 
+    .layout-align-left,
     .layout-align-inline-start,
+    .layout-align-right,
     .layout-align-inline-end,
     .layout-align-inline-center {
         display: flex;
@@ -124,11 +128,12 @@
         }
     }
 
-
+    .layout-align-left,
     .layout-align-inline-start {
         justify-content: flex-start;
     }
 
+    .layout-align-right,
     .layout-align-inline-end {
         justify-content: flex-end;
     }
