@@ -83,8 +83,16 @@ ul {
         text-align: left;
     }
 
+    &.align-inline-start {
+        text-align: start;
+    }
+
     &.align-right {
         text-align: right;
+    }
+
+    &.align-inline-end {
+        text-align: end;
     }
 
     &.align-center {
