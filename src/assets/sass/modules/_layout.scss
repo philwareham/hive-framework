@@ -99,17 +99,9 @@ body {
 
 .site-header,
 .site-footer,
-.container {
+.container,
+:not(.container) .contain {
     width: 88%;
-    max-width: setup.$container-max-width;
-    margin: 0 auto;
-}
-
-/**
- * Enforced containment for individual elements.
- */
-
-.contain {
     max-width: setup.$container-max-width;
     margin: 0 auto;
 }
