@@ -100,10 +100,16 @@ body {
 .site-header,
 .site-footer,
 .container,
-:not(.container) .contain {
+.contain {
     width: 88%;
     max-width: setup.$container-max-width;
     margin: 0 auto;
+}
+
+.container .contain {
+    width: initial;
+    max-width: initial;
+    margin: initial;
 }
 
 /**
