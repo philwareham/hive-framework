@@ -1223,8 +1223,8 @@
                             <h3>Plain table</h3>
                             <p>Plain table with <code class="language-markup">&lt;thead&gt;</code> included and a highlighted row, but no <code class="language-markup">&lt;caption&gt;</code>.</p>
 
-                            <div class="tabular-data" itemscope itemtype="https://schema.org/Table">
-                                <h4 class="accessibility" itemprop="about">This describes the table as microdata if no caption is used.</h4>
+                            <div class="tabular-data" tabindex="0" aria-labelledby="table-caption1" itemscope itemtype="https://schema.org/Table">
+                                <h4 id="table-caption1" class="accessibility" itemprop="about">This describes the table as microdata if no caption is used.</h4>
                                 <table>
                                     <colgroup>
                                         <col class="t33">
@@ -1261,9 +1261,9 @@
                             <h3>Bordered table</h3>
                             <p>Bordered table with <code class="language-markup">&lt;caption&gt;</code>, <code class="language-markup">&lt;thead&gt;</code> and <code class="language-markup">&lt;tfoot&gt;</code> included.</p>
 
-                            <div class="tabular-data" itemscope itemtype="https://schema.org/Table">
-                                <table class="table--bordered">
-                                    <caption itemprop="about">This is a table caption</caption>
+                            <div class="tabular-data" tabindex="0" aria-labelledby="table-caption2" itemscope itemtype="https://schema.org/Table">
+                                <table class="table--bordered" tabindex="0" aria-labelledby="table-caption1">
+                                    <caption id="table-caption2" itemprop="about">This is a table caption</caption>
                                     <colgroup>
                                         <col class="t25">
                                         <col class="t25">

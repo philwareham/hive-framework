@@ -16,6 +16,10 @@
 .tabular-data {
     margin-bottom: 1em;
     overflow-x: auto;
+
+    &:focus {
+        outline: thin solid var(--color-link-focus);
+    }
 }
 
 /**
