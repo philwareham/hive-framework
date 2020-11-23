@@ -149,11 +149,12 @@ strong {
 }
 
 /**
- * Add vertical margin to addresses.
+ * Add vertical margin to addresses, and remove default italic browser styling.
  */
 
 address {
     margin: 1em 0;
+    font-style: normal;
 }
 
 /**
