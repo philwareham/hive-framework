@@ -191,7 +191,7 @@ span.button {
     --color-success-text-dark: hsl(120, 60%, 30%);
     --color-success-text-extra-dark: hsl(120, 60%, 20%);
 
-    @include setup.gradient-linear(var(--color-success-text), var(--color-success-text));
+    @include setup.gradient-linear(var(--color-success-text-light), var(--color-success-text));
 
     @if setup.$button-border {
         border-color: var(--color-success-text-dark);
