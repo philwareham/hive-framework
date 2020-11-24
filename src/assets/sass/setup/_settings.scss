@@ -122,7 +122,7 @@ $button-padding:             0.25em 1em !default; // 4px / 16px
 $button-large-padding:       0.5em 1em !default; // 8px / 16px;
 $button-small-padding:       0.3076923em 1em !default; // 4px / 13px
 $button-border:              1px solid !default;
-$button-radius:              1em !default;
+$button-radius:              0.5rem !default;
 $button-large-radius:        $button-radius * 1.25 !default;
 $button-box-shadow-offset-y: 2px !default;
 $button-box-shadow:          0 $button-box-shadow-offset-y 0 !default;
