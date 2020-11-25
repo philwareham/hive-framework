@@ -440,15 +440,6 @@
     .search-hero input {
         font-size: 1.75rem;
     }
-
-    /**
-     * Larger `h1` headings.
-     */
-
-    h1 {
-        font-size: 3rem; // 48px / 16px
-        line-height: 1.1666667; // 56px / 48px
-    }
 }
 
 
@@ -525,22 +516,5 @@
 
     #site-navigation a {
         padding: 0.5em 1em;
-    }
-
-    /**
-     * Larger `h1` headings.
-     */
-
-    h1 {
-        font-size: 4rem; // 64px / 16px
-        line-height: 1.15625; // 74px / 48px
-    }
-
-    /**
-     * Article layout revisions at breakpoint 3.
-     */
-
-    .article-header h1 {
-        font-size: 4rem; // 60px / 16px
     }
 }

@@ -91,7 +91,8 @@ h6 {
 h1,
 .faux-h1 {
     margin: 0.5em 0;
-    font-size: 2.5rem; // 40px / 16px
+    font-size: 2.5rem; // 40px / 16px (fallback for browsers without `clamp()` support)
+    font-size: clamp(2.25rem, 4vw, 4rem);
     line-height: 1.2; // 48px / 40px
 
     sup {
@@ -103,7 +104,8 @@ h1,
 h2,
 .faux-h2 {
     margin: 0.75em 0; // 24px / 32px
-    font-size: 2rem; // 32px / 16px
+    font-size: 2rem; // 32px / 16px (fallback for browsers without `clamp()` support)
+    font-size: clamp(1.75rem, 2.5vw, 2.5rem);
     line-height: 1.25; // 40px / 32px
 
     sup {
