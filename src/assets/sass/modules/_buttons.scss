@@ -282,7 +282,7 @@ span.button {
  * Disabled button additional styling.
  */
 
-/*! purgecss start ignore */
+/* purgecss start ignore */
 button[disabled],
 [type="button"][disabled],
 [type="reset"][disabled],
@@ -294,4 +294,4 @@ button[disabled],
         top: 0 !important;
     }
 }
-/*! purgecss end ignore */
+/* purgecss end ignore */
