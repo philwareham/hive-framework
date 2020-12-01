@@ -33,6 +33,7 @@ video {
  * <img class="align-center">
  */
 
+/*! purgecss start ignore */
 img {
     vertical-align: middle; /* 1 */
 
@@ -64,6 +65,7 @@ img {
         margin: 1em auto;
     }
 }
+/*! purgecss end ignore */
 
 /**
  * Rounded corner images.

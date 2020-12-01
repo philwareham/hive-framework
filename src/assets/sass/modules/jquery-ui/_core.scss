@@ -3,6 +3,8 @@
 /* Layout helpers
    ========================================================================== */
 
+/*! purgecss start ignore */
+
 /**
  * Hide jQuery UI elements.
  */
@@ -321,3 +323,5 @@ a.ui-state-default:focus {
 .ui-widget-shadow {
     box-shadow: var(--standard-shadow);
 }
+
+/*! purgecss end ignore */

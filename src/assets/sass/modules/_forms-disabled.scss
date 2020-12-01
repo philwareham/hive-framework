@@ -9,6 +9,7 @@
  * 1. Re-set default cursor for disabled elements.
  */
 
+/*! purgecss start ignore */
 [disabled],
 [disabled] option,
 [disabled] optgroup,
@@ -28,3 +29,4 @@ span.disabled {
         opacity: 0.25 !important;
     }
 }
+/*! purgecss end ignore */
