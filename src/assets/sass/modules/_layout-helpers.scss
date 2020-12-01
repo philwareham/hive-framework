@@ -14,11 +14,36 @@
 }
 
 /**
- * Basic float clearer.
+ * Basic float clearers.
  */
 
-.clear {
+.clear,
+.clear-both {
     clear: both;
+}
+
+.clear-left {
+    clear: left;
+}
+
+.clear-inline-start {
+    clear: inline-start;
+}
+
+.clear-right {
+    clear: right;
+}
+
+.clear-inline-end {
+    clear: inline-end;
+}
+
+/**
+ * Float nullifier.
+ */
+
+.float-none {
+    float: none;
 }
 
 /**
