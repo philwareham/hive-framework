@@ -44,7 +44,7 @@ span.button {
     }
 
     width: auto;
-    height: setup.$button-height;
+    height: auto;
     padding: setup.$button-padding;
 
     @if setup.$button-border {
@@ -119,7 +119,6 @@ span.button {
 .button-large,
 a.button-large,
 span.button-large {
-    height: setup.$button-large-height;
     padding: setup.$button-large-padding;
 
     @if setup.$button-radius {
