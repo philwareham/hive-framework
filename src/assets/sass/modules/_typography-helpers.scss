@@ -15,7 +15,7 @@
  * Forced (non-semantic) text weight regular.
  */
 
-.font-weight-normal {
+.fw-normal {
     font-variation-settings: "wght" 400; // older browsers will just ignore this
     font-weight: 400; // to prevent faux bolding of variable font
 }
@@ -24,7 +24,7 @@
  * Forced (non-semantic) text weight bold.
  */
 
-.font-weight-bold {
+.fw-bold {
     font-variation-settings: "wght" 680; // older browsers will just ignore this
     font-weight: 700; // to prevent faux bolding of variable font
 }

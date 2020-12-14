@@ -292,34 +292,6 @@ ul {
     margin-block-start: auto;
 }
 
-.mr-0 {
-    margin-inline-end: 0;
-}
-
-.mr-1 {
-    margin-inline-end: 1rem;
-}
-
-.mr-2 {
-    margin-inline-end: 2rem;
-}
-
-.mr-3 {
-    margin-inline-end: 3rem;
-}
-
-.mr-4 {
-    margin-inline-end: 4rem;
-}
-
-.mr-5 {
-    margin-inline-end: 5rem;
-}
-
-.mr-auto {
-    margin-inline-end: auto;
-}
-
 .mb-0 {
     margin-block-end: 0;
 }
@@ -348,32 +320,60 @@ ul {
     margin-block-end: auto;
 }
 
-.ml-0 {
+.ms-0 {
     margin-inline-start: 0;
 }
 
-.ml-1 {
+.ms-1 {
     margin-inline-start: 1rem;
 }
 
-.ml-2 {
+.ms-2 {
     margin-inline-start: 2rem;
 }
 
-.ml-3 {
+.ms-3 {
     margin-inline-start: 3rem;
 }
 
-.ml-4 {
+.ms-4 {
     margin-inline-start: 4rem;
 }
 
-.ml-5 {
+.ms-5 {
     margin-inline-start: 5rem;
 }
 
-.ml-auto {
+.ms-auto {
     margin-inline-start: auto;
+}
+
+.me-0 {
+    margin-inline-end: 0;
+}
+
+.me-1 {
+    margin-inline-end: 1rem;
+}
+
+.me-2 {
+    margin-inline-end: 2rem;
+}
+
+.me-3 {
+    margin-inline-end: 3rem;
+}
+
+.me-4 {
+    margin-inline-end: 4rem;
+}
+
+.me-5 {
+    margin-inline-end: 5rem;
+}
+
+.me-auto {
+    margin-inline-end: auto;
 }
 
 /**
@@ -491,30 +491,6 @@ ul {
     padding-block-start: 5rem;
 }
 
-.pr-0 {
-    padding-inline-end: 0;
-}
-
-.pr-1 {
-    padding-inline-end: 1rem;
-}
-
-.pr-2 {
-    padding-inline-end: 2rem;
-}
-
-.pr-3 {
-    padding-inline-end: 3rem;
-}
-
-.pr-4 {
-    padding-inline-end: 4rem;
-}
-
-.pr-5 {
-    padding-inline-end: 5rem;
-}
-
 .pb-0 {
     padding-block-end: 0;
 }
@@ -539,26 +515,49 @@ ul {
     padding-block-end: 5rem;
 }
 
-.pl-0 {
+.ps-0 {
     padding-inline-start: 0;
 }
 
-.pl-1 {
+.ps-1 {
     padding-inline-start: 1rem;
 }
 
-.pl-2 {
+.ps-2 {
     padding-inline-start: 2rem;
 }
 
-.pl-3 {
+.ps-3 {
     padding-inline-start: 3rem;
 }
 
-.pl-4 {
+.ps-4 {
     padding-inline-start: 4rem;
 }
 
-.pl-5 {
+.ps-5 {
     padding-inline-start: 5rem;
+}
+.pe-0 {
+    padding-inline-end: 0;
+}
+
+.pe-1 {
+    padding-inline-end: 1rem;
+}
+
+.pe-2 {
+    padding-inline-end: 2rem;
+}
+
+.pe-3 {
+    padding-inline-end: 3rem;
+}
+
+.pe-4 {
+    padding-inline-end: 4rem;
+}
+
+.pe-5 {
+    padding-inline-end: 5rem;
 }
