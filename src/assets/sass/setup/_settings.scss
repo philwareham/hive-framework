@@ -20,7 +20,7 @@ $font-stack-sans-serif-vf: hive-framework-sans-serif-vf, system-ui, -apple-syste
 $font-stack-sans-serif:    hive-framework-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $font-stack-form-vf:       hive-framework-sans-serif-vf, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $font-stack-form:          hive-framework-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$font-stack-code:          Menlo, Consolas, Monaco, monospace !default;
+$font-stack-monospaced:    hive-framework-monospaced, Menlo, Consolas, Monaco, monospace !default;
 $font-stack-print:         "Helvetica Neue", sans-serif !default;
 
 // Primary serif font file defaults
@@ -94,7 +94,7 @@ $font-form-vf: null !default;
 $font-form:    null !default;
 
 // Primary code element WOFF2 font file defaults
-$font-code: null !default;
+$font-monospaced: "jetbrains-mono/JetBrainsMono-Regular" !default;
 
 // Primary print WOFF2 font file defaults
 $font-print: null !default;

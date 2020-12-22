@@ -14,7 +14,7 @@
     --font-sans-serif-vf: #{meta.inspect(setup.$font-stack-sans-serif-vf)};
     --font-form:          #{meta.inspect(setup.$font-stack-form)};
     --font-form-vf:       #{meta.inspect(setup.$font-stack-form-vf)};
-    --font-code:          #{meta.inspect(setup.$font-stack-code)};
+    --font-monospaced:    #{meta.inspect(setup.$font-stack-monospaced)};
     --font-print:         #{meta.inspect(setup.$font-stack-print)};
     // text colours
     --color-text:                      #{setup.$color-text};

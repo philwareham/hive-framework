@@ -170,3 +170,11 @@
 @if setup.$font-sans-serif-900-italic {
     @include setup.font-face(hive-framework-sans-serif, italic, 900, setup.$font-sans-serif-900-italic);
 }
+
+/**
+ * Monospaced font.
+ */
+
+@if setup.$font-monospaced {
+    @include setup.font-face(hive-framework-monospaced, normal, 400, setup.$font-monospaced);
+}

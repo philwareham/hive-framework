@@ -255,7 +255,7 @@ samp {
     background-color: var(--color-background-box);
     color: var(--color-text);
     direction: ltr;
-    font-family: var(--font-code);
+    font-family: var(--font-monospaced);
     font-feature-settings: normal; /* 1 */
     font-size: setup.$code-font-size;
     text-align: left;
