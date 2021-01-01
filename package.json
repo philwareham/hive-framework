@@ -49,7 +49,7 @@
   },
   "dependencies": {
     "@glidejs/glide": "3.4.1",
-    "prismjs": "1.22.0"
+    "prismjs": "1.23.0"
   },
   "browserslist": [
     "> 0.5%",
