@@ -20,6 +20,14 @@ video {
 }
 
 /**
+ * Default aspect ratio for videos (TODO: when browser support better).
+ */
+
+//video {
+//    aspect-ratio: var(--aspect-ratio, 16 / 9);
+//}
+
+/**
  * Images.
  *
  * 1. Remove the gap between images and the bottom of their containers.
