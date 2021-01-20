@@ -145,6 +145,13 @@
         justify-content: center;
     }
 
+    @supports (grid-template-rows: masonry) {
+        .layout-masonry {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: masonry;
+        }
+    }
+
     /**
      * Generate sizes all for grid column cells.
      *
