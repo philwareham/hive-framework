@@ -3,11 +3,21 @@
 /* Embedded content
    ========================================================================== */
 
+/*
+* 1. There is no good reason for audio elements to default to 300px.
+*/
+audio {
+    width: 100%; /* 1 */
+    max-width: 100%;
+}
+
 /**
  * Make embedded elements responsive.
  */
 
 img,
+canvas,
+svg,
 video {
     max-width: 100%;
     height: auto;
