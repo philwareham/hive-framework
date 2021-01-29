@@ -274,7 +274,8 @@ samp {
  *
  * 1. Contain overflow in all browsers.
  * 2. Don't wrap long words.
- * 3. Set tab size to 4 spaces.
+ * 3. Overflow by default is bad.
+ * 4. Set tab size to 4 spaces.
  */
 
 pre {
@@ -283,7 +284,8 @@ pre {
     padding: 0.5rem 1rem;
     overflow-x: auto; /* 1 */
     word-wrap: normal; /* 2 */
-    tab-size: 4; /* 3 */
+    white-space: pre-wrap; /* 3 */
+    tab-size: 4; /* 4 */
 
     code {
         display: initial;
