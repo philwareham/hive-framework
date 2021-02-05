@@ -6,14 +6,20 @@
 /**
  * 1. Set `body` to `relative` to allow positioning of absolute elements.
  * 2. Remove default margin.
- * 3. Add some breathing space above page anchors.
  */
 
 body {
     position: relative; /* 1 */
     margin: 0; /* 2 */
     background: var(--color-background-box);
-    scroll-padding-top: 1rem; /* 3 */
+}
+
+/**
+ *  Add some breathing space above page anchors.
+ */
+
+[id] {
+    scroll-margin-top: 2ex;
 }
 
 /**
