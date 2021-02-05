@@ -65,7 +65,7 @@ h4,
 h5,
 h6 {
     clear: both;
-    color: var(--clr-text-heading);
+    color: var(--clr-text-promoted);
     font-family: var(--font-serif);
 
     @if setup.$font-stack-serif-vf {
@@ -165,7 +165,7 @@ address {
 
 blockquote {
     margin: 0.75em 10%; // 18px / 24px
-    color: var(--clr-text-heading);
+    color: var(--clr-text-promoted);
     font-family: var(--font-serif);
     font-size: 1.5rem; // 24px / 16px
     font-style: italic;
@@ -180,7 +180,7 @@ blockquote {
 
     footer {
         margin-bottom: 1.5rem;
-        color: var(--clr-text-footnote);
+        color: var(--clr-text-demoted);
         font-family: var(--font-sans-serif);
         font-size: 1rem;
         font-style: normal;
@@ -340,7 +340,7 @@ figcaption,
 tfoot,
 .footnote,
 .footnotes {
-    color: var(--clr-text-footnote);
+    color: var(--clr-text-demoted);
 }
 
 figcaption {

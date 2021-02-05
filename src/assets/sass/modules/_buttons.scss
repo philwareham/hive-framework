@@ -87,12 +87,12 @@ span.button {
 
     @if setup.$button-border {
         &:focus {
-            border-color: var(--clr-link-focus);
+            border-color: var(--clr-focus);
             outline: 2px solid transparent; // Allows for repainting in high contrast modes.
         }
     } @else {
         &:focus {
-            outline: 1px solid var(--clr-link-focus); // Allows for repainting in high contrast modes.
+            outline: 1px solid var(--clr-focus); // Allows for repainting in high contrast modes.
         }
     }
 }
@@ -200,11 +200,11 @@ span.button {
         box-shadow: setup.$button-box-shadow var(--clr-success-text-extra-dark);
     }
 
-    color: var(--clr-text-white-out);
+    color: var(--clr-text-white-enforced);
 
     &:hover {
         filter: brightness(1.1);
-        color: var(--clr-text-white-out);
+        color: var(--clr-text-white-enforced);
     }
 
     &:active {
@@ -213,7 +213,7 @@ span.button {
         }
 
         filter: brightness(0.8);
-        color: var(--clr-text-white-out);
+        color: var(--clr-text-white-enforced);
     }
 }
 
@@ -223,7 +223,7 @@ span.button {
         --clr-success-text-dark: hsl(100, 60%, 45%);
         --clr-success-text-extra-dark: hsl(100, 60%, 33%);
 
-        color: var(--clr-text-white-out);
+        color: var(--clr-text-white-enforced);
     }
 }
 
@@ -250,11 +250,11 @@ span.button {
         box-shadow: setup.$button-box-shadow var(--clr-error-text-extra-dark);
     }
 
-    color: var(--clr-text-white-out);
+    color: var(--clr-text-white-enforced);
 
     &:hover {
         filter: brightness(1.2);
-        color: var(--clr-text-white-out);
+        color: var(--clr-text-white-enforced);
     }
 
     &:active {
@@ -263,7 +263,7 @@ span.button {
         }
 
         filter: brightness(0.8);
-        color: var(--clr-text-white-out);
+        color: var(--clr-text-white-enforced);
     }
 }
 
@@ -273,7 +273,7 @@ span.button {
         --clr-error-text-dark: hsl(337, 100%, 54%);
         --clr-error-text-extra-dark: hsl(337, 100%, 33%);
 
-        color: var(--clr-text-white-out);
+        color: var(--clr-text-white-enforced);
     }
 }
 

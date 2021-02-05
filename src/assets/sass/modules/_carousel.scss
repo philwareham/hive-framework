@@ -89,7 +89,7 @@
         margin: 0;
         padding: 0.5em;
         background: rgba(0, 0, 0, 0.5);
-        color: var(--clr-text-white-out);
+        color: var(--clr-text-white-enforced);
         font-size: 1rem;
         text-align: center;
     }
@@ -149,7 +149,7 @@
     }
 
     &:focus {
-        outline: 1px solid var(--clr-link-focus);
+        outline: 1px solid var(--clr-focus);
     }
 
     &--left {
@@ -235,7 +235,7 @@
     }
 
     &:focus {
-        outline: 1px solid var(--clr-link-focus);
+        outline: 1px solid var(--clr-focus);
     }
 
     &--active::before {

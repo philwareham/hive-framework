@@ -156,7 +156,7 @@ a.ui-state-default:focus {
  */
 
 .ui-state-focus {
-    border-color: var(--clr-link-focus);
+    border-color: var(--clr-focus);
     outline: 0;
 
     a {
@@ -169,19 +169,19 @@ a.ui-state-default:focus {
  */
 
 .ui-state-active {
-    border-color: var(--clr-link);
+    border-color: var(--clr-a);
     background-color: var(--clr-selected);
 
     &.ui-state-hover {
-        border-color: var(--clr-link-hover);
+        border-color: var(--clr-a-interact);
     }
 }
 
 @include setup.dark-mode {
     .ui-state-active.ui-state-hover {
-        --clr-link-hover-dark: hsl(210, 100%, 60%);
+        --clr-a-interact-dark: hsl(210, 100%, 60%);
 
-        border-color: var(--clr-link-hover-dark);
+        border-color: var(--clr-a-interact-dark);
     }
 }
 

@@ -43,7 +43,7 @@
 }
 
 [type="range"]:focus::-webkit-slider-thumb {
-    border-color: var(--clr-link-focus);
+    border-color: var(--clr-focus);
 }
 
 [type="range"]::-webkit-slider-runnable-track {
@@ -61,7 +61,7 @@
 
 [type="range"]:active::-webkit-slider-runnable-track,
 [type="range"]:focus::-webkit-slider-runnable-track {
-    border-color: var(--clr-link-focus);
+    border-color: var(--clr-focus);
 }
 
 @include setup.dark-mode {
@@ -75,7 +75,7 @@
 
     [type="range"]:active::-webkit-slider-runnable-track,
     [type="range"]:focus::-webkit-slider-runnable-track {
-        border-color: var(--clr-link-focus);
+        border-color: var(--clr-focus);
     }
 }
 
@@ -103,7 +103,7 @@
 }
 
 [type="range"]:focus::-moz-range-thumb {
-    border-color: var(--clr-link-focus);
+    border-color: var(--clr-focus);
 }
 
 [type="range"]::-moz-range-track {
@@ -120,7 +120,7 @@
 }
 
 [type="range"]:focus::-moz-range-track {
-    border-color: var(--clr-link-focus);
+    border-color: var(--clr-focus);
 }
 
 [type="range"]::-moz-focus-outer {
@@ -137,6 +137,6 @@
     }
 
     [type="range"]:focus::-moz-range-track {
-        border-color: var(--clr-link-focus);
+        border-color: var(--clr-focus);
     }
 }

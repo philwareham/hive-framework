@@ -133,14 +133,14 @@ pre.line-numbers > code {
     content: counter(linenumber);
     display: block;
     padding-right: 0.8em;
-    color: var(--clr-text-footnote);
+    color: var(--clr-text-demoted);
     direction: ltr;
     text-align: right;
 }
 
 @include setup.dark-mode {
     .token.punctuation {
-        color: var(--clr-text-white-out);
+        color: var(--clr-text-white-enforced);
     }
 
     .token.property,

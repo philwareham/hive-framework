@@ -55,10 +55,10 @@ body {
 }
 
 .zebra--strong {
-    --clr-text-heading: hsl(0, 0%, 100%);
+    --clr-text-promoted: hsl(0, 0%, 100%);
 
     background-color: var(--clr-bkgd-zebra-strong);
-    color: var(--clr-text-white-out);
+    color: var(--clr-text-white-enforced);
 }
 
 /**

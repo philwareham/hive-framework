@@ -2,12 +2,12 @@
 
 // text colours
 $color-text:                      hsl(0, 0%, 20%) !default;
-$color-text-heading:              hsl(0, 0%, 0%) !default;
-$color-text-heading-a50:          hsla(0, 0%, 0%, 0.5) !default;
+$color-text-promoted:              hsl(0, 0%, 0%) !default;
+$color-text-promoted-a50:          hsla(0, 0%, 0%, 0.5) !default;
 $color-text-button:               hsl(0, 0%, 0%) !default;
 $color-text-form:                 hsl(0, 0%, 0%) !default;
 $color-text-form-placeholder:     hsl(0, 0%, 60%) !default;
-$color-text-footnote:             hsl(0, 0%, 35%) !default;
+$color-text-demoted:             hsl(0, 0%, 35%) !default;
 $color-text-white-out:            hsl(0, 0%, 100%) !default;
 // interaction colours
 $color-link:                      hsl(216, 100%, 37%) !default;
@@ -22,8 +22,8 @@ $color-background-zebra-strong:   hsl(0, 0%, 20%) !default;
 $color-background-box:            hsl(0, 0%, 96%) !default;
 $color-background-form:           hsl(0, 0%, 100%) !default;
 $color-background-form-disabled:  hsl(0, 0%, 89%) !default;
-$color-grad-from:                 hsl(0, 0%, 93%) !default;
-$color-grad-to:                   hsl(0, 0%, 87%) !default;
+$color-gradient-from:                 hsl(0, 0%, 93%) !default;
+$color-gradient-to:                   hsl(0, 0%, 87%) !default;
 // accent colours
 $color-highlight:                 hsl(48, 100%, 63%) !default;
 $color-strong-highlight-box:      hsl(48, 100%, 76%) !default;
@@ -35,16 +35,16 @@ $color-border:                    hsl(0, 0%, 80%) !default;
 $color-border-dark:               hsl(0, 0%, 75%) !default;
 $color-border-extra-dark:         hsl(0, 0%, 70%) !default;
 // button colours
-$color-button-grad-from:          hsl(0, 0%, 93%) !default;
-$color-button-grad-to:            hsl(0, 0%, 87%) !default;
+$color-button-gradient-from:          hsl(0, 0%, 93%) !default;
+$color-button-gradient-to:            hsl(0, 0%, 87%) !default;
 $color-button-border:             hsl(0, 0%, 87%) !default;
 $color-button-shadow:             hsl(0, 0%, 67%) !default;
-$color-button-primary-grad-from:  hsl(48, 100%, 63%) !default;
-$color-button-primary-grad-to:    hsl(48, 100%, 57%) !default;
+$color-button-primary-gradient-from:  hsl(48, 100%, 63%) !default;
+$color-button-primary-gradient-to:    hsl(48, 100%, 57%) !default;
 $color-button-primary-border:     hsl(48, 100%, 57%) !default;
 $color-button-primary-shadow:     hsl(48, 100%, 37%) !default;
-$color-button-selected-grad-from: hsl(216, 100%, 95%) !default;
-$color-button-selected-grad-to:   hsl(216, 100%, 90%) !default;
+$color-button-selected-gradient-from: hsl(216, 100%, 95%) !default;
+$color-button-selected-gradient-to:   hsl(216, 100%, 90%) !default;
 $color-button-selected-border:    hsl(216, 100%, 64%) !default;
 // alert colours
 $color-success-text:              hsl(120, 60%, 34%) !default;
@@ -66,11 +66,11 @@ $standard-shadow:                 0 0 0.5em hsla(0, 0%, 0%, 0.25) !default;
 
 // text colours
 $dark-color-text:                     hsl(210, 14%, 83%) !default;
-$dark-color-text-heading:             hsl(0, 0%, 100%) !default;
-$dark-color-text-heading-a50:         hsla(0, 0%, 100%, 0.5) !default;
+$dark-color-text-promoted:             hsl(0, 0%, 100%) !default;
+$dark-color-text-promoted-a50:         hsla(0, 0%, 100%, 0.5) !default;
 $dark-color-text-form:                hsl(0, 0%, 100%) !default;
 $dark-color-text-form-placeholder:    hsl(210, 6%, 48%) !default;
-$dark-color-text-footnote:            hsl(210, 14%, 70%) !default;
+$dark-color-text-demoted:            hsl(210, 14%, 70%) !default;
 // interaction colours
 $dark-color-link:                     hsl(210, 100%, 81%) !default;
 $dark-color-link-hover:               hsl(210, 100%, 87%) !default;
@@ -84,8 +84,8 @@ $dark-color-background-zebra-strong:  hsl(210, 11%, 10%) !default;
 $dark-color-background-box:           hsl(210, 11%, 16%) !default;
 $dark-color-background-form:          hsl(210, 11%, 14%) !default;
 $dark-color-background-form-disabled: hsl(210, 11%, 14%) !default;
-$dark-color-grad-from:                hsl(210, 7%, 32%) !default;
-$dark-color-grad-to:                  hsl(210, 9%, 26%) !default;
+$dark-color-gradient-from:                hsl(210, 7%, 32%) !default;
+$dark-color-gradient-to:                  hsl(210, 9%, 26%) !default;
 // accent colours
 $dark-color-highlight:                hsl(48, 100%, 63%) !default;
 $dark-color-strong-highlight-box:     hsl(48, 42%, 47%) !default;

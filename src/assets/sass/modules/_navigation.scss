@@ -53,11 +53,11 @@
     a {
         display: block;
         padding: 0.5em 6%;
-        color: var(--clr-text-heading);
+        color: var(--clr-text-promoted);
 
         &:hover,
         &:visited {
-            color: var(--clr-text-heading);
+            color: var(--clr-text-promoted);
             text-decoration: none;
         }
 
@@ -68,7 +68,7 @@
 
     li.active a {
         text-decoration: underline;
-        text-decoration-color: var(--clr-text-footnote);
+        text-decoration-color: var(--clr-text-demoted);
         text-underline-offset: 0.5rem;
     }
 
@@ -131,7 +131,7 @@
     }
 
     &:focus {
-        outline: 1px solid var(--clr-link-focus);
+        outline: 1px solid var(--clr-focus);
     }
 }
 

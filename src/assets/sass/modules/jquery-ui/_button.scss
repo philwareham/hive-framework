@@ -71,12 +71,12 @@
 
     @if setup.$button-border {
         &:focus {
-            border-color: var(--clr-link-focus);
+            border-color: var(--clr-focus);
             outline: 2px solid transparent; // Allows for repainting in high contrast modes.
         }
     } @else {
         &:focus {
-            outline: 1px solid var(--clr-link-focus); // Allows for repainting in high contrast modes.
+            outline: 1px solid var(--clr-focus); // Allows for repainting in high contrast modes.
         }
     }
 }
@@ -105,7 +105,7 @@ a.ui-button {
  */
 
 .ui-button.ui-state-focus {
-    border-color: var(--clr-link-focus) !important; /* 1 */
+    border-color: var(--clr-focus) !important; /* 1 */
 }
 
 /**

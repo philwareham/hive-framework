@@ -120,7 +120,7 @@ textarea {
     }
 
     &:focus {
-        border-color: var(--clr-link-focus);
+        border-color: var(--clr-focus);
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
     }
 }
@@ -149,7 +149,7 @@ textarea {
         }
 
         &:focus {
-            border-color: var(--clr-link-focus);
+            border-color: var(--clr-focus);
         }
     }
 }
@@ -324,7 +324,7 @@ textarea {
 
 ::placeholder {
     opacity: 1;
-    color: var(--clr-text-form-placeholder);
+    color: var(--clr-text-placeholder);
     font: inherit; /* 1 */
 }
 

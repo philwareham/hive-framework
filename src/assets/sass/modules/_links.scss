@@ -12,7 +12,7 @@
  */
 
 a {
-    color: var(--clr-link); /* 1 */
+    color: var(--clr-a); /* 1 */
     text-decoration: none; /* 2 */
     text-decoration-skip-ink: auto; /* 3 */
     text-underline-offset: 0.125em;
@@ -20,12 +20,12 @@ a {
 
     &:hover,
     &:active {
-        color: var(--clr-link-hover);
+        color: var(--clr-a-interact);
         text-decoration: underline;
     }
 
     &:focus {
-        outline: thin solid var(--clr-link-focus);
+        outline: thin solid var(--clr-focus);
     }
 }
 
@@ -43,12 +43,12 @@ h4,
 h5,
 h6 {
     a {
-        color: var(--clr-text-heading);
+        color: var(--clr-text-promoted);
 
         &:hover,
         &:active {
-            color: var(--clr-text-heading);
-            text-decoration-color: var(--clr-text-heading-a50);  /* 1 */
+            color: var(--clr-text-promoted);
+            text-decoration-color: var(--clr-text-promoted-a50);  /* 1 */
         }
     }
 }
@@ -70,14 +70,14 @@ h6 {
     }
 
     &:hover img {
-        border-color: var(--clr-link-hover);
+        border-color: var(--clr-a-interact);
     }
 
     &:focus {
         outline: 0;
 
         img {
-            border-color: var(--clr-link-focus);
+            border-color: var(--clr-focus);
         }
     }
 }
@@ -100,7 +100,7 @@ a[href^="sms"] {
     pointer-events: none;
 
     [itemprop="telephone"] & {
-        color: var(--clr-link);
+        color: var(--clr-a);
         cursor: pointer;
         pointer-events: auto;
     }

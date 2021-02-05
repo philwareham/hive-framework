@@ -17,17 +17,17 @@
     --font-monospaced:    #{meta.inspect(setup.$font-stack-monospaced)};
     // text colours
     --clr-text:                   #{setup.$color-text};
-    --clr-text-heading:           #{setup.$color-text-heading};
-    --clr-text-heading-a50:       #{setup.$color-text-heading-a50};
+    --clr-text-promoted:          #{setup.$color-text-promoted};
+    --clr-text-promoted-a50:      #{setup.$color-text-promoted-a50};
+    --clr-text-demoted:           #{setup.$color-text-demoted};
     --clr-text-btn:               #{setup.$color-text-button};
     --clr-text-form:              #{setup.$color-text-form};
-    --clr-text-form-placeholder:  #{setup.$color-text-form-placeholder};
-    --clr-text-footnote:          #{setup.$color-text-footnote};
-    --clr-text-white-out:         #{setup.$color-text-white-out};
+    --clr-text-placeholder:       #{setup.$color-text-form-placeholder};
+    --clr-text-white-enforced:    #{setup.$color-text-white-out};
     // interaction colours
-    --clr-link:                   #{setup.$color-link};
-    --clr-link-hover:             #{setup.$color-link-hover};
-    --clr-link-focus:             #{setup.$color-link-focus};
+    --clr-a:                      #{setup.$color-link};
+    --clr-a-interact:             #{setup.$color-link-hover};
+    --clr-focus:                  #{setup.$color-link-focus};
     --clr-selecting:              #{setup.$color-selecting};
     --clr-selected:               #{setup.$color-selected};
     // neutral colours
@@ -37,8 +37,8 @@
     --clr-bkgd-box:               #{setup.$color-background-box};
     --clr-bkgd-form:              #{setup.$color-background-form};
     --clr-bkgd-form-disabled:     #{setup.$color-background-form-disabled};
-    --clr-grad-from:              #{setup.$color-grad-from};
-    --clr-grad-to:                #{setup.$color-grad-to};
+    --clr-grad-from:              #{setup.$color-gradient-from};
+    --clr-grad-to:                #{setup.$color-gradient-to};
     // accent colours
     --clr-hilite:                 #{setup.$color-highlight};
     --clr-strong-hilite-box:      #{setup.$color-strong-highlight-box};
@@ -50,16 +50,16 @@
     --clr-brdr-dark:              #{setup.$color-border-dark};
     --clr-brdr-x-dark:            #{setup.$color-border-extra-dark};
     // button colours
-    --clr-btn-grad-from:          #{setup.$color-button-grad-from};
-    --clr-btn-grad-to:            #{setup.$color-button-grad-to};
+    --clr-btn-grad-from:          #{setup.$color-button-gradient-from};
+    --clr-btn-grad-to:            #{setup.$color-button-gradient-to};
     --clr-btn-brdr:               #{setup.$color-button-border};
     --clr-btn-shadow:             #{setup.$color-button-shadow};
-    --clr-btn-primary-grad-from:  #{setup.$color-button-primary-grad-from};
-    --clr-btn-primary-grad-to:    #{setup.$color-button-primary-grad-to};
+    --clr-btn-primary-grad-from:  #{setup.$color-button-primary-gradient-from};
+    --clr-btn-primary-grad-to:    #{setup.$color-button-primary-gradient-to};
     --clr-btn-primary-brdr:       #{setup.$color-button-primary-border};
     --clr-btn-primary-shadow:     #{setup.$color-button-primary-shadow};
-    --clr-btn-selected-grad-from: #{setup.$color-button-selected-grad-from};
-    --clr-btn-selected-grad-to:   #{setup.$color-button-selected-grad-to};
+    --clr-btn-selected-grad-from: #{setup.$color-button-selected-gradient-from};
+    --clr-btn-selected-grad-to:   #{setup.$color-button-selected-gradient-to};
     --clr-btn-selected-brdr:      #{setup.$color-button-selected-border};
     // alert colours
     --clr-success-text:           #{setup.$color-success-text};
@@ -80,52 +80,53 @@
 
 @include setup.dark-mode {
     // text colours
-    --clr-text:                  #{setup.$dark-color-text};
-    --clr-text-heading:          #{setup.$dark-color-text-heading};
-    --clr-text-heading-a50:      #{setup.$dark-color-text-heading-a50};
-    --clr-text-form:             #{setup.$dark-color-text-form};
-    --clr-text-form-placeholder: #{setup.$dark-color-text-form-placeholder};
-    --clr-text-footnote:         #{setup.$dark-color-text-footnote};
+    --clr-text:               #{setup.$dark-color-text};
+    --clr-text-promoted:      #{setup.$dark-color-text-promoted};
+    --clr-text-promoted-a50:  #{setup.$dark-color-text-promoted-a50};
+    --clr-text-demoted:       #{setup.$dark-color-text-demoted};
+    --clr-text-form:          #{setup.$dark-color-text-form};
+    --clr-text-placeholder:   #{setup.$dark-color-text-form-placeholder};
+
     // interaction colours
-    --clr-link:                  #{setup.$dark-color-link};
-    --clr-link-hover:            #{setup.$dark-color-link-hover};
-    --clr-link-focus:            #{setup.$dark-color-link-focus};
-    --clr-selecting:             #{setup.$dark-color-selecting};
-    --clr-selected:              #{setup.$dark-color-selected};
+    --clr-a:                  #{setup.$dark-color-link};
+    --clr-a-interact:         #{setup.$dark-color-link-hover};
+    --clr-focus:              #{setup.$dark-color-link-focus};
+    --clr-selecting:          #{setup.$dark-color-selecting};
+    --clr-selected:           #{setup.$dark-color-selected};
     // neutral colours
-    --clr-bkgd:                  #{setup.$dark-color-background};
-    --clr-bkgd-zebra-subtle:     #{setup.$dark-color-background-zebra-subtle};
-    --clr-bkgd-zebra-strong:     #{setup.$dark-color-background-zebra-strong};
-    --clr-bkgd-box:              #{setup.$dark-color-background-box};
-    --clr-bkgd-form:             #{setup.$dark-color-background-form};
-    --clr-bkgd-form-disabled:    #{setup.$dark-color-background-form-disabled};
-    --clr-grad-from:             #{setup.$dark-color-grad-from};
-    --clr-grad-to:               #{setup.$dark-color-grad-to};
+    --clr-bkgd:               #{setup.$dark-color-background};
+    --clr-bkgd-zebra-subtle:  #{setup.$dark-color-background-zebra-subtle};
+    --clr-bkgd-zebra-strong:  #{setup.$dark-color-background-zebra-strong};
+    --clr-bkgd-box:           #{setup.$dark-color-background-box};
+    --clr-bkgd-form:          #{setup.$dark-color-background-form};
+    --clr-bkgd-form-disabled: #{setup.$dark-color-background-form-disabled};
+    --clr-grad-from:          #{setup.$dark-color-gradient-from};
+    --clr-grad-to:            #{setup.$dark-color-gradient-to};
     // accent colours
-    --clr-hilite:                #{setup.$dark-color-highlight};
-    --clr-strong-hilite-box:     #{setup.$dark-color-strong-highlight-box};
-    --clr-hilite-box:            #{setup.$dark-color-highlight-box};
+    --clr-hilite:             #{setup.$dark-color-highlight};
+    --clr-strong-hilite-box:  #{setup.$dark-color-strong-highlight-box};
+    --clr-hilite-box:         #{setup.$dark-color-highlight-box};
     // border colours
-    --clr-brdr:                  #{setup.$dark-color-border};
-    --clr-brdr-lite:             #{setup.$dark-color-border-light};
-    --clr-brdr-x-lite:           #{setup.$dark-color-border-extra-light};
-    --clr-brdr-dark:             #{setup.$dark-color-border-dark};
-    --clr-brdr-x-dark:           #{setup.$dark-color-border-extra-dark};
+    --clr-brdr:               #{setup.$dark-color-border};
+    --clr-brdr-lite:          #{setup.$dark-color-border-light};
+    --clr-brdr-x-lite:        #{setup.$dark-color-border-extra-light};
+    --clr-brdr-dark:          #{setup.$dark-color-border-dark};
+    --clr-brdr-x-dark:        #{setup.$dark-color-border-extra-dark};
     // alert colours
-    --clr-success-text:          #{setup.$dark-color-success-text};
-    --clr-success-bkgd:          #{setup.$dark-color-success-background};
-    --clr-success-brdr:          #{setup.$dark-color-success-border};
-    --clr-warning-text:          #{setup.$dark-color-warning-text};
-    --clr-warning-bkgd:          #{setup.$dark-color-warning-background};
-    --clr-warning-brdr:          #{setup.$dark-color-warning-border};
-    --clr-error-text:            #{setup.$dark-color-error-text};
-    --clr-error-bkgd:            #{setup.$dark-color-error-background};
-    --clr-error-brdr:            #{setup.$dark-color-error-border};
-    --clr-info-text:             #{setup.$dark-color-info-text};
-    --clr-info-bkgd:             #{setup.$dark-color-info-background};
-    --clr-info-brdr:             #{setup.$dark-color-info-border};
+    --clr-success-text:       #{setup.$dark-color-success-text};
+    --clr-success-bkgd:       #{setup.$dark-color-success-background};
+    --clr-success-brdr:       #{setup.$dark-color-success-border};
+    --clr-warning-text:       #{setup.$dark-color-warning-text};
+    --clr-warning-bkgd:       #{setup.$dark-color-warning-background};
+    --clr-warning-brdr:       #{setup.$dark-color-warning-border};
+    --clr-error-text:         #{setup.$dark-color-error-text};
+    --clr-error-bkgd:         #{setup.$dark-color-error-background};
+    --clr-error-brdr:         #{setup.$dark-color-error-border};
+    --clr-info-text:          #{setup.$dark-color-info-text};
+    --clr-info-bkgd:          #{setup.$dark-color-info-background};
+    --clr-info-brdr:          #{setup.$dark-color-info-border};
     // shadows
-    --standard-shadow:           #{setup.$dark-standard-shadow};
+    --standard-shadow:        #{setup.$dark-standard-shadow};
 }
 
 

@@ -37,11 +37,11 @@
     &.ui-checkboxradio-checked {
         .ui-icon {
             border: 0;
-            background: var(--clr-text-footnote) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+            background: var(--clr-text-demoted) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
         }
 
         &.ui-state-focus .ui-icon {
-            background-color: var(--clr-link-focus);
+            background-color: var(--clr-focus);
         }
     }
 
@@ -53,8 +53,8 @@
 @include setup.dark-mode {
     .ui-checkboxradio-label {
         .ui-icon-background {
-            border-color: var(--clr-text-footnote);
-            background-color: var(--clr-text-white-out);
+            border-color: var(--clr-text-demoted);
+            background-color: var(--clr-text-white-enforced);
         }
 
         &.ui-checkboxradio-checked {
@@ -67,7 +67,7 @@
             }
 
             &.ui-state-focus .ui-icon {
-                background-color: var(--clr-link-focus);
+                background-color: var(--clr-focus);
             }
         }
 
@@ -84,13 +84,13 @@
 
     &.ui-checkboxradio-checked {
         .ui-icon {
-            border: 5px solid var(--clr-text-footnote);
+            border: 5px solid var(--clr-text-demoted);
             border-radius: 100%;
             background: var(--clr-bkgd-form);
         }
 
         &.ui-state-focus .ui-icon {
-            border-color: var(--clr-link-focus);
+            border-color: var(--clr-focus);
             background-color: var(--clr-bkgd-form);
         }
     }
@@ -106,22 +106,22 @@
         &.ui-checkboxradio-checked {
             .ui-icon {
                 border-color: var(--clr-bkgd);
-                background-color: var(--clr-text-white-out);
+                background-color: var(--clr-text-white-enforced);
             }
 
             &.ui-button:hover .ui-icon {
-                background-color: var(--clr-text-white-out);
+                background-color: var(--clr-text-white-enforced);
             }
 
             &.ui-state-focus .ui-icon {
-                border-color: var(--clr-link-focus);
-                background-color: var(--clr-text-white-out);
+                border-color: var(--clr-focus);
+                background-color: var(--clr-text-white-enforced);
             }
         }
 
         &.ui-checkboxradio-checked:hover .ui-icon {
             border-color: var(--clr-brdr-x-dark);
-            background-color: var(--clr-text-white-out);
+            background-color: var(--clr-text-white-enforced);
         }
     }
 }
