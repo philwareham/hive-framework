@@ -56,12 +56,12 @@
         .ui-tabs-anchor {
             display: block;
             padding: 0.5em 1em;
-            color: var(--color-text);
+            color: var(--clr-text);
             text-decoration: none;
         }
 
         .ui-state-focus {
-            border-color: var(--color-link-focus);
+            border-color: var(--clr-link-focus);
         }
     }
 

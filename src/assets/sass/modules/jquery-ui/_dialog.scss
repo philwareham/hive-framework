@@ -76,7 +76,7 @@
         right: 0.25em;
         height: 20px;
         transform: translate(0, -50%);
-        border-color: var(--color-border);
+        border-color: var(--clr-brdr);
         box-shadow: none;
 
         @if setup.$internationalization {
@@ -95,7 +95,7 @@
         }
 
         &:focus {
-            border-color: var(--color-link-focus);
+            border-color: var(--clr-link-focus);
         }
     }
 

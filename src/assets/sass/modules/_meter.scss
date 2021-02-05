@@ -11,46 +11,46 @@ meter {
     box-sizing: border-box;
     height: 0.75em;
     overflow: hidden;
-    border: 1px solid var(--color-border);
-    background: var(--color-background-box);
+    border: 1px solid var(--clr-brdr);
+    background: var(--clr-bkgd-box);
     vertical-align: -0.0625em;
     appearance: none;
 }
 
 @include setup.dark-mode {
     meter {
-        border-color: var(--color-border-extra-dark);
+        border-color: var(--clr-brdr-x-dark);
     }
 }
 
 // WebKit/Blink.
 
 meter::-webkit-meter-bar {
-    background: var(--color-background-box);
+    background: var(--clr-bkgd-box);
 }
 
 meter::-webkit-meter-optimum-value {
-    background: var(--color-success-text);
+    background: var(--clr-success-text);
 }
 
 meter::-webkit-meter-suboptimum-value {
-    background: var(--color-warning-text);
+    background: var(--clr-warning-text);
 }
 
 meter::-webkit-meter-even-less-good-value {
-    background: var(--color-error-text);
+    background: var(--clr-error-text);
 }
 
 // Gecko/Quantum.
 
 meter:-moz-meter-optimum::-moz-meter-bar {
-    background: var(--color-success-text);
+    background: var(--clr-success-text);
 }
 
 meter:-moz-meter-sub-optimum::-moz-meter-bar {
-    background: var(--color-warning-text);
+    background: var(--clr-warning-text);
 }
 
 meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
-    background: var(--color-error-text);
+    background: var(--clr-error-text);
 }

@@ -17,8 +17,8 @@
         width: 16px;
         height: 16px;
         padding: 0; /* 1 */
-        border: 1px solid var(--color-border-extra-dark);
-        background: var(--color-background-form);
+        border: 1px solid var(--clr-brdr-x-dark);
+        background: var(--clr-bkgd-form);
         appearance: none;
 
         + label:not(.ui-controlgroup-item) {
@@ -39,7 +39,7 @@
         }
 
         &:focus {
-            border-color: var(--color-link-focus);
+            border-color: var(--clr-link-focus);
             outline: 2px solid transparent; // Allows for repainting in high contrast modes.
         }
 
@@ -52,7 +52,7 @@
         [type="checkbox"]:not(.ui-checkboxradio),
         [type="radio"]:not(.ui-checkboxradio) {
             &:hover {
-                border-color: var(--color-border-extra-light);
+                border-color: var(--clr-brdr-x-lite);
             }
         }
     }
@@ -64,40 +64,40 @@
 
         &:checked {
             border: 0;
-            background: var(--color-text-footnote) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+            background: var(--clr-text-footnote) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
 
             &:hover,
             &:active {
-                background-color: var(--color-text);
+                background-color: var(--clr-text);
             }
 
             &:focus {
-                background-color: var(--color-link-focus);
+                background-color: var(--clr-link-focus);
             }
         }
 
         &[disabled]:checked {
-            background: var(--color-text-footnote) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+            background: var(--clr-text-footnote) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
         }
     }
 
     @include setup.dark-mode {
         [type="checkbox"]:not(.ui-checkboxradio) {
             &:checked {
-                background: var(--color-text) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+                background: var(--clr-text) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
 
                 &:hover,
                 &:active {
-                    background-color: var(--color-text-heading);
+                    background-color: var(--clr-text-heading);
                 }
 
                 &:focus {
-                    background-color: var(--color-link-focus);
+                    background-color: var(--clr-link-focus);
                 }
             }
 
             &[disabled]:checked {
-                background: var(--color-text) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+                background: var(--clr-text) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
             }
         }
     }
@@ -106,15 +106,15 @@
         border-radius: 100%;
 
         &:checked {
-            border: 5px solid var(--color-text-footnote);
+            border: 5px solid var(--clr-text-footnote);
 
             &:hover,
             &:active {
-                border-color: var(--color-text);
+                border-color: var(--clr-text);
             }
 
             &:focus {
-                border-color: var(--color-link-focus);
+                border-color: var(--clr-link-focus);
             }
         }
     }
@@ -123,11 +123,11 @@
         [type="radio"]:not(.ui-checkboxradio):checked {
             &:hover,
             &:active {
-                border-color: var(--color-text-heading);
+                border-color: var(--clr-text-heading);
             }
 
             &:focus {
-                border-color: var(--color-link-focus);
+                border-color: var(--clr-link-focus);
             }
         }
     }
@@ -140,8 +140,8 @@
         width: 16px;
         height: 16px;
         padding: 0; /* 1 */
-        border: 1px solid var(--color-border-extra-dark);
-        background: var(--color-background-form);
+        border: 1px solid var(--clr-brdr-x-dark);
+        background: var(--clr-bkgd-form);
         appearance: none;
 
         + label {
@@ -162,7 +162,7 @@
         }
 
         &:focus {
-            border-color: var(--color-link-focus);
+            border-color: var(--clr-link-focus);
             outline: 2px solid transparent; // Allows for repainting in high contrast modes.
         }
 
@@ -175,7 +175,7 @@
         [type="checkbox"],
         [type="radio"] {
             &:hover {
-                border-color: var(--color-border-extra-light);
+                border-color: var(--clr-brdr-x-lite);
             }
         }
     }
@@ -187,40 +187,40 @@
 
         &:checked {
             border: 0;
-            background: var(--color-text-footnote) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+            background: var(--clr-text-footnote) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
 
             &:hover,
             &:active {
-                background-color: var(--color-text);
+                background-color: var(--clr-text);
             }
 
             &:focus {
-                background-color: var(--color-link-focus);
+                background-color: var(--clr-link-focus);
             }
         }
 
         &[disabled]:checked {
-            background: var(--color-text-footnote) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+            background: var(--clr-text-footnote) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
         }
     }
 
     @include setup.dark-mode {
         [type="checkbox"] {
             &:checked {
-                background: var(--color-text) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+                background: var(--clr-text) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
 
                 &:hover,
                 &:active {
-                    background-color: var(--color-text-heading);
+                    background-color: var(--clr-text-heading);
                 }
 
                 &:focus {
-                    background-color: var(--color-link-focus);
+                    background-color: var(--clr-link-focus);
                 }
             }
 
             &[disabled]:checked {
-                background: var(--color-text) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+                background: var(--clr-text) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
             }
         }
     }
@@ -229,15 +229,15 @@
         border-radius: 100%;
 
         &:checked {
-            border: 5px solid var(--color-text-footnote);
+            border: 5px solid var(--clr-text-footnote);
 
             &:hover,
             &:active {
-                border-color: var(--color-text);
+                border-color: var(--clr-text);
             }
 
             &:focus {
-                border-color: var(--color-link-focus);
+                border-color: var(--clr-link-focus);
             }
         }
     }
@@ -246,11 +246,11 @@
         [type="radio"]:checked {
             &:hover,
             &:active {
-                border-color: var(--color-text-heading);
+                border-color: var(--clr-text-heading);
             }
 
             &:focus {
-                border-color: var(--color-link-focus);
+                border-color: var(--clr-link-focus);
             }
         }
     }

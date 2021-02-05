@@ -9,12 +9,12 @@
 
 .list--comments {
     padding: 0;
-    border-top: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
+    border-top: 1px solid var(--clr-brdr);
+    border-bottom: 1px solid var(--clr-brdr);
     list-style: none;
 
     li {
-        border-top: 1px dashed var(--color-border);
+        border-top: 1px dashed var(--clr-brdr);
     }
 
     li:first-child {
@@ -70,7 +70,7 @@
     margin-bottom: 0;
     padding: 0.5em 1em;
     border-radius: setup.$border-radius;
-    background-color: var(--color-highlight-box);
+    background-color: var(--clr-hilite-box);
 }
 
 /**
@@ -80,7 +80,7 @@
 /* purgecss ignore */
 
 .error_message li {
-    color: var(--color-error-text);
+    color: var(--clr-error-text);
 }
 
 /**
@@ -90,12 +90,12 @@
 /* purgecss start ignore */
 
 .comments_error {
-    border-color: var(--color-error-text);
+    border-color: var(--clr-error-text);
 }
 
 @include setup.dark-mode {
     .comments_error {
-        border-color: var(--color-error-text);
+        border-color: var(--clr-error-text);
     }
 }
 

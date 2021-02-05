@@ -94,8 +94,8 @@
  */
 
 .ui-widget-content {
-    border: 1px solid var(--color-border);
-    background-color: var(--color-background);
+    border: 1px solid var(--clr-brdr);
+    background-color: var(--clr-bkgd);
 }
 
 /**
@@ -103,7 +103,7 @@
  */
 
 .ui-widget-header {
-    @include setup.gradient-linear(var(--color-grad-from), var(--color-grad-to));
+    @include setup.gradient-linear(var(--clr-grad-from), var(--clr-grad-to));
 
     font-weight: 700;
 }
@@ -117,9 +117,9 @@
  */
 
 .ui-state-default {
-    border: 1px solid var(--color-border);
-    background-color: var(--color-background-box);
-    color: var(--color-text);
+    border: 1px solid var(--clr-brdr);
+    background-color: var(--clr-bkgd-box);
+    color: var(--clr-text);
 
     &.ui-state-hover {
         filter: brightness(1.05);
@@ -132,7 +132,7 @@
 
 a.ui-state-default:hover,
 a.ui-state-default:focus {
-    color: var(--color-text);
+    color: var(--clr-text);
     text-decoration: none;
 }
 
@@ -141,13 +141,13 @@ a.ui-state-default:focus {
  */
 
 .ui-state-hover {
-    border-color: var(--color-border-extra-dark);
-    background-color: var(--color-background-box);
+    border-color: var(--clr-brdr-x-dark);
+    background-color: var(--clr-bkgd-box);
 }
 
 @include setup.dark-mode {
     .ui-state-hover {
-        border-color: var(--color-border-extra-light);
+        border-color: var(--clr-brdr-x-lite);
     }
 }
 
@@ -156,7 +156,7 @@ a.ui-state-default:focus {
  */
 
 .ui-state-focus {
-    border-color: var(--color-link-focus);
+    border-color: var(--clr-link-focus);
     outline: 0;
 
     a {
@@ -169,19 +169,19 @@ a.ui-state-default:focus {
  */
 
 .ui-state-active {
-    border-color: var(--color-link);
-    background-color: var(--color-selected);
+    border-color: var(--clr-link);
+    background-color: var(--clr-selected);
 
     &.ui-state-hover {
-        border-color: var(--color-link-hover);
+        border-color: var(--clr-link-hover);
     }
 }
 
 @include setup.dark-mode {
     .ui-state-active.ui-state-hover {
-        --color-link-hover-dark: hsl(210, 100%, 60%);
+        --clr-link-hover-dark: hsl(210, 100%, 60%);
 
-        border-color: var(--color-link-hover-dark);
+        border-color: var(--clr-link-hover-dark);
     }
 }
 
@@ -190,7 +190,7 @@ a.ui-state-default:focus {
  */
 
 .ui-selecting {
-    background-color: var(--color-selecting);
+    background-color: var(--clr-selecting);
 }
 
 /**
@@ -198,7 +198,7 @@ a.ui-state-default:focus {
  */
 
 .ui-selected {
-    background-color: var(--color-selected);
+    background-color: var(--clr-selected);
 }
 
 
@@ -210,19 +210,19 @@ a.ui-state-default:focus {
  */
 
 .ui-state-highlight {
-    border: 1px solid var(--color-warning-border);
-    background-color: var(--color-warning-background);
+    border: 1px solid var(--clr-warning-brdr);
+    background-color: var(--clr-warning-bkgd);
 
     &.ui-state-hover {
-        border-color: var(--color-warning-text);
+        border-color: var(--clr-warning-text);
     }
 }
 
 @include setup.dark-mode {
     .ui-state-highlight.ui-state-hover {
-        --color-warning-text-dark: hsl(40, 100%, 40%);
+        --clr-warning-text-dark: hsl(40, 100%, 40%);
 
-        border-color: var(--color-warning-text-dark);
+        border-color: var(--clr-warning-text-dark);
     }
 }
 
@@ -231,20 +231,20 @@ a.ui-state-default:focus {
  */
 
 .ui-state-error {
-    border: 1px solid var(--color-error-border);
-    background-color: var(--color-error-background);
-    color: var(--color-error-text);
+    border: 1px solid var(--clr-error-brdr);
+    background-color: var(--clr-error-bkgd);
+    color: var(--clr-error-text);
 
     &.ui-state-hover {
-        border-color: var(--color-error-text);
+        border-color: var(--clr-error-text);
     }
 }
 
 @include setup.dark-mode {
     .ui-state-error.ui-state-hover {
-        --color-error-text-dark: hsl(337, 100%, 40%);
+        --clr-error-text-dark: hsl(337, 100%, 40%);
 
-        border-color: var(--color-error-text-dark);
+        border-color: var(--clr-error-text-dark);
     }
 }
 

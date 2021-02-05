@@ -8,46 +8,46 @@
     height: auto;
     min-height: 2em; // 32px / 16px
     padding: 0.25em 0.1875em; // 8px / 16px + 3px / 16px
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--clr-brdr);
 
     @if setup.$border-radius-form {
         border-radius: setup.$border-radius-form;
     }
 
-    background: var(--color-background-form);
+    background: var(--clr-bkgd-form);
     appearance: none;
     cursor: pointer;
 
     &:hover {
-        border-color: var(--color-border-extra-dark);
+        border-color: var(--clr-brdr-x-dark);
     }
 
     &:focus {
-        border-color: var(--color-link-focus);
+        border-color: var(--clr-link-focus);
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
     }
 }
 
 @include setup.dark-mode {
     [type="file"] {
-        border-color: var(--color-border-extra-dark);
+        border-color: var(--clr-brdr-x-dark);
 
         &:hover {
-            border-color: var(--color-border-extra-light);
+            border-color: var(--clr-brdr-x-lite);
         }
 
         &:focus {
-            border-color: var(--color-link-focus);
+            border-color: var(--clr-link-focus);
         }
     }
 }
 
 [type="file"]::-webkit-file-upload-button {
-    @include setup.gradient-linear(var(--color-button-grad-from), var(--color-button-grad-to));
+    @include setup.gradient-linear(var(--clr-btn-grad-from), var(--clr-btn-grad-to));
 
     padding: 0 0.25em;
     border: 0;
-    color: var(--color-text-button);
+    color: var(--clr-text-btn);
     font: inherit;
     /* autoprefixer: off */
     appearance: none;

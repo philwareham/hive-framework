@@ -89,7 +89,7 @@
         margin: 0;
         padding: 0.5em;
         background: rgba(0, 0, 0, 0.5);
-        color: var(--color-text-white-out);
+        color: var(--clr-text-white-out);
         font-size: 1rem;
         text-align: center;
     }
@@ -123,7 +123,7 @@
     transform: translate(0, -50%);
     border: 0;
     border-radius: 50%;
-    background: var(--color-background);
+    background: var(--clr-bkgd);
     box-shadow: none;
     color: transparent;
     font-size: 0;
@@ -149,7 +149,7 @@
     }
 
     &:focus {
-        outline: 1px solid var(--color-link-focus);
+        outline: 1px solid var(--clr-link-focus);
     }
 
     &--left {
@@ -216,10 +216,10 @@
         left: 0;
         width: 12px;
         height: 12px;
-        border: 2px solid var(--color-background);
+        border: 2px solid var(--clr-bkgd);
         border-radius: 50%;
         opacity: 0.5;
-        background-color: var(--color-text);
+        background-color: var(--clr-text);
         text-align: center;
     }
 
@@ -235,7 +235,7 @@
     }
 
     &:focus {
-        outline: 1px solid var(--color-link-focus);
+        outline: 1px solid var(--clr-link-focus);
     }
 
     &--active::before {

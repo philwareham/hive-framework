@@ -11,7 +11,7 @@
 body {
     position: relative; /* 1 */
     margin: 0; /* 2 */
-    background: var(--color-background-box);
+    background: var(--clr-bkgd-box);
 }
 
 /**
@@ -37,12 +37,12 @@ body {
 .wrapper {
     margin: -1px 0;
     padding: 1px 0;
-    background: var(--color-background);
+    background: var(--clr-bkgd);
 }
 
 @include setup.dark-mode {
     .wrapper {
-        border-bottom-color: var(--color-border-extra-dark);
+        border-bottom-color: var(--clr-brdr-x-dark);
     }
 }
 
@@ -51,14 +51,14 @@ body {
  */
 
 .zebra--subtle {
-    background-color: var(--color-background-zebra-subtle);
+    background-color: var(--clr-bkgd-zebra-subtle);
 }
 
 .zebra--strong {
-    --color-text-heading: hsl(0, 0%, 100%);
+    --clr-text-heading: hsl(0, 0%, 100%);
 
-    background-color: var(--color-background-zebra-strong);
-    color: var(--color-text-white-out);
+    background-color: var(--clr-bkgd-zebra-strong);
+    color: var(--clr-text-white-out);
 }
 
 /**
@@ -73,8 +73,8 @@ body {
  */
 
 #dynamic-header {
-    border-bottom: 2px solid var(--color-border);
-    background: var(--color-background-box);
+    border-bottom: 2px solid var(--clr-brdr);
+    background: var(--clr-bkgd-box);
 
     .js & {
         position: sticky;
@@ -87,7 +87,7 @@ body {
 
 @include setup.dark-mode {
     #dynamic-header {
-        border-bottom-color: var(--color-border-extra-dark);
+        border-bottom-color: var(--clr-brdr-x-dark);
     }
 }
 
@@ -153,14 +153,14 @@ body {
 noscript {
     display: block;
     padding: 0.5em 1em;
-    background-color: var(--color-highlight);
+    background-color: var(--clr-hilite);
     font-size: setup.$small-font-size;
     text-align: center;
 }
 
 @include setup.dark-mode {
     noscript {
-        color: var(--color-background-form);
+        color: var(--clr-bkgd-form);
     }
 }
 

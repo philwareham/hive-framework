@@ -35,7 +35,7 @@ button,
 [type="submit"],
 a.button,
 span.button {
-    @include setup.gradient-linear(var(--color-button-grad-from), var(--color-button-grad-to));
+    @include setup.gradient-linear(var(--clr-btn-grad-from), var(--clr-btn-grad-to));
 
     display: inline-block;
 
@@ -48,7 +48,7 @@ span.button {
     padding: setup.$button-padding;
 
     @if setup.$button-border {
-        border: setup.$button-border var(--color-button-border);
+        border: setup.$button-border var(--clr-btn-brdr);
     }
 
     @if setup.$button-radius {
@@ -58,10 +58,10 @@ span.button {
     background-clip: padding-box;
 
     @if setup.$button-box-shadow {
-        box-shadow: setup.$button-box-shadow var(--color-button-shadow);
+        box-shadow: setup.$button-box-shadow var(--clr-btn-shadow);
     }
 
-    color: var(--color-text-button);
+    color: var(--clr-text-btn);
     font-weight: 400;
     text-align: center;
     appearance: none; /* 2 */
@@ -70,7 +70,7 @@ span.button {
 
     &:hover {
         filter: brightness(1.05);
-        color: var(--color-text-button);
+        color: var(--clr-text-btn);
         text-decoration: none;
     }
 
@@ -81,18 +81,18 @@ span.button {
         }
 
         filter: brightness(0.95);
-        color: var(--color-text-button);
+        color: var(--clr-text-btn);
         text-decoration: none;
     }
 
     @if setup.$button-border {
         &:focus {
-            border-color: var(--color-link-focus);
+            border-color: var(--clr-link-focus);
             outline: 2px solid transparent; // Allows for repainting in high contrast modes.
         }
     } @else {
         &:focus {
-            outline: 1px solid var(--color-link-focus); // Allows for repainting in high contrast modes.
+            outline: 1px solid var(--clr-link-focus); // Allows for repainting in high contrast modes.
         }
     }
 }
@@ -104,7 +104,7 @@ span.button {
     [type="submit"],
     a.button,
     span.button {
-        color: var(--color-text-button);
+        color: var(--clr-text-btn);
     }
 }
 
@@ -156,14 +156,14 @@ button,
 a.button,
 span.button {
     &.button-primary {
-        @include setup.gradient-linear(var(--color-button-primary-grad-from), var(--color-button-primary-grad-to));
+        @include setup.gradient-linear(var(--clr-btn-primary-grad-from), var(--clr-btn-primary-grad-to));
 
         @if setup.$button-border {
-            border-color: var(--color-button-primary-border);
+            border-color: var(--clr-btn-primary-brdr);
         }
 
         @if setup.$button-box-shadow {
-            box-shadow: setup.$button-box-shadow var(--color-button-primary-shadow);
+            box-shadow: setup.$button-box-shadow var(--clr-btn-primary-shadow);
         }
 
         font-variation-settings: "wght" 700; // older browsers will just ignore this
@@ -186,25 +186,25 @@ span.button {
  */
 
 .button-success {
-    --color-success-text-light: hsl(120, 60%, 38%);
-    --color-success-text-dark: hsl(120, 60%, 30%);
-    --color-success-text-extra-dark: hsl(120, 60%, 20%);
+    --clr-success-text-light: hsl(120, 60%, 38%);
+    --clr-success-text-dark: hsl(120, 60%, 30%);
+    --clr-success-text-extra-dark: hsl(120, 60%, 20%);
 
-    @include setup.gradient-linear(var(--color-success-text-light), var(--color-success-text));
+    @include setup.gradient-linear(var(--clr-success-text-light), var(--clr-success-text));
 
     @if setup.$button-border {
-        border-color: var(--color-success-text-dark);
+        border-color: var(--clr-success-text-dark);
     }
 
     @if setup.$button-box-shadow {
-        box-shadow: setup.$button-box-shadow var(--color-success-text-extra-dark);
+        box-shadow: setup.$button-box-shadow var(--clr-success-text-extra-dark);
     }
 
-    color: var(--color-text-white-out);
+    color: var(--clr-text-white-out);
 
     &:hover {
         filter: brightness(1.1);
-        color: var(--color-text-white-out);
+        color: var(--clr-text-white-out);
     }
 
     &:active {
@@ -213,17 +213,17 @@ span.button {
         }
 
         filter: brightness(0.8);
-        color: var(--color-text-white-out);
+        color: var(--clr-text-white-out);
     }
 }
 
 @include setup.dark-mode {
     .button-success {
-        --color-success-text-light: hsl(100, 60%, 53%);
-        --color-success-text-dark: hsl(100, 60%, 45%);
-        --color-success-text-extra-dark: hsl(100, 60%, 33%);
+        --clr-success-text-light: hsl(100, 60%, 53%);
+        --clr-success-text-dark: hsl(100, 60%, 45%);
+        --clr-success-text-extra-dark: hsl(100, 60%, 33%);
 
-        color: var(--color-text-white-out);
+        color: var(--clr-text-white-out);
     }
 }
 
@@ -236,25 +236,25 @@ span.button {
  */
 
 .button-danger {
-    --color-error-text-light: hsl(4, 69%, 40%);
-    --color-error-text-dark: hsl(4, 69%, 32%);
-    --color-error-text-extra-dark: hsl(4, 69%, 25%);
+    --clr-error-text-light: hsl(4, 69%, 40%);
+    --clr-error-text-dark: hsl(4, 69%, 32%);
+    --clr-error-text-extra-dark: hsl(4, 69%, 25%);
 
-    @include setup.gradient-linear(var(--color-error-text-light), var(--color-error-text));
+    @include setup.gradient-linear(var(--clr-error-text-light), var(--clr-error-text));
 
     @if setup.$button-border {
-        border-color: var(--color-error-text-dark);
+        border-color: var(--clr-error-text-dark);
     }
 
     @if setup.$button-box-shadow {
-        box-shadow: setup.$button-box-shadow var(--color-error-text-extra-dark);
+        box-shadow: setup.$button-box-shadow var(--clr-error-text-extra-dark);
     }
 
-    color: var(--color-text-white-out);
+    color: var(--clr-text-white-out);
 
     &:hover {
         filter: brightness(1.2);
-        color: var(--color-text-white-out);
+        color: var(--clr-text-white-out);
     }
 
     &:active {
@@ -263,17 +263,17 @@ span.button {
         }
 
         filter: brightness(0.8);
-        color: var(--color-text-white-out);
+        color: var(--clr-text-white-out);
     }
 }
 
 @include setup.dark-mode {
     .button-danger {
-        --color-error-text-light: hsl(337, 100%, 63%);
-        --color-error-text-dark: hsl(337, 100%, 54%);
-        --color-error-text-extra-dark: hsl(337, 100%, 33%);
+        --clr-error-text-light: hsl(337, 100%, 63%);
+        --clr-error-text-dark: hsl(337, 100%, 54%);
+        --clr-error-text-extra-dark: hsl(337, 100%, 33%);
 
-        color: var(--color-text-white-out);
+        color: var(--clr-text-white-out);
     }
 }
 
@@ -288,7 +288,7 @@ button[disabled],
 [type="reset"][disabled],
 [type="submit"][disabled],
 .button.disabled {
-    @include setup.gradient-linear(var(--color-button-grad-from), var(--color-button-grad-to));
+    @include setup.gradient-linear(var(--clr-btn-grad-from), var(--clr-btn-grad-to));
 
     @if setup.$button-box-shadow {
         top: 0 !important;

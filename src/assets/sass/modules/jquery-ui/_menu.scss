@@ -68,7 +68,7 @@
     display: block;
     margin: 0;
     padding: 0;
-    border-color: var(--color-border-light);
+    border-color: var(--clr-brdr-lite);
     outline: 0;
     box-shadow: var(--standard-shadow);
     list-style: none;
@@ -87,7 +87,7 @@
         cursor: pointer;
 
         a {
-            color: var(--color-text);
+            color: var(--clr-text);
             text-decoration: none;
         }
     }
@@ -107,7 +107,7 @@
 
     .ui-state-focus,
     .ui-state-active {
-        background-color: var(--color-selected);
+        background-color: var(--clr-selected);
     }
 
     // left-aligned

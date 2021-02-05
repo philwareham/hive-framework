@@ -39,7 +39,7 @@ html {
  */
 
 body {
-    color: var(--color-text);
+    color: var(--clr-text);
     font-family: var(--font-sans-serif);
     font-feature-settings: "liga"; /* 1 */
     font-variation-settings: "wght" 400; // older browsers will just ignore this
@@ -65,7 +65,7 @@ h4,
 h5,
 h6 {
     clear: both;
-    color: var(--color-text-heading);
+    color: var(--clr-text-heading);
     font-family: var(--font-serif);
 
     @if setup.$font-stack-serif-vf {
@@ -165,7 +165,7 @@ address {
 
 blockquote {
     margin: 0.75em 10%; // 18px / 24px
-    color: var(--color-text-heading);
+    color: var(--clr-text-heading);
     font-family: var(--font-serif);
     font-size: 1.5rem; // 24px / 16px
     font-style: italic;
@@ -180,7 +180,7 @@ blockquote {
 
     footer {
         margin-bottom: 1.5rem;
-        color: var(--color-text-footnote);
+        color: var(--clr-text-footnote);
         font-family: var(--font-sans-serif);
         font-size: 1rem;
         font-style: normal;
@@ -197,7 +197,7 @@ blockquote {
             width: 1px;
             height: 2rem;
             margin: 0.75rem auto;
-            background-color: var(--color-border);
+            background-color: var(--clr-brdr);
         }
     }
 }
@@ -236,8 +236,8 @@ mark,
 var {
     padding: 0 0.25em; // 0 4px
     border-radius: 0.25rem; // 4px / 16px
-    background-color: var(--color-selected);
-    color: var(--color-text);
+    background-color: var(--clr-selected);
+    color: var(--clr-text);
 }
 
 /**
@@ -250,10 +250,10 @@ pre,
 code,
 kbd,
 samp {
-    border: 1px solid var(--color-border-extra-light);
+    border: 1px solid var(--clr-brdr-x-lite);
     border-radius: 0.25rem; // 4px / 16px
-    background-color: var(--color-background-box);
-    color: var(--color-text);
+    background-color: var(--clr-bkgd-box);
+    color: var(--clr-text);
     direction: ltr;
     font-family: var(--font-monospaced);
     font-feature-settings: normal; /* 1 */
@@ -340,7 +340,7 @@ figcaption,
 tfoot,
 .footnote,
 .footnotes {
-    color: var(--color-text-footnote);
+    color: var(--clr-text-footnote);
 }
 
 figcaption {

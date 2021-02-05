@@ -25,54 +25,54 @@
 .ui-checkboxradio-label {
     .ui-icon-background {
         box-sizing: border-box;
-        border: 1px solid var(--color-border-extra-dark);
+        border: 1px solid var(--clr-brdr-x-dark);
 
         @if setup.$border-radius-form {
             border-radius: setup.$border-radius-form;
         }
 
-        background-color: var(--color-background-form);
+        background-color: var(--clr-bkgd-form);
     }
 
     &.ui-checkboxradio-checked {
         .ui-icon {
             border: 0;
-            background: var(--color-text-footnote) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+            background: var(--clr-text-footnote) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
         }
 
         &.ui-state-focus .ui-icon {
-            background-color: var(--color-link-focus);
+            background-color: var(--clr-link-focus);
         }
     }
 
     &.ui-checkboxradio-checked:hover .ui-icon {
-        background-color: var(--color-text);
+        background-color: var(--clr-text);
     }
 }
 
 @include setup.dark-mode {
     .ui-checkboxradio-label {
         .ui-icon-background {
-            border-color: var(--color-text-footnote);
-            background-color: var(--color-text-white-out);
+            border-color: var(--clr-text-footnote);
+            background-color: var(--clr-text-white-out);
         }
 
         &.ui-checkboxradio-checked {
             .ui-icon {
-                background-color: var(--color-background);
+                background-color: var(--clr-bkgd);
             }
 
             &.ui-button:hover .ui-icon {
-                background-color: var(--color-border-extra-dark);
+                background-color: var(--clr-brdr-x-dark);
             }
 
             &.ui-state-focus .ui-icon {
-                background-color: var(--color-link-focus);
+                background-color: var(--clr-link-focus);
             }
         }
 
         &.ui-checkboxradio-checked:hover .ui-icon {
-            background-color: var(--color-text);
+            background-color: var(--clr-text);
         }
     }
 }
@@ -84,20 +84,20 @@
 
     &.ui-checkboxradio-checked {
         .ui-icon {
-            border: 5px solid var(--color-text-footnote);
+            border: 5px solid var(--clr-text-footnote);
             border-radius: 100%;
-            background: var(--color-background-form);
+            background: var(--clr-bkgd-form);
         }
 
         &.ui-state-focus .ui-icon {
-            border-color: var(--color-link-focus);
-            background-color: var(--color-background-form);
+            border-color: var(--clr-link-focus);
+            background-color: var(--clr-bkgd-form);
         }
     }
 
     &.ui-checkboxradio-checked:hover .ui-icon {
-        border-color: var(--color-text);
-        background-color: var(--color-background-form);
+        border-color: var(--clr-text);
+        background-color: var(--clr-bkgd-form);
     }
 }
 
@@ -105,23 +105,23 @@
     .ui-checkboxradio-radio-label {
         &.ui-checkboxradio-checked {
             .ui-icon {
-                border-color: var(--color-background);
-                background-color: var(--color-text-white-out);
+                border-color: var(--clr-bkgd);
+                background-color: var(--clr-text-white-out);
             }
 
             &.ui-button:hover .ui-icon {
-                background-color: var(--color-text-white-out);
+                background-color: var(--clr-text-white-out);
             }
 
             &.ui-state-focus .ui-icon {
-                border-color: var(--color-link-focus);
-                background-color: var(--color-text-white-out);
+                border-color: var(--clr-link-focus);
+                background-color: var(--clr-text-white-out);
             }
         }
 
         &.ui-checkboxradio-checked:hover .ui-icon {
-            border-color: var(--color-border-extra-dark);
-            background-color: var(--color-text-white-out);
+            border-color: var(--clr-brdr-x-dark);
+            background-color: var(--clr-text-white-out);
         }
     }
 }
@@ -141,9 +141,9 @@
 
 .ui-checkboxradio-checked {
     &.ui-button {
-        @include setup.gradient-linear(var(--color-button-selected-grad-from), var(--color-button-selected-grad-to));
+        @include setup.gradient-linear(var(--clr-btn-selected-grad-from), var(--clr-btn-selected-grad-to));
 
-        border-color: var(--color-button-selected-border);
+        border-color: var(--clr-btn-selected-brdr);
     }
 }
 
@@ -152,9 +152,9 @@
  */
 
 .ui-checkboxradio-disabled {
-    border: 1px solid var(--color-border) !important;
+    border: 1px solid var(--clr-brdr) !important;
     opacity: 0.33 !important;
-    background-color: var(--color-background-form-disabled) !important;
+    background-color: var(--clr-bkgd-form-disabled) !important;
     box-shadow: none !important;
     cursor: default !important; /* 1 */
 }

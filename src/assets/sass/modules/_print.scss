@@ -19,7 +19,7 @@ body {
     margin: 0.5cm;
     padding: 2em 5em;
     color: black;
-    font-family: var(--font-print);
+    font-family: "Helvetica Neue", sans-serif;
 }
 
 /**
@@ -55,18 +55,15 @@ a {
 }
 
 /**
- *  Show long-form for abbreviations in print.
- */
-
-abbr[title] {
-    &::after {
-        content: " (" attr(title) ")";
-    }
-}
-
-/**
  * Harmonize size, style and vertical margin of headings.
  */
+
+h1 {
+    margin: 16pt 0;
+    clear: both;
+    font-size: 32pt;
+    line-height: 36pt;
+}
 
 h1,
 h2,
@@ -74,16 +71,13 @@ h3,
 h4,
 h5,
 h6 {
+    clear: both;
     orphans: 2;
     widows: 2;
     page-break-after: avoid;
 }
 
-h1 {
-    margin: 16pt 0;
-    font-size: 32pt;
-    line-height: 36pt;
-}
+
 
 h2 {
     margin: 14pt 0;

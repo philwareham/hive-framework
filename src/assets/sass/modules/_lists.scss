@@ -29,7 +29,7 @@ li {
  */
 
 li::marker {
-    color: var(--color-text-heading);
+    color: var(--clr-text-heading);
 }
 
 /**
@@ -45,7 +45,7 @@ dd {
  */
 
 dt {
-    color: var(--color-text-heading);
+    color: var(--clr-text-heading);
     font-weight: 700;
 }
 

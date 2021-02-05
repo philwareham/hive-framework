@@ -22,12 +22,12 @@
 // WebKit/Blink.
 
 [type="range"]::-webkit-slider-thumb {
-    @include setup.gradient-linear(var(--color-button-grad-from), var(--color-button-grad-to));
+    @include setup.gradient-linear(var(--clr-btn-grad-from), var(--clr-btn-grad-to));
 
     width: 1.25em; // 20px / 16px
     height: 1.25em; // 20px / 16px
     margin-top: -0.3125em; // 5px / 16px
-    border: 1px solid var(--color-border-dark);
+    border: 1px solid var(--clr-brdr-dark);
     border-radius: 50%;
     box-shadow: var(--standard-shadow);
     appearance: none;
@@ -43,50 +43,50 @@
 }
 
 [type="range"]:focus::-webkit-slider-thumb {
-    border-color: var(--color-link-focus);
+    border-color: var(--clr-link-focus);
 }
 
 [type="range"]::-webkit-slider-runnable-track {
     box-sizing: border-box;
     width: 100%;
     height: 0.75em; // 12px / 16px
-    border: 1px solid var(--color-border);
-    background-color: var(--color-background-box);
+    border: 1px solid var(--clr-brdr);
+    background-color: var(--clr-bkgd-box);
     cursor: pointer;
 }
 
 [type="range"]:hover::-webkit-slider-runnable-track {
-    border-color: var(--color-border-extra-dark);
+    border-color: var(--clr-brdr-x-dark);
 }
 
 [type="range"]:active::-webkit-slider-runnable-track,
 [type="range"]:focus::-webkit-slider-runnable-track {
-    border-color: var(--color-link-focus);
+    border-color: var(--clr-link-focus);
 }
 
 @include setup.dark-mode {
     [type="range"]::-webkit-slider-runnable-track {
-        border-color: var(--color-border-extra-dark);
+        border-color: var(--clr-brdr-x-dark);
     }
 
     [type="range"]:hover::-webkit-slider-runnable-track {
-        border-color: var(--color-border-extra-light);
+        border-color: var(--clr-brdr-x-lite);
     }
 
     [type="range"]:active::-webkit-slider-runnable-track,
     [type="range"]:focus::-webkit-slider-runnable-track {
-        border-color: var(--color-link-focus);
+        border-color: var(--clr-link-focus);
     }
 }
 
 // Gecko/Quantum.
 
 [type="range"]::-moz-range-thumb {
-    @include setup.gradient-linear(var(--color-button-grad-from), var(--color-button-grad-to));
+    @include setup.gradient-linear(var(--clr-btn-grad-from), var(--clr-btn-grad-to));
 
     width: 1.25em; // 20px / 16px
     height: 1.25em; // 20px / 16px
-    border: 1px solid var(--color-border-dark);
+    border: 1px solid var(--clr-brdr-dark);
     border-radius: 50%;
     box-shadow: var(--standard-shadow);
     /* autoprefixer: off */
@@ -103,24 +103,24 @@
 }
 
 [type="range"]:focus::-moz-range-thumb {
-    border-color: var(--color-link-focus);
+    border-color: var(--clr-link-focus);
 }
 
 [type="range"]::-moz-range-track {
     box-sizing: border-box;
     width: 100%;
     height: 0.75em; // 12px / 16px
-    border: 1px solid var(--color-border);
-    background-color: var(--color-background-box);
+    border: 1px solid var(--clr-brdr);
+    background-color: var(--clr-bkgd-box);
     cursor: pointer;
 }
 
 [type="range"]:hover::-moz-range-track {
-    border-color: var(--color-border-extra-dark);
+    border-color: var(--clr-brdr-x-dark);
 }
 
 [type="range"]:focus::-moz-range-track {
-    border-color: var(--color-link-focus);
+    border-color: var(--clr-link-focus);
 }
 
 [type="range"]::-moz-focus-outer {
@@ -129,14 +129,14 @@
 
 @include setup.dark-mode {
     [type="range"]::-moz-range-track {
-        border-color: var(--color-border-extra-dark);
+        border-color: var(--clr-brdr-x-dark);
     }
 
     [type="range"]:hover::-moz-range-track {
-        border-color: var(--color-border-extra-light);
+        border-color: var(--clr-brdr-x-lite);
     }
 
     [type="range"]:focus::-moz-range-track {
-        border-color: var(--color-link-focus);
+        border-color: var(--clr-link-focus);
     }
 }
