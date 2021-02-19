@@ -23,7 +23,7 @@
     "url": "https://github.com/philwareham/hive-framework/issues"
   },
   "devDependencies": {
-    "@babel/core": "7.12.16",
+    "@babel/core": "7.12.17",
     "@babel/preset-env": "7.12.17",
     "@lodder/grunt-postcss": "3.0.0",
     "autoprefixer": "10.2.4",
@@ -43,7 +43,7 @@
     "grunt-stylelint": "0.16.0",
     "load-grunt-tasks": "5.1.0",
     "postcss": "8.2.6",
-    "sass": "1.32.7",
+    "sass": "1.32.8",
     "stylelint": "13.10.0",
     "stylelint-order": "4.1.0",
     "stylelint-scss": "3.19.0"
