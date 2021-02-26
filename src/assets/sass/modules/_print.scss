@@ -226,9 +226,8 @@ img {
 
     &.align-center,
     &.align-inline-center {
-        display: grid;
-        place-content: center;
-        margin: 1em 0;
+        display: block;
+        margin: 1em auto;
     }
 }
 

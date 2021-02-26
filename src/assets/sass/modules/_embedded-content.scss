@@ -81,9 +81,8 @@ img {
 
     &.align-center,
     &.align-inline-center {
-        display: grid;
-        place-content: center;
-        margin: 1em 0; // TODO: margin-block: 1em;
+        display: block;
+        margin: 1em auto;
     }
 }
 
