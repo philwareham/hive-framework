@@ -31,7 +31,7 @@
 $colors: (
     "text-promoted":     var(--clr-text-promoted),
     "text":              var(--clr-text),
-    "text-footnote":     var(--clr-text-demoted),
+    "text-demoted":      var(--clr-text-demoted),
     "grad-from":         var(--clr-grad-from),
     "grad-to":           var(--clr-grad-to),
     "brdr":              var(--clr-brdr),
@@ -40,7 +40,7 @@ $colors: (
     "brdr-dark":         var(--clr-brdr-dark),
     "brdr-x-dark":       var(--clr-brdr-x-dark),
     "a":                 var(--clr-a),
-    "a-hover":           var(--clr-a-interact),
+    "a-interact":        var(--clr-a-interact),
     "focus":             var(--clr-focus),
     "selecting":         var(--clr-selecting),
     "selected":          var(--clr-selected),
