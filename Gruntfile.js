@@ -141,7 +141,17 @@ module.exports = function (grunt)
         },
 
         // Minify `app.js`.
-        uglify: {
+        terser: {
+            options: {
+                ecma: 2015,
+                compress: {
+                    booleans_as_integers: true,
+                    drop_console: true
+                },
+                format: {
+                    comments: false
+                }
+            },
             dist: {
                 files: [
                     {
@@ -162,7 +172,7 @@ module.exports = function (grunt)
                 tasks: [
                     'jshint',
                     'browserify',
-                    'uglify'
+                    'terser'
                 ]
             }
         }
@@ -170,7 +180,7 @@ module.exports = function (grunt)
     });
 
     // Register tasks.
-    grunt.registerTask('build', ['clean', 'concurrent', 'uglify']);
+    grunt.registerTask('build', ['clean', 'concurrent', 'terser']);
     grunt.registerTask('css', ['stylelint', 'sass', 'postcss']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('travis', ['build']);
