@@ -75,14 +75,6 @@ body {
 #dynamic-header {
     border-bottom: 2px solid var(--clr-brdr);
     background: var(--clr-bkgd-box);
-
-    .js & {
-        position: sticky;
-        z-index: 100;
-        top: 0;
-        right: 0;
-        width: 100%;
-    }
 }
 
 @include setup.dark-mode {

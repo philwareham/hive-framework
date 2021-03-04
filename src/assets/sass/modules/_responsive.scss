@@ -339,7 +339,12 @@
 
     #dynamic-header {
         display: flex;
+        position: sticky;
+        z-index: 100;
+        top: 0;
+        right: 0;
         justify-content: space-between;
+        width: 100%;
     }
 
     .site-header {
