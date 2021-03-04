@@ -4,10 +4,10 @@
 //window.jQuery = jQuery;
 
 import Prism from 'prismjs';
-require('prismjs/plugins/line-numbers/prism-line-numbers');
-require('prismjs/components/prism-markup-templating');
-require('prismjs/components/prism-php');
-require('prismjs/components/prism-scss');
+import 'prismjs/plugins/line-numbers/prism-line-numbers';
+import 'prismjs/components/prism-markup-templating';
+import 'prismjs/components/prism-php';
+import 'prismjs/components/prism-scss';
 
 import Glide from '@glidejs/glide';
 
