@@ -122,13 +122,13 @@ module.exports = function (grunt)
 
         // Bundle up the JavaScript. TODO: Migrate to this when PrismJS becomes an ESM.
         //rollup: {
-		//	options: {
+        //    options: {
         //        plugins: [
         //            nodeResolve()
         //        ],
         //        format: 'iife',
-		//		  sourceMap: false
-		//	  },
+        //		  sourceMap: false
+        //	  },
         //    files: {
         //        src: '<%= paths.src.js %>app.js',
         //        dest: '<%= paths.dest.js %>app.js'
