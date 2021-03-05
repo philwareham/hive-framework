@@ -5,6 +5,9 @@ module.exports = function (grunt)
     // Load all Grunt tasks.
     require('load-grunt-tasks')(grunt);
 
+    // Define Rollup plugins. TODO: Migrate to this when PrismJS becomes an ESM.
+    //const nodeResolve = require('@rollup/plugin-node-resolve').default;
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -83,7 +86,7 @@ module.exports = function (grunt)
                 forin: true,
                 globals: {
                     $: true,
-                    console: true, // Comment this out for production code.
+                    console: true,
                     jQuery: true,
                     Zepto: true,
                     define: true,
@@ -116,6 +119,21 @@ module.exports = function (grunt)
                 src: '<%= paths.dest.css %>*.css'
             }
         },
+
+        // Bundle up the JavaScript. TODO: Migrate to this when PrismJS becomes an ESM.
+        //rollup: {
+		//	options: {
+        //        plugins: [
+        //            nodeResolve()
+        //        ],
+        //        format: 'iife',
+		//		  sourceMap: false
+		//	  },
+        //    files: {
+        //        src: '<%= paths.src.js %>app.js',
+        //        dest: '<%= paths.dest.js %>app.js'
+        //    }
+        //},
 
         // Sass configuration.
         sass: {
