@@ -26,8 +26,9 @@
     --clr-text-white-enforced:    #{setup.$color-text-white-out};
     // interaction colours
     --clr-a:                      #{setup.$color-link};
-    --clr-a-interact:             #{setup.$color-link-hover};
-    --clr-focus:                  #{setup.$color-link-focus};
+    --clr-a-interact:             #{setup.$color-link-interact};
+    --clr-a-interact-a50:         #{setup.$color-link-interact-a50};
+    --clr-focus:                  #{setup.$color-focus};
     --clr-selecting:              #{setup.$color-selecting};
     --clr-selected:               #{setup.$color-selected};
     // neutral colours
@@ -88,8 +89,9 @@
 
     // interaction colours
     --clr-a:                  #{setup.$dark-color-link};
-    --clr-a-interact:         #{setup.$dark-color-link-hover};
-    --clr-focus:              #{setup.$dark-color-link-focus};
+    --clr-a-interact:         #{setup.$dark-color-link-interact};
+    --clr-a-interact-a50:     #{setup.$dark-color-link-interact-a50};
+    --clr-focus:              #{setup.$dark-color-focus};
     --clr-selecting:          #{setup.$dark-color-selecting};
     --clr-selected:           #{setup.$dark-color-selected};
     // neutral colours

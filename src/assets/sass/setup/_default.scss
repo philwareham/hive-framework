@@ -9,8 +9,9 @@ $color-text-form-placeholder:         hsl(0, 0%, 60%) !default;
 $color-text-demoted:                  hsl(0, 0%, 35%) !default;
 // interaction colours
 $color-link:                          hsl(216, 100%, 37%) !default;
-$color-link-hover:                    hsl(216, 100%, 50%) !default;
-$color-link-focus:                    hsl(216, 100%, 50%) !default;
+$color-link-interact:                 hsl(216, 100%, 50%) !default;
+$color-link-interact-a50:             hsla(216, 100%, 50%, 0.5) !default;
+$color-focus:                         hsl(216, 100%, 50%) !default;
 $color-selecting:                     hsl(216, 100%, 90%) !default;
 $color-selected:                      hsl(216, 100%, 95%) !default;
 // neutral colours
@@ -43,8 +44,9 @@ $dark-color-text-form-placeholder:    hsl(210, 6%, 48%) !default;
 $dark-color-text-demoted:             hsl(210, 14%, 70%) !default;
 // interaction colours
 $dark-color-link:                     hsl(210, 100%, 81%) !default;
-$dark-color-link-hover:               hsl(210, 100%, 87%) !default;
-$dark-color-link-focus:               hsl(312, 100%, 50%) !default;
+$dark-color-link-interact:            hsl(210, 100%, 87%) !default;
+$dark-color-link-interact-a50:        hsla(210, 100%, 87%, 0.5) !default;
+$dark-color-focus:                    hsl(312, 100%, 50%) !default;
 $dark-color-selecting:                hsl(210, 50%, 18%) !default;
 $dark-color-selected:                 hsl(210, 50%, 21%) !default;
 // neutral colours

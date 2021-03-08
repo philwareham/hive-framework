@@ -9,6 +9,8 @@
  * 3. Interrupt the decoration line to let the shape of the text show through
  *    in supported browsers.
  * 4. Remove tap delay in modern browsers.
+ * 5. Expanded CSS level 3 `text-decoration-color` property in supported
+ *    browsers, older browsers ignore this addition.
  */
 
 a {
@@ -22,19 +24,13 @@ a {
     &:active {
         color: var(--clr-a-interact);
         text-decoration: underline;
+        text-decoration-color: var(--clr-a-interact-a50);  /* 5 */
     }
 
     &:focus {
         outline: thin solid var(--clr-focus);
     }
 }
-
-/**
- * Additional styling for heading links.
- *
- * 1. Expanded CSS level 3 `text-decoration-color` property in supported
- *    browsers, older browsers ignore this addition.
- */
 
 h1,
 h2,
@@ -48,7 +44,7 @@ h6 {
         &:hover,
         &:active {
             color: var(--clr-text-promoted);
-            text-decoration-color: var(--clr-text-promoted-a50);  /* 1 */
+            text-decoration-color: var(--clr-text-promoted-a50);  /* 5 */
         }
     }
 }
