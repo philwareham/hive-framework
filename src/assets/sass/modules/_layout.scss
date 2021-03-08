@@ -51,19 +51,19 @@ body {
  *
  * Example HTML:
  *
- * <div id="dynamic-header">
+ * <div class="dynamic-header">
  *     <header>
  *     <nav>
  * </div>
  */
 
-#dynamic-header {
+.dynamic-header {
     border-bottom: 2px solid var(--clr-brdr);
     background: var(--clr-bkgd);
 }
 
 @include setup.dark-mode {
-    #dynamic-header {
+    .dynamic-header {
         border-bottom-color: var(--clr-brdr-x-dark);
     }
 }
@@ -336,7 +336,7 @@ hr.flourish {
 }
 
 .box--strong:not(body),
-.box--strong .site-footer:not(.box--subtle) {
+.box--strong .site-footer {
     --clr-text-promoted: hsl(0, 0%, 100%);
     --clr-text-promoted-a50: hsla(0, 0%, 100%, 0.5);
     --clr-a: hsl(0, 0%, 100%);
