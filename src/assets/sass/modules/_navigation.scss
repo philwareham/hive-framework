@@ -43,7 +43,7 @@
 
     li {
         padding: 1px 0;
-        background: var(--clr-bkgd-box);
+        background: var(--clr-bkgd-box-subtle);
 
         &:hover {
             filter: brightness(0.95);
@@ -112,7 +112,7 @@
     right: 6%;
     width: 32px;
     height: 32px;
-    background-color: var(--clr-bkgd-box);
+    background-color: var(--clr-bkgd-box-subtle);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23333' d='M4 6h24v4H4zm0 8h24v4H4zm0 8h24v4H4z'/%3E%3C/svg%3E");
     background-size: 32px 32px;
     user-select: none;
@@ -180,7 +180,7 @@
     margin: 0 0.25em;
     margin-inline-end: 48px;
     border-radius: setup.$border-radius / 2;
-    background-color: var(--clr-bkgd-box);
+    background-color: var(--clr-bkgd-box-subtle);
 
     span {
         margin-top: 0.3125em;

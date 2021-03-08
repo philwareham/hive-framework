@@ -118,7 +118,7 @@
 
 .ui-state-default {
     border: 1px solid var(--clr-brdr);
-    background-color: var(--clr-bkgd-box);
+    background-color: var(--clr-bkgd-box-subtle);
     color: var(--clr-text);
 
     &.ui-state-hover {
@@ -142,7 +142,7 @@ a.ui-state-default:focus {
 
 .ui-state-hover {
     border-color: var(--clr-brdr-x-dark);
-    background-color: var(--clr-bkgd-box);
+    background-color: var(--clr-bkgd-box-subtle);
 }
 
 @include setup.dark-mode {

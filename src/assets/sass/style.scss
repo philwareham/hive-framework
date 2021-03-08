@@ -32,9 +32,8 @@
     --clr-selected:               #{setup.$color-selected};
     // neutral colours
     --clr-bkgd:                   #{setup.$color-background};
-    --clr-bkgd-zebra-subtle:      #{setup.$color-background-zebra-subtle};
-    --clr-bkgd-zebra-strong:      #{setup.$color-background-zebra-strong};
-    --clr-bkgd-box:               #{setup.$color-background-box};
+    --clr-bkgd-box-subtle:        #{setup.$color-background-box-subtle};
+    --clr-bkgd-box-strong:        #{setup.$color-background-box-strong};
     --clr-bkgd-form:              #{setup.$color-background-form};
     --clr-bkgd-form-disabled:     #{setup.$color-background-form-disabled};
     --clr-grad-from:              #{setup.$color-gradient-from};
@@ -95,9 +94,8 @@
     --clr-selected:           #{setup.$dark-color-selected};
     // neutral colours
     --clr-bkgd:               #{setup.$dark-color-background};
-    --clr-bkgd-zebra-subtle:  #{setup.$dark-color-background-zebra-subtle};
-    --clr-bkgd-zebra-strong:  #{setup.$dark-color-background-zebra-strong};
-    --clr-bkgd-box:           #{setup.$dark-color-background-box};
+    --clr-bkgd-box-subtle:    #{setup.$dark-color-background-box-subtle};
+    --clr-bkgd-box-strong:    #{setup.$dark-color-background-box-strong};
     --clr-bkgd-form:          #{setup.$dark-color-background-form};
     --clr-bkgd-form-disabled: #{setup.$dark-color-background-form-disabled};
     --clr-grad-from:          #{setup.$dark-color-gradient-from};

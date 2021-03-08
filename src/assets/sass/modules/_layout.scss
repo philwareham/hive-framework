@@ -11,7 +11,7 @@
 body {
     position: relative; /* 1 */
     margin: 0; /* 2 */
-    background: var(--clr-bkgd-box);
+    background: var(--clr-bkgd-box-subtle);
 }
 
 /**
@@ -50,14 +50,14 @@ body {
  * 'Zebra stripes'.
  */
 
-.zebra--subtle {
-    background-color: var(--clr-bkgd-zebra-subtle);
+.box--subtle {
+    background-color: var(--clr-bkgd-box-subtle);
 }
 
-.zebra--strong {
+.box--strong {
     --clr-text-promoted: hsl(0, 0%, 100%);
 
-    background-color: var(--clr-bkgd-zebra-strong);
+    background-color: var(--clr-bkgd-box-strong);
     color: var(--clr-text-white-enforced);
 }
 
@@ -74,7 +74,7 @@ body {
 
 #dynamic-header {
     border-bottom: 2px solid var(--clr-brdr);
-    background: var(--clr-bkgd-box);
+    background: var(--clr-bkgd-box-subtle);
 }
 
 @include setup.dark-mode {

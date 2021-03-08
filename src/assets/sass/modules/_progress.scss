@@ -14,7 +14,7 @@ progress {
     height: 0.75em;
     margin-inline-end: 0.33em;
     border: 1px solid var(--clr-brdr);
-    background-color: var(--clr-bkgd-box);
+    background-color: var(--clr-bkgd-box-subtle);
     vertical-align: baseline; /* 1 */
     appearance: none;
 }
@@ -28,7 +28,7 @@ progress {
 // WebKit/Blink.
 
 progress::-webkit-progress-bar {
-    background-color: var(--clr-bkgd-box);
+    background-color: var(--clr-bkgd-box-subtle);
 }
 
 progress::-webkit-progress-value {
