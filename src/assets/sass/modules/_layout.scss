@@ -11,7 +11,7 @@
 body {
     position: relative; /* 1 */
     margin: 0; /* 2 */
-    background: var(--clr-bkgd-box-subtle);
+    background: var(--clr-bkgd);
 }
 
 /**
@@ -47,21 +47,6 @@ body {
 }
 
 /**
- * 'Zebra stripes'.
- */
-
-.box--subtle {
-    background-color: var(--clr-bkgd-box-subtle);
-}
-
-.box--strong {
-    --clr-text-promoted: hsl(0, 0%, 100%);
-
-    background-color: var(--clr-bkgd-box-strong);
-    color: var(--clr-text-white-enforced);
-}
-
-/**
  * Show/hide header on scroll.
  *
  * Example HTML:
@@ -74,7 +59,7 @@ body {
 
 #dynamic-header {
     border-bottom: 2px solid var(--clr-brdr);
-    background: var(--clr-bkgd-box-subtle);
+    background: var(--clr-bkgd);
 }
 
 @include setup.dark-mode {
@@ -336,4 +321,22 @@ hr.flourish {
             margin-bottom: 1rem;
         }
     }
+}
+
+/**
+ * 'Zebra stripes'.
+ */
+
+.box--subtle {
+    background-color: var(--clr-bkgd-box-subtle);
+}
+
+.box--strong {
+    background-color: var(--clr-bkgd-box-strong);
+}
+
+body .box--strong {
+    --clr-text-promoted: hsl(0, 0%, 100%);
+
+    color: var(--clr-text-white-enforced);
 }
