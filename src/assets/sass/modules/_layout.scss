@@ -9,7 +9,10 @@
  */
 
 body {
+    display: flex;
     position: relative; /* 1 */
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0; /* 2 */
     background: var(--clr-bkgd);
 }
@@ -104,7 +107,7 @@ body {
  */
 
 .site-footer {
-    padding: 1em 0;
+    margin-top: auto;
 
     a {
         display: inline-block;
