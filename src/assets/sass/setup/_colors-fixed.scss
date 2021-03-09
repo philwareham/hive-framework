@@ -29,7 +29,7 @@ $color-info-text:                     hsl(200, 50%, 45%) !default;
 $color-info-background:               hsl(200, 78%, 95%) !default;
 $color-info-border:                   hsl(200, 78%, 82%) !default;
 // shadows
-$standard-shadow:                     0 0 0.5em hsla(0, 0%, 0%, 0.25) !default;
+$standard-shadow:                     0 0 0.5em hsla(0, 0%, 0%, 0.2) !default;
 
 // Dark Mode fixed colours
 
@@ -47,4 +47,4 @@ $dark-color-info-text:                hsl(207, 100%, 63%) !default;
 $dark-color-info-background:          hsl(207, 68%, 17%) !default;
 $dark-color-info-border:              hsla(207, 100%, 63%, 0.38) !default;
 // shadows
-$dark-standard-shadow:                0 0 0.5em hsla(0, 0%, 0%, 0.75) !default;
+$dark-standard-shadow:                0 0 0.5em hsla(0, 0%, 0%, 0.8) !default;
