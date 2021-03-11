@@ -1,0 +1,9 @@
+@use "../setup/settings";
+
+@if settings.$color-scheme == test {
+    @forward "test";
+
+    @if settings.$use-dark-mode {
+        @forward "test-dark";
+    }
+}

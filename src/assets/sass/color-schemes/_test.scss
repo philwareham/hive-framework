@@ -1,0 +1,38 @@
+/*
+ * COLOURSCHEME: Test
+ */
+
+// Light Mode default colours
+
+// text colours
+$color-text:                     hsl(0, 0%, 20%);
+$color-text-promoted:            hsl(0, 0%, 0%);
+$color-text-promoted-a50:        hsla(0, 0%, 0%, 0.5);
+$color-text-form:                hsl(0, 0%, 0%);
+$color-text-form-placeholder:    hsl(0, 0%, 60%);
+$color-text-demoted:             hsl(0, 0%, 35%);
+// interaction colours
+$color-link:                     hsl(216, 100%, 37%);
+$color-link-interact:            hsl(216, 100%, 50%);
+$color-link-interact-a50:        hsla(216, 100%, 50%, 0.5);
+$color-focus:                    hsl(216, 100%, 50%);
+$color-selecting:                hsl(216, 100%, 90%);
+$color-selected:                 hsl(216, 100%, 95%);
+// neutral colours
+$color-background:               hsl(0, 0%, 100%);
+$color-background-box-subtle:    hsl(0, 0%, 96%);
+$color-background-box-strong:    hsl(0, 0%, 20%);
+$color-background-form:          hsl(0, 0%, 100%);
+$color-background-form-disabled: hsl(0, 0%, 89%);
+$color-gradient-from:            hsl(0, 0%, 93%);
+$color-gradient-to:              hsl(0, 0%, 87%);
+// accent colours
+$color-highlight:                hsl(48, 100%, 63%);
+$color-strong-highlight-box:     hsl(48, 100%, 76%);
+$color-highlight-box:            hsl(48, 100%, 94%);
+// border colours
+$color-border-extra-light:       hsl(0, 0%, 85%);
+$color-border-light:             hsl(0, 0%, 82.5%);
+$color-border:                   hsl(0, 0%, 80%);
+$color-border-dark:              hsl(0, 0%, 75%);
+$color-border-extra-dark:        hsl(0, 0%, 70%);

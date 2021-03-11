@@ -16,6 +16,7 @@
     --font-form-vf:       #{meta.inspect(setup.$font-stack-form-vf)};
     --font-monospaced:    #{meta.inspect(setup.$font-stack-monospaced)};
     // text colours
+    --clr-text-white-enforced:    #{setup.$color-text-white-out};
     --clr-text:                   #{setup.$color-text};
     --clr-text-promoted:          #{setup.$color-text-promoted};
     --clr-text-promoted-a50:      #{setup.$color-text-promoted-a50};
@@ -23,7 +24,6 @@
     --clr-text-btn:               #{setup.$color-button-text};
     --clr-text-form:              #{setup.$color-text-form};
     --clr-text-placeholder:       #{setup.$color-text-form-placeholder};
-    --clr-text-white-enforced:    #{setup.$color-text-white-out};
     // interaction colours
     --clr-a:                      #{setup.$color-link};
     --clr-a-interact:             #{setup.$color-link-interact};
