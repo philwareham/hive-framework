@@ -33,20 +33,17 @@
  * User-defined leading (inspired by Twitter Bootstrap).
  */
 
-.lh-1 {
-    line-height: 1;
-}
+$line-heights: (
+    1: 1
+    "sm": 1.375,
+    "lg": 1.75,
+    2: 2
+);
 
-.lh-sm {
-    line-height: 1.375;
-}
-
-.lh-lg {
-    line-height: 1.75;
-}
-
-.lh-2 {
-    line-height: 2;
+@each $name, $value in $line-heights {
+    .lh-#{$name} {
+        line-height: $value;
+    }
 }
 
 /**
