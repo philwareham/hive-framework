@@ -135,430 +135,125 @@ ul {
  * Inline-level element vertical alignment.
  */
 
-.align-baseline {
-    vertical-align: baseline;
-}
+$align-types: baseline, top, middle, bottom, text-top, text-bottom;
 
-.align-top {
-    vertical-align: top;
-}
-
-.align-middle {
-    vertical-align: middle;
-}
-
-.align-bottom {
-    vertical-align: bottom;
-}
-
-.align-text-top {
-    vertical-align: text-top;
-}
-
-.align-text-bottom {
-    vertical-align: text-bottom;
+@each $align-type in $align-types {
+    .align-#{$align-type} {
+        vertical-align: $align-type;
+    }
 }
 
 /**
  * User-defined margins (inspired by Twitter Bootstrap).
- *
- * TODO: use `margin-inline` and `margin-block` shorthand where appropriate
- * when browser support is more widespread.
  */
 
-.m-0 {
-    margin: 0;
+$m-measures: (
+    0: 0,
+    1: 1rem,
+    2: 2rem,
+    3: 3rem,
+    4: 4rem,
+    5: 5rem,
+    auto: auto
+);
+
+@each $name, $value in $m-measures {
+    .m-#{$name} {
+        margin: $value;
+    }
 }
 
-.m-1 {
-    margin: 1rem;
+@each $name, $value in $m-measures { // TODO: use `margin-inline` shorthand when browser support is more widespread.
+    .mx-#{$name} {
+        margin-inline-start: $value;
+        margin-inline-end: $value;
+    }
 }
 
-.m-2 {
-    margin: 2rem;
+@each $name, $value in $m-measures { // TODO: use `margin-block` shorthand when browser support is more widespread.
+    .my-#{$name} {
+        margin-block-start: $value;
+        margin-block-end: $value;
+    }
 }
 
-.m-3 {
-    margin: 3rem;
+@each $name, $value in $m-measures {
+    .mt-#{$name} {
+        margin-block-start: $value;
+    }
 }
 
-.m-4 {
-    margin: 4rem;
+@each $name, $value in $m-measures {
+    .mb-#{$name} {
+        margin-block-end: $value;
+    }
 }
 
-.m-5 {
-    margin: 5rem;
+@each $name, $value in $m-measures {
+    .ms-#{$name} {
+        margin-inline-start: $value;
+    }
 }
 
-.m-auto {
-    margin: auto;
-}
-
-.mx-0 {
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-}
-
-.mx-1 {
-    margin-inline-start: 1rem;
-    margin-inline-end: 1rem;
-}
-
-.mx-2 {
-    margin-inline-start: 2rem;
-    margin-inline-end: 2rem;
-}
-
-.mx-3 {
-    margin-inline-start: 3rem;
-    margin-inline-end: 3rem;
-}
-
-.mx-4 {
-    margin-inline-start: 4rem;
-    margin-inline-end: 4rem;
-}
-
-.mx-5 {
-    margin-inline-start: 5rem;
-    margin-inline-end: 5rem;
-}
-
-.mx-auto {
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-}
-
-.my-0 {
-    margin-block-start: 0;
-    margin-block-end: 0;
-}
-
-.my-1 {
-    margin-block-start: 1rem;
-    margin-block-end: 1rem;
-}
-
-.my-2 {
-    margin-block-start: 2rem;
-    margin-block-end: 2rem;
-}
-
-.my-3 {
-    margin-block-start: 3rem;
-    margin-block-end: 3rem;
-}
-
-.my-4 {
-    margin-block-start: 4rem;
-    margin-block-end: 4rem;
-}
-
-.my-5 {
-    margin-block-start: 5rem;
-    margin-block-end: 5rem;
-}
-
-.my-auto {
-    margin-block-start: auto;
-    margin-block-end: auto;
-}
-
-.mt-0 {
-    margin-block-start: 0;
-}
-
-.mt-1 {
-    margin-block-start: 1rem;
-}
-
-.mt-2 {
-    margin-block-start: 2rem;
-}
-
-.mt-3 {
-    margin-block-start: 3rem;
-}
-
-.mt-4 {
-    margin-block-start: 4rem;
-}
-
-.mt-5 {
-    margin-block-start: 5rem;
-}
-
-.mt-auto {
-    margin-block-start: auto;
-}
-
-.mb-0 {
-    margin-block-end: 0;
-}
-
-.mb-1 {
-    margin-block-end: 1rem;
-}
-
-.mb-2 {
-    margin-block-end: 2rem;
-}
-
-.mb-3 {
-    margin-block-end: 3rem;
-}
-
-.mb-4 {
-    margin-block-end: 4rem;
-}
-
-.mb-5 {
-    margin-block-end: 5rem;
-}
-
-.mb-auto {
-    margin-block-end: auto;
-}
-
-.ms-0 {
-    margin-inline-start: 0;
-}
-
-.ms-1 {
-    margin-inline-start: 1rem;
-}
-
-.ms-2 {
-    margin-inline-start: 2rem;
-}
-
-.ms-3 {
-    margin-inline-start: 3rem;
-}
-
-.ms-4 {
-    margin-inline-start: 4rem;
-}
-
-.ms-5 {
-    margin-inline-start: 5rem;
-}
-
-.ms-auto {
-    margin-inline-start: auto;
-}
-
-.me-0 {
-    margin-inline-end: 0;
-}
-
-.me-1 {
-    margin-inline-end: 1rem;
-}
-
-.me-2 {
-    margin-inline-end: 2rem;
-}
-
-.me-3 {
-    margin-inline-end: 3rem;
-}
-
-.me-4 {
-    margin-inline-end: 4rem;
-}
-
-.me-5 {
-    margin-inline-end: 5rem;
-}
-
-.me-auto {
-    margin-inline-end: auto;
+@each $name, $value in $m-measures {
+    .me-#{$name} {
+        margin-inline-end: $value;
+    }
 }
 
 /**
  * User-defined paddings (inspired by Twitter Bootstrap).
- *
- * TODO: use `padding-inline` and `padding-block` shorthand where appropriate
- * when browser support is more widespread.
  */
 
-.p-0 {
-    padding: 0;
+$p-measures: (
+    0: 0,
+    1: 1rem,
+    2: 2rem,
+    3: 3rem,
+    4: 4rem,
+    5: 5rem
+);
+
+@each $name, $value in $p-measures {
+    .p-#{$name} {
+        padding: $value;
+    }
 }
 
-.p-1 {
-    padding: 1rem;
+@each $name, $value in $p-measures { // TODO: use `padding-inline` shorthand when browser support is more widespread.
+    .px-#{$name} {
+        padding-inline-start: $value;
+        padding-inline-end: $value;
+    }
 }
 
-.p-2 {
-    padding: 2rem;
+@each $name, $value in $p-measures { // TODO: use `padding-block` shorthand when browser support is more widespread.
+    .py-#{$name} {
+        padding-block-start: $value;
+        padding-block-end: $value;
+    }
 }
 
-.p-3 {
-    padding: 3rem;
+@each $name, $value in $p-measures {
+    .pt-#{$name} {
+        padding-block-start: $value;
+    }
 }
 
-.p-4 {
-    padding: 4rem;
+@each $name, $value in $p-measures {
+    .pb-#{$name} {
+        padding-block-end: $value;
+    }
 }
 
-.p-5 {
-    padding: 5rem;
+@each $name, $value in $p-measures {
+    .ps-#{$name} {
+        padding-inline-start: $value;
+    }
 }
 
-.px-0 {
-    padding-inline-start: 0;
-    padding-inline-end: 0;
-}
-
-.px-1 {
-    padding-inline-start: 1rem;
-    padding-inline-end: 1rem;
-}
-
-.px-2 {
-    padding-inline-start: 2rem;
-    padding-inline-end: 2rem;
-}
-
-.px-3 {
-    padding-inline-start: 3rem;
-    padding-inline-end: 3rem;
-}
-
-.px-4 {
-    padding-inline-start: 4rem;
-    padding-inline-end: 4rem;
-}
-
-.px-5 {
-    padding-inline-start: 5rem;
-    padding-inline-end: 5rem;
-}
-
-.py-0 {
-    padding-block-start: 0;
-    padding-block-end: 0;
-}
-
-.py-1 {
-    padding-block-start: 1rem;
-    padding-block-end: 1rem;
-}
-
-.py-2 {
-    padding-block-start: 2rem;
-    padding-block-end: 2rem;
-}
-
-.py-3 {
-    padding-block-start: 3rem;
-    padding-block-end: 3rem;
-}
-
-.py-4 {
-    padding-block-start: 4rem;
-    padding-block-end: 4rem;
-}
-
-.py-5 {
-    padding-block-start: 5rem;
-    padding-block-end: 5rem;
-}
-
-.pt-0 {
-    padding-block-start: 0;
-}
-
-.pt-1 {
-    padding-block-start: 1rem;
-}
-
-.pt-2 {
-    padding-block-start: 2rem;
-}
-
-.pt-3 {
-    padding-block-start: 3rem;
-}
-
-.pt-4 {
-    padding-block-start: 4rem;
-}
-
-.pt-5 {
-    padding-block-start: 5rem;
-}
-
-.pb-0 {
-    padding-block-end: 0;
-}
-
-.pb-1 {
-    padding-block-end: 1rem;
-}
-
-.pb-2 {
-    padding-block-end: 2rem;
-}
-
-.pb-3 {
-    padding-block-end: 3rem;
-}
-
-.pb-4 {
-    padding-block-end: 4rem;
-}
-
-.pb-5 {
-    padding-block-end: 5rem;
-}
-
-.ps-0 {
-    padding-inline-start: 0;
-}
-
-.ps-1 {
-    padding-inline-start: 1rem;
-}
-
-.ps-2 {
-    padding-inline-start: 2rem;
-}
-
-.ps-3 {
-    padding-inline-start: 3rem;
-}
-
-.ps-4 {
-    padding-inline-start: 4rem;
-}
-
-.ps-5 {
-    padding-inline-start: 5rem;
-}
-
-.pe-0 {
-    padding-inline-end: 0;
-}
-
-.pe-1 {
-    padding-inline-end: 1rem;
-}
-
-.pe-2 {
-    padding-inline-end: 2rem;
-}
-
-.pe-3 {
-    padding-inline-end: 3rem;
-}
-
-.pe-4 {
-    padding-inline-end: 4rem;
-}
-
-.pe-5 {
-    padding-inline-end: 5rem;
+@each $name, $value in $p-measures {
+    .pe-#{$name} {
+        padding-inline-end: $value;
+    }
 }
