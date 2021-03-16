@@ -102,7 +102,7 @@ rules:
   block-opening-brace-space-before: always
 
   # Specify modern or legacy notation for applicable color-functions.
-  color-function-notation: legacy
+  color-function-notation: modern
 
   # Specify lowercase or uppercase for hexadecimal color values.
   color-hex-case: lower

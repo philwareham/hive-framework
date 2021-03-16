@@ -1,0 +1,95 @@
+@use "../setup";
+
+/* Colour helpers
+   ========================================================================== */
+
+.l-0 {
+    --lightness: 0%;
+}
+
+.l-10 {
+    --lightness: 10%;
+}
+
+.l-20 {
+    --lightness: 20%;
+}
+
+.l-30 {
+    --lightness: 30%;
+}
+
+.l-40 {
+    --lightness: 40%;
+}
+
+.l-50 {
+    --lightness: 50%;
+}
+
+.l-60 {
+    --lightness: 60%;
+}
+
+.l-70 {
+    --lightness: 70%;
+}
+
+.l-80 {
+    --lightness: 80%;
+}
+
+.l-90 {
+    --lightness: 90%;
+}
+
+.l-100 {
+    --lightness: 100%;
+}
+
+/* Opacity helpers
+   ========================================================================== */
+
+.a-0 {
+    opacity: 0;
+}
+
+.a-10 {
+    opacity: 0.1;
+}
+
+.a-20 {
+    opacity: 0.2;
+}
+
+.a-30 {
+    opacity: 0.3;
+}
+
+.a-40 {
+    opacity: 0.4;
+}
+
+.a-50 {
+    opacity: 0.5;
+}
+
+.a-60 {
+    opacity: 0.6;
+}
+
+.a-70 {
+    opacity: 0.7;
+}
+
+.a-80 {
+    opacity: 0.8;
+}
+
+.a-90 {
+    opacity: 0.9;
+}
+
+.a-100 {
+    opacity: 1;
+}

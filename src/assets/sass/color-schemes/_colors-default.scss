@@ -57,12 +57,12 @@ $dark-standard-shadow:                0 0 0.5em hsl(0 0% 0% / 0.8) !default;
 // Light Mode default colours
 
 // text colours
-$color-text:                     hsl(0 0% 20%) !default;
-$color-text-promoted:            hsl(0 0% 0%) !default;
-$color-text-promoted-a50:        hsl(0 0% 0% / 0.5) !default;
-$color-text-demoted:             hsl(0 0% 35%) !default;
-$color-text-form:                hsl(0 0% 0%) !default;
-$color-text-form-placeholder:    hsl(0 0% 60%) !default;
+$color-text:                     hsl(0 0% var(--lightness, 20%)) !default;
+$color-text-promoted:            hsl(0 0% var(--lightness, 0%)) !default;
+$color-text-promoted-a50:        hsl(0 0% var(--lightness, 0%) / 0.5) !default;
+$color-text-demoted:             hsl(0 0% var(--lightness, 35%)) !default;
+$color-text-form:                hsl(0 0% var(--lightness, 0%)) !default;
+$color-text-form-placeholder:    hsl(0 0% var(--lightness, 60%)) !default;
 // interaction colours
 $color-link:                     hsl(216 100% 37%) !default;
 $color-link-interact:            hsl(216 100% 50%) !default;

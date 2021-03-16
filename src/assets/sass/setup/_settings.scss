@@ -5,7 +5,7 @@ $modules-user-defined: false !default; // true/false
 $internationalization: true !default; // true/false
 
 // Which colour scheme?
-$color-scheme:         test !default;
+$color-scheme:         default !default; // options: default, TODO
 
 // Support for Dark Mode?
 $use-dark-mode:        true !default; // true/false

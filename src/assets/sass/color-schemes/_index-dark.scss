@@ -1,10 +1,14 @@
 @use "sass:meta";
 @use "../setup/settings";
 
-@if settings.$color-scheme == test {
-    @include meta.load-css("test");
-
-    @if settings.$use-dark-mode {
-        @include meta.load-css("test-dark");
+@if settings.$color-scheme == default {
+    @include meta.load-css("colors-default-dark");
+} @else {
+    @if settings.$color-scheme == test {
+        @include meta.load-css("colors-test-dark");
+    } @else if settings.$color-scheme == test2 {
+        @include meta.load-css("colors-test2-dark");
+    } @else { // Fallback to default if colour scheme name not recognised.
+        @include meta.load-css("colors-default-dark");
     }
 }
