@@ -179,7 +179,7 @@ a.ui-state-default:focus {
 
 @include setup.dark-mode {
     .ui-state-active.ui-state-hover {
-        --clr-a-interact-dark: hsl(210, 100%, 60%);
+        --clr-a-interact-dark: hsl(210 100% 60%);
 
         border-color: var(--clr-a-interact-dark);
     }
@@ -220,7 +220,7 @@ a.ui-state-default:focus {
 
 @include setup.dark-mode {
     .ui-state-highlight.ui-state-hover {
-        --clr-warning-text-dark: hsl(40, 100%, 40%);
+        --clr-warning-text-dark: hsl(40 100% 40%);
 
         border-color: var(--clr-warning-text-dark);
     }
@@ -242,7 +242,7 @@ a.ui-state-default:focus {
 
 @include setup.dark-mode {
     .ui-state-error.ui-state-hover {
-        --clr-error-text-dark: hsl(337, 100%, 40%);
+        --clr-error-text-dark: hsl(337 100% 40%);
 
         border-color: var(--clr-error-text-dark);
     }
@@ -305,7 +305,7 @@ a.ui-state-default:focus {
     left: 0;
     width: 100%;
     height: 100%;
-    background: hsla(0, 0%, 0%, 0.66);
+    background: hsl(0 0% 0% / 0.66);
 }
 
 

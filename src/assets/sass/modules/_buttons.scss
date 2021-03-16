@@ -61,7 +61,7 @@ span.button {
         box-shadow: setup.$button-box-shadow var(--clr-btn-shadow);
     }
 
-    color: var(--clr-text-btn);
+    color: var(--clr-btn-text);
     font-weight: 400;
     text-align: center;
     appearance: none; /* 2 */
@@ -70,7 +70,7 @@ span.button {
 
     &:hover {
         filter: brightness(1.05);
-        color: var(--clr-text-btn);
+        color: var(--clr-btn-text);
         text-decoration: none;
     }
 
@@ -81,7 +81,7 @@ span.button {
         }
 
         filter: brightness(0.95);
-        color: var(--clr-text-btn);
+        color: var(--clr-btn-text);
         text-decoration: none;
     }
 
@@ -104,7 +104,7 @@ span.button {
     [type="submit"],
     a.button,
     span.button {
-        color: var(--clr-text-btn);
+        color: var(--clr-btn-text);
     }
 }
 
@@ -186,9 +186,9 @@ span.button {
  */
 
 .button-success {
-    --clr-success-text-light: hsl(120, 60%, 38%);
-    --clr-success-text-dark: hsl(120, 60%, 30%);
-    --clr-success-text-extra-dark: hsl(120, 60%, 20%);
+    --clr-success-text-light: hsl(120 60% 38%);
+    --clr-success-text-dark: hsl(120 60% 30%);
+    --clr-success-text-extra-dark: hsl(120 60% 20%);
 
     @include setup.gradient-linear(var(--clr-success-text-light), var(--clr-success-text));
 
@@ -219,9 +219,9 @@ span.button {
 
 @include setup.dark-mode {
     .button-success {
-        --clr-success-text-light: hsl(100, 60%, 53%);
-        --clr-success-text-dark: hsl(100, 60%, 45%);
-        --clr-success-text-extra-dark: hsl(100, 60%, 33%);
+        --clr-success-text-light: hsl(100 60% 53%);
+        --clr-success-text-dark: hsl(100 60% 45%);
+        --clr-success-text-extra-dark: hsl(100 60% 33%);
 
         color: var(--clr-text-white-enforced);
     }
@@ -236,9 +236,9 @@ span.button {
  */
 
 .button-danger {
-    --clr-error-text-light: hsl(4, 69%, 40%);
-    --clr-error-text-dark: hsl(4, 69%, 32%);
-    --clr-error-text-extra-dark: hsl(4, 69%, 25%);
+    --clr-error-text-light: hsl(4 69% 40%);
+    --clr-error-text-dark: hsl(4 69% 32%);
+    --clr-error-text-extra-dark: hsl(4 69% 25%);
 
     @include setup.gradient-linear(var(--clr-error-text-light), var(--clr-error-text));
 
@@ -269,9 +269,9 @@ span.button {
 
 @include setup.dark-mode {
     .button-danger {
-        --clr-error-text-light: hsl(337, 100%, 63%);
-        --clr-error-text-dark: hsl(337, 100%, 54%);
-        --clr-error-text-extra-dark: hsl(337, 100%, 33%);
+        --clr-error-text-light: hsl(337 100% 63%);
+        --clr-error-text-dark: hsl(337 100% 54%);
+        --clr-error-text-extra-dark: hsl(337 100% 33%);
 
         color: var(--clr-text-white-enforced);
     }

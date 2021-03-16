@@ -345,12 +345,12 @@
         right: 0;
         justify-content: space-between;
         width: 100%;
-        box-shadow: 0 2px 2px hsla(0, 0%, 0%, 0.2);
+        box-shadow: 0 2px 2px hsl(0 0% 0% / 0.2);
     }
 
     @include setup.dark-mode {
         .dynamic-header {
-            box-shadow: 0 1px 1px hsla(0, 0%, 0%, 0.8);
+            box-shadow: 0 1px 1px hsl(0 0% 0% / 0.8);
         }
     }
 

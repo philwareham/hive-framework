@@ -2,37 +2,35 @@
  * COLOURSCHEME: Test
  */
 
-// Light Mode default colours
-
 // text colours
-$color-text:                     hsl(0, 0%, 20%);
-$color-text-promoted:            hsl(0, 0%, 0%);
-$color-text-promoted-a50:        hsla(0, 0%, 0%, 0.5);
-$color-text-form:                hsl(0, 0%, 0%);
-$color-text-form-placeholder:    hsl(0, 0%, 60%);
-$color-text-demoted:             hsl(0, 0%, 35%);
+--clr-text:               hsl(0 0% 20%);
+--clr-text-promoted:      hsl(0 0% 0%);
+--clr-text-promoted-a50:  hsl(0 0% 0% / 0.5);
+--clr-text-demoted:       hsl(0 0% 35%);
+--clr-text-form:          hsl(0 0% 0%);
+--clr-text-placeholder:   hsl(0 0% 60%);
 // interaction colours
-$color-link:                     hsl(216, 100%, 37%);
-$color-link-interact:            hsl(216, 100%, 50%);
-$color-link-interact-a50:        hsla(216, 100%, 50%, 0.5);
-$color-focus:                    hsl(216, 100%, 50%);
-$color-selecting:                hsl(216, 100%, 90%);
-$color-selected:                 hsl(216, 100%, 95%);
+--clr-a:                  hsl(216 100% 37%);
+--clr-a-interact:         hsl(216 100% 50%);
+--clr-a-interact-a50:     hsl(216 100% 50% / 0.5);
+--clr-focus:              hsl(216 100% 50%);
+--clr-selecting:          hsl(216 100% 90%);
+--clr-selected:           hsl(216 100% 95%);
 // neutral colours
-$color-background:               hsl(0, 0%, 100%);
-$color-background-box-subtle:    hsl(0, 0%, 96%);
-$color-background-box-strong:    hsl(0, 0%, 20%);
-$color-background-form:          hsl(0, 0%, 100%);
-$color-background-form-disabled: hsl(0, 0%, 89%);
-$color-gradient-from:            hsl(0, 0%, 93%);
-$color-gradient-to:              hsl(0, 0%, 87%);
+--clr-bkgd:               hsl(0 0% 100%);
+--clr-bkgd-box-subtle:    hsl(0 0% 96%);
+--clr-bkgd-box-strong:    hsl(0 0% 20%);
+--clr-bkgd-form:          hsl(0 0% 100%);
+--clr-bkgd-form-disabled: hsl(0 0% 89%);
+--clr-grad-from:          hsl(0 0% 93%);
+--clr-grad-to:            hsl(0 0% 87%);
 // accent colours
-$color-highlight:                hsl(48, 100%, 63%);
-$color-strong-highlight-box:     hsl(48, 100%, 76%);
-$color-highlight-box:            hsl(48, 100%, 94%);
+--clr-hilite:             hsl(48 100% 63%);
+--clr-strong-hilite-box:  hsl(48 100% 76%);
+--clr-hilite-box:         hsl(48 100% 94%);
 // border colours
-$color-border-extra-light:       hsl(0, 0%, 85%);
-$color-border-light:             hsl(0, 0%, 82.5%);
-$color-border:                   hsl(0, 0%, 80%);
-$color-border-dark:              hsl(0, 0%, 75%);
-$color-border-extra-dark:        hsl(0, 0%, 70%);
+--clr-brdr:               hsl(0 0% 85%);
+--clr-brdr-lite:          hsl(0 0% 82.5%);
+--clr-brdr-x-lite:        hsl(0 0% 80%);
+--clr-brdr-dark:          hsl(0 0% 75%);
+--clr-brdr-x-dark:        hsl(0 0% 70%);

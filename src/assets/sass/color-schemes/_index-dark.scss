@@ -1,0 +1,10 @@
+@use "sass:meta";
+@use "../setup/settings";
+
+@if settings.$color-scheme == test {
+    @include meta.load-css("test");
+
+    @if settings.$use-dark-mode {
+        @include meta.load-css("test-dark");
+    }
+}
