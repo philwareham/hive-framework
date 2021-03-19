@@ -19,7 +19,7 @@ $lightness-levels: (
 
 @each $name, $value in $lightness-levels {
     .lightness-#{$name} {
-        --lightness: $value;
+        --l: $value;
     }
 }
 
