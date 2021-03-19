@@ -1,13 +1,7 @@
-@forward "colors";
+@forward "colors-fixed";
+@forward "colors-themable";
 
-//@if settings.$color-scheme == default {
-//    @include meta.load-css("colors-default");
-//} @else {
-//    @if settings.$color-scheme == test {
-//        @include meta.load-css("colors-test");
-//    } @else if settings.$color-scheme == test2 {
-//        @include meta.load-css("colors-test2");
-//    } @else { // Fallback to default if colour scheme name not recognised.
-//        @include meta.load-css("colors-default");
-//    }
-//}
+$colors-light-fixed-custom: () !default;
+$colors-light-themable-custom: () !default;
+$colors-dark-fixed-custom: () !default;
+$colors-dark-themable-custom: () !default;
