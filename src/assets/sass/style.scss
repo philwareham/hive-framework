@@ -16,7 +16,7 @@
     --font-form-vf:       #{meta.inspect(setup.$font-stack-form-vf)};
     --font-monospaced:    #{meta.inspect(setup.$font-stack-monospaced)};
     // text colours
-    --clr-text-white-enforced:    #{setup.$color-text-white-out};
+    --clr-text-white-enforced: hsl(0 0% 100%);
 
     @if setup.$color-scheme {
         @include meta.load-css("color-schemes/index");
