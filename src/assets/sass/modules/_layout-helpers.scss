@@ -154,7 +154,7 @@ $m-measures: (
     3: 3rem,
     4: 4rem,
     5: 5rem,
-    "auto": auto
+    auto: auto
 );
 
 @each $name, $value in $m-measures {
