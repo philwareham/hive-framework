@@ -6,7 +6,7 @@ $internationalization: true !default; // true/false
 
 // Which colour scheme?
 // options: 'default', 'neutral-1' to 'neutral-8', 'bold-1' to 'bold-8', 'sleek-1' to 'sleek-8'
-$color-scheme:         default !default; // options: default, TODO
+$color-scheme:         default !default;
 
 // User-defined overrides for individual colours
 $colors-fixed-light-custom:    () !default;

@@ -326,6 +326,14 @@ hr.flourish {
     background-color: var(--clr-bkgd-box-strong);
 }
 
+.box--subtle-highlight {
+    background-color: var(--clr-hilite-box);
+}
+
+.box--strong-highlight {
+    background-color: var(--clr-strong-hilite-box);
+}
+
 .box--strong:not(body),
 .box--strong .site-footer {
     --clr-text-promoted: hsl(0 0% 100%);
