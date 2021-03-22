@@ -2,10 +2,10 @@
 @use "setup";
 @use "color-schemes" as *;
 
-$colors-fixed-light: map-merge($colors-fixed-light, $colors-fixed-light-custom);
-$colors-fixed-dark: map-merge($colors-fixed-dark, $colors-fixed-dark-custom);
-$colors-themable-light: map-merge($colors-themable-light, $colors-themable-light-custom);
-$colors-themable-dark: map-merge($colors-themable-dark, $colors-themable-dark-custom);
+$colors-fixed-light: map-merge($colors-fixed-light, setup.$colors-fixed-light-custom);
+$colors-fixed-dark: map-merge($colors-fixed-dark, setup.$colors-fixed-dark-custom);
+$colors-themable-light: map-merge($colors-themable-light, setup.$colors-themable-light-custom);
+$colors-themable-dark: map-merge($colors-themable-dark, setup.$colors-themable-dark-custom);
 
 /* CSS custom variables
    ========================================================================== */

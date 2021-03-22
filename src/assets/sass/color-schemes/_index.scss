@@ -1,9 +1,3 @@
 @forward "colors-fixed";
 @forward "colors-themable-light";
 @forward "colors-themable-dark";
-
-// User-defined overrides for individual colours
-$colors-fixed-light-custom: () !default;
-$colors-fixed-dark-custom: () !default;
-$colors-themable-light-custom: () !default;
-$colors-themable-dark-custom: () !default;

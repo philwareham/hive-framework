@@ -7,6 +7,12 @@ $internationalization: true !default; // true/false
 // Which colour scheme?
 $color-scheme:         default !default; // options: default, TODO
 
+// User-defined overrides for individual colours
+$colors-fixed-light-custom:    () !default;
+$colors-fixed-dark-custom:     () !default;
+$colors-themable-light-custom: () !default;
+$colors-themable-dark-custom:  () !default;
+
 // Support for Dark Mode?
 $use-dark-mode:        true !default; // true/false
 
