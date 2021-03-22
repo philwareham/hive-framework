@@ -84,7 +84,7 @@ $colors-dark-themable: map-merge($colors-dark-themable, $colors-dark-themable-cu
         @include meta.load-css("modules/misc");
         @include meta.load-css("modules/cards");
         @include meta.load-css("modules/alerts");
-        //@include meta.load-css("modules/color-helpers");
+        @include meta.load-css("modules/color-helpers");
         @include meta.load-css("modules/article");
         @include meta.load-css("modules/article-comments");
 

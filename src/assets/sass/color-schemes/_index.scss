@@ -1,9 +1,6 @@
 @forward "colors-fixed";
 @forward "colors-themable";
 
-// Which colour scheme?
-$color-scheme: default !default; // options: default, TODO
-
 // User-defined overrides for individual colours
 $colors-light-fixed-custom: () !default;
 $colors-light-themable-custom: () !default;
