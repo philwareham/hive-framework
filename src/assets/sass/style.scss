@@ -2,10 +2,10 @@
 @use "setup";
 @use "color-schemes" as *;
 
-$colors-light-fixed: map-merge($colors-light-fixed, $colors-light-fixed-custom);
-$colors-light-themable: map-merge($colors-light-themable, $colors-light-themable-custom);
-$colors-dark-fixed: map-merge($colors-dark-fixed, $colors-dark-fixed-custom);
-$colors-dark-themable: map-merge($colors-dark-themable, $colors-dark-themable-custom);
+$colors-fixed-light: map-merge($colors-fixed-light, $colors-fixed-light-custom);
+$colors-fixed-dark: map-merge($colors-fixed-dark, $colors-fixed-dark-custom);
+$colors-themable-light: map-merge($colors-themable-light, $colors-themable-light-custom);
+$colors-themable-dark: map-merge($colors-themable-dark, $colors-themable-dark-custom);
 
 /* CSS custom variables
    ========================================================================== */
@@ -26,11 +26,11 @@ $colors-dark-themable: map-merge($colors-dark-themable, $colors-dark-themable-cu
     // text colours
     --clr-text-white-enforced: hsl(0 0% 100%);
 
-    @each $name, $value in $colors-light-themable {
+    @each $name, $value in $colors-themable-light {
         --clr-#{$name}: #{$value};
     }
 
-    @each $name, $value in $colors-light-fixed {
+    @each $name, $value in $colors-fixed-light {
         --clr-#{$name}: #{$value};
     }
 }
@@ -39,11 +39,11 @@ $colors-dark-themable: map-merge($colors-dark-themable, $colors-dark-themable-cu
     // shadows
     --standard-shadow: 0 0 0.5em hsl(0 0% 0% / 0.8);
     // text colours
-    @each $name, $value in $colors-dark-themable {
+    @each $name, $value in $colors-themable-dark {
         --clr-#{$name}: #{$value};
     }
 
-    @each $name, $value in $colors-dark-fixed {
+    @each $name, $value in $colors-fixed-dark {
         --clr-#{$name}: #{$value};
     }
 }

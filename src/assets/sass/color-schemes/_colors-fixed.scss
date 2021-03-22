@@ -1,4 +1,4 @@
-$colors-light-fixed: (
+$colors-fixed-light: (
     btn-text:               hsl(0 0% 0%),
     btn-grad-from:          hsl(0 0% 93%),
     btn-grad-to:            hsl(0 0% 87%),
@@ -25,7 +25,7 @@ $colors-light-fixed: (
     info-brdr:              hsl(200 78% 82%)
 ) !default;
 
-$colors-dark-fixed: (
+$colors-fixed-dark: (
     success-text: hsl(100 60% 50%),
     success-bkgd: hsl(109 27% 20%),
     success-brdr: hsl(100 60% 50% / 0.33),
