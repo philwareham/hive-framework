@@ -1,7 +1,5 @@
 @use "sass:map";
-
-// Which colour scheme?
-$color-scheme: default !default; // options: default, TODO
+@use "../setup/settings";
 
 $colors-light-theme: (
     default: (
@@ -35,7 +33,7 @@ $colors-light-theme: (
     ),
 ) !default;
 
-$colors-light-themable: map.get($colors-light-theme, #{$color-scheme}) !default;
+$colors-light-themable: map.get($colors-light-theme, #{settings.$color-scheme}) !default;
 
 $colors-dark-theme: (
     default: (
@@ -69,4 +67,4 @@ $colors-dark-theme: (
     ),
 ) !default;
 
-$colors-dark-themable: map.get($colors-dark-theme, #{$color-scheme}) !default;
+$colors-dark-themable: map.get($colors-dark-theme, #{settings.$color-scheme}) !default;
