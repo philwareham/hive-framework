@@ -491,7 +491,7 @@ rules:
   selector-max-pseudo-class: 3
 
   # Limit the specificity of selectors.
-  selector-max-specificity: 1,2,1
+  selector-max-specificity: 1,3,1
 
   # Limit the number of type in a selector.
   selector-max-type: 3
