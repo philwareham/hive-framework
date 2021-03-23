@@ -85,7 +85,7 @@
     }
 }
 
-.box--strong #site-navigation {
+.dynamic-header.box--strong #site-navigation {
     li:hover {
         background: hsl(0 0% 100% / 0.04);
     }
@@ -160,7 +160,7 @@
     }
 }
 
-.box--strong #site-navigation-toggle {
+.dynamic-header.box--strong #site-navigation-toggle {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23b2bbc5' d='M4 6h24v4H4zm0 8h24v4H4zm0 8h24v4H4z'/%3E%3C/svg%3E");
 
     &:hover {
@@ -216,7 +216,7 @@
     }
 }
 
-.box--strong #lightswitch {
+.dynamic-header.box--strong #lightswitch {
     .ui-icon {
         filter: brightness(3) sepia(1) hue-rotate(168deg) saturate(33%);
     }
