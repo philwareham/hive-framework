@@ -72,11 +72,13 @@
     @if setup.$button-border {
         &:focus {
             border-color: var(--clr-focus);
-            outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+            outline: 0;
+            box-shadow: 0 0 0 1px var(--clr-focus-a50);
         }
     } @else {
         &:focus {
-            outline: 1px solid var(--clr-focus); // Allows for repainting in high contrast modes.
+            outline: 1px solid var(--clr-focus);
+            box-shadow: 0 0 0 2px var(--clr-focus-a50);
         }
     }
 }
