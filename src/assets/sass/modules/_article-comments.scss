@@ -52,6 +52,8 @@
     }
 }
 
+/* purgecss start ignore */
+
 /**
  * Comfortable space between preview and submit buttons.
  */
@@ -64,8 +66,6 @@
  * Styling for user comments preview.
  */
 
-/* purgecss ignore */
-
 #cpreview {
     margin-bottom: 0;
     padding: 0.5em 1em;
@@ -77,8 +77,6 @@
  * Highlight text colour for comment errors.
  */
 
-/* purgecss ignore */
-
 .error_message li {
     color: var(--clr-error-text);
 }
@@ -86,8 +84,6 @@
 /**
  * Highlighting for comment form errors.
  */
-
-/* purgecss start ignore */
 
 .comments_error {
     border-color: var(--clr-error-text);
