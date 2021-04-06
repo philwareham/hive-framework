@@ -199,6 +199,8 @@ var {
  * <img class="align-center">
  */
 
+/* purgecss start ignore */
+
 img {
     page-break-inside: avoid; /* 1 */
 
@@ -230,6 +232,8 @@ img {
         margin: 1em auto;
     }
 }
+
+/* purgecss end ignore */
 
 /**
  * Ensure margin below `figure`.

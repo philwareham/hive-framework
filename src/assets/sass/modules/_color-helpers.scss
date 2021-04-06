@@ -1,5 +1,7 @@
 @use "../setup";
 
+/* purgecss start ignore */
+
 /* Colour helpers
    ========================================================================== */
 
@@ -45,3 +47,5 @@ $opacities: (
         opacity: $value;
     }
 }
+
+/* purgecss end ignore */

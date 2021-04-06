@@ -1,5 +1,7 @@
 @use "../setup";
 
+/* purgecss start ignore */
+
 /* Layout helpers
    ========================================================================== */
 
@@ -257,3 +259,5 @@ $p-measures: (
         padding-inline-end: $value;
     }
 }
+
+/* purgecss end ignore */

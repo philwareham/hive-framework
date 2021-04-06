@@ -3,6 +3,8 @@
 /* Tables
    ========================================================================== */
 
+/* purgecss start ignore */
+
 /**
  * Allow overflow scroll on tables.
  *
@@ -203,3 +205,5 @@ $col-widths: (
         width: $value;
     }
 }
+
+/* purgecss end ignore */

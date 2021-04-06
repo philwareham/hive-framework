@@ -1,5 +1,7 @@
 @use "../setup";
 
+/* purgecss start ignore */
+
 /* Typography helpers
    ========================================================================== */
 
@@ -66,3 +68,5 @@ $line-heights: (
         text-overflow: inherit;
     }
 }
+
+/* purgecss end ignore */

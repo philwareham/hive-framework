@@ -258,6 +258,8 @@ textarea {
     resize: vertical; /* 2 */
 }
 
+/* purgecss start ignore */
+
 /**
  * Width display options for `input` fields.
  *
@@ -334,3 +336,5 @@ abbr.required {
     color: var(--clr-warning-text);
     text-decoration: none;
 }
+
+/* purgecss end ignore */
