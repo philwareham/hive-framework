@@ -32,7 +32,7 @@ rules:
   at-rule-name-case: lower
 
   # Require a newline after at-rule names.
-  #at-rule-name-newline-after: always-multi-line
+  at-rule-name-newline-after: always-multi-line
 
   # Require a single space after at-rule names.
   at-rule-name-space-after: always
@@ -114,7 +114,7 @@ rules:
   color-named: never
 
   # Disallow hex colors.
-  #color-no-hex: true
+  color-no-hex: true
 
   # Disallow invalid hexadecimal colors.
   color-no-invalid-hex: true
@@ -402,7 +402,11 @@ rules:
   property-case: lower
 
   # Disallow unknown properties.
-  property-no-unknown: true
+  property-no-unknown:
+    - true
+    -
+      ignoreProperties:
+        - contains-intrinsic-size
 
   # Disallow vendor prefixes for properties.
   property-no-vendor-prefix:

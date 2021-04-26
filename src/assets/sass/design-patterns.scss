@@ -162,8 +162,8 @@ $colors: (
 .design-patterns--breakpoint-2,
 .design-patterns--breakpoint-3 {
     padding: 0.5em;
-    background-color: #ff0000;
-    color: #ffffff;
+    background-color: hsl(0 100% 50%);
+    color: var(--clr-text-white-enforced);
 }
 
 .design-patterns--breakpoint-1,
