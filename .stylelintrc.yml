@@ -374,6 +374,12 @@ rules:
   # Disallow double-slash comments (`//`) which are not supported by CSS.
   no-invalid-double-slash-comments: true
 
+  # Disallow invalid position `@import` rules within a stylesheet.
+  no-invalid-position-at-import-rule: true
+
+  # Disallow irregular whitespaces.
+  no-irregular-whitespace: true
+
   # Disallow missing end-of-source newlines.
   no-missing-end-of-source-newline: true
 
@@ -453,6 +459,9 @@ rules:
 
   # Disallow non-space characters for descendant combinators of selectors.
   selector-descendant-combinator-no-non-space: true
+
+  # Specify a list of disallowed selectors.
+  #selector-disallowed-list:
 
   # Specify a pattern for ID selectors.
   #selector-id-pattern:
