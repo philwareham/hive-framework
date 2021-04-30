@@ -8,83 +8,83 @@
  */
 
 @if setup.$font-serif-vf {
-    @include setup.font-face-vf(hive-framework-serif-vf, normal, setup.$font-serif-vf-wght, setup.$font-serif-vf);
+    @include setup.font-face-vf(hive-framework-serif-vf, normal, setup.$font-serif-vf-wght, swap, setup.$font-serif-vf);
 }
 
 @if setup.$font-serif-vf-italic {
-    @include setup.font-face-vf(hive-framework-serif-vf, italic, setup.$font-serif-vf-wght, setup.$font-serif-vf-italic);
+    @include setup.font-face-vf(hive-framework-serif-vf, italic, setup.$font-serif-vf-wght, swap, setup.$font-serif-vf-italic);
 }
 
 @if setup.$font-serif-100 {
-    @include setup.font-face(hive-framework-serif, normal, 100, setup.$font-serif-100);
+    @include setup.font-face(hive-framework-serif, normal, 100, swap, setup.$font-serif-100);
 }
 
 @if setup.$font-serif-100-italic {
-    @include setup.font-face(hive-framework-serif, italic, 100, setup.$font-serif-100-italic);
+    @include setup.font-face(hive-framework-serif, italic, 100, swap, setup.$font-serif-100-italic);
 }
 
 @if setup.$font-serif-200 {
-    @include setup.font-face(hive-framework-serif, normal, 200, setup.$font-serif-200);
+    @include setup.font-face(hive-framework-serif, normal, 200, swap, setup.$font-serif-200);
 }
 
 @if setup.$font-serif-200-italic {
-    @include setup.font-face(hive-framework-serif, italic, 200, setup.$font-serif-200-italic);
+    @include setup.font-face(hive-framework-serif, italic, 200, swap, setup.$font-serif-200-italic);
 }
 
 @if setup.$font-serif-300 {
-    @include setup.font-face(hive-framework-serif, normal, 300, setup.$font-serif-300);
+    @include setup.font-face(hive-framework-serif, normal, 300, swap, setup.$font-serif-300);
 }
 
 @if setup.$font-serif-300-italic {
-    @include setup.font-face(hive-framework-serif, italic, 300, setup.$font-serif-300-italic);
+    @include setup.font-face(hive-framework-serif, italic, 300, swap, setup.$font-serif-300-italic);
 }
 
 @if setup.$font-serif-400 {
-    @include setup.font-face(hive-framework-serif, normal, 400, setup.$font-serif-400);
+    @include setup.font-face(hive-framework-serif, normal, 400, swap, setup.$font-serif-400);
 }
 
 @if setup.$font-serif-400-italic {
-    @include setup.font-face(hive-framework-serif, italic, 400, setup.$font-serif-400-italic);
+    @include setup.font-face(hive-framework-serif, italic, 400, swap, setup.$font-serif-400-italic);
 }
 
 @if setup.$font-serif-500 {
-    @include setup.font-face(hive-framework-serif, normal, 500, setup.$font-serif-500);
+    @include setup.font-face(hive-framework-serif, normal, 500, swap, setup.$font-serif-500);
 }
 
 @if setup.$font-serif-500-italic {
-    @include setup.font-face(hive-framework-serif, italic, 500, setup.$font-serif-500-italic);
+    @include setup.font-face(hive-framework-serif, italic, 500, swap, setup.$font-serif-500-italic);
 }
 
 @if setup.$font-serif-600 {
-    @include setup.font-face(hive-framework-serif, normal, 600, setup.$font-serif-600);
+    @include setup.font-face(hive-framework-serif, normal, 600, swap, setup.$font-serif-600);
 }
 
 @if setup.$font-serif-600-italic {
-    @include setup.font-face(hive-framework-serif, italic, 600, setup.$font-serif-600-italic);
+    @include setup.font-face(hive-framework-serif, italic, 600, swap, setup.$font-serif-600-italic);
 }
 
 @if setup.$font-serif-700 {
-    @include setup.font-face(hive-framework-serif, normal, 700, setup.$font-serif-700);
+    @include setup.font-face(hive-framework-serif, normal, 700, swap, setup.$font-serif-700);
 }
 
 @if setup.$font-serif-700-italic {
-    @include setup.font-face(hive-framework-serif, italic, 700, setup.$font-serif-700-italic);
+    @include setup.font-face(hive-framework-serif, italic, 700, swap, setup.$font-serif-700-italic);
 }
 
 @if setup.$font-serif-800 {
-    @include setup.font-face(hive-framework-serif, normal, 800, setup.$font-serif-800);
+    @include setup.font-face(hive-framework-serif, normal, 800, swap, setup.$font-serif-800);
 }
 
 @if setup.$font-serif-800-italic {
-    @include setup.font-face(hive-framework-serif, italic, 800, setup.$font-serif-800-italic);
+    @include setup.font-face(hive-framework-serif, italic, 800, swap, setup.$font-serif-800-italic);
 }
 
 @if setup.$font-serif-900 {
-    @include setup.font-face(hive-framework-serif, normal, 900, setup.$font-serif-500);
+    @include setup.font-face(hive-framework-serif, normal, 900, swap, setup.$font-serif-500);
 }
 
 @if setup.$font-serif-900-italic {
-    @include setup.font-face(hive-framework-serif, italic, 900, setup.$font-serif-500-italic);
+    @include setup.font-face(hive-framework-serif, italic, 900, swap, setup.$font-serif-500-italic);
 }
 
 /**
@@ -92,83 +92,83 @@
  */
 
 @if setup.$font-sans-serif-vf {
-    @include setup.font-face-vf(hive-framework-sans-serif-vf, normal, setup.$font-sans-serif-vf-wght, setup.$font-sans-serif-vf);
+    @include setup.font-face-vf(hive-framework-sans-serif-vf, normal, setup.$font-sans-serif-vf-wght, swap, setup.$font-sans-serif-vf);
 }
 
 @if setup.$font-sans-serif-vf-italic {
-    @include setup.font-face-vf(hive-framework-sans-serif-vf, italic, setup.$font-sans-serif-vf-wght, setup.$font-sans-serif-vf-italic);
+    @include setup.font-face-vf(hive-framework-sans-serif-vf, italic, setup.$font-sans-serif-vf-wght, swap, setup.$font-sans-serif-vf-italic);
 }
 
 @if setup.$font-sans-serif-100 {
-    @include setup.font-face(hive-framework-sans-serif, normal, 100, setup.$font-sans-serif-100);
+    @include setup.font-face(hive-framework-sans-serif, normal, 100, swap, setup.$font-sans-serif-100);
 }
 
 @if setup.$font-sans-serif-100-italic {
-    @include setup.font-face(hive-framework-sans-serif, italic, 100, setup.$font-sans-serif-100-italic);
+    @include setup.font-face(hive-framework-sans-serif, italic, 100, swap, setup.$font-sans-serif-100-italic);
 }
 
 @if setup.$font-sans-serif-200 {
-    @include setup.font-face(hive-framework-sans-serif, normal, 200, setup.$font-sans-serif-200);
+    @include setup.font-face(hive-framework-sans-serif, normal, 200, swap, setup.$font-sans-serif-200);
 }
 
 @if setup.$font-sans-serif-200-italic {
-    @include setup.font-face(hive-framework-sans-serif, italic, 200, setup.$font-sans-serif-200-italic);
+    @include setup.font-face(hive-framework-sans-serif, italic, 200, swap, setup.$font-sans-serif-200-italic);
 }
 
 @if setup.$font-sans-serif-300 {
-    @include setup.font-face(hive-framework-sans-serif, normal, 300, setup.$font-sans-serif-300);
+    @include setup.font-face(hive-framework-sans-serif, normal, 300, swap, setup.$font-sans-serif-300);
 }
 
 @if setup.$font-sans-serif-300-italic {
-    @include setup.font-face(hive-framework-sans-serif, italic, 300, setup.$font-sans-serif-300-italic);
+    @include setup.font-face(hive-framework-sans-serif, italic, 300, swap, setup.$font-sans-serif-300-italic);
 }
 
 @if setup.$font-sans-serif-400 {
-    @include setup.font-face(hive-framework-sans-serif, normal, 400, setup.$font-sans-serif-400);
+    @include setup.font-face(hive-framework-sans-serif, normal, 400, swap, setup.$font-sans-serif-400);
 }
 
 @if setup.$font-sans-serif-400-italic {
-    @include setup.font-face(hive-framework-sans-serif, italic, 400, setup.$font-sans-serif-400-italic);
+    @include setup.font-face(hive-framework-sans-serif, italic, 400, swap, setup.$font-sans-serif-400-italic);
 }
 
 @if setup.$font-sans-serif-500 {
-    @include setup.font-face(hive-framework-sans-serif, normal, 500, setup.$font-sans-serif-500);
+    @include setup.font-face(hive-framework-sans-serif, normal, 500, swap, setup.$font-sans-serif-500);
 }
 
 @if setup.$font-sans-serif-500-italic {
-    @include setup.font-face(hive-framework-sans-serif, italic, 500, setup.$font-sans-serif-500-italic);
+    @include setup.font-face(hive-framework-sans-serif, italic, 500, swap, setup.$font-sans-serif-500-italic);
 }
 
 @if setup.$font-sans-serif-600 {
-    @include setup.font-face(hive-framework-sans-serif, normal, 600, setup.$font-sans-serif-600);
+    @include setup.font-face(hive-framework-sans-serif, normal, 600, swap, setup.$font-sans-serif-600);
 }
 
 @if setup.$font-sans-serif-600-italic {
-    @include setup.font-face(hive-framework-sans-serif, italic, 600, setup.$font-sans-serif-600-italic);
+    @include setup.font-face(hive-framework-sans-serif, italic, 600, swap, setup.$font-sans-serif-600-italic);
 }
 
 @if setup.$font-sans-serif-700 {
-    @include setup.font-face(hive-framework-sans-serif, normal, 700, setup.$font-sans-serif-700);
+    @include setup.font-face(hive-framework-sans-serif, normal, 700, swap, setup.$font-sans-serif-700);
 }
 
 @if setup.$font-sans-serif-700-italic {
-    @include setup.font-face(hive-framework-sans-serif, italic, 700, setup.$font-sans-serif-700-italic);
+    @include setup.font-face(hive-framework-sans-serif, italic, 700, swap, setup.$font-sans-serif-700-italic);
 }
 
 @if setup.$font-sans-serif-800 {
-    @include setup.font-face(hive-framework-sans-serif, normal, 800, setup.$font-sans-serif-800);
+    @include setup.font-face(hive-framework-sans-serif, normal, 800, swap, setup.$font-sans-serif-800);
 }
 
 @if setup.$font-sans-serif-800-italic {
-    @include setup.font-face(hive-framework-sans-serif, italic, 800, setup.$font-sans-serif-800-italic);
+    @include setup.font-face(hive-framework-sans-serif, italic, 800, swap, setup.$font-sans-serif-800-italic);
 }
 
 @if setup.$font-sans-serif-900 {
-    @include setup.font-face(hive-framework-sans-serif, normal, 900, setup.$font-sans-serif-900);
+    @include setup.font-face(hive-framework-sans-serif, normal, 900, swap, setup.$font-sans-serif-900);
 }
 
 @if setup.$font-sans-serif-900-italic {
-    @include setup.font-face(hive-framework-sans-serif, italic, 900, setup.$font-sans-serif-900-italic);
+    @include setup.font-face(hive-framework-sans-serif, italic, 900, swap, setup.$font-sans-serif-900-italic);
 }
 
 /**
@@ -176,5 +176,5 @@
  */
 
 @if setup.$font-monospaced {
-    @include setup.font-face(hive-framework-monospaced, normal, 400, setup.$font-monospaced);
+    @include setup.font-face(hive-framework-monospaced, normal, 400, swap, setup.$font-monospaced);
 }
