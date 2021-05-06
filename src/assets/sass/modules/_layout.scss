@@ -150,6 +150,14 @@ noscript {
     background-size: setup.$site-logo-width setup.$site-logo-height;
 }
 
+@if setup.$site-logo-file-dark {
+    @include setup.dark-mode {
+        .site-logo {
+            background-image: url("#{setup.$site-logo-file-dark}");
+        }
+    }
+}
+
 /**
  * Search form within site header.
  */
