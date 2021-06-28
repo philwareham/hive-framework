@@ -50,10 +50,6 @@ $colors-themable-dark: map.merge($colors-themable-dark, setup.$colors-themable-d
 }
 
 @if not setup.$modules-user-defined {
-    /* ==========================================================================
-       Styling and layout for screen media (mobile first)
-       ========================================================================== */
-
     @include meta.load-css("modules/fonts");
     @include meta.load-css("modules/layout");
     @include meta.load-css("modules/layout-helpers");
@@ -119,9 +115,6 @@ $colors-themable-dark: map.merge($colors-themable-dark, setup.$colors-themable-d
         @include meta.load-css("modules/jquery-ui/icons");
     }
 
-    /* ==========================================================================
-       Responsive layout for screen media
-       ========================================================================== */
-
+    // Responsive layout
     @include meta.load-css("modules/responsive");
 }
