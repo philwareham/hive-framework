@@ -1,3 +1,4 @@
+@use "sass:math";
 @use "../setup";
 
 /* Cards/article tiles
@@ -42,7 +43,7 @@
         top: 0;
         left: -1px;
         transform: translateY(-50%);
-        border-radius: (setup.$border-radius / 2) (setup.$border-radius / 2) (setup.$border-radius / 2) 0;
+        border-radius: (math.div(setup.$border-radius, 2)) (math.div(setup.$border-radius, 2)) (math.div(setup.$border-radius, 2)) 0;
     }
 }
 
@@ -50,26 +51,26 @@
     [dir="rtl"] .card:not(.align-left):not(.align-center) .alert-pill {
         right: -1px;
         left: auto;
-        border-radius: (setup.$border-radius / 2) 0 (setup.$border-radius / 2) (setup.$border-radius / 2);
+        border-radius: (math.div(setup.$border-radius, 2)) 0 (math.div(setup.$border-radius, 2)) (math.div(setup.$border-radius, 2));
     }
 
     .card.align-left .alert-pill {
         right: auto;
         left: -1px;
-        border-radius: (setup.$border-radius / 2) (setup.$border-radius / 2) (setup.$border-radius / 2) 0;
+        border-radius: (math.div(setup.$border-radius, 2)) (math.div(setup.$border-radius, 2)) (math.div(setup.$border-radius, 2)) 0;
     }
 }
 
 .card.align-right .alert-pill {
     right: -1px;
     left: auto;
-    border-radius: (setup.$border-radius / 2) (setup.$border-radius / 2) 0;
+    border-radius: (math.div(setup.$border-radius, 2)) (math.div(setup.$border-radius, 2)) 0;
 }
 
 .card.align-center .alert-pill {
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: (setup.$border-radius / 2);
+    border-radius: math.div(setup.$border-radius, 2);
 }
 
 .card-body {

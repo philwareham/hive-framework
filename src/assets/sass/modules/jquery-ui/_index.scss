@@ -1,0 +1,22 @@
+// jQuery UI core
+@use "jquery-ui_core";
+// jQuery UI interactions
+@use "jquery-ui_draggable";
+@use "jquery-ui_resizable";
+@use "jquery-ui_selectable";
+@use "jquery-ui_sortable";
+// jQuery UI widgets
+@use "jquery-ui_accordion";
+@use "jquery-ui_autocomplete";
+@use "jquery-ui_button";
+@use "jquery-ui_checkboxradio";
+@use "jquery-ui_controlgroup";
+@use "jquery-ui_datepicker";
+@use "jquery-ui_dialog";
+@use "jquery-ui_menu";
+@use "jquery-ui_progressbar";
+@use "jquery-ui_selectmenu";
+@use "jquery-ui_slider";
+@use "jquery-ui_spinner";
+@use "jquery-ui_tabs";
+@use "jquery-ui_tooltip";
