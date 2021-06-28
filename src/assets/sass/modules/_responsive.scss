@@ -4,7 +4,7 @@
    Styling and layout for screen media at 1st breakpoint
    ========================================================================== */
 
-@media screen and (min-width: setup.$breakpoint-1) {
+@media (min-width: setup.$breakpoint-1) {
 
     /**
      * Screen size-specific elements.
@@ -278,7 +278,7 @@
    Styling and layout for screen media at 2nd breakpoint
    ========================================================================== */
 
-@media screen and (min-width: setup.$breakpoint-2) {
+@media (min-width: setup.$breakpoint-2) {
 
     /**
      * Cells for 2 column and 3 column layouts are generated.
@@ -466,7 +466,7 @@
    Styling and layout for screen media at 3rd (final) breakpoint
    ========================================================================== */
 
-@media screen and (min-width: setup.$breakpoint-3) {
+@media (min-width: setup.$breakpoint-3) {
 
     /**
      * Cells for 4 column layouts are generated.

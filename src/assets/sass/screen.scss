@@ -1,0 +1,127 @@
+@use "sass:map";
+@use "sass:meta";
+@use "setup";
+@use "color-schemes" as *;
+
+$colors-fixed-light: map.merge($colors-fixed-light, setup.$colors-fixed-light-custom);
+$colors-fixed-dark: map.merge($colors-fixed-dark, setup.$colors-fixed-dark-custom);
+$colors-themable-light: map.merge($colors-themable-light, setup.$colors-themable-light-custom);
+$colors-themable-dark: map.merge($colors-themable-dark, setup.$colors-themable-dark-custom);
+
+/* CSS custom variables
+   ========================================================================== */
+
+/* stylelint-disable declaration-colon-space-after */
+
+:root {
+    // font families
+    --font-serif:         #{meta.inspect(setup.$font-stack-serif)};
+    --font-serif-vf:      #{meta.inspect(setup.$font-stack-serif-vf)};
+    --font-sans-serif:    #{meta.inspect(setup.$font-stack-sans-serif)};
+    --font-sans-serif-vf: #{meta.inspect(setup.$font-stack-sans-serif-vf)};
+    --font-form:          #{meta.inspect(setup.$font-stack-form)};
+    --font-form-vf:       #{meta.inspect(setup.$font-stack-form-vf)};
+    --font-monospaced:    #{meta.inspect(setup.$font-stack-monospaced)};
+    // shadows
+    --standard-shadow: 0 0 0.5em hsl(0 0% 0% / 0.2);
+    // text colours
+    --clr-text-white-enforced: hsl(0 0% 100%);
+
+    @each $name, $value in $colors-themable-light {
+        --clr-#{$name}: #{$value};
+    }
+
+    @each $name, $value in $colors-fixed-light {
+        --clr-#{$name}: #{$value};
+    }
+}
+
+@include setup.dark-mode {
+    // shadows
+    --standard-shadow: 0 0 0.5em hsl(0 0% 0% / 0.8);
+    // text colours
+    @each $name, $value in $colors-themable-dark {
+        --clr-#{$name}: #{$value};
+    }
+
+    @each $name, $value in $colors-fixed-dark {
+        --clr-#{$name}: #{$value};
+    }
+}
+
+@if not setup.$modules-user-defined {
+    /* ==========================================================================
+       Styling and layout for screen media (mobile first)
+       ========================================================================== */
+
+    @include meta.load-css("modules/fonts");
+    @include meta.load-css("modules/layout");
+    @include meta.load-css("modules/layout-helpers");
+    @include meta.load-css("modules/navigation");
+    @include meta.load-css("modules/links");
+    @include meta.load-css("modules/typography");
+    @include meta.load-css("modules/typography-helpers");
+    @include meta.load-css("modules/embedded-content");
+    @include meta.load-css("modules/tables");
+    @include meta.load-css("modules/lists");
+    @include meta.load-css("modules/forms-base");
+    @include meta.load-css("modules/forms-input-checkboxradio");
+    @include meta.load-css("modules/forms-input-file");
+    @include meta.load-css("modules/forms-input-range");
+    @include meta.load-css("modules/forms-disabled");
+    @include meta.load-css("modules/buttons");
+    @include meta.load-css("modules/progress");
+    @include meta.load-css("modules/meter");
+    @include meta.load-css("modules/disclosure");
+    @include meta.load-css("modules/code-highlighting");
+    @include meta.load-css("modules/pagination");
+    @include meta.load-css("modules/breadcrumbs");
+    @include meta.load-css("modules/carousel");
+    @include meta.load-css("modules/social-base");
+    @include meta.load-css("modules/social-color");
+    @include meta.load-css("modules/social-mono");
+    @include meta.load-css("modules/social-mono-inverse");
+    @include meta.load-css("modules/misc");
+    @include meta.load-css("modules/cards");
+    @include meta.load-css("modules/alerts");
+    @include meta.load-css("modules/color-helpers");
+    @include meta.load-css("modules/article");
+    @include meta.load-css("modules/article-comments");
+    @include meta.load-css("modules/accessibility");
+    @include meta.load-css("modules/animation-keyframes");
+
+    @if setup.$use-jquery-ui {
+        // jQuery UI core
+        @include meta.load-css("modules/jquery-ui/core");
+        // jQuery UI icons
+        @include meta.load-css("modules/jquery-ui/icons");
+        // jQuery UI interactions
+        @include meta.load-css("modules/jquery-ui/draggable");
+        @include meta.load-css("modules/jquery-ui/resizable");
+        @include meta.load-css("modules/jquery-ui/selectable");
+        @include meta.load-css("modules/jquery-ui/sortable");
+        // jQuery UI widgets
+        @include meta.load-css("modules/jquery-ui/accordion");
+        @include meta.load-css("modules/jquery-ui/autocomplete");
+        @include meta.load-css("modules/jquery-ui/button");
+        @include meta.load-css("modules/jquery-ui/checkboxradio");
+        @include meta.load-css("modules/jquery-ui/controlgroup");
+        @include meta.load-css("modules/jquery-ui/datepicker");
+        @include meta.load-css("modules/jquery-ui/dialog");
+        @include meta.load-css("modules/jquery-ui/menu");
+        @include meta.load-css("modules/jquery-ui/progressbar");
+        @include meta.load-css("modules/jquery-ui/selectmenu");
+        @include meta.load-css("modules/jquery-ui/slider");
+        @include meta.load-css("modules/jquery-ui/spinner");
+        @include meta.load-css("modules/jquery-ui/tabs");
+        @include meta.load-css("modules/jquery-ui/tooltip");
+    } @else if setup.$use-icons {
+        @include meta.load-css("modules/jquery-ui/icons");
+    }
+
+    /* ==========================================================================
+       Responsive layout for screen media
+       ========================================================================== */
+
+    @include meta.load-css("modules/responsive");
+}
