@@ -1,38 +1,40 @@
 @use "../../setup";
 
-/* Sortable
- ========================================================================== */
+@if setup.$use-jquery-ui {
+    /* Sortable
+     ========================================================================== */
 
-/**
- * jQuery UI Sortable.
- *
- * Some classes and HTML elements generally added via JavaScript, more info -
- * https://jqueryui.com/sortable/
- *
- * Example HTML:
- *
- * <ul class="ui-sortable">
- *     <li>
- *         Item 1
- *     </li>
- *     <li class="ui-sortable-helper">
- *         Item 2 (this item is currently being actively sorted)
- *     </li>
- *     <li class="ui-sortable-placeholder"></li>
- *     <li>
- *         Item 3
- *     </li>
- * </ul>
- */
+    /**
+     * jQuery UI Sortable.
+     *
+     * Some classes and HTML elements generally added via JavaScript, more info -
+     * https://jqueryui.com/sortable/
+     *
+     * Example HTML:
+     *
+     * <ul class="ui-sortable">
+     *     <li>
+     *         Item 1
+     *     </li>
+     *     <li class="ui-sortable-helper">
+     *         Item 2 (this item is currently being actively sorted)
+     *     </li>
+     *     <li class="ui-sortable-placeholder"></li>
+     *     <li>
+     *         Item 3
+     *     </li>
+     * </ul>
+     */
 
-.ui-sortable-helper {
-    box-shadow: var(--standard-shadow);
-}
+    .ui-sortable-helper {
+        box-shadow: var(--standard-shadow);
+    }
 
-.ui-sortable-handle {
-    touch-action: manipulation;
-}
+    .ui-sortable-handle {
+        touch-action: manipulation;
+    }
 
-.ui-sortable-placeholder {
-    border: 1px dotted var(--clr-a);
+    .ui-sortable-placeholder {
+        border: 1px dotted var(--clr-a);
+    }
 }

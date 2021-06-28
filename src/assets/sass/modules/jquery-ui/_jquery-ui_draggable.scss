@@ -1,35 +1,37 @@
 @use "../../setup";
 
-/* Draggable
- ========================================================================== */
+@if setup.$use-jquery-ui {
+    /* Draggable
+     ========================================================================== */
 
-/**
- * jQuery UI Draggable.
- *
- * Some classes and HTML elements generally added via JavaScript, more info -
- * https://jqueryui.com/draggable/
- *
- * Example HTML:
- *
- * <div class="ui-draggable">
- *     Content
- * </div>
- */
+    /**
+     * jQuery UI Draggable.
+     *
+     * Some classes and HTML elements generally added via JavaScript, more info -
+     * https://jqueryui.com/draggable/
+     *
+     * Example HTML:
+     *
+     * <div class="ui-draggable">
+     *     Content
+     * </div>
+     */
 
-.ui-draggable {
-    transition: box-shadow 0.1s linear;
-}
+    .ui-draggable {
+        transition: box-shadow 0.1s linear;
+    }
 
-.ui-draggable-handle {
-    touch-action: manipulation;
-}
+    .ui-draggable-handle {
+        touch-action: manipulation;
+    }
 
-/**
- * Class added when element is actively being dragged.
- */
+    /**
+     * Class added when element is actively being dragged.
+     */
 
-.ui-draggable-dragging {
-    z-index: 1000;
-    opacity: 0.66;
-    box-shadow: var(--standard-shadow);
+    .ui-draggable-dragging {
+        z-index: 1000;
+        opacity: 0.66;
+        box-shadow: var(--standard-shadow);
+    }
 }

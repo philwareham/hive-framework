@@ -1,140 +1,142 @@
 @use "../../setup";
 
-/* Slider
-   ========================================================================== */
+@if setup.$use-jquery-ui {
+    /* Slider
+       ========================================================================== */
 
-/**
- * jQuery UI Slider.
- *
- * Some classes and HTML elements generally added via JavaScript, more info -
- * https://jqueryui.com/slider/
- *
- * Example HTML:
- *
- * <div class="ui-slider ui-slider-horizontal">
- *     <div class="ui-slider-range" style="left: 17%; width: 50%;"></div>
- *     <a class="ui-slider-handle" style="left: 17%;"></a>
- *     <a class="ui-slider-handle" style="left: 67%;"></a>
- * </div>
- */
+    /**
+     * jQuery UI Slider.
+     *
+     * Some classes and HTML elements generally added via JavaScript, more info -
+     * https://jqueryui.com/slider/
+     *
+     * Example HTML:
+     *
+     * <div class="ui-slider ui-slider-horizontal">
+     *     <div class="ui-slider-range" style="left: 17%; width: 50%;"></div>
+     *     <a class="ui-slider-handle" style="left: 17%;"></a>
+     *     <a class="ui-slider-handle" style="left: 67%;"></a>
+     * </div>
+     */
 
-.ui-slider {
-    position: relative;
-    box-sizing: border-box;
-    border-color: var(--clr-brdr);
-    background-color: var(--clr-bkgd-box-subtle);
-    text-align: start;
-
-    &:hover {
-        border-color: var(--clr-brdr-x-dark);
-    }
-
-    .ui-slider-handle {
-        @include setup.gradient-linear(var(--clr-btn-grad-from), var(--clr-btn-grad-to));
-
-        position: absolute;
-        z-index: 2;
+    .ui-slider {
+        position: relative;
         box-sizing: border-box;
-        width: 1.25em;
-        height: 1.25em;
-        border: 1px solid var(--clr-brdr-dark);
-        border-radius: 50%;
-        box-shadow: var(--standard-shadow);
-        cursor: pointer;
-        touch-action: manipulation;
+        border-color: var(--clr-brdr);
+        background-color: var(--clr-bkgd-box-subtle);
+        text-align: start;
 
         &:hover {
             border-color: var(--clr-brdr-x-dark);
-            filter: brightness(1.05);
-        }
-
-        &:active {
-            filter: brightness(0.95);
-        }
-    }
-
-    .ui-slider-range {
-        display: block;
-        position: absolute;
-        z-index: 1;
-        border: 0;
-        background: var(--clr-grad-to);
-        font-size: 0.625em;
-    }
-}
-
-@include setup.dark-mode {
-    .ui-slider {
-        border-color: var(--clr-brdr-x-dark);
-
-        &:hover {
-            border-color: var(--clr-brdr-x-lite);
         }
 
         .ui-slider-handle {
-            border-color: var(--clr-brdr-x-lite);
+            @include setup.gradient-linear(var(--clr-btn-grad-from), var(--clr-btn-grad-to));
+
+            position: absolute;
+            z-index: 2;
+            box-sizing: border-box;
+            width: 1.25em;
+            height: 1.25em;
+            border: 1px solid var(--clr-brdr-dark);
+            border-radius: 50%;
+            box-shadow: var(--standard-shadow);
+            cursor: pointer;
+            touch-action: manipulation;
+
+            &:hover {
+                border-color: var(--clr-brdr-x-dark);
+                filter: brightness(1.05);
+            }
+
+            &:active {
+                filter: brightness(0.95);
+            }
+        }
+
+        .ui-slider-range {
+            display: block;
+            position: absolute;
+            z-index: 1;
+            border: 0;
+            background: var(--clr-grad-to);
+            font-size: 0.625em;
         }
     }
-}
 
-/**
- * Slider - horizontal format.
- *
- * Example HTML:
- *
- * <div class="ui-slider ui-slider-horizontal">
- */
+    @include setup.dark-mode {
+        .ui-slider {
+            border-color: var(--clr-brdr-x-dark);
 
-.ui-slider-horizontal {
-    height: 0.75em;
-    margin-bottom: 1em;
+            &:hover {
+                border-color: var(--clr-brdr-x-lite);
+            }
 
-    .ui-slider-handle {
-        top: -0.3125em;
-        margin-left: -0.5em;
+            .ui-slider-handle {
+                border-color: var(--clr-brdr-x-lite);
+            }
+        }
     }
 
-    .ui-slider-range {
-        top: 0;
-        height: 100%;
+    /**
+     * Slider - horizontal format.
+     *
+     * Example HTML:
+     *
+     * <div class="ui-slider ui-slider-horizontal">
+     */
+
+    .ui-slider-horizontal {
+        height: 0.75em;
+        margin-bottom: 1em;
+
+        .ui-slider-handle {
+            top: -0.3125em;
+            margin-left: -0.5em;
+        }
+
+        .ui-slider-range {
+            top: 0;
+            height: 100%;
+        }
+
+        .ui-slider-range-min {
+            left: 0;
+        }
+
+        .ui-slider-range-max {
+            right: 0;
+        }
     }
 
-    .ui-slider-range-min {
-        left: 0;
-    }
+    /**
+     * Slider - vertical format.
+     *
+     * Example HTML:
+     *
+     * <div class="ui-slider ui-slider-vertical">
+     */
 
-    .ui-slider-range-max {
-        right: 0;
-    }
-}
+    .ui-slider-vertical {
+        width: 0.75em;
+        height: 100px;
 
-/**
- * Slider - vertical format.
- *
- * Example HTML:
- *
- * <div class="ui-slider ui-slider-vertical">
- */
+        .ui-slider-handle {
+            left: -1.3125em;
+            margin-bottom: -0.5em;
+        }
 
-.ui-slider-vertical {
-    width: 0.75em;
-    height: 100px;
+        .ui-slider-range {
+            left: 0;
+            width: 100%;
+        }
 
-    .ui-slider-handle {
-        left: -1.3125em;
-        margin-bottom: -0.5em;
-    }
+        .ui-slider-range-min {
+            bottom: 0;
+        }
 
-    .ui-slider-range {
-        left: 0;
-        width: 100%;
-    }
-
-    .ui-slider-range-min {
-        bottom: 0;
-    }
-
-    .ui-slider-range-max {
-        top: 0;
+        .ui-slider-range-max {
+            top: 0;
+        }
     }
 }

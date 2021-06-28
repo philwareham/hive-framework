@@ -1,202 +1,204 @@
 @use "../../setup";
 
-/* Button
-   ========================================================================== */
+@if setup.$use-jquery-ui {
+    /* Button
+       ========================================================================== */
 
-/**
- * jQuery UI Button.
- *
- * Some classes and HTML elements generally added via JavaScript, more info -
- * https://jqueryui.com/button/
- *
- * 1. Show the overflow in Edge.
- * 2. Correct font size not being inherited in all browsers.
- * 3. Remove iOS Safari default styling.
- * 4. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
- *
- * Example HTML:
- *
- * <a class="ui-button ui-corner-all ui-widget">Button</a>
- */
+    /**
+     * jQuery UI Button.
+     *
+     * Some classes and HTML elements generally added via JavaScript, more info -
+     * https://jqueryui.com/button/
+     *
+     * 1. Show the overflow in Edge.
+     * 2. Correct font size not being inherited in all browsers.
+     * 3. Remove iOS Safari default styling.
+     * 4. Improve usability and consistency of cursor style between image-type
+     *    `input` and others.
+     *
+     * Example HTML:
+     *
+     * <a class="ui-button ui-corner-all ui-widget">Button</a>
+     */
 
-.ui-button {
-    @include setup.gradient-linear(var(--clr-btn-grad-from), var(--clr-btn-grad-to));
+    .ui-button {
+        @include setup.gradient-linear(var(--clr-btn-grad-from), var(--clr-btn-grad-to));
 
-    display: inline-block;
-    position: relative;
-    box-sizing: border-box;
-    height: auto;
-    margin: 0;
-    margin-inline-end: 0.125em; // 2px / 16px
-    padding: setup.$button-padding;
-    overflow: visible; /* 1 */
+        display: inline-block;
+        position: relative;
+        box-sizing: border-box;
+        height: auto;
+        margin: 0;
+        margin-inline-end: 0.125em; // 2px / 16px
+        padding: setup.$button-padding;
+        overflow: visible; /* 1 */
 
-    @if setup.$button-border {
-        border: setup.$button-border var(--clr-btn-brdr);
-    }
+        @if setup.$button-border {
+            border: setup.$button-border var(--clr-btn-brdr);
+        }
 
-    background-clip: padding-box;
+        background-clip: padding-box;
 
-    @if setup.$button-box-shadow {
-        box-shadow: setup.$button-box-shadow var(--clr-btn-shadow);
-    }
-
-    color: var(--clr-btn-text);
-    font-family: var(--font-form);
-    font-size: 1rem; /* 2 */
-    line-height: 1.375; // 22px / 16px
-    vertical-align: baseline;
-    text-align: center;
-    appearance: none; /* 3 */
-    cursor: pointer; /* 4 */
-    user-select: none;
-
-    &:hover {
-        filter: brightness(1.05);
-        color: var(--clr-btn-text);
-        text-decoration: none;
-    }
-
-    &:active {
         @if setup.$button-box-shadow {
-            top: setup.$button-box-shadow-offset-y;
-            box-shadow: none;
+            box-shadow: setup.$button-box-shadow var(--clr-btn-shadow);
         }
 
-        filter: brightness(0.95);
+        color: var(--clr-btn-text);
+        font-family: var(--font-form);
+        font-size: 1rem; /* 2 */
+        line-height: 1.375; // 22px / 16px
+        vertical-align: baseline;
+        text-align: center;
+        appearance: none; /* 3 */
+        cursor: pointer; /* 4 */
+        user-select: none;
+
+        &:hover {
+            filter: brightness(1.05);
+            color: var(--clr-btn-text);
+            text-decoration: none;
+        }
+
+        &:active {
+            @if setup.$button-box-shadow {
+                top: setup.$button-box-shadow-offset-y;
+                box-shadow: none;
+            }
+
+            filter: brightness(0.95);
+            color: var(--clr-btn-text);
+            text-decoration: none;
+        }
+
+        @if setup.$button-border {
+            &:focus {
+                border-color: var(--clr-focus);
+                outline: 0;
+                box-shadow: 0 0 0 1px var(--clr-focus-a50);
+            }
+        } @else {
+            &:focus {
+                outline: 1px solid var(--clr-focus);
+                box-shadow: 0 0 0 2px var(--clr-focus-a50);
+            }
+        }
+    }
+
+    @if setup.$font-stack-form-vf {
+        @supports (font-variation-settings: normal) {
+            .ui-datepicker {
+                font-family: var(--font-form-vf);
+            }
+        }
+    }
+
+    /**
+     * Remove some styling from `a` links as buttons.
+     */
+
+    a.ui-button {
         color: var(--clr-btn-text);
         text-decoration: none;
     }
 
-    @if setup.$button-border {
-        &:focus {
-            border-color: var(--clr-focus);
-            outline: 0;
-            box-shadow: 0 0 0 1px var(--clr-focus-a50);
-        }
-    } @else {
-        &:focus {
-            outline: 1px solid var(--clr-focus);
-            box-shadow: 0 0 0 2px var(--clr-focus-a50);
-        }
-    }
-}
-
-@if setup.$font-stack-form-vf {
-    @supports (font-variation-settings: normal) {
-        .ui-datepicker {
-            font-family: var(--font-form-vf);
-        }
-    }
-}
-
-/**
- * Remove some styling from `a` links as buttons.
- */
-
-a.ui-button {
-    color: var(--clr-btn-text);
-    text-decoration: none;
-}
-
-/**
- * Focus styling for buttons.
- *
- * 1. `!important` required to override specificity.
- */
-
-.ui-button.ui-state-focus {
-    border-color: var(--clr-focus) !important; /* 1 */
-}
-
-/**
- * Single-icon-only button.
- *
- * To make room for the icon, a width needs to be set here.
- *
- * Example HTML:
- *
- * <a class="ui-button ui-corner-all ui-widget ui-button-icon-only">
- *     <span class="ui-button-icon ui-icon ui-icon-gear"></span>
- *     <span class="ui-button-icon-space"> </span>
- *     Button one icon, no text
- * </a>
- */
-
-.ui-button-icon-only {
-    box-sizing: border-box;
-    width: 2.25em; // 36px / 16px
-    text-indent: -9999px;
-    white-space: nowrap;
-}
-
-/**
- * No icon support for input elements.
- */
-
-input.ui-button.ui-button-icon-only {
-    text-indent: 0;
-}
-
-@if setup.$button-radius {
     /**
-     * Button rounded corners all.
+     * Focus styling for buttons.
+     *
+     * 1. `!important` required to override specificity.
      */
 
-    .ui-button.ui-corner-all {
-        border-radius: setup.$button-radius;
+    .ui-button.ui-state-focus {
+        border-color: var(--clr-focus) !important; /* 1 */
     }
 
     /**
-     * Button rounded corners on right only.
+     * Single-icon-only button.
+     *
+     * To make room for the icon, a width needs to be set here.
+     *
+     * Example HTML:
+     *
+     * <a class="ui-button ui-corner-all ui-widget ui-button-icon-only">
+     *     <span class="ui-button-icon ui-icon ui-icon-gear"></span>
+     *     <span class="ui-button-icon-space"> </span>
+     *     Button one icon, no text
+     * </a>
      */
 
-    .ui-button.ui-corner-right {
-        border-radius: 0 setup.$button-radius setup.$button-radius 0;
-    }
-
-    @if setup.$internationalization {
-        [dir="rtl"] .ui-button.ui-corner-right {
-            border-radius: setup.$button-radius 0 0 setup.$button-radius;
-        }
+    .ui-button-icon-only {
+        box-sizing: border-box;
+        width: 2.25em; // 36px / 16px
+        text-indent: -9999px;
+        white-space: nowrap;
     }
 
     /**
-     * Button rounded corners on left only.
+     * No icon support for input elements.
      */
 
-    .ui-button.ui-corner-left {
-        border-radius: setup.$button-radius 0 0 setup.$button-radius;
+    input.ui-button.ui-button-icon-only {
+        text-indent: 0;
     }
 
-    @if setup.$internationalization {
-        [dir="rtl"] .ui-button.ui-corner-left {
+    @if setup.$button-radius {
+        /**
+         * Button rounded corners all.
+         */
+
+        .ui-button.ui-corner-all {
+            border-radius: setup.$button-radius;
+        }
+
+        /**
+         * Button rounded corners on right only.
+         */
+
+        .ui-button.ui-corner-right {
             border-radius: 0 setup.$button-radius setup.$button-radius 0;
         }
+
+        @if setup.$internationalization {
+            [dir="rtl"] .ui-button.ui-corner-right {
+                border-radius: setup.$button-radius 0 0 setup.$button-radius;
+            }
+        }
+
+        /**
+         * Button rounded corners on left only.
+         */
+
+        .ui-button.ui-corner-left {
+            border-radius: setup.$button-radius 0 0 setup.$button-radius;
+        }
+
+        @if setup.$internationalization {
+            [dir="rtl"] .ui-button.ui-corner-left {
+                border-radius: 0 setup.$button-radius setup.$button-radius 0;
+            }
+        }
     }
-}
 
-/**
- * Button icon element(s).
- */
+    /**
+     * Button icon element(s).
+     */
 
-.ui-button-icon-only .ui-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -8px;
-    margin-left: -8px;
-}
+    .ui-button-icon-only .ui-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -8px;
+        margin-left: -8px;
+    }
 
-.ui-button.ui-icon-notext .ui-icon {
-    padding: 0;
-    text-indent: -9999px;
-    white-space: nowrap;
-}
+    .ui-button.ui-icon-notext .ui-icon {
+        padding: 0;
+        text-indent: -9999px;
+        white-space: nowrap;
+    }
 
-input.ui-button.ui-icon-notext .ui-icon {
-    padding: 0.4em 1em;
-    text-indent: 0;
-    white-space: normal;
+    input.ui-button.ui-icon-notext .ui-icon {
+        padding: 0.4em 1em;
+        text-indent: 0;
+        white-space: normal;
+    }
 }

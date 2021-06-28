@@ -1,78 +1,80 @@
 @use "../../setup";
 
-/* Accordion
-   ========================================================================== */
+@if setup.$use-jquery-ui {
+    /* Accordion
+       ========================================================================== */
 
-/**
- * jQuery UI Accordion.
- *
- * Some classes and HTML elements generally added via JavaScript, more info -
- * https://jqueryui.com/accordion/
- *
- * Example HTML:
- *
- * <div class="ui-accordion">
- *     <h3 class="ui-accordion-header">
- *         <span class="ui-accordion-header-icon"></span>
- *         <a>Section 1 lever</a>
- *     </h3>
- *     <div class="ui-accordion-content">
- *         Section 1 content
- *     </div>
- *     <h3 class="ui-accordion-header">
- *         <span class="ui-accordion-header-icon"></span>
- *         <a>Section 2 lever</a>
- *     </h3>
- *     <div class="ui-accordion-content">
- *         Section 2 content
- *     </div>
- * </div>
- */
-
-.ui-accordion {
-    .ui-accordion-header {
-        display: block;
-        position: relative;
-        margin: 2px 0 0;
-        padding: 0.5em 1em;
-        font-size: 1rem;
-        cursor: pointer;
-
-        a {
-            outline: 0;
-            color: var(--clr-text);
-            text-decoration: none;
-        }
-
-        .ui-accordion-header-icon {
-            position: absolute;
-            top: 50%;
-            left: 0.5em;
-            margin-top: -8px;
-        }
-    }
-
-    .ui-accordion-content {
-        padding: 1px 1em;
-        overflow: auto;
-        border-top: 0;
-    }
-
-    .ui-accordion-icons,
-    .ui-accordion-icons .ui-accordion-icons {
-        padding-inline-start: 2em;
-    }
-}
-
-@if setup.$internationalization {
     /**
-     * Accordion RTL support.
+     * jQuery UI Accordion.
+     *
+     * Some classes and HTML elements generally added via JavaScript, more info -
+     * https://jqueryui.com/accordion/
+     *
+     * Example HTML:
+     *
+     * <div class="ui-accordion">
+     *     <h3 class="ui-accordion-header">
+     *         <span class="ui-accordion-header-icon"></span>
+     *         <a>Section 1 lever</a>
+     *     </h3>
+     *     <div class="ui-accordion-content">
+     *         Section 1 content
+     *     </div>
+     *     <h3 class="ui-accordion-header">
+     *         <span class="ui-accordion-header-icon"></span>
+     *         <a>Section 2 lever</a>
+     *     </h3>
+     *     <div class="ui-accordion-content">
+     *         Section 2 content
+     *     </div>
+     * </div>
      */
 
-    [dir="rtl"] .ui-accordion {
-        .ui-accordion-header .ui-accordion-header-icon {
-            right: 0.5em;
-            left: auto;
+    .ui-accordion {
+        .ui-accordion-header {
+            display: block;
+            position: relative;
+            margin: 2px 0 0;
+            padding: 0.5em 1em;
+            font-size: 1rem;
+            cursor: pointer;
+
+            a {
+                outline: 0;
+                color: var(--clr-text);
+                text-decoration: none;
+            }
+
+            .ui-accordion-header-icon {
+                position: absolute;
+                top: 50%;
+                left: 0.5em;
+                margin-top: -8px;
+            }
+        }
+
+        .ui-accordion-content {
+            padding: 1px 1em;
+            overflow: auto;
+            border-top: 0;
+        }
+
+        .ui-accordion-icons,
+        .ui-accordion-icons .ui-accordion-icons {
+            padding-inline-start: 2em;
+        }
+    }
+
+    @if setup.$internationalization {
+        /**
+         * Accordion RTL support.
+         */
+
+        [dir="rtl"] .ui-accordion {
+            .ui-accordion-header .ui-accordion-header-icon {
+                right: 0.5em;
+                left: auto;
+            }
         }
     }
 }

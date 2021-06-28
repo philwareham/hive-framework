@@ -1,82 +1,40 @@
 @use "../../setup";
 
-/* Progressbar
-   ========================================================================== */
+@if setup.$use-jquery-ui {
+    /* Progressbar
+       ========================================================================== */
 
-/**
- * jQuery UI Progressbar.
- *
- * Some classes and HTML elements generally added via JavaScript, more info -
- * https://jqueryui.com/progressbar/
- *
- * Example HTML:
- *
- * <div class="ui-progressbar">
- *     <div class="ui-progressbar-value" style="width: 37%;"></div>
- * </div>
- */
+    /**
+     * jQuery UI Progressbar.
+     *
+     * Some classes and HTML elements generally added via JavaScript, more info -
+     * https://jqueryui.com/progressbar/
+     *
+     * Example HTML:
+     *
+     * <div class="ui-progressbar">
+     *     <div class="ui-progressbar-value" style="width: 37%;"></div>
+     * </div>
+     */
 
-.ui-progressbar {
-    height: 0.75em;
-    margin-bottom: 1em;
-    overflow: hidden;
-    background-color: var(--clr-bkgd-box-subtle);
-    text-align: left;
-}
-
-@include setup.dark-mode {
     .ui-progressbar {
-        border-color: var(--clr-brdr-x-dark);
+        height: 0.75em;
+        margin-bottom: 1em;
+        overflow: hidden;
+        background-color: var(--clr-bkgd-box-subtle);
+        text-align: left;
     }
-}
 
-.ui-progressbar-value {
-    height: 0.75em;
-    animation: progressbar-stripes linear 4s infinite;
-    background-color: var(--clr-hilite);
-    background-image:
-        linear-gradient(
-            135deg,
-            hsl(0 0% 100% / 0.33) 25%,
-            transparent 25%,
-            transparent 50%,
-            hsl(0 0% 100% / 0.33) 50%,
-            hsl(0 0% 100% / 0.33) 75%,
-            transparent 75%,
-            transparent
-        );
-    background-size: 24px 24px;
-}
+    @include setup.dark-mode {
+        .ui-progressbar {
+            border-color: var(--clr-brdr-x-dark);
+        }
+    }
 
-/**
- * Progressbar with indeterminate value.
- *
- * Example HTML:
- *
- * <div class="ui-progressbar ui-progressbar-indeterminate">
- *     <div class="ui-progressbar-value" style="width:100%;">
- *         <div class="ui-progressbar-overlay"></div>
- *     </div>
- * </div>
- */
-
-.ui-progressbar-indeterminate .ui-progressbar-value {
-    background-color: var(--clr-brdr);
-    background-image:
-        linear-gradient(
-            135deg,
-            hsl(0 0% 100% / 0.25) 25%,
-            transparent 25%,
-            transparent 50%,
-            hsl(0 0% 100% / 0.25) 50%,
-            hsl(0 0% 100% / 0.25) 75%,
-            transparent 75%,
-            transparent
-        );
-}
-
-@include setup.dark-mode {
     .ui-progressbar-value {
+        height: 0.75em;
+        animation: progressbar-stripes linear 4s infinite;
+        background-color: var(--clr-hilite);
         background-image:
             linear-gradient(
                 135deg,
@@ -88,9 +46,23 @@
                 transparent 75%,
                 transparent
             );
+        background-size: 24px 24px;
     }
 
+    /**
+     * Progressbar with indeterminate value.
+     *
+     * Example HTML:
+     *
+     * <div class="ui-progressbar ui-progressbar-indeterminate">
+     *     <div class="ui-progressbar-value" style="width:100%;">
+     *         <div class="ui-progressbar-overlay"></div>
+     *     </div>
+     * </div>
+     */
+
     .ui-progressbar-indeterminate .ui-progressbar-value {
+        background-color: var(--clr-brdr);
         background-image:
             linear-gradient(
                 135deg,
@@ -103,14 +75,44 @@
                 transparent
             );
     }
-}
 
-@if setup.$internationalization {
-    /**
-     * Reverse the progressbar direction in RTL languages.
-     */
+    @include setup.dark-mode {
+        .ui-progressbar-value {
+            background-image:
+                linear-gradient(
+                    135deg,
+                    hsl(0 0% 100% / 0.33) 25%,
+                    transparent 25%,
+                    transparent 50%,
+                    hsl(0 0% 100% / 0.33) 50%,
+                    hsl(0 0% 100% / 0.33) 75%,
+                    transparent 75%,
+                    transparent
+                );
+        }
 
-    [dir="rtl"] .ui-progressbar-value, {
-        animation-direction: reverse;
+        .ui-progressbar-indeterminate .ui-progressbar-value {
+            background-image:
+                linear-gradient(
+                    135deg,
+                    hsl(0 0% 100% / 0.25) 25%,
+                    transparent 25%,
+                    transparent 50%,
+                    hsl(0 0% 100% / 0.25) 50%,
+                    hsl(0 0% 100% / 0.25) 75%,
+                    transparent 75%,
+                    transparent
+                );
+        }
+    }
+
+    @if setup.$internationalization {
+        /**
+         * Reverse the progressbar direction in RTL languages.
+         */
+
+        [dir="rtl"] .ui-progressbar-value, {
+            animation-direction: reverse;
+        }
     }
 }

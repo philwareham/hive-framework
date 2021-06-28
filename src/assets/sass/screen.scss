@@ -5,8 +5,6 @@
 @forward "modules";
 // Support for icons?
 @forward "modules/icons";
-// Support for jQuery UI elements?
-@forward "modules/jquery-ui";
 
 $colors-fixed-light: map.merge($colors-fixed-light, setup.$colors-fixed-light-custom);
 $colors-fixed-dark: map.merge($colors-fixed-dark, setup.$colors-fixed-dark-custom);

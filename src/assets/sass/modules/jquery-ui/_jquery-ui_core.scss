@@ -1,327 +1,329 @@
 @use "../../setup";
 
-/* Layout helpers
-   ========================================================================== */
+@if setup.$use-jquery-ui {
+    /* Layout helpers
+       ========================================================================== */
 
-/* purgecss start ignore */
+    /* purgecss start ignore */
 
-/**
- * Hide jQuery UI elements.
- */
+    /**
+     * Hide jQuery UI elements.
+     */
 
-.ui-helper-hidden {
-    display: none;
-}
-
-/**
- * Hide jQuery UI text but still allow screen reader access.
- */
-
-.ui-helper-hidden-accessible {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0 0 0 0); // TODO: Deprecated - use `clip-path` when browser support is better.
-    //clip-path: inset(50%); // TODO: Currently causes severe performance issues in Chrome.
-    border: 0;
-    white-space: nowrap;
-}
-
-/**
- * Normalize various rules to avoid style inheritance.
- */
-
-.ui-helper-reset {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    list-style: none;
-    font-size: 1rem;
-    line-height: setup.$base-line-height;
-    text-decoration: none;
-}
-
-/**
- * Clearfix jQuery UI elements.
- */
-
-.ui-helper-clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-    border-collapse: collapse;
-}
-
-/**
- * Normalize absolute positioning of jQuery UI elements to avoid misplacement.
- */
-
-.ui-helper-zfix {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-}
-
-/**
- * Make jQuery UI elements show above other elements.
- */
-
-.ui-front {
-    z-index: 100;
-}
-
-
-/* Component containers
-   ========================================================================== */
-
-/**
- * Normalize font size of nested jQuery UI widgets to avoid style inheritance.
- */
-
-.ui-widget .ui-widget {
-    font-size: 1rem;
-}
-
-/**
- * General style for jQuery widget content.
- */
-
-.ui-widget-content {
-    border: 1px solid var(--clr-brdr);
-    background-color: var(--clr-bkgd);
-}
-
-/**
- * General style for jQuery widget headers.
- */
-
-.ui-widget-header {
-    @include setup.gradient-linear(var(--clr-grad-from), var(--clr-grad-to));
-
-    font-weight: 700;
-}
-
-
-/* Interaction states
-   ========================================================================== */
-
-/**
- * Default jQuery UI widget interaction state.
- */
-
-.ui-state-default {
-    border: 1px solid var(--clr-brdr);
-    background-color: var(--clr-bkgd-box-subtle);
-    color: var(--clr-text);
-
-    &.ui-state-hover {
-        filter: brightness(1.05);
+    .ui-helper-hidden {
+        display: none;
     }
-}
 
-/**
- * Override hover/focus states for anchors in certain situations.
- */
+    /**
+     * Hide jQuery UI text but still allow screen reader access.
+     */
 
-a.ui-state-default:hover,
-a.ui-state-default:focus {
-    color: var(--clr-text);
-    text-decoration: none;
-}
-
-/**
- * Hover jQuery UI widget interaction states.
- */
-
-.ui-state-hover {
-    border-color: var(--clr-brdr-x-dark);
-    background-color: var(--clr-bkgd-box-subtle);
-}
-
-@include setup.dark-mode {
-    .ui-state-hover {
-        border-color: var(--clr-brdr-x-lite);
+    .ui-helper-hidden-accessible {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0 0 0 0); // TODO: Deprecated - use `clip-path` when browser support is better.
+        //clip-path: inset(50%); // TODO: Currently causes severe performance issues in Chrome.
+        border: 0;
+        white-space: nowrap;
     }
-}
 
-/**
- * Focus jQuery UI widget interaction states.
- */
+    /**
+     * Normalize various rules to avoid style inheritance.
+     */
 
-.ui-state-focus {
-    border-color: var(--clr-focus);
-    outline: 0;
-
-    a {
+    .ui-helper-reset {
+        margin: 0;
+        padding: 0;
+        border: 0;
         outline: 0;
-    }
-}
-
-/**
- * Active jQuery UI widget interaction state.
- */
-
-.ui-state-active {
-    border-color: var(--clr-a);
-    background-color: var(--clr-selected);
-
-    &.ui-state-hover {
-        border-color: var(--clr-a-interact);
-    }
-}
-
-@include setup.dark-mode {
-    .ui-state-active.ui-state-hover {
-        --clr-a-interact-dark: hsl(210 100% 60%);
-
-        border-color: var(--clr-a-interact-dark);
-    }
-}
-
-/**
- * Highlight colour for jQuery UI widgets currently in 'selecting' state.
- */
-
-.ui-selecting {
-    background-color: var(--clr-selecting);
-}
-
-/**
- * Highlight colour for jQuery UI widgets currently in 'selected' state.
- */
-
-.ui-selected {
-    background-color: var(--clr-selected);
-}
-
-
-/* Interaction cues
-   ========================================================================== */
-
-/**
- * jQuery UI highlight cue colouring.
- */
-
-.ui-state-highlight {
-    border: 1px solid var(--clr-warning-brdr);
-    background-color: var(--clr-warning-bkgd);
-
-    &.ui-state-hover {
-        border-color: var(--clr-warning-text);
-    }
-}
-
-@include setup.dark-mode {
-    .ui-state-highlight.ui-state-hover {
-        --clr-warning-text-dark: hsl(40 100% 40%);
-
-        border-color: var(--clr-warning-text-dark);
-    }
-}
-
-/**
- * jQuery UI error cue colouring.
- */
-
-.ui-state-error {
-    border: 1px solid var(--clr-error-brdr);
-    background-color: var(--clr-error-bkgd);
-    color: var(--clr-error-text);
-
-    &.ui-state-hover {
-        border-color: var(--clr-error-text);
-    }
-}
-
-@include setup.dark-mode {
-    .ui-state-error.ui-state-hover {
-        --clr-error-text-dark: hsl(337 100% 40%);
-
-        border-color: var(--clr-error-text-dark);
-    }
-}
-
-/**
- * Visually prioritized jQuery UI text.
- */
-
-.ui-priority-primary {
-    font-weight: 700;
-}
-
-/**
- * Visually non-prioritized jQuery UI text.
- */
-
-.ui-priority-secondary {
-    opacity: 0.66;
-    font-weight: 400;
-}
-
-/**
- * Visually disabled jQuery UI text and anchors.
- */
-
-.ui-state-disabled:not(.ui-button) {
-    opacity: 0.33;
-    background-image: none;
-    cursor: default !important;
-    pointer-events: none;
-
-    a {
+        list-style: none;
+        font-size: 1rem;
+        line-height: setup.$base-line-height;
         text-decoration: none;
-        cursor: default;
     }
-}
 
-@include setup.dark-mode {
+    /**
+     * Clearfix jQuery UI elements.
+     */
+
+    .ui-helper-clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+        border-collapse: collapse;
+    }
+
+    /**
+     * Normalize absolute positioning of jQuery UI elements to avoid misplacement.
+     */
+
+    .ui-helper-zfix {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+
+    /**
+     * Make jQuery UI elements show above other elements.
+     */
+
+    .ui-front {
+        z-index: 100;
+    }
+
+
+    /* Component containers
+       ========================================================================== */
+
+    /**
+     * Normalize font size of nested jQuery UI widgets to avoid style inheritance.
+     */
+
+    .ui-widget .ui-widget {
+        font-size: 1rem;
+    }
+
+    /**
+     * General style for jQuery widget content.
+     */
+
+    .ui-widget-content {
+        border: 1px solid var(--clr-brdr);
+        background-color: var(--clr-bkgd);
+    }
+
+    /**
+     * General style for jQuery widget headers.
+     */
+
+    .ui-widget-header {
+        @include setup.gradient-linear(var(--clr-grad-from), var(--clr-grad-to));
+
+        font-weight: 700;
+    }
+
+
+    /* Interaction states
+       ========================================================================== */
+
+    /**
+     * Default jQuery UI widget interaction state.
+     */
+
+    .ui-state-default {
+        border: 1px solid var(--clr-brdr);
+        background-color: var(--clr-bkgd-box-subtle);
+        color: var(--clr-text);
+
+        &.ui-state-hover {
+            filter: brightness(1.05);
+        }
+    }
+
+    /**
+     * Override hover/focus states for anchors in certain situations.
+     */
+
+    a.ui-state-default:hover,
+    a.ui-state-default:focus {
+        color: var(--clr-text);
+        text-decoration: none;
+    }
+
+    /**
+     * Hover jQuery UI widget interaction states.
+     */
+
+    .ui-state-hover {
+        border-color: var(--clr-brdr-x-dark);
+        background-color: var(--clr-bkgd-box-subtle);
+    }
+
+    @include setup.dark-mode {
+        .ui-state-hover {
+            border-color: var(--clr-brdr-x-lite);
+        }
+    }
+
+    /**
+     * Focus jQuery UI widget interaction states.
+     */
+
+    .ui-state-focus {
+        border-color: var(--clr-focus);
+        outline: 0;
+
+        a {
+            outline: 0;
+        }
+    }
+
+    /**
+     * Active jQuery UI widget interaction state.
+     */
+
+    .ui-state-active {
+        border-color: var(--clr-a);
+        background-color: var(--clr-selected);
+
+        &.ui-state-hover {
+            border-color: var(--clr-a-interact);
+        }
+    }
+
+    @include setup.dark-mode {
+        .ui-state-active.ui-state-hover {
+            --clr-a-interact-dark: hsl(210 100% 60%);
+
+            border-color: var(--clr-a-interact-dark);
+        }
+    }
+
+    /**
+     * Highlight colour for jQuery UI widgets currently in 'selecting' state.
+     */
+
+    .ui-selecting {
+        background-color: var(--clr-selecting);
+    }
+
+    /**
+     * Highlight colour for jQuery UI widgets currently in 'selected' state.
+     */
+
+    .ui-selected {
+        background-color: var(--clr-selected);
+    }
+
+
+    /* Interaction cues
+       ========================================================================== */
+
+    /**
+     * jQuery UI highlight cue colouring.
+     */
+
+    .ui-state-highlight {
+        border: 1px solid var(--clr-warning-brdr);
+        background-color: var(--clr-warning-bkgd);
+
+        &.ui-state-hover {
+            border-color: var(--clr-warning-text);
+        }
+    }
+
+    @include setup.dark-mode {
+        .ui-state-highlight.ui-state-hover {
+            --clr-warning-text-dark: hsl(40 100% 40%);
+
+            border-color: var(--clr-warning-text-dark);
+        }
+    }
+
+    /**
+     * jQuery UI error cue colouring.
+     */
+
+    .ui-state-error {
+        border: 1px solid var(--clr-error-brdr);
+        background-color: var(--clr-error-bkgd);
+        color: var(--clr-error-text);
+
+        &.ui-state-hover {
+            border-color: var(--clr-error-text);
+        }
+    }
+
+    @include setup.dark-mode {
+        .ui-state-error.ui-state-hover {
+            --clr-error-text-dark: hsl(337 100% 40%);
+
+            border-color: var(--clr-error-text-dark);
+        }
+    }
+
+    /**
+     * Visually prioritized jQuery UI text.
+     */
+
+    .ui-priority-primary {
+        font-weight: 700;
+    }
+
+    /**
+     * Visually non-prioritized jQuery UI text.
+     */
+
+    .ui-priority-secondary {
+        opacity: 0.66;
+        font-weight: 400;
+    }
+
+    /**
+     * Visually disabled jQuery UI text and anchors.
+     */
+
     .ui-state-disabled:not(.ui-button) {
-        opacity: 0.25;
+        opacity: 0.33;
+        background-image: none;
+        cursor: default !important;
+        pointer-events: none;
+
+        a {
+            text-decoration: none;
+            cursor: default;
+        }
     }
+
+    @include setup.dark-mode {
+        .ui-state-disabled:not(.ui-button) {
+            opacity: 0.25;
+        }
+    }
+
+
+    /* Overlays
+       ========================================================================== */
+
+    /**
+     * Dark, semi-transparent container overlays.
+     *
+     * Example HTML:
+     *
+     * <div class="ui-widget-overlay"></div>
+     */
+
+    .ui-widget-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: hsl(0 0% 0% / 0.66);
+    }
+
+
+    /* Shadows
+       ========================================================================== */
+
+    /**
+     * Faux shadows via `background-color`.
+     *
+     * Example HTML:
+     *
+     * <div class="ui-widget-shadow"></div>
+     */
+
+    .ui-widget-shadow {
+        box-shadow: var(--standard-shadow);
+    }
+
+    /* purgecss end ignore */
 }
-
-
-/* Overlays
-   ========================================================================== */
-
-/**
- * Dark, semi-transparent container overlays.
- *
- * Example HTML:
- *
- * <div class="ui-widget-overlay"></div>
- */
-
-.ui-widget-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: hsl(0 0% 0% / 0.66);
-}
-
-
-/* Shadows
-   ========================================================================== */
-
-/**
- * Faux shadows via `background-color`.
- *
- * Example HTML:
- *
- * <div class="ui-widget-shadow"></div>
- */
-
-.ui-widget-shadow {
-    box-shadow: var(--standard-shadow);
-}
-
-/* purgecss end ignore */

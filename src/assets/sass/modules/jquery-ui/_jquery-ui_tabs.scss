@@ -1,84 +1,86 @@
 @use "../../setup";
 
-/* Tabs
-   ========================================================================== */
+@if setup.$use-jquery-ui {
+    /* Tabs
+       ========================================================================== */
 
-/**
- * jQuery UI Tabs.
- *
- * Some classes and HTML elements generally added via JavaScript, more info -
- * https://jqueryui.com/tabs/
- *
- * Example HTML:
- *
- * <div class="ui-tabs>
- *     <ul class="ui-tabs-nav">
- *         <li class="ui-tabs-active">
- *             <a class="ui-tabs-anchor">Tab 1</a>
- *         </li>
- *         <li>
- *             <a class="ui-tabs-anchor">Tab 2</a>
- *         </li>
- *         <li>
- *             <a class="ui-tabs-anchor">Tab 3</a>
- *         </li>
- *     </ul>
- *     <div class="ui-tabs-panel" aria-expanded="true">
- *         Tab 1 content
- *     </div>
- *     <div class="ui-tabs-panel aria-expanded="false" aria-hidden="true">
- *         Tab 2 content
- *     </div>
- *     <div class="ui-tabs-panel aria-expanded="false" aria-hidden="true">
- *         Tab 3 content
- *     </div>
- * </div>
- */
+    /**
+     * jQuery UI Tabs.
+     *
+     * Some classes and HTML elements generally added via JavaScript, more info -
+     * https://jqueryui.com/tabs/
+     *
+     * Example HTML:
+     *
+     * <div class="ui-tabs>
+     *     <ul class="ui-tabs-nav">
+     *         <li class="ui-tabs-active">
+     *             <a class="ui-tabs-anchor">Tab 1</a>
+     *         </li>
+     *         <li>
+     *             <a class="ui-tabs-anchor">Tab 2</a>
+     *         </li>
+     *         <li>
+     *             <a class="ui-tabs-anchor">Tab 3</a>
+     *         </li>
+     *     </ul>
+     *     <div class="ui-tabs-panel" aria-expanded="true">
+     *         Tab 1 content
+     *     </div>
+     *     <div class="ui-tabs-panel aria-expanded="false" aria-hidden="true">
+     *         Tab 2 content
+     *     </div>
+     *     <div class="ui-tabs-panel aria-expanded="false" aria-hidden="true">
+     *         Tab 3 content
+     *     </div>
+     * </div>
+     */
 
-.ui-tabs {
-    border: 0;
+    .ui-tabs {
+        border: 0;
 
-    .ui-tabs-nav {
-        padding: 0;
-        background: none;
+        .ui-tabs-nav {
+            padding: 0;
+            background: none;
 
-        li {
-            margin: 2px 0 0;
-            list-style: none;
+            li {
+                margin: 2px 0 0;
+                list-style: none;
 
-            &.ui-tabs-active .ui-tabs-anchor,
-            &.ui-state-disabled .ui-tabs-anchor,
-            &.ui-tabs-loading .ui-tabs-anchor {
-                cursor: text;
+                &.ui-tabs-active .ui-tabs-anchor,
+                &.ui-state-disabled .ui-tabs-anchor,
+                &.ui-tabs-loading .ui-tabs-anchor {
+                    cursor: text;
+                }
+            }
+
+            .ui-tabs-anchor {
+                display: block;
+                padding: 0.5em 1em;
+                color: var(--clr-text);
+                text-decoration: none;
+            }
+
+            .ui-state-focus {
+                border-color: var(--clr-focus);
             }
         }
 
-        .ui-tabs-anchor {
+        .ui-tabs-panel {
             display: block;
-            padding: 0.5em 1em;
-            color: var(--clr-text);
-            text-decoration: none;
-        }
-
-        .ui-state-focus {
-            border-color: var(--clr-focus);
+            margin: 0 0 1em;
+            padding: 1px 0;
+            border-width: 1px 0;
+            border-top-width: 0;
+            background: none;
         }
     }
 
-    .ui-tabs-panel {
-        display: block;
-        margin: 0 0 1em;
-        padding: 1px 0;
-        border-width: 1px 0;
-        border-top-width: 0;
-        background: none;
+    /**
+     * Maintain cursor style when collapsing a collapsible tab.
+     */
+
+    .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
+        cursor: pointer;
     }
-}
-
-/**
- * Maintain cursor style when collapsing a collapsible tab.
- */
-
-.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
-    cursor: pointer;
 }
