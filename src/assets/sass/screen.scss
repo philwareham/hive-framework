@@ -3,7 +3,9 @@
 @use "setup";
 @use "color-schemes" as *;
 @forward "modules";
+// Support for icons?
 @forward "modules/icons";
+// Support for jQuery UI elements?
 @forward "modules/jquery-ui";
 
 $colors-fixed-light: map.merge($colors-fixed-light, setup.$colors-fixed-light-custom);

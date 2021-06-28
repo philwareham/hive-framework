@@ -1,6 +1,3 @@
-// Use user defined list of modules?
-$modules-user-defined: false !default; // true/false
-
 // Support non-latin languages?
 $internationalization: true !default; // true/false
 
@@ -19,9 +16,6 @@ $use-dark-mode:        true !default; // true/false
 
 // Support for jQuery UI elements?
 $use-jquery-ui:        true !default; // true/false
-
-// Support for icons (overrode by $use-jquery-ui above)?
-$use-icons:            true !default; // true/false
 
 // Font stack defaults
 $font-stack-serif-vf:      hive-framework-serif-vf, Georgia, serif !default;
