@@ -48,10 +48,10 @@ body {
     font-weight: 400; // to prevent faux bolding of variable font
 }
 
-@if setup.$font-stack-form-vf {
+@if setup.$font-stack-sans-serif-vf {
     @supports (font-variation-settings: normal) {
         body {
-            font-family: var(--font-form-vf);
+            font-family: var(--font-sans-serif-vf);
         }
     }
 }

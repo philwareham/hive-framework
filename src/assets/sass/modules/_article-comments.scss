@@ -44,10 +44,10 @@
     }
 }
 
-@if setup.$font-stack-form-vf {
+@if setup.$font-stack-sans-serif-vf {
     @supports (font-variation-settings: normal) {
         .comments h4 .is-author {
-            font-family: var(--font-form-vf);
+            font-family: var(--font-sans-serif-vf);
         }
     }
 }
