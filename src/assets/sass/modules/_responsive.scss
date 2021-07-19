@@ -361,6 +361,20 @@
         margin-inline-end: 1rem;
     }
 
+    @if setup.$site-logo-width-mobile {
+        .site-logo {
+            width: setup.$site-logo-width;
+
+            @if setup.$site-logo-height-mobile {
+                height: setup.$site-logo-height;
+            }
+        }
+    } @else if setup.$site-logo-height-mobile {
+        .site-logo {
+            height: setup.$site-logo-height;
+        }
+    }
+
     .site-navigation {
         display: flex;
         flex-wrap: wrap;

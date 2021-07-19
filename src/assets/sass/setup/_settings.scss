@@ -130,6 +130,8 @@ $button-box-shadow:          0 $button-box-shadow-offset-y 0 !default;
 
 // Site logo defaults
 $site-logo-file:      "../../mockups/img/site-logo@2x.png" !default;
-$site-logo-file-dark: null !default;
-$site-logo-width:     240px !default; // recommended maximum width ~240px.
-$site-logo-height:    45px !default;
+$site-logo-file-dark:     null !default;
+$site-logo-width:         240px !default; // recommended maximum width ~240px.
+$site-logo-height:        45px !default;
+$site-logo-width-mobile:  null !default;
+$site-logo-height-mobile: null !default;

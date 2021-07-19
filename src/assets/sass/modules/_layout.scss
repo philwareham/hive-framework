@@ -91,7 +91,7 @@ body {
  */
 
 .site-header {
-    padding: 1em 0;
+    padding: 0.75em 0;
 
     h2 {
         margin: 0;
@@ -144,10 +144,21 @@ noscript {
     @include setup.hide-text;
 
     display: block;
-    width: setup.$site-logo-width;
-    height: setup.$site-logo-height;
+
+    @if setup.$site-logo-width-mobile {
+        width: setup.$site-logo-width-mobile;
+    } @else {
+        width: setup.$site-logo-width;
+    }
+
+    @if setup.$site-logo-height-mobile {
+        height: setup.$site-logo-height-mobile;
+    } @else {
+        height: setup.$site-logo-height;
+    }
+
     background: url("#{setup.$site-logo-file}") no-repeat center center;
-    background-size: setup.$site-logo-width setup.$site-logo-height;
+    background-size: cover;
 }
 
 @if setup.$site-logo-file-dark {
