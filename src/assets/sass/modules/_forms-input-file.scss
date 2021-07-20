@@ -7,7 +7,7 @@
     box-sizing: border-box;
     height: auto;
     min-height: 2em; // 32px / 16px
-    padding: 0.25em 0.1875em; // 8px / 16px + 3px / 16px
+    padding: 0.25em; // 4px / 16px
     border: 1px solid var(--clr-brdr);
 
     @if setup.$border-radius-form {
