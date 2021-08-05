@@ -23,7 +23,7 @@
     "url": "https://github.com/philwareham/hive-framework/issues"
   },
   "devDependencies": {
-    "@babel/core": "7.14.8",
+    "@babel/core": "7.15.0",
     "@babel/preset-env": "7.15.0",
     "@lodder/grunt-postcss": "3.0.1",
     "autoprefixer": "10.3.1",
