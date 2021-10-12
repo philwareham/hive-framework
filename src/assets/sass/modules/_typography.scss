@@ -95,7 +95,7 @@ h1,
     margin: 0.5em 0;
     font-size: 2.5rem; // 40px / 16px (fallback for browsers without `clamp()` support)
     font-size: clamp(2.25rem, 4vw, 4rem);
-    line-height: 1.2; // 48px / 40px
+    line-height: 1.15; // 46px / 40px
 
     sup {
         top: -1.25em;
