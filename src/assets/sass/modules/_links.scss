@@ -96,7 +96,6 @@ a[href^="sms"] {
     pointer-events: none;
 
     [itemprop="telephone"] & {
-        color: var(--clr-a);
         cursor: pointer;
         pointer-events: auto;
     }
