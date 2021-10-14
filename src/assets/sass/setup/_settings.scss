@@ -135,3 +135,6 @@ $site-logo-width:         240px !default; // recommended maximum width ~240px.
 $site-logo-height:        45px !default;
 $site-logo-width-mobile:  null !default;
 $site-logo-height-mobile: null !default;
+
+// mobile navigation menu height when open
+$site-navigation-open-max-height: 16em !default;

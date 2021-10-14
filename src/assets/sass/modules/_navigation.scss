@@ -73,7 +73,7 @@
     }
 
     &.site-navigation-open {
-        max-height: 16em;
+        max-height: setup.$site-navigation-open-max-height;
         transition: max-height 0.33s ease-in-out;
     }
 }
