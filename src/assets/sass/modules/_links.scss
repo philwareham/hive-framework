@@ -91,7 +91,7 @@ h6 {
 
 a[href^="tel"],
 a[href^="sms"] {
-    color: var(--clr-text);
+    color: inherit;
     cursor: default;
     pointer-events: none;
 
