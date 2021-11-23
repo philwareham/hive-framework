@@ -48,7 +48,7 @@
     "stylelint-scss": "3.21.0"
   },
   "dependencies": {
-    "@glidejs/glide": "3.5.0",
+    "@glidejs/glide": "3.5.1",
     "prismjs": "1.25.0"
   },
   "optionalDependencies": {
