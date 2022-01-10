@@ -28,7 +28,7 @@
     "@lodder/grunt-postcss": "3.1.1",
     "autoprefixer": "10.4.1",
     "babelify": "10.0.0",
-    "cssnano": "5.0.14",
+    "cssnano": "5.0.15",
     "grunt": "1.4.1",
     "grunt-browserify": "6.0.0",
     "grunt-cli": "1.4.3",
