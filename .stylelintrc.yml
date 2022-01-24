@@ -104,6 +104,9 @@ rules:
   # Specify modern or legacy notation for applicable color-functions.
   color-function-notation: modern
 
+  # Require or disallow alpha channel for hex colors.
+  color-hex-alpha: never
+
   # Specify lowercase or uppercase for hexadecimal color values.
   color-hex-case: lower
 
@@ -139,6 +142,9 @@ rules:
 
   # Require or disallow an empty line before custom properties (Autofixable).
   custom-property-empty-line-before: never
+
+  # Disallow missing `var` function for custom properties.
+  custom-property-no-missing-var-function: true
 
   # Specify a pattern for custom properties.
   #custom-property-pattern:
@@ -424,6 +430,9 @@ rules:
     -
       except:
         - first-nested
+
+  # Specify a list of disallowed properties for selectors within rules.
+  #rule-selector-property-disallowed-list:
 
   # Require a single space or disallow whitespace on the inside of the brackets within attribute selectors.
   selector-attribute-brackets-space-inside: never
