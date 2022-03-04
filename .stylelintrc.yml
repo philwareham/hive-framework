@@ -257,6 +257,9 @@ rules:
   # Specify lowercase or uppercase for function names.
   function-name-case: lower
 
+  # Disallow unknown functions.
+  #function-no-unknown: true
+
   # Require a newline or disallow whitespace on the inside of the parentheses of functions.
   function-parentheses-newline-inside: always-multi-line
 
