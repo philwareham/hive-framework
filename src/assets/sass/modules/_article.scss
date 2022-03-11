@@ -18,7 +18,7 @@
 .article-body,
 .article-comments {
     display: grid;
-    grid-template-columns: 1fr min(42rem, 100%) 1fr;
+    grid-template-columns: 1fr min(setup.$article-max-width, 100%) 1fr;
 
     > * {
         grid-column: 2;
