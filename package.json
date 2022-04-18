@@ -49,7 +49,7 @@
   },
   "dependencies": {
     "@glidejs/glide": "3.5.2",
-    "prismjs": "1.27.0"
+    "prismjs": "1.28.0"
   },
   "optionalDependencies": {
     "fibers": "5.0.1"
