@@ -26,7 +26,7 @@
     "@babel/core": "7.18.10",
     "@babel/preset-env": "7.18.10",
     "@lodder/grunt-postcss": "3.1.1",
-    "autoprefixer": "10.4.8",
+    "autoprefixer": "10.4.9",
     "babelify": "10.0.0",
     "cssnano": "5.1.12",
     "grunt": "1.5.3",
