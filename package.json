@@ -1,7 +1,7 @@
 {
   "name": "hive-framework",
   "description": "A website development framework built with Grunt and Sass, with optional support for jQuery UI.",
-  "version": "0.23.7",
+  "version": "0.23.9",
   "keywords": [
     "css",
     "framework",
