@@ -12,6 +12,9 @@ rules:
   # Specify percentage or number notation for alpha-values.
   alpha-value-notation: number
 
+  # Disallow unknown annotations.
+  #annotation-no-unknown: true
+
   # Specify a list of disallowed at-rules.
   at-rule-disallowed-list:
     - debug
@@ -200,6 +203,9 @@ rules:
   # Disallow `!important` within declarations.
   #declaration-no-important:
 
+  # Limit the number of values for a list of properties within declarations.
+  #declaration-property-max-values:
+
   # Specify a blacklist of disallowed property and unit pairs within declarations.
   #declaration-property-unit-blacklist:
 
@@ -229,9 +235,6 @@ rules:
 
   # Specify a blacklist of disallowed functions.
   #function-blacklist:
-
-  # Disallow an invalid expression within `calc` functions.
-  function-calc-no-invalid: true
 
   # Disallow an unspaced operator within `calc` functions.
   function-calc-no-unspaced-operator: true
@@ -287,11 +290,20 @@ rules:
   # Specify number or angle notation for degree hues.
   hue-degree-notation: number
 
+  # Specify string or URL notation for `@import` rules.
+  #import-notation: url
+
   # Specify indentation.
   indentation: 4
 
+  # Disallow duplicate selectors within keyframe blocks.
+  #keyframe-block-no-duplicate-selectors: true
+
   # Disallow `!important` within keyframe declarations.
   keyframe-declaration-no-important: true
+
+  # Specify keyword or percentage notation for keyframe selectors.
+  #keyframe-selector-notation: percentage-unless-within-keyword-only-block
 
   # Specify a pattern for keyframe names.
   #keyframes-name-pattern:
@@ -532,6 +544,9 @@ rules:
 
   # Disallow vendor prefixes for selectors.
   selector-no-vendor-prefix: true
+
+  # Specify simple or complex notation for `:not()` pseudo-class selectors.
+  #selector-not-notation: complex
 
   # Specify a blacklist of disallowed pseudo-class selectors.
   #selector-pseudo-class-blacklist:
