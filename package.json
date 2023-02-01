@@ -29,7 +29,7 @@
     "autoprefixer": "10.4.13",
     "babelify": "10.0.0",
     "cssnano": "5.1.14",
-    "grunt": "1.5.3",
+    "grunt": "1.6.1",
     "grunt-browserify": "6.0.0",
     "grunt-cli": "1.4.3",
     "grunt-concurrent": "3.0.0",
