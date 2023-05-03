@@ -23,12 +23,12 @@
     "url": "https://github.com/philwareham/hive-framework/issues"
   },
   "devDependencies": {
-    "@babel/core": "7.20.7",
-    "@babel/preset-env": "7.20.2",
+    "@babel/core": "7.21.8",
+    "@babel/preset-env": "7.21.5",
     "@lodder/grunt-postcss": "3.1.1",
-    "autoprefixer": "10.4.13",
+    "autoprefixer": "10.4.14",
     "babelify": "10.0.0",
-    "cssnano": "5.1.14",
+    "cssnano": "6.0.1",
     "grunt": "1.6.1",
     "grunt-browserify": "6.0.0",
     "grunt-cli": "1.4.3",
@@ -41,11 +41,11 @@
     "grunt-stylelint": "0.16.0",
     "grunt-terser": "2.0.0",
     "load-grunt-tasks": "5.1.0",
-    "postcss": "8.4.20",
-    "sass": "1.57.1",
+    "postcss": "8.4.23",
+    "sass": "1.62.1",
     "stylelint": "13.13.1",
-    "stylelint-order": "4.1.0",
-    "stylelint-scss": "3.21.0"
+    "stylelint-order": "6.0.3",
+    "stylelint-scss": "5.0.0"
   },
   "dependencies": {
     "@glidejs/glide": "3.6.0",
