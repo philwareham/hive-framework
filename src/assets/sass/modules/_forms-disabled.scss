@@ -14,12 +14,15 @@
 [disabled],
 [disabled] option,
 [disabled] optgroup,
+[inert],
 span.disabled {
     border: 1px solid var(--clr-brdr) !important;
     opacity: 0.33 !important;
     background-color: var(--clr-bkgd-form-disabled) !important;
     box-shadow: none !important;
     cursor: default !important; /* 1 */
+    pointer-events: none;
+    user-select: none;
 }
 
 @include setup.dark-mode {
