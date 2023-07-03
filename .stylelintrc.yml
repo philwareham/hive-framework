@@ -35,7 +35,7 @@ rules:
   at-rule-name-case: lower
 
   # Require a newline after at-rule names.
-  at-rule-name-newline-after: always-multi-line
+  #at-rule-name-newline-after: always-multi-line
 
   # Require a single space after at-rule names.
   at-rule-name-space-after: always
@@ -206,6 +206,9 @@ rules:
   # Limit the number of values for a list of properties within declarations.
   #declaration-property-max-values:
 
+  # Disallow unknown values for properties within declarations.
+  declaration-property-value-no-unknown: true
+
   # Specify a blacklist of disallowed property and unit pairs within declarations.
   #declaration-property-unit-blacklist:
 
@@ -235,6 +238,9 @@ rules:
 
   # Specify a blacklist of disallowed functions.
   #function-blacklist:
+
+  # Disallow an invalid expression within `calc` functions.
+  function-calc-no-invalid: true
 
   # Disallow an unspaced operator within `calc` functions.
   function-calc-no-unspaced-operator: true
@@ -291,22 +297,22 @@ rules:
   hue-degree-notation: number
 
   # Specify string or URL notation for `@import` rules.
-  #import-notation: url
+  #import-notation:
 
   # Specify indentation.
   indentation: 4
 
   # Disallow duplicate selectors within keyframe blocks.
-  #keyframe-block-no-duplicate-selectors: true
+  keyframe-block-no-duplicate-selectors: true
 
   # Disallow `!important` within keyframe declarations.
   keyframe-declaration-no-important: true
 
-  # Specify keyword or percentage notation for keyframe selectors.
-  #keyframe-selector-notation: percentage-unless-within-keyword-only-block
-
   # Specify a pattern for keyframe names.
   #keyframes-name-pattern:
+
+  # Specify keyword or percentage notation for keyframe selectors.
+  keyframe-selector-notation: percentage
 
   # Disallow units for zero lengths.
   length-zero-no-unit: true
@@ -341,6 +347,12 @@ rules:
   # Disallow vendor prefixes for media feature names.
   media-feature-name-no-vendor-prefix: true
 
+  # Specify a list of allowed name and unit pairs within media features.
+  #media-feature-name-unit-allowed-list:
+
+  # Disallow unknown values for media features.
+  #media-feature-name-value-no-unknown:
+
   # Specify a whitelist of allowed media feature name and value pairs.
   #media-feature-name-value-whitelist:
 
@@ -349,6 +361,9 @@ rules:
 
   # Require a single space or disallow whitespace on the inside of the parentheses within media features.
   media-feature-parentheses-space-inside: never
+
+  # Specify context or prefix notation for media feature ranges.
+  media-feature-range-notation: prefix
 
   # Require a single space or disallow whitespace after the range operator in media features.
   media-feature-range-operator-space-after: always
@@ -396,7 +411,12 @@ rules:
   no-invalid-double-slash-comments: true
 
   # Disallow invalid position `@import` rules within a stylesheet.
-  no-invalid-position-at-import-rule: true
+  no-invalid-position-at-import-rule:
+    - true
+    -
+      ignoreAtRules:
+        - forward
+        - use
 
   # Disallow irregular whitespaces.
   no-irregular-whitespace: true
@@ -406,6 +426,9 @@ rules:
 
   # Disallow unknown animations.
   #no-unknown-animations:
+
+  # Disallow unknown custom properties.
+  #no-unknown-custom-properties:
 
   # Require or disallow a leading zero for fractional numbers less than 1.
   number-leading-zero: always
@@ -448,6 +471,9 @@ rules:
 
   # Specify a list of disallowed properties for selectors within rules.
   #rule-selector-property-disallowed-list:
+
+  # Disallow unmatchable An+B selectors.
+  selector-anb-no-unmatchable: true
 
   # Require a single space or disallow whitespace on the inside of the brackets within attribute selectors.
   selector-attribute-brackets-space-inside: never
@@ -546,7 +572,7 @@ rules:
   selector-no-vendor-prefix: true
 
   # Specify simple or complex notation for `:not()` pseudo-class selectors.
-  #selector-not-notation: complex
+  selector-not-notation: complex
 
   # Specify a blacklist of disallowed pseudo-class selectors.
   #selector-pseudo-class-blacklist:
@@ -1011,7 +1037,7 @@ rules:
     - all
     - appearance
     - additive-symbols
-    - color-adjust
+    - print-color-adjust
 
     - counter-reset
     - counter-increment
@@ -1101,6 +1127,9 @@ rules:
   # Disallow empty comments.
   scss/comment-no-empty: true
 
+  # Disallow nested properties of the same "namespace" to be divided into multiple groups.
+  scss/declaration-nested-properties-no-divided-groups: true
+
   # Require a newline after the colon in `$`-variable declarations.
   scss/dollar-variable-colon-newline-after: always-multi-line
 
@@ -1113,11 +1142,17 @@ rules:
   # Disallow quoted strings inside the quote function.
   scss/function-quote-no-quoted-strings-inside: true
 
+  # Disallow quoted strings inside the quote function.
+  scss/function-unquote-no-unquoted-strings-inside: true
+
   # Disallow duplicate dollar variables within a stylesheet.
   scss/no-duplicate-dollar-variables: true
 
   # Disallow duplicate mixins within a stylesheet.
   scss/no-duplicate-mixins: true
+
+  # Disallows the use of global function names, as these global functions are now located inside built-in Sass modules.
+  scss/no-global-function-names: true
 
   # Disallow linebreaks after Sass operators.
   scss/operator-no-newline-after: true
