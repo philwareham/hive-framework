@@ -894,3 +894,9 @@ rules:
 
   # Require or disallow an empty line before `//`-comments.
   scss/double-slash-comment-empty-line-before: null
+
+  # Require or disallow whitespace after the `//` in `//`-comments
+  scss/double-slash-comment-whitespace-inside: null
+
+  # Disallow unspaced operators in Sass operations.
+  scss/operator-no-unspaced: null
