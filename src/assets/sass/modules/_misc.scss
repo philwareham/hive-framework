@@ -31,7 +31,7 @@
     padding: 0;
     overflow: hidden;
     clip: rect(0 0 0 0); // TODO: Deprecated - use `clip-path` when browser support is better.
-    //clip-path: inset(100%); // TODO: Currently causes severe performance issues in Chrome.
+    // clip-path: inset(100%); // TODO: Currently causes severe performance issues in Chrome.
     border: 0;
     white-space: nowrap;
 }
@@ -53,7 +53,7 @@
     padding: 0;
     overflow: hidden;
     clip: rect(0 0 0 0); // TODO: Deprecated - use `clip-path` when browser support is better.
-    //clip-path: inset(100%); // TODO: Currently causes severe performance issues in Chrome.
+    // clip-path: inset(100%); // TODO: Currently causes severe performance issues in Chrome.
     border: 0;
     white-space: nowrap;
 }

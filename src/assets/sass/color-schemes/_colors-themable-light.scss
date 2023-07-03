@@ -86,5 +86,4 @@ $colors-theme-light: (
     sleek-7: (),
     sleek-8: (),
 ) !default;
-
 $colors-themable-light: map.get($colors-theme-light, #{settings.$color-scheme}) !default;

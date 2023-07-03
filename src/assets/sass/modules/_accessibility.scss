@@ -4,7 +4,7 @@
     #site-navigation {
         .js &,
         &.site-navigation-open {
-            transition-duration: 0;
+            transition-duration: initial;
         }
     }
 

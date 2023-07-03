@@ -86,5 +86,4 @@ $colors-theme-dark: (
     sleek-7: (),
     sleek-8: (),
 ) !default;
-
 $colors-themable-dark: map.get($colors-theme-dark, #{settings.$color-scheme}) !default;

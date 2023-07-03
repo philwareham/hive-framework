@@ -136,7 +136,6 @@ ul {
 /**
  * Inline-level element vertical alignment.
  */
-
 $align-types: baseline, top, middle, bottom, text-top, text-bottom;
 
 @each $align-type in $align-types {
@@ -148,7 +147,6 @@ $align-types: baseline, top, middle, bottom, text-top, text-bottom;
 /**
  * User-defined margins (inspired by Twitter Bootstrap).
  */
-
 $m-measures: (
     0: 0,
     1: 1rem,
@@ -206,7 +204,6 @@ $m-measures: (
 /**
  * User-defined paddings (inspired by Twitter Bootstrap).
  */
-
 $p-measures: (
     0: 0,
     1: 1rem,

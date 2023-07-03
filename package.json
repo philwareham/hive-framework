@@ -44,8 +44,8 @@
     "postcss": "8.4.24",
     "sass": "1.63.6",
     "stylelint": "15.9.0",
-    "stylelint-order": "6.0.3",
-    "stylelint-scss": "5.0.1"
+    "stylelint-config-standard-scss": "10.0.0",
+    "stylelint-order": "6.0.3"
   },
   "dependencies": {
     "@glidejs/glide": "3.6.0",

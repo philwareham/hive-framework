@@ -48,7 +48,7 @@
 }
 
 @if setup.$internationalization {
-    [dir="rtl"] .card:not(.align-left):not(.align-center) .alert-pill {
+    [dir="rtl"] .card:not(.align-left, .align-center) .alert-pill {
         right: -1px;
         left: auto;
         border-radius: (math.div(setup.$border-radius, 2)) 0 (math.div(setup.$border-radius, 2)) (math.div(setup.$border-radius, 2));
