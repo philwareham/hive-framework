@@ -54,11 +54,6 @@
   "optionalDependencies": {
     "fibers": "5.0.3"
   },
-  "overrides": {
-    "grunt-stylelint": {
-      "stylelint": "14.x || 15.x"
-    }
-  },
   "browserslist": [
     "> 0.5%",
     "Firefox ESR",
