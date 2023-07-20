@@ -42,7 +42,7 @@
     "grunt-terser": "2.0.0",
     "load-grunt-tasks": "5.1.0",
     "postcss": "8.4.26",
-    "sass": "1.63.6",
+    "sass": "1.64.0",
     "stylelint": "15.10.2",
     "stylelint-config-standard-scss": "10.0.0",
     "stylelint-order": "6.0.3"
