@@ -78,9 +78,6 @@ rules:
   # Disallow invalid hexadecimal colors.
   color-no-invalid-hex: true
 
-  # Require or disallow an empty line before comments.
-  #comment-empty-line-before:
-
   # Disallow empty comments.
   comment-no-empty: true
 
@@ -119,9 +116,6 @@ rules:
 
   # Limit the number of declaration within single line declaration blocks.
   declaration-block-single-line-max-declarations: 1
-
-  # Require or disallow an empty line before declarations.
-  #declaration-empty-line-before:
 
   # Disallow `!important` within declarations.
   #declaration-no-important:
@@ -883,9 +877,6 @@ rules:
         - first-nested
         - after-comment
         - after-dollar-variable
-
-  # Require or disallow an empty line before `//`-comments.
-  scss/double-slash-comment-empty-line-before: null
 
   # Require or disallow whitespace after the `//` in `//`-comments
   scss/double-slash-comment-whitespace-inside: null
