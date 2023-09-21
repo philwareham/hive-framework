@@ -273,7 +273,6 @@
     }
 }
 
-
 /* ==========================================================================
    Styling and layout for screen media at 2nd breakpoint
    ========================================================================== */
@@ -382,7 +381,7 @@
         margin-inline-start: 1rem;
         margin-inline-end: 6%;
 
-        .search-form {
+        search {
             margin: 0.25rem 0;
             margin-inline-start: 1rem;
         }
@@ -438,7 +437,10 @@
                     display: inline-block;
                     margin: 0;
                     border-bottom-width: 0;
-                    border-radius: setup.$border-radius setup.$border-radius 0 0;
+                    border-radius: setup.$border-radius
+                        setup.$border-radius
+                        0
+                        0;
                     white-space: nowrap;
 
                     &.ui-tabs-active {
@@ -473,7 +475,6 @@
         font-size: 1.75rem;
     }
 }
-
 
 /* ==========================================================================
    Styling and layout for screen media at 3rd (final) breakpoint
