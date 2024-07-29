@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.24.9",
-    "@babel/preset-env": "7.24.8",
+    "@babel/preset-env": "7.25.0",
     "@lodder/grunt-postcss": "3.1.1",
     "autoprefixer": "10.4.19",
     "babelify": "10.0.0",
