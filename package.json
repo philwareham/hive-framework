@@ -48,7 +48,7 @@
     "stylelint-order": "6.0.4"
   },
   "dependencies": {
-    "@glidejs/glide": "3.7.0",
+    "@glidejs/glide": "3.7.1",
     "prismjs": "1.29.0"
   },
   "optionalDependencies": {
