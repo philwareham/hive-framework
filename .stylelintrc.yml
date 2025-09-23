@@ -15,6 +15,15 @@ rules:
   # Disallow unknown annotations.
   #annotation-no-unknown: true
 
+  # Specify a list of allowed at-rules.
+  #at-rule-allowed-list:
+
+  # Disallow unknown at-rule descriptors.
+  at-rule-descriptor-no-unknown: true
+
+  # Disallow unknown values for descriptors within at-rules.
+  at-rule-descriptor-value-no-unknown: true
+
   # Specify a list of disallowed at-rules.
   at-rule-disallowed-list:
     - debug
@@ -29,6 +38,9 @@ rules:
         - after-comment
       ignoreAtRules:
         - else
+
+  # Disallow deprecated at-rules.
+  at-rule-no-deprecated: true
 
   # Disallow unknown at-rules.
   at-rule-no-unknown:
@@ -54,13 +66,19 @@ rules:
   # Disallow vendor prefixes for at-rules.
   at-rule-no-vendor-prefix: true
 
-  # Specify a whitelist of allowed at-rules.
-  #at-rule-whitelist:
+  # Disallow invalid preludes for at-rules.
+  at-rule-prelude-no-invalid: true
 
   # Disallow empty blocks.
   block-no-empty: true
 
-  # Specify modern or legacy notation for applicable color-functions.
+  # Disallow redundant nested style rules within blocks.
+  block-no-redundant-nested-style-rules: true
+
+  # Specify alias notation for color-functions.
+  color-function-alias-notation: without-alpha
+
+  # Specify modern or legacy notation for color-functions.
   color-function-notation: modern
 
   # Require or disallow alpha channel for hex colors.
@@ -78,6 +96,9 @@ rules:
   # Disallow invalid hexadecimal colors.
   color-no-invalid-hex: true
 
+  # Require or disallow an empty line before comments.
+  #comment-empty-line-before:
+
   # Disallow empty comments.
   comment-no-empty: true
 
@@ -87,8 +108,11 @@ rules:
   # Require or disallow whitespace on the inside of comment markers.
   comment-whitespace-inside: always
 
-  # Specify a blacklist of disallowed words within comments.
-  #comment-word-blacklist:
+  # Specify a list of disallowed words within comments.
+  #comment-word-disallowed-list:
+
+  # Specify a pattern for container names.
+  #container-name-pattern:
 
   # Specify a pattern for custom media query names.
   #custom-media-pattern:
@@ -117,29 +141,32 @@ rules:
   # Limit the number of declaration within single line declaration blocks.
   declaration-block-single-line-max-declarations: 1
 
+  # Require or disallow an empty line before declarations.
+  #declaration-empty-line-before:
+
   # Disallow `!important` within declarations.
   #declaration-no-important:
 
   # Limit the number of values for a list of properties within declarations.
   #declaration-property-max-values:
 
+  # Specify a list of allowed property and unit pairs within declarations.
+  #declaration-property-unit-allowed-list:
+
+  # Specify a list of disallowed property and unit pairs within declarations.
+  #declaration-property-unit-disallowed-list:
+
+  # Specify a list of allowed property and value pairs within declarations.
+  #declaration-property-value-allowed-list:
+
+  # Specify a list of disallowed property and value pairs within declarations.
+  #declaration-property-value-disallowed-list:
+
+  # Disallow deprecated keywords for properties within declarations.
+  declaration-property-value-keyword-no-deprecated: true
+
   # Disallow unknown values for properties within declarations.
   #declaration-property-value-no-unknown: true
-
-  # Specify a blacklist of disallowed property and unit pairs within declarations.
-  #declaration-property-unit-blacklist:
-
-  # Specify a whitelist of allowed property and unit pairs within declarations.
-  #declaration-property-unit-whitelist:
-
-  # Specify a blacklist of disallowed property and value pairs within declarations.
-  #declaration-property-value-blacklist:
-
-  # Specify a whitelist of allowed property and value pairs within declarations.
-  #declaration-property-value-whitelist:
-
-  # Disallow non-numeric values when interpolating a value with a unit.
-  #dimension-no-non-numeric-values
 
   # Specify whether or not quotation marks should be used around font family names.
   font-family-name-quotes: always-where-recommended
@@ -153,11 +180,11 @@ rules:
   # Require numeric or named (where possible) `font-weight` values.
   font-weight-notation: numeric
 
-  # Specify a blacklist of disallowed functions.
-  #function-blacklist:
+  # Specify a list of allowed functions.
+  #function-allowed-list:
 
-  # Disallow an invalid expression within `calc` functions.
-  #function-calc-no-invalid: true
+  # Specify a list of disallowed functions.
+  #function-disallowed-list:
 
   # Disallow an unspaced operator within `calc` functions.
   function-calc-no-unspaced-operator: true
@@ -177,14 +204,11 @@ rules:
   # Require or disallow quotes for URLs.
   function-url-quotes: always
 
-  # Specify a blacklist of disallowed URL schemes.
-  #function-url-scheme-blacklist:
+  # Specify a list of allowed URL schemes.
+  #function-url-scheme-allowed-list:
 
-  # Specify a whitelist of allowed URL schemes.
-  #function-url-scheme-whitelist:
-
-  # Specify a whitelist of allowed functions.
-  #function-whitelist:
+  # Specify a list of disallowed URL schemes.
+  #function-url-scheme-disallowed-list
 
   # Specify number or angle notation for degree hues.
   hue-degree-notation: number
@@ -204,14 +228,23 @@ rules:
   # Specify keyword or percentage notation for keyframe selectors.
   keyframe-selector-notation: percentage
 
+  # Specify a pattern for layer names.
+  #layer-name-pattern:
+
   # Disallow units for zero lengths.
   length-zero-no-unit: true
+
+  # Specify number or percentage notation for lightness.
+  lightness-notation: percentage
 
   # Limit the depth of nesting.
   max-nesting-depth: 4
 
-  # Specify a blacklist of disallowed media feature names.
-  #media-feature-name-blacklist:
+  # Specify a list of allowed media feature names.
+  #media-feature-name-allowed-list:
+
+  # Specify a list of disallowed media feature names.
+  #media-feature-name-disallowed-list:
 
   # Disallow unknown media feature names.
   media-feature-name-no-unknown: true
@@ -222,20 +255,20 @@ rules:
   # Specify a list of allowed name and unit pairs within media features.
   #media-feature-name-unit-allowed-list:
 
+  # Specify a list of allowed media feature name and value pairs.
+  #media-feature-name-value-allowed-list:
+
   # Disallow unknown values for media features.
   #media-feature-name-value-no-unknown:
-
-  # Specify a whitelist of allowed media feature name and value pairs.
-  #media-feature-name-value-whitelist:
-
-  # Specify a whitelist of allowed media feature names.
-  #media-feature-name-whitelist:
 
   # Specify context or prefix notation for media feature ranges.
   media-feature-range-notation: prefix
 
   # Disallow invalid media queries.
-  #media-query-no-invalid: true
+  media-query-no-invalid: true
+
+  # Disallow deprecated media types.
+  media-type-no-deprecated: true
 
   # Disallow invalid named grid areas.
   named-grid-areas-no-invalid: true
@@ -262,20 +295,32 @@ rules:
         - forward
         - use
 
+  # Disallow invalid position declarations.
+  no-invalid-position-declaration: true
+
   # Disallow irregular whitespaces.
   no-irregular-whitespace: true
 
   # Disallow unknown animations.
-  #no-unknown-animations:
+  no-unknown-animations: true
+
+  # Disallow unknown custom media queries.
+  no-unknown-custom-media: true
 
   # Disallow unknown custom properties.
-  #no-unknown-custom-properties:
+  no-unknown-custom-properties: true
 
   # Limit the number of decimal places allowed in numbers.
   number-max-precision: 7
 
-  # Specify a blacklist of disallowed properties.
-  #property-blacklist:
+  # Specify a list of allowed properties.
+  #property-allowed-list:
+
+  # Specify a list of disallowed properties.
+  #property-disallowed-list:
+
+  # Disallow deprecated properties.
+  property-no-deprecated: true
 
   # Disallow unknown properties.
   property-no-unknown:
@@ -289,14 +334,14 @@ rules:
     - ignoreProperties:
         - appearance
 
-  # Specify a whitelist of allowed properties.
-  #property-whitelist:
-
   # Require or disallow an empty line before rules.
   rule-empty-line-before:
     - always-multi-line
     - except:
         - first-nested
+
+  # Require rules to be nested in specific at-rules.
+  #rule-nesting-at-rule-required-list:
 
   # Specify a list of disallowed properties for selectors within rules.
   #rule-selector-property-disallowed-list:
@@ -307,11 +352,11 @@ rules:
   # Specify a list of disallowed attribute names.
   #selector-attribute-name-disallowed-list:
 
-  # Specify a blacklist of disallowed attribute operators.
-  #selector-attribute-operator-blacklist:
+  # Specify a list of allowed attribute operators.
+  #selector-attribute-operator-allowed-list:
 
-  #Specify a whitelist of allowed attribute operators.
-  #selector-attribute-operator-whitelist:
+  # Specify a list of disallowed attribute operators.
+  #selector-attribute-operator-disallowed-list:
 
   # Require or disallow quotes for attribute values.
   selector-attribute-quotes: always
@@ -319,11 +364,11 @@ rules:
   # Specify a pattern for class selectors.
   selector-class-pattern: null
 
-  # Specify a blacklist of disallowed combinators.
-  #selector-combinator-blacklist:
+  # Specify a list of allowed combinators.
+  #selector-combinator-allowed-list:
 
-  # Specify a whitelist of allowed combinators.
-  #selector-combinator-whitelist:
+  # Specify a list of disallowed combinators.
+  #selector-combinator-disallowed-list:
 
   # Specify a list of disallowed selectors.
   #selector-disallowed-list:
@@ -370,17 +415,14 @@ rules:
   # Specify simple or complex notation for `:not()` pseudo-class selectors.
   selector-not-notation: complex
 
-  # Specify a blacklist of disallowed pseudo-class selectors.
-  #selector-pseudo-class-blacklist:
-
   # Disallow unknown pseudo-class selectors.
   selector-pseudo-class-no-unknown: true
 
-  # Specify a whitelist of allowed pseudo-class selectors.
-  #selector-pseudo-class-whitelist:
+  # Specify a list of allowed pseudo-class selectors.
+  #selector-pseudo-class-allowed-list:
 
-  # Specify a blacklist of disallowed pseudo-element selectors.
-  #selector-pseudo-element-blacklist:
+  # Specify a list of disallowed pseudo-class selectors.
+  #selector-pseudo-class-disallowed-list:
 
   # Specify single or double colon notation for applicable pseudo-elements.
   selector-pseudo-element-colon-notation: double
@@ -388,8 +430,11 @@ rules:
   # Disallow unknown pseudo-element selectors.
   selector-pseudo-element-no-unknown: true
 
-  # Specify a whitelist of allowed pseudo-element selectors.
-  #selector-pseudo-element-whitelist:
+  # Specify a list of allowed pseudo-element selectors.
+  #selector-pseudo-element-allowed-list:
+
+  # Specify a list of disallowed pseudo-element selectors.
+  #selector-pseudo-element-disallowed-list:
 
   # Specify lowercase or uppercase for type selector.
   selector-type-case: lower
@@ -403,17 +448,20 @@ rules:
   # Disallow (unescaped) newlines in strings.
   string-no-newline: true
 
+  # Disallow invalid syntax strings.
+  syntax-string-no-invalid: true
+
   # Specify the minimum number of milliseconds for time values.
   time-min-milliseconds: 100
 
-  # Specify a blacklist of disallowed units.
-  #unit-blacklist:
+  # Specify a list of allowed units.
+  #unit-allowed-list:
+
+  # Specify a list of disallowed units.
+  #unit-disallowed-list:
 
   # Disallow unknown units.
   unit-no-unknown: true
-
-  # Specify a whitelist of allowed units.
-  #unit-whitelist:
 
   # Specify lowercase or uppercase for keywords values.
   value-keyword-case: null
