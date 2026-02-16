@@ -168,6 +168,9 @@ rules:
   # Disallow unknown values for properties within declarations.
   #declaration-property-value-no-unknown: true
 
+  # Specify short or full notation for the `display` property.
+  display-notation: shor
+
   # Specify whether or not quotation marks should be used around font family names.
   font-family-name-quotes: always-where-recommended
 
