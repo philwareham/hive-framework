@@ -6,10 +6,8 @@ import 'prismjs/components/prism-scss';
 
 import Glide from '@glidejs/glide';
 
-'use strict';
-
 // If JavaScript is enabled, add a class to the <html> element.
-document.documentElement.className = 'js';
+document.documentElement.classList.add('js');
 
 // DOM elements.
 const code = document.querySelectorAll(
@@ -40,9 +38,11 @@ if (navMenu) {
         navMenu.classList.add('site-navigation-open');
     });
 
-    navList?.addEventListener('focusout', () => {
-        navToggle?.classList.remove('site-navigation-toggle-active');
-        navMenu.classList.remove('site-navigation-open');
+    navList?.addEventListener('focusout', (event) => {
+        if (!navList.contains(event.relatedTarget)) {
+            navToggle?.classList.remove('site-navigation-toggle-active');
+            navMenu.classList.remove('site-navigation-open');
+        }
     });
 }
 

@@ -57,28 +57,7 @@ module.exports = function (grunt)
         // Check code quality of Gruntfile.js and site-specific JavaScript using JSHint.
         jshint: {
             options: {
-                bitwise: true,
-                browser: true,
-                curly: true,
-                eqeqeq: true,
-                esversion: 8,
-                forin: true,
-                globals: {
-                    $: true,
-                    console: true,
-                    jQuery: true,
-                    Zepto: true,
-                    define: true,
-                    module: true,
-                    require: true,
-                    Prism: true
-                },
-                latedef: true,
-                noarg: true,
-                nonew: true,
-                strict: true,
-                undef: true,
-                unused: true
+                esversion: 11
             },
             files: [
                 'Gruntfile.js',
