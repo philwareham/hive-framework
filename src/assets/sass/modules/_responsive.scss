@@ -218,8 +218,7 @@
             margin-top: 0;
         }
 
-        li {
-            break-inside: avoid; // Fix Firefox bug.
+        li { // Fix Firefox bug.
             break-inside: avoid;
         }
 

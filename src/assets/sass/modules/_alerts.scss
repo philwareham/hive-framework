@@ -89,9 +89,9 @@
 .alert-block {
     position: relative;
     padding: 0.5em 1em;
+    overflow-wrap: break-word; /* 1 */
     border: 1px solid;
     border-radius: math.div(setup.$border-radius, 2);
-    overflow-wrap: break-word; /* 1 */
 
     &.success {
         border-color: var(--clr-success-brdr);

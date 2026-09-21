@@ -5,10 +5,10 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
+    overflow-wrap: normal;
     direction: ltr;
     hyphens: none;
     text-align: left;
-    overflow-wrap: normal;
     word-break: normal;
     word-spacing: normal;
     white-space: pre;

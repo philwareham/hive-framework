@@ -284,19 +284,19 @@ pre {
     box-sizing: border-box;
     margin: 1.125rem 0;
     padding: 0.5rem 1rem;
-    overflow-x: auto; /* 1 */
     overflow-wrap: normal; /* 2 */
+    overflow-x: auto; /* 1 */
     white-space: pre-wrap; /* 3 */
     tab-size: 4; /* 4 */
 
     code {
         display: initial;
         padding: 0;
+        overflow-wrap: normal;
         border: 0;
         background-color: transparent;
         font-size: 1em; // 14px
         hyphens: none;
-        overflow-wrap: normal;
         word-break: normal;
         word-spacing: normal;
         white-space: pre;
