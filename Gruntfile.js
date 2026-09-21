@@ -25,26 +25,6 @@ module.exports = function (grunt)
             }
         },
 
-        // Bundle up the JavaScript.
-        browserify: {
-            development: {
-                src: [
-                    '<%= paths.src.js %>app.js'
-                ],
-                dest: '<%= paths.dest.js %>app.js',
-                options: {
-                    browserifyOptions: {
-                        debug: false
-                    },
-                    transform: [[
-                        'babelify', {
-                            'presets': ['@babel/preset-env']
-                        }
-                    ]]
-                }
-            }
-        },
-
         // Clean distribution and temporary directories to start afresh.
         clean: [
             '<%= paths.dest.css %>',
@@ -54,7 +34,6 @@ module.exports = function (grunt)
         // Run some tasks in parallel to speed up the build process.
         concurrent: {
             dist: [
-                'browserify',
                 'copy:fonts',
                 'css',
                 'jshint'
@@ -120,21 +99,6 @@ module.exports = function (grunt)
             }
         },
 
-        // Bundle up the JavaScript. TODO: Migrate to this when PrismJS becomes an ESM.
-        //rollup: {
-        //    options: {
-        //        plugins: [
-        //            nodeResolve()
-        //        ],
-        //        format: 'iife',
-        //		  sourceMap: false
-        //	  },
-        //    files: {
-        //        src: '<%= paths.src.js %>app.js',
-        //        dest: '<%= paths.dest.js %>app.js'
-        //    }
-        //},
-
         // Sass configuration.
         sass: {
             options: {
@@ -174,7 +138,7 @@ module.exports = function (grunt)
             dist: {
                 files: [
                     {
-                        '<%= paths.dest.js %>app.js': ['<%= paths.dest.js %>app.js']
+                        '<%= paths.src.js %>app.js': ['<%= paths.dest.js %>app.js']
                     }
                 ]
             }
@@ -190,7 +154,6 @@ module.exports = function (grunt)
                 files: '<%= paths.src.js %>**',
                 tasks: [
                     'jshint',
-                    'browserify',
                     'terser'
                 ]
             }

@@ -1,7 +1,7 @@
 {
   "name": "hive-framework",
   "description": "A website development framework built with Grunt and Sass, with optional support for jQuery UI.",
-  "version": "0.24.1",
+  "version": "0.5.0",
   "keywords": [
     "css",
     "framework",
@@ -23,14 +23,10 @@
     "url": "https://github.com/philwareham/hive-framework/issues"
   },
   "devDependencies": {
-    "@babel/core": "8.0.5",
-    "@babel/preset-env": "8.0.5",
     "@lodder/grunt-postcss": "3.1.1",
     "autoprefixer": "10.6.1",
-    "babelify": "10.0.0",
     "cssnano": "9.0.5",
     "grunt": "1.6.3",
-    "grunt-browserify": "6.0.0",
     "grunt-cli": "1.5.0",
     "grunt-concurrent": "3.0.0",
     "grunt-contrib-clean": "2.0.1",
