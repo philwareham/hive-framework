@@ -22,7 +22,7 @@ rules:
   at-rule-descriptor-no-unknown: true
 
   # Disallow unknown values for descriptors within at-rules.
-  at-rule-descriptor-value-no-unknown: false
+  at-rule-descriptor-value-no-unknown: null
 
   # Specify a list of disallowed at-rules.
   at-rule-disallowed-list:
@@ -67,7 +67,7 @@ rules:
   at-rule-no-vendor-prefix: true
 
   # Disallow invalid preludes for at-rules.
-  at-rule-prelude-no-invalid: false
+  at-rule-prelude-no-invalid: null
 
   # Disallow empty blocks.
   block-no-empty: true
@@ -268,7 +268,7 @@ rules:
   media-feature-range-notation: prefix
 
   # Disallow invalid media queries.
-  media-query-no-invalid: false
+  media-query-no-invalid: null
 
   # Disallow deprecated media types.
   media-type-no-deprecated: true
@@ -305,13 +305,13 @@ rules:
   no-irregular-whitespace: true
 
   # Disallow unknown animations.
-  no-unknown-animations: false
+  no-unknown-animations: null
 
   # Disallow unknown custom media queries.
   no-unknown-custom-media: true
 
   # Disallow unknown custom properties.
-  no-unknown-custom-properties: false
+  no-unknown-custom-properties: null
 
   # Limit the number of decimal places allowed in numbers.
   number-max-precision: 7
@@ -321,6 +321,9 @@ rules:
 
   # Specify a list of disallowed properties.
   #property-disallowed-list:
+
+  # Specify flow-relative or physical layout mappings for properties.
+  property-layout-mappings: null
 
   # Disallow deprecated properties.
   property-no-deprecated: true
@@ -336,6 +339,9 @@ rules:
     - true
     - ignoreProperties:
         - appearance
+
+  # Specify explicit or implicit nesting notation for relative selectors.
+  relative-selector-nesting-notation: implicit
 
   # Require or disallow an empty line before rules.
   rule-empty-line-before:
@@ -409,8 +415,17 @@ rules:
   # Specify a pattern for the selectors of rules nested within rules.
   #selector-nested-pattern:
 
+  # Disallow deprecated selectors.
+  selector-no-deprecated: true
+
+  # Disallow invalid selectors.
+  selector-no-invalid: true
+
   # Disallow qualifying a selector by type.
   #selector-no-qualifying-type: true
+
+  # Disallow unmatchable selectors.
+  #selector-no-unmatchable: true
 
   # Disallow vendor prefixes for selectors.
   selector-no-vendor-prefix: true
@@ -463,11 +478,17 @@ rules:
   # Specify a list of disallowed units.
   #unit-disallowed-list:
 
+  # Specify flow-relative or physical layout mappings for units.
+  unit-layout-mappings: physical
+
   # Disallow unknown units.
   unit-no-unknown: true
 
   # Specify lowercase or uppercase for keywords values.
   value-keyword-case: null
+
+  # Specify flow-relative or physical layout mappings for value keywords.
+  value-keyword-layout-mappings: null
 
   # Disallow vendor prefixes for values.
   value-no-vendor-prefix: true
