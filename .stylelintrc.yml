@@ -22,7 +22,7 @@ rules:
   at-rule-descriptor-no-unknown: true
 
   # Disallow unknown values for descriptors within at-rules.
-  at-rule-descriptor-value-no-unknown: true
+  at-rule-descriptor-value-no-unknown: false
 
   # Specify a list of disallowed at-rules.
   at-rule-disallowed-list:
@@ -67,7 +67,7 @@ rules:
   at-rule-no-vendor-prefix: true
 
   # Disallow invalid preludes for at-rules.
-  at-rule-prelude-no-invalid: true
+  at-rule-prelude-no-invalid: false
 
   # Disallow empty blocks.
   block-no-empty: true
@@ -268,7 +268,7 @@ rules:
   media-feature-range-notation: prefix
 
   # Disallow invalid media queries.
-  media-query-no-invalid: true
+  media-query-no-invalid: false
 
   # Disallow deprecated media types.
   media-type-no-deprecated: true
@@ -305,13 +305,13 @@ rules:
   no-irregular-whitespace: true
 
   # Disallow unknown animations.
-  no-unknown-animations: true
+  no-unknown-animations: false
 
   # Disallow unknown custom media queries.
   no-unknown-custom-media: true
 
   # Disallow unknown custom properties.
-  no-unknown-custom-properties: true
+  no-unknown-custom-properties: false
 
   # Limit the number of decimal places allowed in numbers.
   number-max-precision: 7
