@@ -219,7 +219,7 @@
         }
 
         li {
-            page-break-inside: avoid; // Fix Firefox bug.
+            break-inside: avoid; // Fix Firefox bug.
             break-inside: avoid;
         }
 
@@ -354,8 +354,7 @@
 
     .site-header {
         width: auto;
-        margin-inline-start: 6%;
-        margin-inline-end: 1rem;
+        margin-inline: 6% 1rem;
     }
 
     @if setup.$site-logo-width-mobile {
@@ -378,8 +377,7 @@
         align-items: center;
         justify-content: flex-end;
         margin: 0.75rem 0;
-        margin-inline-start: 1rem;
-        margin-inline-end: 6%;
+        margin-inline: 1rem 6%;
 
         search {
             margin: 0.25rem 0;
@@ -463,8 +461,7 @@
     #lightswitch {
         display: block;
         position: static;
-        margin-inline-start: 0.5em;
-        margin-inline-end: 0;
+        margin-inline: 0.5em 0;
     }
 
     /**

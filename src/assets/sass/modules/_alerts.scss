@@ -91,7 +91,7 @@
     padding: 0.5em 1em;
     border: 1px solid;
     border-radius: math.div(setup.$border-radius, 2);
-    word-wrap: break-word; /* 1 */
+    overflow-wrap: break-word; /* 1 */
 
     &.success {
         border-color: var(--clr-success-brdr);

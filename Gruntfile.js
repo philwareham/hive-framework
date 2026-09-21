@@ -117,7 +117,7 @@ module.exports = function (grunt)
             dist: {
                 files: [
                     {
-                        '<%= paths.src.js %>app.js': ['<%= paths.dest.js %>app.js']
+                        '<%= paths.dest.js %>app.js': ['<%= paths.src.js %>app.js']
                     }
                 ]
             }

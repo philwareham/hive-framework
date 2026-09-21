@@ -165,15 +165,13 @@ $m-measures: (
 
 @each $name, $value in $m-measures { // TODO: use `margin-inline` shorthand when browser support is more widespread.
     .mx-#{$name} {
-        margin-inline-start: $value;
-        margin-inline-end: $value;
+        margin-inline: $value $value;
     }
 }
 
 @each $name, $value in $m-measures { // TODO: use `margin-block` shorthand when browser support is more widespread.
     .my-#{$name} {
-        margin-block-start: $value;
-        margin-block-end: $value;
+        margin-block: $value $value;
     }
 }
 
@@ -221,15 +219,13 @@ $p-measures: (
 
 @each $name, $value in $p-measures { // TODO: use `padding-inline` shorthand when browser support is more widespread.
     .px-#{$name} {
-        padding-inline-start: $value;
-        padding-inline-end: $value;
+        padding-inline: $value $value;
     }
 }
 
 @each $name, $value in $p-measures { // TODO: use `padding-block` shorthand when browser support is more widespread.
     .py-#{$name} {
-        padding-block-start: $value;
-        padding-block-end: $value;
+        padding-block: $value $value;
     }
 }
 
