@@ -2,10 +2,16 @@ module.exports = function (grunt)
 {
     'use strict';
 
-    // Load all Grunt tasks.
-    require('load-grunt-tasks')(grunt);
+    // Load aGrunt tasks.
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-stylelint');
+    grunt.loadNpmTasks('grunt-terser');
 
     const fs = require('fs');
+    const path = require('path');
     const postcss = require('postcss');
     const autoprefixer = require('autoprefixer');
     const cssnano = require('cssnano');
@@ -13,25 +19,23 @@ module.exports = function (grunt)
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        // Set up paths.
+        // ---------------------------------------------------------------------
+        // Paths
+        // ---------------------------------------------------------------------
+
         paths: {
             src: {
                 sass: 'src/assets/sass/',
                 fonts: 'src/assets/fonts/',
                 js: 'src/assets/js/'
             },
+
             dest: {
                 css: 'public/assets/css/',
                 fonts: 'public/assets/fonts/',
                 js: 'public/assets/js/'
             }
         },
-
-        // Clean distribution and temporary directories to start afresh.
-        clean: [
-            '<%= paths.dest.css %>',
-            '<%= paths.dest.js %>'
-        ],
 
         copy: {
             // Copy fonts.
@@ -157,8 +161,43 @@ module.exports = function (grunt)
         }
     });
 
-    // Register tasks.
-    grunt.registerTask('build', ['clean', 'copy:fonts', 'css', 'jshint', 'terser']);
-    grunt.registerTask('css', ['stylelint', 'sass', 'postcss']);
-    grunt.registerTask('default', ['watch']);
+    // -------------------------------------------------------------------------
+    // Clean
+    // -------------------------------------------------------------------------
+
+    grunt.registerTask('clean', 'Remove generated files.', function () {
+        const paths = [
+            grunt.config.get('paths.dest.css'),
+            grunt.config.get('paths.dest.js')
+        ];
+
+        paths.forEach(function (path) {
+            fs.rmSync(path, {
+                recursive: true,
+                force: true
+            });
+        });
+    });
+
+    // -------------------------------------------------------------------------
+    // Registered tasks
+    // -------------------------------------------------------------------------
+
+    grunt.registerTask('css', [
+        'stylelint',
+        'sass',
+        'postcss'
+    ]);
+
+    grunt.registerTask('build', [
+        'clean',
+        'copy:fonts',
+        'css',
+        'jshint',
+        'terser'
+    ]);
+
+    grunt.registerTask('default', [
+        'watch'
+    ]);
 };
