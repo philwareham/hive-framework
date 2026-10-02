@@ -5,8 +5,10 @@ module.exports = function (grunt)
     // Load all Grunt tasks.
     require('load-grunt-tasks')(grunt);
 
-    // Define Rollup plugins. TODO: Migrate to this when PrismJS becomes an ESM.
-    //const nodeResolve = require('@rollup/plugin-node-resolve').default;
+    const fs = require('fs');
+    const postcss = require('postcss');
+    const autoprefixer = require('autoprefixer');
+    const cssnano = require('cssnano');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -31,15 +33,6 @@ module.exports = function (grunt)
             '<%= paths.dest.js %>'
         ],
 
-        // Run some tasks in parallel to speed up the build process.
-        concurrent: {
-            dist: [
-                'copy:fonts',
-                'css',
-                'jshint'
-            ]
-        },
-
         copy: {
             // Copy fonts.
             fonts: {
@@ -63,19 +56,6 @@ module.exports = function (grunt)
                 'Gruntfile.js',
                 '<%= paths.src.js %>*.js'
             ]
-        },
-
-        // Add vendor prefixed styles and other post-processing transformations.
-        postcss: {
-            options: {
-                processors: [
-                    require('autoprefixer'),
-                    require('cssnano')
-                ]
-            },
-            dist: {
-                src: '<%= paths.dest.css %>*.css'
-            }
         },
 
         // Sass configuration.
@@ -140,8 +120,45 @@ module.exports = function (grunt)
 
     });
 
+    // -------------------------------------------------------------------------
+    // CSS post-processing
+    // -------------------------------------------------------------------------
+
+    grunt.registerTask('postcss', 'Autoprefix and minify CSS.', async function () {
+        const done = this.async();
+
+        try {
+            const files = [
+                'public/assets/css/screen.css',
+                'public/assets/css/print.css',
+                'public/assets/css/design-patterns.css'
+            ];
+
+            for (const file of files) {
+                const css = fs.readFileSync(file, 'utf8');
+
+                const result = await postcss([
+                    autoprefixer(),
+                    cssnano()
+                ]).process(css, {
+                    from: file,
+                    to: file
+                });
+
+                fs.writeFileSync(file, result.css);
+
+                grunt.log.ok(`Processed ${file}`);
+            }
+
+            done();
+        } catch (error) {
+            grunt.log.error(error);
+            done(false);
+        }
+    });
+
     // Register tasks.
-    grunt.registerTask('build', ['clean', 'concurrent', 'terser']);
+    grunt.registerTask('build', ['clean', 'copy:fonts', 'css', 'jshint', 'terser']);
     grunt.registerTask('css', ['stylelint', 'sass', 'postcss']);
     grunt.registerTask('default', ['watch']);
 };
