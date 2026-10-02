@@ -50,8 +50,6 @@
     list-style: none;
     white-space: nowrap;
     touch-action: pan-y;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
 
     .glide--dragging & {
         user-select: none;
@@ -64,7 +62,6 @@
     height: 100%;
     white-space: normal;
     user-select: none;
-    -webkit-tap-highlight-color: transparent;
 
     img {
         width: 100%;
@@ -106,8 +103,6 @@
 .glide__arrows,
 .glide__bullets {
     user-select: none;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
 }
 
 /*
