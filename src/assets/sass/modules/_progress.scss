@@ -3,10 +3,6 @@
 /* Progress indicators
    ========================================================================== */
 
-/**
- * 1. Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-
 progress {
     box-sizing: border-box;
     width: 100%;
@@ -15,7 +11,6 @@ progress {
     margin-inline-end: 0.33em;
     border: 1px solid var(--clr-brdr);
     background-color: var(--clr-bkgd-box-subtle);
-    vertical-align: baseline; /* 1 */
     appearance: none;
 }
 

@@ -71,14 +71,15 @@
         }
 
         @if setup.$button-border {
-            &:focus {
+            &:focus-visible {
                 border-color: var(--clr-focus);
                 outline: 0;
                 box-shadow: 0 0 0 1px var(--clr-focus-a50);
             }
         } @else {
-            &:focus {
-                outline: 1px solid var(--clr-focus);
+            &:focus-visible {
+                outline: 2px solid var(--clr-focus);
+                outline-offset: 2px;
                 box-shadow: 0 0 0 2px var(--clr-focus-a50);
             }
         }

@@ -66,21 +66,21 @@ a:active.ui-icon,
 a:active .ui-icon,
 button:active .ui-icon,
 a:focus.ui-icon,
-a:focus .ui-icon,
-button:focus .ui-icon {
+a:focus-visible .ui-icon,
+button:focus-visible .ui-icon {
     opacity: 1;
 }
 
 a:focus.ui-icon,
-a:focus .ui-icon,
-button:focus .ui-icon {
+a:focus-visible .ui-icon,
+button:focus-visible .ui-icon {
     filter: invert(32%) sepia(81%) saturate(5962%) hue-rotate(212deg) brightness(104%) contrast(105%);
 }
 
 @include setup.dark-mode {
     a:focus.ui-icon,
-    a:focus .ui-icon,
-    button:focus .ui-icon {
+    a:focus-visible .ui-icon,
+    button:focus-visible .ui-icon {
         filter: invert(19%) sepia(50%) saturate(7476%) hue-rotate(303deg) brightness(103%) contrast(119%);
     }
 }

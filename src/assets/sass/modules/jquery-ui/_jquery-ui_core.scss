@@ -131,7 +131,7 @@
      */
 
     a.ui-state-default:hover,
-    a.ui-state-default:focus {
+    a.ui-state-default:focus-visible {
         color: var(--clr-text);
         text-decoration: none;
     }

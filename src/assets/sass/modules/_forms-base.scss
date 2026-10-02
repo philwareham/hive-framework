@@ -22,27 +22,11 @@ fieldset {
 /**
  * Normalize styling of `legend`.
  *
- * 1. Correct wrapping not present in Edge 12/13.
- * 2. Remove padding so people aren't caught out if they zero out field sets.
+ * 1. Remove padding so people aren't caught out if they zero out field sets.
  */
 
 legend {
-    display: table; /* 1 */
-    box-sizing: border-box; /* 1 */
-    max-width: 100%; /* 1 */
-    padding: 0; /* 2 */
-    white-space: normal; /* 1 */
-}
-
-/**
- * 1. Show the overflow in Edge.
- * 2. Remove tap delay in modern browsers.
- */
-
-button,
-input {
-    overflow: visible;
-    touch-action: manipulation;
+    padding: 0; /* 1 */
 }
 
 /**
@@ -119,7 +103,7 @@ textarea {
         border-color: var(--clr-brdr-x-dark);
     }
 
-    &:focus {
+    &:focus-visible {
         border-color: var(--clr-focus);
         outline: 0;
         box-shadow: 0 0 0 1px var(--clr-focus-a50);
@@ -149,7 +133,7 @@ textarea {
             border-color: var(--clr-brdr-x-lite);
         }
 
-        &:focus {
+        &:focus-visible {
             border-color: var(--clr-focus);
         }
     }

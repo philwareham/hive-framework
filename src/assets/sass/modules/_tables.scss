@@ -19,7 +19,7 @@
     margin-bottom: 1em;
     overflow-x: auto;
 
-    &:focus {
+    &:focus-visible {
         outline: thin solid var(--clr-focus);
     }
 }

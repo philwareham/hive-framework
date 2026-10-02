@@ -33,7 +33,7 @@
             margin-right: 0;
             margin-left: 0;
 
-            &:focus,
+            &:focus-visible,
             &.ui-visual-focus {
                 z-index: 9999;
             }

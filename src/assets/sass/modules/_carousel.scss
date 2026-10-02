@@ -138,13 +138,14 @@
 
     &:hover,
     &:active,
-    &:focus {
+    &:focus-visible {
         top: 50%;
         filter: brightness(0.95);
     }
 
-    &:focus {
-        outline: 1px solid var(--clr-focus);
+    &:focus-visible {
+        outline: 2px solid var(--clr-focus);
+        outline-offset: 2px;
     }
 
     &--left {
@@ -220,7 +221,7 @@
 
     &:hover,
     &:active,
-    &:focus {
+    &:focus-visible {
         top: 0;
         background: transparent;
 
@@ -229,8 +230,9 @@
         }
     }
 
-    &:focus {
-        outline: 1px solid var(--clr-focus);
+    &:focus-visible {
+        outline: 2px solid var(--clr-focus);
+        outline-offset: 2px;
     }
 
     &--active::before {
@@ -250,7 +252,7 @@
 
         &:hover,
         &:active,
-        &:focus {
+        &:focus-visible {
             filter: brightness(1.25);
         }
     }

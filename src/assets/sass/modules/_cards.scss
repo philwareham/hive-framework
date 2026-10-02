@@ -30,7 +30,7 @@
     flex: 1 0 0%;
     flex-direction: column;
     margin: 1em 0;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
     border: 1px solid var(--clr-brdr-lite);
 
     @if setup.$border-radius-form {

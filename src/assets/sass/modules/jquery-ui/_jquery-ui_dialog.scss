@@ -95,7 +95,7 @@
                 filter: brightness(0.95);
             }
 
-            &:focus {
+            &:focus-visible {
                 border-color: var(--clr-focus);
             }
         }

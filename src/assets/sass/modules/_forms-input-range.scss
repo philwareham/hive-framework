@@ -14,7 +14,7 @@
     vertical-align: baseline;
     appearance: none;
 
-    &:focus {
+    &:focus-visible {
         outline: 0;
     }
 }
