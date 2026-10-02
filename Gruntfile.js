@@ -12,7 +12,6 @@ module.exports = function (grunt) {
     // -------------------------------------------------------------------------
 
     [
-        'grunt-contrib-copy',
         'grunt-contrib-jshint',
         'grunt-sass',
         'grunt-stylelint'
@@ -92,25 +91,27 @@ module.exports = function (grunt) {
                 '<%= paths.src.sass %>/**/*.scss',
                 '<%= paths.src.sass %>/**/*.css'
             ]
-        },
-
-        // ---------------------------------------------------------------------
-        // Copy assets
-        // ---------------------------------------------------------------------
-
-        copy: {
-            fonts: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: '<%= paths.src.fonts %>',
-                        src: '**/*',
-                        dest: '<%= paths.dest.fonts %>/'
-                    }
-                ]
-            }
         }
     });
+
+    // -------------------------------------------------------------------------
+    // Copy assets
+    // -------------------------------------------------------------------------
+
+    grunt.registerTask(
+        'copy:fonts',
+        'Copy font assets.',
+        function () {
+            const source = grunt.config.get('paths.src.fonts');
+            const destination = grunt.config.get('paths.dest.fonts');
+
+            fs.cpSync(source, destination, {
+                recursive: true
+            });
+
+            grunt.log.ok(`Copied ${source} -> ${destination}`);
+        }
+    );
 
     // -------------------------------------------------------------------------
     // CSS post-processing
