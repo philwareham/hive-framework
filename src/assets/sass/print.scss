@@ -19,9 +19,9 @@ html {
 
 body {
     margin: 0.5cm;
-    padding: 2em 5em;
+    padding: 2em 4em;
     color: black;
-    font-family: "Helvetica Neue", sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /**
@@ -49,14 +49,6 @@ form,
 }
 
 /**
- * Make sure links are not underlined.
- */
-
-a {
-    text-decoration: none;
-}
-
-/**
  * Harmonize size, style and vertical margin of headings.
  */
 
@@ -76,7 +68,7 @@ h6 {
     clear: both;
     orphans: 2;
     widows: 2;
-    break-after: avoid;
+    break-after: avoid-page;
 }
 
 
@@ -190,8 +182,6 @@ var {
 /**
  * Images.
  *
- * 1. Avoid images breaking across multiple pages.
- *
  * Image alignment (compatible with Textile markup syntax).
  *
  * Example HTML:
@@ -204,8 +194,6 @@ var {
 /* purgecss start ignore */
 
 img {
-    break-inside: avoid; /* 1 */
-
     &.align-left {
         margin: 1em 1em 1em 0;
         float: left;
@@ -243,6 +231,7 @@ img {
 
 figure {
     margin-bottom: 8pt;
+    break-inside: avoid;
 }
 
 /**
