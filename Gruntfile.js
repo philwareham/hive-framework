@@ -5,6 +5,7 @@ module.exports = function (grunt) {
     const postcss = require('postcss');
     const autoprefixer = require('autoprefixer');
     const cssnano = require('cssnano');
+    const terser = require('terser');
 
     // -------------------------------------------------------------------------
     // Load Grunt tasks
@@ -14,8 +15,7 @@ module.exports = function (grunt) {
         'grunt-contrib-copy',
         'grunt-contrib-jshint',
         'grunt-sass',
-        'grunt-stylelint',
-        'grunt-terser'
+        'grunt-stylelint'
     ].forEach(grunt.loadNpmTasks);
 
     // -------------------------------------------------------------------------
@@ -109,32 +109,6 @@ module.exports = function (grunt) {
                     }
                 ]
             }
-        },
-
-        // ---------------------------------------------------------------------
-        // JavaScript minification
-        // ---------------------------------------------------------------------
-
-        terser: {
-            options: {
-                ecma: 2015,
-
-                compress: {
-                    booleans_as_integers: true,
-                    drop_console: true
-                },
-
-                format: {
-                    comments: false
-                }
-            },
-
-            dist: {
-                files: {
-                    '<%= paths.dest.js %>/app.js':
-                        '<%= paths.src.js %>/app.js'
-                }
-            }
         }
     });
 
@@ -170,6 +144,56 @@ module.exports = function (grunt) {
 
                     grunt.log.ok(`Processed ${file}`);
                 }
+
+                done();
+            } catch (error) {
+                grunt.log.error(error);
+                done(false);
+            }
+        }
+    );
+
+    // -------------------------------------------------------------------------
+    // JavaScript minification
+    // -------------------------------------------------------------------------
+
+    grunt.registerTask(
+        'terser',
+        'Minify JavaScript with Terser.',
+        async function () {
+            const done = this.async();
+
+            const sourceFile = `${grunt.config.get('paths.src.js')}/app.js`;
+            const destinationFile = `${grunt.config.get('paths.dest.js')}/app.js`;
+
+            try {
+                const source = fs.readFileSync(sourceFile, 'utf8');
+
+                const result = await terser.minify(source, {
+                    ecma: 2015,
+
+                    compress: {
+                        booleans_as_integers: true,
+                        drop_console: true
+                    },
+
+                    format: {
+                        comments: false
+                    }
+                });
+
+                if (result.error) {
+                    throw result.error;
+                }
+
+                fs.mkdirSync(
+                    grunt.config.get('paths.dest.js'),
+                    { recursive: true }
+                );
+
+                fs.writeFileSync(destinationFile, result.code);
+
+                grunt.log.ok(`Minified ${sourceFile} -> ${destinationFile}`);
 
                 done();
             } catch (error) {
