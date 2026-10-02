@@ -2,7 +2,7 @@ module.exports = function (grunt)
 {
     'use strict';
 
-    // Load aGrunt tasks.
+    // Load Grunt tasks.
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -37,21 +37,10 @@ module.exports = function (grunt)
             }
         },
 
-        copy: {
-            // Copy fonts.
-            fonts: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: '<%= paths.src.fonts %>',
-                        src: '**',
-                        dest: '<%= paths.dest.fonts %>'
-                    }
-                ]
-            }
-        },
+        // ---------------------------------------------------------------------
+        // JavaScript linting
+        // ---------------------------------------------------------------------
 
-        // Check code quality of Gruntfile.js and site-specific JavaScript using JSHint.
         jshint: {
             options: {
                 esversion: 11
@@ -62,7 +51,10 @@ module.exports = function (grunt)
             ]
         },
 
-        // Sass configuration.
+        // ---------------------------------------------------------------------
+        // Sass
+        // ---------------------------------------------------------------------
+
         sass: {
             options: {
                 implementation: require('sass'),
@@ -78,7 +70,10 @@ module.exports = function (grunt)
             }
         },
 
-        // Validate CSS files via stylelint.
+        // ---------------------------------------------------------------------
+        // CSS linting
+        // ---------------------------------------------------------------------
+
         stylelint: {
             options: {
                 configFile: '.stylelintrc.yml'
@@ -86,7 +81,27 @@ module.exports = function (grunt)
             src: ['<%= paths.src.sass %>**/*.{css,scss}']
         },
 
-        // Minify `app.js`.
+        // ---------------------------------------------------------------------
+        // Copy assets
+        // ---------------------------------------------------------------------
+
+        copy: {
+            fonts: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= paths.src.fonts %>',
+                        src: '**',
+                        dest: '<%= paths.dest.fonts %>'
+                    }
+                ]
+            }
+        },
+
+        // -------------------------------------------------------------------------
+        // JavaScript bundling/minification
+        // -------------------------------------------------------------------------
+
         terser: {
             options: {
                 ecma: 2015,
@@ -107,7 +122,10 @@ module.exports = function (grunt)
             }
         },
 
-        // Directories watched and tasks performed by invoking `grunt watch`.
+        // -------------------------------------------------------------------------
+        // Directories watched and tasks performed by invoking `grunt watch`
+        // -------------------------------------------------------------------------
+
         watch: {
             sass: {
                 files: '<%= paths.src.sass %>**/*.scss',
