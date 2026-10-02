@@ -5,6 +5,7 @@ module.exports = function (grunt) {
     const postcss = require('postcss');
     const autoprefixer = require('autoprefixer');
     const cssnano = require('cssnano');
+    const jshint = require('jshint').JSHINT;
     const terser = require('terser');
 
     // -------------------------------------------------------------------------
@@ -12,7 +13,6 @@ module.exports = function (grunt) {
     // -------------------------------------------------------------------------
 
     [
-        'grunt-contrib-jshint',
         'grunt-sass',
         'grunt-stylelint'
     ].forEach(grunt.loadNpmTasks);
@@ -36,21 +36,6 @@ module.exports = function (grunt) {
                 fonts: 'public/assets/fonts',
                 js: 'public/assets/js'
             }
-        },
-
-        // ---------------------------------------------------------------------
-        // JavaScript linting
-        // ---------------------------------------------------------------------
-
-        jshint: {
-            options: {
-                esversion: 11
-            },
-
-            files: [
-                'Gruntfile.js',
-                '<%= paths.src.js %>/**/*.js'
-            ]
         },
 
         // ---------------------------------------------------------------------
@@ -93,6 +78,51 @@ module.exports = function (grunt) {
             ]
         }
     });
+
+    // -------------------------------------------------------------------------
+    // JavaScript linting
+    // -------------------------------------------------------------------------
+
+    grunt.registerTask(
+        'jshint',
+        'Lint JavaScript with JSHint.',
+        function () {
+            const files = [
+                'Gruntfile.js',
+                `${grunt.config.get('paths.src.js')}/**/*.js`
+            ];
+
+            const options = {
+                esversion: 11
+            };
+
+            let failed = false;
+
+            grunt.file.expand(files).forEach((file) => {
+                const source = fs.readFileSync(file, 'utf8');
+
+                if (!jshint(source, options)) {
+                    failed = true;
+
+                    grunt.log.error(`JSHint failed: ${file}`);
+
+                    jshint.errors.forEach((error) => {
+                        if (error) {
+                            grunt.log.error(
+                                `  Line ${error.line}, column ${error.character}: ${error.reason}`
+                            );
+                        }
+                    });
+                }
+            });
+
+            if (failed) {
+                return false;
+            }
+
+            grunt.log.ok('JSHint passed.');
+        }
+    );
 
     // -------------------------------------------------------------------------
     // Copy assets
