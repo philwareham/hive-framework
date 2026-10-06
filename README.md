@@ -2,6 +2,8 @@
 
 ![Hive logo](public/icon-192.png)
 
+[Demo](https://hive-framework.designhive.com)
+
 A website development framework built with Grunt and Sass, with optional support for jQuery UI. The theme styling is intentionally minimal to make re-skinning easier.
 
 ## Supported web browsers
