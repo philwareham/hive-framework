@@ -1,14 +1,12 @@
 # Hive framework
 
-![Hive logo](https://hive-framework.philwareham.co.uk/icon-192.png)
-
-[Demo](https://hive-framework.philwareham.co.uk/)
+![Hive logo](public/icon-192.png)
 
 A website development framework built with Grunt and Sass, with optional support for jQuery UI. The theme styling is intentionally minimal to make re-skinning easier.
 
 ## Supported web browsers
 
-* Chrome, Edge, Firefox, Safari and Opera the last two recent stable releases.
+* Browsers with over 0.5% market share (i.e., Chrome, Edge, Firefox, Safari), the last two recent stable releases.
 * Firefox ESR latest major point release.
 
 Older versions of the above and other browsers may work, but these are the ones we verify.
@@ -48,13 +46,8 @@ $ npm install
 This repository hosts sources and needs to be built before it can be used. After you have installed all dependencies, you will be able to run tasks using Grunt, including building:
 
 ```bash
-$ grunt @task@
+$ grunt build
 ```
-
-Where the `@task@` is either `build` or `watch`.
-
-* The `build` task builds the project.
-* The `watch` task will launch a task that watches for file changes; the project is then automatically built if a source file is modified.
 
 ## License
 
