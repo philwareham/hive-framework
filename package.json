@@ -23,13 +23,14 @@
     "url": "https://github.com/philwareham/hive-framework/issues"
   },
   "devDependencies": {
+    "@eslint/js": "10.0.1",
     "autoprefixer": "10.6.1",
     "cssnano": "9.6.0",
+    "eslint": "10.12.0",
     "grunt": "1.6.3",
     "grunt-cli": "1.5.0",
     "grunt-sass": "4.1.0",
     "grunt-stylelint": "0.21.0",
-    "jshint": "2.13.6",
     "postcss": "8.5.29",
     "sass": "1.105.1",
     "stylelint": "17.16.0",

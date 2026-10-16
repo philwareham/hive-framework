@@ -5,7 +5,6 @@ module.exports = function (grunt) {
     const postcss = require('postcss');
     const autoprefixer = require('autoprefixer');
     const cssnano = require('cssnano');
-    const jshint = require('jshint').JSHINT;
     const terser = require('terser');
 
     // -------------------------------------------------------------------------
@@ -84,43 +83,45 @@ module.exports = function (grunt) {
     // -------------------------------------------------------------------------
 
     grunt.registerTask(
-        'jshint',
-        'Lint JavaScript with JSHint.',
+        'eslint',
+        'Lint JavaScript with ESLint.',
         function () {
-            const files = [
-                'Gruntfile.js',
-                `${grunt.config.get('paths.src.js')}/**/*.js`
-            ];
+            const { ESLint } = require('eslint');
 
-            const options = {
-                esversion: 11
-            };
+            const done = this.async();
 
-            let failed = false;
+            (async () => {
+                const eslint = new ESLint();
 
-            grunt.file.expand(files).forEach((file) => {
-                const source = fs.readFileSync(file, 'utf8');
+                const files = [
+                    'Gruntfile.js',
+                    `${grunt.config.get('paths.src.js')}/**/*.js`
+                ];
 
-                if (!jshint(source, options)) {
-                    failed = true;
+                const results = await eslint.lintFiles(files);
+                const formatter = await eslint.loadFormatter('stylish');
+                const output = await formatter.format(results);
 
-                    grunt.log.error(`JSHint failed: ${file}`);
-
-                    jshint.errors.forEach((error) => {
-                        if (error) {
-                            grunt.log.error(
-                                `  Line ${error.line}, column ${error.character}: ${error.reason}`
-                            );
-                        }
-                    });
+                if (output) {
+                    grunt.log.writeln(output);
                 }
+
+                const errorCount = results.reduce(
+                    (total, result) => total + result.errorCount,
+                    0
+                );
+
+                if (errorCount > 0) {
+                    done(false);
+                    return;
+                }
+
+                grunt.log.ok('ESLint passed.');
+                done();
+            })().catch((error) => {
+                grunt.log.error(error);
+                done(false);
             });
-
-            if (failed) {
-                return false;
-            }
-
-            grunt.log.ok('JSHint passed.');
         }
     );
 
@@ -268,7 +269,7 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('js', [
-        'jshint',
+        'eslint',
         'terser'
     ]);
 
