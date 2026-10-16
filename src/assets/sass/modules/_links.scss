@@ -21,7 +21,8 @@ a {
     touch-action: manipulation; /* 4 */
 
     &:hover,
-    &:active {
+    &:active,
+    &:focus-visible {
         color: var(--clr-a-interact);
         text-decoration: underline;
         text-decoration-color: var(--clr-a-interact-a50);  /* 5 */
@@ -42,7 +43,8 @@ h6 {
         color: var(--clr-text-promoted);
 
         &:hover,
-        &:active {
+        &:active,
+        &:focus-visible {
             color: var(--clr-text-promoted);
             text-decoration-color: var(--clr-text-promoted-a50);  /* 5 */
         }
@@ -120,8 +122,8 @@ a[href^="sms"] {
     background-color: var(--clr-selecting);
     color: var(--clr-text);
 
-    &:focus-visible,
-    &:active {
+    &:active,
+    &:focus-visible {
         transform: translateY(0);
     }
 }

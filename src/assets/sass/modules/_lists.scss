@@ -18,6 +18,7 @@ ul {
  */
 
 li {
+    > menu,
     > ul,
     > ol {
         margin: 0;
