@@ -62,7 +62,7 @@ $colors: (
 .design-patterns--clr {
     display: block;
     height: 2.375em; // 38px / 16px
-    margin: 1em 0;
+    margin-block: 1em;
     border: 1px solid var(--clr-brdr);
 }
 
@@ -77,7 +77,7 @@ $colors: (
    ========================================================================== */
 
 .design-patterns--box {
-    margin-top: 0;
+    margin-block-start: 0;
     padding: 1em;
     background: hsl(0 0% 0% / 0.33);
 }
