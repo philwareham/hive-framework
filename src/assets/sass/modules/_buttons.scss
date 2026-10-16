@@ -281,14 +281,16 @@ span.button {
 /* purgecss start ignore */
 
 button[disabled],
-[type="button"][disabled],
-[type="reset"][disabled],
-[type="submit"][disabled],
+input[type="button"][disabled],
+input[type="reset"][disabled],
+input[type="submit"][disabled],
 .button.disabled {
     @include setup.gradient-linear(var(--clr-btn-grad-from), var(--clr-btn-grad-to));
+    cursor: not-allowed;
 
     @if setup.$button-box-shadow {
-        top: 0 !important;
+        top: 0;
+        box-shadow: none;
     }
 }
 

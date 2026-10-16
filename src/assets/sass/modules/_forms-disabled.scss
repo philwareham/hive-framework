@@ -6,32 +6,25 @@
 /**
  * Make sure disabled elements really are disabled and styled appropriately.
  *
- * 1. Re-set default cursor for disabled elements.
+ * 1. Override default iOS opacity setting.
  */
 
 /* purgecss start ignore */
 
-[disabled],
-[disabled] option,
-[disabled] optgroup,
+:where(
+    input,
+    select,
+    textarea,
+    optgroup,
+    option
+):disabled,
 [inert],
 span.disabled {
-    border: 1px solid var(--clr-brdr) !important;
-    opacity: 0.33 !important;
-    background-color: var(--clr-bkgd-form-disabled) !important;
-    box-shadow: none !important;
-    cursor: default !important; /* 1 */
-    pointer-events: none;
-    user-select: none;
+    border: 1px solid var(--clr-brdr);
+    opacity: 0.33; /* 1 */
+    background-color: var(--clr-bkgd-form-disabled);
+    box-shadow: none;
+    color: var(--color-text-form-disabled);
+    text-shadow: none;
+    cursor: not-allowed;
 }
-
-@include setup.dark-mode {
-    [disabled],
-    [disabled] option,
-    [disabled] optgroup,
-    span.disabled {
-        opacity: 0.25 !important;
-    }
-}
-
-/* purgecss end ignore */
