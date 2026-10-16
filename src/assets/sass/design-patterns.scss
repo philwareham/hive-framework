@@ -5,7 +5,7 @@
    ========================================================================== */
 
 /**
- * Make sure code examples use black text within information blocks.
+ * Use the standard text colour for code within information blocks.
  */
 
 .information code {
@@ -68,7 +68,7 @@ $colors: (
 
 @each $name, $color in $colors {
     .design-patterns--clr-#{$name} {
-        background: $color;
+        background-color: $color;
     }
 }
 
