@@ -5,11 +5,19 @@
 /* stylelint-disable color-named */
 
 /**
+ * Control the page margins for printing and PDF output
+ */
+
+@page {
+    margin: 12mm;
+}
+
+/**
  * Use a print-friendly font size.
  */
 
 html {
-    font-size: 8pt;
+    font-size: 10pt;
     line-height: 1.5;
 }
 
@@ -18,8 +26,8 @@ html {
  */
 
 body {
-    margin: 0.5cm;
-    padding: 2em 4em;
+    margin: 0;
+    padding: 0;
     color: black;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -52,13 +60,6 @@ form,
  * Harmonize size, style and vertical margin of headings.
  */
 
-h1 {
-    margin: 16pt 0;
-    clear: both;
-    font-size: 32pt;
-    line-height: 36pt;
-}
-
 h1,
 h2,
 h3,
@@ -71,7 +72,11 @@ h6 {
     break-after: avoid-page;
 }
 
-
+h1 {
+    margin: 16pt 0;
+    font-size: 32pt;
+    line-height: 36pt;
+}
 
 h2 {
     margin: 14pt 0;
@@ -161,8 +166,10 @@ blockquote {
  */
 
 pre {
+    max-width: 100%;
     margin-bottom: 8pt;
     padding: 8pt;
+    overflow-wrap: anywhere;
     border: 1pt solid black;
     white-space: pre-wrap; /* 1 */
 }
@@ -171,9 +178,9 @@ pre {
  * Use a print-friendly monospaced font and size.
  */
 
-pre,
 code,
 kbd,
+pre,
 samp,
 var {
     font-family: "Courier New", Courier, monospace;
@@ -194,6 +201,9 @@ var {
 /* purgecss start ignore */
 
 img {
+    max-width: 100%;
+    height: auto;
+
     &.align-left {
         margin: 1em 1em 1em 0;
         float: left;
@@ -270,11 +280,13 @@ li {
 /**
  * 1. Make `table` span entire page width.
  * 2. Ensure margin below `table`.
+ * 3. Adjacent table borders can share a single border.
  */
 
 table {
     width: 100%; /* 1 */
     margin-bottom: 8pt; /* 2 */
+    border-collapse: collapse; /* 3 */
 }
 
 /**
@@ -304,7 +316,9 @@ tr {
 th,
 td {
     padding: 4pt 8pt;
+    overflow-wrap: anywhere;
     border-bottom: 1pt solid black;
+    text-align: start;
 }
 
 /**
