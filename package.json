@@ -32,7 +32,7 @@
     "grunt-sass": "4.1.0",
     "grunt-stylelint": "0.21.0",
     "postcss": "8.5.31",
-    "sass": "1.105.2",
+    "sass": "1.106.1",
     "stylelint": "17.16.0",
     "stylelint-config-standard-scss": "17.0.0",
     "stylelint-order": "8.1.2",
